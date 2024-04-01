@@ -292,7 +292,6 @@
       - [Running Commands from a Variable](#running-commands-from-a-variable)
       - [Running All Scripts in a Directory](#running-all-scripts-in-a-directory)
     - [Basic Scripting: Shell Variables](#basic-scripting-shell-variables)
-      - [Documenting Your Script](#documenting-your-script)
       - [Embedding Documentation in Shell Scripts](#embedding-documentation-in-shell-scripts)
       - [Promoting Script Readability](#promoting-script-readability)
       - [Separating Variable Names from Surrounding Text](#separating-variable-names-from-surrounding-text)
@@ -5364,7 +5363,7 @@
   esac
   ```
 
-- *$-* is a string listing of all the current shell option flags. It will contain *i* if the shell is interactive.
+- *\$-* is a string listing of all the current shell option flags. It will contain *i* if the shell is interactive.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - You may also see code like the following, but the previous example is preferred.
@@ -5564,7 +5563,7 @@
   instance of the shell, a child of the current shell called a subshell.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The subshell is almost identical to the current shell's environment - i.e., variables, including *$PATH*, are all the
+- The subshell is almost identical to the current shell's environment - i.e., variables, including *\$PATH*, are all the
   same, but traps are handled differently. Because a subshell is used to execute the cd commands, when the subshell
   exits, your main shell remains where it started. That is, its current directory hasn't moved, and its variables
   haven't changed.
@@ -5681,7 +5680,7 @@
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - In the following *ext* script, the *grep* has been parameterised by making the string that we're searching for be the
-  parameter of our shell script (*$1*). Whereas we often think of *grep* as searching for a fixed string through
+  parameter of our shell script (*\$1*). Whereas we often think of *grep* as searching for a fixed string through
   various different files, here we are going to vary what we search for, but search through the same data every time.
   Rather than supplying one or more filenames to search through, we set up a here-document and tell the shell to
   redirect standard input to come from that (temporary) document. The *<<* syntax says that we want to create such a
@@ -5760,7 +5759,7 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - What's happening in our original donors script is that the amounts are being interpreted as shell variables. For
-  example, *$100* is being seen as the shell variable *$1* followed by two zeros. That's what gives us pete00 when we
+  example, *\$100* is being seen as the shell variable *\$1* followed by two zeros. That's what gives us pete00 when we
   search for *pete* and *bill00* when we search for *bill*. When we escape some or all of the characters of the EOF,
   *bash* knows not to do the expansions, and the behaviour is the expected behaviour:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
@@ -5787,7 +5786,7 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  $ cat myscript.sh
+  $ cat my_script.sh
   grep $1 <<-'EOF'
       lots of data
       can go here
@@ -5902,7 +5901,7 @@ file called donors that looked like this:
   ```
 
 - The code in the following example calls the *choice* function to prompt for and verify a package date. Assuming
-  *$THISPACKAGE* is set, the function displays the date and asks for verification. If the user types *y*, *Y*, or
+  *\$THISPACKAGE* is set, the function displays the date and asks for verification. If the user types *y*, *Y*, or
   presses *Enter*, then that date is accepted. If the user enters a new date, the function loops and verifies it.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -5960,7 +5959,7 @@ file called donors that looked like this:
   will print the menu again.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The number the user typed is returned in *$REPLY*, and the value of that entry is returned in the variable you
+- The number the user typed is returned in *\$REPLY*, and the value of that entry is returned in the variable you
   specified in the *select* construct.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -5971,7 +5970,7 @@ file called donors that looked like this:
 
 - The *-s* option tells the *read* command not to echo the characters typed (*s* is for silent) and the *-p* option
   says that the next argument is the prompt to be displayed prior to reading input. The line of input that is read from
-  the user is put into the variable named *$PASSWD*.
+  the user is put into the variable named *\$PASSWD*.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - With echoing disabled, when the user presses the Enter key no newline is echoed and any subsequent output would
@@ -6000,7 +5999,7 @@ file called donors that looked like this:
   and facilitate the execution of programs.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- *bash* uses a shell variable called *$PATH* to locate your executable. The *$PATH* variable is a list of directories.
+- *bash* uses a shell variable called *\$PATH* to locate your executable. The *\$PATH* variable is a list of directories.
   The directories are separated by colons. *bash* searches in each of those directories for a file with the name that
   you specified. *bash* looks at the order in which the directories are listed in the variable, and takes the first
   executable found.
@@ -6016,28 +6015,28 @@ file called donors that looked like this:
   current directory on a Linux or Unix filesystem - wherever you are, that's the directory to which dot refers.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- Putting dot in the *$PATH* is too great a security risk - someone could trick you and get you to run their own
+- Putting dot in the *\$PATH* is too great a security risk - someone could trick you and get you to run their own
   malicious version of a command (say, *ls*) in place of one that you were expecting. If dot were listed first, then
   someone else's version of *ls* would supersede the normal *ls* command, and you would likely unwittingly run that
   command.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- If you put dot as the last directory in your *$PATH* variable, at least you won't be tricked that easily. Of course,
+- If you put dot as the last directory in your *\$PATH* variable, at least you won't be tricked that easily. Of course,
   if you leave it off altogether it is arguably even safer, and you can still run commands in your local directory by
   typing a leading dot and slash character.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  ./myScript
+  ./my_script
   ```
 
-- Never allow dot or writeable directories in root's *$PATH*.
+- Never allow dot or writeable directories in root's *\$PATH*.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - A common practice among some *bash* users is to create a personal *bin* directory, analogous to the system
   directories */bin* and */usr/bin* where executables are kept. In your personal bin (if you create it in your *home*
   directory, its path is *~/bin*) you can put copies of your favourite shell scripts and other customised or private
-  commands. Then add that directory to your *$PATH*, even to the front (*PATH=~/bin:$PATH*). That way, you can still
+  commands. Then add that directory to your *\$PATH*, even to the front (*PATH=~/bin:$PATH*). That way, you can still
   have your own customised favourites without the security risk of running commands from strangers.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -6117,7 +6116,7 @@ file called donors that looked like this:
 
 #### Telling Whether a Command Succeeded or Not
 
-- The shell variable *$?* is set with a non-zero value if the command fails - provided the programmer who wrote that
+- The shell variable *\$?* is set with a non-zero value if the command fails - provided the programmer who wrote that
   command or shell script followed the established convention.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -6133,7 +6132,7 @@ file called donors that looked like this:
   $
   ```
 
-- The exit status of a command is kept in the shell variable referenced with *$*?. Its value can range from 0 to 255.
+- The exit status of a command is kept in the shell variable referenced with *\$*?. Its value can range from 0 to 255.
   When you write a shell script, it's a good idea to have your script exit with zero if all is well and a non-zero
   value if you encounter an error condition. It it recommended to only use *0 to 127* because the shell uses *128+N* to
   denote *killed by signal N*. if you use a number greater than 255 or less than 0, the numbers will wrap around. You
@@ -6169,7 +6168,7 @@ file called donors that looked like this:
   $
   ```
 
-- Although the examples shown in this section are in the command line, the real use of variables like *$?* comes in
+- Although the examples shown in this section are in the command line, the real use of variables like *\$?* comes in
   writing scripts. You can usually see whether or not a command has been successful by watching it execute on your
   screen, but in a script the commands may be running unattended. The *exit* status is more often used in scripts, and
   often in *if* statements, to take different actions depending on the success or failure of a command.
@@ -6195,7 +6194,7 @@ file called donors that looked like this:
 #### Running a Command Only if Another Command Succeeded
 
 - You need to run some commands, but you only want to run certain commands if certain other ones succeed. You can use
-  the exit status (*$?*) of the first command in combination with an *if* statement to do the subsequent command only
+  the exit status (*\$?*) of the first command in combination with an *if* statement to do the subsequent command only
   if the first command was successful.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -6204,7 +6203,7 @@ file called donors that looked like this:
   if (( $? == 0 )); then rm * ; fi
   ```
 
-- If you're writing *bash* scripts, you'll want to be sure to explicitly set return values, so that *$?* is set
+- If you're writing *bash* scripts, you'll want to be sure to explicitly set return values, so that *\$?* is set
   properly from your script. If you don't, the value set will be the value of the last command run, which you may not
   want as your result.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
@@ -6291,7 +6290,7 @@ file called donors that looked like this:
 #### Running Commands from a Variable
 
 - You want to run different commands in your script depending on circumstances, you can assign the program name to a
-  variable (*$PROG* in the following example) , and then when the variable is referred to where a command name would be
+  variable (*\$PROG* in the following example) , and then when the variable is referred to where a command name would be
   expected, *bash* uses the name of that variable as the command to run. It parses the command line, substitutes the
   values of its variables, and takes the result of all the substitutions and treats that as the command line, as if it
   had been typed that way verbatim.
@@ -6350,7 +6349,7 @@ file called donors that looked like this:
 
 - The second aspect of shell variable syntax worth noting is the use of the dollar sign when referring to a variable.
   You don't use the dollar sign on the variable name to assign it a value, but you do use the dollar sign to get the
-  value of the variable. The exception to this is using variables inside a *$(( ))* expression.
+  value of the variable. The exception to this is using variables inside a *\$(( ))* expression.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Since everything in *bash* is a string, we need the dollar sign to indicate a variable reference.
@@ -6444,7 +6443,7 @@ file called donors that looked like this:
     additional indentation for continued lines.
     [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - Use meaningful names for variables and functions, and spell them out. The only time *$i* or *$x* is ever acceptable
+  - Use meaningful names for variables and functions, and spell them out. The only time *\$i* or *\$x* is ever acceptable
     is in a *for* loop. You may think that short, cryptic names are saving you time and typing now, but we guarantee
     that you will lose that time 10- or 100-fold somewhere down the line when you have to fix or modify your script.
     [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
@@ -6520,48 +6519,308 @@ file called donors that looked like this:
 
 #### Exporting Variables
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Export variables that you want to pass on to other scripts.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  export MY_VAR
+  export NAME=value
+  ```
+
+- Sometimes it's a good thing that one script doesn't know about the other script's variables. You wouldn't want a
+  script to impact the execution of another script.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Sometimes you do want the information passed along. In those cases, you can export the variable so that its value is
+  passed along to any other program that the script invokes.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- If you want to see a list of all the exported variables, just type the command *env* (or use the builtin *export -p*)
+  for a list of each variable and its value.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- You can make the *export* part of any variable assignment, though that won't work in old versions of the shell. You
+  can also have the *export* statement just name the variable that will be exported. Though the export statement can be
+  put anywhere prior to where you need the value to be exported, script writers often group these statements together,
+  like variable declarations, at the top of a script.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Once exported, you can assign repeatedly to the variable without exporting it each time. The following is an example of
+  this.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  export FNAME
+  export SIZE
+  export MAX
+  ...
+  MAX=2048
+  SIZE=64
+  FNAME=/tmp/scratch
+  ```
+
+- The following is another example.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  export FNAME=/tmp/scratch
+  export SIZE=64
+  export MAX=2048
+  ...
+  FNAME=/tmp/scratch2
+  ...
+  FNAME=/tmp/still_exported
+  ```
+
+- The exported variables are, in effect, call by value. Changing the value of the exported variable in the called
+  script does not change that variable's value back in the calling script.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Seeing All Variable Values
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use the *set* command to see the values of all variables and function definitions in the current shell.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Use the *env* (or *export -p*) command to see only those variables that have been exported and would be available to
+  a subshell. The list produced by *env* is a subset of the list produced by set, since not all variables are exported.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- In *bash* version 4 or newer, you can also use the *declare -p* command.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The output from the newer *declare -p* command shows the variable names and values as if they were being declared and
+  initialised. The output is in the form of *declare* statements that could be used as source code in a shell script to
+  recreate these variables and their values. The various arguments (*-i*, *-x*, *-r*, *-a*) indicate that the variable
+  is an integer, has been exported, is read-only, or is an array, respectively.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ declare -p
+  ...
+  declare -i MYCOUNT="5"
+  declare -x MYENV="10.5.1.2"
+  declare -r MYFIXED="unchangeable"
+  declare -a MYRA=([0]="5" [1]="10" [2]="15")
+  ...
+  $
+  ```
 
 #### Using Parameters in a Shell Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use command line parameters when you want users to be able to invoke your script with a parameter. It is a more
+  straightforward solution than requiring users to set a shell variable, or pass data with another script.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- You don't need the braces for the single-digit numbers, except to separate the variable name from the surrounding
+  text. Typical scripts have only a handful of parameters, but when you get to *\${10}* you need to use the braces
+  because the shell will interpret *\$10* as *\${1}* followed immediately by the literal string *0*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ cat tricky.sh
+  echo $1 $10 ${10}
+  $ ./tricky.sh I II III IV V VI VII VIII IX X XI
+  I I0 X
+  $
+  ```
 
 #### Looping Over Arguments Passed to a Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- You may want to use the shell pattern matching to build a list of filenames that match the *\*.txt* pattern. This
+  means that any number of arguments could be passed to the script to which you are passing the arguments.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  ./act_all *.txt
+  ```
+
+- To process any number of command line arguments that cannot be set strictly, use the shell special variable *\$\** to
+  refer to all of your arguments, and use that in a *for* loop. The *for* loop will take the first value from the list,
+  assign it to the variable *\$FN*, and proceed through the list of statements between the *do* and the *done.* It will
+  then repeat that loop for each of the other values.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: chmod_all.1
+  #
+  # change permissions on a bunch of files
+  #
+
+  for FN in $*
+  do
+    echo changing $FN
+    chmod 0750 $FN
+  done
+  ```
 
 #### Handling Parameters with Spaces
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- If we don't put quotes around the filename when we invoke the script, *bash* sees three arguments and substitutes the
+  first argument (*Oh*) for *\$1*. The *ls* command runs with *Oh* as its only argument and can't find that file.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ cat simple.sh
+  # simple shell script
+  ls -l ${1}
+  $
+  $ ./simple.sh Oh the Waste
+  ls: Oh: No such file or directory
+  $
+  ```
+
+- Putting quotes around the file name when invoking the script does not resolve the issue, as the script means *ls*
+  sees each word as a separate argument, meaning it can't find any of them.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ ./simple.sh "Oh the Waste"
+  ls: Oh: No such file or directory
+  ls: the: No such file or directory
+  ls: Waste: No such file or directory
+  $
+  ```
+
+- Putting quotes around the variable reference ensure *ls* treats the *"${1}"* is treated as a single argument.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ cat quoted.sh
+  # note the quotes
+  ls -l "${1}"
+  $
+  $ ./quoted.sh "Oh the Waste"
+  -rw-r--r-- 1 smith users 28470 2007-01-11 19:22 Oh the Waste
+  $
+  ```
 
 #### Handling Lists of Parameters with Spaces
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- The *"$\*"* in the following script used in the *for* loop fails does not provided the expected behaviour when
+  processing a file with a space in its name.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  for FN in "$*"
+  do
+    chmod 0750 "$FN"
+  done
+  ```
+
+- The unexpected behaviour is caused by the *"$\*"* in the script, used in the *for* loop. For this case we need to use
+  a different but related shell variable, *\$\@*. When it is quoted, the resulting list has quotes around each argument
+  separately.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: chmod_all.2
+  #
+  # change permissions on a bunch of files
+  # with better quoting in case of filenames with spaces
+  #
+  for FN in "$@"
+  do
+    chmod 0750 "$FN"
+  done
+  ```
+
+- You should generally always use a *\$\@* in any *for* loops that iterate through an array. When you know your file
+  names (or parameters in general) don't have spaces, it's okay to keep the traditional *\$\** syntax. For more robust
+  scripting, the *\$\@* is the safer option. Both options will be used interchangeably throughout this book, as that
+  was more familiar to the authors.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Arguments
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use the shell builtin variable *\$#* to determine how many parameters a script was invoked with.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: check_arg_count
+  #
+  # Check for the correct # of arguments:
+  # Use this syntax or use: if [ $# -lt 3 ]
+
+  if (( $# < 3 ))
+  then
+    printf "%b" "Error. Not enough arguments.\n" >&2
+    printf "%b" "usage: my_script file1 op file2\n" >&2
+    exit 1
+  elif (( $# > 3 ))
+  then
+    printf "%b" "Error. Too many arguments.\n" >&2
+    printf "%b" "usage: my_script file1 op file2\n" >&2
+    exit 2
+  else
+    printf "%b" "Argument count correct. Proceeding...\n"
+  fi
+  ```
+
+- The following is an example usage of the previous script, once with too many arguments and once with the correct
+  number of arguments.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ ./my_script my_file is copied into your_file
+  Error. Too many arguments.
+  usage: my_script file1 op file2
+  $ ./my_script my_file copy your_file
+  Argument count correct. Proceeding...
+  ```
+
+- Don't confuse *\${#}* with *\${#VAR}* or even *\${VAR#alt}* just because they all use the hash character inside of
+  curly braces. The first gives the number of arguments, whereas the second gives the length of the value in the
+  variable *VAR* and the third does a certain kind of substitution.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Consuming Arguments
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use *shift* to remove an argument after you’ve handled it.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: use_up_option
+  #
+  # use and consume an option
+  #
+  # parse the optional argument
+
+  VERBOSE=0
+  if [[ $1 = -v ]]
+  then
+    VERBOSE=1
+    shift
+  fi
+
+  #
+  # the real work is here
+  #
+  for FN in "$@"
+  do
+    if (( VERBOSE == 1 ))
+    then
+      echo changing $FN
+    fi
+      chmod 0750 "$FN"
+  done
+  ```
 
 #### Getting Default Values
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use the *\${:-}* syntax when referring to a parameter that you would like to have a default value, and use it to
+  supply a default value. The *:-* operator says that if the specified parameter (here, *\$1*) is not set or is *null*,
+  whatever follows (*/tmp* in our example) should be used as the value. Otherwise, it will use the value that is
+  already set. It can be used on any shell variable, not just the positional parameters (*\$1*, *\$2*, *\$3*, etc.),
+  but they are probably the most common use.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  FILE_DIR=${1:-/tmp}
+  ```
 
 #### Setting Default Values
 
@@ -7191,7 +7450,7 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Setting a Secure *$PATH*
+#### Setting a Secure *\$PATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7211,7 +7470,7 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Setting a Secure *$IFS*
+#### Setting a Secure *\$IFS*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7221,12 +7480,12 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Finding World-Writeable Directories in Your *$PATH*
+#### Finding World-Writeable Directories in Your *\$PATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Adding the Current Directory to the *$PATH*
+#### Adding the Current Directory to the *\$PATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7303,7 +7562,7 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Setting a POSIX *$PATH*
+#### Setting a POSIX *\$PATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7410,17 +7669,17 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Changing Your *$PATH* Permanently
+#### Changing Your *\$PATH* Permanently
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Changing Your *$PATH* Temporarily
+#### Changing Your *\$PATH* Temporarily
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Setting Your *$CDPATH*
+#### Setting Your *\$CDPATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7450,7 +7709,7 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Using Secondary Prompts: *$PS2*, *$PS3*, *$PS4*
+#### Using Secondary Prompts: *\$PS2*, *\$PS3*, *\$PS4*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
@@ -7686,7 +7945,7 @@ file called donors that looked like this:
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
 
-#### Forgetting That the Current Directory Is Not in the *$PATH*
+#### Forgetting That the Current Directory Is Not in the *\$PATH*
 
 <!-- - 
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
