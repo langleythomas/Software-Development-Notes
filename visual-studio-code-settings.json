@@ -1,6 +1,10 @@
 {
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
   "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "[markdown]": {
@@ -656,5 +660,5 @@
   "workbench.colorTheme": "Dracula Pro Edition",
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
-  "workbench.tree.renderIndentGuides": "always"
+  "workbench.tree.renderIndentGuides": "always",
 }
