@@ -20,13 +20,12 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
-  "accessibility.dimUnfocused.enabled": true,
-
   "breadcrumbs.enabled": true,
 
   "csharpextensions.privateMemberPrefix": "_",
 
   "cSpell.caseSensitive": true,
+  "cSpell.blockCheckingWhenLineLengthGreaterThan": 40000,
   "cSpell.language": "en-GB",
   "cSpell.userWords": [
     "Aarakocra",
@@ -623,6 +622,7 @@
   "editor.bracketPairColorization.enabled": true,
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "underline",
+  "editor.fontSize": 14,
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": true,
 
@@ -639,7 +639,7 @@
       "code_blocks": false,
       "headings": false,
       "line_length": 120,
-      "stern": true,
+      "strict": true,
       "tables": false
     },
     "MD025": false,
@@ -660,5 +660,5 @@
   "workbench.colorTheme": "Dracula Pro Edition",
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
-  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.renderIndentGuides": "always"
 }
