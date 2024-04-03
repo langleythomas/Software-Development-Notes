@@ -3765,12 +3765,12 @@ Books:
   # here is a "here" document
   #
   grep $1 <<EOF
-  mike x.123
-  joe x.234
-  sue x.555
-  pete x.818
-  sara x.822
-  bill x.919
+  Mike x.123
+  Joe x.234
+  Sue x.555
+  Pete x.818
+  Sarah x.822
+  Bill x.919
   EOF
   $
   ```
@@ -3789,10 +3789,10 @@ file called donors that looked like this:
   #
   grep $1 <<EOF
   # name amt
-  pete $100
-  joe $200
-  sam $ 25
-  bill $ 9
+  Pete $100
+  Joe $200
+  Sam $ 25
+  Bill $ 9
   EOF
   $
   ```
@@ -3802,10 +3802,10 @@ file called donors that looked like this:
 
   ```bash
   $ ./donors bill
-  pete bill00
+  Pete Bill00
   bill $ 9
-  $ ./donors pete
-  pete pete00
+  $ ./donors Pete
+  Pete Pete00
   $
   ```
 
@@ -3815,10 +3815,10 @@ file called donors that looked like this:
 
   ```bash
   grep $1 <<'EOF'
-  pete $100
-  joe $200
-  sam $ 25
-  bill $ 9
+  Pete $100
+  Joe $200
+  Sam $ 25
+  Bill $ 9
   EOF
   ```
 
@@ -3829,14 +3829,14 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - What's happening in our original donors script is that the amounts are being interpreted as shell variables. For
-  example, *\$100* is being seen as the shell variable *\$1* followed by two zeros. That's what gives us pete00 when we
-  search for *pete* and *bill00* when we search for *bill*. When we escape some or all of the characters of the EOF,
+  example, *\$100* is being seen as the shell variable *\$1* followed by two zeros. That's what gives us *Pete00* when
+  we search for *Pete* and *bill00* when we search for *Bill*. When we escape some or all of the characters of the EOF,
   *bash* knows not to do the expansions, and the behaviour is the expected behaviour:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  $ ./donors pete
-  pete $100
+  $ ./donors pPte
+  Pete $100
   ```
 
 - Of course, you may want the shell expansion on your data. It is a useful practice to always escape the marker, as in
@@ -4668,9 +4668,9 @@ file called donors that looked like this:
   ```bash
   $ declare -p
   ...
-  declare -i MYCOUNT="5"
-  declare -x MYENV="10.5.1.2"
-  declare -r MYFIXED="unchangeable"
+  declare -i MY_COUNT="5"
+  declare -x MY_ENV="10.5.1.2"
+  declare -r MY_FIXED="unchangeable"
   declare -a MYRA=([0]="5" [1]="10" [2]="15")
   ...
 
@@ -5016,7 +5016,7 @@ file called donors that looked like this:
 
   - **Command Substitution**:
 
-    - Commands are enclosed in the single parentheses syntax, *\$(cmds)*.
+    - Commands are enclosed in the single parentheses syntax, *\$(commands)*.
       [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - **Arithmetic Expansion**:
@@ -5037,18 +5037,18 @@ file called donors that looked like this:
   #!/usr/bin/env bash
   # cookbook filename: check_unset_parms
   #
-  USAGE="usage: myscript scratchdir sourcefile conversion"
-  FILEDIR=${1:?"Error. You must supply a scratch directory."}
-  FILESRC=${2:?"Error. You must supply a source file."}
-  CVTTYPE=${3:?"Error. ${USAGE}"}
+  USAGE="usage: my_script scratch_dir source_file conversion"
+  FILE_DIR=${1:?"Error. You must supply a scratch directory."}
+  FILE_SRC=${2:?"Error. You must supply a source file."}
+  CVT_TYPE=${3:?"Error. ${USAGE}"}
   ```
 
 - If you run the script with insufficient arguments:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  $ ./myscript /tmp /dev/null
-  ./myscript: line 7: 3: Error. usage: myscript scratchdir sourcefile conversion
+  $ ./my_script /tmp /dev/null
+  ./my_script: line 7: 3: Error. usage: my_script scratch_dir source_file conversion
 
   $
   ```
@@ -5060,11 +5060,11 @@ file called donors that looked like this:
   $ ./check_unset_parms
   ./check_unset_parms: line 5: 1: Error. You must supply a scratch directory.
 
-  $ ./check_unset_parms somedir
+  $ ./check_unset_parms some_dir
   /tmp/check_unset_parms: line 6: 2: Error. You must supply a source file.
 
-  $ ./check_unset_parms somedir somefile
-  ./check_unset_parms: line 7: 3: Error. usage: myscript scratchdir sourcefile \
+  $ ./check_unset_parms some_dir some_file
+  ./check_unset_parms: line 7: 3: Error. usage: my_script scratch_dir source_file \
   conversion
   ```
 
