@@ -20,6 +20,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
+  "accessibility.dimUnfocused.enabled": true,
+
   "breadcrumbs.enabled": true,
 
   "csharpextensions.privateMemberPrefix": "_",
