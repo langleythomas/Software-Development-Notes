@@ -418,6 +418,7 @@
     "pdksh",
     "Peetal",
     "Peopleware",
+    "perldoc",
     "Peryton",
     "Phlan",
     "Pickleweed",
@@ -537,6 +538,7 @@
     "Tarokka",
     "Techradar",
     "tenne",
+    "Texinfo",
     "Thalia",
     "thello",
     "Thimecria",
@@ -625,14 +627,13 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "underline",
   "editor.fontSize": 14,
+  "editor.guides.indentation": true,
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": true,
 
   "explorer.compactFolders": false,
 
   "files.insertFinalNewline": true,
-
-  "indentRainbow.includedLanguages": ["markdown", "python", "yaml"],
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
 
