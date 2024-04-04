@@ -4621,26 +4621,26 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  export FNAME
+  export F_NAME
   export SIZE
   export MAX
   ...
   MAX=2048
   SIZE=64
-  FNAME=/tmp/scratch
+  F_NAME=/tmp/scratch
   ```
 
 - The following is another example.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  export FNAME=/tmp/scratch
+  export F_NAME=/tmp/scratch
   export SIZE=64
   export MAX=2048
   ...
-  FNAME=/tmp/scratch2
+  F_NAME=/tmp/scratch2
   ...
-  FNAME=/tmp/still_exported
+  F_NAME=/tmp/still_exported
   ```
 
 - The exported variables are, in effect, call by value. Changing the value of the exported variable in the called
@@ -5035,7 +5035,7 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: check_unset_parms
+  # cookbook filename: check_unset_params
   #
   USAGE="usage: my_script scratch_dir source_file conversion"
   FILE_DIR=${1:?"Error. You must supply a scratch directory."}
@@ -5057,14 +5057,14 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  $ ./check_unset_parms
-  ./check_unset_parms: line 5: 1: Error. You must supply a scratch directory.
+  $ ./check_unset_params
+  ./check_unset_params: line 5: 1: Error. You must supply a scratch directory.
 
-  $ ./check_unset_parms some_dir
-  /tmp/check_unset_parms: line 6: 2: Error. You must supply a source file.
+  $ ./check_unset_params some_dir
+  /tmp/check_unset_params: line 6: 2: Error. You must supply a source file.
 
-  $ ./check_unset_parms some_dir some_file
-  ./check_unset_parms: line 7: 3: Error. usage: my_script scratch_dir source_file \
+  $ ./check_unset_params some_dir some_file
+  ./check_unset_params: line 7: 3: Error. usage: my_script scratch_dir source_file \
   conversion
   ```
 
