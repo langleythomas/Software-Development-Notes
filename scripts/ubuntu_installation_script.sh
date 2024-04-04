@@ -127,6 +127,7 @@ function install_docker() {
   sudo chmod a+r /etc/apt/keyrings/docker.asc
 
   # Add the repository to Apt sources:
+  # shellcheck disable=SC1091
   echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
     $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
@@ -254,18 +255,21 @@ function install_vim() {
 }
 
 function install_visual_studio_code() {
-  update_flatpak
+  update_snap
 
   printf "Installing Visual Studio Code.\n"
 
-  flatpak install flathub com.visualstudio.code --yes
+  sudo snap install code
 
-  # If there is an issue loading the Visual Studio Code GUI after an update, as described here https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank: rm -r ~/.config/Code/GPUCache
+  # If there is an issue loading the Visual Studio Code GUI after an update, as described here https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
+  # rm -r ~/.config/Code/GPUCache
 
   print_separator
 }
 
 function call_text_editor_installation_functions() {
+  install_vim
+
   install_visual_studio_code
 }
 
@@ -380,6 +384,16 @@ function install_discord() {
   print_separator
 }
 
+function install_gnome_tweaks() {
+  printf "Installing GNOME Tweaks.\n"
+
+  update_and_upgrade_apt
+
+  sudo apt install gnome-tweaks
+
+  print_separator
+}
+
 function install_vlc() {
   printf "Installing VLC.\n"
 
@@ -395,6 +409,8 @@ function call_miscellaneous_tool_functions() {
 
   install_discord
 
+  install_gnome_tweaks
+
   install_vlc
 }
 
@@ -403,7 +419,7 @@ function call_miscellaneous_tool_functions() {
 #######################################################################################################################
 
 function autoremove_unused_dependencies() {
-  printf "Autoremoving unused dependencies.\n"
+  printf "Autoremoving Unused Dependencies.\n"
 
   update_and_upgrade_apt
 
