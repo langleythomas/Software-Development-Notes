@@ -1,27 +1,57 @@
 <!-- Essential Notes to Look At:
-Books:
+# Books:
+## General Programmer Advice
 - The Pragmatic Programmer (Physical)
+## Command Line Automation
 - bash Cookbook (Humble Bundle)
 
-Online:
+# Online:
+## Deployment
 - AWS course
 
-Books:
+# Books:
+## General Programmer Advice
 - Apprenticeship Patterns (Humble Bundle)
+## Command Line Automation
 - Automate the Boring Stuff with Python: Practical Programming for Total Beginners (Humble Bundle)
-- The Art of Agile Development (Humble Bundle)
 -->
 
 <!-- Nice Notes to Look At:
-Books:
+# Books:
+## Security
+- Fundamentals of Information System Security, 4th Edition (To Be Bought)
+- Software Security: Building Security In (To Be Bought)
+## Command Line Automation
+- Wicked Cool Shell Scripts (Humble Bundle)
+- PowerShell Cookbook (Humble Bundle)
+- Wicked Cool Ruby Scripts (Humble Bundle)
+## Deployment
+- Docker Cookbook (Humble Bundle)
+## Algorithms
+- Learning Algorithms (Humble Bundle)
+- Algorithms in a Nutshell (Humble Bundle)
+## General Programmer Advice
+- The Art of Agile Development (Humble Bundle)
+- Becoming a Better Programmer (Humble Bundle)
+- Apprenticeship Patterns (Humble Bundle)
 - Code Complete (Microsoft Press)
-- Wicked Cool Shell Scripts
-- Head First Agile
-- Head First Design Patterns
-- Something C-related
+## Agile
+- Head First Agile (Humble Bundle)
+## Clean Code
+- The Art of Readable Code (Humble Bundle)
+- Head First Design Patterns (Humble Bundle)
+- Clean Architecture (Physical)
+- The Clean Coder (Physical)
+- Refactoring (Physical)
+## Architecture
+- Software Architecture: The Hard Parts (Physical)
+## C Development
+- Head First C (Humble Bundle)
+## C++ Development
 - Something C++-related
-- Something Data Structures & Algorithms-related
-- Something Security-related
+## Pipeline
+- Data Pipeline Pocket Reference (Humble Bundle)
+- Cost-Effective Data Pipelines (Humble Bundle)
 -->
 
 <!-- markdownlint-capture -->
@@ -3914,7 +3944,6 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  # cookbook filename: func_choose
   # Let the user make a choice about something and execute code based on
   # the answer
   # Called like: choose <default (y or n)> <prompt> <yes action> <no action>
@@ -3949,7 +3978,6 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  # cookbook filename: func_choice.1
   # Let the user make a choice about something and return a standardised
   # answer. How the default is handled and what happens next is up to
   # the if/then after the choice in main.
@@ -3976,7 +4004,6 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  # cookbook filename: func_choice.2
   CHOICE=''
   until [ "$CHOICE" = "y" ]; do
     printf "%b" "This package's date is $THISPACKAGE\n" >&2
@@ -4000,7 +4027,6 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
-  # cookbook filename: select_dir
   directorylist="Finished $(for i in /*;do [ -d "$i" ] && echo $i; done)"
 
   PS3='Directory to process? ' # Set a useful select prompt
@@ -4433,7 +4459,6 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: embedded_documentation
 
   echo 'Shell script code goes here'
 
@@ -4716,10 +4741,7 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: chmod_all.1
-  #
   # change permissions on a bunch of files
-  #
 
   for FN in $*
   do
@@ -4796,8 +4818,6 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: chmod_all.2
-  #
   # change permissions on a bunch of files
   # with better quoting in case of filenames with spaces
   #
@@ -4820,8 +4840,6 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: check_arg_count
-  #
   # Check for the correct # of arguments:
   # Use this syntax or use: if [ $# -lt 3 ]
 
@@ -4864,10 +4882,7 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: use_up_option
-  #
   # use and consume an option
-  #
   # parse the optional argument
 
   VERBOSE=0
@@ -5035,8 +5050,6 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: check_unset_params
-  #
   USAGE="usage: my_script scratch_dir source_file conversion"
   FILE_DIR=${1:?"Error. You must supply a scratch directory."}
   FILE_SRC=${2:?"Error. You must supply a source file."}
@@ -5070,33 +5083,148 @@ file called donors that looked like this:
 
 #### Changing Pieces of a String
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use a *bash* parameter expansion feature that will remove text that matches a pattern. The *for* loop will iterate
+  over a list of filenames in the current directory that all end in *.bad*. The variable *$FN* will take the value of
+  each name, one at a time. Inside the loop, the *mv* command will rename the file (move it from the old name to the
+  new name). We need to put quotes around each filename in case the filename contains embedded spaces.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  #
+  # rename files that end in .bad to be .bash
+  for FN in *.bad
+  do
+    mv "${FN}" "${FN%bad}bash"
+  done
+  ```
+
+- In both the previous and following example, the reference to $FN that includes an automatic deletion of the trailing
+  bad characters. The *${ }* delimits the reference so that the *bash* adjacent to it is just appended right onto the
+  end of the string.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  NO_BAD="${FN%bad}"
+  NEW_NAME="${NO_BAD}bash"
+  mv "${FN}" "${NEW_NAME}"
+  ```
 
 #### Getting the Absolute Value of a Number
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use string manipulation when you have a numeric value in a variable and want to determine its magnitude - its
+  absolute value.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- This is simple string manipulation. The *#* searches from the front of the string, looking for, in this case, the
+  minus sign. If found, it will remove it. If no minus is found, it simply results in the original value. Either way,
+  that leaves the value without a leading minus, which gives us its magnitude.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  ${MY_VAR#-}
+  ```
 
 #### Using *bash* for *basename*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- *bash* can strip the directory path from a shell variable string and leave just the last part of the path (the
+  filename), providing the same output as *basename*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The big difference between the first and second examples is the braces. The first example, using parentheses, will
+  launch a subshell to run the executable basename with the argument that is the value of *$FULL_PATH_TO_FILE*. The
+  second example uses curly braces, which is just part of the syntax for evaluating a shell variable - no subshell, no
+  executable file. It looks for, and removes from the front of the string (because of the *#*), the longest match
+  (because of the double *##*) of the pattern described by the asterisk and the slash (*\*/*). The asterisk matches any
+  number of characters and the slash is just a literal slash. In the string */usr/local/bin/my_cmd*, that pattern will
+  match (and thus remove) the */usr/local/bin/* part of the string, leaving *my_cmd* as the value to be assigned into
+  the variable *$FILE*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # basename Solution
+  FILE=$(basename $FULL_PATH_TO_FILE)
+
+  # bash Solution
+  FILE=${FULL_PATH_TO_FILE##*/}
+  ```
+
+- The *basename* command will ignore a trailing slash in the path, so *$(basename /usr/local/bin/)* returns *bin*
+  whereas our *bash* version would return an empty string (since the largest pattern to end in a slash is the whole
+  string). To be compatible, we should remove any trailing slash first before the other substitutions. The real
+  *basename* command can also take a suffix to be removed as a second argument. In *bash* we can do that, too, but
+  would need to do it in a separate step.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *bash* for *dirname*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use a string manipulation operator to remove the filename - the last part of a path in a string - leaving as much of
+  the directory path to that filename as was in the string, producing the same output as the *dirname* command.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- If the variable holds */usr/local/bin/my_cmd*, we want the result of this manipulation to give us just
+  */usr/local/bin* and drop the last part (the filename). Since each piece of the path is separated by a slash, we just
+  remove from the right-hand side (because of the *%*) the shortest string (because there is only one *%*, not two) that
+  matches the pattern "a slash followed by any number of characters" (*/\**).
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # dirname Solution
+  DIR=$(dirname $MY_PATH_TO_FILE)
+
+  # bash Solution
+  DIR=${MY_PATH_TO_FILE%/*}
+  ```
+
+- The example in this section is not a complete, compatible replacement for the *dirname* command, especially around
+  the edge cases of any path that ends with a slash.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Alternate Values for Comma-Separated Values
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- If you write *LIST="\$\{LIST\},\$\{NEW_VAL\}"* inside a loop to build up the list, then the first time (when *LIST*
+  is *null*) you'll end up with a leading comma. You could special-case the initialisation of *LIST* so that it gets
+  the first element before entering the loop, but if that's not practical, or to avoid duplicate code (for getting a
+  new value), you can instead use the *\$\{:+\}* syntax in *bash*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  LIST="${LIST}${LIST:+,}${NEW_VAL}"
+  ```
+
+- If *\$\{LIST\}* is *null* or unset, then both expressions of *\$LIST* are replaced with nothing. That means that the
+  first time through the loop *LIST* will be assigned *NEW_VAL*'s value and nothing more. When *LIST* is not null, the
+  second expression (*\$\{LIST:+,\}*) is replaced with a comma, separating the previous value from the new value.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #
+  # read names one at a time
+  # and build a comma-separated list
+  #
+  while read NEW_VAL
+  do
+  LIST="${LIST}${LIST:+,}${NEW_VAL}"
+  done
+  echo $LIST
+  ```
 
 #### Using Array Variables
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- *bash* has an array syntax for single-dimension arrays. Arrays are easy to initialise if you know the values as you
+  write the script. The format is simple. Each element of the array is a separate word in the list, enclosed in
+  parentheses.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  MYRA=(first second third home)
+
+  echo runners on ${MYRA[0]} and ${MYRA[2]}
+  ```
+
+- If you write only *\$MYRA* in the previous example, you will get only the first element, just as if you had written
+  *\$\{MYRA[0]\}*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Between Upper- and Lowercase
 
