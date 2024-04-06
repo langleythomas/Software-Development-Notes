@@ -640,6 +640,7 @@
   "explorer.compactFolders": false,
 
   "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
     "yzhang.markdown-all-in-one": 1
   },
 
@@ -669,6 +670,9 @@
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontSize": 14,
+
+  "vscode-neovim.neovimExecutablePaths.linux": "/opt/nvim/nvim",
+
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always",
