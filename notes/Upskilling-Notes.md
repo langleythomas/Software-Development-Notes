@@ -5,9 +5,49 @@
 ## Command Line Automation
 - bash Cookbook (Humble Bundle)
 
-# Online:
+# Courses:
 ## Deployment
 - AWS course
+
+# Online Notes:
+## Terminal Tools Documentation
+- apropos
+- basename
+- builtin
+- case
+- cat
+- command
+- cut
+- declare
+- dirname
+- echo
+- enable
+- env
+- exit
+- file
+- find
+- grep
+- head
+- help
+- less
+- locate
+- ls
+- man
+- neovim
+- nohup
+- printf
+- read
+- select
+- set
+- slocate
+- stat
+- tail
+- tee
+- type
+- uniq
+- vim
+- vim
+- which
 
 # Books:
 ## General Programmer Advice
@@ -606,6 +646,42 @@
       - [Pragmatic Starter Kit](#pragmatic-starter-kit)
       - [Delight Your Users](#delight-your-users)
       - [Pride \& Prejudice](#pride--prejudice)
+- [Course Notes](#course-notes)
+  - [Neovim Tutorial](#neovim-tutorial)
+    - [Lesson 0](#lesson-0)
+    - [Lesson 1.1: Moving the Cursor](#lesson-11-moving-the-cursor)
+    - [Lesson 1.2: Exiting Vim](#lesson-12-exiting-vim)
+    - [Lesson 1.3: Text Editing - Deletion](#lesson-13-text-editing---deletion)
+    - [Lesson 1.4: Text Editing - Insertion](#lesson-14-text-editing---insertion)
+    - [Lesson 1.5 Text Editing - Appending](#lesson-15-text-editing---appending)
+    - [Lesson 1.6: Editing a File](#lesson-16-editing-a-file)
+    - [Lesson 1 Summary](#lesson-1-summary)
+    - [Lesson 2.1: Deletion Commands](#lesson-21-deletion-commands)
+    - [Lesson 2.2: More Deletion Commands](#lesson-22-more-deletion-commands)
+    - [Lesson 2.3: On Operators \& Motions](#lesson-23-on-operators--motions)
+    - [Lesson 2.4: Using a Count for a Motion](#lesson-24-using-a-count-for-a-motion)
+    - [Lesson 2.5 Using a Count to Delete More](#lesson-25-using-a-count-to-delete-more)
+    - [Lesson 2.6: Operating on Lines](#lesson-26-operating-on-lines)
+    - [Lesson 2.7: The Undo Command](#lesson-27-the-undo-command)
+    - [Lesson 3.1: The Put Command](#lesson-31-the-put-command)
+    - [Lesson 3.2: The Replace Command](#lesson-32-the-replace-command)
+    - [Lesson 3.3: The Change Operator](#lesson-33-the-change-operator)
+    - [Lesson 4.1: Cursor Location \& File Status](#lesson-41-cursor-location--file-status)
+    - [Lesson 4.2: The Search Command](#lesson-42-the-search-command)
+    - [Lesson 4.3: Matching Parentheses Search](#lesson-43-matching-parentheses-search)
+    - [Lesson 4.4: The Substitute Command](#lesson-44-the-substitute-command)
+    - [Lesson 5.1: How to Execute an External Command](#lesson-51-how-to-execute-an-external-command)
+    - [Lesson 5.2: More on Writing Files](#lesson-52-more-on-writing-files)
+    - [Lesson 5.3: Selecting Text to Write](#lesson-53-selecting-text-to-write)
+    - [Lesson 5.4: Retrieving and Merging Files](#lesson-54-retrieving-and-merging-files)
+    - [Lesson 6.1 The Open Command](#lesson-61-the-open-command)
+    - [Lesson 6.2: The Append Command](#lesson-62-the-append-command)
+    - [Lesson 6.3: Another Way to Replace](#lesson-63-another-way-to-replace)
+    - [Lesson 6.4: Copy \& Paste Text](#lesson-64-copy--paste-text)
+    - [Lesson 6.5: Set Option](#lesson-65-set-option)
+    - [Lesson 7.1: Getting Help](#lesson-71-getting-help)
+    - [Lesson 7.2: Create a Startup Script](#lesson-72-create-a-startup-script)
+    - [Lesson 7.3: Completion](#lesson-73-completion)
 - [Online Notes](#online-notes)
   - [Databases](#databases)
     - [Database Management](#database-management)
@@ -650,6 +726,8 @@
     - [Mongodb: Database Sharding](#mongodb-database-sharding)
   - [Nginx](#nginx)
     - [Nginx: What Is A Service Mesh?](#nginx-what-is-a-service-mesh)
+  - [Neovim](#neovim)
+    - [Pi\_tutor](#pi_tutor)
   - [O'Reilly](#oreilly)
     - [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
     - [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
@@ -5228,13 +5306,13 @@ file called donors that looked like this:
 
 #### Converting Between Upper- and Lowercase
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting to Camel Case
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Shell Logic & Arithmetic
 
@@ -8322,6 +8400,347 @@ file called donors that looked like this:
 
 </details>
 
+# Course Notes
+
+## Neovim Tutorial
+
+### Lesson 0
+
+- Pressing the `U` key in Normal mode undoes the latest change.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Enter>` on hyperlinks opens them.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.1: Moving the Cursor
+
+- Use the arrow keys to navigate the cursor.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.2: Exiting Vim
+
+- Typing `:q!` in Normal mode discards any changes that have been made.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.3: Text Editing - Deletion
+
+- Pressing the `x` key in Normal mode deletes un unwanted character.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.4: Text Editing - Insertion
+
+- Pressing the `i` key in Normal mode inserts text.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.5 Text Editing - Appending
+
+- Pressing the `a` key in Normal mode appends text. Providing this input also changes the editor's mode to Insert Mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.6: Editing a File
+
+- Typing `:wq` in Normal mode discards any changes that have been made.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1 Summary
+
+- Pressing `<Esc>` places you in Normal mode or will cancel an unwanted and partially completed command.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.1: Deletion Commands
+
+- Typing `dw` in Normal mode deletes a word when the cursor is at the beginning of the word.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.2: More Deletion Commands
+
+- Typing `d$` in Normal mode deletes the text to the end of the line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.3: On Operators & Motions
+
+- Many commands that change text are made from an operator and a motion.
+  [Pi\_tutor](#pi_tutor)
+
+- The format for a delete command with the `d` delete operator is as follows, with `<motion>` being what the operator
+  will operator on:
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  d<motion>
+  ```
+
+- A short list of motions:
+  [Pi\_tutor](#pi_tutor)
+
+  - `w` - until the start of the next word, excluding the first character. From the cursor up to the next word.
+
+  - `e` - to the end of the current word, including the last character.
+
+  - `$` - to the end of the line, including the last character. From the cursor to the end of a line.
+
+- Pressing just the motion while in Normal mode without an operator will move the cursor as specified.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.4: Using a Count for a Motion
+
+- Typing a number before a motion repeats it that many times.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `2w` moves the cursor two words forward.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `3e` moves the cursor to the end of the third word forward.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `0` (zero) moves to the start of the line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.5 Using a Count to Delete More
+
+- Typing a number with an operator repeats it that many times.
+  [Pi\_tutor](#pi_tutor)
+
+- The format for a delete operator and a motion with `<number>` being the count inserted before the motion to delete
+  more.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  d<number><motion>
+  ```
+
+- Typing `d2w` in Normal mode deletes two upper case words when the cursor is on an upper case word.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.6: Operating on Lines
+
+- Typing `dd` in Normal mode deletes a whole line.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `2dd` in Normal mode deletes 2 whole lines.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.7: The Undo Command
+
+- Typing `u` in Normal mode undoes the last command.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `U` in Normal mode undoes changes on a whole line.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + R` in Normal mode to redoes the commands.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.1: The Put Command
+
+- To put back text that has just been deleted, type `p` in Normal Mode. This puts the deleted text after the cursor (if
+  a line was deleted it will go on the line below the cursor).
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.2: The Replace Command
+
+- To replace the character under the cursor, type `r` in Normal Mode and then the character you want to have there.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.3: The Change Operator
+
+- The change operator allows you to change from the cursor to where the motion takes you. Type `ce` in Normal Mode to
+  change from the cursor to the end of the word, `c$` to change to the end of a line. Typing `ce` delete the word after
+  the cursor and places you into Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.1: Cursor Location & File Status
+
+- Pressing `<Ctrl> + g` in Normal mode displays your location and the file status.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `G` in Normal mode moves to the end of the file.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `<line_number> G` in Normal mode moves to that line number.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `gg` in Normal mode moves to the first line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.2: The Search Command
+
+- Typing `/` in Normal mode followed by a phrase searches FORWARD for the phrase.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `?` in Normal mode followed by a phrase searches BACKWARD for the phrase.
+  [Pi\_tutor](#pi_tutor)
+
+- After a search, type `n` in Normal mode to find the next occurrence in the same direction or `N` to search in the
+  opposite direction.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + o` in Normal mode takes you back to the previous position of the cursor when searching.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + i` in Normal mode takes you back to the next position of the cursor when searching.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.3: Matching Parentheses Search
+
+- Typing `%` in Normal mode while the cursor is on a `(`,`)`,`[`,`]`,`{`, or `}` goes to its match.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.4: The Substitute Command
+
+- To substitute `<new>` for the first `<old>` in a line in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :s/<old>/<new>
+  ```
+
+- To substitute `<new>` for all instances of`<old>` in a line in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :s/<old>/<new>/g
+  ```
+
+- To substitute phrases between two line numbers in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :<line_number_one>,<line_number_two>s/<old>/<new>/g
+  ```
+
+- To substitute all occurrences in the files in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :%s/<old>/<new>/g
+  ```
+
+- To ask for confirmation each time, add `c` to the end of the substitution command in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :%s/<old>/<new>/gc
+  ```
+
+### Lesson 5.1: How to Execute an External Command
+
+- Type `:!<command>` in Normal mode executes an external command and then executes after you input `<Enter>`.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :!ls
+  :!rm <FILENAME>
+  ```
+
+### Lesson 5.2: More on Writing Files
+
+- Type `:!w <FILENAME>` in Normal mode to write the current Vim file to disk with the name `<FILENAME>`.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 5.3: Selecting Text to Write
+
+- Perform the following steps to select lines to save to a file:
+  [Pi\_tutor](#pi_tutor)
+
+  - Move the cursor to the first line you to save to a new file.
+    [Pi\_tutor](#pi_tutor)
+
+  - Press `v` in Normal Mode and move the cursor to select all lines you wish to save to a file. The text will be
+    highlighted.
+    [Pi\_tutor](#pi_tutor)
+
+  - Type `:w <FILENAME>` in Normal Mode, where `<FILENAME>` does not exist yet.
+    [Pi\_tutor](#pi_tutor)
+
+### Lesson 5.4: Retrieving and Merging Files
+
+- Type `:r <FILENAME>` in Normal Mode to retrieve the contents of the file `<FILENAME>` and enter the output below the
+  cursor position.
+  [Pi\_tutor](#pi_tutor)
+
+- Type `:r !<command>` in Normal Mode to read the output of `<command>` command and enter the output below the cursor
+  position.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.1 The Open Command
+
+- Typing `o` in Normal mode opens a line below the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `O` in Normal mode opens a line above the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.2: The Append Command
+
+- Typing `a` in Normal mode opens a line below the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `A` in Normal mode opens a line above the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `a`, `A`, and `i` all go to the same Insert mode, the only difference is where the characters are inserted.
+
+### Lesson 6.3: Another Way to Replace
+
+- Typing `R` in Normal mode enters Replace mode until `<Esc>` is pressed.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.4: Copy & Paste Text
+
+- Typing `y` in Normal mode copies text. `y` is short for "yank" ("copy"). Enter Visual mode by typing `v` in Normal
+  mode to enter Visual mode.
+  [Pi\_tutor](#pi_tutor)
+
+- `y` can be used as an operator: `yw` in Normal mode yanks one word.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `p` in Normal mode. `p` is short for "put" ("paste").
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.5: Set Option
+
+- Typing ":set xxx" sets the option "xxx". Some options are. You can either use the long or the short option name.
+  [Pi\_tutor](#pi_tutor)
+
+  | **Short Option** | **Long Option** |                  **Description**                  |
+  |:----------------:|:---------------:|:-------------------------------------------------:|
+  |        ic        |    ignorecase   | Ignore upper/lower case when searching/replacing. |
+  |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
+  |        hls       |     hslearch    |          Highlight all matching phrases.          |
+
+### Lesson 7.1: Getting Help
+
+- Typing `:help` in Normal mode or press `<F1>` or `<Help>` (if you have the key) opens a help window.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + w` twice in Normal mode to jump from one window to another.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `:q` in Normal mode closes the help window.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `:help <TOPIC>` in Normal mode find helps on a particular `<TOPIC>`.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 7.2: Create a Startup Script
+
+- Vim has many more features than Vi, but most of them are disabled by default. To start using more features you have
+  to create a "vimrc" file.
+  [Pi\_tutor](#pi_tutor)
+
+- Create a vimrc startup script to keep your preferred settings.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 7.3: Completion
+
+- Pressing `<Ctrl> + d` while in Command mode, and after inputting the start of a command, to complete a command.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Tab>` will complete the command. Pressing the left and right arrow keys navigates up and down the list,
+  respectively.
+  [Pi\_tutor](#pi_tutor)
+
 # Online Notes
 
 <!-- ## Application Architecture
@@ -9279,6 +9698,12 @@ TODO: Order in which to do this testing.
 ### Nginx: What Is A Service Mesh?
 
 - <https://www.nginx.com/blog/what-is-a-service-mesh/>
+
+## Neovim
+
+### Pi_tutor
+
+- <https://neovim.io/doc/user/pi_tutor.html>
 
 ## O'Reilly
 
