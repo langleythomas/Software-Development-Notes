@@ -1,1 +1,1 @@
-export PATH="$PATH:/opt/nvim/
+export PATH="$PATH:/opt/nvim/"
