@@ -638,6 +638,10 @@
 
   "explorer.compactFolders": false,
 
+  "extensions.experimental.affinity": {
+    "yzhang.markdown-all-in-one": 1
+  },
+
   "files.insertFinalNewline": true,
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
