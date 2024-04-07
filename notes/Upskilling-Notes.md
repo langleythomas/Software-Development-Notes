@@ -277,13 +277,13 @@
       - [Branching on Conditions](#branching-on-conditions)
       - [Testing for File Characteristics](#testing-for-file-characteristics)
       - [Testing for More than One Thing](#testing-for-more-than-one-thing)
-      - [Testing for String Characteristics](#testing-for-string-characteristics)
-      - [Testing for Equality](#testing-for-equality)
-      - [Testing with Pattern Matches](#testing-with-pattern-matches)
-      - [Testing with Regular Expressions](#testing-with-regular-expressions)
-      - [Changing Behaviour with Redirections](#changing-behaviour-with-redirections)
-      - [Looping for a While](#looping-for-a-while)
-      - [Looping with a *read*](#looping-with-a-read)
+    - [Testing for String Characteristics](#testing-for-string-characteristics)
+    - [Testing for Equality](#testing-for-equality)
+    - [Testing with Pattern Matches](#testing-with-pattern-matches)
+    - [Testing with Regular Expressions](#testing-with-regular-expressions)
+    - [Changing Behaviour with Redirections](#changing-behaviour-with-redirections)
+    - [Looping for a While](#looping-for-a-while)
+    - [Looping with a *read*](#looping-with-a-read)
       - [Looping with a Count](#looping-with-a-count)
       - [Looping with Floating-Point Values](#looping-with-floating-point-values)
       - [Branching Many Ways](#branching-many-ways)
@@ -5306,1141 +5306,1211 @@ file called donors that looked like this:
 
 #### Converting Between Upper- and Lowercase
 
-- 
+- As of *bash* 4.0, there are a few operators to do case conversion when referencing a variable name.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  ${FN,,} # Returns the string in all lowercase.
+  ${FN^^} # Returns the string in all uppercase.
+  ${FN~~} # Returns the string, changing all lower- to upper- and all upper- to lowercase characters.
+  ```
+
+- Also available in version 4 of *bash* or newer: you can declare your variable to be a type that is always lowercase,
+  uppercase, or only ensuring the first character is uppercase.
+  Any text assigned to it will be converted to lowercase.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  declare -u <variable_name> # All characters uppercase.
+  declare -l <variable_name> # All  lowercase.
+  declare -c <variable_name> # Only the first character uppercase.
+  ```
 
 #### Converting to Camel Case
 
-- 
+- Use a combination of an array and case conversion substitution if you want each word to begin with a capital letter,
+  not just the first letter of the string.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The parentheses around *$XT* cause it to be treated as array initialisation. Whitespace separating the words
+  delineates the array elements. The *[@]* notation references all the elements of the array all at once
+  (individually), and the *^* operator converts the first character (of each element) to uppercase.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  while read TXT
+  do
+    RA=($TXT) # Must be ($ not $(
+    echo ${RA[@]^}
+  done
+  ```
 
 ### Shell Logic & Arithmetic
 
+- One of the big improvements in modern versions of *bash* compared with the original Bourne shell is in the area of
+  arithmetic. Early versions of the shell had no built-in arithmetic; it had to be done by invoking a separate
+  executable.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Beyond arithmetic, there are the control structures familiar to any programmer. There is an *if/then/else* construct
+  for decision making, as well as *while* loops and *for* loops, though you will see some *bash* peculiarities to all
+  of these. There is a case statement made quite powerful by its string pattern matching, and an odd construct called
+  *select*.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
 #### Doing Arithmetic in Your Shell Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- Use *$(( ))* or *let* for integer arithmetic expressions.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  COUNT=$((COUNT + 5 + MAX * 2))
+  let COUNT+='5+MAX*2'
+  ```
+
+- You can use all the C-like operators inside of *$(())* for arithmetic expressions.  
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Spaces are not needed, nor are they prohibited around operators and arguments.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- You must also ensure to quote *let* expressions since the *let* statement is a *bash* builtin and its arguments will
+  undergo word expansion.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- There is one additional operator: you can use *\*\** for raising to a power.
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  MAX=$((2**8))
+  ```
 
 #### Branching on Conditions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Testing for File Characteristics
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Testing for More than One Thing
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Testing for String Characteristics
+### Testing for String Characteristics
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Testing for Equality
+### Testing for Equality
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Testing with Pattern Matches
+### Testing with Pattern Matches
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Testing with Regular Expressions
+### Testing with Regular Expressions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Changing Behaviour with Redirections
+### Changing Behaviour with Redirections
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Looping for a While
+### Looping for a While
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Looping with a *read*
+### Looping with a *read*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Looping with a Count
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Looping with Floating-Point Values
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Branching Many Ways
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Command-Line Arguments
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating Simple Menus
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Changing the Prompt on Simple Menus
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating a Simple RPN Calculator
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating a Command-Line Calculator
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Intermediate Shell Tools I
 
 #### Sifting Through Files for a String
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Just the Filename from a Search
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting a Simple True/False from a Search
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching for Text While Ignoring Case
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing a Search in a Pipeline
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Paring Down What the Search Finds
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching with More Complex Patterns
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching for an SSN
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Grepping Compressed Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping Some Output, Discarding the Rest
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping Only a Portion of a Line of Output
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reversing the Words on Each Line
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Summing a List of Numbers
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting String Values with *awk*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting String Values with *bash*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Showing Data as a Quick and Easy Histogram
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### An Easy Histogram with *bash*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Showing a Paragraph of Text After a Found Phrase
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Intermediate Shell Tools II
 
 #### Sorting Your Output
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sorting Numbers
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sorting IP Addresses
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Cutting Out Parts of Your Output
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing Duplicate Lines
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Compressing Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Uncompressing Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Checking a *tar* Archive for Unique Directories
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Translating Characters
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Uppercase to Lowercase
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting DOS Files to Linux Format
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing Smart Quotes
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Lines, Words, or Characters in a File
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Rewrapping Paragraphs
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing More with *less*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Finding Files: *find*, *locate*, *slocate*
 
 #### Finding All Your MP3 Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Handling Filenames Containing Odd Characters
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Speeding Up Operations on Found Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files Across Symbolic Links
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files Irrespective of Case
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Date
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Type
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding File by Size
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Content
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Existing Files & Content Fast
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding a File Using a List of Possible Locations
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Additional Features for Scripting
 
 #### "Daemon-ising" Your Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reusing Code with Includes & Sourcing
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Configuration Files in a Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Defining Functions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Functions: Parameters & Return Values
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Trapping Interrupts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Redefining Commands with *alias*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoiding Aliases & Functions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counted Elapsed Time
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Wrappers
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Working with Dates & Times
 
 #### Formatting Dates for Display
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Supplying a Default Date
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Automating Date Ranges
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Dates & Times to Epoch Seconds
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Epoch Seconds to Dates & Times
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Yesterday or Tomorrow with Perl
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Figuring Out Date & Time Arithmetic
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Handling Time Zones, Daylight Saving Time, & Leap Years
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *date* & *cron* to Run a Script on the Nth Day
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Logging with Dates
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### End-User Tasks as Shell Scripts
 
 #### Starting Simple by Printing Dashes
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Viewing Photos in an Album
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Loading Your MP3 Player
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Burning a CD
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Comparing Two Documents
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Parsing & Similar Tasks
 
 #### Parsing Arguments for Your Shell Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Arguments with Your Own Error Messages
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Some HTML
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Output into an Array
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Output with a Function Call
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Text with a *read* Statement
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing with *read* into an Array
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reading an Entire File
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Your Plurals Right
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Taking It One Character at a Time
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Cleaning Up an SVN Source Tree
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Up a Database with MySQL
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Isolating Specific Fields in Data
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Updating Specific Fields in Datafiles
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Trimming Whitespace
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Compressing Whitespace
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Processing Fixed-Length Records
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Processing Files with No Line Breaks
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting a Datafile to CSV
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing a CSV Datafile
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Writing Secure Shell Scripts
 
 #### Avoiding Common Security Problems
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoiding Interpreter Spoofing
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting a Secure *\$PATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing All Aliases
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing the Command Hash
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Preventing Core Dumps
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting a Secure *\$IFS*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting a Secure *umask*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding World-Writeable Directories in Your *\$PATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adding the Current Directory to the *\$PATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Secure Temporary Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Validating Input
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Permissions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Leaking Passwords into the Process List
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing *setuid* or *setgid* Scripts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Restricting Guest Users
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *chroot* Jails
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running as Non-root User
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *sudo* More Securely
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Passwords in Scripts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using SSH Without a Password
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Restricting SSH Commands
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Disconnecting Inactive Sessions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Advanced Scripting
 
 #### Finding *bash* Portable for *#!*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting a POSIX *\$PATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Developing Portable Shell Scripts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Testing Scripts Using Virtual machines
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *for* Loops Portably
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *echo* Portably
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Splitting Output Only When Necessary
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Viewing Output in Hex
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *bash* Net-Redirection
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding My IP Address
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Input from Another Machine
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Redirecting Output for the Life of a Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Working Around *"Argument list too long"* Errors
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Logging to *syslog* from Your Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *logger* Correctly
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sending Email from Your Script
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Automating a Process Using Phases
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing Two Things at Once
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running an SSH Command on Multiple Hosts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Configuring & Customising *bash*
 
 #### *bash* Startup Options
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Customising Your Prompt
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### A Prompt Before Your Program Runs
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Changing Your *\$PATH* Permanently
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Changing Your *\$PATH* Temporarily
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Your *\$CDPATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### When Programs Are Not Found
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Shorting or Changing Command Names
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adjusting Shell Behaviour & Environment
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adjusting *readline* Behaviour Using *.inputrc*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping a Private Stash of Utility by Adding *~/bin*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Secondary Prompts: *\$PS2*, *\$PS3*, *\$PS4*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Synchronising Shell History Between Sessions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Shell History Options
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating a Better *cd* Command
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating & Changing Into a New Directory in One Step
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting to the Bottom of Things
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adding New Features to *bash* Using Loadable Builtins
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Improving Programmable Completion
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Initialisation Files Correctly
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating Self-Contained, Portable *rc* Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Start with a Custom Configuration
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Housekeeping & Administrative Tasks
 
 #### Renaming Many Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using GNU Texinfo & *info* on Linux
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Unzipping Many ZIP Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Recovering Disconnected Sessions Using *screen*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sharing a Single *bash* Session
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Logging an Entire Session or Batch Job
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing the Screen When You Log Out
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Capturing File Metadata for Recovery
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating an Index of Many Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *diff* & *patch*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Differences in Files
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing or Renaming Files Named with Special Characters
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Prepending Data to a File
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Editing a File in Place
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using *sudo* on a Group of Commands
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Lines That Appear in One File but Not in Another
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping the Most Recent N Objects
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing to a Circular Log
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Circular Backups
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Grepping *ps* Output Without Also Getting the *grep* Process Itself
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Out Whether a Process Is Running
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adding a Prefix or Suffix to Output
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Numbering Lines
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Sequences
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Emulating the DOS Pause Command
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Commodifying Numbers
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Working Faster by Typing Less
 
 #### Moving Quickly Among Arbitrary Directories
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Repeating the Last Command
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Quick Substitution
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reusing Arguments
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finishing Names for You
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Playing It Safe
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Big Changes, More Lines
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Tips & Traps: Common Goofs for Notices
 
 #### Forgetting to Set Execute Permissions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Fixing *"No such file or directory"* Errors
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting That the Current Directory Is Not in the *\$PATH*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Naming Your Script *"test"*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Expecting to Change Exported Variables
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting Quotes Leads to *"command not found"* on Assignments
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting that Pattern Matching Alphabetises
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting that Pipelines Make Subshells
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Making Your Terminal Sane Again
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Deleting Files Using an Empty Variable
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Seeing Odd Behaviour from *printf*
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Testing *bash* Script Syntax
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Debugging Scripts
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoid *"command not found"* When Using Functions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Confusing Shell Wildcards & Regular Expressions
 
-<!-- - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 </details>
 
@@ -8409,7 +8479,7 @@ file called donors that looked like this:
 - Pressing the `U` key in Normal mode undoes the latest change.
   [Pi\_tutor](#pi_tutor)
 
-- Pressing `<Enter>` on hyperlinks opens them.
+- Pressing `<Enter>` in Normal mode on hyperlinks opens them.
   [Pi\_tutor](#pi_tutor)
 
 ### Lesson 1.1: Moving the Cursor
