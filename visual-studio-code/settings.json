@@ -295,6 +295,7 @@
     "keycards",
     "Keycharm",
     "Keyes",
+    "keymap",
     "Kief",
     "Killian",
     "Killinaskully",
@@ -410,6 +411,7 @@
     "Orien",
     "Ormpetarr",
     "Ouki",
+    "packadd",
     "Painbrandt",
     "Paizo",
     "Paliset",
@@ -433,6 +435,7 @@
     "POSIX",
     "Powderkeg",
     "Prag",
+    "Primeagen",
     "proc",
     "Puffypants",
     "Punchup",
@@ -449,6 +452,7 @@
     "Ricia",
     "Ridgeback",
     "Ridgebacks",
+    "ripgrep",
     "Rivergut",
     "Roboto",
     "Rockbreaker",
@@ -566,6 +570,8 @@
     "Torogian",
     "Tortle",
     "Tradelord",
+    "treesitter",
+    "Treesitter",
     "Trelib",
     "tressure",
     "Trietta",
@@ -602,6 +608,7 @@
     "Waterdeep",
     "Watermint",
     "Wayfinder",
+    "wbthomason",
     "webapi",
     "Werebat",
     "werecreature",
@@ -638,8 +645,7 @@
   "editor.stickyScroll.enabled": true,
 
   "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 0,
-    "yzhang.markdown-all-in-one": 1
+    "yzhang.markdown-all-in-one": 0
   },
 
   "explorer.compactFolders": false,
