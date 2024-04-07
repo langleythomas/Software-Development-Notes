@@ -5,7 +5,7 @@
 ## Command Line Automation
 - bash Cookbook (Humble Bundle)
 
-# Courses:
+# Tutorials:
 ## Deployment
 - AWS course
 
@@ -70,11 +70,14 @@
 ## Algorithms
 - Learning Algorithms (Humble Bundle)
 - Algorithms in a Nutshell (Humble Bundle)
+- Advanced Algorithms & Data Structures (Humble Bundle)
 ## General Programmer Advice
 - The Art of Agile Development (Humble Bundle)
 - Becoming a Better Programmer (Humble Bundle)
 - Apprenticeship Patterns (Humble Bundle)
 - Code Complete (Microsoft Press)
+- Skills of a Successful Software Engineer (Humble Bundle)
+- Software Mistakes and Tradeoffs: How to Make Good Programming Decisions (Humble Bundle)
 ## Agile
 - Head First Agile (Humble Bundle)
 ## Clean Code
@@ -83,13 +86,20 @@
 - Clean Architecture (Physical)
 - The Clean Coder (Physical)
 - Refactoring (Physical)
+- Street Coder: The Rules to Break and How to Break Them (Humble Bundle)
+- Five Lines of Code: How and When to Refactor (Humble Bundle)
+- Good Code, Bad Code (Humble Bundle)
 ## Architecture
 - Software Architecture: The Hard Parts (Physical)
 ## C Development
 - Head First C (Humble Bundle)
 ## C++ Development
 - Something C++-related
-## Pipeline
+## Go Development
+- 100 Go Mistakes and How to Avoid Them (Humble Bundle)
+## Rust Development
+- Rust in Action (Humble Bundle)
+## Pipelines
 - Data Pipeline Pocket Reference (Humble Bundle)
 - Cost-Effective Data Pipelines (Humble Bundle)
 -->
@@ -646,42 +656,6 @@
       - [Pragmatic Starter Kit](#pragmatic-starter-kit)
       - [Delight Your Users](#delight-your-users)
       - [Pride \& Prejudice](#pride--prejudice)
-- [Course Notes](#course-notes)
-  - [Neovim Tutorial](#neovim-tutorial)
-    - [Lesson 0](#lesson-0)
-    - [Lesson 1.1: Moving the Cursor](#lesson-11-moving-the-cursor)
-    - [Lesson 1.2: Exiting Vim](#lesson-12-exiting-vim)
-    - [Lesson 1.3: Text Editing - Deletion](#lesson-13-text-editing---deletion)
-    - [Lesson 1.4: Text Editing - Insertion](#lesson-14-text-editing---insertion)
-    - [Lesson 1.5 Text Editing - Appending](#lesson-15-text-editing---appending)
-    - [Lesson 1.6: Editing a File](#lesson-16-editing-a-file)
-    - [Lesson 1 Summary](#lesson-1-summary)
-    - [Lesson 2.1: Deletion Commands](#lesson-21-deletion-commands)
-    - [Lesson 2.2: More Deletion Commands](#lesson-22-more-deletion-commands)
-    - [Lesson 2.3: On Operators \& Motions](#lesson-23-on-operators--motions)
-    - [Lesson 2.4: Using a Count for a Motion](#lesson-24-using-a-count-for-a-motion)
-    - [Lesson 2.5 Using a Count to Delete More](#lesson-25-using-a-count-to-delete-more)
-    - [Lesson 2.6: Operating on Lines](#lesson-26-operating-on-lines)
-    - [Lesson 2.7: The Undo Command](#lesson-27-the-undo-command)
-    - [Lesson 3.1: The Put Command](#lesson-31-the-put-command)
-    - [Lesson 3.2: The Replace Command](#lesson-32-the-replace-command)
-    - [Lesson 3.3: The Change Operator](#lesson-33-the-change-operator)
-    - [Lesson 4.1: Cursor Location \& File Status](#lesson-41-cursor-location--file-status)
-    - [Lesson 4.2: The Search Command](#lesson-42-the-search-command)
-    - [Lesson 4.3: Matching Parentheses Search](#lesson-43-matching-parentheses-search)
-    - [Lesson 4.4: The Substitute Command](#lesson-44-the-substitute-command)
-    - [Lesson 5.1: How to Execute an External Command](#lesson-51-how-to-execute-an-external-command)
-    - [Lesson 5.2: More on Writing Files](#lesson-52-more-on-writing-files)
-    - [Lesson 5.3: Selecting Text to Write](#lesson-53-selecting-text-to-write)
-    - [Lesson 5.4: Retrieving and Merging Files](#lesson-54-retrieving-and-merging-files)
-    - [Lesson 6.1 The Open Command](#lesson-61-the-open-command)
-    - [Lesson 6.2: The Append Command](#lesson-62-the-append-command)
-    - [Lesson 6.3: Another Way to Replace](#lesson-63-another-way-to-replace)
-    - [Lesson 6.4: Copy \& Paste Text](#lesson-64-copy--paste-text)
-    - [Lesson 6.5: Set Option](#lesson-65-set-option)
-    - [Lesson 7.1: Getting Help](#lesson-71-getting-help)
-    - [Lesson 7.2: Create a Startup Script](#lesson-72-create-a-startup-script)
-    - [Lesson 7.3: Completion](#lesson-73-completion)
 - [Online Notes](#online-notes)
   - [Databases](#databases)
     - [Database Management](#database-management)
@@ -717,6 +691,43 @@
       - [Benefits of Network Slicing](#benefits-of-network-slicing)
       - [How 5G Network Slicing Works](#how-5g-network-slicing-works)
       - [Network Slicing Use Cases](#network-slicing-use-cases)
+- [Tutorial Notes](#tutorial-notes)
+  - [Neovim Tutorial](#neovim-tutorial)
+    - [Lesson 0](#lesson-0)
+    - [Lesson 1.1: Moving the Cursor](#lesson-11-moving-the-cursor)
+    - [Lesson 1.2: Exiting Vim](#lesson-12-exiting-vim)
+    - [Lesson 1.3: Text Editing - Deletion](#lesson-13-text-editing---deletion)
+    - [Lesson 1.4: Text Editing - Insertion](#lesson-14-text-editing---insertion)
+    - [Lesson 1.5 Text Editing - Appending](#lesson-15-text-editing---appending)
+    - [Lesson 1.6: Editing a File](#lesson-16-editing-a-file)
+    - [Lesson 1 Summary](#lesson-1-summary)
+    - [Lesson 2.1: Deletion Commands](#lesson-21-deletion-commands)
+    - [Lesson 2.2: More Deletion Commands](#lesson-22-more-deletion-commands)
+    - [Lesson 2.3: On Operators \& Motions](#lesson-23-on-operators--motions)
+    - [Lesson 2.4: Using a Count for a Motion](#lesson-24-using-a-count-for-a-motion)
+    - [Lesson 2.5 Using a Count to Delete More](#lesson-25-using-a-count-to-delete-more)
+    - [Lesson 2.6: Operating on Lines](#lesson-26-operating-on-lines)
+    - [Lesson 2.7: The Undo Command](#lesson-27-the-undo-command)
+    - [Lesson 3.1: The Put Command](#lesson-31-the-put-command)
+    - [Lesson 3.2: The Replace Command](#lesson-32-the-replace-command)
+    - [Lesson 3.3: The Change Operator](#lesson-33-the-change-operator)
+    - [Lesson 4.1: Cursor Location \& File Status](#lesson-41-cursor-location--file-status)
+    - [Lesson 4.2: The Search Command](#lesson-42-the-search-command)
+    - [Lesson 4.3: Matching Parentheses Search](#lesson-43-matching-parentheses-search)
+    - [Lesson 4.4: The Substitute Command](#lesson-44-the-substitute-command)
+    - [Lesson 5.1: How to Execute an External Command](#lesson-51-how-to-execute-an-external-command)
+    - [Lesson 5.2: More on Writing Files](#lesson-52-more-on-writing-files)
+    - [Lesson 5.3: Selecting Text to Write](#lesson-53-selecting-text-to-write)
+    - [Lesson 5.4: Retrieving and Merging Files](#lesson-54-retrieving-and-merging-files)
+    - [Lesson 6.1 The Open Command](#lesson-61-the-open-command)
+    - [Lesson 6.2: The Append Command](#lesson-62-the-append-command)
+    - [Lesson 6.3: Another Way to Replace](#lesson-63-another-way-to-replace)
+    - [Lesson 6.4: Copy \& Paste Text](#lesson-64-copy--paste-text)
+    - [Lesson 6.5: Set Option](#lesson-65-set-option)
+    - [Lesson 7.1: Getting Help](#lesson-71-getting-help)
+    - [Lesson 7.2: Create a Startup Script](#lesson-72-create-a-startup-script)
+    - [Lesson 7.3: Completion](#lesson-73-completion)
+  - [0 to LSP: Neovim RC from Scratch](#0-to-lsp-neovim-rc-from-scratch)
 - [References](#references)
   - [Ericsson](#ericsson)
     - [Ericsson: Navigate the Network Slicing Transformation Journey](#ericsson-navigate-the-network-slicing-transformation-journey)
@@ -737,6 +748,8 @@
     - [Techradar: What is TLS and How Does it Work?](#techradar-what-is-tls-and-how-does-it-work)
   - [The Pragmatic Bookshelf](#the-pragmatic-bookshelf)
     - [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](#the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    - [YouTube](#youtube)
+      - [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
 <!-- markdownlint-restore -->
 
 # Book Notes
@@ -5378,12 +5391,6 @@ file called donors that looked like this:
   undergo word expansion.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
 - There is one additional operator: you can use *\*\** for raising to a power.
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
@@ -5393,8 +5400,13 @@ file called donors that looked like this:
 
 #### Branching on Conditions
 
-- 
+- Thee general form for an *if* statement, from the manpage for *bash* is, where contents in *[]* are optional parts of
+  the statements:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if list; then list; [ elif list; then list; ] ... [ else list; ] fi
+  ```
 
 #### Testing for File Characteristics
 
@@ -5482,6 +5494,9 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Intermediate Shell Tools I
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sifting Through Files for a String
 
@@ -5575,6 +5590,9 @@ file called donors that looked like this:
 
 ### Intermediate Shell Tools II
 
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
 #### Sorting Your Output
 
 - 
@@ -5651,6 +5669,9 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Finding Files: *find*, *locate*, *slocate*
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding All Your MP3 Files
 
@@ -6156,6 +6177,9 @@ file called donors that looked like this:
 
 ### Configuring & Customising *bash*
 
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
 #### *bash* Startup Options
 
 - 
@@ -6267,6 +6291,9 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Housekeeping & Administrative Tasks
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Renaming Many Files
 
@@ -6400,6 +6427,9 @@ file called donors that looked like this:
 
 ### Working Faster by Typing Less
 
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
 #### Moving Quickly Among Arbitrary Directories
 
 - 
@@ -6436,6 +6466,9 @@ file called donors that looked like this:
   [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Tips & Traps: Common Goofs for Notices
+
+- 
+  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting to Set Execute Permissions
 
@@ -8178,638 +8211,297 @@ file called donors that looked like this:
 
 #### Tracer Bullets
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Prototypes & Post-It Notes
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Domain Languages
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Estimating
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### The Basic Tools
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### The Power of Plain Text
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Shell Games
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Power Editing
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Version Control
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Debugging
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Text Manipulation
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Engineering Daybooks
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### Pragmatic Paranoia
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Design by Contract
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Dead Programs Tell No Tales
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Assertive Programming
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### How to Balance Resources
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Don't Outrun Your Headlights
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### Bend, or Break
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Decoupling
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Juggling the Real World
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Transforming Programming
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Inheritance Task
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Configuration
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### Concurrency
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Breaking Temporal Coupling
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Shared State is Incorrect State
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Actors & Processes
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Blackboards
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### While You Are Coding
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Listen to Your Lizard Brain
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Programming by Coincidence
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Algorithm Speed
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Refactoring
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Test to Code
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Property-Based Testing
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Stay Safe Out There
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Naming Things
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### Before the Project
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### The Requirements Pit
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Solving Impossible Puzzles
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Working Together
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### The Essence of Agility
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### Pragmatic Projects
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Pragmatic Teams
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Coconuts Don't Cut It
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Pragmatic Starter Kit
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Delight Your Users
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Pride & Prejudice
 
-<!-- <!-- - 
+<!-- - 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition) -->
+    #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 </details>
-
-# Course Notes
-
-## Neovim Tutorial
-
-### Lesson 0
-
-- Pressing the `U` key in Normal mode undoes the latest change.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Enter>` in Normal mode on hyperlinks opens them.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.1: Moving the Cursor
-
-- Use the arrow keys to navigate the cursor.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.2: Exiting Vim
-
-- Typing `:q!` in Normal mode discards any changes that have been made.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.3: Text Editing - Deletion
-
-- Pressing the `x` key in Normal mode deletes un unwanted character.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.4: Text Editing - Insertion
-
-- Pressing the `i` key in Normal mode inserts text.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.5 Text Editing - Appending
-
-- Pressing the `a` key in Normal mode appends text. Providing this input also changes the editor's mode to Insert Mode.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1.6: Editing a File
-
-- Typing `:wq` in Normal mode discards any changes that have been made.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1 Summary
-
-- Pressing `<Esc>` places you in Normal mode or will cancel an unwanted and partially completed command.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.1: Deletion Commands
-
-- Typing `dw` in Normal mode deletes a word when the cursor is at the beginning of the word.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.2: More Deletion Commands
-
-- Typing `d$` in Normal mode deletes the text to the end of the line.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.3: On Operators & Motions
-
-- Many commands that change text are made from an operator and a motion.
-  [Pi\_tutor](#pi_tutor)
-
-- The format for a delete command with the `d` delete operator is as follows, with `<motion>` being what the operator
-  will operator on:
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  d<motion>
-  ```
-
-- A short list of motions:
-  [Pi\_tutor](#pi_tutor)
-
-  - `w` - until the start of the next word, excluding the first character. From the cursor up to the next word.
-
-  - `e` - to the end of the current word, including the last character.
-
-  - `$` - to the end of the line, including the last character. From the cursor to the end of a line.
-
-- Pressing just the motion while in Normal mode without an operator will move the cursor as specified.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.4: Using a Count for a Motion
-
-- Typing a number before a motion repeats it that many times.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `2w` moves the cursor two words forward.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `3e` moves the cursor to the end of the third word forward.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `0` (zero) moves to the start of the line.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.5 Using a Count to Delete More
-
-- Typing a number with an operator repeats it that many times.
-  [Pi\_tutor](#pi_tutor)
-
-- The format for a delete operator and a motion with `<number>` being the count inserted before the motion to delete
-  more.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  d<number><motion>
-  ```
-
-- Typing `d2w` in Normal mode deletes two upper case words when the cursor is on an upper case word.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.6: Operating on Lines
-
-- Typing `dd` in Normal mode deletes a whole line.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `2dd` in Normal mode deletes 2 whole lines.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 2.7: The Undo Command
-
-- Typing `u` in Normal mode undoes the last command.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `U` in Normal mode undoes changes on a whole line.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Ctrl> + R` in Normal mode to redoes the commands.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 3.1: The Put Command
-
-- To put back text that has just been deleted, type `p` in Normal Mode. This puts the deleted text after the cursor (if
-  a line was deleted it will go on the line below the cursor).
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 3.2: The Replace Command
-
-- To replace the character under the cursor, type `r` in Normal Mode and then the character you want to have there.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 3.3: The Change Operator
-
-- The change operator allows you to change from the cursor to where the motion takes you. Type `ce` in Normal Mode to
-  change from the cursor to the end of the word, `c$` to change to the end of a line. Typing `ce` delete the word after
-  the cursor and places you into Insert mode.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 4.1: Cursor Location & File Status
-
-- Pressing `<Ctrl> + g` in Normal mode displays your location and the file status.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `G` in Normal mode moves to the end of the file.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `<line_number> G` in Normal mode moves to that line number.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `gg` in Normal mode moves to the first line.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 4.2: The Search Command
-
-- Typing `/` in Normal mode followed by a phrase searches FORWARD for the phrase.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `?` in Normal mode followed by a phrase searches BACKWARD for the phrase.
-  [Pi\_tutor](#pi_tutor)
-
-- After a search, type `n` in Normal mode to find the next occurrence in the same direction or `N` to search in the
-  opposite direction.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Ctrl> + o` in Normal mode takes you back to the previous position of the cursor when searching.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Ctrl> + i` in Normal mode takes you back to the next position of the cursor when searching.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 4.3: Matching Parentheses Search
-
-- Typing `%` in Normal mode while the cursor is on a `(`,`)`,`[`,`]`,`{`, or `}` goes to its match.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 4.4: The Substitute Command
-
-- To substitute `<new>` for the first `<old>` in a line in Normal mode.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :s/<old>/<new>
-  ```
-
-- To substitute `<new>` for all instances of`<old>` in a line in Normal mode.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :s/<old>/<new>/g
-  ```
-
-- To substitute phrases between two line numbers in Normal mode.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :<line_number_one>,<line_number_two>s/<old>/<new>/g
-  ```
-
-- To substitute all occurrences in the files in Normal mode.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :%s/<old>/<new>/g
-  ```
-
-- To ask for confirmation each time, add `c` to the end of the substitution command in Normal mode.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :%s/<old>/<new>/gc
-  ```
-
-### Lesson 5.1: How to Execute an External Command
-
-- Type `:!<command>` in Normal mode executes an external command and then executes after you input `<Enter>`.
-  [Pi\_tutor](#pi_tutor)
-
-  ```bash
-  :!ls
-  :!rm <FILENAME>
-  ```
-
-### Lesson 5.2: More on Writing Files
-
-- Type `:!w <FILENAME>` in Normal mode to write the current Vim file to disk with the name `<FILENAME>`.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 5.3: Selecting Text to Write
-
-- Perform the following steps to select lines to save to a file:
-  [Pi\_tutor](#pi_tutor)
-
-  - Move the cursor to the first line you to save to a new file.
-    [Pi\_tutor](#pi_tutor)
-
-  - Press `v` in Normal Mode and move the cursor to select all lines you wish to save to a file. The text will be
-    highlighted.
-    [Pi\_tutor](#pi_tutor)
-
-  - Type `:w <FILENAME>` in Normal Mode, where `<FILENAME>` does not exist yet.
-    [Pi\_tutor](#pi_tutor)
-
-### Lesson 5.4: Retrieving and Merging Files
-
-- Type `:r <FILENAME>` in Normal Mode to retrieve the contents of the file `<FILENAME>` and enter the output below the
-  cursor position.
-  [Pi\_tutor](#pi_tutor)
-
-- Type `:r !<command>` in Normal Mode to read the output of `<command>` command and enter the output below the cursor
-  position.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 6.1 The Open Command
-
-- Typing `o` in Normal mode opens a line below the cursor and start Insert mode.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `O` in Normal mode opens a line above the cursor and start Insert mode.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 6.2: The Append Command
-
-- Typing `a` in Normal mode opens a line below the cursor and start Insert mode.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `A` in Normal mode opens a line above the cursor and start Insert mode.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `a`, `A`, and `i` all go to the same Insert mode, the only difference is where the characters are inserted.
-
-### Lesson 6.3: Another Way to Replace
-
-- Typing `R` in Normal mode enters Replace mode until `<Esc>` is pressed.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 6.4: Copy & Paste Text
-
-- Typing `y` in Normal mode copies text. `y` is short for "yank" ("copy"). Enter Visual mode by typing `v` in Normal
-  mode to enter Visual mode.
-  [Pi\_tutor](#pi_tutor)
-
-- `y` can be used as an operator: `yw` in Normal mode yanks one word.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `p` in Normal mode. `p` is short for "put" ("paste").
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 6.5: Set Option
-
-- Typing ":set xxx" sets the option "xxx". Some options are. You can either use the long or the short option name.
-  [Pi\_tutor](#pi_tutor)
-
-  | **Short Option** | **Long Option** |                  **Description**                  |
-  |:----------------:|:---------------:|:-------------------------------------------------:|
-  |        ic        |    ignorecase   | Ignore upper/lower case when searching/replacing. |
-  |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
-  |        hls       |     hslearch    |          Highlight all matching phrases.          |
-
-### Lesson 7.1: Getting Help
-
-- Typing `:help` in Normal mode or press `<F1>` or `<Help>` (if you have the key) opens a help window.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Ctrl> + w` twice in Normal mode to jump from one window to another.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `:q` in Normal mode closes the help window.
-  [Pi\_tutor](#pi_tutor)
-
-- Typing `:help <TOPIC>` in Normal mode find helps on a particular `<TOPIC>`.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 7.2: Create a Startup Script
-
-- Vim has many more features than Vi, but most of them are disabled by default. To start using more features you have
-  to create a "vimrc" file.
-  [Pi\_tutor](#pi_tutor)
-
-- Create a vimrc startup script to keep your preferred settings.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 7.3: Completion
-
-- Pressing `<Ctrl> + d` while in Command mode, and after inputting the start of a command, to complete a command.
-  [Pi\_tutor](#pi_tutor)
-
-- Pressing `<Tab>` will complete the command. Pressing the left and right arrow keys navigates up and down the list,
-  respectively.
-  [Pi\_tutor](#pi_tutor)
 
 # Online Notes
 
@@ -9743,6 +9435,689 @@ TODO: Order in which to do this testing.
 - vim
  -->
 
+# Tutorial Notes
+
+## Neovim Tutorial
+
+### Lesson 0
+
+- Pressing the `U` key in Normal mode undoes the latest change.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Enter>` in Normal mode on hyperlinks opens them.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.1: Moving the Cursor
+
+- Use the arrow keys to navigate the cursor.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.2: Exiting Vim
+
+- Typing `:q!` in Normal mode discards any changes that have been made.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.3: Text Editing - Deletion
+
+- Pressing the `x` key in Normal mode deletes un unwanted character.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.4: Text Editing - Insertion
+
+- Pressing the `i` key in Normal mode inserts text.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.5 Text Editing - Appending
+
+- Pressing the `a` key in Normal mode appends text. Providing this input also changes the editor's mode to Insert Mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1.6: Editing a File
+
+- Typing `:wq` in Normal mode discards any changes that have been made.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 1 Summary
+
+- Pressing `<Esc>` places you in Normal mode or will cancel an unwanted and partially completed command.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.1: Deletion Commands
+
+- Typing `dw` in Normal mode deletes a word when the cursor is at the beginning of the word.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.2: More Deletion Commands
+
+- Typing `d$` in Normal mode deletes the text to the end of the line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.3: On Operators & Motions
+
+- Many commands that change text are made from an operator and a motion.
+  [Pi\_tutor](#pi_tutor)
+
+- The format for a delete command with the `d` delete operator is as follows, with `<motion>` being what the operator
+  will operator on:
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  d<motion>
+  ```
+
+- A short list of motions:
+  [Pi\_tutor](#pi_tutor)
+
+  - `w` - until the start of the next word, excluding the first character. From the cursor up to the next word.
+
+  - `e` - to the end of the current word, including the last character.
+
+  - `$` - to the end of the line, including the last character. From the cursor to the end of a line.
+
+- Pressing just the motion while in Normal mode without an operator will move the cursor as specified.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.4: Using a Count for a Motion
+
+- Typing a number before a motion repeats it that many times.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `2w` moves the cursor two words forward.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `3e` moves the cursor to the end of the third word forward.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `0` (zero) moves to the start of the line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.5 Using a Count to Delete More
+
+- Typing a number with an operator repeats it that many times.
+  [Pi\_tutor](#pi_tutor)
+
+- The format for a delete operator and a motion with `<number>` being the count inserted before the motion to delete
+  more.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  d<number><motion>
+  ```
+
+- Typing `d2w` in Normal mode deletes two upper case words when the cursor is on an upper case word.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.6: Operating on Lines
+
+- Typing `dd` in Normal mode deletes a whole line.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `2dd` in Normal mode deletes 2 whole lines.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 2.7: The Undo Command
+
+- Typing `u` in Normal mode undoes the last command.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `U` in Normal mode undoes changes on a whole line.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + R` in Normal mode to redoes the commands.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.1: The Put Command
+
+- To put back text that has just been deleted, type `p` in Normal Mode. This puts the deleted text after the cursor (if
+  a line was deleted it will go on the line below the cursor).
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.2: The Replace Command
+
+- To replace the character under the cursor, type `r` in Normal Mode and then the character you want to have there.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 3.3: The Change Operator
+
+- The change operator allows you to change from the cursor to where the motion takes you. Type `ce` in Normal Mode to
+  change from the cursor to the end of the word, `c$` to change to the end of a line. Typing `ce` delete the word after
+  the cursor and places you into Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.1: Cursor Location & File Status
+
+- Pressing `<Ctrl> + g` in Normal mode displays your location and the file status.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `G` in Normal mode moves to the end of the file.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `<line_number> G` in Normal mode moves to that line number.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `gg` in Normal mode moves to the first line.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.2: The Search Command
+
+- Typing `/` in Normal mode followed by a phrase searches FORWARD for the phrase.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `?` in Normal mode followed by a phrase searches BACKWARD for the phrase.
+  [Pi\_tutor](#pi_tutor)
+
+- After a search, type `n` in Normal mode to find the next occurrence in the same direction or `N` to search in the
+  opposite direction.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + o` in Normal mode takes you back to the previous position of the cursor when searching.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + i` in Normal mode takes you back to the next position of the cursor when searching.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.3: Matching Parentheses Search
+
+- Typing `%` in Normal mode while the cursor is on a `(`,`)`,`[`,`]`,`{`, or `}` goes to its match.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 4.4: The Substitute Command
+
+- To substitute `<new>` for the first `<old>` in a line in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :s/<old>/<new>
+  ```
+
+- To substitute `<new>` for all instances of`<old>` in a line in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :s/<old>/<new>/g
+  ```
+
+- To substitute phrases between two line numbers in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :<line_number_one>,<line_number_two>s/<old>/<new>/g
+  ```
+
+- To substitute all occurrences in the files in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :%s/<old>/<new>/g
+  ```
+
+- To ask for confirmation each time, add `c` to the end of the substitution command in Normal mode.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :%s/<old>/<new>/gc
+  ```
+
+### Lesson 5.1: How to Execute an External Command
+
+- Type `:!<command>` in Normal mode executes an external command and then executes after you input `<Enter>`.
+  [Pi\_tutor](#pi_tutor)
+
+  ```bash
+  :!ls
+  :!rm <FILENAME>
+  ```
+
+### Lesson 5.2: More on Writing Files
+
+- Type `:!w <FILENAME>` in Normal mode to write the current Vim file to disk with the name `<FILENAME>`.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 5.3: Selecting Text to Write
+
+- Perform the following steps to select lines to save to a file:
+  [Pi\_tutor](#pi_tutor)
+
+  - Move the cursor to the first line you to save to a new file.
+    [Pi\_tutor](#pi_tutor)
+
+  - Press `v` in Normal Mode and move the cursor to select all lines you wish to save to a file. The text will be
+    highlighted.
+    [Pi\_tutor](#pi_tutor)
+
+  - Type `:w <FILENAME>` in Normal Mode, where `<FILENAME>` does not exist yet.
+    [Pi\_tutor](#pi_tutor)
+
+### Lesson 5.4: Retrieving and Merging Files
+
+- Type `:r <FILENAME>` in Normal Mode to retrieve the contents of the file `<FILENAME>` and enter the output below the
+  cursor position.
+  [Pi\_tutor](#pi_tutor)
+
+- Type `:r !<command>` in Normal Mode to read the output of `<command>` command and enter the output below the cursor
+  position.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.1 The Open Command
+
+- Typing `o` in Normal mode opens a line below the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `O` in Normal mode opens a line above the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.2: The Append Command
+
+- Typing `a` in Normal mode opens a line below the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `A` in Normal mode opens a line above the cursor and start Insert mode.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `a`, `A`, and `i` all go to the same Insert mode, the only difference is where the characters are inserted.
+
+### Lesson 6.3: Another Way to Replace
+
+- Typing `R` in Normal mode enters Replace mode until `<Esc>` is pressed.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.4: Copy & Paste Text
+
+- Typing `y` in Normal mode copies text. `y` is short for "yank" ("copy"). Enter Visual mode by typing `v` in Normal
+  mode to enter Visual mode.
+  [Pi\_tutor](#pi_tutor)
+
+- `y` can be used as an operator: `yw` in Normal mode yanks one word.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `p` in Normal mode. `p` is short for "put" ("paste").
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 6.5: Set Option
+
+- Typing ":set xxx" sets the option "xxx". Some options are. You can either use the long or the short option name.
+  [Pi\_tutor](#pi_tutor)
+
+  | **Short Option** | **Long Option** |                  **Description**                  |
+  |:----------------:|:---------------:|:-------------------------------------------------:|
+  |        ic        |    ignorecase   | Ignore upper/lower case when searching/replacing. |
+  |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
+  |        hls       |     hslearch    |          Highlight all matching phrases.          |
+
+### Lesson 7.1: Getting Help
+
+- Typing `:help` in Normal mode or press `<F1>` or `<Help>` (if you have the key) opens a help window.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Ctrl> + w` twice in Normal mode to jump from one window to another.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `:q` in Normal mode closes the help window.
+  [Pi\_tutor](#pi_tutor)
+
+- Typing `:help <TOPIC>` in Normal mode find helps on a particular `<TOPIC>`.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 7.2: Create a Startup Script
+
+- Vim has many more features than Vi, but most of them are disabled by default. To start using more features you have
+  to create a "vimrc" file.
+  [Pi\_tutor](#pi_tutor)
+
+- Create a vimrc startup script to keep your preferred settings.
+  [Pi\_tutor](#pi_tutor)
+
+### Lesson 7.3: Completion
+
+- Pressing `<Ctrl> + d` while in Command mode, and after inputting the start of a command, to complete a command.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Tab>` will complete the command. Pressing the left and right arrow keys navigates up and down the list,
+  respectively.
+  [Pi\_tutor](#pi_tutor)
+
+## 0 to LSP: Neovim RC from Scratch
+
+- Create the nvim config directory.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```bash
+  mkdir --parents ~/.config/nvim
+  ```
+
+- Navigate to the created directory.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```bash
+  cd ~/.config/nvim || exit
+  ```
+
+- Open the file explorer view in Neovim.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```bash
+  nvim .
+  ```
+
+- Type `:h rtp`, in Normal mode to check where to save the Neovim files. The value should be: `$XDG_CONFIG_HOME/nvim`.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Press `%` to create a new file in Normal mode. Enter `init.lua` as the filename, as that will be where Neovim will
+  check first upon startup for configuration.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Type `:w` in Normal mode to save the lua file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Type `:Ex` in normal mode to open the file explorer view.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Press `d` in Normal mode to create a new directory. Enter `lua` as the directory name. Anything in the `lua`
+  directory is available by lua as dependencies.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Navigate to the directory in the previous step by using the arrow keys to move the cursor on the directory name, and
+  pressing `<Enter>` on the directory name.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Press `d` in Normal mode to create a new directory. Enter `Thomas` as the directory name.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Press `%` to create a new file in Normal mode. Enter `init.lua` as the filename. Enter the following contents in the
+  Lua file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  print("Hello from the Thomas directory")
+  ```
+
+- Type `:Ex` in normal mode to open the file explorer view. Navigate back to the `nvim` directory.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Press `<Enter>` on the `init.lua` in the `nvim` directory. Enter the following contents.
+
+  ```lua
+  require("Thomas")
+  print("Hello")
+  ```
+
+- Type `:q` in Normal mode to quit out of Neovim.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Open the file explorer view again in Neovim and confirm the messages that were added in the Lua files are outputted
+  in the Neovim startup screen. Press `<Enter>` to open the explorer view.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```bash
+  nvim .
+  ```
+
+- Press `%` to create a new file in Normal mode. Enter `remap.lua` as the filename, with the following contents. The
+  configuration below will ensure that Neovim executes the `vim.cmd.Ex` command while `<leader>pv` is pressed when
+  while in Normal mode. This means that the file explorer view will be displayed when `<Space> + pv` is entered in
+  Normal mode.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  - `n` is short for Normal mode.
+    [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  - `<leader>pv` is the space bar.
+    [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  - `vim.cmd.Ex` is the `Ex` command that changes the Neovim display to a file explorer view.
+    [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  vim.g.mapleader = " "
+
+  --  Open file explorer view. pv is short for project view.
+  vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+  ```
+
+- Update the `Thomas/init.lua` to the following.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  require("Thomas.remap")
+  print("Hello from the Thomas directory")
+  ```
+
+- Navigate to the `Thomas` directory, and execute the following command derived from the
+  [packer.nvim](https://github.com/wbthomason/packer.nvim) repository in GitHub. You must paste this command in
+  Neovim's Normal mode after typing `:!`.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```bash
+  git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+  ```
+
+- Create a new file in the `Thomas` directory called `packer.lua` with the following contents, derived from the
+  [packer.nvim](https://github.com/wbthomason/packer.nvim) repository in GitHub.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+  -- Only required if you have packer configured as `opt`
+  vim.cmd [[packadd packer.nvim]]
+
+  return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+  end)
+  ```
+
+- Update the contents `init.lua` in the `nvim` directory to the following, so it includes the Packer file.
+
+  ```lua
+  require("Thomas.packer")
+  require("Thomas.remap")
+  print("Hello from the Thomas directory")
+  ```
+
+- Exit Neovim and navigate to the `packer.lua` file. Open the file and type `:so` in Normal mode to run the `source`
+  command on the file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Type `:PackerSync` in any location within Neovim to open the Packer package manager.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Install `ripgrep` as a prerequisite to installing the [Telescope](https://github.com/nvim-telescope/telescope.nvim)
+  plugin.
+
+  ```bash
+  sudo apt update
+  sudo apt install ripgrep
+  ```
+
+- Update the `packer.lua` file to contain the [Telescope](https://github.com/nvim-telescope/telescope.nvim) plugin.
+  Your `packer.lua` should then contain the following contents. Note: To help indent the copied text, paste it into
+  Neovim by pressing `<Ctrl> + <Shift> + v`, then changing to Visual mode, and selecting the text, and then pressing
+  `=`.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+  -- Only required if you have packer configured as `opt`
+  vim.cmd [[packadd packer.nvim]]
+
+  return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+  end)
+  ```
+
+- Close and reopen Neovim.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Type `:PackerSync` in Normal mode to download the dependencies.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Create a new `after` directory under the `nvim` directory.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Create a new `plugin` directory under the `after` directory.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+- Create a new file `telescope.lua` under the `after.plugin` directory, with the following contents derived from the
+  [Telescope](https://github.com/nvim-telescope/telescope.nvim) plugin repository.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  --  Using the Telescope command.
+  local builtin = require('telescope.builtin')
+
+  --  All file search. pf is short for project find.
+  vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+
+  --  Git file search.
+  vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+
+  --  All file search. ps is short for project search.
+  vim.keymap.set('n', '<leader>ps', function()
+    builtin.grep_string({ search = vim.fn.input("Grep > ") })
+  end)
+  ```
+
+- Install the [Rosé Pine](https://github.com/will/rose-pine-neovim) theme by updating the `packer.lua` to contain the
+  following contents. Adding this code changes the theme to Rosé Pine. Type `:so` and `:PackerSync` in Normal mode in
+  the `packer.lua` file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+  -- Only required if you have packer configured as `opt`
+  vim.cmd [[packadd packer.nvim]]
+
+  return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use({
+      'rose-pine/neovim',
+      as = 'rose-pine',
+      config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+      end
+    })
+
+  end)
+  ```
+
+- Update the `packer.lua` to contain the following contents, adding transparency to Neovim. The `packer.lua` should
+  contain the following contents. Type `:so` and `:PackerSync` in Normal mode in the `packer.lua` file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+  -- Only required if you have packer configured as `opt`
+  vim.cmd [[packadd packer.nvim]]
+
+  return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use({
+      'rose-pine/neovim',
+      as = 'rose-pine',
+      config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+      end
+    })
+
+    use('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
+
+  end)
+  ```
+
+- Create a new file `treesitter.lua` under the `after/plugin` directory to configure the
+  [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter) plugin, with the following contents, derived from
+  its GitHub repository.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  require 'nvim-treesitter.configs'.setup {
+    -- A list of parser names, or "all" (the five listed parsers should always be installed)
+    ensure_installed = { "c", "javascript", "markdown", "lua", "typescript", "vim", "vimdoc", "query" },
+
+    -- Install parsers synchronously (only applied to `ensure_installed`)
+    sync_install = false,
+
+    -- Automatically install missing parsers when entering buffer
+    -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
+    auto_install = true,
+
+    ---- If you need to change the installation directory of the parsers (see -> Advanced Setup)
+    -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
+
+    highlight = {
+      enable = true,
+
+      -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+      -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+      -- Using this option may slow down your editor, and you may see some duplicate highlights.
+      -- Instead of true it can also be a list of languages
+      additional_vim_regex_highlighting = false,
+    },
+  }
+  ```
+
+- Update the `packer.lua` to install the [harpoon](https://github.com/ThePrimeagen/harpoon) plugin, with the new
+  command derived from its GitHub repository. Type `:so` and `:PackerSync` in Normal mode in the `packer.lua` file.
+  [ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
+  ```lua
+  -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+
+  -- Only required if you have packer configured as `opt`
+  vim.cmd [[packadd packer.nvim]]
+
+  return require('packer').startup(function(use)
+    -- Packer can manage itself
+    use 'wbthomason/packer.nvim'
+
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.6',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    use({
+      'rose-pine/neovim',
+      as = 'rose-pine',
+      config = function()
+        require("rose-pine").setup()
+        vim.cmd('colorscheme rose-pine')
+      end
+    })
+
+    use('nvim-treesitter/nvim-treesitter', {run = 'TSUpdate'})
+
+    use('ThePrimeagen/harpoon')
+  end)
+  ```
+
 # References
 
 ## Ericsson
@@ -9802,3 +10177,9 @@ TODO: Order in which to do this testing.
 ### The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition
 
 - <https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/>
+
+### YouTube
+
+#### ThePrimeagen: 0 to LSP: Neovim RC from Scratch
+
+- <https://www.youtube.com/watch?v=w7i4amO_zaE&t=41s>
