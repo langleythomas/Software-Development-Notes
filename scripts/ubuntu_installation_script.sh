@@ -234,6 +234,7 @@ function call_deployment_tool_functions() {
 function install_vim() {
   update_and_upgrade_apt
 
+  printf "Installing vim.\n"
   sudo apt install vim --yes
 
   print_separator
@@ -243,7 +244,14 @@ function install_neovim() {
   update_flatpak
 
   printf "Installing Neovim.\n"
-  flatpak install flathub io.neovim.nvim
+
+  printf "Downloading Neovim AppImage.\n"
+  curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+  chmod u+x nvim.appimage
+
+  printf "Exposing nvim Globally.\n"
+  sudo mkdir --parents "/opt/nvim"
+  sudo mv nvim.appimage /opt/nvim/nvim
 
   print_separator
 }
