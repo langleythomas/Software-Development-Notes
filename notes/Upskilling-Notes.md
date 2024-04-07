@@ -8497,7 +8497,7 @@ file called donors that looked like this:
 
 #### Pride & Prejudice
 
-<!-- - 
+- 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
