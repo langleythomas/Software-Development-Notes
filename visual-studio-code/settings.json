@@ -106,6 +106,7 @@
     "Chervina",
     "Ciarde",
     "Cloudreaver",
+    "cmdline",
     "Cocko",
     "color",
     "Colorization",
@@ -685,5 +686,5 @@
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.colorTheme": "Dracula Pro Edition",
-  "workbench.statusBar.visible": true,
+  "workbench.statusBar.visible": true
 }
