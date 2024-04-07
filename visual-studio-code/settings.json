@@ -637,6 +637,11 @@
   "editor.minimap.showSlider": "always",
   "editor.stickyScroll.enabled": true,
 
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 0,
+    "yzhang.markdown-all-in-one": 1
+  },
+
   "explorer.compactFolders": false,
 
   "files.insertFinalNewline": true,
@@ -670,5 +675,5 @@
   "workbench.sideBar.location": "right",
   "workbench.tree.renderIndentGuides": "always",
   "workbench.colorTheme": "Dracula Pro Edition",
-  "workbench.statusBar.visible": true
+  "workbench.statusBar.visible": true,
 }
