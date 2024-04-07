@@ -647,7 +647,7 @@
   "editor.stickyScroll.enabled": true,
 
   "extensions.experimental.affinity": {
-    "yzhang.markdown-all-in-one": 0
+    "yzhang.markdown-all-in-one": 1,
   },
 
   "explorer.compactFolders": false,
@@ -678,6 +678,8 @@
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontSize": 14,
+
+  "vscode-neovim.neovimExecutablePaths.linux": "nvim",
 
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
