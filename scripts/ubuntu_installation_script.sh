@@ -260,7 +260,6 @@ function install_visual_studio_code() {
   update_snap
 
   printf "Installing Visual Studio Code.\n"
-
   sudo snap install code
 
   # If there is an issue loading the Visual Studio Code GUI after an update, as described here https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
@@ -360,6 +359,16 @@ function install_vlc() {
   printf "Installing VLC.\n"
 
   flatpak install flathub org.videolan.VLC --yes
+
+  print_separator
+}
+
+function configure_bashrc() {
+  printf "Configuring .bashrc.\n"
+
+  # TODO: Add the .bashrc steps.
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configurations/.bashrc" >> ~/."bashrc"
+  source ~/."bashrc"
 
   print_separator
 }
