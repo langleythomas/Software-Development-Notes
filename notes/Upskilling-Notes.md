@@ -1,16 +1,23 @@
-<!-- Essential Notes to Look At:
-# Books:
+<!--
+
+Essential Notes to Look At:
+
+# Books
 ## General Programmer Advice
 - The Pragmatic Programmer (Physical)
 ## Command Line Automation
 - bash Cookbook (Humble Bundle)
 
-# Tutorials:
+# Tutorials
 ## Deployment
 - AWS course
+## Microservice Development
+- Lean to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
 
-# Online Notes:
-## Terminal Tools Documentation
+# Online Notes
+## Java Refresher
+- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
+## List of Terminal Tools Documentation on Which to Write Cheat Sheets & Compile Links
 - apropos
 - basename
 - builtin
@@ -26,19 +33,24 @@
 - exit
 - file
 - find
+- getopts
 - grep
 - head
+- helmfile
+- helmfile
 - help
 - less
 - locate
 - ls
 - man
+- mysql
 - neovim
 - nohup
 - printf
 - read
 - select
 - set
+- shift
 - slocate
 - stat
 - tail
@@ -49,24 +61,32 @@
 - vim
 - which
 
+# Books
+## Command Line Automation
+- Automate the Boring Stuff with Python: Practical Programming for Total Beginners (Humble Bundle)
+## Security
+- Fundamentals of Information System Security, 4th Edition (To Be Bought)
+- Software Security: Building Security In (To Be Bought)
+## Deployment
+- Docker Cookbook (Humble Bundle)
+## Pipelines
+- Data Pipeline Pocket Reference (Humble Bundle)
+- Cost-Effective Data Pipelines (Humble Bundle)
+
+-->
+
+<!--
+
+Nice Notes to Look At:
+
 # Books:
 ## General Programmer Advice
 - Apprenticeship Patterns (Humble Bundle)
 ## Command Line Automation
-- Automate the Boring Stuff with Python: Practical Programming for Total Beginners (Humble Bundle)
--->
-
-<!-- Nice Notes to Look At:
-# Books:
-## Security
-- Fundamentals of Information System Security, 4th Edition (To Be Bought)
-- Software Security: Building Security In (To Be Bought)
-## Command Line Automation
 - Wicked Cool Shell Scripts (Humble Bundle)
 - PowerShell Cookbook (Humble Bundle)
 - Wicked Cool Ruby Scripts (Humble Bundle)
-## Deployment
-- Docker Cookbook (Humble Bundle)
+
 ## Algorithms
 - Learning Algorithms (Humble Bundle)
 - Algorithms in a Nutshell (Humble Bundle)
@@ -77,7 +97,7 @@
 - Apprenticeship Patterns (Humble Bundle)
 - Code Complete (Microsoft Press)
 - Skills of a Successful Software Engineer (Humble Bundle)
-- Software Mistakes and Tradeoffs: How to Make Good Programming Decisions (Humble Bundle)
+- Software Mistakes and Trade-offs: How to Make Good Programming Decisions (Humble Bundle)
 ## Agile
 - Head First Agile (Humble Bundle)
 ## Clean Code
@@ -95,13 +115,43 @@
 - Head First C (Humble Bundle)
 ## C++ Development
 - Something C++-related
+## Python Development
+- Python Cookbook (Humble Bundle)
 ## Go Development
 - 100 Go Mistakes and How to Avoid Them (Humble Bundle)
+## Function Programming Language Development
+- Something related to Clojure, Lisp, or Haskell
 ## Rust Development
 - Rust in Action (Humble Bundle)
-## Pipelines
-- Data Pipeline Pocket Reference (Humble Bundle)
-- Cost-Effective Data Pipelines (Humble Bundle)
+## Front-End Development
+- React Cookbook (Humble Bundle)
+- React Native in Action (Humble Bundle)
+
+Unordered List of Topics:
+- Design Patterns
+- Code Reviews
+- Microservice Architecture
+- Code Smells
+- Static Analysis
+- Code Coverage
+- Testing
+- HA
+- GA
+- BUR
+- Java Version Features
+- RAN
+- Software Role - DevOps vs Software Engineer
+- Documentation
+- Agile Ceremonies
+- Scrum
+- Agile
+- Waterfall
+- MTLS
+- Telecommunications
+- vi
+- nano
+- vim
+
 -->
 
 <!-- markdownlint-capture -->
@@ -208,7 +258,7 @@
     - [Write Tests for People](#write-tests-for-people)
     - [You Gotta Care About the Code](#you-gotta-care-about-the-code)
     - [Your Customers Do Not Mean What They Say](#your-customers-do-not-mean-what-they-say)
-  - [*bash* Cookbook](#bash-cookbook)
+  - [`bash` Cookbook](#bash-cookbook)
     - [Preface](#preface)
       - [Who Should Read This Book](#who-should-read-this-book)
       - [About This Book](#about-this-book)
@@ -216,9 +266,9 @@
         - [A Note About Code Examples](#a-note-about-code-examples)
         - [Useless Use of cat](#useless-use-of-cat)
         - [A Note About Perl](#a-note-about-perl)
-    - [Beginning *bash*](#beginning-bash)
-      - [Why *bash*?](#why-bash)
-      - [The *bash* Shell](#the-bash-shell)
+    - [Beginning `bash`](#beginning-bash)
+      - [Why `bash`?](#why-bash)
+      - [The `bash` Shell](#the-bash-shell)
       - [Showing Where You Are](#showing-where-you-are)
       - [Finding \& Running Commands](#finding--running-commands)
       - [Getting Information About Files](#getting-information-about-files)
@@ -271,13 +321,13 @@
       - [Consuming Arguments](#consuming-arguments)
       - [Getting Default Values](#getting-default-values)
       - [Setting Default Values](#setting-default-values)
-      - [Using *null* as Valid Default Value](#using-null-as-valid-default-value)
+      - [Using `null` as Valid Default Value](#using-null-as-valid-default-value)
       - [Using More than Just a Constant String for Default](#using-more-than-just-a-constant-string-for-default)
       - [Giving an Error Message for Unset Parameters](#giving-an-error-message-for-unset-parameters)
       - [Changing Pieces of a String](#changing-pieces-of-a-string)
       - [Getting the Absolute Value of a Number](#getting-the-absolute-value-of-a-number)
-      - [Using *bash* for *basename*](#using-bash-for-basename)
-      - [Using *bash* for *dirname*](#using-bash-for-dirname)
+      - [Using `bash` for `basename`](#using-bash-for-basename)
+      - [Using `bash` for `dirname`](#using-bash-for-dirname)
       - [Using Alternate Values for Comma-Separated Values](#using-alternate-values-for-comma-separated-values)
       - [Using Array Variables](#using-array-variables)
       - [Converting Between Upper- and Lowercase](#converting-between-upper--and-lowercase)
@@ -291,17 +341,14 @@
     - [Testing for Equality](#testing-for-equality)
     - [Testing with Pattern Matches](#testing-with-pattern-matches)
     - [Testing with Regular Expressions](#testing-with-regular-expressions)
-    - [Changing Behaviour with Redirections](#changing-behaviour-with-redirections)
     - [Looping for a While](#looping-for-a-while)
-    - [Looping with a *read*](#looping-with-a-read)
+    - [Looping with a `read`](#looping-with-a-read)
       - [Looping with a Count](#looping-with-a-count)
       - [Looping with Floating-Point Values](#looping-with-floating-point-values)
       - [Branching Many Ways](#branching-many-ways)
       - [Parsing Command-Line Arguments](#parsing-command-line-arguments)
       - [Creating Simple Menus](#creating-simple-menus)
       - [Changing the Prompt on Simple Menus](#changing-the-prompt-on-simple-menus)
-      - [Creating a Simple RPN Calculator](#creating-a-simple-rpn-calculator)
-      - [Creating a Command-Line Calculator](#creating-a-command-line-calculator)
     - [Intermediate Shell Tools I](#intermediate-shell-tools-i)
       - [Sifting Through Files for a String](#sifting-through-files-for-a-string)
       - [Getting Just the Filename from a Search](#getting-just-the-filename-from-a-search)
@@ -316,10 +363,10 @@
       - [Keeping Only a Portion of a Line of Output](#keeping-only-a-portion-of-a-line-of-output)
       - [Reversing the Words on Each Line](#reversing-the-words-on-each-line)
       - [Summing a List of Numbers](#summing-a-list-of-numbers)
-      - [Counting String Values with *awk*](#counting-string-values-with-awk)
-      - [Counting String Values with *bash*](#counting-string-values-with-bash)
+      - [Counting String Values with `awk`](#counting-string-values-with-awk)
+      - [Counting String Values with `bash`](#counting-string-values-with-bash)
       - [Showing Data as a Quick and Easy Histogram](#showing-data-as-a-quick-and-easy-histogram)
-      - [An Easy Histogram with *bash*](#an-easy-histogram-with-bash)
+      - [An Easy Histogram with `bash`](#an-easy-histogram-with-bash)
       - [Showing a Paragraph of Text After a Found Phrase](#showing-a-paragraph-of-text-after-a-found-phrase)
     - [Intermediate Shell Tools II](#intermediate-shell-tools-ii)
       - [Sorting Your Output](#sorting-your-output)
@@ -329,15 +376,15 @@
       - [Removing Duplicate Lines](#removing-duplicate-lines)
       - [Compressing Files](#compressing-files)
       - [Uncompressing Files](#uncompressing-files)
-      - [Checking a *tar* Archive for Unique Directories](#checking-a-tar-archive-for-unique-directories)
+      - [Checking a `tar` Archive for Unique Directories](#checking-a-tar-archive-for-unique-directories)
       - [Translating Characters](#translating-characters)
       - [Converting Uppercase to Lowercase](#converting-uppercase-to-lowercase)
       - [Converting DOS Files to Linux Format](#converting-dos-files-to-linux-format)
       - [Removing Smart Quotes](#removing-smart-quotes)
       - [Counting Lines, Words, or Characters in a File](#counting-lines-words-or-characters-in-a-file)
       - [Rewrapping Paragraphs](#rewrapping-paragraphs)
-      - [Doing More with *less*](#doing-more-with-less)
-    - [Finding Files: *find*, *locate*, *slocate*](#finding-files-find-locate-slocate)
+      - [Doing More with `less`](#doing-more-with-less)
+    - [Finding Files: `find`, `locate`, `slocate`](#finding-files-find-locate-slocate)
       - [Finding All Your MP3 Files](#finding-all-your-mp3-files)
       - [Handling Filenames Containing Odd Characters](#handling-filenames-containing-odd-characters)
       - [Speeding Up Operations on Found Files](#speeding-up-operations-on-found-files)
@@ -356,7 +403,7 @@
       - [Defining Functions](#defining-functions)
       - [Using Functions: Parameters \& Return Values](#using-functions-parameters--return-values)
       - [Trapping Interrupts](#trapping-interrupts)
-      - [Redefining Commands with *alias*](#redefining-commands-with-alias)
+      - [Redefining Commands with `alias`](#redefining-commands-with-alias)
       - [Avoiding Aliases \& Functions](#avoiding-aliases--functions)
       - [Counted Elapsed Time](#counted-elapsed-time)
       - [Writing Wrappers](#writing-wrappers)
@@ -369,7 +416,7 @@
       - [Getting Yesterday or Tomorrow with Perl](#getting-yesterday-or-tomorrow-with-perl)
       - [Figuring Out Date \& Time Arithmetic](#figuring-out-date--time-arithmetic)
       - [Handling Time Zones, Daylight Saving Time, \& Leap Years](#handling-time-zones-daylight-saving-time--leap-years)
-      - [Using *date* \& *cron* to Run a Script on the Nth Day](#using-date--cron-to-run-a-script-on-the-nth-day)
+      - [Using `date` \& `cron` to Run a Script on the Nth Day](#using-date--cron-to-run-a-script-on-the-nth-day)
       - [Logging with Dates](#logging-with-dates)
     - [End-User Tasks as Shell Scripts](#end-user-tasks-as-shell-scripts)
       - [Starting Simple by Printing Dashes](#starting-simple-by-printing-dashes)
@@ -383,8 +430,8 @@
       - [Parsing Some HTML](#parsing-some-html)
       - [Parsing Output into an Array](#parsing-output-into-an-array)
       - [Parsing Output with a Function Call](#parsing-output-with-a-function-call)
-      - [Parsing Text with a *read* Statement](#parsing-text-with-a-read-statement)
-      - [Parsing with *read* into an Array](#parsing-with-read-into-an-array)
+      - [Parsing Text with a `read` Statement](#parsing-text-with-a-read-statement)
+      - [Parsing with `read` into an Array](#parsing-with-read-into-an-array)
       - [Reading an Entire File](#reading-an-entire-file)
       - [Getting Your Plurals Right](#getting-your-plurals-right)
       - [Taking It One Character at a Time](#taking-it-one-character-at-a-time)
@@ -401,91 +448,91 @@
     - [Writing Secure Shell Scripts](#writing-secure-shell-scripts)
       - [Avoiding Common Security Problems](#avoiding-common-security-problems)
       - [Avoiding Interpreter Spoofing](#avoiding-interpreter-spoofing)
-      - [Setting a Secure *$PATH*](#setting-a-secure-path)
+      - [Setting a Secure `$PATH`](#setting-a-secure-path)
       - [Clearing All Aliases](#clearing-all-aliases)
       - [Clearing the Command Hash](#clearing-the-command-hash)
       - [Preventing Core Dumps](#preventing-core-dumps)
-      - [Setting a Secure *$IFS*](#setting-a-secure-ifs)
-      - [Setting a Secure *umask*](#setting-a-secure-umask)
-      - [Finding World-Writeable Directories in Your *$PATH*](#finding-world-writeable-directories-in-your-path)
-      - [Adding the Current Directory to the *$PATH*](#adding-the-current-directory-to-the-path)
+      - [Setting a Secure `$IFS`](#setting-a-secure-ifs)
+      - [Setting a Secure `umask`](#setting-a-secure-umask)
+      - [Finding World-Writeable Directories in Your `$PATH`](#finding-world-writeable-directories-in-your-path)
+      - [Adding the Current Directory to the `$PATH`](#adding-the-current-directory-to-the-path)
       - [Using Secure Temporary Files](#using-secure-temporary-files)
       - [Validating Input](#validating-input)
       - [Setting Permissions](#setting-permissions)
       - [Leaking Passwords into the Process List](#leaking-passwords-into-the-process-list)
-      - [Writing *setuid* or *setgid* Scripts](#writing-setuid-or-setgid-scripts)
+      - [Writing `setuid` or `setgid` Scripts](#writing-setuid-or-setgid-scripts)
       - [Restricting Guest Users](#restricting-guest-users)
-      - [Using *chroot* Jails](#using-chroot-jails)
+      - [Using `chroot` Jails](#using-chroot-jails)
       - [Running as Non-root User](#running-as-non-root-user)
-      - [Using *sudo* More Securely](#using-sudo-more-securely)
+      - [Using `sudo` More Securely](#using-sudo-more-securely)
       - [Using Passwords in Scripts](#using-passwords-in-scripts)
       - [Using SSH Without a Password](#using-ssh-without-a-password)
       - [Restricting SSH Commands](#restricting-ssh-commands)
       - [Disconnecting Inactive Sessions](#disconnecting-inactive-sessions)
     - [Advanced Scripting](#advanced-scripting)
-      - [Finding *bash* Portable for *#!*](#finding-bash-portable-for-)
-      - [Setting a POSIX *$PATH*](#setting-a-posix-path)
+      - [Finding `bash` Portable for `#!`](#finding-bash-portable-for-)
+      - [Setting a POSIX `$PATH`](#setting-a-posix-path)
       - [Developing Portable Shell Scripts](#developing-portable-shell-scripts)
       - [Testing Scripts Using Virtual machines](#testing-scripts-using-virtual-machines)
-      - [Using *for* Loops Portably](#using-for-loops-portably)
-      - [Using *echo* Portably](#using-echo-portably)
+      - [Using `for` Loops Portably](#using-for-loops-portably)
+      - [Using `echo` Portably](#using-echo-portably)
       - [Splitting Output Only When Necessary](#splitting-output-only-when-necessary)
       - [Viewing Output in Hex](#viewing-output-in-hex)
-      - [Using *bash* Net-Redirection](#using-bash-net-redirection)
+      - [Using `bash` Net-Redirection](#using-bash-net-redirection)
       - [Finding My IP Address](#finding-my-ip-address)
       - [Getting Input from Another Machine](#getting-input-from-another-machine)
       - [Redirecting Output for the Life of a Script](#redirecting-output-for-the-life-of-a-script)
-      - [Working Around *"Argument list too long"* Errors](#working-around-argument-list-too-long-errors)
-      - [Logging to *syslog* from Your Script](#logging-to-syslog-from-your-script)
-      - [Using *logger* Correctly](#using-logger-correctly)
+      - [Working Around `"Argument list too long"` Errors](#working-around-argument-list-too-long-errors)
+      - [Logging to `syslog` from Your Script](#logging-to-syslog-from-your-script)
+      - [Using `logger` Correctly](#using-logger-correctly)
       - [Sending Email from Your Script](#sending-email-from-your-script)
       - [Automating a Process Using Phases](#automating-a-process-using-phases)
       - [Doing Two Things at Once](#doing-two-things-at-once)
       - [Running an SSH Command on Multiple Hosts](#running-an-ssh-command-on-multiple-hosts)
-    - [Configuring \& Customising *bash*](#configuring--customising-bash)
-      - [*bash* Startup Options](#bash-startup-options)
+    - [Configuring \& Customising `bash`](#configuring--customising-bash)
+      - [`bash` Startup Options](#bash-startup-options)
       - [Customising Your Prompt](#customising-your-prompt)
       - [A Prompt Before Your Program Runs](#a-prompt-before-your-program-runs)
-      - [Changing Your *$PATH* Permanently](#changing-your-path-permanently)
-      - [Changing Your *$PATH* Temporarily](#changing-your-path-temporarily)
-      - [Setting Your *$CDPATH*](#setting-your-cdpath)
+      - [Changing Your `$PATH` Permanently](#changing-your-path-permanently)
+      - [Changing Your `$PATH` Temporarily](#changing-your-path-temporarily)
+      - [Setting Your `$CDPATH`](#setting-your-cdpath)
       - [When Programs Are Not Found](#when-programs-are-not-found)
       - [Shorting or Changing Command Names](#shorting-or-changing-command-names)
       - [Adjusting Shell Behaviour \& Environment](#adjusting-shell-behaviour--environment)
-      - [Adjusting *readline* Behaviour Using *.inputrc*](#adjusting-readline-behaviour-using-inputrc)
-      - [Keeping a Private Stash of Utility by Adding *~/bin*](#keeping-a-private-stash-of-utility-by-adding-bin)
-      - [Using Secondary Prompts: *$PS2*, *$PS3*, *$PS4*](#using-secondary-prompts-ps2-ps3-ps4)
+      - [Adjusting `readline` Behaviour Using `.inputrc`](#adjusting-readline-behaviour-using-inputrc)
+      - [Keeping a Private Stash of Utility by Adding `~/bin`](#keeping-a-private-stash-of-utility-by-adding-bin)
+      - [Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`](#using-secondary-prompts-ps2-ps3-ps4)
       - [Synchronising Shell History Between Sessions](#synchronising-shell-history-between-sessions)
       - [Setting Shell History Options](#setting-shell-history-options)
-      - [Creating a Better *cd* Command](#creating-a-better-cd-command)
+      - [Creating a Better `cd` Command](#creating-a-better-cd-command)
       - [Creating \& Changing Into a New Directory in One Step](#creating--changing-into-a-new-directory-in-one-step)
       - [Getting to the Bottom of Things](#getting-to-the-bottom-of-things)
-      - [Adding New Features to *bash* Using Loadable Builtins](#adding-new-features-to-bash-using-loadable-builtins)
+      - [Adding New Features to `bash` Using Loadable Builtins](#adding-new-features-to-bash-using-loadable-builtins)
       - [Improving Programmable Completion](#improving-programmable-completion)
       - [Using Initialisation Files Correctly](#using-initialisation-files-correctly)
-      - [Creating Self-Contained, Portable *rc* Files](#creating-self-contained-portable-rc-files)
+      - [Creating Self-Contained, Portable `rc` Files](#creating-self-contained-portable-rc-files)
       - [Getting Start with a Custom Configuration](#getting-start-with-a-custom-configuration)
     - [Housekeeping \& Administrative Tasks](#housekeeping--administrative-tasks)
       - [Renaming Many Files](#renaming-many-files)
-      - [Using GNU Texinfo \& *info* on Linux](#using-gnu-texinfo--info-on-linux)
+      - [Using GNU Texinfo \& `info` on Linux](#using-gnu-texinfo--info-on-linux)
       - [Unzipping Many ZIP Files](#unzipping-many-zip-files)
-      - [Recovering Disconnected Sessions Using *screen*](#recovering-disconnected-sessions-using-screen)
-      - [Sharing a Single *bash* Session](#sharing-a-single-bash-session)
+      - [Recovering Disconnected Sessions Using `screen`](#recovering-disconnected-sessions-using-screen)
+      - [Sharing a Single `bash` Session](#sharing-a-single-bash-session)
       - [Logging an Entire Session or Batch Job](#logging-an-entire-session-or-batch-job)
       - [Clearing the Screen When You Log Out](#clearing-the-screen-when-you-log-out)
       - [Capturing File Metadata for Recovery](#capturing-file-metadata-for-recovery)
       - [Creating an Index of Many Files](#creating-an-index-of-many-files)
-      - [Using *diff* \& *patch*](#using-diff--patch)
+      - [Using `diff` \& `patch`](#using-diff--patch)
       - [Counting Differences in Files](#counting-differences-in-files)
       - [Removing or Renaming Files Named with Special Characters](#removing-or-renaming-files-named-with-special-characters)
       - [Prepending Data to a File](#prepending-data-to-a-file)
       - [Editing a File in Place](#editing-a-file-in-place)
-      - [Using *sudo* on a Group of Commands](#using-sudo-on-a-group-of-commands)
+      - [Using `sudo` on a Group of Commands](#using-sudo-on-a-group-of-commands)
       - [Finding Lines That Appear in One File but Not in Another](#finding-lines-that-appear-in-one-file-but-not-in-another)
       - [Keeping the Most Recent N Objects](#keeping-the-most-recent-n-objects)
       - [Writing to a Circular Log](#writing-to-a-circular-log)
       - [Circular Backups](#circular-backups)
-      - [Grepping *ps* Output Without Also Getting the *grep* Process Itself](#grepping-ps-output-without-also-getting-the-grep-process-itself)
+      - [Grepping `ps` Output Without Also Getting the `grep` Process Itself](#grepping-ps-output-without-also-getting-the-grep-process-itself)
       - [Finding Out Whether a Process Is Running](#finding-out-whether-a-process-is-running)
       - [Adding a Prefix or Suffix to Output](#adding-a-prefix-or-suffix-to-output)
       - [Numbering Lines](#numbering-lines)
@@ -502,19 +549,19 @@
       - [Big Changes, More Lines](#big-changes-more-lines)
     - [Tips \& Traps: Common Goofs for Notices](#tips--traps-common-goofs-for-notices)
       - [Forgetting to Set Execute Permissions](#forgetting-to-set-execute-permissions)
-      - [Fixing *"No such file or directory"* Errors](#fixing-no-such-file-or-directory-errors)
-      - [Forgetting That the Current Directory Is Not in the *$PATH*](#forgetting-that-the-current-directory-is-not-in-the-path)
-      - [Naming Your Script *"test"*](#naming-your-script-test)
+      - [Fixing `"No such file or directory"` Errors](#fixing-no-such-file-or-directory-errors)
+      - [Forgetting That the Current Directory Is Not in the `$PATH`](#forgetting-that-the-current-directory-is-not-in-the-path)
+      - [Naming Your Script `"test"`](#naming-your-script-test)
       - [Expecting to Change Exported Variables](#expecting-to-change-exported-variables)
-      - [Forgetting Quotes Leads to *"command not found"* on Assignments](#forgetting-quotes-leads-to-command-not-found-on-assignments)
+      - [Forgetting Quotes Leads to `"command not found"` on Assignments](#forgetting-quotes-leads-to-command-not-found-on-assignments)
       - [Forgetting that Pattern Matching Alphabetises](#forgetting-that-pattern-matching-alphabetises)
       - [Forgetting that Pipelines Make Subshells](#forgetting-that-pipelines-make-subshells)
       - [Making Your Terminal Sane Again](#making-your-terminal-sane-again)
       - [Deleting Files Using an Empty Variable](#deleting-files-using-an-empty-variable)
-      - [Seeing Odd Behaviour from *printf*](#seeing-odd-behaviour-from-printf)
-      - [Testing *bash* Script Syntax](#testing-bash-script-syntax)
+      - [Seeing Odd Behaviour from `printf`](#seeing-odd-behaviour-from-printf)
+      - [Testing `bash` Script Syntax](#testing-bash-script-syntax)
       - [Debugging Scripts](#debugging-scripts)
-      - [Avoid *"command not found"* When Using Functions](#avoid-command-not-found-when-using-functions)
+      - [Avoid `"command not found"` When Using Functions](#avoid-command-not-found-when-using-functions)
       - [Confusing Shell Wildcards \& Regular Expressions](#confusing-shell-wildcards--regular-expressions)
   - [The Pragmatic Programmer](#the-pragmatic-programmer)
     - [Preface to the Second Edition](#preface-to-the-second-edition)
@@ -700,7 +747,6 @@
     - [Lesson 1.4: Text Editing - Insertion](#lesson-14-text-editing---insertion)
     - [Lesson 1.5 Text Editing - Appending](#lesson-15-text-editing---appending)
     - [Lesson 1.6: Editing a File](#lesson-16-editing-a-file)
-    - [Lesson 1 Summary](#lesson-1-summary)
     - [Lesson 2.1: Deletion Commands](#lesson-21-deletion-commands)
     - [Lesson 2.2: More Deletion Commands](#lesson-22-more-deletion-commands)
     - [Lesson 2.3: On Operators \& Motions](#lesson-23-on-operators--motions)
@@ -728,9 +774,16 @@
     - [Lesson 7.2: Create a Startup Script](#lesson-72-create-a-startup-script)
     - [Lesson 7.3: Completion](#lesson-73-completion)
   - [0 to LSP: Neovim RC from Scratch](#0-to-lsp-neovim-rc-from-scratch)
+  - [Vim Buffers, Windows \& Tabs - An Overview](#vim-buffers-windows--tabs---an-overview)
+    - [Vim Modes](#vim-modes)
+    - [Buffers](#buffers)
+    - [Windows](#windows)
+    - [Tabs](#tabs)
 - [References](#references)
   - [Ericsson](#ericsson)
     - [Ericsson: Navigate the Network Slicing Transformation Journey](#ericsson-navigate-the-network-slicing-transformation-journey)
+  - [Medium](#medium)
+    - [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
   - [Microsoft](#microsoft)
     - [Microsoft: About Service Meshes](#microsoft-about-service-meshes)
   - [Mongodb](#mongodb)
@@ -741,7 +794,7 @@
     - [Pi\_tutor](#pi_tutor)
   - [O'Reilly](#oreilly)
     - [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
-    - [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - [O'Reilly: \*bash\` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
   - [Tech Target](#tech-target)
     - [Tech Target: Network Slicing](#tech-target-network-slicing)
   - [Techradar](#techradar)
@@ -1235,7 +1288,7 @@
   [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
 - One reason to format the code in a uniform way is so that nobody can "own" a piece of code just by formatting it in
-  their private way. We may want to prevent developers from using certain antipatterns in order to avoid some common
+  their private way. We may want to prevent developers from using certain anti-patterns in order to avoid some common
   bugs. In all, a coding standard should make it easier to work in the project, and maintain development speed from the
   beginning to the end. It follows, then, that everybody should agree on the coding standard, too - it does not help if
   one developer uses three spaces to indent code, and another uses four.
@@ -1248,9 +1301,9 @@
   - Make sure code formatting is part of the build process, so that everybody runs it automatically every time they
     compile the code.
 
-  - Use static code analysis tools to scan the code for unwanted antipatterns. If any are found, break the build.
+  - Use static code analysis tools to scan the code for unwanted anti-patterns. If any are found, break the build.
 
-  - Learn to configure those tools so that you can scan for your own, project-specific antipatterns.
+  - Learn to configure those tools so that you can scan for your own, project-specific anti-patterns.
 
   - Do not only measure test coverage, but automatically check the results, too. Again, break the build if test
     coverage is too low.
@@ -2239,7 +2292,7 @@
     runtime qualities you'd like the application to exhibit, such as robustness and correctness.
     [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
-  - Tracking work can tickets can be used to show that work's status as *Not Started*, *In Progress*, or *Don*e without
+  - Tracking work can tickets can be used to show that work's status as `Not Started`, `In Progress`, or `Done` without
     reference to a hidden project management tool and without having to chase programmers for fictional status reports.
     [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
@@ -2499,7 +2552,7 @@
 
 ### Prefer Domain-Specific Types to Primitive Types
 
-- Using classes such as Velocity_In_Knots and Distance_In_Nautical_Miles adds a lot of value with respect to code
+- Using classes such as `Velocity_In_Knots` and `Distance_In_Nautical_Miles` adds a lot of value with respect to code
   quality:
   [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
@@ -2759,7 +2812,7 @@
 
   - **I Need to Learn Exotic Tools in Order to Automate**:
 
-    - You can go a long way with a decent shell language (such as *bash* or PowerShell) and a build automation system.
+    - You can go a long way with a decent shell language (such as `bash` or PowerShell) and a build automation system.
       [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
     - If you need to interact with websites, use a tool such as iMacros or Selenium.
@@ -2775,7 +2828,7 @@
 
   - **I Don't Have Time to Figure it Out**:
 
-    - You don't have to learn all of *bash* or Ant to get started. Learn as you go. When you have a task that you think
+    - You don't have to learn all of `bash` or Ant to get started. Learn as you go. When you have a task that you think
       can and should be automated, learn just enough about your tools to do it.
       [O'Reilly: 97 Things Every Programmer Should Know](#oreilly-97-things-every-programmer-should-know)
 
@@ -3253,7 +3306,7 @@
 
 </details>
 
-## *bash* Cookbook
+## `bash` Cookbook
 
 <details open>
 
@@ -3263,82 +3316,82 @@
 
 - Every modern operating system has at least one shell, and some have many. Some shells are command line–oriented, such
   as the shell discussed in this book. Others are graphical, like Windows Explorer or the Macintosh Finder.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - A shell script can save you time and effort, or facilitate consistency and repeatability for some important task.
   Even using an alias to change or shorten the name of a command you use often can have a significant effect.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - There is also sometimes a choice between a clever way to write some code, and a readable way. The readable way is the
   only smart choice.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Who Should Read This Book
 
 - This book is for anyone who uses a Unix or Linux system, as well as system administrators who may use several systems
   on any given day. With it, you will be able to create scripts that allow you to accomplish more, in less time, more
   easily, consistently, and repeatable than ever before.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Ideal readers include:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - New Unix or Linux users who don't know much about the shell, but want to do more than point and click.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Experienced Unix or Linux users and system administrators looking for quick answers to shell scripting questions.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Programmers who work in a Unix or Linux (or even Windows) environment and want to be more productive.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - New Unix or Linux sysadmins, or those coming from a Windows environment who need to come up to speed quickly.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Experienced Windows users and sysadmins who want a more powerful scripting environment.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - This book assumes you have access to a Unix or Linux system and are familiar with logging in, typing basic commands,
   and using a text editor. You do not have to be root to use the vast majority of the recipes, though there are a few,
   particularly dealing with installing bash, where root access will be needed.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### About This Book
 
-- This book covers *bash*, the GNU Bourne Again Shell, which is a member of the family of shells that includes the
-  original Bourne shell, *sh*, the Korn shell, ksh, and the public domain Korn shell, pdksh. While these and other
-  shells such as *dash* and *zsh* are not specifically covered, odds are that most of the scripts will work pretty well
+- This book covers `bash`, the GNU Bourne Again Shell, which is a member of the family of shells that includes the
+  original Bourne shell, `sh`, the Korn shell, ksh, and the public domain Korn shell, pdksh. While these and other
+  shells such as `dash` and `zsh` are not specifically covered, odds are that most of the scripts will work pretty well
   with them.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - A great part of the Unix philosophy is to build simple tools that do one thing well, then combine them as needed.
   This combination of tools is often accomplished via a shell script because these commands, called pipelines, can be
   long or difficult to remember and type. Where appropriate, the book will cover the use of many of these tools in the
   context of the shell script as the glue that holds the pieces together to achieve the goal.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ##### GNU Software
 
-- *bash* and many of the other tools discussed in this book are part of the GNU Project. GNU is a recursive acronym for
+- `bash` and many of the other tools discussed in this book are part of the GNU Project. GNU is a recursive acronym for
   "GNU's Not Unix," and the project dates back to 1984. Its goal is to develop a free (as in freedom) Unix-like
   operating system.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ##### A Note About Code Examples
 
-- Examples with a dollar symbol at the start of a line indicates it is a *bash* shell prompt. Each line is a user
+- Examples with a dollar symbol at the start of a line indicates it is a `bash` shell prompt. Each line is a user
   input. The prompt is printed by the shell; you type the remainder of the line. Similarly, the last line in such an
   example is often a prompt (the $ again), to show that the command has ended execution and control has returned to
   the shell.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The hash sign is used as a comment as well as indicating being logged in as root.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ##### Useless Use of cat
 
 - The following is a useless use of cat:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cat "<file>" | grep "<foo>"
@@ -3346,7 +3399,7 @@
 
 - The following is a more efficient use of searching for text in a file, as cat incurs system overhead, since it runs
   in a subprocess.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   grep "<foo>" "<file>"
@@ -3355,109 +3408,86 @@
 - Sometimes unnecessarily using cat actually does serve a purpose. It might be a placeholder to demonstrate a fragment
   of a pipeline, with other commands later replacing it. Or it might be that placing the file near the left side of the
   code draws the eye to it more clearly than if it were obscured after any additional code.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - As a result of the fact processors aren't getting any slower, then use cat if you would like to use it, as long as it
   doesn't add any additional code bloat or complexity to scripts.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ##### A Note About Perl
 
 - Perl is seldom used in the book, although there a few cases where it makes sense for code examples.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Perl solutions are generally much larger, with significantly more overhead than bash.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Shell scripting is basically glue for combining Unix programs, whereas Perl incorporates much of the functionality of
   the external Unix programs into the language itself. This makes it more efficient and in some ways more portable, at
   the expense of being different and making it harder to efficiently run any external programs you still need.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The choice of which tool to use often has more to do with familiarity than any other reason. The bottom line is
   always get the work done; the choice of tools is secondary.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-<!-- #### Conventions Used in This Book
-
-- The following typographical conventions are used in the book:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-  - Plain Text: Indicates menu titles, menu options, menu buttons, and keyboard accelerators (such as Alt and Ctrl).
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-  - *Italic*: Indicates new terms, URLs, email addresses, filenames, file extensions, path names, directories, and Unix
-    utilities.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-  - <pre>Constant width</pre>: Indicates commands, options, switches, variables, attributes, keys, functions, types,
-    classes, namespaces, methods, modules, properties, parameters, values, objects, events, event handlers, XML tags,
-    HTML tags, macros, the contents of files, and the output from commands.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-  - **<pre>Constant width</pre>**: Shows commands or other text that should be typed literally by the user.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-  - *<pre>Constant width</pre>*: Shows text that should be replaced with user-supplied values.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition) -->
-
-### Beginning *bash*
+### Beginning `bash`
 
 - The Unix operating system popularised the notion of separating the shell (the part of the system that lets you type
   commands) from everything else: the input/output system, the scheduler, memory management, and all of the other
   things the operating system takes care of for you (and that most users don't want to care about). The shell was just
   one more program; it was a program whose job was executing other programs on behalf of users.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Modern shells are very convenient. For example, they remember commands that you've typed, and let you reuse those
   commands. Modern shells also let you edit those commands, so they don't have to be the same each time. And modern
   shells let you define your own command abbreviations, shortcuts, and other features. For an experienced user, typing
   commands (e.g., with shorthand, shortcuts, and command completion) is a lot more efficient and effective than
   dragging things around in a fancy windowed interface.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Beyond simple convenience, shells are programmable. There are many sequences of commands that you type again and
   again. A shell is also a programming language that's specially designed to work with your computer system's commands.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Whenever you find yourself doing a task repeatedly, you should try to automate it by writing a shell script. There
   are more powerful scripting languages, like Perl, Python, and Ruby, but the Unix shell (whatever flavour of shell
   you're using) is a great place to start.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Why *bash*?
+#### Why `bash`?
 
-- *bash* is everywhere. It may not be the newest, and it's arguably not the fanciest or the most powerful (though if
+- `bash` is everywhere. It may not be the newest, and it's arguably not the fanciest or the most powerful (though if
   not, it comes close), nor is it the only shell that's distributed as open source software - but it is ubiquitous.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- *bash* is commonly the default user shell on every Linux distribution. In the rare cases where *bash* doesn't ship
+- `bash` is commonly the default user shell on every Linux distribution. In the rare cases where `bash` doesn't ship
   with the operating system, it's easy to install. It's even available for Windows, via Cygwin and also the new Linux
-  Subsystem (Ubuntu). *bash* is both a powerful programming language and a good user interface, and you won't find
+  Subsystem (Ubuntu). `bash` is both a powerful programming language and a good user interface, and you won't find
   yourself sacrificing keyboard shortcuts to get elaborate programming features.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- You can't possibly go wrong by learning *bash*. The most common default shells are the old Bourne shell and *bash*,
+- You can't possibly go wrong by learning `bash`. The most common default shells are the old Bourne shell and `bash`,
   which is mostly Bourne shell–compatible. One of these shells is certainly present on any modern, major Unix or
   Unix-like operating system.
   [O'Reilly: bash Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - There are many good alternatives, and you may find one you like better - though it probably won't be as ubiquitous as
-  *bash*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `bash`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### The *bash* Shell
+#### The `bash` Shell
 
-- *bash* is a shell: a command interpreter. The main purpose of *bash* (or of any shell) is to allow you to interact
+- `bash` is a shell: a command interpreter. The main purpose of `bash` (or of any shell) is to allow you to interact
   with the computer's operating system so that you can accomplish whatever you need to do.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Showing Where You Are
 
-- *pwd* stands for print working directory and takes two options. *--logical* displays your logical path and is the
-  default. *--physical* displays your physical location, which may differ from your logical path if you have followed a
-  symbolic link. Similarly, the cd command also provides *--physical* and *--logical* switches:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- `pwd` stands for print working directory and takes two options. `--logical` displays your logical path and is the
+  default. `--physical` displays your physical location, which may differ from your logical path if you have followed a
+  symbolic link. Similarly, the `cd` command also provides `--physical` and `--logical` switches:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   bash-4.3$ pwd
@@ -3472,78 +3502,78 @@
 
 #### Finding & Running Commands
 
-- Try the *type*, *which*, *apropos*, *locate*, *slocate*, *find*, and *ls* commands when you need to find and run a
-  particular command under *bash*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Try the `type`, `which`, `apropos`, `locate`, `slocate`, `find`, and `ls` commands when you need to find and run a
+  particular command under `bash`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - **Finding Commands**:
 
-  - *bash* keeps a list of directories in which it should look for commands in an environment variable called PATH. The
-    *bash* builtin *type* command searches your environment (including aliases, keywords, functions, builtins,
-    directories in $PATH, and the command hash table) for executable commands matching its arguments and displays the
+  - `bash` keeps a list of directories in which it should look for commands in an environment variable called `PATH`.
+    The `bash` builtin `type` command searches your environment (including aliases, keywords, functions, builtins,
+    directories in `$PATH`, and the command hash table) for executable commands matching its arguments and displays the
     type and location of any matches.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - The *which* command is similar to *type* but only searches your $PATH (and *csh* aliases). It may vary from system
+  - The `which` command is similar to `type` but only searches your $PATH (and `csh` aliases). It may vary from system
     to system (it's usually a csh shell script on BSD, but a binary on Linux). Use these commands when you know the
     name of a command and need to know exactly where it's located, or to see if it's on this computer.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - **Assistance with Executing Commands**:
 
   - Almost all commands come with some form of help on how to use them. Usually there is online documentation called
-    manpages, where *man* is short for manual. These are accessed using the man command. Many programs also have a
-    built-in help facility, accessed by providing a "help me" argument such as *-h* or *--help*. Some programs,
+    manpages, where `man` is short for manual. These are accessed using the man command. Many programs also have a
+    built-in help facility, accessed by providing a "help me" argument such as `-h` or `--help`. Some programs,
     especially on other operating systems, will give you help if you don't give them arguments. Some Unix commands will
     also do that, but a great many of them will not. This is due to the way that Unix commands fit together into
     something called pipelines.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - If you don't know or can't remember the name of the command you need? *apropos* searches manpage names and
+  - If you don't know or can't remember the name of the command you need? `apropos` searches manpage names and
     descriptions for regular expressions supplied as arguments. This is incredibly useful when you don't remember the
     name of the command you need.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - **Finding Files**:
 
-  - *locate* and *slocate* consult database files about the system (usually compiled and updated by a job run from the
-    scheduler system *cron*) to find files or commands almost instantly. The location of the actual database files, what
+  - `locate` and `slocate` consult database files about the system (usually compiled and updated by a job run from the
+    scheduler system `cron`) to find files or commands almost instantly. The location of the actual database files, what
     is indexed therein, and how often it is checked may vary from system to system.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - *slocate* (secure locate) stores permission information (in addition to filenames and paths) so that it will not
+  - `slocate` (secure locate) stores permission information (in addition to filenames and paths) so that it will not
     list programs to which the user does not have access.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - On most Linux systems, *locate* is a symbolic link to *slocate*; other systems may have separate programs, or may
+  - On most Linux systems, `locate` is a symbolic link to `slocate`; other systems may have separate programs, or may
     not have slocate at all.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- Try using *ls*. If the command you wish to run is in your current directory, you must prefix it with a *./* since the
+- Try using `ls`. If the command you wish to run is in your current directory, you must prefix it with a `./` since the
   current working directory is usually not in your $PATH for security reasons.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Information About Files
 
-- Use the *ls*, *stat*, *file*, or *find* commands to get more information about a file, such as what it is, who owns
+- Use the `ls`, `stat`, `file`, or `find` commands to get more information about a file, such as what it is, who owns
   it, if it's executable, how many hard links it has, or when it was last accessed or changed.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Shell Quoting
 
 - Enclose a string in single quotes unless it contains elements that you want the shell to interpolate. Unquoted text
   and even text enclosed in double quotes is subject to shell expansion and substitution.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - You can't embed a single quote inside single quotes, even if using a backslash, since nothing (not even the
   backslash) is interpolated inside single quotes. But you can work around that by using double quotes with escapes, or
   by escaping a single quote outside of surrounding single quotes.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Determining if You Are Running Interactively
 
-- Use the *case* statement if you have some code you want to run only if you are (or are not) running interactively.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `case` statement if you have some code you want to run only if you are (or are not) running interactively.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   case "$-" in
@@ -3554,11 +3584,11 @@
   esac
   ```
 
-- *\$-* is a string listing of all the current shell option flags. It will contain *i* if the shell is interactive.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- `$-` is a string listing of all the current shell option flags. It will contain `i` if the shell is interactive.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - You may also see code like the following, but the previous example is preferred.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   if [ -n "$PS1" ]; then
@@ -3572,21 +3602,21 @@
 
 - No software is worth anything if there is no output of some sort, but I/O has long been one of the nastier areas of
   computing.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - One of the most important ideas behind the Unix operating system was that everything looked like a file (an ordered
   sequence of bytes). The operating system was responsible for this magic. It didn't matter whether you were writing to
   a file on the disk, the terminal, a tape drive, a memory stick, or something else; your program only needed to know
   how to write to a file, and the operating system would take it from there. That approach greatly simplified the
   problem.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - When you run a program, you still have to connect it to output files and input files. That task doesn't go away, but
   the shell makes it trivially easy. A command as simple as the example below reads its input from `input_file` and
   sends its output to `output_file`. If you omit the `> output_file`, the output goes to your terminal window. If you
   omit the `< input_file`, the program takes its input from the keyboard. The program literally doesn't know where its
   output is going, or where its input is coming from.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   do_something < input_file > output_file
@@ -3594,11 +3624,11 @@
 
 #### Writing Output to the Terminal/Window
 
-- The *echo* command parses all the arguments on the *echo* command line. The shell is parsing the arguments on the
-  *echo* command line (like it does for every other command line). This means that it does all its substitutions,
-  wildcard matching, and other things before handing the arguments off to *echo*. Since they are parsed as arguments,
+- The `echo` command parses all the arguments on the `echo` command line. The shell is parsing the arguments on the
+  `echo` command line (like it does for every other command line). This means that it does all its substitutions,
+  wildcard matching, and other things before handing the arguments off to `echo`. Since they are parsed as arguments,
   the spacing between arguments is ignored.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo this   was   very   widely   spaced
@@ -3606,12 +3636,12 @@
   ```
 
 - Normally the fact that the shell is very forgiving about whitespace between arguments is a helpful feature.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Output but Preserving Space
 
-- Enclosing the string in quotes as a parameter for the *echo* command will help preserve spacing.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Enclosing the string in quotes as a parameter for the `echo` command will help preserve spacing.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo "this was very widely spaced"
@@ -3621,17 +3651,17 @@
   this was very widely spaced
   ```
 
-- Since the words are enclosed in quotes, they form a single argument to the *echo* command. That argument is a string,
-  and the shell doesn't need to interfere with the contents of the string. In fact, by using single quotes (*''*) you
-  explicitly tell the shell not to interfere with the string at all. If you use double quotes (*""*), some shell
+- Since the words are enclosed in quotes, they form a single argument to the `echo` command. That argument is a string,
+  and the shell doesn't need to interfere with the contents of the string. In fact, by using single quotes (`''`) you
+  explicitly tell the shell not to interfere with the string at all. If you use double quotes (`""`), some shell
   substitutions do take place (variable, arithmetic, and tilde expansions and command substitutions), but since we have
   none in the example, the shell has nothing to change. When in doubt, use the single quotes.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Output with More Formatting Control
 
-- Use the *printf* builtin command when you want more control over the formatting and placement of output.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `printf` builtin command when you want more control over the formatting and placement of output.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ printf '%s = %d\n' Lines $LINES
@@ -3641,21 +3671,21 @@
   Gigahertz = 1.93
   ```
 
-- The *printf* builtin command behaves like the C language library call, where the first argument is the format control
-  string and the successive arguments are formatted according to the format specifications (*%*).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The `printf` builtin command behaves like the C language library call, where the first argument is the format control
+  string and the successive arguments are formatted according to the format specifications (`%`).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The numbers between the *%* and the format type (*s* or *f* in our example) provide additional formatting details.
-  For the floating-point type (*f*), the first number (*4* in the *4.2* specifier) is the width of the entire field.
-  The second number (*2*) is how many digits should be printed to the right of the decimal point. Note that it rounds
+- The numbers between the `%` and the format type (`s` or `f` in our example) provide additional formatting details.
+  For the floating-point type (`f`), the first number (`4` in the `4.2` specifier) is the width of the entire field.
+  The second number (`2`) is how many digits should be printed to the right of the decimal point. Note that it rounds
   the answer.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - For a string, the first number is the maximum field width, and the second is the number of bytes to be printed. The
-  string will be truncated (if longer than *max*) or blank padded (if less than min) as needed. When the *max* and*min*
+  string will be truncated (if longer than `max`) or blank padded (if less than min) as needed. When the `max` and`min`
   specifiers are the same, then the string is guaranteed to be that length. The negative sign on the specifier means to
   left-align the string (within its field width). Without the minus sign, the string would right-justify, thus:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ printf '%10.10s = %4.2f\n' 'Gigahertz' 1.92735
@@ -3664,31 +3694,31 @@
 
 #### Writing Output Without the Newline
 
-- Exclude the *\n* when using *printf* to produce an output without the default newline:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Exclude the `\n` when using `printf` to produce an output without the default newline:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ printf "%s %s" next prompt
   next prompt$
   ```
 
-- With *echo*, use the *-n* option:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- With `echo`, use the `-n` option:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo -n prompt
   prompt$
   ```
 
-- Because of the powerful and flexible formatting that *printf* provides, and because it is a builtin with very little
-  overhead to invoke (unlike in other shells or older versions of *bash*, where *printf* was a standalone executable),
-  *printf* will be used for many examples throughout this book.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Because of the powerful and flexible formatting that `printf` provides, and because it is a builtin with very little
+  overhead to invoke (unlike in other shells or older versions of `bash`, where `printf` was a standalone executable),
+  `printf` will be used for many examples throughout this book.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Appending Rather than Clobbering Output
 
-- The double greater-than sign (*>>*) is a *bash* redirector that means append the output:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The double greater-than sign (`>>`) is a `bash` redirector that means append the output:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ls > /tmp/ls.out
@@ -3700,23 +3730,23 @@
   ```
 
 - The first line includes a redirect that truncates the file if it exists and starts with a clean (empty) file, filling
-  it with the output from the *ls* command. The second and third invocations of *ls* use the double greater-than sign
+  it with the output from the `ls` command. The second and third invocations of `ls` use the double greater-than sign
   (>>) to indicate appending to, rather than replacing the contents of, the output file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Just the Beginning of End of a File
 
-- Use the *head* or *tail* command when you need to display just the beginning or end of a file. By default, *head*
-  will output the first 10 lines and *tail* will output the last 10 lines of the given file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `head` or `tail` command when you need to display just the beginning or end of a file. By default, `head`
+  will output the first 10 lines and `tail` will output the last 10 lines of the given file.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Throwing Output Away
 
 - Sometimes you don't want to save the output into a file; in fact, sometimes you don't even want to see it at all.
   Unix and Linux systems have a special device that isn't real hardware at all, just a bit bucket where we can dump
-  unwanted data. It's called */dev/null* and is perfect for these situations. Any data written there is simply thrown
+  unwanted data. It's called `/dev/null` and is perfect for these situations. Any data written there is simply thrown
   away, so it takes up no disk space. Redirection makes it easy.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   example_command 2> /dev/null
@@ -3729,15 +3759,15 @@
 - You want to capture the output with a redirect, but you're typing several commands on one line. The final redirect
   applies only to the last command, the last ls on that line. All the other output appears on the screen (i.e., does
   not get redirected).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   pwd; ls; cd ../elsewhere; pwd; ls > /tmp/all.out
   ```
 
-- Use braces *({ })* to group these commands together; then redirection applies to the output from all commands in the
+- Use braces `({ })` to group these commands together; then redirection applies to the output from all commands in the
   group.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   { pwd; ls; cd ../elsewhere; pwd; ls; } > /tmp/all.out
@@ -3747,38 +3777,38 @@
 
 - The curly braces in the previous example are actually reserved words, so they must be surrounded by whitespace. Also,
   the trailing semicolon is required before the closing brace.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The curly braces are just a way to group several commands together, more like a shorthand for our redirecting, so
   that we don't have to redirect each command separately. Commands enclosed in parentheses, however, run in another
   instance of the shell, a child of the current shell called a subshell.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The subshell is almost identical to the current shell's environment - i.e., variables, including *\$PATH*, are all the
+- The subshell is almost identical to the current shell's environment - i.e., variables, including `$PATH`, are all the
   same, but traps are handled differently. Because a subshell is used to execute the cd commands, when the subshell
   exits, your main shell remains where it started. That is, its current directory hasn't moved, and its variables
   haven't changed.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- With the curly braces used for grouping, you end up in the new directory (*../elsewhere* in the example above). Any
+- With the curly braces used for grouping, you end up in the new directory (`../elsewhere` in the example above). Any
   other changes that you make (variable assignments, for example) will be made to your current shell instance. While
   both approaches result in the same output, they leave you in very different places.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Connecting Two Programs by Using Output as Input
 
 - Using the pipe symbol means we don't have to invent a temporary filename, remember it, and remember to delete it.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Commands run connected by pipes are run in separate processes. While such a subtlety can often be ignored, there are
   a few times when the implications of this are important.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Saving a Copy of Output Even While Using It as Input
 
-- Using the *tee* command to split the output into two identical streams, one that is written to a file and the other
+- Using the `tee` command to split the output into two identical streams, one that is written to a file and the other
   that is written to standard output.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   find / -name '*.c' -print | tee /tmp/all.my.sources
@@ -3787,7 +3817,7 @@
 - In the previous example we did not redirect standard error at all. This means that any errors, like you might expect
   will be printed to the screen but won't show up in the tee file. This is addressed in the example below. It won't be
   neatly separated, but it will be captured.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   find / -name '*.c' -print 2>&1 | tee /tmp/all.my.sources
@@ -3795,10 +3825,10 @@
 
 #### Keeping Files Safe from Accidental Overwriting
 
-- The *noclobber* option tells bash not to overwrite any existing files when you redirect output. If the file to which
+- The `noclobber` option tells bash not to overwrite any existing files when you redirect output. If the file to which
   you redirect output doesn't (yet) exist, everything works as normal, with bash creating the file as it opens it for
   output. If the file already exists, however, you will get an error message.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # Disabling the noclobber option (just in case it has already been set).
@@ -3821,14 +3851,14 @@
   $ echo some more >> my.file
   ```
 
-- The *noclobber* option only refers to the shell's clobbering of a file when redirecting output. It will not stop
+- The `noclobber` option only refers to the shell's clobbering of a file when redirecting output. It will not stop
   other file manipulating actions of other programs from clobbering files.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clobbering a File on Purpose
 
-- Use *>|* to redirect your output. Even if noclobber is set, bash ignores its setting and overwrites the file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use `>|` to redirect your output. Even if noclobber is set, bash ignores its setting and overwrites the file.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # Creating the file.
@@ -3853,12 +3883,12 @@
 
 - Whether it is data for a program to crunch, or simple commands to direct the behaviour of a script, input is as
   fundamental as output.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Input from File
 
-- Use input redirection, indicated by the *<* character, to read data from a file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use input redirection, indicated by the `<` character, to read data from a file.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   wc < my.file
@@ -3866,19 +3896,19 @@
 
 #### Keeping Your Data with Your Script
 
-- In the case of needing input to your script, but don't want a separate file, use a here-document with the *<<*
+- In the case of needing input to your script, but don't want a separate file, use a here-document with the `<<`
   characters, redirecting the text from the command line than from a file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- In the following *ext* script, the *grep* has been parameterised by making the string that we're searching for be the
-  parameter of our shell script (*\$1*). Whereas we often think of *grep* as searching for a fixed string through
+- In the following `ext` script, the `grep` has been parameterised by making the string that we're searching for be the
+  parameter of our shell script (`$1`). Whereas we often think of `grep` as searching for a fixed string through
   various different files, here we are going to vary what we search for, but search through the same data every time.
   Rather than supplying one or more filenames to search through, we set up a here-document and tell the shell to
-  redirect standard input to come from that (temporary) document. The *<<* syntax says that we want to create such a
-  temporary input source, and the *EOF* is just an arbitrary string (you can choose what you like) to act as the
+  redirect standard input to come from that (temporary) document. The `<<` syntax says that we want to create such a
+  temporary input source, and the `EOF` is just an arbitrary string (you can choose what you like) to act as the
   terminator of the temporary input. It is not part of the input, but acts as the marker to show where it ends. The
   regular shell script (if any) resumes after the marker.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat ext
@@ -3901,7 +3931,7 @@
 - Your here-document is behaving weirdly. You wanted to maintain a simple list of
 donors using the method described previously for phone numbers, so you created a
 file called donors that looked like this:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat donors
@@ -3919,7 +3949,7 @@ file called donors that looked like this:
   ```
 
 - But when you tried running it you got weird output:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./donors bill
@@ -3932,7 +3962,7 @@ file called donors that looked like this:
 
 - Turn off the shell scripting features inside the here-document by escaping any or all of the characters in the ending
   marker:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   grep $1 <<'EOF'
@@ -3943,17 +3973,17 @@ file called donors that looked like this:
   EOF
   ```
 
-- The *<<EOF* can be replaced with *<<\EOF*, or *<<'EOF'*, or even *<<E\OF* - they all work. It's not the most elegant
-  syntax, but it's enough to tell *bash* that you want to treat the *here* data differently. Normally (i.e., unless you
-  use this escaping syntax), says the *bash* manpage, "…all lines of the here-document are subjected to parameter
+- The `<<EOF` can be replaced with `<<\EOF`, or `<<'EOF'`, or even `<<E\OF` - they all work. It's not the most elegant
+  syntax, but it's enough to tell `bash` that you want to treat the `here` data differently. Normally (i.e., unless you
+  use this escaping syntax), says the `bash` manpage, "…all lines of the here-document are subjected to parameter
   expansion, command substitution, and arithmetic expansion."
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - What's happening in our original donors script is that the amounts are being interpreted as shell variables. For
-  example, *\$100* is being seen as the shell variable *\$1* followed by two zeros. That's what gives us *Pete00* when
-  we search for *Pete* and *bill00* when we search for *Bill*. When we escape some or all of the characters of the EOF,
-  *bash* knows not to do the expansions, and the behaviour is the expected behaviour:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  example, `$100` is being seen as the shell variable `$1` followed by two zeros. That's what gives us `Pete00` when we
+  search for `Pete` and `bill00` when we search for `Bill`. When we escape some or all of the characters of the EOF,
+  `bash` knows not to do the expansions, and the behaviour is the expected behaviour:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./donors pPte
@@ -3961,20 +3991,20 @@ file called donors that looked like this:
   ```
 
 - Of course, you may want the shell expansion on your data. It is a useful practice to always escape the marker, as in
-  *<<'EOF'* or *<<\EOF*, to avoid unexpected results, unless you know that you really want the expansion to be done on
+  `<<'EOF'` or `<<\EOF`, to avoid unexpected results, unless you know that you really want the expansion to be done on
   your data.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Trailing whitespace (even just a single blank space) on your closing EOF marker will cause it not to be recognised as
-  the closing marker. *bash* will swallow up the rest of your script, treating it as input too and looking for that
-  *EOF*. Be sure there are no extra characters (especially spaces or tabs) after the *EOF*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  the closing marker. `bash` will swallow up the rest of your script, treating it as input too and looking for that
+  `EOF`. Be sure there are no extra characters (especially spaces or tabs) after the `EOF`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Indenting Here-Documents
 
-- Use *<<-*, and then you can use tab characters (only tab characters) at the beginning of lines to indent this portion
+- Use `<<-`, and then you can use tab characters (only tab characters) at the beginning of lines to indent this portion
   of your shell script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat my_script.sh
@@ -3990,20 +4020,20 @@ file called donors that looked like this:
   $
   ```
 
-- The hyphen just after the *<<* is enough to tell bash to ignore the leading tab characters. This is for tab
-  characters only and not arbitrary whitespace. Note that this is especially important with the *EOF* or any other
-  marker designation. If you have spaces there, it will not recognise the *EOF* as your ending marker, and the *here*
+- The hyphen just after the `<<` is enough to tell bash to ignore the leading tab characters. This is for tab
+  characters only and not arbitrary whitespace. Note that this is especially important with the `EOF` or any other
+  marker designation. If you have spaces there, it will not recognise the `EOF` as your ending marker, and the `here`
   data will continue through to the end of the file (swallowing the rest of your script). Therefore, you may want to
-  always left-justify the *EOF* (or other marker) just to be safe, and let the formatting go on this one line. If your
+  always left-justify the `EOF` (or other marker) just to be safe, and let the formatting go on this one line. If your
   script indents with spaces or a combination of spaces and tabs, don't use that technique on here-documents. Either
   use just tabs, or keep it all flush left. Also, watch out for text editors that automatically replace tabs with
   spaces.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting User Input
 
 - Use the read statement to get input from the user.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   read
@@ -4015,24 +4045,24 @@ file called donors that looked like this:
   read PRE MID POST
   ```
 
-- A *read* statement with no arguments will read user input and place it into the shell variable *REPLY*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- A `read` statement with no arguments will read user input and place it into the shell variable `REPLY`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- If you supply multiple variable names in the read statement, then *read* parses the input into words, assigning them
+- If you supply multiple variable names in the read statement, then `read` parses the input into words, assigning them
   in order. If the user enters fewer words, the extra variables will be set to null. If the user enters more words than
-  there are variables in the *read* statement, then all of the extra words will be part of the last variable in the
+  there are variables in the `read` statement, then all of the extra words will be part of the last variable in the
   list.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting a Yes or No Input
 
 - You need to get a simple yes or no input from the user, and you want to be as user-friendly as possible. In
   particular, you do not want to be case-sensitive, and you want to provide a useful default if the user presses the
-  *Enter* key.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `Enter` key.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - If the actions to take are simple, use the following self-contained function:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # Let the user make a choice about something and execute code based on
@@ -4066,7 +4096,7 @@ file called donors that looked like this:
   ```
 
 - If the actions are complicated, use the function in the example below and handle the results in your main code.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # Let the user make a choice about something and return a standardised
@@ -4089,10 +4119,10 @@ file called donors that looked like this:
   } # end of function choice
   ```
 
-- The code in the following example calls the *choice* function to prompt for and verify a package date. Assuming
-  *\$THISPACKAGE* is set, the function displays the date and asks for verification. If the user types *y*, *Y*, or
-  presses *Enter*, then that date is accepted. If the user enters a new date, the function loops and verifies it.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The code in the following example calls the `choice` function to prompt for and verify a package date. Assuming
+  `$THISPACKAGE` is set, the function displays the date and asks for verification. If the user types `y`, `Y`, or
+  presses `<Enter>`, then that date is accepted. If the user enters a new date, the function loops and verifies it.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   CHOICE=''
@@ -4113,9 +4143,9 @@ file called donors that looked like this:
 #### Selecting from a List of Options
 
 - You need to provide the user with a list of options to choose from and you don't want to make them type any more than
-  necessary. Use *bash*'s builtin *select* construct to generate a menu, then have the user choose by typing the number
+  necessary. Use `bash`'s builtin `select` construct to generate a menu, then have the user choose by typing the number
   of the selection.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   directorylist="Finished $(for i in /*;do [ -d "$i" ] && echo $i; done)"
@@ -4141,56 +4171,56 @@ file called donors that looked like this:
   done # end of until dir == finished
   ```
 
-- The select statement makes it trivial to present a numbered list to the user on *STDERR*, from which they may make a
-  choice. Don't forget to provide an "exit" or "finished" choice, though Ctrl-D will end the *select* and empty input
+- The select statement makes it trivial to present a numbered list to the user on `STDERR`, from which they may make a
+  choice. Don't forget to provide an "exit" or "finished" choice, though Ctrl-D will end the `select` and empty input
   will print the menu again.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The number the user typed is returned in *\$REPLY*, and the value of that entry is returned in the variable you
-  specified in the *select* construct.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The number the user typed is returned in `$REPLY`, and the value of that entry is returned in the variable you
+  specified in the `select` construct.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Prompting for a Password
 
-- Use the *read* command to read the user's input, but with a special option to turn off echoing.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `read` command to read the user's input, but with a special option to turn off echoing.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The *-s* option tells the *read* command not to echo the characters typed (*s* is for silent) and the *-p* option
+- The `-s` option tells the `read` command not to echo the characters typed (`s` is for silent) and the `-p` option
   says that the next argument is the prompt to be displayed prior to reading input. The line of input that is read from
-  the user is put into the variable named *\$PASSWD*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  the user is put into the variable named `$PASSWD`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - With echoing disabled, when the user presses the Enter key no newline is echoed and any subsequent output would
   appear on the same line as the prompt. Printing the newline gets us to the next line, as you would expect.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - If you read a password into an environment variable it is in memory in plain text, and thus may be accessed via a
-  core dump or */proc/core* (if your OS provides */proc/*). It is also in the process environment, which may be
+  core dump or `/proc/core` (if your OS provides `/proc/`). It is also in the process environment, which may be
   accessible by other processes. You may be better off using certificates with SSH, if possible. In any case, it is
   wise to assume that root and possibly other users on the machine may gain access to the password, so you should
   handle the situation accordingly.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Executing Commands
 
-- The main purpose of *bash* (or of any shell) is to allow you to interact with the computer's operating system so that
+- The main purpose of `bash` (or of any shell) is to allow you to interact with the computer's operating system so that
   you can accomplish whatever you need to do. Usually that involves launching programs, so the shell takes the commands
   you type, determines from that input what programs need to be run, and launches them for you.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running Any Executable
 
-- Use *bash* and type the name of the command at the user input prompt when you need to run a command on a Linux or
+- Use `bash` and type the name of the command at the user input prompt when you need to run a command on a Linux or
   Unix system. This is simple on a surface level, but there are a lot of steps going on behind the scenes. The basic
-  operation in *bash* is to load and execute programs. All the additional functionality provided by *bash* is to enable
+  operation in `bash` is to load and execute programs. All the additional functionality provided by `bash` is to enable
   and facilitate the execution of programs.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- *bash* uses a shell variable called *\$PATH* to locate your executable. The *\$PATH* variable is a list of
-  directories. The directories are separated by colons. *bash* searches in each of those directories for a file with
-  the name that you specified. *bash* looks at the order in which the directories are listed in the variable, and takes
-  the first executable found.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- `bash` uses a shell variable called `$PATH` to locate your executable. The `$PATH` variable is a list of directories.
+  The directories are separated by colons. `bash` searches in each of those directories for a file with the name that
+  you specified. `bash` looks at the order in which the directories are listed in the variable, and takes the first
+  executable found.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo $PATH
@@ -4200,41 +4230,41 @@ file called donors that looked like this:
 
 - The last directory in the list is just a single dot (called the dot directory, or just dot), which represents the
   current directory on a Linux or Unix filesystem - wherever you are, that's the directory to which dot refers.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- Putting dot in the *\$PATH* is too great a security risk - someone could trick you and get you to run their own
-  malicious version of a command (say, *ls*) in place of one that you were expecting. If dot were listed first, then
-  someone else's version of *ls* would supersede the normal *ls* command, and you would likely unwittingly run that
+- Putting dot in the `$PATH` is too great a security risk - someone could trick you and get you to run their own
+  malicious version of a command (say, `ls`) in place of one that you were expecting. If dot were listed first, then
+  someone else's version of `ls` would supersede the normal `ls` command, and you would likely unwittingly run that
   command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- If you put dot as the last directory in your *\$PATH* variable, at least you won't be tricked that easily. Of course,
+- If you put dot as the last directory in your `$PATH` variable, at least you won't be tricked that easily. Of course,
   if you leave it off altogether it is arguably even safer, and you can still run commands in your local directory by
   typing a leading dot and slash character.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   ./my_script
   ```
 
-- Never allow dot or writeable directories in root's *\$PATH*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Never allow dot or writeable directories in root's `$PATH`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- A common practice among some *bash* users is to create a personal *bin* directory, analogous to the system
-  directories */bin* and */usr/bin* where executables are kept. In your personal bin (if you create it in your *home*
-  directory, its path is *~/bin*) you can put copies of your favourite shell scripts and other customised or private
-  commands. Then add that directory to your *\$PATH*, even to the front (*PATH=~/bin:$PATH*). That way, you can still
+- A common practice among some `bash` users is to create a personal `bin` directory, analogous to the system
+  directories `/bin` and `/usr/bin` where executables are kept. In your personal bin (if you create it in your `home`
+  directory, its path is `~/bin`) you can put copies of your favourite shell scripts and other customised or private
+  commands. Then add that directory to your `$PATH`, even to the front (`PATH=~/bin:$PATH`). That way, you can still
   have your own customised favourites without the security risk of running commands from strangers.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running Several Commands in Sequence
 
 - There are two solutions to running several commands before manually inputting the next command after a successful
   execution of the previous command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - A shell script could be written to contain the commands order by the sequence of execution
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
     ```bash
     $ cat > simple.script
@@ -4246,11 +4276,11 @@ file called donors that looked like this:
     ```
 
   - The arguably best solution is to run each command in sequence without a script.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
     - If you want to run each program regardless of whether or not the preceding ones fail, separate them with
       semicolons.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
     ```bash
     long ; medium ; short
@@ -4258,7 +4288,7 @@ file called donors that looked like this:
 
     - If you only want to run the next program if the previous program was successful, and all the programs correctly
       set exit codes.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
     ```bash
     long && medium && short
@@ -4268,7 +4298,7 @@ file called donors that looked like this:
 
 - You can run a command in the background by putting an ampersand at the end of the command line. Thus, you could
   fire off three commands in rapid succession.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ long &
@@ -4280,7 +4310,7 @@ file called donors that looked like this:
   ```
 
 - You could streamline the execution of all three commands in one line.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ long & medium & short
@@ -4294,18 +4324,18 @@ file called donors that looked like this:
   another prompt and accepts more command input. Output from the command (unless we take explicit action to change this
   behaviour) will still come to the screen, so in this example all three commands will be interspersing output to the
   screen.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - If you run a command and then realise it will take longer to complete than you thought, you can pause it using
-  *Ctrl-Z*, which will return you to a prompt. You can then type *bg* to unpause the job and continue running it in the
-  background. This is essentially adding a trailing *&* after the fact.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `<Ctrl> + z`, which will return you to a prompt. You can then type `bg` to unpause the job and continue running it in
+  the background. This is essentially adding a trailing `&` after the fact.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Telling Whether a Command Succeeded or Not
 
-- The shell variable *\$?* is set with a non-zero value if the command fails - provided the programmer who wrote that
+- The shell variable `$?` is set with a non-zero value if the command fails - provided the programmer who wrote that
   command or shell script followed the established convention.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ some_command
@@ -4319,16 +4349,16 @@ file called donors that looked like this:
   $
   ```
 
-- The exit status of a command is kept in the shell variable referenced with *\$*?. Its value can range from 0 to 255.
+- The exit status of a command is kept in the shell variable referenced with `$?`. Its value can range from 0 to 255.
   When you write a shell script, it's a good idea to have your script exit with zero if all is well and a non-zero
-  value if you encounter an error condition. It it recommended to only use *0 to 127* because the shell uses *128+N* to
-  denote *killed by signal N*. if you use a number greater than 255 or less than 0, the numbers will wrap around. You
-  return an exit status with the exit statement (e.g., *exit 1* or *exit 0*).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  value if you encounter an error condition. It it recommended to only use `0 to 127` because the shell uses `128+N` to
+  denote `killed by signal N`. if you use a number greater than 255 or less than 0, the numbers will wrap around. You
+  return an exit status with the exit statement (e.g., `exit 1` or `exit 0`).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- Be aware that you only get one shot at reading a command's exit status. The second *echo* gives 0 as a result, as
-  it's actually reporting on the status of the immediately preceding *echo* command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Be aware that you only get one shot at reading a command's exit status. The second `echo` gives `0` as a result, as
+  it's actually reporting on the status of the immediately preceding `echo` command.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ bad_command
@@ -4342,7 +4372,7 @@ file called donors that looked like this:
 
 - As a result of the fact you only get one chance to check the exit status, many shell scripts will immediately assign
   the status to another shell variable.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ bad_command
@@ -4355,11 +4385,11 @@ file called donors that looked like this:
   $
   ```
 
-- Although the examples shown in this section are in the command line, the real use of variables like *\$?* comes in
+- Although the examples shown in this section are in the command line, the real use of variables like *$?* comes in
   writing scripts. You can usually see whether or not a command has been successful by watching it execute on your
   screen, but in a script the commands may be running unattended. The *exit* status is more often used in scripts, and
   often in *if* statements, to take different actions depending on the success or failure of a command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   some_command
@@ -4369,7 +4399,7 @@ file called donors that looked like this:
 
 - You should not use negative numbers for status codes. The shell with accept them without an error, but they will lead
   to unexpected behaviour.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ bash -c 'exit -2' ; echo $?
@@ -4381,19 +4411,19 @@ file called donors that looked like this:
 #### Running a Command Only if Another Command Succeeded
 
 - You need to run some commands, but you only want to run certain commands if certain other ones succeed. You can use
-  the exit status (*\$?*) of the first command in combination with an *if* statement to do the subsequent command only
+  the exit status (*$?*) of the first command in combination with an *if* statement to do the subsequent command only
   if the first command was successful.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cd dir_name
   if (( $? == 0 )); then rm * ; fi
   ```
 
-- If you're writing *bash* scripts, you'll want to be sure to explicitly set return values, so that *\$?* is set
+- If you're writing *bash* scripts, you'll want to be sure to explicitly set return values, so that *$?* is set
   properly from your script. If you don't, the value set will be the value of the last command run, which you may not
   want as your result.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Fewer if Statements
 
@@ -4401,7 +4431,7 @@ file called donors that looked like this:
   you can have *bash* exit any time it encounters a failure (i.e., a non‐zero exit status) from every command in your
   script (except in *while* loops and *if* statements where it is already capturing and using the exit status) by
   setting the *-e* flag.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   set -e
@@ -4412,13 +4442,13 @@ file called donors that looked like this:
 - Setting the *-e* flag in the previous example will cause the shell to exit when a command fails. If the *cd* in this
   example fails, the script will exit and never even try to execute the *rm \** command. You should not do this on an
   interactive shell, however, because when the shell exits it will make your shell window go away.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running Long Jobs Unattended
 
 - If you want to run a job in the background and expect to exit the shell before the job
   completes, then you need to *nohup* the job.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ nohup long &
@@ -4430,23 +4460,23 @@ file called donors that looked like this:
   [Running Several Command All at Once](#running-several-commands-all-at-once)), it is still a child process of the
   *bash* shell. When you exit an instance of the shell, bash sends a hangup (*hup*) signal to all of its child
   processes.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The *nohup* command simply sets up the child process to ignore hangup signals. You can still kill the job with the
   *kill* command, because *kill* sends a *SIGTERM* signal, not a *SIGHUP* signal. But with *nohup*, *bash* won't
   inadvertently kill your job when you exit.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - *nohup* redirects the output for you, appending it (not overwriting, but adding at the end) to a file named
   *nohup.out* in the current directory. You can explicitly redirect the output elsewhere on the command line, and
   *nohup* is smart enough to detect that this has happened and not use *nohup.out* for your output.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Displaying Error Messages When Failures Occur
 
 - A common idiom among some shell programmers is to use the *||* with commands to spit out debug or error messages,
   saving the necessity to write too many *if* statements.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cmd || printf "%b" "cmd failed. You're on your own\n"
@@ -4457,10 +4487,10 @@ file called donors that looked like this:
   second expression if the first one is true (i.e., succeeds). Only if the first expression returns a non-zero value
   (i.e., if the exit value of the command indicates failure) must it evaluate the second part, and thus run the other
   command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The exit will be executed in either case in the following example.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cmd || printf "%b" "FAILED.\n" ; exit 1
@@ -4468,7 +4498,7 @@ file called donors that looked like this:
 
 - The *OR* is only between the first two commands in the previous example. If we want to have the *exit* happen only on
   error, we need to group it with the *printf* so that both are considered as a unit.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cmd || { printf "%b" "FAILED.\n" ; exit 1 ; }
@@ -4477,11 +4507,11 @@ file called donors that looked like this:
 #### Running Commands from a Variable
 
 - You want to run different commands in your script depending on circumstances, you can assign the program name to a
-  variable (*\$PROG* in the following example) , and then when the variable is referred to where a command name would be
+  variable (*$PROG* in the following example) , and then when the variable is referred to where a command name would be
   expected, *bash* uses the name of that variable as the command to run. It parses the command line, substitutes the
   values of its variables, and takes the result of all the substitutions and treats that as the command line, as if it
   had been typed that way verbatim.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   FN=/tmp/x.x
@@ -4493,10 +4523,10 @@ file called donors that looked like this:
   ```
 
 - There are many other possible solutions to this problem, other than the code in the previous example.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Be careful about the variable names you use, ensuring the variable names are not used by other programs.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running All Scripts in a Directory
 
@@ -4504,7 +4534,7 @@ file called donors that looked like this:
   want to continuously modify a master list, put the scripts you want to run in a directory, and let *bash* run
   everything that it finds. Instead of keeping a master list, simply use the contents of that directory as your master
   list.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   for SCRIPT in /path/to/scripts/dir/*
@@ -4518,7 +4548,7 @@ file called donors that looked like this:
 
 - There are no means to specify any arguments to the scripts as they are executed. This simple script may work well for
   your personal needs, but wouldn't be considered robust; some might consider it downright dangerous.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Basic Scripting: Shell Variables
 
@@ -4526,27 +4556,27 @@ file called donors that looked like this:
   hold strings and numbers, which can be changed, compared, and passed around. *bash* variables have some very special
   operators that can be used when you refer to a variable. *bash* also has some important built-in variables, ones that
   provide important information about the other variables in your script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - There are two significant aspects of *bash* variable syntax that may not be intuitively obvious. First, in the
   assignment, the *name=value* syntax is straightforward enough, but there cannot be any spaces around the equals sign.
   The flip side of this is also worth noting - don't use an equals sign in a filename, especially not one for a shell
   script (it is possible, just not recommended).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The second aspect of shell variable syntax worth noting is the use of the dollar sign when referring to a variable.
   You don't use the dollar sign on the variable name to assign it a value, but you do use the dollar sign to get the
-  value of the variable. The exception to this is using variables inside a *\$(( ))* expression.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  value of the variable. The exception to this is using variables inside a *$(( ))* expression.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Since everything in *bash* is a string, we need the dollar sign to indicate a variable reference.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Embedding Documentation in Shell Scripts
 
 - Embed documentation in the script using the "do nothing" builtin (a colon) and a here-document, when you want a
   simple way to provide formatted end-user documentation (e.g., manpages or HTML pages) for your script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -4590,7 +4620,7 @@ file called donors that looked like this:
   ```
 
 - To extract and use the documentation from the previous example, enter the following commands.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # To read on-screen, automatically paginated
@@ -4610,40 +4640,40 @@ file called donors that looked like this:
   collected at the end of the script. Since computer systems that have bash will probably also have Perl, its Plain Old
   Documentation (POD) format may be a good choice. Perl usually comes with *pod2\** programs to convert POD to HTML,
   LaTeX, manpage, text, and usage files.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Promoting Script Readability
 
 - Follow these best practices when you would like to make your script as readable as possible for the ease of
   understanding and future maintenance.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Document your script as noted in [Embedding Documentation in Shell Scripts](
     #embedding-documentation-in-shell-scripts). Document your intent, not the trivial details of the code. If you
     follow the rest of the points, the code should be pretty clear. Write reminders, provide sample data layouts or
     headers, and make a note of all the details that are in your head now, as you write the code. Document the code
     itself too if it is subtle or obscure.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Indent and use vertical whitespace wisely. Ensure a consistent indentation level throughout the script. Add
     additional indentation for continued lines.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-  - Use meaningful names for variables and functions, and spell them out. The only time *\$i* or *\$x* is ever
+  - Use meaningful names for variables and functions, and spell them out. The only time *$i* or *$x* is ever
     acceptable is in a *for* loop. You may think that short, cryptic names are saving you time and typing now, but it
     is guaranteed that you will lose that time 10- or 100-fold somewhere down the line when you have to fix or modify
     your script.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Break lines at meaningful places at an agreed upon line length. Unfortunately, there are sometimes exceptions to
     the long line rule. When creating lines to pass elsewhere, perhaps via Secure Shell (SSH), and in certain other
     cases, breaking up the line can cause many more code headaches than it solves. But in most cases, it makes sense.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - Try to put the most meaningful bits to the left when you break a line - we tend to read shell code left-to-right,
     so the unusual fact of a continued line will stand out more. It's also easier to scan down the left edge of the
     code for continued lines, should you need to find them.
-    [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # Good
@@ -4674,10 +4704,10 @@ file called donors that looked like this:
 - Use the full syntax for a variable reference, which includes not just the dollar sign, but also braces around the
   variable name when you need to print a variable along with other text and need to distinguish the end of the variable
   name from other text that follows.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - An example without the full syntax without a variable name.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   for FN in 1 2 3 4 5
@@ -4687,7 +4717,7 @@ file called donors that looked like this:
   ```
 
 - An example without the full syntax without a variable name.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   for FN in 1 2 3 4 5
@@ -4702,12 +4732,12 @@ file called donors that looked like this:
   the braces is a good habit so you never have to worry about when they are needed or not, and provides a consistent
   look throughout your scripts. Others find that to be too much typing of characters that are optional but awkward to
   reach, and think they can make the code look very busy or noisy. Ultimately, it's a matter of personal preference.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Exporting Variables
 
 - Export variables that you want to pass on to other scripts.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   export MY_VAR
@@ -4716,25 +4746,25 @@ file called donors that looked like this:
 
 - Sometimes it's a good thing that one script doesn't know about the other script's variables. You wouldn't want a
   script to impact the execution of another script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Sometimes you do want the information passed along. In those cases, you can export the variable so that its value is
   passed along to any other program that the script invokes.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - If you want to see a list of all the exported variables, just type the command *env* (or use the builtin *export -p*)
   for a list of each variable and its value.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - You can make the *export* part of any variable assignment, though that won't work in old versions of the shell. You
   can also have the *export* statement just name the variable that will be exported. Though the export statement can be
   put anywhere prior to where you need the value to be exported, script writers often group these statements together,
   like variable declarations, at the top of a script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Once exported, you can assign repeatedly to the variable without exporting it each time. The following is an example
   of this.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   export F_NAME
@@ -4747,7 +4777,7 @@ file called donors that looked like this:
   ```
 
 - The following is another example.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   export F_NAME=/tmp/scratch
@@ -4761,25 +4791,25 @@ file called donors that looked like this:
 
 - The exported variables are, in effect, call by value. Changing the value of the exported variable in the called
   script does not change that variable's value back in the calling script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Seeing All Variable Values
 
 - Use the *set* command to see the values of all variables and function definitions in the current shell.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Use the *env* (or *export -p*) command to see only those variables that have been exported and would be available to
   a subshell. The list produced by *env* is a subset of the list produced by set, since not all variables are exported.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - In *bash* version 4 or newer, you can also use the *declare -p* command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The output from the newer *declare -p* command shows the variable names and values as if they were being declared and
   initialised. The output is in the form of *declare* statements that could be used as source code in a shell script to
   recreate these variables and their values. The various arguments (*-i*, *-x*, *-r*, *-a*) indicate that the variable
   is an integer, has been exported, is read-only, or is an array, respectively.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ declare -p
@@ -4797,12 +4827,12 @@ file called donors that looked like this:
 
 - Use command line parameters when you want users to be able to invoke your script with a parameter. It is a more
   straightforward solution than requiring users to set a shell variable, or pass data with another script.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - You don't need the braces for the single-digit numbers, except to separate the variable name from the surrounding
-  text. Typical scripts have only a handful of parameters, but when you get to *\${10}* you need to use the braces
-  because the shell will interpret *\$10* as *\${1}* followed immediately by the literal string *0*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  text. Typical scripts have only a handful of parameters, but when you get to *${10}* you need to use the braces
+  because the shell will interpret *$10* as *${1}* followed immediately by the literal string *0*.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat tricky.sh
@@ -4818,17 +4848,17 @@ file called donors that looked like this:
 
 - You may want to use the shell pattern matching to build a list of filenames that match the *\*.txt* pattern. This
   means that any number of arguments could be passed to the script to which you are passing the arguments.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   ./act_all *.txt
   ```
 
-- To process any number of command line arguments that cannot be set strictly, use the shell special variable *\$\** to
+- To process any number of command line arguments that cannot be set strictly, use the shell special variable *$\** to
   refer to all of your arguments, and use that in a *for* loop. The *for* loop will take the first value from the list,
-  assign it to the variable *\$FN*, and proceed through the list of statements between the *do* and the *done.* It will
+  assign it to the variable *$FN*, and proceed through the list of statements between the *do* and the *done.* It will
   then repeat that loop for each of the other values.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -4844,8 +4874,8 @@ file called donors that looked like this:
 #### Handling Parameters with Spaces
 
 - If we don't put quotes around the filename when we invoke the script, *bash* sees three arguments and substitutes the
-  first argument (*Oh*) for *\$1*. The *ls* command runs with *Oh* as its only argument and can't find that file.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  first argument (*Oh*) for *$1*. The *ls* command runs with *Oh* as its only argument and can't find that file.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat simple.sh
@@ -4862,7 +4892,7 @@ file called donors that looked like this:
 
 - Putting quotes around the file name when invoking the script does not resolve the issue, as the script means *ls*
   sees each word as a separate argument, meaning it can't find any of them.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./simple.sh "Oh the Waste"
@@ -4874,7 +4904,7 @@ file called donors that looked like this:
   ```
 
 - Putting quotes around the variable reference ensure *ls* treats the *"${1}"* is treated as a single argument.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ cat quoted.sh
@@ -4893,7 +4923,7 @@ file called donors that looked like this:
 
 - The *"$\*"* in the following script used in the *for* loop fails does not provided the expected behaviour when
   processing a file with a space in its name.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   for FN in "$*"
@@ -4903,9 +4933,9 @@ file called donors that looked like this:
   ```
 
 - The unexpected behaviour is caused by the *"$\*"* in the script, used in the *for* loop. For this case we need to use
-  a different but related shell variable, *\$\@*. When it is quoted, the resulting list has quotes around each argument
+  a different but related shell variable, *$\@*. When it is quoted, the resulting list has quotes around each argument
   separately.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -4918,16 +4948,16 @@ file called donors that looked like this:
   done
   ```
 
-- You should generally always use a *\$\@* in any *for* loops that iterate through an array. When you know your file
-  names (or parameters in general) don't have spaces, it's okay to keep the traditional *\$\** syntax. For more robust
-  scripting, the *\$\@* is the safer option. Both options will be used interchangeably throughout this book, as that
+- You should generally always use a *$\@* in any *for* loops that iterate through an array. When you know your file
+  names (or parameters in general) don't have spaces, it's okay to keep the traditional *$\** syntax. For more robust
+  scripting, the *$\@* is the safer option. Both options will be used interchangeably throughout this book, as that
   was more familiar to the authors.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Arguments
 
-- Use the shell builtin variable *\$#* to determine how many parameters a script was invoked with.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the shell builtin variable *$#* to determine how many parameters a script was invoked with.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -4951,7 +4981,7 @@ file called donors that looked like this:
 
 - The following is an example usage of the previous script, once with too many arguments and once with the correct
   number of arguments.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./my_script my_file is copied into your_file
@@ -4961,15 +4991,15 @@ file called donors that looked like this:
   Argument count correct. Proceeding...
   ```
 
-- Don't confuse *\${#}* with *\${#VAR}* or even *\${VAR#alt}* just because they all use the hash character inside of
+- Don't confuse `${#}` with `${#VAR}` or even `${VAR#alt}` just because they all use the hash character inside of
   curly braces. The first gives the number of arguments, whereas the second gives the length of the value in the
-  variable *VAR* and the third does a certain kind of substitution.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  variable `VAR` and the third does a certain kind of substitution.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Consuming Arguments
 
-- Use *shift* to remove an argument after you've handled it.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use `shift` to remove an argument after you've handled it.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -4998,12 +5028,12 @@ file called donors that looked like this:
 
 #### Getting Default Values
 
-- Use the *\${:-}* syntax when referring to a parameter that you would like to have a default value, and use it to
-  supply a default value. The *:-* operator says that if the specified parameter (here, *\$1*) is not set or is *null*,
-  whatever follows (*/tmp* in our example) should be used as the value. Otherwise, it will use the value that is
-  already set. It can be used on any shell variable, not just the positional parameters (*\$1*, *\$2*, *\$3*, etc.),
+- Use the `${:-}` syntax when referring to a parameter that you would like to have a default value, and use it to
+  supply a default value. The `:-` operator says that if the specified parameter (here, `$1`) is not set or is `null`,
+  whatever follows (`/tmp` in our example) should be used as the value. Otherwise, it will use the value that is
+  already set. It can be used on any shell variable, not just the positional parameters (`$1`, `$2`, `$3`, etc.),
   but they are probably the most common use.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   FILE_DIR=${1:-/tmp}
@@ -5011,16 +5041,16 @@ file called donors that looked like this:
 
 #### Setting Default Values
 
-- Your script relies on certain environment variables, either widely used ones (e.g., *$USER*) or ones specific to your
+- Your script relies on certain environment variables, either widely used ones (e.g., `$USER`) or ones specific to your
   own business. If you want to build a robust shell script, you should make sure that these variables each have a
   reasonable value. Use the assignment operator in the shell variable reference the first time you refer to it to
   assign a value to the variable if it doesn't already have one.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The reference to *$HOME* in the example will return the current value of *$HOME* unless it is empty or not set at
-  all. In those cases (empty or not set), it will return the value */tmp*, which will also be assigned to *$HOME* so
-  that further references to *$HOME* will have this new value.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The reference to `$HOME` in the example will return the current value of `$HOME` unless it is empty or not set at
+  all. In those cases (empty or not set), it will return the value `/tmp`, which will also be assigned to `$HOME` so
+  that further references to `$HOME` will have this new value.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo ${HOME:=/tmp}
@@ -5039,36 +5069,36 @@ file called donors that looked like this:
   $
   ```
 
-- Once we unset the variable in the previous example, it no longer had any value. When we then used the *:=* operator
-  as part of our reference to it, the new value (*/tmp*) was substituted. The subsequent references to *$HOME* returned
+- Once we unset the variable in the previous example, it no longer had any value. When we then used the `:=` operator
+  as part of our reference to it, the new value (`/tmp`) was substituted. The subsequent references to `$HOME` returned
   its new value. One important exception to keep in mind about the assignment operator: this mechanism will not work
-  with positional parameter arguments (e.g., *\$1 or *\$\**). For those cases, use *:-* in expressions like
-  *\${1:-default*}, which will return the value without trying to do the assignment.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  with positional parameter arguments (e.g., `$1` or `$*`). For those cases, use `:-` in expressions like
+  `${1:-default`}, which will return the value without trying to do the assignment.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - It might help you to remember some of these crazy symbols if you think of the visual difference between
-  *\${VAR:=value}* and *\${VAR:-value}*. The *:=* will do an assignment as well as returning the value to the right of
-  the operator. The *:-* will do half of that - it returns the value but doesn't do the assignment - so its symbol is
+  `${VAR:=value}` and `${VAR:-value}`. The `:=` will do an assignment as well as returning the value to the right of
+  the operator. The `:-` will do half of that - it returns the value but doesn't do the assignment - so its symbol is
   only half of an equals sign (i.e., one horizontal bar, not two).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *null* as Valid Default Value
+#### Using `null` as Valid Default Value
 
-- The *\${:=}* operator has two cases where the new value will be used: first, when the value of the shell variable has
+- The `${:=}` operator has two cases where the new value will be used: first, when the value of the shell variable has
   previously not been set (or has been explicitly unset); and second, where the value has been set but is empty, as in
-  *HOME=""* or *HOME=\$OTHER* (where *\$OTHER* has no value).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `HOME=""` or `HOME=$OTHER` (where `$OTHER` has no value).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The shell can distinguish between the two cases in the previous point, and omitting the colon (*:*) indicates that
-  you want to make the substitution only if the value is unset. If you write only *\${HOME=/tmp}* without the colon,
+- The shell can distinguish between the two cases in the previous point, and omitting the colon (`:`) indicates that
+  you want to make the substitution only if the value is unset. If you write only `${HOME=/tmp}` without the colon,
   the assignment will take place only in the case where the variable is not set (never set or explicitly unset).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- In the case where we simply made the *\$HOME* variable an empty string, the *=* operator didn't do the substitution
-  since *\$HOME* did have a value, albeit *null*. But when we unset the variable, the substitution occurred. If you
-  want to allow for empty strings, use just the *=* with no colon. Most times, though, the *:=* is used because you can
+- In the case where we simply made the `$HOME` variable an empty string, the `=` operator didn't do the substitution
+  since `$HOME` did have a value, albeit `null`. But when we unset the variable, the substitution occurred. If you
+  want to allow for empty strings, use just the `=` with no colon. Most times, though, the `:=` is used because you can
   do little with an empty value, deliberate or not.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ echo ${HOME=/tmp} # no substitution needed
@@ -5094,50 +5124,50 @@ file called donors that looked like this:
 #### Using More than Just a Constant String for Default
 
 - You can use quite a bit more on the right-hand side of these shell variable references. The value that will be
-  substituted doesn't have to be just a *string* constant. Rather, it can be the result of a more complex shell
+  substituted doesn't have to be just a `string` constant. Rather, it can be the result of a more complex shell
   expression, including running commands in a subshell (as in the following example).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   cd ${BASE:="$(pwd)"}
   ```
 
-- The *bash* manpage says that what we put to the right of the operator "is subject to tilde expansion, parameter
+- The `bash` manpage says that what we put to the right of the operator "is subject to tilde expansion, parameter
   expansion, command substitution, and arithmetic expansion."
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - **Parameter expansion**:
 
-    - Means that other shell variables can be used in the expression, as in *\${BASE:=\${HOME}}*
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - Means that other shell variables can be used in the expression, as in `${BASE:=${HOME}}`
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - **Tilde Expansion**:
 
-    - Using an expression like *~bob* will refer to the home directory of the user *bob*.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - Using an expression like `~bob` will refer to the home directory of the user `bob`.
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-    - Use *\${BASE:=~uid17}* to set the default value to the home directory for the user *uid17*. Don't put quotes
+    - Use `${BASE:=~uid17}` to set the default value to the home directory for the user `uid17`. Don't put quotes
       around the string, as that will defeat the tilde expansion.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - **Command Substitution**:
 
-    - Commands are enclosed in the single parentheses syntax, *\$(commands)*.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - Commands are enclosed in the single parentheses syntax, `$(commands)`.
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   - **Arithmetic Expansion**:
 
-    - Means that we can do integer arithmetic, using *\$(())* syntax in this expression.
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - Means that we can do integer arithmetic, using `$(())` syntax in this expression.
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-    - For example: *echo \${BASE:=/home/uid\$((ID+1))}*
-      [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+    - For example: `echo ${BASE:=/home/uid$((ID+1))}`
+      [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Giving an Error Message for Unset Parameters
 
 - sometimes you need to force the users to give you a value; otherwise, you don't want to proceed. Instead of several
-  *if* statements to check each of the several parameters, use the *\${:?}* syntax when referring to the parameters.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `if` statements to check each of the several parameters, use the `${:?}` syntax when referring to the parameters.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -5148,7 +5178,7 @@ file called donors that looked like this:
   ```
 
 - If you run the script with insufficient arguments:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./my_script /tmp /dev/null
@@ -5158,7 +5188,7 @@ file called donors that looked like this:
   ```
 
 - The error message produced by the ${:?} feature includes shell script filename and line number.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   $ ./check_unset_params
@@ -5174,11 +5204,11 @@ file called donors that looked like this:
 
 #### Changing Pieces of a String
 
-- Use a *bash* parameter expansion feature that will remove text that matches a pattern. The *for* loop will iterate
-  over a list of filenames in the current directory that all end in *.bad*. The variable *$FN* will take the value of
-  each name, one at a time. Inside the loop, the *mv* command will rename the file (move it from the old name to the
+- Use a `bash` parameter expansion feature that will remove text that matches a pattern. The `for` loop will iterate
+  over a list of filenames in the current directory that all end in `.bad`. The variable `$FN` will take the value of
+  each name, one at a time. Inside the loop, the `mv` command will rename the file (move it from the old name to the
   new name). We need to put quotes around each filename in case the filename contains embedded spaces.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #!/usr/bin/env bash
@@ -5191,9 +5221,9 @@ file called donors that looked like this:
   ```
 
 - In both the previous and following example, the reference to $FN that includes an automatic deletion of the trailing
-  bad characters. The *${ }* delimits the reference so that the *bash* adjacent to it is just appended right onto the
+  bad characters. The `${ }` delimits the reference so that the `bash` adjacent to it is just appended right onto the
   end of the string.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   NO_BAD="${FN%bad}"
@@ -5205,32 +5235,32 @@ file called donors that looked like this:
 
 - Use string manipulation when you have a numeric value in a variable and want to determine its magnitude - its
   absolute value.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- This is simple string manipulation. The *#* searches from the front of the string, looking for, in this case, the
+- This is simple string manipulation. The `#` searches from the front of the string, looking for, in this case, the
   minus sign. If found, it will remove it. If no minus is found, it simply results in the original value. Either way,
   that leaves the value without a leading minus, which gives us its magnitude.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   ${MY_VAR#-}
   ```
 
-#### Using *bash* for *basename*
+#### Using `bash` for `basename`
 
-- *bash* can strip the directory path from a shell variable string and leave just the last part of the path (the
-  filename), providing the same output as *basename*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- `bash` can strip the directory path from a shell variable string and leave just the last part of the path (the
+  filename), providing the same output as `basename`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - The big difference between the first and second examples is the braces. The first example, using parentheses, will
-  launch a subshell to run the executable basename with the argument that is the value of *$FULL_PATH_TO_FILE*. The
+  launch a subshell to run the executable basename with the argument that is the value of `$FULL_PATH_TO_FILE`. The
   second example uses curly braces, which is just part of the syntax for evaluating a shell variable - no subshell, no
-  executable file. It looks for, and removes from the front of the string (because of the *#*), the longest match
-  (because of the double *##*) of the pattern described by the asterisk and the slash (*\*/*). The asterisk matches any
-  number of characters and the slash is just a literal slash. In the string */usr/local/bin/my_cmd*, that pattern will
-  match (and thus remove) the */usr/local/bin/* part of the string, leaving *my_cmd* as the value to be assigned into
-  the variable *$FILE*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  executable file. It looks for, and removes from the front of the string (because of the `#`), the longest match
+  (because of the double `##`) of the pattern described by the asterisk and the slash (`*/`). The asterisk matches any
+  number of characters and the slash is just a literal slash. In the string `/usr/local/bin/my_cmd`, that pattern will
+  match (and thus remove) the `/usr/local/bin/` part of the string, leaving `my_cmd` as the value to be assigned into
+  the variable `$FILE`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # basename Solution
@@ -5240,24 +5270,24 @@ file called donors that looked like this:
   FILE=${FULL_PATH_TO_FILE##*/}
   ```
 
-- The *basename* command will ignore a trailing slash in the path, so *$(basename /usr/local/bin/)* returns *bin*
-  whereas our *bash* version would return an empty string (since the largest pattern to end in a slash is the whole
+- The `basename` command will ignore a trailing slash in the path, so `$(basename /usr/local/bin/)` returns `bin`
+  whereas our `bash` version would return an empty string (since the largest pattern to end in a slash is the whole
   string). To be compatible, we should remove any trailing slash first before the other substitutions. The real
-  *basename* command can also take a suffix to be removed as a second argument. In *bash* we can do that, too, but
+  `basename` command can also take a suffix to be removed as a second argument. In `bash` we can do that, too, but
   would need to do it in a separate step.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *bash* for *dirname*
+#### Using `bash` for `dirname`
 
 - Use a string manipulation operator to remove the filename - the last part of a path in a string - leaving as much of
-  the directory path to that filename as was in the string, producing the same output as the *dirname* command.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  the directory path to that filename as was in the string, producing the same output as the `dirname` command.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- If the variable holds */usr/local/bin/my_cmd*, we want the result of this manipulation to give us just
-  */usr/local/bin* and drop the last part (the filename). Since each piece of the path is separated by a slash, we just
-  remove from the right-hand side (because of the *%*) the shortest string (because there is only one *%*, not two) that
-  matches the pattern "a slash followed by any number of characters" (*/\**).
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- If the variable holds `/usr/local/bin/my_cmd`, we want the result of this manipulation to give us just
+  `/usr/local/bin` and drop the last part (the filename). Since each piece of the path is separated by a slash, we just
+  remove from the right-hand side (because of the `%`) the shortest string (because there is only one `%`, not two) that
+  matches the pattern "a slash followed by any number of characters" (`\*`).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   # dirname Solution
@@ -5267,26 +5297,26 @@ file called donors that looked like this:
   DIR=${MY_PATH_TO_FILE%/*}
   ```
 
-- The example in this section is not a complete, compatible replacement for the *dirname* command, especially around
+- The example in this section is not a complete, compatible replacement for the `dirname` command, especially around
   the edge cases of any path that ends with a slash.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Alternate Values for Comma-Separated Values
 
-- If you write *LIST="\$\{LIST\},\$\{NEW_VAL\}"* inside a loop to build up the list, then the first time (when *LIST*
-  is *null*) you'll end up with a leading comma. You could special-case the initialisation of *LIST* so that it gets
+- If you write `LIST="$\{LIST\},$\{NEW_VAL\}"` inside a loop to build up the list, then the first time (when `LIST`
+  is `null`) you'll end up with a leading comma. You could special-case the initialisation of `LIST` so that it gets
   the first element before entering the loop, but if that's not practical, or to avoid duplicate code (for getting a
-  new value), you can instead use the *\$\{:+\}* syntax in *bash*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  new value), you can instead use the `${:+}` syntax in `bash`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   LIST="${LIST}${LIST:+,}${NEW_VAL}"
   ```
 
-- If *\$\{LIST\}* is *null* or unset, then both expressions of *\$LIST* are replaced with nothing. That means that the
-  first time through the loop *LIST* will be assigned *NEW_VAL*'s value and nothing more. When *LIST* is not null, the
-  second expression (*\$\{LIST:+,\}*) is replaced with a comma, separating the previous value from the new value.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- If `$\{LIST\}` is `null` or unset, then both expressions of `$LIST` are replaced with nothing. That means that the
+  first time through the loop `LIST` will be assigned `NEW_VAL`'s value and nothing more. When `LIST` is not null, the
+  second expression (`${LIST:+,}`) is replaced with a comma, separating the previous value from the new value.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   #
@@ -5302,10 +5332,10 @@ file called donors that looked like this:
 
 #### Using Array Variables
 
-- *bash* has an array syntax for single-dimension arrays. Arrays are easy to initialise if you know the values as you
+- `bash` has an array syntax for single-dimension arrays. Arrays are easy to initialise if you know the values as you
   write the script. The format is simple. Each element of the array is a separate word in the list, enclosed in
   parentheses.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   MYRA=(first second third home)
@@ -5313,14 +5343,14 @@ file called donors that looked like this:
   echo runners on ${MYRA[0]} and ${MYRA[2]}
   ```
 
-- If you write only *\$MYRA* in the previous example, you will get only the first element, just as if you had written
-  *\$\{MYRA[0]\}*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- If you write only `$MYRA` in the previous example, you will get only the first element, just as if you had written
+  `${MYRA[0]}`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Between Upper- and Lowercase
 
-- As of *bash* 4.0, there are a few operators to do case conversion when referencing a variable name.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- As of `bash` 4.0, there are a few operators to do case conversion when referencing a variable name.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   ${FN,,} # Returns the string in all lowercase.
@@ -5328,10 +5358,10 @@ file called donors that looked like this:
   ${FN~~} # Returns the string, changing all lower- to upper- and all upper- to lowercase characters.
   ```
 
-- Also available in version 4 of *bash* or newer: you can declare your variable to be a type that is always lowercase,
+- Also available in version 4 of `bash` or newer: you can declare your variable to be a type that is always lowercase,
   uppercase, or only ensuring the first character is uppercase.
   Any text assigned to it will be converted to lowercase.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   declare -u <variable_name> # All characters uppercase.
@@ -5343,12 +5373,12 @@ file called donors that looked like this:
 
 - Use a combination of an array and case conversion substitution if you want each word to begin with a capital letter,
   not just the first letter of the string.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- The parentheses around *$XT* cause it to be treated as array initialisation. Whitespace separating the words
-  delineates the array elements. The *[@]* notation references all the elements of the array all at once
-  (individually), and the *^* operator converts the first character (of each element) to uppercase.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The parentheses around `$XT` cause it to be treated as array initialisation. Whitespace separating the words
+  delineates the array elements. The `[@]` notation references all the elements of the array all at once
+  (individually), and the `^` operator converts the first character (of each element) to uppercase.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   while read TXT
@@ -5360,39 +5390,39 @@ file called donors that looked like this:
 
 ### Shell Logic & Arithmetic
 
-- One of the big improvements in modern versions of *bash* compared with the original Bourne shell is in the area of
+- One of the big improvements in modern versions of `bash` compared with the original Bourne shell is in the area of
   arithmetic. Early versions of the shell had no built-in arithmetic; it had to be done by invoking a separate
   executable.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- Beyond arithmetic, there are the control structures familiar to any programmer. There is an *if/then/else* construct
-  for decision making, as well as *while* loops and *for* loops, though you will see some *bash* peculiarities to all
+- Beyond arithmetic, there are the control structures familiar to any programmer. There is an `if/then/else` construct
+  for decision making, as well as `while` loops and `for` loops, though you will see some `bash` peculiarities to all
   of these. There is a case statement made quite powerful by its string pattern matching, and an odd construct called
-  *select*.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  `select`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing Arithmetic in Your Shell Script
 
-- Use *$(( ))* or *let* for integer arithmetic expressions.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use `$(( ))` or `let` for integer arithmetic expressions.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   COUNT=$((COUNT + 5 + MAX * 2))
   let COUNT+='5+MAX*2'
   ```
 
-- You can use all the C-like operators inside of *$(())* for arithmetic expressions.  
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- You can use all the C-like operators inside of `$(())` for arithmetic expressions.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - Spaces are not needed, nor are they prohibited around operators and arguments.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- You must also ensure to quote *let* expressions since the *let* statement is a *bash* builtin and its arguments will
+- You must also ensure to quote `let` expressions since the `let` statement is a `bash` builtin and its arguments will
   undergo word expansion.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- There is one additional operator: you can use *\*\** for raising to a power.
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- There is one additional operator: you can use `**` for raising to a power.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   MAX=$((2**8))
@@ -5400,1150 +5430,1633 @@ file called donors that looked like this:
 
 #### Branching on Conditions
 
-- Thee general form for an *if* statement, from the manpage for *bash* is, where contents in *[]* are optional parts of
+- Thee general form for an `if` statement, from the manpage for `bash` is, where contents in `[]` are optional parts of
   the statements:
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
   ```bash
   if list; then list; [ elif list; then list; ] ... [ else list; ] fi
   ```
 
+- Properly-written commands and builtins return a value of `0` (zero) when they encounter no errors in their execution.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- If commands and builtins detect an error (e.g., bad parameters, I/O errors, file not found), they will return some
+  non-zero value (often a different value for each kind of error they detect).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- `if` statements support two kinds of syntax. The double parentheses are strictly for arithmetic expressions. The
+  square brackets test for file characteristics, but the syntax is much less streamlined for arithmetic expressions.
+  This is particularly true if you need to group larger expressions with parentheses (which need to be quotes or
+  escaped when using square brackets).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
 #### Testing for File Characteristics
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- There are several characteristics for which you can test a file. Three of them are tested using binary operators, each
+  taking two filenames.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # Is newer than (checking the modification date). An existing file is considered "newer" than one that doesn't exist.
+  $FILE1 -nt $FILE2
+
+  # Is older than. A file that doesn't exist is considered older than one that does.
+  $FILE1 -ot $FILE2
+
+  # Have the same device and inode numbers, meaning they are identical numbers, even it pointed to by different links.
+  $FILE1 -ef $FILE2
+  ```
+
+- Unary operators that check file characteristics.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  | **Option** |                       **Description**                       |
+  | :--------: | :---------------------------------------------------------: |
+  |    `-b`    | File is a block special device (for files like `/dev/hda1`) |
+  |    `-c`    |    File is character special (for files like `/dev/tty`)    |
+  |    `-d`    |                     File is a directory                     |
+  |    `-e`    |                         File exists                         |
+  |    `-f`    |                   File is a regular file                    |
+  |    `-g`    |        File has its set-group-ID (`setgid`) bit set         |
+  |    `-h`    |           File is a symbolic link (same as `-L`)            |
+  |    `-G`    |           File is owned by the effective group ID           |
+  |    `-k`    |                 File has its sticky bit set                 |
+  |    `-L`    |           File is a symbolic link (same as `-h`)            |
+  |    `-N`    |        File has been modified since it was last read        |
+  |    `-O`    |           File is owned by the effective user ID            |
+  |    `-p`    |                    File is a named pipe                     |
+  |    `-r`    |                      File is readable                       |
+  |    `-s`    |              File has a size greater than zero              |
+  |    `-S`    |                      File is a socket                       |
+  |    `-u`    |         File has its set-user-ID (`setuid`) bit set         |
+  |    `-w`    |                      File is writeable                      |
+  |    `-x`    |                     File is executable                      |
 
 #### Testing for More than One Thing
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the logical AND (`-a`) and OR (`-o`) to combine more than one test in an expression.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The following will test to see if a file is both readable and writeable.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if [ -r $FILE -a -w $FILE ]
+  ```
+
+- You can make several `AND`/`OR` conjunctions in one statement. You might need to use parentheses to get the proper
+  precedence, as in `a and (b or c)`, but if you use parentheses, be sure to escape their special meaning from the
+  shell by putting a backslash before each or by quoting each parenthesis. Don't try to quote the entire expression in
+  one set of quotes, however, as that will make your entire expression a single term that will be treated as a test for
+  an empty string.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The following is an example of a more complex test with the parentheses properly escaped.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if [ -r "$FN" -a \( -f "$FN" -o -p "$FN" \) ]
+  ```
+
+- Don't count on short circuits in your conditionals. If you need that kind of behaviour, just break the `if`
+  statement into two nested `if` statements, or use `&&` and `||`
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Testing for String Characteristics
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- There are some simple tests that you can do with the builtin `test` command, using the single-bracket `if`
+  statements.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: checkstr
+
+  VAR="$1"
+
+  # if [ "$VAR" ] will usually work but is bad form, using -n is more clear
+  if [ -n "$VAR" ]
+  then
+    echo has text
+  else
+    echo zero length
+  fi
+
+  if [ -z "$VAR" ]
+  then
+    echo zero length
+  else
+    echo has text
+  fi
+  ```
+
+- The use of the phrase "has any length" is deliberate. There are two types of variables that will have no length -
+  those that have been set to an empty string and those that have note been set at all. This does not distinguish
+  between those two cases. All it asks if whether or not there are some characters in the variable.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- It is important to put quotes around an expression when checking a string, to avoid any unexpected substitution.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Testing for Equality
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `-eq` operator for numeric comparisons and the equality primary `=` (or `==`) for string comparisons.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: strvsnum
+
+  VAR1=" 05 "
+  VAR2="5"
+
+  printf "%s" "do they -eq as equal? "
+  if [ "$VAR1" -eq "$VAR2" ]
+  then
+    echo YES
+  else
+    echo NO
+  fi
+
+  printf "%s" "do they = as equal? "
+  if [ "$VAR1" = "$VAR2" ]
+  then
+    echo YES
+  else
+    echo NO
+  fi
+  ```
+
+- The following is the output from running the script int he previous example.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ bash strvsnum
+  do they -eq as equal? YES
+  do they = as equal? NO
+  $
+  ```
+
+- Both `=` and `==` are accepted, but `=` follows the POSIX standard and is more portable.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- One way to remember which to use  is that it feels "counter-intuitive": the string-like comparisons (the syntax using
+  character, e.g., `-eq`) are for numbers and the numeric-looking comparators (e.g., `+<=+`) are for strings.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  | **Numeric** | **String** |        **Meaning**       |
+  |:-----------:|:----------:|:------------------------:|
+  |    `-lt`    |     `<`    |         Less than        |
+  |    `-le`    |    `<=`    |   Less than or equal to  |
+  |    `-gt`    |     `>`    |       Greater than       |
+  |    `-ge`    |    `>=`    | Greater than or equal to |
+  |    `-eq`    |     `=`    |         Equal to         |
+  |    `-eq`    |    `= =`   |         Equal to         |
+  |    `-ne`    |    `!=`    |       Not equal to       |
+
+- The best solution is to always do your numerical tests with the double parentheses syntax and your string comparison
+  with the double-square-brackets syntax. Then you can always use the math-style symbols for comparison.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Testing with Pattern Matches
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- You can use a single of double equals sign, as in the following example.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if [[ "${MYFILENAME}" == *.jpg ]]
+  ```
+
+- The standard pattern matching includes the `*` to match any number of characters, the `?` to match a single
+  characters, and `[]` for including a list of possible characters. These resemble shell file wildcards, and are not
+  regular expressions.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Don't put quotes around the pattern if you want it to behave as a pattern, otherwise it will treat the pattern as a
+  literal string.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- There are more powerful pattern-matching capabilities available by turning on some additional options in `bash`. The
+  `shopt -s` command is the way to turn on shell options. The `extglob` option deals with extended pattern matching (or
+  globbing). The first character preceding the parentheses says whether the list should match just once occurrence of a
+  pattern in the list (using a leading `@` or some other criteria.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  shopt -s extglob
+  if [[ "$FN" == *.@(jpg|jpeg) ]]
+  then
+  ```
+
+- Grouping symbols for extended pattern matching.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  | **Grouping** |         **Meaning**         |
+  |:------------:|:---------------------------:|
+  |   `@(...)`   |     Only one occurrence     |
+  |   `*(...)`   |   Zero or more occurrences  |
+  |   `+(...)`   |   One or more occurrences   |
+  |   `?(...)`   |    Zero or one occurrence   |
+  |   `!(...)`   | Not this, but anything else |
+
+- Matches are case-sensitive, but you may use `shopt -s nocasematch` to change that. This option affects `case` and
+  `[[` commands.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Testing with Regular Expressions
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-### Changing Behaviour with Redirections
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The `=~` operator requires `bash` version 3.0 or newer - older versions don't have the operator.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Looping for a While
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `while` looping construct for arithmetic conditions. The double parentheses delimit an arithmetic expression,
+  very much like the `$(())` expression for shell variable assignment. The variable names inside the parentheses are
+  meant to be dereferenced, meaning you don't write `$VAR`, and instead use `VAR` inside the parentheses. Any
+  expression in the parentheses is evaluated, and if the result if non-zero, then the result of the `(())` is to return
+  a `0` (`true`); similarly a zero result returns a `1` (`false`).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Looping with a *read*
+  ```bash
+  while (( COUNT < MAX ))
+  do
+    some stuff
+    let COUNT++
+  done
+  ```
+
+- Use the `while` loop for file system-related conditions. The use of a single square bracket is the same as using the
+  `test` statement.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  while [ -z "$LOCKFILE" ]
+  do
+    some things
+  done
+  ```
+
+- Use the `while` loop for reading input. The syntax of this `while` statements in `bash` is defined such that the
+  condition of the `while` statements is a list of statements to be executed, and the exit status of the last statement
+  determines whether the condition is `true` (an exit status of `0`) or `false` (an exit status other than `0`).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  while read lineoftext
+  do
+    process $lineoftext
+  done
+  ```
+
+### Looping with a `read`
+
+- A common use of a `while` loop is to read files and the output of previous commands.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Both the scripts in this section remove files that are reported with a question mark.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- One example of a script to read the file. This example uses several subprograms to do its work and would fit on a
+  single line in a typical terminal window.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  svn status mysrc | grep '^?' | cut -c8- |
+    while read FN; do echo "$FN"; rm -rf "$FN"; done
+  ```
+
+- Another example of a script to read the file. This example is more shell-like, since it doesn't need `grep` to do its
+  searching (it uses the `if` statement) and it doesn't need `cut` to do its parsing (it uses the `read` statement).
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  svn status mysrc |
+  while read TAG FN
+  do
+    if [[ $TAG == \? ]]
+    then
+      echo $FN
+      rm -rf "$FN"
+    fi
+  done
+  ```
 
 #### Looping with a Count
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `for` syntax when you need to loop a fixed number of times. The syntax is quite similar to C's, but with
+  double parentheses.
+
+  ```bash
+  for (( i=0 ; i < 10 ; i++ )) ; do echo $i ; done
+  ```
+
+- In early versions of `bash`, the original syntax for the `for` loop only included iterating over a fixed list of
+  items.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The variation of the `for` loop with the C-like syntax has been in `bash` since version 2.04, with the format.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  for (( expression_1 ; expression_2 ; expression_3 )) ; do action ; done
+  ```
+
+- The use of double parentheses is meant to indicate these are arithemtic expressions. You don't need to use the `$`
+  construct when referring to variables inside the double parentheses. The expressions are integer arithmetic.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Looping with Floating-Point Values
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The `seq` command is used to generate floating-point values in a `for` loop, as `for` loops with arithmetic
+  expressions only does integer arithmetic.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The `seq` command will generate a sequence of floating-point numbers, one per line. The arguments to `seq` are the
+  starting value, the increment, and the ending value.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  sed starting_value increment ending_value
+  ```
+
+- In this example, the `$()` runs the command in a subshell and returns the result with the newlines replaced by just
+  whitespace, so each value is a string value for the `for` loop.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  for fp in $(seq 1.0 .01 1.1)
+  do
+    echo $fp; other stuff too
+  done
+  ```
+
+- In this example, `seq` is run as a command with its output piped into a `while` loop that reads each line and
+  performs an operation on the line. This would be the preferred approach for a long sequence, as it can run the `seq`
+  command in parallel with the `while`. The `for` loop example must run `seq` to completion and produce its output on
+  the command line for the `for` statement.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Branching Many Ways
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- Use the `case` statement for a multi-way branch. The `case` statement will expand the word (including parameter
+  substitution) between the `case` and `in` keywords. It will then try to match the word with the patterns listed in
+  order.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  case $FN in
+    *.gif) gif2png $FN
+      ;;
+    *.png) pngOK $FN
+      ;;
+    *.jpg) jpg2gif $FN
+      ;;
+    *.tif | *.TIFF) tif2jpg $FN
+      ;;
+    *) printf "File not supported: %s" $FN
+      ;;
+  esac
+  ```
+
+- The case statement in the previous example is equivalent to the following `if`/`then`/`else` statement:
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if [[ $FN == *.gif ]]
+  then
+    gif2png $FN
+    elif [[ $FN == *.png ]]
+  then
+    pngOK $FN
+    elif [[ $FN == *.jpg ]]
+  then
+    jpg2gif $FN
+    elif [[ $FN == *.tif || $FN == *.TIFF ]]
+  then
+    tif2jpg $FN
+  else
+    printf "File not supported: %s" $FN
+  fi
+  ```
+
+- Use `|` meaning logical `OR` to separate different patterns for which you want to take the same action.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- There is no `else` or `default` keyword to indicate the statements that execute if no pattern matches. Use `*` as the
+  last pattern, since that pattern will match anything. Placing it last makes it act as the default and match anything
+  that hasn't already been matched.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The `;;` ends the set of statements associated with a pattern. The `;;&` construct means that even if a match is
+  found, the next pattern will be tested for a match and its statements will be executed as well if another match is
+  found. The `;&` construct means that execution will "fall through" and the next set of statements will be executed
+  regardless of whether its pattern matches.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  case $FN in
+    *.gif) gif2png $FN
+      ;;& # keep looking
+    *.png) pngOK $FN
+      ;;& # keep looking
+    *.jpg) jpg2gif $FN
+      ;;& # keep looking
+    *.tif) tif2jpg $FN
+      ;& # fall through
+    *.* ) echo "two.words"
+      ;;
+    * ) echo "oneword"
+  esac
+  ```
+
+- Matches are case-sensitive, but you can use `shopt -s nocasematch` to make the `case` statement ignore case.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Command-Line Arguments
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- When using `printf` for error message, using single quotes around the string if you don't want the shell to try to
+  interpret any of the string. End the line with `>$2` to tell the shell to redirect the output to standard error.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Use the `shift` keyword at the end of a `while` loop so as to consume the parameter, otherwise the `while` would
+  execute indefinitely. The `shift` causes the second argument (`$2`) to become the first (`$1`) and so on to all
+  arguments. The use of `shift` also causes `$#` to become one argument smaller. This is important if `$#` is used to
+  determine the amount of times to execute a `while` loop.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating Simple Menus
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- You can write a shell script to choose from a list of names to create simple character-based screen menus. In the
+  following example, the `select` statement displays a list of words, each preceded by a number. The user will then be
+  prompted for input. The user makes a choice by typing the number and the corresponding words is assigned to the
+  specified after the `select` keyword.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: dbinit.1
+  DBLIST=$(sh ./listdb | tail -n +2)
+  select DB in $DBLIST
+  do
+    echo Initializing database: $DB
+    mysql -u user -p $DB <myinit.sql
+  done
+  ```
+
+- The following is an example output of running the script.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ ./dbinit
+  1) testDB
+  2) simpleInventory
+  3) masterInventory
+  4) otherDB
+  #? 2
+  Initializing database: simpleInventory
+  #?
+  $
+  ```
+
+- The `select` statement is essentially a loop. When the user enters a choice, the body of the loop (between the `do`
+  and `done` will be executed), and then the script will reprompt for the next value. It doesn't repdisplay the list
+  each time, only if the user makes no choice and simply presses the `<Enter>` key. The looping will stop when it
+  reaches the end of the file, which means when the user types `<Ctrl> + d`.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Changing the Prompt on Simple Menus
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- The `bash` environment variable `$PS3` is the prompt used by `select`. If you don't like the prompt in the `select`
+  menu, set the `$PS3` environment variable to a new value and you'll get a new prompt.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Creating a Simple RPN Calculator
+  ```bash
+  !/usr/bin/env bash
+  # cookbook filename: dbinit.2
+  #
+  DBLIST=$(sh ./listdb | tail -n +2)
+  PS3="0 inits >"
+  select DB in $DBLIST
+  do
+    if [ $DB ]
+    then
+      echo Initializing database: $DB
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+      PS3="$((++i)) inits> "
 
-#### Creating a Command-Line Calculator
+      mysql -u user -p $DB <myinit.sql
+    fi
+  done
+  ```
 
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+- `$PS3` is the third of the `bash` prompts.
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS1` is the prompt you get before most commands. `$` is used in most of this book's examples, but it can be much
+    more elaborate than that, including the user ID or directory name.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS2` is used if a line of command needs to be continued.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS3` is used for `select` prompts. Set it before the `select` statement for you to change the prompt. You can
+    even modify `$PS3` as the loop progresses.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Intermediate Shell Tools I
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sifting Through Files for a String
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Just the Filename from a Search
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting a Simple True/False from a Search
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching for Text While Ignoring Case
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing a Search in a Pipeline
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Paring Down What the Search Finds
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching with More Complex Patterns
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Searching for an SSN
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Grepping Compressed Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping Some Output, Discarding the Rest
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping Only a Portion of a Line of Output
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reversing the Words on Each Line
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Summing a List of Numbers
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Counting String Values with *awk*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Counting String Values with *bash*
+#### Counting String Values with `awk`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Counting String Values with `bash`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Showing Data as a Quick and Easy Histogram
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### An Easy Histogram with *bash*
+#### An Easy Histogram with `bash`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Showing a Paragraph of Text After a Found Phrase
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Intermediate Shell Tools II
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sorting Your Output
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sorting Numbers
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sorting IP Addresses
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Cutting Out Parts of Your Output
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing Duplicate Lines
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Compressing Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Uncompressing Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Checking a *tar* Archive for Unique Directories
+#### Checking a `tar` Archive for Unique Directories
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Translating Characters
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Uppercase to Lowercase
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting DOS Files to Linux Format
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing Smart Quotes
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Lines, Words, or Characters in a File
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Rewrapping Paragraphs
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Doing More with *less*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-### Finding Files: *find*, *locate*, *slocate*
+#### Doing More with `less`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+### Finding Files: `find`, `locate`, `slocate`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding All Your MP3 Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Handling Filenames Containing Odd Characters
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Speeding Up Operations on Found Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files Across Symbolic Links
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files Irrespective of Case
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Date
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Type
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding File by Size
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Files by Content
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Existing Files & Content Fast
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding a File Using a List of Possible Locations
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Additional Features for Scripting
 
 #### "Daemon-ising" Your Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reusing Code with Includes & Sourcing
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Configuration Files in a Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Defining Functions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Functions: Parameters & Return Values
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Trapping Interrupts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Redefining Commands with *alias*
+#### Redefining Commands with `alias`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoiding Aliases & Functions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counted Elapsed Time
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Wrappers
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Working with Dates & Times
 
 #### Formatting Dates for Display
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Supplying a Default Date
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Automating Date Ranges
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Dates & Times to Epoch Seconds
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting Epoch Seconds to Dates & Times
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Yesterday or Tomorrow with Perl
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Figuring Out Date & Time Arithmetic
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Handling Time Zones, Daylight Saving Time, & Leap Years
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *date* & *cron* to Run a Script on the Nth Day
+#### Using `date` & `cron` to Run a Script on the Nth Day
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Logging with Dates
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### End-User Tasks as Shell Scripts
 
 #### Starting Simple by Printing Dashes
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Viewing Photos in an Album
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Loading Your MP3 Player
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Burning a CD
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Comparing Two Documents
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Parsing & Similar Tasks
 
 #### Parsing Arguments for Your Shell Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Arguments with Your Own Error Messages
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Some HTML
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Output into an Array
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing Output with a Function Call
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Parsing Text with a *read* Statement
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Parsing with *read* into an Array
+#### Parsing Text with a `read` Statement
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Parsing with `read` into an Array
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reading an Entire File
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Your Plurals Right
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Taking It One Character at a Time
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Cleaning Up an SVN Source Tree
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Up a Database with MySQL
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Isolating Specific Fields in Data
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Updating Specific Fields in Datafiles
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Trimming Whitespace
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Compressing Whitespace
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Processing Fixed-Length Records
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Processing Files with No Line Breaks
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Converting a Datafile to CSV
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Parsing a CSV Datafile
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Writing Secure Shell Scripts
 
 #### Avoiding Common Security Problems
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoiding Interpreter Spoofing
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Setting a Secure *\$PATH*
+#### Setting a Secure `$PATH`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing All Aliases
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing the Command Hash
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Preventing Core Dumps
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Setting a Secure *\$IFS*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Setting a Secure *umask*
+#### Setting a Secure `$IFS`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Finding World-Writeable Directories in Your *\$PATH*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Adding the Current Directory to the *\$PATH*
+#### Setting a Secure `umask`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Finding World-Writeable Directories in Your `$PATH`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Adding the Current Directory to the `$PATH`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Secure Temporary Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Validating Input
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Permissions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Leaking Passwords into the Process List
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Writing *setuid* or *setgid* Scripts
+#### Writing `setuid` or `setgid` Scripts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Restricting Guest Users
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *chroot* Jails
+#### Using `chroot` Jails
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running as Non-root User
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *sudo* More Securely
+#### Using `sudo` More Securely
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Passwords in Scripts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using SSH Without a Password
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Restricting SSH Commands
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Disconnecting Inactive Sessions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Advanced Scripting
 
-#### Finding *bash* Portable for *#!*
+#### Finding `bash` Portable for `#!`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Setting a POSIX *\$PATH*
+#### Setting a POSIX `$PATH`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Developing Portable Shell Scripts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Testing Scripts Using Virtual machines
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *for* Loops Portably
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Using *echo* Portably
+#### Using `for` Loops Portably
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Using `echo` Portably
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Splitting Output Only When Necessary
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Viewing Output in Hex
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *bash* Net-Redirection
+#### Using `bash` Net-Redirection
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding My IP Address
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Input from Another Machine
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Redirecting Output for the Life of a Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Working Around *"Argument list too long"* Errors
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Logging to *syslog* from Your Script
+#### Working Around `"Argument list too long"` Errors
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *logger* Correctly
+#### Logging to `syslog` from Your Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Using `logger` Correctly
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Sending Email from Your Script
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Automating a Process Using Phases
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Doing Two Things at Once
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Running an SSH Command on Multiple Hosts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Configuring & Customising *bash*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### *bash* Startup Options
+### Configuring & Customising `bash`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### `bash` Startup Options
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Customising Your Prompt
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### A Prompt Before Your Program Runs
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Changing Your *\$PATH* Permanently
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Changing Your *\$PATH* Temporarily
+#### Changing Your `$PATH` Permanently
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Setting Your *\$CDPATH*
+#### Changing Your `$PATH` Temporarily
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Setting Your `$CDPATH`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### When Programs Are Not Found
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Shorting or Changing Command Names
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adjusting Shell Behaviour & Environment
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Adjusting *readline* Behaviour Using *.inputrc*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Keeping a Private Stash of Utility by Adding *~/bin*
+#### Adjusting `readline` Behaviour Using `.inputrc`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using Secondary Prompts: *\$PS2*, *\$PS3*, *\$PS4*
+#### Keeping a Private Stash of Utility by Adding `~/bin`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Synchronising Shell History Between Sessions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Setting Shell History Options
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Creating a Better *cd* Command
+#### Creating a Better `cd` Command
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating & Changing Into a New Directory in One Step
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting to the Bottom of Things
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Adding New Features to *bash* Using Loadable Builtins
+#### Adding New Features to `bash` Using Loadable Builtins
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Improving Programmable Completion
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using Initialisation Files Correctly
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Creating Self-Contained, Portable *rc* Files
+#### Creating Self-Contained, Portable `rc` Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Getting Start with a Custom Configuration
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Housekeeping & Administrative Tasks
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Renaming Many Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using GNU Texinfo & *info* on Linux
+#### Using GNU Texinfo & `info` on Linux
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Unzipping Many ZIP Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Recovering Disconnected Sessions Using *screen*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Sharing a Single *bash* Session
+#### Recovering Disconnected Sessions Using `screen`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Sharing a Single `bash` Session
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Logging an Entire Session or Batch Job
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Clearing the Screen When You Log Out
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Capturing File Metadata for Recovery
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Creating an Index of Many Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *diff* & *patch*
+#### Using `diff` & `patch`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counting Differences in Files
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Removing or Renaming Files Named with Special Characters
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Prepending Data to a File
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Editing a File in Place
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Using *sudo* on a Group of Commands
+#### Using `sudo` on a Group of Commands
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Lines That Appear in One File but Not in Another
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Keeping the Most Recent N Objects
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing to a Circular Log
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Circular Backups
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Grepping *ps* Output Without Also Getting the *grep* Process Itself
+#### Grepping `ps` Output Without Also Getting the `grep` Process Itself
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finding Out Whether a Process Is Running
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Adding a Prefix or Suffix to Output
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Numbering Lines
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Writing Sequences
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Emulating the DOS Pause Command
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Commodifying Numbers
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Working Faster by Typing Less
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Moving Quickly Among Arbitrary Directories
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Repeating the Last Command
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Quick Substitution
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Reusing Arguments
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Finishing Names for You
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Playing It Safe
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Big Changes, More Lines
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Tips & Traps: Common Goofs for Notices
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting to Set Execute Permissions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Fixing *"No such file or directory"* Errors
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Forgetting That the Current Directory Is Not in the *\$PATH*
+#### Fixing `"No such file or directory"` Errors
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Naming Your Script *"test"*
+#### Forgetting That the Current Directory Is Not in the `$PATH`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Naming Your Script `"test"`
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Expecting to Change Exported Variables
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Forgetting Quotes Leads to *"command not found"* on Assignments
+#### Forgetting Quotes Leads to `"command not found"` on Assignments
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting that Pattern Matching Alphabetises
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Forgetting that Pipelines Make Subshells
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Making Your Terminal Sane Again
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Deleting Files Using an Empty Variable
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Seeing Odd Behaviour from *printf*
-
-- 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-#### Testing *bash* Script Syntax
+#### Seeing Odd Behaviour from `printf`
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+#### Testing `bash` Script Syntax
+
+- 
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Debugging Scripts
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-#### Avoid *"command not found"* When Using Functions
+#### Avoid `"command not found"` When Using Functions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Confusing Shell Wildcards & Regular Expressions
 
 - 
-  [O'Reilly: *bash* Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 </details>
 
@@ -7866,8 +8379,8 @@ file called donors that looked like this:
 ##### What is Orthogonality?
 
 - "Orthogonality" is a term borrowed from geometry. Two lines are orthogonal if they meet at right angles. As one line
-  moves along the *x* axis, it doesn't change its *y* position. As the other line moves along the *y* axis, it doesn't
-  change its *x* position.
+  moves along the `x` axis, it doesn't change its `y` position. As the other line moves along the `y` axis, it doesn't
+  change its `x` position.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
@@ -7910,8 +8423,8 @@ file called donors that looked like this:
 
 - **Increased Code Effectiveness**:
 
-  - Assume that one component does *M* distinct things and another does *N* things. If they are orthogonal and you
-    combine then, the result does *M * N* things. You get more functionality per unit of effort by combining orthogonal
+  - Assume that one component does `M` distinct things and another does `N` things. If they are orthogonal and you
+    combine then, the result does `M * N` things. You get more functionality per unit of effort by combining orthogonal
     components.
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
       #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
@@ -8414,11 +8927,13 @@ file called donors that looked like this:
     #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Test to Code
+
 - 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### Property-Based Testing
+
 - 
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
@@ -9409,32 +9924,6 @@ TODO: Order in which to do this testing.
 
 -->
 
-<!-- To Do:
-- Design Patterns
-- Code Reviews
-- Microservice Architecture
-- Code Smells
-- Static Analysis
-- Code Coverage
-- Testing
-- HA
-- GA
-- BUR
-- Java Version Features
-- RAN
-- Software Role - DevOps vs Software Engineer
-- Documentation
-- Agile Ceremonies
-- Scrum
-- Agile
-- Waterfall
-- MTLS
-- Telecommunications
-- vi
-- nano
-- vim
- -->
-
 # Tutorial Notes
 
 ## Neovim Tutorial
@@ -9450,6 +9939,9 @@ TODO: Order in which to do this testing.
 ### Lesson 1.1: Moving the Cursor
 
 - Use the arrow keys to navigate the cursor.
+  [Pi\_tutor](#pi_tutor)
+
+- Pressing `<Esc>` places you in Normal mode or will cancel an unwanted and partially completed command.
   [Pi\_tutor](#pi_tutor)
 
 ### Lesson 1.2: Exiting Vim
@@ -9475,11 +9967,6 @@ TODO: Order in which to do this testing.
 ### Lesson 1.6: Editing a File
 
 - Typing `:wq` in Normal mode discards any changes that have been made.
-  [Pi\_tutor](#pi_tutor)
-
-### Lesson 1 Summary
-
-- Pressing `<Esc>` places you in Normal mode or will cancel an unwanted and partially completed command.
   [Pi\_tutor](#pi_tutor)
 
 ### Lesson 2.1: Deletion Commands
@@ -9739,10 +10226,10 @@ TODO: Order in which to do this testing.
   [Pi\_tutor](#pi_tutor)
 
   | **Short Option** | **Long Option** |                  **Description**                  |
-  |:----------------:|:---------------:|:-------------------------------------------------:|
-  |        ic        |    ignorecase   | Ignore upper/lower case when searching/replacing. |
+  | :--------------: | :-------------: | :-----------------------------------------------: |
+  |        ic        |   ignorecase    | Ignore upper/lower case when searching/replacing. |
   |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
-  |        hls       |     hslearch    |          Highlight all matching phrases.          |
+  |       hls        |    hslearch     |          Highlight all matching phrases.          |
 
 ### Lesson 7.1: Getting Help
 
@@ -10118,6 +10605,158 @@ TODO: Order in which to do this testing.
   end)
   ```
 
+## Vim Buffers, Windows & Tabs - An Overview
+
+- When you need open several files in Vim, you need to know at least a minimum about Buffers, Windows, and Tabs.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+### Vim Modes
+
+- Vim has several modes that act very differently, meaning they have different key mappings. They are:
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - **Normal** (Accessed with `<Esc>` in any other Vim mode):
+
+    - The default mode, the one Vim starts with in a terminal.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+    - Each key can have a difference mapping, including the letter keys.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+    - You cannot write, but you can cup and paste.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - **Visual** (Accessed with `v` in Normal mode):
+
+    - Indented to select blocks or lines of text for copying or other actions.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+    - Press `<Ctrl> + v` while in Visual mode to select lines.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+    - Press `<Shift> + v` while in Visual mode to select text blocks.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - **Insert** (Accessed with 'a' or 'i' in Normal mode) and **Replace** (Accessed with `<Shift> + r` in Normal mode):
+
+    - Insert and Replace are both text editing modes, with the only difference being the latter replaces the text under
+      the cursor.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+    - Most of the key mappings that work in Normal and Visual mode won't work in Insert or Replace.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - **Command** (Accessed with `:` in Normal mode):
+
+    - The most used to write and execute commands.
+      [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- The key mappings shown below to cycle through Buffers, Windows, and Tabs should be used in Normal Mode.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+### Buffers
+
+- Vim can open and edit several files at once. If you provide multiple file names when executing the `vim` command, all
+  the files will be opened in in vim, but you'll only be seeing the first. That is because vim opens files in buffers.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- Every file you open will be places in a buffer, even if they cannot be displayed.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- The following are commands for working with buffers in Normal mode.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:buffers` or `:ls`: List all buffers.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:buffer <buffer_number>`: Show the buffer with a buffer number, `<buffer_number>`.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:bnext`: Show next buffer.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:bprev`: Show previous buffer.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:edit <file_path>`: Add a new file to the buffer with the file path, `<file_path>`.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:bdelete <buffer_number>`: Delete the buffer with a buffer number, `buffer_number`.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `<Ctrl> + ^`: Open the previous buffer.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+### Windows
+
+- A Vim window is what you see and can interact with.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- A window can show the contents of a buffer.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- A window always shows a Buffer, either from a file, or just an empty one.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- Many windows can be opened at the same time by splitting the editor.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `<Ctrl> + w + s`: Split the window with the currently open file.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:split <file_name>`: Split the window, optionally opening a new file.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:sbuffer`: Split the window and open the buffer with buffer number, `<buffer_number>`.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:sball`: Open all buffers in windows.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `<Ctrl> + w + w`: Navigate to the next window.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `<Ctrl> + w + <Shift> + w`: Navigate to the previous window.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `<Ctrl> + w + <Arrow Key>`: Navigate to the window in the direction of the `<Arrow Key>`.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:q`: Close a window. If it is the last window, it also exist the editor.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:qa`: Close all windows and exit the editor.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+### Tabs
+
+- A tab can show one or more windows.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- If more than one tab exists, a list of tabs is shown at the top of the editor, similar to tabs in a browser.
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+- Tab commands:
+  [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:tabnew <file_name>`: Create a new tab, optionally opening a file.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `gt`: Show next tab.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:tabnext`: Show next tab.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `gT`: Show previous tab.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:tabprev`: Show previous tab.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
+  - `:tab sball`: Open all buffers in tabs.
+    [Medium: Vim Buffers, Windows \& Tabs - An Overview](#medium-vim-buffers-windows--tabs---an-overview)
+
 # References
 
 ## Ericsson
@@ -10125,6 +10764,12 @@ TODO: Order in which to do this testing.
 ### Ericsson: Navigate the Network Slicing Transformation Journey
 
 - <https://www.ericsson.com/en/network-slicing>
+
+## Medium
+
+### Medium: Vim Buffers, Windows & Tabs - An Overview
+
+- <https://medium.com/@paulodiovani/vim-buffers-windows-and-tabs-an-overview-8e2a57c57afa>
 
 ## Microsoft
 
@@ -10156,7 +10801,7 @@ TODO: Order in which to do this testing.
 
 - <https://www.oreilly.com/library/view/97-things-every/9780596809515/>
 
-### O'Reilly: *bash* Cookbook, 2nd Edition
+### O'Reilly: *bash` Cookbook, 2nd Edition
 
 - <https://www.oreilly.com/library/view/bash-cookbook-2nd/9781491975329/>
 
