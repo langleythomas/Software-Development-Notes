@@ -32,7 +32,7 @@ function print_separator() {
 #######################################################################################################################
 
 function purge_nvidia_drivers() {
-  # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by Nvidia driver issues. The commands below can resolve this issue. 
+  # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by Nvidia driver issues. The commands in this function can resolve this issue.
   # Note: These commands can only be effective after a clean OS installation.
   update_and_upgrade_apt
 
@@ -122,8 +122,8 @@ function install_docker() {
   # shellcheck disable=SC1091
   echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+    sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
 
   # Install and Start Docker Engine.
   sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --yes
@@ -194,7 +194,7 @@ function test_kubernetes_installation() {
 function install_helm() {
   printf "Installing Helm.\n"
 
-  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "get_helm.sh"
+  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" >"get_helm.sh"
   chmod 700 "get_helm.sh"
   ./"get_helm.sh"
 
@@ -240,6 +240,29 @@ function install_vim() {
   print_separator
 }
 
+function install_vim_plugins() {
+  printf "Installing CtrlP.\n"
+  mkdir --verbose --parents ~/".vim/pack/plugins/start"
+  git clone --depth=1 "https://github.com/ctrlpvim/ctrlp.vim.git" ~/".vim/pack/plugins/start/ctrlp"
+
+
+  printf "Installing Dracula Theme.\n"
+  mkdir --parents ~/".vim/pack/themes/start"
+  git clone "https://github.com/dracula/vim.git" ~/".vim/pack/themes/start/dracula"
+}
+
+function configure_vim() {
+  printf "Creating Vim configuration directories and .vimrc\n"
+  mkdir --verbose --parents ~/".vim" ~/".vim/autoload" ~/".vim/backup" ~/".vim/colors" ~/".vim/plugged"
+  touch ~/".vimrc"
+
+  mkdir --verbose --parents ~/".vim/plugin"
+
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configurations/.vimrc" >> ~/".vimrc"
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configurations/.load_plugins.vim" >> ~/".vim/plugin/.load_plugins.vim"
+  # There is no need for a source command on the .vimrc, as the .vimrc is automatically read and validated when executing the vim command in a terminal.
+}
+
 function install_neovim() {
   update_flatpak
 
@@ -270,6 +293,8 @@ function install_visual_studio_code() {
 
 function call_text_editor_installation_functions() {
   install_vim
+  install_vim_plugins
+  configure_vim
 
   install_neovim
 
@@ -367,7 +392,8 @@ function configure_bashrc() {
   printf "Configuring .bashrc.\n"
 
   # TODO: Add the .bashrc steps.
-  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configurations/.bashrc" >> ~/."bashrc"
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configurations/.bashrc" >>~/."bashrc"
+  # shellcheck disable=SC1090
   source ~/."bashrc"
 
   print_separator
