@@ -354,6 +354,7 @@
     "Mancha",
     "manpages",
     "Manshoon",
+    "mapleader",
     "Margaery",
     "Marketh",
     "Marlandrian",
@@ -463,6 +464,7 @@
     "roundbread",
     "Roundup",
     "Roundups",
+    "runtimepath",
     "Ryka",
     "Rythil",
     "Sabora",
@@ -602,6 +604,7 @@
     "Venomthorn",
     "Veridia",
     "Vexgit",
+    "vimdoc",
     "vimrc",
     "Vrock",
     "Warbot",
@@ -681,9 +684,12 @@
 
   "vscode-neovim.neovimExecutablePaths.linux": "nvim",
 
+  "window.customTitleBarVisibility": "never",
+
+  "workbench.colorTheme": "Dracula Pro Edition",
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
+  "workbench.statusBar.visible": true,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.colorTheme": "Dracula Pro Edition",
-  "workbench.statusBar.visible": true
+  "workbench.activityBar.location": "top",
 }
