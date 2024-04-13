@@ -258,8 +258,7 @@ function configure_vim() {
 
   mkdir --verbose --parents ~/".vim/plugin"
 
-  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configurations/.vimrc" >> ~/".vimrc"
-  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configurations/.load_plugins.vim" >> ~/".vim/plugin/.load_plugins.vim"
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configuration/.vimrc" >> ~/".vimrc"
   # There is no need for a source command on the .vimrc, as the .vimrc is automatically read and validated when executing the vim command in a terminal.
 }
 
@@ -392,7 +391,7 @@ function configure_bashrc() {
   printf "Configuring .bashrc.\n"
 
   # TODO: Add the .bashrc steps.
-  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configurations/.bashrc" >>~/."bashrc"
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" >>~/."bashrc"
   # shellcheck disable=SC1090
   source ~/."bashrc"
 
