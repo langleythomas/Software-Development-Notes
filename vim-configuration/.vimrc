@@ -19,11 +19,23 @@ set backspace=indent,eol,start
 
 " ---------------------------------------------------------------------------------------------------------------------
 
+" Spell Checking
+
 " Enable spellcheck
 set spell
 
 " Set dictionary
 set spelllang=en_gb
+
+" Disable block colour highlighting for both (1) words not recognised, and (2) the wrong spelling for a selected region
+hi clear SpellBad
+hi clear SpellLocal
+
+" Change highlighting of text error (word not recognised) from a red block to red and underlined text
+hi SpellBad cterm=underline ctermfg=red
+
+" Change highlighting of text error (wrong spelling for selected region) from a blue block to blue and underlined text
+hi SpellLocal cterm=underline ctermfg=blue
 
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -106,6 +118,10 @@ set encoding=UTF-8
 
 " Display confirmation dialogue when closing an unsaved dialogue
 set confirm
+
+" Enable Vim to resume editing a file from the previous location
+autocmd BufWinLeave * mkview
+autocmd BufWinEnter * silent loadview
 
 " ---------------------------------------------------------------------------------------------------------------------
 
