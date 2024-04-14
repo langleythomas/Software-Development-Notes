@@ -647,6 +647,7 @@
   "editor.fontSize": 14,
   "editor.guides.indentation": true,
   "editor.minimap.showSlider": "always",
+  "editor.showFoldingControls": "always",
   "editor.stickyScroll.enabled": true,
 
   "extensions.experimental.affinity": {
@@ -686,10 +687,11 @@
 
   "window.customTitleBarVisibility": "never",
 
+  "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Dracula Pro Edition",
   "workbench.iconTheme": "city-lights-icons-vsc-light",
   "workbench.sideBar.location": "right",
   "workbench.statusBar.visible": true,
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.activityBar.location": "top",
+  "workbench.preferredDarkColorTheme": "Dracula Pro Edition"
 }
