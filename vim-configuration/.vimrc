@@ -14,11 +14,16 @@ set wrap
 " The amount of tenths of a second to blink when matching brackets
 set mat=2
 
+" Allow backspace over indentation, line breaks, and insertion start
+set backspace=indent,eol,start
+
+" ---------------------------------------------------------------------------------------------------------------------
+
 " Enable spellcheck
 set spell
 
-" Allow backspace over indentation, line breaks, and insertion start
-set backspace=indent,eol,start
+" Set dictionary
+set spelllang=en_gb
 
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -62,7 +67,7 @@ set cursorline
 set cursorcolumn
 
 " Redraw only when necessary
-"set lazyredraw
+set lazyredraw
 
 " Highlight matching curly braces, parentheses and square brackets
 set showmatch
