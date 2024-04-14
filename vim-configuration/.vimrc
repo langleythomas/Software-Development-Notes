@@ -60,17 +60,11 @@ set number
 " Set the window's title to match the current file being edited
 set title
 
-" Highlight current line
-set cursorline
-
-" Highlight current column
-set cursorcolumn
-
 " Redraw only when necessary
 set lazyredraw
 
 " Highlight matching curly braces, parentheses and square brackets
-set showmatch
+"set showmatch
 
 " ---------------------------------------------------------------------------------------------------------------------
 
