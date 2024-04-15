@@ -78,9 +78,6 @@ set lazyredraw
 " Highlight matching curly braces, parentheses and square brackets
 "set showmatch
 
-" Enable the mouse in Vim
-set mouse=a
-
 " ---------------------------------------------------------------------------------------------------------------------
 
 " Searching
