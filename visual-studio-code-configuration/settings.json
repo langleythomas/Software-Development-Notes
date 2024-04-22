@@ -194,6 +194,7 @@
     "Feshyn",
     "Fett",
     "Fiendsmith",
+    "fifo",
     "Finnothy",
     "Firebeak",
     "Flametongue",
@@ -286,6 +287,7 @@
     "ility",
     "Ilmani",
     "Immersea",
+    "iname",
     "incsearch",
     "inputrc",
     "Interdeveloper",
@@ -699,7 +701,6 @@
   "explorer.compactFolders": false,
 
   "files.insertFinalNewline": true,
-  "files.trimTrailingWhitespace": true,
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
 
