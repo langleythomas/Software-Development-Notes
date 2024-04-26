@@ -77,6 +77,8 @@ to install it with a lint to an external link or reference to a section in this 
 - enable
 - env
 - exit
+- ffmpeg
+- ffprobe
 - file
 - find
 - fmt
@@ -163,6 +165,7 @@ to install it with a lint to an external link or reference to a section in this 
 - wc
 - which
 - xargs
+- zt-dlp
 - zcat
 - zgrep
 - zip
