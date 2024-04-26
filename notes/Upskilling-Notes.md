@@ -17306,6 +17306,156 @@ file called donors that looked like this:
 
 </details>
 
+# Cheat Sheets
+
+## `yt-dlp`
+
+### Install `yt-dlp`
+
+#### Install `yt-dlp` & Dependencies
+
+- Download from [yt_dlp_x86.exe](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#recommended).
+
+#### Install `ffmpeg`
+
+- Download the `ffmpeg` `.tar.xz` from the following: <https://ffmpeg.org/download.html>
+
+  - If downloading on Windows, then select Windows builds from `gyan.dev`, which redirects to the following web page:
+    <https://www.gyan.dev/ffmpeg/builds/>. Following the steps on the following web page for an explanation of how to
+    install ffmpeg on Windows: <https://phoenixnap.com/kb/ffmpeg-windows>.
+
+- Extract the downloaded `.tar.xz`.
+
+- Add `ffmpeg` to the `PATH` environment variable.
+
+- Note: `ffmpeg` is required to download YouTube videos at 1080p. Installing and configuring `ffmpeg` also install
+  `ffprobe`.
+
+#### Verify `yt-dlp` Installation
+
+- Run the `yt-dlp` commands in the directory containing the `yt-dlp` executable file.
+
+- Confirm you can run the `yt-dlp` in Git Bash, or an equivalent Linux command line.
+
+  ```bash
+  ./yt-dlp_x86.exe --help
+  ```
+
+### Download from YouTube
+
+- Set the environment variables for each of the YouTube resources you wish to download before executing the following
+  command. You must run each of the commands in this section in the same directory as which you have have downloaded
+  the `yt-dlp_x86.exe`.
+
+  ```bash
+  ./yt-dlp_x86.exe --cookies-from-browser chrome "${YOUTUBE_URL}" --output "${OUTPUT_DIRECTORY}"
+  ```
+
+#### Playlists
+
+##### Funhaus (Playlists)
+
+##### Funhaus Members Playlist
+
+- Set the following variables to download the videos in the Funhaus Member playlist:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/playlist?list=PLbIc1971kgPAYOQQgewNrbtj5BOgfigt5"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Members/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Funhaus Live Playlist
+
+- Set the following variables to download the videos in the Funhaus Live playlist:
+
+  ```bash
+  export YOUTUBE_URL="<video or playlist you wish to download>"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Live/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+#### Channels
+
+##### Achievement Hunter
+
+- Set the following variables to download the videos in the Achievement Hunter channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@AchievementHunter"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Call Me Kevin
+
+- Set the following variables to download the videos in the Call Me Kevin channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@CallMeKevin"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Funhaus (Channel)
+
+- Set the following variables to download the videos in the Funhaus channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/funhaus"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Funhaus Too
+
+- Set the following variables to download the videos in the Funhaus Too channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@FunhausToo"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus Too/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Inside Gaming (Formerly "The Know")
+
+- Set the following variables to download the videos in the Inside Gaming (Formerly "The Know") channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@insidegaming"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Inside Gaming (Formerly \"The Know\")/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Lets Play
+
+- Set the following variables to download the videos in the Lets Play channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@Letsplay"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Lets Play/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Overly Sarcastic Productions
+
+- Set the following variables to download the videos in the Overly Sarcastic Productions channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@OverlySarcasticProductions"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Overly Sarcastic Productions/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Rooster Teeth
+
+- Set the following variables to download the videos in the Rooster Teeth channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@roosterteeth"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### The Escapist
+
+- Set the following variables to download the videos in the The Escapist channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@theescapist"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/The Escapist/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
 # Online Notes
 
 <!-- ## Application Architecture
