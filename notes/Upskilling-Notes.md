@@ -17377,7 +17377,7 @@ file called donors that looked like this:
 
 ##### Achievement Hunter
 
-- Set the following variables to download the videos in the Achievement Hunter channel:
+- Set the following variables to download all the contents in the Achievement Hunter channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@AchievementHunter"
@@ -17386,7 +17386,7 @@ file called donors that looked like this:
 
 ##### Call Me Kevin
 
-- Set the following variables to download the videos in the Call Me Kevin channel:
+- Set the following variables to download all the contents in the Call Me Kevin channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@CallMeKevin"
@@ -17395,7 +17395,7 @@ file called donors that looked like this:
 
 ##### Funhaus (Channel)
 
-- Set the following variables to download the videos in the Funhaus channel:
+- Set the following variables to download all the contents in the Funhaus channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/funhaus"
@@ -17404,7 +17404,7 @@ file called donors that looked like this:
 
 ##### Funhaus Too
 
-- Set the following variables to download the videos in the Funhaus Too channel:
+- Set the following variables to download all the contents in the Funhaus Too channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@FunhausToo"
@@ -17413,7 +17413,7 @@ file called donors that looked like this:
 
 ##### Inside Gaming (Formerly "The Know")
 
-- Set the following variables to download the videos in the Inside Gaming (Formerly "The Know") channel:
+- Set the following variables to download all the contents in the Inside Gaming (Formerly "The Know") channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@insidegaming"
@@ -17422,7 +17422,7 @@ file called donors that looked like this:
 
 ##### Lets Play
 
-- Set the following variables to download the videos in the Lets Play channel:
+- Set the following variables to download all the contents in the Lets Play channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@Letsplay"
@@ -17431,7 +17431,7 @@ file called donors that looked like this:
 
 ##### Overly Sarcastic Productions
 
-- Set the following variables to download the videos in the Overly Sarcastic Productions channel:
+- Set the following variables to download all the contents in the Overly Sarcastic Productions channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@OverlySarcasticProductions"
@@ -17440,16 +17440,26 @@ file called donors that looked like this:
 
 ##### Rooster Teeth
 
-- Set the following variables to download the videos in the Rooster Teeth channel:
+- Set the following variables to download all the contents in the Rooster Teeth channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@roosterteeth"
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
+##### Rooster Teeth Podcasts
+
+
+- Set the following variables to download all the contents in the Rooster Teeth Podcasts channel:
+
+  ```bash
+  export YOUTUBE_URL="[https://www.youtube.com/@roosterteeth](https://www.youtube.com/@RoosterTeethPodcast)"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth Podcasts/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
 ##### The Escapist
 
-- Set the following variables to download the videos in the The Escapist channel:
+- Set the following variables to download all the contents in the The Escapist channel:
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@theescapist"
