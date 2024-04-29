@@ -43,6 +43,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 Find all the `bash` programs from the following following list in man7. For any non-`bash` documentation, explain how
 to install it with a lint to an external link or reference to a section in this page.
 - 7za
+- alias
 - apropos
 - awk
 - aws
@@ -100,6 +101,7 @@ to install it with a lint to an external link or reference to a section in this 
 - java
 - jq
 - keytool
+- kill
 - kubectl
 - less
 - lessfile
@@ -155,6 +157,7 @@ to install it with a lint to an external link or reference to a section in this 
 - traceroute
 - trap
 - type
+- unalias
 - uniq
 - unix2dos
 - unzip
@@ -7375,84 +7378,165 @@ file called donors that looked like this:
 
 #### Trapping Interrupts
 
-- 
+- Use the `trap` utility to set signal handlers. They trap signals and respond to them accordingly.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Use `trap -l` (or `kill -l`) to list the signals you may trap. They vary between systems.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- The exist status of a script will be *128 + `signal_number`* if the command was terminated by the signal `signal_number`.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- The following example is rather hard to kill, because the signals trapped using the `trap` keywords will be ignored.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: hard_to_kill
+
+  function trapped {
+    if [ "$1" = "USR1" ]; then
+      echo "Got me with a $1 trap!"
+      exit
+    else
+      echo "Received $1 trap--neener, neener"
+    fi
+  }
+
+  trap "trapped ABRT" ABRT
+  trap "trapped EXIT" EXIT
+  trap "trapped HUP" HUP
+  trap "trapped INT" INT
+  trap "trapped KILL" KILL # This won't actually work
+  trap "trapped QUIT" QUIT
+  trap "trapped TERM" TERM
+  trap "trapped USR1" USR1 # This one is special
+
+  # Just hang out and do nothing, without introducing "third-party"
+  # trap behavior, such as if we used 'sleep'
+  while (( 1 )); do
+    : # : is a NOOP
+  done
+  ```
+
+- Invoking the example script from the previous code example and then trying to kill it.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  $ ./hard_to_kill
+  ^CReceived INT trap--neener, neener
+  ^CReceived INT trap--neener, neener
+  ^CReceived INT trap--neener, neener
+  ^Z
+  [1]+ Stopped ./hard_to_kill
+
+  $ kill -TERM %1
+  [1]+ Stopped ./hard_to_kill
+  Received TERM trap--neener, neener
+
+  $ jobs
+  [1]+ Stopped ./hard_to_kill
+
+  $ bg
+  [1]+ ./hard_to_kill &
+
+  $ jobs
+  [1]+ Running ./hard_to_kill &
+
+  $ kill -TERM %1
+  Received TERM trap--neener, neener
+
+  $ kill -HUP %1
+  Received HUP trap--neener, neener
+
+  $ kill -USR1 %1
+  Got me with a USR1 trap!
+  Received EXIT trap--neener, neener
+  [1]+ Done ./hard_to_kill
+  ```
+
+- You can't actually trap `-SIGKILL` (`-9`). That signal kills processes dead immediately, so they have no choice to trap anything. This signal does not allow the script or program to clean up or shut down gracefully at any points. That's often a bad thing, so try to avoid using `kill -KILL` unless you have no other choice.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- The usage for `trap` is as follows:
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  trap [-lp] [arg] [signal [signal]]
+  ```
+
+  - The `arg` argument is the code to execute when the given `signal` is received. That code can be self-contained, or it can be a call to a function. If the argument is the `null` string, the given signal(s) will be ignored. If the signal is `-` or missing, but one or more signals are listed, they will be reset to the shell defaults.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - `-l` lists the signal names.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - `-p` will print any current traps and their handlers.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- When using more than one trap handler, it is recommende to alphabetise the signal names to improve readability and discoverability of those signals.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- There are three pseudo-signals for various special purposes.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - The `DEBUG` signal is similar to `EXIT`, but is used before every command for debugging purposes.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - The `RETURN` signal is triggered when execution resumes after a function or `source (.)` call.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - The `ERR` signal is triggered after a simple command fails..
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Redefining Commands with `alias`
 
-- 
+- Use the `alias` feature of `bash` for interactive shells (only). It can be used to slightly alter the definition of a command, perhaps so that you always use a particular option on the command.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Type `alias` with no other arguments so that you can see the list of aliases that are already defined for you in your `bash` session. Some `bash` installations may already have several available for you.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Using single quotes when assigning an `alias` means the variable will not be evaluated when the definition of the `alias` is made. The string substitution will only occur when the command is run, and only then with the variable be evaluated. This means changing the definition of a variable will update its value in future usages of the `alias` using the variable.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  alias h='ls $HOME'
+  alias h='ls ~'
+  ```
+
+- If you use double quotes when assigning an `alias`, then the substitution of the variable's value would be made right away and the `alias` would be made right away and the `alias` would be defined with the substitued value of the variable.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  alias h="ls $HOME"
+  alias h="ls ~"
+  ```
+
+- Use `unalias` and the name of the alias you no longer want if you don't like what your alias does and want to get get rid of it.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Use `unalias -a` to remove all the alias definitions in your current shell session. The backslash (`\`) prefix disables `alias` expansion for any command, so it is standard security best practice to preface the `\unalias` command in case the `unalias` keyword would have been aliased by someone else.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ alias unalias=':'
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ alias unalias
+  alias unalias=':'
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ unalias unalias
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ alias unalias
+  alias unalias=':'
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ \unalias unalias
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ alias unalias
+  bash: alias: unalias: not found
+  ```
 
-- 
+- Aliases do not allow arguments do be passed at runtime.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Avoiding Aliases & Functions
