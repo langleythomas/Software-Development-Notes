@@ -5638,7 +5638,7 @@ file called donors that looked like this:
   statement into two nested `if` statements, or use `&&` and `||`
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Testing for String Characteristics
+#### Testing for String Characteristics
 
 - There are some simple tests that you can do with the builtin `test` command, using the single-bracket `if`
   statements.
@@ -5674,7 +5674,7 @@ file called donors that looked like this:
 - It is important to put quotes around an expression when checking a string, to avoid any unexpected substitution.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Testing for Equality
+#### Testing for Equality
 
 - Use the `-eq` operator for numeric comparisons and the equality primary `=` (or `==`) for string comparisons.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
@@ -5779,12 +5779,12 @@ file called donors that looked like this:
   `[[` commands.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Testing with Regular Expressions
+#### Testing with Regular Expressions
 
 - The `=~` operator requires `bash` version 3.0 or newer - older versions don't have the operator.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-### Looping for a While
+#### Looping for a While
 
 - Use the `while` looping construct for arithmetic conditions. The double parentheses delimit an arithmetic expression,
   very much like the `$(())` expression for shell variable assignment. The variable names inside the parentheses are
@@ -5824,7 +5824,7 @@ file called donors that looked like this:
   done
   ```
 
-### Looping with a `read`
+#### Looping with a `read`
 
 - A common use of a `while` loop is to read files and the output of previous commands.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
