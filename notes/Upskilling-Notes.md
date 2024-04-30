@@ -151,6 +151,7 @@ to install it with a lint to an external link or reference to a section in this 
 - tail
 - tar
 - tee
+- time
 - tmux
 - touch
 - tr
@@ -7541,126 +7542,305 @@ file called donors that looked like this:
 
 #### Avoiding Aliases & Functions
 
-- 
+- In the case where you've written an alias or function to override a real function a real command, use the `bash` shell's `builtin` command to ignore functions and aliases and run an actual builtin command.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Use the `command` command to ignore shell functions and aliases and run an actual external command.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- If you only want to aviod alias expansion, but still allow function definitions to be considered, then prefix the command with `\` to just prevent alias expansion.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Use the `type` command to determine what you've got.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Some examples from the commands identified so far in this section.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  $ alias echo='echo ~~~'
+
+  $ echo test
+  ~~~ test
+
+  $ \echo test
+  test
+
+  $ builtin echo test
+  test
+
+  $ type echo
+  echo is aliased to `echo ~~~'
+
+  $ unalias echo
+
+  $ type echo
+  echo is a shell builtin
+
+  $ type -a echo
+  echo is a shell builtin
+  echo is /bin/echo
+
+  $ echo test
+  test
+  ```
+
+- A function with the same name as a builtin function. The `builtin` command tells `bash` to assume the command that follows is a shell builtin command and not to use any alias or function definition.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  function cd () {
+    if [[ $1 = "..." ]]
+    then
+      builtin cd ../..
+    else
+      builtin cd "$1"
+    fi
+  }
+  ```
+
+- The `type` command will not only tell us that an alias is an alis, but show us the alias definition. Similarly, with function definitions, the actual body of the function will be shown.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
+- If your function name is that of an executable, like `ls`, and not a builtin command, then you can override any alias and/or function by just referring to the full path to the executable, such as `/bin/ls` rather than just as the `ls` command. If you don't know its full path, just prefix the command with the keyword `command`. Note that the `$PATH` variable will still be used to determine the location of the command. If you are running the wrong `ls` because of your `$PATH` has som e unexepcted values, adding `command` will not help in that situation.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Counted Elapsed Time
 
-- 
+- Use the `time` builtin or the `bash` variable `$SECONDS` to display how long a script, or an operation in a script, takes.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- `time` reports the time used by a process or pipeline in a variety of ways.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  $ time sleep 4
+  real 0m4.029s
+  user 0m0.000s
+  sys 0m0.000s
+
+  $ time sha256sum /bin/* &> /dev/null
+  real 0m1.252s
+  user 0m0.072s
+  sys 0m0.028s
+  ```
+
+- You can use `time` for command or functions inside a script, but you can't time the entire script from inside itself.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- If you just want to know how long the entire script took to execute, you can use `$SECONDS`. `$SECONDS` expands to the number of seconds since the shell was started. Assignment to this variable resets the count to the value assigned, and the expanded value becomes the value assigned plus the number of seconds since the assignment.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ cat seconds
+  started="$SECONDS"
+  sleep 4
+  echo "Run-time = $(($SECONDS - $started)) seconds..."
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  $ bash seconds
+  Run-time = 4 seconds...
+  $ time bash seconds
+  Run-time = 4 seconds...
+  real 0m4.003s
+  user 0m0.000s
+  sys 0m0.000s
+  ```
 
 #### Writing Wrappers
 
-- 
+- If you have a series of related commands or tools that you often need to use in an ad hoc manner, and you want to collect them in once place to make them easier to use and remember, write a shell script "wrapper" using `case..esac` blocks as needed.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- There are two basic ways to handle needs like this. Both approaches have meric, but the second option tends to be better because you only have to rememver the single prefix command.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  - One is to write several tiny shell scripts, or perhaps alises, to handle all the needs.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - THe other is like the majority of revision control tools, where you call a single binary like a "prefix", then add the action or command/
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Some of the basic considerations for the wrapper implementation are as follows:
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  - Simple to read and understand.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - Simple to add to.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - Built-in, inline help that's easy to write.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+  - Easy to use and remember.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- The following script was written by the authors of this book to parse and process and Asciidoc used to write the book.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: ad
+  # O'Reilly "book" tool wrapper for Asciidoc
+
+  # Sanity-check required variables and locations.
+  [ -n "$BOOK_ASC" ] || {
+    echo "FATAL: must export \$BOOK_ASC to the location of '...bcb2/head/asciidoc/'!"
+    exit 1
+  }
+  \cd "$BOOK_ASC" || {
+    echo "FATAL: can't cd to '$BOOK_ASC'!"
+    exit 2
+  }
+
+  SELF="$0" # Set a more readable name for recursion.
+  action="$1" # Set a more readable name for the command or action we’re going to take.
+  shift # Remove the shift argument from the list so we don’t reuse or include it in the input or output later.
+
+  # If the xsel command is available and executable, and we passed no other arguments, then set up the input and output to be from and to the clipboard. That turns this script into an application-generic macro tool! No matter what editor you are using, if you have a GUI and read from and write to the clipboard, if you switch to a terminal session you can copy text, process it, and paste it easily, which is a really handy thing to be able to do!
+  [ -x /usr/bin/xsel -a $# -lt 1 ] && {
+    # Read/write the clipboard
+    text=$(xsel -b)
+
+    function Output {
+      echo -en "$*" | xsel -bi
+    }
+  } || { # Otherwise...
+  # Read/write STDIN/STDOUT
+    text=$*
+
+    function Output {
+      echo -en "$*"
+    }
+  }
+
+  case "$action" in
+    #######################################################################
+    # Content/Markup
+
+    rec|recipe ) Each block in the case..esac is both the code and the documentation. The number of # characters determines the section, so the code can be in whatever order makes sense, but the help/usage can vary from that.
+      id="$($SELF id $text)" # Take the input text and make a recursive call to get an ID out of that, then output the boilerplate markup.
+      # Note that inside the here-document the indentation must be tabs.
+      Output "$(cat <<- EoF
+        				      [[$id]]
+        				      === $text
+
+        				      [[problem-$id]]
+        				      ==== Problem
+
+        				      [[solution-$id]]
+        				      ==== Solution
+
+        				      [[discussion-$id]]
+        				      ==== Discussion
+
+        				      [[see_also-$id]]
+        				      ==== See Also
+        				      * \`man \`
+        				      * item1
+        				      * <<xref-id-here>>
+        				      * URL[text]
+        				      EoF
+      )"
+    ;;
+
+    table ) # Sometimes the boilerplate markup doesn’t include any input text.
+      Output "$(cat <<- EoF
+        			        .A Table
+        			        [options="header"]
+        			        |=======
+        			        |head|h|h
+        			        |cell|c|c
+        			        |cell|c|c
+        			        |=======
+        			        EoF
+    )"
+  ;;
+
+  # ...
+  ### Headers
+  h1 ) # Inside chapter head 1 (really Asciidoc h3). Sometimes the operation is very simple, like just remembering how many equals signs are needed.
+    Output "=== $text"
+  ;;
+
+  h2 ) # Inside chapter head 2 (really Asciidoc h4)
+    Output "==== $text"
+  ;;
+
+  h3 ) # Inside chapter head 3 (really Asciidoc h5)
+    Output "===== $text"
+  ;;
+
+  ### Lists
+  bul|bullet ) # Bullet list (.. = level 2, + = multiline element)
+    Output ". $text"
+  ;;
+
+  nul|number|order* ) # Num./ordered list (## = level 2, + = multiline element)
+    Output "# $text"
+  ;;
+
+  term ) # Terms. Sometimes the operation is a bit more complicated, with embedded newlines and expanded escape characters.
+  Output "term_here::\n $text"
+  ;;
+
+  # ...
+
+  cleanup ) # Clean up all the xHTML/XML/PDF cruft. Actions can do anything you can think of and figure out how to automate!
+    rm -fv {ch??,app?}.{pdf,xml,html} book.xml docbook-xsl.css
+  ;;
+  * ) # If you don’t provide any arguments, or provide incorrect arguments, even including ones like -h or --help, you get a generated usage message.
+    \cd - > /dev/null # UGLY cheat to revert the 'cd' above...
+    # See also: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
+    
+    # We wrap the blocks in a () subshell to get the output in the right order and send it all into the more command. The two egrep commands display our case..esac section lines, as in , which are both code and documentation, grouped by the count of # characters (one or two).
+
+    ( echo "Usage:"
+    egrep '\)[[:space:]]+# ' $SELF
+    echo ''
+    egrep '\)[[:space:]]+## ' $SELF ) | more
+    ;;
+  esac
+  ```
+
+- Example usage of the script in the previous command.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  $ ad
+  Usage:
+    rec|recipe ) # Create the tags for a new recipe
+    table ) # Create the tags for a new table
+    h1 ) # Inside chapter heading 1 (really Asciidoc h3)
+    h2 ) # Inside chapter heading 2 (really Asciidoc h4)
+    h3 ) # Inside chapter heading 3 (really Asciidoc h5)
+    bul|bullet ) # Bullet list (.. = level 2, + = multiline element)
+    nul|number|order* ) # Num./ordered list (## = level 2, + = multiline element)
+    term ) # Terms
+    cleanup ) ## Clean up all the xHTML/XML/PDF cruft
+  $
+  ```
+
+- To use `asd` to create the tags for a new recipe, like the one in this section, you would type out the title, select it, navigate to a terminal window, type `ad rec`, navigate back to your editor, and paste it in.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Some example usages of writing wrappers.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - Writing a book.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - Writing up various SSH commands to do common chores on grups of servers.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - Collect various Debian package system tools, prior to the advent of `apt`.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - Autoamtie various "cleanup" tasks like trimming whitespace, sorting, and performing various simple text manipulkations like strinng out rich-test formatting.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  - Autoamte `grep` commands to search various specific file types and locations for notes and archived documentation.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 ### Working with Dates & Times
 
@@ -17504,6 +17684,15 @@ file called donors that looked like this:
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Inside Gaming (Formerly \"The Know\")/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
+##### IMSON1NJA
+
+- Set the following variables to download all the contents in the IMSON1NJA channel, to download the deleted Funhaus videos in that channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@imsoninja98ify"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
 ##### Lets Play
 
 - Set the following variables to download all the contents in the Lets Play channel:
@@ -17511,6 +17700,15 @@ file called donors that looked like this:
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@Letsplay"
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Lets Play/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  ```
+
+##### Marlene Mizulo
+
+- Set the following variables to download all the contents in the Marlene Mizulo channel, to download the deleted Funhaus videos in that channel:
+
+  ```bash
+  export YOUTUBE_URL="https://www.youtube.com/@marlenemizulo"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
 ##### Overly Sarcastic Productions
