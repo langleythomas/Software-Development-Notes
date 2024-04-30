@@ -3841,10 +3841,15 @@ Unordered List of Topics:
 
   ```bash
   $ ls > /tmp/ls.out
+
   $ cd ../elsewhere
+
   $ ls >> /tmp/ls.out
+
   $ cd ../another/dir
+
   $ ls >> /tmp/ls.out
+
   $
   ```
 
@@ -4042,6 +4047,7 @@ Unordered List of Topics:
   Sarah x.822
   Bill x.919
   EOF
+
   $
   ```
 
@@ -4064,6 +4070,7 @@ file called donors that looked like this:
   Sam $ 25
   Bill $ 9
   EOF
+
   $
   ```
 
@@ -4076,6 +4083,7 @@ file called donors that looked like this:
   bill $ 9
   $ ./donors Pete
   Pete Pete00
+
   $
   ```
 
@@ -4344,6 +4352,7 @@ file called donors that looked like this:
   ```bash
   $ echo $PATH
   /bin:/usr/bin:/usr/local/bin:.
+
   $
   ```
 
@@ -4422,9 +4431,12 @@ file called donors that looked like this:
   ```bash
   $ long &
   [1] 4592
+
   $ medium &
   [2] 4593
+
   $ short
+
   $
   ```
 
@@ -4435,6 +4447,7 @@ file called donors that looked like this:
   $ long & medium & short
   [1] 4592
   [2] 4593
+
   $
   ```
 
@@ -4459,12 +4472,16 @@ file called donors that looked like this:
   ```bash
   $ some_command
   # it works...
+
   $ echo $?
   0
+
   $ bad_command
   # it fails...
+
   $ echo $?
   1
+
   $
   ```
 
@@ -4482,10 +4499,13 @@ file called donors that looked like this:
   ```bash
   $ bad_command
   # it fails...
+
   $ echo $?
   1
+
   $ echo $?
   0
+
   $
   ```
 
@@ -4496,11 +4516,15 @@ file called donors that looked like this:
   ```bash
   $ bad_command
   # it fails...
+
   $ STAT=$?
+
   $ echo $STAT
   1
+
   $ echo $STAT
   1
+
   $
   ```
 
@@ -4523,6 +4547,7 @@ file called donors that looked like this:
   ```bash
   $ bash -c 'exit -2' ; echo $?
   254
+
   $ bash -c 'exit -200' ; echo $?
   56
   ```
@@ -4572,6 +4597,7 @@ file called donors that looked like this:
   ```bash
   $ nohup long &
   nohup: appending output to `nohup.out'
+
   $
   ```
 
@@ -4831,7 +4857,7 @@ file called donors that looked like this:
   ```bash
   for FN in 1 2 3 4 5
   do
-  some_script /tmp/rep$FNport.txt
+    some_script /tmp/rep$FNport.txt
   done
   ```
 
@@ -4841,7 +4867,7 @@ file called donors that looked like this:
   ```bash
   for FN in 1 2 3 4 5
   do
-  some_script /tmp/rep${FN}port.txt
+    some_script /tmp/rep${FN}port.txt
   done
   ```
 
@@ -5106,6 +5132,7 @@ file called donors that looked like this:
   $ ./my_script my_file is copied into your_file
   Error. Too many arguments.
   usage: my_script file1 op file2
+
   $ ./my_script my_file copy your_file
   Argument count correct. Proceeding...
   ```
@@ -5185,6 +5212,7 @@ file called donors that looked like this:
 
   $ cd && pwd
   /tmp
+
   $
   ```
 
@@ -5458,7 +5486,6 @@ file called donors that looked like this:
 
   ```bash
   MYRA=(first second third home)
-
   echo runners on ${MYRA[0]} and ${MYRA[2]}
   ```
 
@@ -6035,6 +6062,7 @@ file called donors that looked like this:
   #? 2
   Initializing database: simpleInventory
   #?
+
   $
   ```
 
@@ -6110,6 +6138,7 @@ file called donors that looked like this:
   ```bash
   $ if grep --quiet find_me big_data.file ; then echo yes ; else echo nope ; fi
   nope
+
   $
   ```
 
@@ -6122,6 +6151,7 @@ file called donors that looked like this:
   ```bash
   $ if grep find_me big_data.file > /dev/null ; then echo yes ; else echo nope ; fi
   nope
+
   $
   ```
 
@@ -6203,6 +6233,7 @@ file called donors that looked like this:
   drwxr-xr-x downloads
   drwxr-sr-x eclipse
   ...
+
   $
   ```
 
@@ -6271,8 +6302,11 @@ file called donors that looked like this:
 
   ```bash
   $ ls -l | grep --invert-match '^total' | awk '{sum += $5}; END {print sum}'
+
   $
+
   $ ls -l | awk '/^total/{next} {sum += $5}; END {print sum}'
+
   $
   ```
 
@@ -6313,6 +6347,7 @@ file called donors that looked like this:
   bin owns 68 files
   root owns 13755 files
   man owns 11491 files
+
   $
   ```
 
@@ -6369,6 +6404,7 @@ file called donors that looked like this:
   bin owns 68 files
   root owns 13755 files
   man owns 11491 files
+
   $
   ```
 
@@ -6432,6 +6468,7 @@ file called donors that looked like this:
   bin [ 68]:#
   root [ 13755]:##################################################
   man [ 11491]:##########################################
+
   $
   ```
 
@@ -6548,6 +6585,7 @@ file called donors that looked like this:
   200
   21
   250
+
   $
   ```
 
@@ -6561,6 +6599,7 @@ file called donors that looked like this:
   21
   200
   250
+
   $
   ```
 
@@ -6581,6 +6620,7 @@ file called donors that looked like this:
   10.0.0.5
   192.168.0.12
   10.0.0.20
+
   $
   ```
 
@@ -6595,6 +6635,7 @@ file called donors that looked like this:
   192.168.0.2
   192.168.0.4
   192.168.0.12
+
   $
   ```
 
@@ -6630,6 +6671,7 @@ file called donors that looked like this:
   5391
   7285
   7286
+
   $
   ```
 
@@ -7205,6 +7247,7 @@ file called donors that looked like this:
     SND_FMT=ogg
   fi
   echo config file loaded
+
   $
   ```
 
@@ -7818,6 +7861,7 @@ file called donors that looked like this:
     nul|number|order* ) # Num./ordered list (## = level 2, + = multiline element)
     term ) # Terms
     cleanup ) ## Clean up all the xHTML/XML/PDF cruft
+
   $
   ```
 
