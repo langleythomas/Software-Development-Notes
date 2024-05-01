@@ -66,6 +66,7 @@ to install it with a lint to an external link or reference to a section in this 
 - cp
 - curl
 - cut
+- date
 - declare
 - dig
 - dirname
@@ -83,6 +84,7 @@ to install it with a lint to an external link or reference to a section in this 
 - file
 - find
 - fmt
+- gawk
 - getopts
 - git
 - gpasswd
@@ -7888,84 +7890,81 @@ file called donors that looked like this:
 
 ### Working with Dates & Times
 
-- 
+- Regardless of whether you're writing a shell script or a much larger program, timekeeping is full of complexities: different formats for displaying the time and date, Daylight Saving Time, leap years, leap seconds, etc.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Computers are very good at keeping time accurately, particularly if thjey are using the Network Time Protocol (NTP) to keep themselves synced with national and international time standards. They're also great at understanding the variations in Daylight Saving Time from locale to locale.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- To work with time in a shell script, use the Unix `date` command (or, even better, the GNU version of the `date` command). `date` is capable of displaying dates in different formats and even doing arithmetic correctly.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
+- `gawk` (the GNU version of `awk`) has the same `strftime` formatting as the GNU `date` command. The GNU `date` it much easier to use than the `gawk`, but keep `gawk` in mind if you are using a system that has `gawk` but not `date`.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Formatting Dates for Display
 
-- 
+- Use the `date` command with a `strftime` format specification when you need to format dates or times for output.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  # Setting environment variables can be helpful in scripts:
+  $ STRICT_ISO_8601='%Y-%m-%dT%H:%M:%S%z' # Strict ISO 8601 format
+  $ ISO_8601='%Y-%m-%d %H:%M:%S %Z'       # Almost ISO8601, but more human-readable
+  $ ISO_8601_1='%Y-%m-%d %T %Z'           # %T is the same as %H:%M:%S
+  $ DATEFILE='%Y%m%d%H%M%S'               # Suitable for use in a filename
+
+  $ date "+$ISO_8601"
+  2006-05-08 14:36:51 CDT
+
+  $ gawk "BEGIN {print strftime(\"$ISO_8601\")}"
+  2006-12-07 04:38:54 EST
+
+  # Same as previous $ISO_8601
+  $ date '+%Y-%m-%d %H:%M:%S %Z'
+  2006-05-08 14:36:51 CDT
+
+  $ date -d '2005-11-06' "+$ISO_8601"
+  2005-11-06 00:00:00 CST
+
+  $ date "+Program starting at: $ISO_8601"
+  Program starting at: 2006-05-08 14:36:51 CDT
+
+  $ printf "%b" "Program starting at: $(date '+$ISO_8601')\n"
+  Program starting at: $ISO_8601
+
+  $ echo "I can rename a file like this: mv file.log file_$(date +$DATEFILE).log"
+  I can rename a file like this: mv file.log file_20060508143724.log
+  ```
+
+- On some systems, the `date` command is more picky about the placement of the `+` than on others. It is recommended to explicitly add the `+` to the `date` command rather than in the environment variables.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Unless otherwise specified, the time zone is assumed to be the local time, as defined by your system. The `%z` format is a non-standard extension used by the GNU `date` command; it may not work on your system.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- *ISO 8601* is the recommended is the recommended standard for displaying dates and times and should be used if all possible.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  - It is a recognised standard.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+
+  - It is unambiguous.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+
+  - It is easy to read while still being easy to parse programatically (e.g., using `awk` or `cut`).
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+
+  - It sorts as expected when used in columnar data or in file names.
+    [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+
+- Try to avoid *DD/MM/YY* or *MM/DD/YY* (or, even worse, *D/M/YY* or *M/D/YY*) date formats. They do not sort well, and they are ambigiuous, since either the day or the month may come first depending on geographical location, also making them hard to parse.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
+- Use 24-hour time when possible to avoid even more ambiguity and parsing problems.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Supplying a Default Date
@@ -8052,85 +8051,35 @@ file called donors that looked like this:
 
 #### Converting Dates & Times to Epoch Seconds
 
-- 
+- Epoch seconds are the number of seconds since the epoch: midnight, 1st of January, 1970, also known as 970-01-01T00:00:00.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- Use the GNU `date` command with the non-standard `--date=STRING` option and a standard `%s` format when you want to convert a data and time to epoch seconds to make it easier to do date and time arithmetic. The `date [--date=STRING] '+%s'` command starts at the epoch, adds the epoch seconds, and displays the date and time as you wish.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # "Now" is easy
+  $ date '+%s'
+  1131172934
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  # Some other time needs the nonstandard -d
+  $ date --date="2005-11-05 12:00:00 +0000" '+%s'
+  1131192000
+  ```
 
 #### Converting Epoch Seconds to Dates & Times
 
-- 
+- Use the GNU `date` command with your desired format to convert epoch seconds to a human-readable date and time.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ EPOCH='1131173989'
+  $ date --date="1970-01-01 UTC $EPOCH seconds" +"%Y-%m-%d %T %z"
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  2005-11-05 01:59:49 -0500
+  $ date --utc --date="1970-01-01 $EPOCH seconds" +"%Y-%m-%d %T %z"
+  2005-11-05 06:59:49 +0000
+  ```
 
 #### Getting Yesterday or Tomorrow with Perl
 
@@ -8175,44 +8124,61 @@ file called donors that looked like this:
 
 #### Figuring Out Date & Time Arithmetic
 
-- 
+- If you can't get the answer for some kind of arithmetic with dates and times using the `date` command, convert your existing dates and times to epoch seconds using [Converting Dates \& Times to Epoch Seconds](#converting-dates--times-to-epoch-seconds).
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- For example, if you have a machine that is two days out of sync. That should not happen as every machine should already be using the Nework Time Protocol, but just for the sake of argument in this example.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+  ```bash
+  CORRECTION='172800' # 2 days' worth of seconds
+
+  # Code to extract the date portion from the data
+  # into $bad_date goes here
+  # Suppose it's this:
+
+  bad_date='Jan 2 05:13:05' # syslog-formatted date
+
+  # Convert to epoch second using GNU date
+  bad_epoch=$(date -d "$bad_date" '+%s')
+
+  # Apply correction
+  good_epoch=$(( bad_epoch + $CORRECTION ))
+
+  # Make corrected date human-readable, with GNU date
+  good_date=$(date -d "1970-01-01 UTC $good_epoch seconds")
+  good_date_iso=$(date -d "1970-01-01 UTC $good_epoch seconds" +'%Y-%m-%d %T')
+  Date
+  echo "bad_date: $bad_date"
+  echo "bad_epoch: $bad_epoch"
+  echo "Correction: +$CORRECTION"
+  echo "good_epoch: $good_epoch"
+  echo "good_date: $good_date"
+  echo "good_date_iso: $good_date_iso"
+
+  # Code to insert the $good_date back into the data goes here
+  ```
+
+- Dealing with any kind of arithmetic is much easier using epoch seconds than any other format. You don't need to worry about hours, days, weeks, or years; you just do some simple addition or subtraction and you're all set. Using epoch seconds also avoids all the rules about leap years and leap seconds, and if you standardise on one time zone (usually UTC, formerly known as GMT), you can even avoid time zones.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
+- A conversion table of common epoch time values that may be of use.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
+  | **Seconds** | **Minutes** | **Hours** | **Days** | **Years** |
+  |:-----------:|:-----------:|:---------:|:--------:|:---------:|
+  |      60     |      1      |    N/A    |    N/A   |    N/A    |
+  |     300     |      5      |    N/A    |    N/A   |    N/A    |
+  |     600     |      5      |    N/A    |    N/A   |    N/A    |
+  |    3,600    |      60     |     1     |    N/A   |    N/A    |
+  |    18,000   |     300     |     5     |    N/A   |    N/A    |
+  |    36,000   |     600     |     10    |    N/A   |    N/A    |
+  |    86,400   |    1,400    |     24    |     1    |    N/A    |
+  |   172,800   |    2,880    |     48    |     2    |    N/A    |
+  |   604,800   |    10,080   |    168    |     7    |    N/A    |
+  |  1,209,600  |    20,160   |    336    |    14    |    N/A    |
+  |  2,592,000  |    43,200   |    720    |    30    |    N/A    |
+  |  31,536,000 |   525,600   |   8,760   |    365   |     1     |
 
 #### Handling Time Zones, Daylight Saving Time, & Leap Years
 
