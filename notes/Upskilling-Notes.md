@@ -8182,43 +8182,7 @@ file called donors that looked like this:
 
 #### Handling Time Zones, Daylight Saving Time, & Leap Years
 
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
-  [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
-
-- 
+- Instead of wanting to account for time zones, Daylight Saving Time, and leap years or seconds, don't actually do that. Use a tool instead of having to find and resolve the many intricacies of multiple time zones, Daylight Saving Time, and leap years or seconds.
   [O'Reilly: `bash` Cookbook, 2nd Edition](#oreilly-bash-cookbook-2nd-edition)
 
 #### Using `date` & `cron` to Run a Script on the Nth Day
