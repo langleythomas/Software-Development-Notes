@@ -70,6 +70,7 @@
     "Bhaal",
     "Bhelrim",
     "Biase",
+    "BIGR",
     "Billius",
     "Bioshock",
     "Bitey",
@@ -102,6 +103,7 @@
     "Calkontor",
     "Callioph",
     "Cannith",
+    "cattt",
     "CDPATH",
     "cendree",
     "Charling",
@@ -208,6 +210,7 @@
     "Fraz",
     "fretty",
     "Frightfinder",
+    "FUNCNAME",
     "Funhaus",
     "Fzoul",
     "Gambel",
@@ -236,6 +239,7 @@
     "Goldsprings",
     "Gonagall",
     "Gorbson",
+    "gpasswd",
     "Greataxe",
     "Greatsword",
     "Gribbits",
@@ -267,6 +271,7 @@
     "Heraldran",
     "Heroku",
     "Hhicken",
+    "HIDN",
     "hogtied",
     "Homebrewery",
     "Homemade",
@@ -551,6 +556,7 @@
     "Sophisma",
     "Soulbound",
     "Soulfire",
+    "sourcepath",
     "Speakeasies",
     "speakeasy",
     "Spearo",
@@ -700,7 +706,6 @@
 
   "explorer.compactFolders": false,
 
-  "files.dialog.defaultPath": "/Repos",
   "files.insertFinalNewline": true,
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
@@ -727,6 +732,7 @@
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontSize": 14,
+  "terminal.integrated.middleClickBehavior": "paste",
   "terminal.integrated.stickyScroll.enabled": true,
 
   "vscode-neovim.neovimExecutablePaths.linux": "nvim",
