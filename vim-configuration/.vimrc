@@ -122,14 +122,3 @@ set confirm
 " Enable Vim to resume editing a file from the previous location
 autocmd BufWinLeave * mkview
 autocmd BufWinEnter * silent loadview
-
-" ---------------------------------------------------------------------------------------------------------------------
-
-" CtrlP
-
-" CtrlP settings
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 0
-
-" ---------------------------------------------------------------------------------------------------------------------
