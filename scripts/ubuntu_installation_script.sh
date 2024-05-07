@@ -240,42 +240,13 @@ function install_vim() {
   print_separator
 }
 
-function install_vim_plugins() {
-  printf "Installing CtrlP.\n"
-  mkdir --verbose --parents ~/".vim/pack/plugins/start"
-  git clone --depth=1 "https://github.com/ctrlpvim/ctrlp.vim.git" ~/".vim/pack/plugins/start/ctrlp"
-
-
-  printf "Installing Dracula Theme.\n"
-  mkdir --parents ~/".vim/pack/themes/start"
-  git clone "https://github.com/dracula/vim.git" ~/".vim/pack/themes/start/dracula"
-}
-
 function configure_vim() {
   printf "Creating Vim configuration directories and .vimrc\n"
   mkdir --verbose --parents ~/".vim" ~/".vim/autoload" ~/".vim/backup" ~/".vim/colors" ~/".vim/plugged"
   touch ~/".vimrc"
 
-  mkdir --verbose --parents ~/".vim/plugin"
-
   curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/vim-configuration/.vimrc" >> ~/".vimrc"
   # There is no need for a source command on the .vimrc, as the .vimrc is automatically read and validated when executing the vim command in a terminal.
-}
-
-function install_neovim() {
-  update_flatpak
-
-  printf "Installing Neovim.\n"
-
-  printf "Downloading Neovim AppImage.\n"
-  curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
-  chmod u+x nvim.appimage
-
-  printf "Exposing nvim Globally.\n"
-  sudo mkdir --parents "/opt/nvim"
-  sudo mv nvim.appimage /opt/nvim/nvim
-
-  print_separator
 }
 
 function install_visual_studio_code() {
@@ -292,10 +263,7 @@ function install_visual_studio_code() {
 
 function call_text_editor_installation_functions() {
   install_vim
-  install_vim_plugins
   configure_vim
-
-  install_neovim
 
   install_visual_studio_code
 }
