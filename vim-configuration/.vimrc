@@ -76,7 +76,13 @@ set title
 set lazyredraw
 
 " Highlight matching curly braces, parentheses and square brackets
-"set showmatch
+set showmatch
+
+" Show (partial) command in the last line of the screen
+set showcmd
+
+" Set column colour at the designated column width
+set colorcolumn=120
 
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -122,3 +128,5 @@ set confirm
 " Enable Vim to resume editing a file from the previous location
 autocmd BufWinLeave * mkview
 autocmd BufWinEnter * silent loadview
+
+" ---------------------------------------------------------------------------------------------------------------------
