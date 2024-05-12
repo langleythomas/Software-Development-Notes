@@ -69,6 +69,7 @@ to install it with a lint to an external link or reference to a section in this 
 - cut
 - date
 - declare
+- diff
 - dig
 - dirname
 - docker
@@ -86,6 +87,8 @@ to install it with a lint to an external link or reference to a section in this 
 - find
 - fmt
 - gawk
+- getconf
+- getopt
 - getopts
 - git
 - gpasswd
@@ -93,6 +96,7 @@ to install it with a lint to an external link or reference to a section in this 
 - gunzip
 - gzcat
 - gzip
+- hash
 - head
 - helm
 - helmfile
@@ -103,6 +107,7 @@ to install it with a lint to an external link or reference to a section in this 
 - ip
 - java
 - jq
+- keychain
 - keytool
 - kill
 - kubectl
@@ -114,6 +119,8 @@ to install it with a lint to an external link or reference to a section in this 
 - lspci
 - lsusb
 - man
+- maparray
+- mapfile
 - mkdir
 - mktemp
 - mtr
@@ -125,6 +132,7 @@ to install it with a lint to an external link or reference to a section in this 
 - nohup
 - npm
 - open
+- openssl
 - ping
 - pip
 - printf
@@ -133,11 +141,14 @@ to install it with a lint to an external link or reference to a section in this 
 - python
 - rd
 - read
+- readarray
 - readline
 - rm
 - rmdir
 - rpm
+- rsync
 - scp
+- script
 - select
 - sed
 - set
@@ -149,8 +160,11 @@ to install it with a lint to an external link or reference to a section in this 
 - sort
 - source
 - ssh
+- ssh-agent
+- ssh-keygen
 - sshpass
 - stat
+- svn
 - tail
 - tar
 - tee
@@ -184,12 +198,19 @@ to install it with a lint to an external link or reference to a section in this 
 ## Microservice Development
 - Lean to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
 
+# Online
+## Automation
+- Secure Unix Programming Checklist (https://web.archive.org/web/20080723191802/http:/www.auscert.org.au/render.html?it=1975)
+
 # Books
 ## Automation
 - Automate the Boring Stuff with Python: Practical Programming for Total Beginners (Humble Bundle)
 ## Security
 - Fundamentals of Information System Security, 4th Edition (To Be Bought)
 - Software Security: Building Security In (To Be Bought)
+- Practical UNIX and Internet Security, 3rd Edition (https://www.oreilly.com/library/view/practical-unix-and/0596003234/)
+- SSH: The Secure Shell: The Definitive Guide, 4th Edition
+- Linux Security Cookbook
 ## Deployment
 - Docker Cookbook (Humble Bundle)
 ## Pipelines
@@ -280,6 +301,184 @@ Unordered List of Topics:
 - vi
 - nano
 - vim
+
+-->
+
+<!-- ## Application Architecture
+
+### Monolith
+
+### Microservice -->
+
+<!-- ## Communication Protocols
+
+### TCP
+
+### UDP -->
+
+<!-- ## Pipelines
+
+### Jenkins
+
+### Spinnaker -->
+
+<!-- ## Programming
+
+### Programming Frameworks
+
+#### .NET
+
+#### React
+
+### Programming Languages
+
+#### C\#
+
+#### Erlang
+
+#### Golang
+
+#### JavaScript (Programming)
+
+#### Python (Programming)
+
+#### Rust
+
+#### TypeScript -->
+
+<!-- ## Scripting
+
+### Scripting Languages
+
+#### Bash
+
+#### JavaScript (Scripting)
+
+#### Python (Scripting) -->
+
+<!-- ## Testing
+
+TODO: Order in which to do this testing.
+
+### Compatibility Testing
+
+### Device Testing
+
+#### Backwards Compatibility Testing
+
+#### Forwards Compatibility Testing
+
+#### Software Testing
+
+### Functional Testing
+
+<https://www.browserstack.com/guide/functional-testing>
+
+#### Integration Testing
+
+<https://www.browserstack.com/guide/integration-testing>
+
+#### Regression Testing
+
+<https://www.browserstack.com/guide/regression-testing>
+
+### Sanity Testing
+
+<https://www.browserstack.com/guide/sanity-testing>
+
+### Performance Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Endurance Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Load Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Scalability Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Stress Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Spike Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+#### Volume Testing
+
+<https://www.browserstack.com/guide/performance-testing>
+
+### Smoke Testing
+
+<https://www.browserstack.com/guide/smoke-testing>
+
+#### Unit Testing
+
+<https://www.browserstack.com/guide/unit-testing-a-detailed-guide>
+
+#### Usability Testing
+
+<https://www.browserstack.com/guide/website-usability-testing>
+
+### User Interface Testing
+
+<https://www.browserstack.com/guide/ui-testing-guide>
+
+#### Exploratory Testing
+
+<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
+
+#### User Experience Testing
+
+<https://www.browserstack.com/guide/ui-testing-tools-and-techniques> -->
+
+<!-- ## Version Control
+
+### Code Collaboration Platforms
+
+#### Gerrit
+
+#### GitHub
+
+##### GitHub Automation
+
+###### Dependabot
+
+###### GitHub Actions
+
+#### GitLab
+
+### Repository
+
+#### Centralised
+
+##### CVS
+
+##### Perforce
+
+##### Subversion
+
+#### Distributed
+
+##### Mercurial
+
+##### Git -->
+
+<!--
+
+## Template
+
+### Overview ()
+
+### Tool Comparison ()
+
+### Detailed Overview ()
 
 -->
 
@@ -565,7 +764,7 @@ Unordered List of Topics:
       - [1.2.15.16. Compressing Whitespace](#121516-compressing-whitespace)
       - [1.2.15.17. Processing Fixed-Length Records](#121517-processing-fixed-length-records)
       - [1.2.15.18. Processing Files with No Line Breaks](#121518-processing-files-with-no-line-breaks)
-      - [1.2.15.19. Converting a Datafile to CSV](#121519-converting-a-datafile-to-csv)
+      - [1.2.15.19. Converting a Data File to CSV](#121519-converting-a-data-file-to-csv)
       - [1.2.15.20. Parsing a CSV Datafile](#121520-parsing-a-csv-datafile)
     - [1.2.16. Writing Secure Shell Scripts](#1216-writing-secure-shell-scripts)
       - [1.2.16.1. Avoiding Common Security Problems](#12161-avoiding-common-security-problems)
@@ -1488,9 +1687,9 @@ Unordered List of Topics:
   [5.7.1. O'Reilly: 97 Things Every Programmer Should Know](#571-oreilly-97-things-every-programmer-should-know)
 
 - Avoid the temptation to rewrite everything. It is best to reuse as much code as possible. No matter how ugly the code
-  is, it has already been tested, reviewed, etc. Throwing away the old code - especially if it was in production - means
-  that you are throwing away months (or years) of tested, battle-hardened code that may have had certain workarounds
-  and bug fixes you aren't aware of.
+  is, it has already been tested, reviewed, etc. Throwing away the old code - especially if it was in production -
+  means that you are throwing away months (or years) of tested, battle-hardened code that may have had certain
+  workarounds and bug fixes you aren't aware of.
   [5.7.1. O'Reilly: 97 Things Every Programmer Should Know](#571-oreilly-97-things-every-programmer-should-know)
 
 - Many incremental changes are better than one massive change. Incremental changes allows you to gauge the impact on
@@ -3250,8 +3449,8 @@ Unordered List of Topics:
 ### 1.1.85. Two Heads Are Often Better Than One
 
 - This "lone wolf" approach to programming has been giving way to a more collaborative approach. This approach has
-  developers working more closely with one another and also with non-developers - business and systems analysts, quality
-  assurance professionals, and users.
+  developers working more closely with one another and also with non-developers - business and systems analysts,
+  quality assurance professionals, and users.
   [5.7.1. O'Reilly: 97 Things Every Programmer Should Know](#571-oreilly-97-things-every-programmer-should-know)
 
 - Collaboration is not about asking and answering questions or sitting in meetings. It's about rolling up your sleeves
@@ -3693,8 +3892,8 @@ Unordered List of Topics:
 - **Finding Files**:
 
   - `locate` and `slocate` consult database files about the system (usually compiled and updated by a job run from the
-    scheduler system `cron`) to find files or commands almost instantly. The location of the actual database files, what
-    is indexed therein, and how often it is checked may vary from system to system.
+    scheduler system `cron`) to find files or commands almost instantly. The location of the actual database files,
+    what is indexed therein, and how often it is checked may vary from system to system.
     [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   - `slocate` (secure locate) stores permission information (in addition to filenames and paths) so that it will not
@@ -4772,8 +4971,6 @@ file called donors that looked like this:
 
   Any accurate documentation is better than none at all.
 
-  Sample documentation in Perl's Plain Old Documentation (POD) format adapted from CODE/ch07/Ch07.001_Best_Ex7.1 and 7.2 in the Perl Best Practices example tarball "PBP_code.tar.gz".
-
   =head1 NAME
 
   MY~PROGRAM--One-line description here
@@ -5437,7 +5634,7 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - The big difference between the first and second examples is the braces. The first example, using parentheses, will
-  launch a subshell to run the executable basename with the argument that is the value of `$FULL_PATH_TO_FILE`. The
+  launch a subshell to run the executable `basename` with the argument that is the value of `$FULL_PATH_TO_FILE`. The
   second example uses curly braces, which is just part of the syntax for evaluating a shell variable - no subshell, no
   executable file. It looks for, and removes from the front of the string (because of the `#`), the longest match
   (because of the double `##`) of the pattern described by the asterisk and the slash (`*/`). The asterisk matches any
@@ -5636,8 +5833,8 @@ file called donors that looked like this:
 
 #### 1.2.7.3. Testing for File Characteristics
 
-- There are several characteristics for which you can test a file. Three of them are tested using binary operators, each
-  taking two filenames.
+- There are several characteristics for which you can test a file. Three of them are tested using binary operators,
+  each taking two filenames.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   ```bash
@@ -6797,9 +6994,9 @@ file called donors that looked like this:
   tar tf some.tar | awk -F/ '{print $1}' | sort --unique
   ```
 
-- The `t` option in the `tar` command will produce the table of contents for the file specified with the file name, `f`.
-  The `awk` command specifies a non-default field separator by using `-F/` to specify a slash as the separator between
-  fields. Thus, the `print $1` will print the first directory name in the path name.
+- The `t` option in the `tar` command will produce the table of contents for the file specified with the file name,
+  `f`. The `awk` command specifies a non-default field separator by using `-F/` to specify a slash as the separator
+  between fields. Thus, the `print $1` will print the first directory name in the path name.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.10.9. Translating Characters
@@ -7786,7 +7983,8 @@ file called donors that looked like this:
   - Easy to use and remember.
     [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-- The following script was written by the authors of this book to parse and process and Asciidoc used to write the book.
+- The following script was written by the authors of this book to parse and process and Asciidoc used to write the
+  book.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   ```bash
@@ -7808,7 +8006,10 @@ file called donors that looked like this:
   action="$1" # Set a more readable name for the command or action we’re going to take.
   shift # Remove the shift argument from the list so we don’t reuse or include it in the input or output later.
 
-  # If the xsel command is available and executable, and we passed no other arguments, then set up the input and output to be from and to the clipboard. That turns this script into an application-generic macro tool! No matter what editor you are using, if you have a GUI and read from and write to the clipboard, if you switch to a terminal session you can copy text, process it, and paste it easily, which is a really handy thing to be able to do!
+  # If the xsel command is available and executable, and we passed no other arguments, then set up the input and
+  # output to be from and to the clipboard. That turns this script into an application-generic macro tool! No matter
+  # what editor you are using, if you have a GUI and read from and write to the clipboard, if you switch to a terminal
+  # session you can copy text, process it, and paste it easily, which is a really handy thing to be able to do!
   [ -x /usr/bin/xsel -a $# -lt 1 ] && {
     # Read/write the clipboard
     text=$(xsel -b)
@@ -7829,8 +8030,11 @@ file called donors that looked like this:
     #######################################################################
     # Content/Markup
 
-    rec|recipe ) Each block in the case..esac is both the code and the documentation. The number of # characters determines the section, so the code can be in whatever order makes sense, but the help/usage can vary from that.
-      id="$($SELF id $text)" # Take the input text and make a recursive call to get an ID out of that, then output the boilerplate markup.
+    rec|recipe ) # Each block in the case..esac is both the code and the documentation. The number of # characters
+                 # determines the section, so the code can be in whatever order makes sense, but the help/usage can
+                 # vary from that.
+      id="$($SELF id $text)" # Take the input text and make a recursive call to get an ID out of that, then output the
+                             # boilerplate markup.
       # Note that inside the here-document the indentation must be tabs.
       Output "$(cat <<- EoF
                   [[$id]]
@@ -7870,7 +8074,8 @@ file called donors that looked like this:
 
   # ...
   ### Headers
-  h1 ) # Inside chapter head 1 (really Asciidoc h3). Sometimes the operation is very simple, like just remembering how many equals signs are needed.
+  h1 ) # Inside chapter head 1 (really Asciidoc h3). Sometimes the operation is very simple, like just remembering how
+       # many equals signs are needed.
     Output "=== $text"
   ;;
 
@@ -7891,20 +8096,25 @@ file called donors that looked like this:
     Output "# $text"
   ;;
 
-  term ) # Terms. Sometimes the operation is a bit more complicated, with embedded newlines and expanded escape characters.
+  term ) # Terms. Sometimes the operation is a bit more complicated, with embedded newlines and expanded escape
+         # characters.
   Output "term_here::\n $text"
   ;;
 
   # ...
 
-  cleanup ) # Clean up all the xHTML/XML/PDF cruft. Actions can do anything you can think of and figure out how to automate!
+  cleanup ) # Clean up all the xHTML/XML/PDF cruft. Actions can do anything you can think of and figure out how to
+            # automate!
     rm -fv {ch??,app?}.{pdf,xml,html} book.xml docbook-xsl.css
   ;;
-  * ) # If you don’t provide any arguments, or provide incorrect arguments, even including ones like -h or --help, you get a generated usage message.
+  * ) # If you don’t provide any arguments, or provide incorrect arguments, even including ones like -h or --help, you
+      # get a generated usage message.
     \cd - > /dev/null # UGLY cheat to revert the 'cd' above...
     # See also: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
     
-    # We wrap the blocks in a () subshell to get the output in the right order and send it all into the more command. The two egrep commands display our case..esac section lines, as in , which are both code and documentation, grouped by the count of # characters (one or two).
+    # We wrap the blocks in a () subshell to get the output in the right order and send it all into the more command.
+    # The two egrep commands display our case..esac section lines, as in , which are both code and documentation,
+    # grouped by the count of # characters (one or two).
 
     ( echo "Usage:"
     egrep '\)[[:space:]]+# ' $SELF
@@ -8083,7 +8293,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.13.3. Automating Date Ranges
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8161,6 +8473,57 @@ file called donors that looked like this:
   ```
 
 #### 1.2.13.6. Getting Yesterday or Tomorrow with Perl
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8313,7 +8676,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.13.10. Logging with Dates
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8401,7 +8866,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.14.2. Viewing Photos in an Album
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8483,7 +9050,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.14.4. Burning a CD
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8547,7 +9216,8 @@ file called donors that looked like this:
     echo "Where both files must be .odt files"
     exit $1
   } >&2 # This line redirects all the output from this shell function to STDERR.
-        # Putting the redirect on the function definition means we don't need to remember to redirect every output line separately.
+        # Putting the redirect on the function definition means we don't need to remember to redirect every output line
+        # separately.
 
   # Assure two readable arg filenames which end in .odt
   if (( $# != 2 ))
@@ -8573,7 +9243,9 @@ file called donors that looked like this:
   FIRST_PRIVATE_FILE_NAME="/tmp/${FIRST_FILE_NAME}.$$_1"
   SECOND_PRIVATE_FILE_NAME="/tmp/${SECOND_FILE_NAME}.$$_2"
 
-  # Extracting the absolute path to the first file name. The '${1:0:1}' means that: the first script parameter (indicated by the '${1}') is used to extract a substring one character long (indicated by the ':0:1')
+  # Extracting the absolute path to the first file name.
+  # The '${1:0:1}' means that: the first script parameter (indicated by the '${1}') is used to extract a substring one
+  # character long (indicated by the ':0:1')
   HERE=$PWD
   if [[ ${1:0:1} == '/' ]]
   then
@@ -8582,7 +9254,9 @@ file called donors that looked like this:
     FIRST_FULL_FILE_NAME="${HERE}/${1}"
   fi
 
-  # Extracting the absolute path to the second file name. The '${2:0:1}' means that: the second script parameter (indicated by the '${1}') is used to extract a substring one character long (indicated by the ':0:1')
+  # Extracting the absolute path to the second file name.
+  # The '${2:0:1}' means that: the second script parameter (indicated by the '${1}') is used to extract a substring one
+  # character long (indicated by the ':0:1')
   HERE=$PWD
   if [[ ${2:0:1} == '/' ]]
   then
@@ -8599,7 +9273,9 @@ file called donors that looked like this:
 
   cd "$PRIV1"
   unzip -q "$FULL1"
-  # The following sed command means that each '>' is taken in the first substitution and each `>` in the second substitution, and replaces both plus itself with a newline. This is applies to an XML file and get the contents on lines by itself. This means the 'diff' command doesn't show any XML tags, just content text.
+  # The following sed command means that each '>' is taken in the first substitution and each `>` in the second
+  # substitution, and replaces both plus itself with a newline. This is applied to an XML file and get the contents on
+  # lines by itself. This means the 'diff' command doesn't show any XML tags, just content text.
   sed -e 's/>/>\
   /g' -e 's/</\
   </g' content.xml > contentwnl.xml
@@ -8607,128 +9283,228 @@ file called donors that looked like this:
 
 ### 1.2.15. Parsing & Similar Tasks
 
--
+- Some of the recipes in this chapter include the parsing of command-line arguments.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Some Linux commands also allow long-form options. No long-format options will be shown in this section, but they
+  could be possible using the techniques shown in this section. The best way to parse long argument is using the
+  `getopt` command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.1. Parsing Arguments for Your Shell Script
 
--
+- If you want to have some options to execute your shell script using some flags that users that users can use to
+  alter its behaviour, you could do the parsing directory. You could use `${}` to tell you how many arguments have
+  been supplied and using `${1:0:1}` to test the first character of the first argument to see if it's a minus sign. You
+  would then need some `if`/`then` or `case` logic to identify which option it is and whether it takes an argument.
+  This solution assumes a user actually supplies a required argument, and doesn't call your script with two options
+  combined, e.g., `-ab`.  The best way to parse long arguments is to use the `getopt` (no `s`) command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The need to parse options for a shell script is a common situation. Lots of scripts have options. You can use
+  `bash`'s built-in `getopts` command to help parse options.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: getopts_example
+  #
+  # using getopts
+  #
+
+  a_flag=
+  b_flag=
+
+  while getopts 'ab:' OPTION
+  do
+    case $OPTION in
+      a) a_flag=1
+        ;;
+      b) b_flag=1
+        b_value="$OPTARG"
+        ;;
+      ?) printf "Usage: %s: [-a] [-b value] args\n" ${0##*/} >&2
+        exit 2
+        ;;
+    esac
+  done
+
+  shift $(($OPTIND - 1))
+
+  if [ "$a_flag" ]
+  then
+    printf "Option -a specified\n"
+  fi
+
+  if [ "$b_flag" ]
+  then
+    printf 'Option -b "%s" specified\n' "$b_value"
+  fi
+
+  printf "Remaining arguments are: %s\n" "$*"
+  ```
+
+- There are two kinds of options supported in the script shown in the previous code block.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - The first and simpler kind is a standalone option. It typically represents a flag to modify a command's behaviour.
+    For example, the `-l` option on the `ls` command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - The second kind of option requires an option. For example, the `-u` option in the `mysql` command, which requires a
+    username to be supplied.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `getopts` takes two arguments: `getopts 'ab:' OPTION`. In this example, we are defining `-a` and `-b` as the only
+    two valid options, so the first argument to `getopts` has just those two letters. The colon signifies that `-b`
+    needs argument, like `-u <username>` or `-f <file_name>`. The only needs to be adjacent to any option letter(s)
+    taking an argument.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- Inside the loop in this section's previous code block example, when the parsing has found an option letter for
+  parsing, we use a `case` statement on the variable `$OPTION` to set flags or otherwise take action when the option is
+  encountered. For options for that arguments, that argument is placed in the shell variable `$OPTARG` (a fixed name
+  not related to our use of `$OPTION` as our variable). The value of `$OPTARG` needs to be saved to another variable,
+  as it will be reset on each call to `getopts` as the parsing continues to loop.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The third case in the `case` statement in this section's code block example is a question mark, a shell pattern that
+  matches any single character. When `getopts` find an option that is not set in the set of expected options, it will
+  return a literal question mark in the variable.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- While the `while` loop terminates in this section's code block example, the next line to be executed is:
+  `shift $(($OPTIND - 1))`, which moves the positional parameters of the shell script from `$1`, `$2`, etc., down a
+  given number of positions (discarding the lower ones). The variable `$OPTIND` is an index into the arguments that
+  `getopts` uses to keep track of where it parses.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.2. Parsing Arguments with Your Own Error Messages
 
--
+- You can use `getopts` to write your own error handling in the case where you don't like the error messages outputted
+  when `getopts` encounters bad input.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you want `getopts` to not report any errors at all, assign `OPTERROR=0` before you begin parsing arguments.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you want `getopts` to give you more information without the error messages, then begin the option list with a
+  colon, as shown in the following example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - This example means that `getopt` now return a colon when an option is missing. In that case, it puts the option
+    letter into `$OPTARG` to help determine what option it was that was missing its argument.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - If an unsupported option is given, `getopts` returns a question mark as the value for `$FOUND`, and puts the
+    letter into `$OPTARG` so that it can be used in the error messages.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - A backslash is placed preceding the `:` and `?` to indicate that these are literals and not any special patterns
+    or shell syntax.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: getopts_custom
+  #
+  # using getopts - with custom error messages
+  #
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  a_flag=
+  b_flag=
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Since we don't want getopts to generate error
+  # messages, but want this script to issue its
+  # own messages, we will put, in the option list, a
+  # leading ':' to silence getopts.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  while getopts :ab: FOUND
+  do
+    case $FOUND in
+      a) a_flag=1
+        ;;
+      b) b_flag=1
+        b_value="$OPTARG"
+        ;;
+      \:) printf "argument missing from -%s option\n" $OPTARG
+        printf "Usage: %s: [-a] [-b value] args\n" ${0##*/}
+        exit 2
+        ;;
+      \?) printf "unknown option: -%s\n" $OPTARG
+        printf "Usage: %s: [-a] [-b value] args\n" ${0##*/}
+        exit 2
+        ;;
+    esac >&2
+  done
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  shift $(($OPTIND - 1))
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if [ "$a_flag" ]
+  then
+    printf "Option -a specified\n"
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if [ "$b_flag" ]
+  then
+    printf 'Option -b "%s" specified\n' "$b_value"
+  fi
+
+  printf "Remaining arguments are: %s\n" "$*"
+  ```
 
 #### 1.2.15.3. Parsing Some HTML
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8810,7 +9586,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.15.5. Parsing Output with a Function Call
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -8853,128 +9731,99 @@ file called donors that looked like this:
 
 #### 1.2.15.6. Parsing Text with a `read` Statement
 
--
+- Use the `read` command if you don't want to use a function.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `read` separates the input into words (where words are separated by white-space) and assign each word to the
+  variables named in the `read` statement. You can even change the separator by setting the `bash` `$IFS` (internal
+  field separator) variable, just ensure to set it back to its default.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The output of the following script shows that as `FILE` is the last word, any extra fields will also be part of that
+  variable. That way, if the last variable has white-space, then all words in that script will be assigned to `$FILE`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: parseViaRead
+  #
+  # Parse ls -l with a read statement
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # An example of output from ls -l follows:
+  # -rw-r--r-- 1 owner group 126 2006-10-10 22:50 fnsize
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ls -l "$1" | { read PERMS LCOUNT OWNER GROUP SIZE CRDATE CRTIME FILE ;
+  echo $FILE has $LCOUNT 'link(s)' and is $SIZE bytes long. ;
+  }
+  ```
 
 #### 1.2.15.7. Parsing with `read` into an Array
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Using the `-a`- option on the `read` command means each word will be read into an array variable. `read` will parse
+  the input into words, putting into word in its own array element. The variable does not need to be declared as an
+  array - assigning it in this fashion is enough to make it it into an array. Each element can be referenced with the
+  `bash` array syntax. The number of words will determine the size of the array.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.8. Reading an Entire File
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Use the `mapfile` or `readarray` commands in `bash` to read in a whole file and parse it. They are identical commands
+  that take the same arguments and let you read an entire file into an array, one entry for each line of the file with
+  one statement.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.9. Getting Your Plurals Right
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9056,7 +9905,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.15.11. Cleaning Up an SVN Source Tree
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9138,7 +10089,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.15.13. Isolating Specific Fields in Data
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9220,7 +10273,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.15.15. Trimming Whitespace
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9302,7 +10457,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.15.17. Processing Fixed-Length Records
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9384,7 +10641,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.15.19. Converting a Datafile to CSV
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+#### 1.2.15.19. Converting a Data File to CSV
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9466,212 +10825,264 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 ### 1.2.16. Writing Secure Shell Scripts
 
--
+- Any system that depends on concealing implementation details is attempting to use security by obscurity, and that is
+  no security at all.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Security by obscurity will never work for long, though some forms of it can be a useful additional layer of security.
+  It must never be the only layer of security, because (sooner or later) someone is going to discover whatever you've
+  hidden.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Secure shell scripts will reliably do what they are supposed to do, and only what they are supposed to do. They won't
+  lead to themselves being exploited to gain root access, they won't accidentally `rm -rf /`, and they won't leak
+  information, such as passwords. They will be robust, but will fail gracefully. They will tolerate inadvertent user
+  mistakes and sanitise all user input. They will be as simple as possible, and contain only clear, readable code and
+  documentation so that the intention of each line in unambiguous.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.1. Avoiding Common Security Problems
 
--
+- When you want to avoid common security problems in your scripting:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - Validate all external input, e.g., interactive input, configuration files, interactive use. Never `eval` input
+    that you have not checked thoroughly.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Use secure temporary files, ideally in secure temporary directories.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Ensure you are using trusted external executables.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- Date validation (or rather the lack of it) is a huge deal in computer security right now. It is a problem that leads
+  to buffer overflow and data injection attacks, which are the most common classes of exploit. `bash` doesn't suffer
+  from this issue in the same way that C does, but the concepts are the same. In the `bash` world, it's more likely
+  that unvalidated input will contain something like `;rm -rf \` than a buffer overflow.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Race conditions are another big issue, closely tied to the problem of an attacker gaining an ability to write over
+  unexpected files. A race conditions exists when two or more separate events must occur in the correct order at the
+  correct time without external interference. They often result in providing an unprivileged user with read and/or
+  write access to files that the user shouldn't be able to access, which can result in privilege escalation, where an
+  ordinary user can gain root access. Insecure user of temporary files is a very common factor in this form of attack.
+  Using secure temporarily files (especially inside secure temporary directories) will eliminate this attack vector.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Another common attack vector is Trojaned utilities. They appear to be one thing, when they are in fact something
+  else. Using a secure `$PATH` is the best way to avoid that from the scripting side. From the system side, there are
+  many tools to help you assure system integrity, such as FCheck, Tripwire, and AIDE.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.2. Avoiding Interpreter Spoofing
 
--
+- Pass a single trailing `-` dash to the shell when you want to avoid certain kinds of `setuid root` spoofing attacks.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/bin/bash -
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The first line of the script (the *shebang* line) tells the kernel which interpreter to use to process the rest of
+  the file. The kernel will also look for a single option to the specified interpreter. There are some attacks that
+  take advantage of this fact. This attach can be avoided if you pass an argument to the *shebang*. However,
+  hard-coding the path to `bash` may present a portability issue.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.3. Setting a Secure `$PATH`
 
--
+- Set `$PATH` to a known good state at the beginning of every script to ensure you are using a secure path.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Set a sane/secure path
+  PATH='/usr/local/bin:/bin:/usr/bin'
+
+  # It's almost certainly already marked for export, but make sure
+  export PATH
+  ```
+
+- Or use the `getconf` utility to get a path guaranteed by POSIX to find all the standard utilities.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  export PATH=$(getconf PATH)
+  ```
+
+- Depending on your security risk and needs, you should also consider using absolute paths. This tends to be cumbersome
+  and can be an issue where portability is concerns, as different operating systems put tools in different places.
+  One way to mitigate these issues (to some extent) is to use variables.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: finding_tools
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Export may or may not also be needed, depending on what you are doing
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # These are fairly safe bets
+  _cp='/bin/cp'
+  _mv='/bin/mv'
+  _rm='/bin/rm'
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # These are a little trickier
+  case $(/bin/uname) in
+    Linux')
+      _cut='/bin/cut'
+      _nice='/bin/nice'
+      # [...]
+      ;;
+    'SunOS')
+      _cut='/usr/bin/cut'
+      _nice='/usr/bin/nice'
+      # [...]
+    ;;
+    # [...]
+  esac
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Be careful about the variable names you use. Some programs (like InfoZip) use environment variables such as `$ZIP`
+  and `$UNZIP` to pass settings to the program itself.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.4. Clearing All Aliases
 
--
+- Use the `\unalias -a` command to unalias any existing aliases to ensure there are no malicious alias in your
+  environment.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If an attacker can trick `root` or even another user into running a command, they will be able to gain access to
+  data or privileges they shouldn't have. One way to trick another user into running a malicious program is to create
+  an alias to some other common program, e.g., `ls`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The leading `\` is very important, because without it, you can be tricked.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ alias unalias=echo
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ alias builtin=ls
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ builtin unalias vi
+  ls: unalias: No such file or directory
+  ls: vi: No such file or directory
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ unalias -a
+  -a
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Since the shell finds shell functions before builtins in command search (and allows functions to be exported in the
+  environment), it might be worth stressing to use `builtin` before every builtin command. Use `command` to skip
+  function lookup, or just `unset` every function you might be interested in using.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.5. Clearing the Command Hash
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9753,7 +11164,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.16.7. Setting a Secure `$IFS`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9835,7 +11348,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.16.9. Finding World-Writeable Directories in Your `$PATH`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9917,7 +11532,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.16.11. Using Secure Temporary Files
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -9960,128 +11677,157 @@ file called donors that looked like this:
 
 #### 1.2.16.12. Validating Input
 
--
+- When you've asked for input (e.g., from a user or a program), and to ensure security or data integrity, you need to
+  ensure the correct data has been provided.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- There are various ways to validate your input, depending on what the input is and how strict you need to be. In order
+  to validate your input, use pattern matching for simple "it matches or it doesn't" situations.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # cookbook filename: validate_using_case
+  case $raw_input in
+    *.company.com ) # Probably a local hostname
+      ;;
+    *.jpg ) # Probably a JPEG file
+      ;;
+    *.[jJ][pP][gG] ) # Probably a JPEG file, case-insensitive
+      ;;
+    foo | bar ) # Entered 'foo' or 'bar
+      ;;
+    [0-9][0-9][0-9] ) # A 3-digit number
+      ;;
+    [a-z][a-z][a-z][a-z] ) # A 4-lowercase-char word
+      ;;
+    * ) # None of the above
+      ;;
+  esac
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Use a regular expression when pattern matching isn't specific enough and you have `bash` version 3.0+.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.13. Setting Permissions
 
--
+- If you need to set exact permissions for security reasons (or sure you are that you don't care what is already there,
+  and you just need to change it), use `chmod` with four-digit octal modes.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  chmod 0755 <some_script>
+  ```
+
+- If you only want to add or remove permissions, but need to lave other existing permissions unchanged, use the `+` and
+  `-` operations in symbolic mode, respectively.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  chmod +x <some_script>
+  ```
+
+- If you try to recursively set permissions on all the files in a directory structure, then you'll have rendered any
+  sub-directories non-executable, which means won't be able to access their content, or traverse below them.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  chmod -R 0644 some_directory
+  ```
+
+- Use `find` and `xargs` with `chmod` to set the files and directories individually.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # For file permissions.
+  find some_directory -type f -print0 | xargs -0 chmod 0644
+
+  # For directory permissions.
+  find some_directory -type d -print0 | xargs -0 chmod 0755
+  ```
+
+- When creating a directory, use `mkdir -m <mode> <new_directory>` since you not only accomplish two tasks with one
+  command, but you avoid any possible race condition between creating the directory and setting the permissions.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- While it is possible to use three-digit octal modes, it is best to use four-digit octal modes to be explicit about
+  what we mean to do with all attributes. It is best to use octal mode when possible because it's very clear what
+  permissions you are going to end up with.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Before you adjust the permissions on a large group of files, thoroughly test your command, you may also want to back
+  up the permissions and owners of the files.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.14. Leaking Passwords into the Process List
 
--
+- `ps` may show passwords entered in plain-text on the command line.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Don't use passwords on the command line.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Many applications that provide a `-p` or similar switch will also prompt you if a password is required and you do not
+  provide it on the command line. That's great for interactive us, but not in scripts. If the command can accept the
+  password on STDIN, you may be able to pass it in that way. That creates other problems, but it at least avoids
+  displaying the password in the process list.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  ./bad_app < ~/.hidden/bad_apps_password
+  ```
 
 #### 1.2.16.15. Writing `setuid` or `setgid` Scripts
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10163,7 +11909,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.16.17. Using `chroot` Jails
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10245,7 +12093,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.16.19. Using `sudo` More Securely
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10288,87 +12238,107 @@ file called donors that looked like this:
 
 #### 1.2.16.20. Using Passwords in Scripts
 
--
+- It is a bad idea to hard-code a password in a script and so it should be avoided whenever possible. Unfortunately, it
+  isn't possible to avoid it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The first way to try to avoid doing this is to see if you can use `sudo` with the `NOPASSWD` option to avoid having
+  to hard-code a password anywhere.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Another alternative may be to use SSH with public keys and ideally restricted commands.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If there is no other way around it, the best option is to put the user ID and password in a separate file that is
+  read-only by the user who needs it, then source that file when necessary. Ensure to exclude that file from version
+  control.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.21. Using SSH Without a Password
 
--
+- There are two ways to use SSH without a password: the wrong way and the right way.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - The wrong way is use a public key that is not encrypted by a passphrase.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - The right way it to use a passphrase-protected public key with `ssh-agent` or `keychain`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - First, you need to create a key pair if you don't already have one. Only one key pair is necessary to
+      authenticate you to as many machines as you configure, but you may decide to use more than one key pair, perhaps
+      for a myriad of reasons.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - Use `ssh-keygen` (this might be `ssh-keygen2` if you're not using OpenSSH) to create a key pair.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - Once you have a key pair, add your public key to the `~/.ssh/authorized_keys` file in your home directory on any
+      other machines to which you wish to connect using this key pair. You can do this by accessing the remote server
+      with commands like `scp` or `ssh`.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- When using SSH in a script, you don't want to be prompted to authenticate or have extraneous warning displayed. The
+  `-q` option will turn on quiet mode and suppress warning while `-o BatchMode yes` will prevent user prompts. If there
+  is no way for SSH to authenticate itself, it will fail, since it can't even fall back to prompting for a password.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If `keychain` doesn't seem to be working, or if it works for a while then seems to stop, you may have another script
+  somewhere else rerunning `ssh-agent` and getting things out of sync.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.22. Restricting SSH Commands
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10450,7 +12420,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 ### 1.2.17. Advanced Scripting
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10532,7 +12604,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.2. Setting a POSIX `$PATH`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10614,7 +12788,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.4. Testing Scripts Using Virtual machines
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10696,7 +12972,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.6. Using `echo` Portably
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10778,7 +13156,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.8. Viewing Output in Hex
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10860,7 +13340,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.10. Finding My IP Address
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10942,7 +13524,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.12. Redirecting Output for the Life of a Script
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11024,7 +13708,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.14. Logging to `syslog` from Your Script
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11106,7 +13892,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.16. Sending Email from Your Script
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11188,7 +14076,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.17.18. Doing Two Things at Once
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11270,7 +14260,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 ### 1.2.18. Configuring & Customising `bash`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11352,7 +14444,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.2. Customising Your Prompt
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11434,7 +14628,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.4. Changing Your `$PATH` Permanently
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11516,7 +14812,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.6. Setting Your `$CDPATH`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11598,7 +14996,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.8. Shorting or Changing Command Names
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11680,7 +15180,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.10. Adjusting `readline` Behaviour Using `.inputrc`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11762,7 +15364,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11844,7 +15548,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.14. Setting Shell History Options
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11926,7 +15732,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.16. Creating & Changing Into a New Directory in One Step
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12008,7 +15916,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.18. Adding New Features to `bash` Using Loadable Builtins
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12090,7 +16100,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.20. Using Initialisation Files Correctly
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12172,7 +16284,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.18.22. Getting Start with a Custom Configuration
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12254,7 +16468,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.1. Renaming Many Files
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12336,7 +16652,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.3. Unzipping Many ZIP Files
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12418,7 +16836,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.5. Sharing a Single `bash` Session
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12500,7 +17020,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.7. Clearing the Screen When You Log Out
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12582,7 +17204,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.9. Creating an Index of Many Files
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12664,7 +17388,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.11. Counting Differences in Files
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12746,7 +17572,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.13. Prepending Data to a File
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12828,7 +17756,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.15. Using `sudo` on a Group of Commands
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12910,7 +17940,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.17. Keeping the Most Recent N Objects
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12992,7 +18124,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.19. Circular Backups
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13074,7 +18308,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.21. Finding Out Whether a Process Is Running
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13156,7 +18492,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.23. Numbering Lines
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13238,7 +18676,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.19.25. Emulating the DOS Pause Command
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13320,7 +18860,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 ### 1.2.20. Working Faster by Typing Less
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13402,7 +19044,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.20.2. Repeating the Last Command
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13484,7 +19228,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.20.4. Reusing Arguments
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13566,7 +19412,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.20.6. Playing It Safe
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13648,7 +19596,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 ### 1.2.21. Tips & Traps: Common Goofs for Notices
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13730,7 +19780,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.2. Fixing `"No such file or directory"` Errors
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13812,7 +19964,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.4. Naming Your Script `"test"`
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13894,7 +20148,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.6. Forgetting Quotes Leads to `"command not found"` on Assignments
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13976,7 +20332,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.8. Forgetting that Pipelines Make Subshells
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -14058,7 +20516,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.10. Deleting Files Using an Empty Variable
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -14140,7 +20700,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.12. Testing `bash` Script Syntax
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -14222,6 +20884,57 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.14. Avoid `"command not found"` When Using Functions
 
 -
@@ -14263,7 +20976,109 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
 #### 1.2.21.15. Confusing Shell Wildcards & Regular Expressions
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+-
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -16004,7 +22819,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.4.6. Prototypes & Post-It Notes
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16072,7 +23063,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.4.8. Estimating
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16140,7 +23307,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.5.1. The Power of Plain Text
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16208,7 +23551,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.5.3. Power Editing
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16276,7 +23795,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.5.5. Debugging
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16344,7 +24039,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.5.7. Engineering Daybooks
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16412,7 +24283,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.6.1. Design by Contract
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16480,7 +24527,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.6.3. Assertive Programming
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16548,7 +24771,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.6.5. Don't Outrun Your Headlights
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16616,7 +25015,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.7.1. Decoupling
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16684,7 +25259,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.7.3. Transforming Programming
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16752,7 +25503,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.7.5. Configuration
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16820,7 +25747,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.8.1. Breaking Temporal Coupling
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16888,7 +25991,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.8.3. Actors & Processes
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -16956,7 +26235,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 ### 1.3.9. While You Are Coding
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17024,7 +26479,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.9.2. Programming by Coincidence
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17092,7 +26723,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.9.4. Refactoring
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17160,7 +26967,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.9.6. Property-Based Testing
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17228,7 +27211,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.9.8. Naming Things
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17296,7 +27455,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.10.1. The Requirements Pit
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17364,7 +27699,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.10.3. Working Together
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17432,7 +27943,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 ### 1.3.11. Pragmatic Projects
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17500,7 +28187,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.11.2. Coconuts Don't Cut It
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17568,6 +28431,94 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.11.4. Delight Your Users
 
 -
@@ -17602,7 +28553,183 @@ file called donors that looked like this:
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
 #### 1.3.11.5. Pride & Prejudice
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+
+-
+  [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
@@ -17818,18 +28945,6 @@ file called donors that looked like this:
   ```
 
 # 3. Online Notes
-
-<!-- ## Application Architecture
-
-### Monolith
-
-### Microservice -->
-
-<!-- ## Communication Protocols
-
-### TCP
-
-### UDP -->
 
 ## 3.1. Databases
 
@@ -18454,128 +29569,6 @@ file called donors that looked like this:
 
 </details>
 
-<!-- ## Pipelines
-
-### Jenkins
-
-### Spinnaker -->
-
-<!-- ## Programming
-
-### Programming Frameworks
-
-#### .NET
-
-#### React
-
-### Programming Languages
-
-#### C\#
-
-#### Erlang
-
-#### Golang
-
-#### JavaScript (Programming)
-
-#### Python (Programming)
-
-#### Rust
-
-#### TypeScript -->
-
-<!-- ## Scripting
-
-### Scripting Languages
-
-#### Bash
-
-#### JavaScript (Scripting)
-
-#### Python (Scripting) -->
-
-<!-- ## Testing
-
-TODO: Order in which to do this testing.
-
-### Compatibility Testing
-
-### Device Testing
-
-#### Backwards Compatibility Testing
-
-#### Forwards Compatibility Testing
-
-#### Software Testing
-
-### Functional Testing
-
-<https://www.browserstack.com/guide/functional-testing>
-
-#### Integration Testing
-
-<https://www.browserstack.com/guide/integration-testing>
-
-#### Regression Testing
-
-<https://www.browserstack.com/guide/regression-testing>
-
-### Sanity Testing
-
-<https://www.browserstack.com/guide/sanity-testing>
-
-### Performance Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Endurance Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Load Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Scalability Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Stress Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Spike Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-#### Volume Testing
-
-<https://www.browserstack.com/guide/performance-testing>
-
-### Smoke Testing
-
-<https://www.browserstack.com/guide/smoke-testing>
-
-#### Unit Testing
-
-<https://www.browserstack.com/guide/unit-testing-a-detailed-guide>
-
-#### Usability Testing
-
-<https://www.browserstack.com/guide/website-usability-testing>
-
-### User Interface Testing
-
-<https://www.browserstack.com/guide/ui-testing-guide>
-
-#### Exploratory Testing
-
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
-
-#### User Experience Testing
-
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques> -->
-
 ## 3.3. Telecommunications
 
 ### 3.3.1. Network Slicing
@@ -18685,50 +29678,6 @@ TODO: Order in which to do this testing.
       [5.8.1. Tech Target: Network Slicing](#581-tech-target-network-slicing)
 
 </details>
-
-<!-- ## Version Control
-
-### Code Collaboration Platforms
-
-#### Gerrit
-
-#### GitHub
-
-##### GitHub Automation
-
-###### Dependabot
-
-###### GitHub Actions
-
-#### GitLab
-
-### Repository
-
-#### Centralised
-
-##### CVS
-
-##### Perforce
-
-##### Subversion
-
-#### Distributed
-
-##### Mercurial
-
-##### Git -->
-
-<!--
-
-## Template
-
-### Overview ()
-
-### Tool Comparison ()
-
-### Detailed Overview ()
-
--->
 
 # 4. Tutorial Notes
 
