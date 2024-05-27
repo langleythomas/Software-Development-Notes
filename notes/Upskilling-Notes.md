@@ -53,22 +53,31 @@ to install it with a lint to an external link or reference to a section in this 
 - base64
 - basename
 - bash
+- bc
+- bind
 - builtin
 - bzip2
+- cal
 - case
 - cat
 - cattt
 - chmod
 - chown
+- cmp
 - column
+- comm
 - command
 - complete
 - compress
+- coproc
 - cp
+- crontab
 - curl
 - cut
 - date
+- dd
 - declare
+- df
 - diff
 - dig
 - dirname
@@ -78,6 +87,7 @@ to install it with a lint to an external link or reference to a section in this 
 - dpkg
 - du
 - echo
+- egrep
 - enable
 - env
 - exit
@@ -86,8 +96,10 @@ to install it with a lint to an external link or reference to a section in this 
 - file
 - find
 - fmt
+- for
 - gawk
 - getconf
+- getdate
 - getopt
 - getopts
 - git
@@ -98,10 +110,11 @@ to install it with a lint to an external link or reference to a section in this 
 - gzip
 - hash
 - head
+- help
 - helm
 - helmfile
+- hexdump
 - history
-- help
 - host
 - id
 - ip
@@ -110,9 +123,11 @@ to install it with a lint to an external link or reference to a section in this 
 - keychain
 - keytool
 - kill
+- killall
 - kubectl
 - less
 - lessfile
+- ln
 - locate
 - ls
 - lshw
@@ -133,6 +148,7 @@ to install it with a lint to an external link or reference to a section in this 
 - npm
 - open
 - openssl
+- passwd
 - ping
 - pip
 - printf
@@ -148,9 +164,12 @@ to install it with a lint to an external link or reference to a section in this 
 - rpm
 - rsync
 - scp
+- screen
 - script
-- select
 - sed
+- select
+- seq
+- service
 - set
 - sftp
 - shift
@@ -164,27 +183,37 @@ to install it with a lint to an external link or reference to a section in this 
 - ssh-keygen
 - sshpass
 - stat
+- strftime
+- sudo
+- sudoers
 - svn
 - tail
 - tar
 - tee
 - time
 - tmux
+- top
 - touch
 - tr
 - traceroute
 - trap
 - type
 - unalias
+- uname
 - uniq
 - unix2dos
 - unzip
+- useradd
 - usermod
+- vi
 - vim
-- vim
+- vipw
+- visudo
 - watch
 - wc
+- whatis
 - which
+- whoami
 - xargs
 - zt-dlp
 - zcat
@@ -201,6 +230,8 @@ to install it with a lint to an external link or reference to a section in this 
 # Online
 ## Automation
 - Secure Unix Programming Checklist (https://web.archive.org/web/20080723191802/http:/www.auscert.org.au/render.html?it=1975)
+## Linux
+- PTY and TTY (https://www.baeldung.com/linux/pty-vs-tty)
 
 # Books
 ## Automation
@@ -764,7 +795,7 @@ TODO: Order in which to do this testing.
       - [1.2.15.16. Compressing Whitespace](#121516-compressing-whitespace)
       - [1.2.15.17. Processing Fixed-Length Records](#121517-processing-fixed-length-records)
       - [1.2.15.18. Processing Files with No Line Breaks](#121518-processing-files-with-no-line-breaks)
-      - [1.2.15.19. Converting a Data File to CSV](#121519-converting-a-data-file-to-csv)
+      - [1.2.15.19. Converting a Datafile to CSV](#121519-converting-a-datafile-to-csv)
       - [1.2.15.20. Parsing a CSV Datafile](#121520-parsing-a-csv-datafile)
     - [1.2.16. Writing Secure Shell Scripts](#1216-writing-secure-shell-scripts)
       - [1.2.16.1. Avoiding Common Security Problems](#12161-avoiding-common-security-problems)
@@ -794,7 +825,7 @@ TODO: Order in which to do this testing.
       - [1.2.17.1. Finding `bash` Portable for `#!`](#12171-finding-bash-portable-for-)
       - [1.2.17.2. Setting a POSIX `$PATH`](#12172-setting-a-posix-path)
       - [1.2.17.3. Developing Portable Shell Scripts](#12173-developing-portable-shell-scripts)
-      - [1.2.17.4. Testing Scripts Using Virtual machines](#12174-testing-scripts-using-virtual-machines)
+      - [1.2.17.4. Testing Scripts Using Virtual Machines](#12174-testing-scripts-using-virtual-machines)
       - [1.2.17.5. Using `for` Loops Portably](#12175-using-for-loops-portably)
       - [1.2.17.6. Using `echo` Portably](#12176-using-echo-portably)
       - [1.2.17.7. Splitting Output Only When Necessary](#12177-splitting-output-only-when-necessary)
@@ -8346,95 +8377,261 @@ file called donors that looked like this:
 
 #### 1.2.13.3. Automating Date Ranges
 
--
+- If you have one date, you can generate another automatically.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The GNU `date` command is very powerful and flexible, but the power of `-d` isn't documented well. Your system may
+  document it under `getdate`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following are some examples.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ date '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-05 01:03:00 -0500
+
+  $ date -d 'today' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-05 01:04:39 -0500
+
+  $ date -d 'yesterday' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-04 01:04:48 -0500
+
+  $ date -d 'tomorrow' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-06 01:04:55 -0500
+
+  $ date -d 'Monday' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-07 00:00:00 -0500
+
+  $ date -d 'this Monday' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-07 00:00:00 -0500
+
+  $ date -d 'last Monday' '+%Y-%m-%d %H:%M:%S %z'
+  2005-10-31 00:00:00 -0500
+
+  $ date -d 'next Monday' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-07 00:00:00 -0500
+
+  $ date -d 'last week' '+%Y-%m-%d %H:%M:%S %z'
+  2005-10-29 01:05:24 -0400
+
+  $ date -d 'next week' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-12 01:05:29 -0500
+
+  $ date -d '2 weeks' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-19 01:05:42 -0500
+
+  $ date -d '-2 weeks' '+%Y-%m-%d %H:%M:%S %z'
+  2005-10-22 01:05:47 -0400
+
+  $ date -d '2 weeks ago' '+%Y-%m-%d %H:%M:%S %z'
+  2005-10-22 01:06:00 -0400
+
+  $ date -d '+4 days' '+%Y-%m-%d %H:%M:%S %z'
+  2005-11-09 01:06:23 -0500
+
+  $ date -d '-6 days' '+%Y-%m-%d %H:%M:%S %z'
+  2005-10-30 01:06:30 -0400
+
+  $ date -d '2000-01-01 +12 days' '+%Y-%m-%d %H:%M:%S %z'
+  2000-01-13 00:00:00 -0500
+
+  $ date -d '3 months 1 day' '+%Y-%m-%d %H:%M:%S %z'
+  2006-02-06 01:03:00 -0500
+  ```
+
+- The `-d` option allows you to specify a date instead of using "now", but not all `date` commands support it. The GNU
+  version does, and it is recommended to use that version if at all possible.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - If you run the `date -d` command on a Saturday, you would expect to see the next Saturday, but you would instead
+    get the present day.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ date -d 'next Saturday' '+%a %Y-%m-%d'
+    Sat 2005-11-05
+    ```
+
+  - Also watch out for `this week <day>`, because as soon as the specified day is in the past, this week becomes next
+    week.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ date -d 'this week Friday' '+%a %Y-%m-%d'
+    Fri 2005-11-11
+    ```
+
+- If you don't have GNU `date`, you may find the following shell functions' presented in the
+  ["Shell Corner: Date-Related Shell Functions"](
+    https://www.drdobbs.com/shell-corner-date-related-shell-function/199102857) issue of the Unix Review.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `pn_month`: Previous and next *x* months relative to the given month.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    function pn_month {
+      typeset ym=$1 pn=$2
+    
+      (( m = ym % 100 ))
+      (( y = ym / 100 ))
+    
+      while (( pn != 0 )); do
+        if (( pn > 0 )); then
+          if (( m == 12 ))
+          then (( m = 1 )); (( y = y + 1 ))
+          else (( m = m + 1 ))
+          fi
+          (( pn = pn - 1 ))
+        else
+          if (( m == 1 ))
+          then (( m = 12 )); (( y = y - 1 ))
+          else (( m = m - 1 ))
+          fi
+          (( pn = pn + 1 ))
+        fi
+      done
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      printf "%s\n" $(( 100*y + m ))
+    }
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ for i in -9 -8 -7 0 3 4 5; do pn_month 200508 $i; done      
+    200411
+    200412
+    200501
+    200508
+    200511
+    200512
+    200601
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  -`end_month`: End of the given month.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    function end_month {
+      typeset ym=$1 y m ld
+      ((  y = ym  / 100 ))
+      ((  m = ym  % 100 ))
+      for ld in $(cal $m $y); do :; done
+      printf "%s\n" $(( ym*100 + ld ))
+    }
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ end_month 200501
+    20050131
+    $ end_month 200502
+    20050228
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `pn_day`: Previous and next *x* days relative to the given day.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    function pn_day {
+      typeset ymd=$1 pn=${2:-0} ym y m d x
+    
+      ((  d = ymd % 100 ))
+      (( ym = ymd / 100 ))
+      ((  y = ym  / 100 ))
+      ((  m = ym  % 100 ))
+    
+      if (( pn < 0 )); then
+        if (( d > 1 )); then
+          (( x = ymd - 1 ))
+          (( x > 17520902 && x < 17520914 )) && (( x = 17520902 ))
+          pn_day $x $(( pn + 1 ))
+        else
+          pn_day $(end_month $(pn_month $ym -1)) $(( pn + 1 ))
+        fi
+      elif (( pn > 0 )); then
+        if (( ymd < $(end_month $ym) )); then
+          (( x = ymd + 1 ))
+          (( x > 17520902 && x < 17520914 )) && (( x = 17520914 ))
+          pn_day $x $(( pn - 1 ))
+        else
+          pn_day $(( 100*$(pn_month $ym +1) + 1 )) $(( pn - 1 ))
+        fi
+      else
+        printf "%s\n" $ymd
+        return 0
+      fi
+    }
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ pn_day 20050102 -1
+    20050101
+    $ pn_day 20050102 -2
+    20041231
+    $ pn_day 20050102 -3
+    20041230
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `cur_weekday`: Days of week for the given day.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    function cur_weekday {
+      typeset ymd=$1 ym y m d i
+      (( ymd >= 17520914 && ymd <= 17520930 )) && (( ymd = ymd - 11 ))
+      ((  d = ymd % 100 ))
+      (( ym = ymd / 100 ))
+      ((  y = ym  / 100 ))
+      ((  m = ym  % 100 ))
+      cal $m $y | while read i; do
+        set -- $i
+        [[ $1 == 1 ]] && { 
+          printf "%s\n" $(( ( 6 + d - $# ) % 7 ))
+          break
+        }
+      done
+    }
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ cur_weekday 17520914
+    4
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `pn_weekday`: Previous and next *x* days of the week relative to the given day.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    function pn_weekday {
+      typeset ymd=$1 weekday=$2 pn=${3:-0} i x found=0 IN=0
+      [[ $ymd == +* ]] && IN=1
+    
+        if (( pn < 0 ))
+      then (( sign = -1 ))
+      elif (( pn > 0 ))
+      then (( sign = +1 ))
+      else (( sign =  0 ))
+      fi
+    
+      (( i = pn*sign*7 ))
+    
+      while (( i > 0 )); do
+        (( IN == 0 )) && ymd=$(pn_day $ymd $sign)
+        x=$(cur_weekday $ymd)
+        (( x == weekday )) && {
+          (( found = ymd ))
+        }
+        (( IN == 1 )) && ymd=$(pn_day $ymd $sign)
+        (( i = i - 1 ))
+      done
+      printf "%s\n" $found
+    }
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ pn_weekday +20050801 1 3
+    20050815
+    ```
 
 #### 1.2.13.4. Converting Dates & Times to Epoch Seconds
 
@@ -8474,95 +8671,21 @@ file called donors that looked like this:
 
 #### 1.2.13.6. Getting Yesterday or Tomorrow with Perl
 
--
+- You may need to get yesterday or tomorrow's date, and you have Perl but not GNU `date` on your system, you can use
+  Perl-one-lines, adjusting the number of seconds added to or subtracted from `time`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Yesterday at this same time (note subtraction)
+  $ perl -e "use POSIX qw(strftime);
+  > print strftime('%Y-%m-%d', localtime(time - 86400)), qq(\n);"
+  2005-11-04
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Tomorrow at this same time (note addition)
+  $ perl -e "use POSIX qw(strftime);
+  > print strftime('%Y-%m-%d', localtime(time + 86400)), qq(\n);"
+  2005-11-06
+  ```
 
 #### 1.2.13.7. Figuring Out Date & Time Arithmetic
 
@@ -8637,186 +8760,104 @@ file called donors that looked like this:
 
 #### 1.2.13.9. Using `date` & `cron` to Run a Script on the Nth Day
 
--
+- Most `cron`s will not allow running a script on the Nth weekday of the month, e.g., the second Wednesday.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Use a bit of shell code in the command to be run. Adapt one of the following lines in your Linux Vixie-cron
+  `crontab`. If you are using another `cron` program, you may need to convert the day of the week to numbers according
+  to the schedule your `cron` uses.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Vixie-cron
+  # Min Hour DoM Mnth DoW Program
+  # 0-59 0-23 1-31 1-12 0-7
+
+  # Vixie-cron requires % to be escaped or you get an error!
+
+  # Run the first Wednesday @ 23:00
+  00 23 1-7 * Wed [ "$(date '+\%a')" == "Wed" ] && /path/to/command args to command
+
+  # Run the second Thursday @ 23:00
+  00 23 8-14 * Thu [ "$(date '+\%a')" == "Thu" ] && /path/to/command
+
+  # Run the third Friday @ 23:00
+  00 23 15-21 * Fri [ "$(date '+\%a')" == "Fri" ] && /path/to/command
+
+  # Run the fourth Saturday @ 23:00
+  00 23 22-27 * Sat [ "$(date '+\%a')" == "Sat" ] && /path/to/command
+
+  # Run the fifth Sunday @ 23:00
+  00 23 28-31 * Sun [ "$(date '+\%a')" == "Sun" ] && /path/to/command
+  ```
+
+- Note that any given day of the week doesn't always happen five times during one month.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Most versions of `cron` (including Linux's Vixie-cron) do not allow you to schedule a job on the Nth day of the
+  month. To work around that issue, we schedule the job to run during the range of days when the Nth day (that we'd
+  need) occurs. For example, "second Wednesday of the month" must occur somewhere in the range of the 8th to the 14th
+  of the month, meaning that we run every day and see if it's Wednesday. If so, we execute our command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Day ranges for each week of a month.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  | **Week** | **Day Range** |
+  |:--------:|:-------------:|
+  |   First  |      1-7      |
+  |  Second  |      8-14     |
+  |   Third  |     15-21     |
+  |  Fourth  |     22-27     |
+  |   Fifth  |     28-31     |
 
 #### 1.2.13.10. Logging with Dates
 
--
+- When you want to output logs or other lines with dates, but you want to avoid the overhead of shelling out to the
+  `date` command, you can use `printf` for dates and times.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- As of `bash` 4 or newer, you can use `printf '$(fmt)T'` for dates and times.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You can also use `printf` to assign to a variable, so you can easily reuse it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # The variable `today` is set with the following command.
+  printf -v today '%(%F)T' '-1'
+  ```
+
+- The `'-1'` argument is important, but it is inconsistent. `-1` represents the current time, and `-2` represents the
+  time the shell was invoked. However, the default behaviour changed between `bash` 4.2 and 4.3. In 4.2, a null
+  argument is treated as null, which return the local time at the Unix epoch, which is almost certainly not what you
+  want or expect. In `bash` 4.3, there is a special exception so that a null argument is treated as a `'-1'` argument.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ echo $BASH_VERSION
+  4.2.37(1)-release
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ printf '%(%F %T %Z)T; Foo Bar\n'
+  1969-12-31 19:00:00 EST; Foo Bar
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ printf '%(%F %T %Z)T; Foo Bar\n' '-1'
+  2014-11-15 15:24:26 EST; Foo Bar
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ echo $BASH_VERSION
+  4.3.11(1)-release
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ printf '%(%F %T %Z)T; Foo Bar\n'
+  2014-11-15 15:25:02 EST; Foo Bar
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ printf '%(%F %T %Z)T; Foo Bar\n' '-1'
+  2014-11-15 15:25:05 EST; Foo Bar
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The `printf` in `bash` is a builtin command, but there is also a separate binary executable called `printf` which
+  isn't the same. The separate executable is for other shell that don't have a builtin `printf`. Don't confuse the
+  manpage for `printf` with the description of `printf` that is part of the `bash` manpage. Though there are large
+  similarities between the two, the latter is what you want.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 ### 1.2.14. End-User Tasks as Shell Scripts
@@ -8827,94 +8868,72 @@ file called donors that looked like this:
 
 #### 1.2.14.1. Starting Simple by Printing Dashes
 
--
+- The following code block is a simple script that prints a line of dashes, by building a string of the required number
+  of dashes (or an alternate character) and then printing that string to standard output (STDOUT). The default values
+  are set early in the script, before the `while` loop. All the other lines deal with argument parsing, error checking,
+  user messages, and comments.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: dash
+  # dash - print a line of dashes
+  # options: # how many (default 72)
+  #   -c X use char X instead of dashes
+  #
+  function usagexit (){
+    # Use the string manipulation operator with a pattern (*/) to trim off any leading path name characters when
+    # displaying this script's name. That ensures the script will still be referred to as just the script file's name,
+    # no matter where the user executes the script.
+    printf "usage: %s [-c X] [#]\n" ${0##*/}
+    exit 2
+  } >&2
+
+  # Setting the default values.
+  LEN=72
+  CHAR='-'
+
+  # Performing the argument parsing while are still arguments to parse.
+  while (( $# > 0 ))
+  do
+    case $1 in
+    [0-9]*) LEN=$1;;
+      -c) # A "-c" option following by a character, to be used instead of a dash.
+        shift
+        CHAR=$1
+        ;;
+      *) # Any options other than characters.
+        usagexit # The usage message, and an early exit of the script.
+        ;;
+    esac
+
+    # Decrementing the number of arguments and eventually get the script out of the `while` loop.
+    shift
+  done
+
+  # Enforcing a maximum length of the script.
+  if (( LEN > 4096 ))
+  then
+    echo "too large" >&2
+    exit 3
+  fi
+
+  # build the string to the exact length
+  DASHES=""
+  for ((i=0; i<LEN; i++))
+  do
+    DASHES="${DASHES}${CHAR}"
+  done
+
+  printf "%s\n" "$DASHES"
+  ```
+
+- Even simple scripts can become very complicated, mostly due to error checking, argument parsing, etc.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- For scripts that you write for yourself, such techniques are often neglected, as there is no need to add robust error
+  checking and fancy error messages if you are the only user. For script that you want to share, that is not the case,
+  and care and effort should be considered when writing your script to fail without issue.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.14.2. Viewing Photos in an Album
@@ -9542,99 +9561,44 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
 #### 1.2.15.4. Parsing Output into an Array
 
--
+- The following code block illustrates how to use an array to store the output of a program or script as words.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: parseViaArray
+  #
+  # find the file size
+  # use an array to parse the ls -l output into words
+
+  LSL=$(ls -ld $1)
+
+  declare -a MYRA
+  MYRA=($LSL)
+
+  echo the file $1 is ${MYRA[4]} bytes.
+  ```
+
+- Each array element can be referred to by each word.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Arrays are easy to initialise if you know the values as you write the script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  declare -a MYRA
+  MYRA=(first second third home)
+  ```
+
+- As shown in the script in this section, arrays can also be initialised containing a variable inside parentheses.
+  Ensure not to use quotes around the variable. Writing `MYRA=$("$LSL")` will put the entire string into the first
+  argument, since it is all contained as one quoted string.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If your want to know how many elements are in the initialised array, reference the variable `${#MYRA[*]}` or
+  `${#MYRA[@]}`, either of which is a lot of special characters to type.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.5. Parsing Output with a Function Call
@@ -10142,95 +10106,113 @@ file called donors that looked like this:
 
 #### 1.2.15.13. Isolating Specific Fields in Data
 
--
+- When you need to extract one or more fields from each line of output, use `cut` if there are delimiters you can
+  easily pick out, even if they different for the beginning and end of the file you need.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Here's an easy one - what users, home directories and shells do
+  # we have on this NetBSD system?
+  $ cut --delimiter=':' --fields=1,6,7 /etc/passwd
+  root:/root:/bin/csh
+  toor:/root:/bin/sh
+  daemon:/:/sbin/nologin
+  operator:/usr/guest/operator:/sbin/nologin
+  bin:/:/sbin/nologin
+  games:/usr/games:/sbin/nologin
+  postfix:/var/spool/postfix:/sbin/nologin
+  named:/var/chroot/named:/sbin/nologin
+  ntpd:/var/chroot/ntpd:/sbin/nologin
+  sshd:/var/chroot/sshd:/sbin/nologin
+  smmsp:/nonexistent:/sbin/nologin
+  uucp:/var/spool/uucppublic:/usr/libexec/uucp/uucico
+  nobody:/nonexistent:/sbin/nologin
+  jp:/home/jp:/usr/pkg/bin/bash
+  # What is the most popular shell on the system?
+  $ cut -d':' -f7 /etc/passwd | sort | uniq -c | sort -rn
+  10 /sbin/nologin
+  2 /usr/pkg/bin/bash
+  1 /bin/csh
+  1 /bin/sh
+  1 /usr/libexec/uucp/uucico
+
+  # Now let's see the first two directory levels
+  $ cut --delimiter=':' --fields=6 /etc/passwd | cut --delimiter='/' -f1-3 | sort --unique
+  /
+  /home/jp
+  /nonexistent
+  /root
+  /usr/games
+  /usr/guest
+  /var/chroot
+  /var/spool
+  ```
+
+- Use `awk` to split on multiples of whitespace, of if you need to rearrange the order of the output fields. Note the
+  → denotes a tab character in the output. The default is a space, but you can change that using `$OFS`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Users, home directories, and shells, but swap the last two
+  # and use a tab delimiter
+  $ awk 'BEGIN {FS=":"; OFS="\t"; } { print $1,$7,$6; }' /etc/passwd
+  root → /bin/csh → /root
+  toor → /bin/sh → /root
+  daemon → /sbin/nologin → /
+  operator → /sbin/nologin → /usr/guest/operator
+  bin → /sbin/nologin → /
+  games → /sbin/nologin → /usr/games
+  postfix → /sbin/nologin → /var/spool/postfix
+  named → /sbin/nologin → /var/chroot/named
+  ntpd → /sbin/nologin → /var/chroot/ntpd
+  sshd → /sbin/nologin → /var/chroot/sshd
+  smmsp → /sbin/nologin → /nonexistent
+  uucp → /usr/libexec/uucp/uucico → /var/spool/uucppublic
+  nobody → /sbin/nologin → /nonexistent
+  jp → /usr/pkg/bin/bash → /home/jp
+
+  # Multiples of whitespace and swapped, first field removed
+  $ grep '^# [1-9]' /etc/hosts | awk '{print $3,$2}'
+  10.255.255.255 10.0.0.0
+  172.31.255.255 172.16.0.0
+  192.168.255.255 192.168.0.0
+  ```
+
+- Use `grep --only-matching` to display just the part that matched your pattern. `egrep` is used in the following
+  example because of the regular expression, but `--only-matching` should work with whichever GNU `grep` flavour you
+  use.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ egrep --only-matching '[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' /etc/hosts
+  10.10.10.10
+  10.10.10.11
+  10.10.10.12
+  10.10.10.13
+  ```
+
+- The regex used for IP addresses is naïve and could match other things, including invalid addresses. For a much
+  better pattern, use Perl.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Using grep
+  $ grep --only-matching --perl-regexp '([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.
+    ([01]?\d\
+    d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])' /etc/hosts
+  10.10.10.10
+  10.10.10.11
+  10.10.10.12
+  10.10.10.13
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Using Perl
+  $ perl -n -e 'while ( m/([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])\.
+    ([01]?\d\d?|2[0-4]\d|25[0-5])\.([01]?\d\d?|2[0-4]\d|25[0-5])/g ) { print qq($1.$2.$3.$4\n); }' /etc/hosts
+  10.10.10.10
+  10.10.10.11
+  10.10.10.12
+  10.10.10.13
+  ```
 
 #### 1.2.15.14. Updating Specific Fields in Datafiles
 
@@ -10692,7 +10674,7 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.15.19. Converting a Data File to CSV
+#### 1.2.15.19. Converting a Datafile to CSV
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12146,94 +12128,53 @@ file called donors that looked like this:
 
 #### 1.2.16.19. Using `sudo` More Securely
 
--
+- It is good to be cautious about granting too many people too many privileges, especially with the use of `sudo`.
+  While using `sudo` is much more secure than not using it, the default settings may be greatly improved.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You can edit the `/etc/sudoers` file to modify the privileges granted for each user.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- In most cases you should not be using the `ALL=(ALL) ALL` specification. It will work, but it is not remotely secure.
+  The only difference between that and giving everyone the `root` password is that they don't know the `root` password;
+  they can still do everything `root` can do.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `sudo` logs the commands it runs, but that's trivial to avoid using `sudo bash`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Just as you shouldn't be using the `ALL=(ALL) ALL` specification, you probably shouldn't be managing users one by
+  one either. The `sudoers` utility allow for very granular management, and it is best to use it. `man sudoers`
+  provides a wealth of material and examples, especially the section on preventing shell escapes.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The `sudoers` file has a `NOPASSWD` tag that allows users to perform privileged operations without first having to
+  enter their user passwords. This is one way to allow automation requiring `root` access without having
+  unnecessary/redundant plain-text passwords, but it is obviously a double-edged sword.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `sudoers` allows for four kinds of aliases: `user`, `runas`, `host`, and `command`. Judicious use of them as roles
+  or groups will significantly reduce the maintenance burden. You can set up a `User_Alias` for `BUILD_USERS`, then
+  define the machines those users need to run on with `Host_Alias` and the commands they need to run with `Cmnd_Alias`.
+  You can set up a very secure yet usable system of least privilege if you set a policy to only edit `/etc/sudoers` on
+  one machine and copy it around to all relevant machines periodically using `scp` with public-key authentication, you
+  can set up a very secure yet usable system of least privilege.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- When `sudo` asks for your password, it's really asking for your password, not the `root` password.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you set a policy to only edit `/etc/sudoers` on one machine and copy it around to all relevant machines
+  periodically using `scp` with public-key authentication, you can set up a very secure yet usable of least privilege.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Unfortunately, `sudo` is not installed by default on every system. It is usually installed on Linux, macOS, and
+  OpenBSD; other systems will vary.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- You should always used `visudo` to edit your `etc/sudoers` file. Like `vipw`, `visudo`, locks the file so that only
+  one person can edit at a time, and it performs some syntax sanity checks before replacing the production file,
+  meaning you don't accidentally lock yourself out of your system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.20. Using Passwords in Scripts
@@ -12381,465 +12322,166 @@ file called donors that looked like this:
 
 #### 1.2.16.23. Disconnecting Inactive Sessions
 
--
+- Set the `$TMOUT` environment variable in `/etc/bashrc` or `~/.bashrc` to the number of seconds of inactivity before
+  ending a session when you'd like to be able to automatically log out inactive users, especially `root`. In
+  interactive mode, once a prompt is issued, if the user does not enter a command in `$TMOUT` seconds, `bash` will
+  exit.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `$TMOUT` is also used in the `read` builtin and the `select` command in scripts.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Don't forget to set this as a read-only variable in a system-level file such as `/etc/profile` or `/etc/bashrc` to
+  which users have no write access if you don't want them to be able to change it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  declare -r TMOUT=3600
+  # Or:
+  readonly TMOUT=3600
+  ```
 
 ### 1.2.17. Advanced Scripting
 
--
+- One of the biggest problems for advanced scripts is writing scripts that are portable, i.e., that can work on any
+  machine that has `bash` installed.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- There are many variations from one system to another that can get in the way; for example, `bash` itself isn't always
+  installed in the same place, and many common Unix commands have slightly different options (or give slightly
+  different output) depending on the operating system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- This chapter will cover solutions for additional advanced scripting tasks, such as automating processes using phases,
+  sending email from your script, logging to `syslog`, using your network resources, and a few tricks for getting input
+  and redirecting output.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.17.1. Finding `bash` Portable for `#!`
 
--
+- If you need to run a `bash` script on several machines, but `bash` is not always in the same place, use the
+  `/usr/bin/env` command in the shebang line. If your system doesn't have `env` in `/usr/bin`, ask your system
+  administrator to install it, move it, or create a symbolic link because this is the required location.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  ```
+
+- `env`'s purpose is to "run a program in a modified environment", but since it will search the path for the command it
+  is given to run, it works very well for this use.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Don't use `!/bin/sh` instead of the `#!/usr/bin/env`. If you are using `bash`-specific features in your script, they
+  will not work on machines that do not use `bash` in Bourne shell mode for `/bin/sh`. Even if you aren't using
+  `bash`-specific features now, you may forget about that in the future.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You may see a space between the `#!` and `/bin/<whatever>`. There were historically some systems that required the
+  space, though in practice that will rarely be encountered. It's very unlikely any system running `bash` will require
+  the space, and leaving it out it the common usage now. For the utmost historical compatibility, use the space.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Many systems (including Linux) allow only a single argument to the interpreter. Thus, `#!/usr/bin/env bash -` will
+  result in the following error: `/usr/bin/env: bash -: No such file or directory`. This is because the interpreter is
+  `/usr/bin/env` and the single allowed argument is `bash -` Since the trailing `-` is a common security practice and
+  since this is supported on some systems but not others, this is a security and portability problem. Omit the `-` when
+  using `env` for portability, and to hard-code the interpreter and trailing, when security is critical.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.17.2. Setting a POSIX `$PATH`
 
--
+- If you are on a machine that provides older or proprietary tools (e.g., Solaris) and you need to set your path so
+  that you get POSIX-compliant tools.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `getconf` reports various system configuration variables, so you can use it to set a default path. However, unless
+  `getconf` itself is a builtin, you will need a minimal path to find it, hence the `PATH=/bin:/usr/bin` part of the
+  solution.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  PATH=$(PATH=/bin:/usr/bin getconf PATH)
+  ```
+
+- The following are some default and POSIX paths on several systems:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Red Hat Enterprise Linux (RHEL) 4.3
+  $ echo $PATH
+  /usr/kerberos/bin:/usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin:/home/$USER/bin
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ getconf PATH
+  /bin:/usr/bin
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Debian Sarge
+  $ echo $PATH
+  /usr/local/bin:/usr/bin:/bin:/usr/bin/X11:/usr/games
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ getconf PATH
+  /bin:/usr/bin
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Solaris 10
+  $ echo $PATH
+  /usr/bin:
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ getconf PATH
+  /usr/xpg4/bin:/usr/ccs/bin:/usr/bin:/opt/SUNWspro/bin
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # OpenBSD 3.7
+  $ echo $PATH
+  /home/$USER/bin:/bin:/sbin:/usr/bin:/usr/sbin:/usr/X11R6/bin:/usr/local/bin:/usr/local/sbin:/usr/games
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ getconf PATH
+  /usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin
+  ```
 
 #### 1.2.17.3. Developing Portable Shell Scripts
 
--
+- When you are writing a shell script that will need to run on multiple versions of multiple Unix or POSIX operating
+  systems, try using the `command` builtin with its `-p` option to find the POSIX version of `program`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  command -p program <arguments>
+  ```
+
+- If possible, find the oldest or least capable Unix machine you have access to and develop the script on that
+  platform. If you aren't sure what is the least capable platform, use a BSD variant of Solaris (and the older the
+  version, the better).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `command -p` uses a default path that is guaranteed to find all of the POSIX-standard utilities.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The problems with writing cross-platform shell scripts on Linux are:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - `/bin/sh` is not the Bourne shell; it's really `/bin/bash` in POSIX mode, except when it's `/bin/dash` (e.g.,
+    Ubuntu 6.10+). None of the three mentioned work exactly the same. In particular, the behaviour of `echo` can
+    change.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Linux uses the GNU tools instead of the original Unix tools.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- The GNU tools have a lot of switches and features that aren't present on other platforms, and your script will
+  unexpectedly break in odd ways.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The more shell features you use, the less you have to depend on external programs that may or may not be there or
+  work as expected. While `bash` is far more capable than `sh`, it's also one of the tools that may or may not be
+  there.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The GNU long options are also much more readable in shell code, but are often not present on other systems.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you don't have a non-Linux system, then the issues described in this section are irrelevant.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.17.4. Testing Scripts Using Virtual machines
+#### 1.2.17.4. Testing Scripts Using Virtual Machines
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12933,95 +12575,60 @@ file called donors that looked like this:
 
 #### 1.2.17.5. Using `for` Loops Portably
 
--
+- There are multiple options of implementing a `for` loop but want it to work on older versions of `bash`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following method is portable back to `bash` 2.04+.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ for ((i=0; i<10; i++)); do echo $i; done
+  0
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  ```
+
+- There are nicer ways of writing the `for` loop in newer versions of `bash`, but they are not backwards-compatible.
+  As of `bash` 3.0+, the `{x..y}` can be used.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ for i in {1..10}; do echo $i; done
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  ```
+
+- The following could be the implementation if your system has the `seq` command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ for i in $(seq 1 10); do echo $i; done
+  1
+  2
+  3
+  4
+  5
+  6
+  7
+  8
+  9
+  10
+  ```
 
 #### 1.2.17.6. Using `echo` Portably
 
@@ -14037,462 +13644,459 @@ file called donors that looked like this:
 
 #### 1.2.17.17. Automating a Process Using Phases
 
--
+- Use a `case` statement to break your script into sections or *phases* if you have a long job or process you need to
+  automate, but it may require manual intervention and you need to be able to restart at various points in the
+  progress.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Use a `case` statement to break your script up into sections or phases.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: func_choice.1
+
+  # Let the user make a choice about something and return a standardized
+  # answer. How the default is handled and what happens next is up to
+  # the if/then after the choice in main.
+  # Called like: choice <prompt>
+  # e.g. choice "Do you want to play a game?"
+  # Returns: global variable CHOICE
+  function choice {
+    CHOICE=''
+    local prompt="$*"
+    local answer
+
+    read -p "$prompt" answer
+
+    case "$answer" in
+      [yY1] ) CHOICE='y';;
+      [nN0] ) CHOICE='n';;
+      * ) CHOICE="$answer";;
+    esac
+  } # end of function choice
+  ```
+
+- Then, set up phases as shown in the following example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # cookbook filename: using_phases
+  # Main loop
+  until [ "$phase" = "Finished." ]; do
+    case $phase in
+      phase0 )
+        ThisPhase=0
+        NextPhase="$(( $ThisPhase + 1 ))"
+        echo '############################################'
+        echo "Phase$ThisPhase = Initialization of FooBarBaz build"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        # Things that should only be initialized at the beginning of a
+        # new build cycle go here
+        # ...
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        echo "Phase${ThisPhase}=Ending"
+        phase="phase$NextPhase"
+      ;;
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      # ...
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      phase20 )
+        ThisPhase=20
+        NextPhase="$(( $ThisPhase + 1 ))"
+        echo '############################################'
+        echo "Phase$ThisPhase = Main processing for FooBarBaz build"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        # ...
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        choice "[P$ThisPhase] Do we need to stop and fix anything? [y/N]: "
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        if [ "$choice" = "y" ]; then
+          echo "Re-run '$MYNAME phase${ThisPhase}' after handling this."
+          exit $ThisPhase
+        fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+        echo "Phase${ThisPhase}=Ending"
+        phase="phase$NextPhase"
+      ;;
+      # ...
+      * )
+        echo "What the heck?!? We should never get HERE! Gonna croak!"
+        echo "Try $0 -h"
+        exit 99
+        phase="Finished."
+      ;;
+    esac
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    printf "%b" "\a" # Ring the bell
+  done
+  ```
 
 #### 1.2.17.18. Doing Two Things at Once
 
--
+- As of `bash` version 4, the `coproc` command can allow to processes to converse with each other, each reading as its
+  input the output of the other command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following example uses the `bc` program, an arbitrary-precision calculator language, as a co-process, allowing
+  `bash` to send calculations to `bc` and read back the results. It's one way of giving `bash` the ability to do
+  floating-point calculations, although the following example shows the usage of `coproc`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: fpmath
+  # using coproc for floating-point math
+
+  # Initialise the coprocess call this first before attempting any calls to fpmath
+  function fpinit () {
+    coproc /usr/bin/bc
+    bcin=${COPROC[1]}
+    bcout=${COPROC[0]}
+    echo "scale=5" >& ${bcin}
+  }
+
+  # compute with floating-point numbers
+  # by sending the args to bc
+  # then reading its response
+  function fpmath() {
+    echo "$@" >& ${bcin}
+    if read -t 0.25 -u ${bcout} responz
+    then
+      echo "$responz"
+    fi
+  }
+
+  ############################
+  # Main
+  fpinit
+
+  while read aline
+  do
+    answer=$(fpmath "$aline")
+    if [[ -n $answer ]]
+    then
+      echo $answer
+    fi
+  done
+  ```
+
+- `bash` must be compiled with `--enable-coprocesses` for the previous example to work. That is the default, but some
+  packages may not have it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `coproc` will execute a command (or pipeline of commands) alongside the current shell process. It creates two pipes,
+  one connected to the standard output of the command and one connected to its standard output. These connections are
+  stored in a shell array called `COPROC` by default. Index 0 of that array holds the output file descriptor of that
+  process; index 1 holds the input file descriptor of that process.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The output of the coprocesses can act as the input to the calling process (the shell script), and vice versa.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Versions of `bash` that are new enough to have the `coproc` command are also new enough to support a fractional value
+  for the timeout value. Older versions only allowed integers.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.17.19. Running an SSH Command on Multiple Hosts
 
--
+- If you need to run a command over SSH on multiple hosts, wrap your SSH command in a `for` loop.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ for host in host1 host2 host3; do echo -n "On $host, I am: " ;
+  > ssh $host 'whoami' ; done
+  On host1, I am: root
+  On host2, I am: jp
+  On host3, I am: jp
+
+  $
+  ```
+
+- There are a few points to keep in mind with the approach in the previous code example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Assume all of the underlying networking and the firewall, DNS, and similar aspects are already working and are
+    accessible by the machine on which you are running the for loop.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - It is much more convenient to run the SSH command when your are using SSH keys.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - You can quickly run into quoting issues in the SSH command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ for host in host{1..3};
+    > do echo "$host:" ;
+    > ssh $host 'grep "$HOSTNAME" /etc/hosts' ;
+    > done
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    - The solution to quoting issues in the SSH command can be resolved by enclosing the `ssh` command in single quotes
+      so that the local `bash` shell will not interpolate it, and enclose the `grep` argument in double quotes for
+      clarity, since that is not strictly needed.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    - You can handle the problems of `grep`-ing for single quotes and using any variables required by `bash` by
+      enclosing the `ssh` command in double quotes, then escaping any variables and/or double quotes needed on the
+      remote side, but it can get ugly fast.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      ```bash
+      $ for host in host{1..3};
+      > do ssh $host "echo \"Local '$host' is remote '\$HOSTNAME'\"";
+      > done
+      Local 'host1' is remote 'host1'
+      Local 'host2' is remote 'host2'
+      Local 'host3' is remote 'host3'
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      $
+      ```
 
 ### 1.2.18. Configuring & Customising `bash`
 
--
+- `bash` gives you a very powerful and flexible environment. Part of that flexibility is the extent to which it can be
+  customised.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- This chapter shows how to configure `bash` to suit your individual needs and style.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- You can alter the way `bash` behaves; for example, you can make it case-insensitive, so that it doesn't care about
+  the difference between upper- and lower-case.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.1. `bash` Startup Options
 
--
+- Customise the `$PS1` and `$PS2` variables as you desire to add more useful information to the default `bash` prompt,
+  which is usually something uninformative that ends in with `$` and doesn't tell you much.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The default prompt varies depending on your system. `bash` itself will show its major and minor version `(\s-\v\$)`,
+  e.g., `bash-3.00$`. Your operating system may have its own default
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following are basic prompts that will work with `bash` 1.14.7 or newer. The trailing `\$` displays `#` if you are
+  `root` (i.e., the effective UID is `0`) and `$` otherwise.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - `<username>@<host_name>`, the date and time, and the current working directory.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='[\u@\h \d \A] \w \$ '
+    [jp@freebsd Wed Dec 28 19:32] ~ $ cd /usr/local/bin/
+    [jp@freebsd Wed Dec 28 19:32] /usr/local/bin $
+    ```
+
+  - `<username>@<long_host_name>`, the date and time (in ISO 8601 format), and the base name of the current working
+    directory (`\W`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='[\u@\H \D{%Y-%m-%d %H:%M:%S%z}] \W \$ '
+    [jp@freebsd.jpsdomain.org 2005-12-28 19:33:03-0500] ~ $ cd /usr/local/
+    [jp@freebsd.jpsdomain.org 2005-12-28 19:33:06-0500] local $
+    ```
+
+  - `<username>@<host_name>`, the `bash` version, and the current working directory (`\W`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='[\u@\h \V \w] \$ '
+    [jp@freebsd 3.00.16] ~ $ cd /usr/local/bin/
+    [jp@freebsd 3.00.16] /usr/local/bin $
+    ```
+
+  - New line, `<username>@<host_name>`, base PTY, shell level, history number, new line, and full working directory
+    name (`$PWD`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - PTY is the number of the pseudo-terminal (in Linux terminals) to which you are connected. This is useful when you
+      have more than one session and you are trying to keep track of which is which.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - Shell level is the depth of the subshells you are in. When you first log in, it's 1, and it increments as you run
+      subprocesses (such as `screen`).
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    - The history line is the number of the current command in the command history.
+      [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='\n[\u@\h \l:$SHLVL:\!]\n$PWD\$ '
+
+    [jp@freebsd ttyp0:3:21]
+    /home/jp$ cd /usr/local/bin/
+
+    [jp@freebsd ttyp0:3:22]
+    /usr/local/bin$
+    ```
+
+  - `<username>@<host_name>`, the exit status of the last command, and the current working directory. The exit status
+    will be reset (and thus useless) if you execute any commands from the prompt.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='[\u@\h $? \w \$ '
+    [jp@freebsd 0 ~ $ cd /usr/local/bin/
+    [jp@freebsd 0 /usr/local/bin $ true
+    [jp@freebsd 0 /usr/local/bin $ false
+    [jp@freebsd 1 /usr/local/bin $ true
+    [jp@freebsd 0 /usr/local/bin $
+    ```
+
+  - New line, `<username>@<host_name>`, the number of jobs the shell is currently managing.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='\n[\u@\h jobs:\j]\n$PWD\$ '
+
+    [jp@freebsd jobs:0]
+    /tmp$ ls -lar /etc > /dev/null &
+    [1] 96461
+
+    [jp@freebsd jobs:1]
+    /tmp$
+    [1]+ Exit 1 ls -lar /etc >/dev/null
+
+    [jp@freebsd jobs:0]
+    /tmp$
+    ```
+
+  - New line, `<username>@<host_name>`, terminal, shell, shell level, history, number of jobs, `bash` version, and full
+    working directory.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='\n[\u@\h t:\l l:$SHLVL h:\! j:\j v:\V]\n$PWD\$ '
+
+    [jp@freebsd t:ttyp1 l:2 h:91 j:0 v:3.00.16]
+    /home/jp$
+    ```
+
+  - New line, `<username>@<host_name>`, `T` for terminal, `L` for shell level, `C` for command number, and date and
+    time (in ISO 8601 format).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ PS1='\n[\u@\h:T\l:L$SHLVL:C\!:\D{%Y-%m-%d_%H:%M:%S_%Z}]\n$PWD\$ '
+
+    [jp@freebsd:Tttyp1:L1:C337:2006-08-13_03:47:11_EDT]
+    /home/jp$ cd /usr/local/bin/
+
+    [jp@freebsd:Tttyp1:L1:C338:2006-08-13_03:47:16_EDT]
+    /usr/local/bin$
+    ```
+
+- The following are fancy prompts that use ANSI escape sequences for colours, or to set the contents of the title bar
+  in an xterm - but be aware these will not always work. Escape sequences should be surrounded by `\[` and `\]`, which
+  tells `bash` that the enclosed characters are non-printing. Otherwise, `bash` (technically, `readline`) will be
+  confused about line lengths and wrap lines in the wrong place.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - `<username>@<host_name>`, and the current working directory in light blue (colour not shown in print).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='\[\033[1;34m\][\u@\h:\w]\$\[\033[0m\] '
+    [jp@freebsd:~]$
+    [jp@freebsd:~]$ cd /tmp
+    [jp@freebsd:/tmp]$
+    ```
+
+  - `<username>@<host_name>`, and the current working directory (in both the xterm title bar and the prompt itself).
+    Garbage may be generated if you are not running in an xterm..
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ export PS1='\[\033]0;\u@\h:\w\007\][\u@\h:\w]\$ '
+    [jp@ubuntu:~]$
+    [jp@ubuntu:~]$ cd /tmp
+    [jp@ubuntu:/tmp]$
+    ```
+
+  - Both the colour and xterm updates.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ PS1='\[\033]0;\u@\h:\w\007\]\[\033[1;34m\][\u@\h:\w]\$\[\033[0m\] '
+    [jp@ubuntu:~]$
+    [jp@ubuntu:~]$ cd /tmp
+    [jp@ubuntu:/tmp]$
+    ```
+
+- The `export` command only needs to be used one to flag a variable to be exported to child processes.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Assuming the `promptvars` shell option is set (which it is by default), prompt strings are decoded and expanded (via
+  parameter expansion, command substitution, and arithmetic expansion), quotes are removed, and they are finally
+  displayed. Prompt strings are `$PS0`, `$PS1`, `$PS2`, `$PS$`, `$PS4`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - `$PS0`: Only available in `bash` version 4.4 or newer.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS1`: The command prompt.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS2`: The secondary prompt displayed when `bash` needs more information to complete a command. It defaults to
+    `>`, but you may use anything you like.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS3`: The `select` prompt, which defaults to `#?`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$PS4`: The `xtrace` (debugging) prompt, with a default of `+`. The first character of `$PS4` is replicated as many
+    times as needed to denote levels of indirection in the current executing command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ export PS2='Secondary> '
+
+  $ for i in *
+  Secondary> do
+  Secondary> echo $i
+  Secondary> done
+  cheesy_app
+  data_file
+  hard_to_kill
+  mcd
+  mode
+
+  $ export PS3='Pick me: '
+
+  $ select item in 'one two three'; do echo $item; done
+  1) one two three
+  Pick me: ^C
+
+  $ export PS4='+ debugging> '
+
+  $ set -x
+
+  $ echo $( echo $( for i in *; do echo $i; done ) )
+  +++ debugging> for i in '*'
+  +++ debugging> echo cheesy_app
+  +++ debugging> for i in '*'
+  +++ debugging> echo data_file
+  +++ debugging> for i in '*'
+  +++ debugging> echo hard_to_kill
+  +++ debugging> for i in '*'
+  +++ debugging> echo mcd
+  +++ debugging> for i in '*'
+  +++ debugging> echo mode
+  ++ debugging> echo cheesy_app data_file hard_to_kill mcd mode
+  + debugging> echo cheesy_app data_file hard_to_kill mcd mode
+  cheesy_app data_file hard_to_kill mcd mode
+  ```
+
+- Since the `$PS1` prompt is only useful when you are running `bash` interactively, the best place is to set it in
+  `/etc/bashrc` (globally) or `~/.bashrc` (locally).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- It is recommended to add a space  as the last character in the `$PS1` string. It makes it easier to read what is on
+  your screen by separating the prompt string from the commands that you type. Because your string may contain other
+  spaces or special characters, it is a good idea to use double (or even single) quotes to quote the string when you
+  assign it to `$PS1`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.2. Customising Your Prompt
@@ -15233,95 +14837,57 @@ file called donors that looked like this:
 
 #### 1.2.18.10. Adjusting `readline` Behaviour Using `.inputrc`
 
--
+- Edit or create a `~/.inputrc` or `/etc/inputrc` file if you'd like to adjust the way `bash` handles input, especially
+  command completion. To have `readline` use your file when it initialises, set `$INPUTRC` (e.g.,
+  `INPUTRC=~/".inputrc"`. Use `bind -f <file_name` to reread the file and apply or test it after making changes.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # This is a SUBSET of interesting inputrc settings, see Chapter 16:
+  # "Getting Started with a Custom Configuration" for a longer example
+  # To reread (and implement changes to this file) use:
+  # bind -f $SETTINGS/inputrc
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # First, include any system-wide bindings and variable
+  # assignments from /etc/inputrc
+  # (fails silently if file doesn't exist)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $include /etc/inputrc
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $if Bash
+    # Ignore case when doing completion
+    set completion-ignore-case on
+    # Completed dir names have a slash appended
+    set mark-directories on
+    # Completed names which are symlinks to dirs have a slash appended
+    set mark-symlinked-directories on
+    # List ls -F for completion
+    set visible-stats on
+    # Cycle through ambiguous completions instead of list
+    "\C-i": menu-complete
+    # Set bell to audible
+    set bell-style audible
+    # List possible completions instead of ringing bell
+    set show-all-if-ambiguous on
+    # From the readline documentation at
+    # https://cnswww.cns.cwru.edu/php/chet/readline/readline.html#SEC12
+    # Macros that are convenient for shell interaction
+    # edit the path
+    "\C-xp": "PATH=${PATH}\e\C-e\C-a\ef\C-f"
+    # prepare to type a quoted word -- insert open and close double quotes
+    # and move to just after the open quote
+    "\C-x\"": "\"\"\C-b"
+    # insert a backslash (testing backslash escapes in sequences and macros)
+    "\C-x\\": "\\"
+    # Quote the current or previous word
+    "\C-xq": "\eb\"\ef\""
+    # Add a binding to refresh the line, which is unbound
+    "\C-xr": redraw-current-line
+    # Edit variable on current line.
+    #"\M-\C-v": "\C-a\C-k$\C-y\M-\C-e\C-a\C-y="
+    "\C-xe": "\C-a\C-k$\C-y\M-\C-e\C-a\C-y="
+  $endif
+  ```
 
 #### 1.2.18.11. Keeping a Private Stash of Utility by Adding `~/bin`
 
@@ -16429,94 +15995,7 @@ file called donors that looked like this:
 
 ### 1.2.19. Housekeeping & Administrative Tasks
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The recipes in this chapter cover tasks that occur in the course of using or administrating computers.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.1. Renaming Many Files
@@ -16705,94 +16184,28 @@ file called donors that looked like this:
 
 #### 1.2.19.3. Unzipping Many ZIP Files
 
--
+- If you want to unzip many ZIP files in a directory, but `unzip *.zip` doesn't work, put the pattern in single quotes,
+  because (unlike most other Unix commands) `unzip` handles file globbing patterns itself.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  unzip '*.zip'
+  ```
+
+- You could also use a loop to unzip each file.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  for x in /path/to/date*/name/*.zip; do unzip "$x"; done
+  ```
+
+- Unlike many Unix commands (e.g., `gzip` and `bzip2`), the last argument to `unzip` isn't any arbitrary long list of
+  files.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The first example in this section prevents the shell from expanding the wildcard by using single quotes. However,
+  that only works if there is only one wildcard. The second example works around that issue by running an explicit
+  `unzip` command for each ZIP file found when the shell expands the wildcards.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.4. Recovering Disconnected Sessions Using `screen`
