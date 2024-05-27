@@ -785,7 +785,7 @@
   "editor.tabSize": 2,
 
   "extensions.experimental.affinity": {
-    "yzhang.markdown-all-in-one": 1,
+    "yzhang.markdown-all-in-one": 1
   },
 
   "explorer.compactFolders": false,
