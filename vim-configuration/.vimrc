@@ -14,8 +14,15 @@ set wrap
 " The amount of tenths of a second to blink when matching brackets
 set mat=2
 
+" ---------------------------------------------------------------------------------------------------------------------
+
+" Text Navigation
+
 " Allow backspace over indentation, line breaks, and insertion start
 set backspace=indent,eol,start
+
+" Enable wrapping to new/previous lines with arrow keys
+set whichwrap+=<,>,[,]
 
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -73,7 +80,7 @@ set number
 set title
 
 " Redraw only when necessary
-set lazyredraw
+" set lazyredraw
 
 " Highlight matching curly braces, parentheses and square brackets
 set showmatch
