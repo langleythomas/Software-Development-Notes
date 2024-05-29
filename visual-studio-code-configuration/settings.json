@@ -39,6 +39,7 @@
     "Abrahamovich",
     "ABRT",
     "Acro",
+    "albing",
     "alexcvzz",
     "aline",
     "Alkenstar",
@@ -73,6 +74,7 @@
     "bdelete",
     "beachcombing",
     "Beastmasters",
+    "Behavior",
     "Bhaal",
     "Bhelrim",
     "Biase",
@@ -155,6 +157,7 @@
     "Deneith",
     "deployability",
     "Devilbreaker",
+    "dialog",
     "directorylist",
     "dirking",
     "djembes",
@@ -273,6 +276,7 @@
     "Gribbits",
     "Grimon",
     "Grundle",
+    "gsub",
     "gules",
     "Gunworks",
     "gzcat",
@@ -311,6 +315,7 @@
     "Horvi",
     "Howdy",
     "hslearch",
+    "HSPACE",
     "HSQLDB",
     "Huzuz",
     "Hydroforge",
@@ -662,6 +667,7 @@
     "thello",
     "Thimecria",
     "THISPACKAGE",
+    "thomas",
     "Thornback",
     "Thornbloom",
     "Thornscale",
@@ -713,6 +719,7 @@
     "Urb'luu",
     "Urgathoa",
     "URLLC",
+    "usagexit",
     "usermod",
     "uucico",
     "uucppublic",
@@ -729,6 +736,7 @@
     "vipw",
     "Vixie",
     "Vrock",
+    "VSPACE",
     "Warbot",
     "Warforged",
     "Wastriliths",
@@ -790,7 +798,7 @@
 
   "explorer.compactFolders": false,
 
-  "files.dialog.defaultPath": "/home/thomas/Repos", // Linux
+  // "files.dialog.defaultPath": "/home/thomas/Repos", // Linux
   // "files.dialog.defaultPath": "C:\\Repos", // Windows
   "files.insertFinalNewline": true,
 
