@@ -14,32 +14,9 @@ Essential Notes to Look At:
 
 Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
-# Online Notes
-## Energy Efficient Software
-- How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
-- Tutorial Starting Page: https://learn.greensoftware.foundation/
-- Software Carbon Intensity: https://sci.greensoftware.foundation/
-- Optimise your microservice architecture for sustainability: https://foxutech.medium.com/how-to-optimize-your-microservice-architecture-for-sustainability-e7218cef4749
-- Guide to developing eco-friendly architectures: https://www.linkedin.com/pulse/building-sustainable-microservices-guide-developing-rohit-asthana
-- Revisiting energy and performance in microservice applications: https://www.sciencedirect.com/science/article/abs/pii/S0167819121001010
-- Energy Consumption in Microservices Architecture: https://www.researchgate.net/publication/371754881_Energy_Consumption_in_Microservices_Architectures_A_Systematic_Literature_Review
-- Code optimisation tactics: https://medium.com/@maxmeinhardt/software-energy-efficiency-code-optimization-tactics-b95be4ffcaf7
-- Energy Efficient Programming Languages, Tools and Practices in Coding: https://curiosum.com/blog/green-coding-software-development-energy-efficient-programming-languages
-- How to build and design sustainable software: https://www.freecodecamp.org/news/design-and-build-sustainable-software/
-## Reading Documentation
-- How to Read Your Way to Becoming a Better Developer (Medium, https://medium.com/free-code-camp/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c)
-- Mastering the Art of Learning from Documentation: Pro Tips for Developers & Technical Professionals (Medium, https://medium.com/@aarafat27/mastering-the-art-of-learning-from-documentation-pro-tips-for-developers-and-technical-cd9ae1d34ecd)
-- Layman Explained: Reading Documentation (Medium, https://medium.com/@laymanExplained/layman-explained-reading-documentation-36c450e77e6b)
-## Text Editor
-- Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
-## Command Line
-- Bash Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
-- Bash Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
-- Bash Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
-## Java Refresher
-- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
-
 # Cheat Sheets
+## Text Editor Notes
+- Vim Cheat Sheet Commands/Shortcuts
 ## List of Terminal Tools Documentation on Which to Write Cheat Sheets & Compile Links
 Find all the `bash` programs from the following following list in man7. For any non-`bash` documentation, explain how
 to install it with a lint to an external link or reference to a section in this page.
@@ -247,6 +224,31 @@ to install it with a lint to an external link or reference to a section in this 
 ## Pipelines
 - Data Pipeline Pocket Reference (Humble Bundle)
 - Cost-Effective Data Pipelines (Humble Bundle)
+
+# Online Notes
+## Energy Efficient Software
+- How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
+- Tutorial Starting Page: https://learn.greensoftware.foundation/
+- Software Carbon Intensity: https://sci.greensoftware.foundation/
+- Optimise your microservice architecture for sustainability: https://foxutech.medium.com/how-to-optimize-your-microservice-architecture-for-sustainability-e7218cef4749
+- Guide to developing eco-friendly architectures: https://www.linkedin.com/pulse/building-sustainable-microservices-guide-developing-rohit-asthana
+- Revisiting energy and performance in microservice applications: https://www.sciencedirect.com/science/article/abs/pii/S0167819121001010
+- Energy Consumption in Microservices Architecture: https://www.researchgate.net/publication/371754881_Energy_Consumption_in_Microservices_Architectures_A_Systematic_Literature_Review
+- Code optimisation tactics: https://medium.com/@maxmeinhardt/software-energy-efficiency-code-optimization-tactics-b95be4ffcaf7
+- Energy Efficient Programming Languages, Tools and Practices in Coding: https://curiosum.com/blog/green-coding-software-development-energy-efficient-programming-languages
+- How to build and design sustainable software: https://www.freecodecamp.org/news/design-and-build-sustainable-software/
+## Reading Documentation
+- How to Read Your Way to Becoming a Better Developer (Medium, https://medium.com/free-code-camp/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c)
+- Mastering the Art of Learning from Documentation: Pro Tips for Developers & Technical Professionals (Medium, https://medium.com/@aarafat27/mastering-the-art-of-learning-from-documentation-pro-tips-for-developers-and-technical-cd9ae1d34ecd)
+- Layman Explained: Reading Documentation (Medium, https://medium.com/@laymanExplained/layman-explained-reading-documentation-36c450e77e6b)
+## Text Editor
+- Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
+## Command Line
+- Bash Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
+- Bash Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
+- Bash Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
+## Java Refresher
+- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
 
 -->
 
@@ -790,13 +792,13 @@ TODO: Order in which to do this testing.
       - [1.2.15.11. Cleaning Up an SVN Source Tree](#121511-cleaning-up-an-svn-source-tree)
       - [1.2.15.12. Setting Up a Database with MySQL](#121512-setting-up-a-database-with-mysql)
       - [1.2.15.13. Isolating Specific Fields in Data](#121513-isolating-specific-fields-in-data)
-      - [1.2.15.14. Updating Specific Fields in Datafiles](#121514-updating-specific-fields-in-datafiles)
+      - [1.2.15.14. Updating Specific Fields in Data Files](#121514-updating-specific-fields-in-data-files)
       - [1.2.15.15. Trimming Whitespace](#121515-trimming-whitespace)
       - [1.2.15.16. Compressing Whitespace](#121516-compressing-whitespace)
       - [1.2.15.17. Processing Fixed-Length Records](#121517-processing-fixed-length-records)
       - [1.2.15.18. Processing Files with No Line Breaks](#121518-processing-files-with-no-line-breaks)
-      - [1.2.15.19. Converting a Datafile to CSV](#121519-converting-a-datafile-to-csv)
-      - [1.2.15.20. Parsing a CSV Datafile](#121520-parsing-a-csv-datafile)
+      - [1.2.15.19. Converting a Data File to CSV](#121519-converting-a-data-file-to-csv)
+      - [1.2.15.20. Parsing a CSV Data File](#121520-parsing-a-csv-data-file)
     - [1.2.16. Writing Secure Shell Scripts](#1216-writing-secure-shell-scripts)
       - [1.2.16.1. Avoiding Common Security Problems](#12161-avoiding-common-security-problems)
       - [1.2.16.2. Avoiding Interpreter Spoofing](#12162-avoiding-interpreter-spoofing)
@@ -8285,94 +8287,53 @@ file called donors that looked like this:
 
 #### 1.2.13.2. Supplying a Default Date
 
--
+- If you want your script to provide a useful default date, and perhaps prompt the user to verify it, use the GNU
+  `date` command, assign the most likely date to a variable, then then allow the user to change it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: default_date
+
+  # Use noon time to prevent a script running around midnight and a clock a
+  # few seconds off from causing off by one day errors.
+
+  START_DATE=$(date -d 'last week Monday 12:00:00' '+%Y-%m-%d')
+  while [ 1 ]; do
+    printf "%b" "The starting date is $START_DATE, is that correct? (Y/new date)"
+    read answer
+
+    # Anything other than ENTER, "Y", or "y" is validated as a new date
+    # Could use "[Yy]*" to allow the user to spell out "yes"...
+    # Validate the new date format as: YY-MM-DD
+
+    case "$answer" in
+      [Yy]) break
+        ;;
+      [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9])
+        printf "%b" "Overriding $START_DATE with $answer\n"
+        START_DATE="$answer"
+        ;;
+      *) printf "%b" "Invalid date, please try again...\n"
+        ;;
+    esac
+  done
+
+  END_DATE=$(date -d "$START_DATE +7 days" '+%Y-%m-%d')
+
+  echo "START_DATE: $START_DATE"
+  echo "END_DATE: $END_DATE"
+  ```
+
+- Not all `date` commands support the `-d` option, but the GNU version does. It is best to obtain and user the GNU
+  `date` command if at all possible.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Leave out the user verification code if your script is running unattended or at a known time (e.g., from `cron`).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Code like the code block in this section is used in scripts that generate SQL queries. The script runs at a given
+  time and creates an SQL query for a specific date range to generate a report.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.13.3. Automating Date Ranges
@@ -8938,187 +8899,269 @@ file called donors that looked like this:
 
 #### 1.2.14.2. Viewing Photos in an Album
 
--
+- If you have a directory full of images, and you want a quick and easy way to view them all, you can write a shell
+  script that will generate a set of HTML pages so that you can view your photos with a browser. The example in this
+  section is called `mk_album` and is intended to be stored in your `~/bin` directory.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- On the command, `cd` into the directory where you want to create the album (typically where your photos are located).
+  Then run a command to generate the list of photos that you want included in this album, and pipe this output into the
+  `mk_album` shell script. You need to put the name of the album (i.e., the name of the directory that will be created
+  by the script) on the command line as the only argument to the shell script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  ls *.jpg | mk_album rugby_match
+  ```
+
+- The following code block is the shell script (called `mk_album`) that will generate a set of HTML pages for your
+  album, one page per image.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # cookbook filename: mk_album
+  # mk_album - make an HTML "album" of a pile of photo files.
+  # ver. 0.2
+  #
+  # An album is a directory of HTML pages.
+  # It will be created in the current directory.
+  #
+  # An album page is the HTML to display one photo, with
+  # a title that is the filename of the photo, along with
+  # hyperlinks to the first, previous, next, and last photos.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # ERR_OUT
+  # The ERR_OUT function redirects its output to standard error. While redirection normally is placed at the end of a
+  # command, it is added here to tell `bash` to redirect all output that emanates from this function.
+  ERR_OUT() {
+    printf "%b" "$@"
+  } >&2
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # USAGE
+  USAGE() {
+    # The ## in the string in the following line is included in order to remove the path noise, as specified by the */.
+    ERR_OUT "usage: %s <new_dir>\n" ${0##*/}
+  }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # EMIT(this_photo, starting_photo, previous_photo, next_photo, last_photo)
+  # The EMIT function emits the HTML for each page of the album. Each page is its own (static) web page, with
+  # hyperlinks to the previous and next image, as well as links to the first and last image. The EMIT function doesn't
+  # know much; it is given the names of all the images to link, and it takes those names and converts them to page
+  # names, which are the same as the image name, but with the file extension changed to `.html`.
+  EMIT()
+  {
+    THIS_PHOTO="../$1"
+    STARTING_PHOTO="${2%.*}.html"
+    PREVIOUS_PHOTO="${3%.*}.html"
+    NEXT_PHOTO="${4%.*}.html"
+    LAST_PHOTO="${5%.*}.html"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    if [ -z "$3" ]
+    then
+      PREVIOUS_LINE='<TD> Prev </TD>'
+    else
+      PREVIOUS_LINE='<TD> <A HREF="'$PREVIOUS_PHOTO'"> Prev </A> </TD>'
+    fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    if [ -z "$4" ]
+    then
+      NEXT_LINE='<TD> Next </TD>'
+    else
+      NEXT_LINE='<TD> <A HREF="'$NEXT_PHOTO'"> Next </A> </TD>'
+    fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Since there is so much HTML to emit, rather than have `printf` after `printf` statement, the `cat` command is used
+  # and a here-document allows the typing of literal HTML in the script, line after line, with shell variable expansion
+  # being applied to the lines. The `cat` command is simply concatenating STDIN to the STDOUT. This `cat` command
+  # redirects STDIN to take its input from the subsequent lines of text, i.e., a here-document. By not quoting the end
+  # of input word (just `EOF`, and not `'EOF'` or `\EOF`), we ensure that `bash` will continue to use variable names
+  based on the parameters for various titles and hyperlinks.
+  cat <<EOF
+  <HTML>
+  <HEAD><TITLE>$THIS_PHOTO</TITLE></HEAD>
+  <BODY>
+  <H2>$THIS_PHOTO</H2>
+  <TABLE WIDTH="25%">
+  <TR>
+  <TD> <A HREF="$STARTING_PHOTO"> First </A> </TD>
+  $PREVIOUS_LINE
+  $NEXT_LINE
+  <TD> <A HREF="$LAST_PHOTO"> Last </A> </TD>
+  </TR>
+  </TABLE>
+  <IMG SRC="$THIS_PHOTO" alt="$THIS_PHOTO"
+  BORDER="1" VSPACE="4" HSPACE="4"
+  WIDTH="800" HEIGHT="600"/>
+  </BODY>
+  </HTML>
+  EOF
+  }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if (( $# != 1 ))
+  then
+    USAGE
+    exit -1
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ALBUM="$1"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if [ -d "${ALBUM}" ]
+  then
+    ERR_OUT "Directory [%s] already exists.\n" ${ALBUM}
+    USAGE
+    exit -2
+  else
+    mkdir "$ALBUM"
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  cd "$ALBUM"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  PREV=""
+  FIRST=""
+  LAST="last"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  while read PHOTO
+  do
+    # prime the pump
+    if [ -z "${CURRENT}" ]
+    then
+      CURRENT="$PHOTO"
+      FIRST="$PHOTO"
+      continue
+    fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    PHOTO_FILE_PATH_WITHOUT_LEADING_PATH_NAME=${CURRENT##*/} # remove any leading path
+    EMIT "$CURRENT" "$FIRST" "$PREV" "$PHOTO" "$LAST" > "${PHOTO_FILE_PATH_WITHOUT_LEADING_PATH_NAME%.*}.html"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    # set up for next iteration
+    PREV="$CURRENT"
+    CURRENT="$PHOTO"
+  done
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  PHOTO_FILE_PATH_WITHOUT_LEADING_PATH_NAME=${CURRENT##*/} # remove any leading pathname
+  EMIT "$CURRENT" "$FIRST" "$PREV" "" "$LAST" > "${PHOTO_FILE_PATH_WITHOUT_LEADING_PATH_NAME%.*}.html"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # The following two commands in this script create symbolic links as shortcuts to the first and last photos. This
+  # allows the script to determine the first and last pages of the album; it just uses the hard-coded names
+  # `index.html` and `last.html`, respectively, when generating all the other album pages.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # make the symlink for "last"
+  ln -s "${PHOTO_FILE_PATH_WITHOUT_LEADING_PATH_NAME%.*}.html" ./last.html
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # make a link for index.html
+  ln -s "${FIRST%.*}.html" ./index.html
+  ```
 
 #### 1.2.14.3. Loading Your MP3 Player
 
--
+- If you have a collection of MP3 files that you would like to add to your MP3 plater, but you have more music than can
+  fit in its storage, you can use a shell script to keep track of the available space as it copies files onto the MP3
+  plater, quitting when it is full.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: load_mp3
+  # Fill up my mp3 player with as many songs as will fit.
+  # N.B.: This assumes that the mp3 player is mounted on /media/mp3
+  #
+
+  #
+  # determine the size of a file
+  #
+  function FILESIZE () {
+    FN=${1:-/dev/null}
+    if [[ -e $FN ]]
+    then
+    # FZ=$(stat -c '%b' "$FN")
+    set -- $(ls -s "$FN")
+    FZ=$1
+    fi
+  }
+
+  #
+  # compute the free space on the mp3 player
+  #
+  function CALCULATE_FREE_SPACE {
+    # FREE=$(df /media/mp3 | awk '/^\/dev/ {print $4}')
+    set -- $(df /media/mp3 | grep '^/dev/')
+    FREE=$4
+  }
+
+  # subtract the (given) file size from the (global) free space
+  function REDUCE ()
+  (( FREE-=${1:-0})) # this works, but is unusual
+
+  #
+  # main:
+  #
+  let SUM=0
+  let COUNT=0
+  export FZ
+  export FREE
+
+  CALCULATE_FREE_SPACE
+
+  # The `find` command will locate all the files with an `.mp3` file extension. This information is then piped to the
+  # `while` loop on the next line. The `while` loop and `printf` command are wrapped inside of parentheses, meaning the
+  # statements inside them will be run inside of a subshell. Putting the `while` and `printf` inside of a sub-shell
+  # means they are both now executing in the same shell environment and can share variables. A similar effect can be
+  # accomplished with braces.
+  find . -name '*.mp3' -print | \
+  ( while read PATH_NAME
+    do
+      FILESIZE "$PATH_NAME"
+
+      if ((FZ <= FREE))
+      then
+        echo loading $PATH_NAME
+
+        cp "$PATH_NAME" /media/mp3
+
+        if (( $? == 0 ))
+        then
+          let SUM+=FZ
+          let COUNT++
+          REDUCE $FZ
+        else
+          echo "bad copy of $PATH_NAME to /media/mp3"
+          rm -f /media/mp3/"${PATH_NAME##*/}"
+
+          # recompute because we don't know how far it got
+          CALCULATE_FREE_SPACE
+        fi
+
+        # any reason to go on?
+        if (( FREE <= 0 ))
+        then
+          break
+        fi
+      else
+        echo skipping $PATH_NAME
+      fi
+    done
+
+    printf "loaded %d songs (%d blocks)" $COUNT $SUM
+
+    printf " onto /media/mp3 (%d blocks free)\n" $FREE
+  )
+  # end of script
+  ```
+
+- The script in this will copy any MP3 file from the current directory on down, towards the leaf nodes of the tree onto
+  an MP3 player (or other device) mounted on `/media/mp3`. The script will try to determine the free space on the
+  device before it begins its copying, and then it will subtract the disk size of copied items so as to know when to
+  quit (i.e., when the device is full, or as full as possible).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The script can be invoked with the following command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  load_mp3
+  ```
 
 #### 1.2.14.4. Burning a CD
 
@@ -9474,92 +9517,72 @@ file called donors that looked like this:
 
 #### 1.2.15.3. Parsing Some HTML
 
--
+- For a quick and easy shell parse of HTML, provided it doesn't have to be foolproof, you might want to try something
+  like the following.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  cat $1 | sed -e 's/>/>\
+  /g' | grep '<a' | while IFS='"' read a b c ; do echo $b; done
+  ```
+
+- Parsing HTML from `bash` is pretty tricky, mainly because `bash` tends to be very line-oriented whereas HTML was
+  designed to treat newlines like white space. So, it's not uncommon to see tags split across two or more lines, like
+  the following.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```html
+  <a href="blah..." rel="blah..." media="blah..."
+    target= "blah..." >
+  ```
+
+- There are also two ways to write `<a>` tags, one with a separate ending `</a>` tag and one without, where instead the
+  singular `<a>` tag itself ends with a `/>`. Between this and the potential for multiple tags on a line and tags split
+  across lines, it’s a bit messy to parse, and our simple bash technique for this is often not foolproof.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following are the steps involved in the solution at the start of this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Break the multiple tags on one line into at most one line per tag. The new line right after the backslash so that
+    it substitutes each end-of-tag character (i.e., the `>`) with that same character and then a new line. That will
+    put tags on separate lines, with possibly additional blank lines. The trailing `g` tells `sed` to do the search and
+    replace globally.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    cat file | sed -e 's/>/>\
+    /g'
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - The output of the `sed` command is then piped into `grep` to retrieve just the `<a` tag lines.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    cat file | sed -e 's/>/>\
+    /g' | grep '<a'
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Or just lines with double quotes. The single quotes in the following code block tells the shell to take the inner
+    characters literally and not do any shell expansion on them. The rest is a regular expression to match a double
+    quote followed by any character (`.`) any number of times (`*`), followed by another double quote. This won't work
+    if the string itself is split across lines.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    cat file | sed -e 's/>/>\
+    /g' | grep '".*"'
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - By preceding the `read` command with `IFS='"'`, we set that environment variable just for the `read` command, not
+    for the entire script. Thus, it will parse with the quotes as its identifier of what separates the words of the
+    input lines.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    cat $1 | sed -e 's/>/>\
+    /g' | grep '<a' | while IFS='"' read a b c ; do echo $b; done
+    ```
 
 #### 1.2.15.4. Parsing Output into an Array
 
@@ -9603,94 +9626,52 @@ file called donors that looked like this:
 
 #### 1.2.15.5. Parsing Output with a Function Call
 
--
+- If you want to parse the output of some program into various variables to be used elsewhere in your program, arrays
+  are great when you are looping through the values, but not very readable if you want to refer to each separately,
+  rather than by an index.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Use a function call to parse the words.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: parseViaFunc
+  #
+  # parse ls -l via function call
+  # an example of output from ls -l follows:
+  # -rw-r--r-- 1 albing users 126 Jun 10 22:50 fnsize
+
+  function ls_parts () {
+    PERMS=$1
+    LCOUNT=$2
+    OWNER=$3
+    GROUP=$4
+    SIZE=$5
+    CR_MONTH=$6
+    CR_DAY=$7
+    CRTIME=$8
+    FILE=$9
+  }
+
+  ls_parts $(ls -l "$1")
+
+  echo "$FILE has $LCOUNT link(s) and is $SIZE bytes long."
+  ```
+
+- Here's what it looks like when executing the script in the previous code block.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ ./fnsize fnsize
+  fnsize has 1 link(s) and is 311 bytes long.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Calling a function in a shell script is much calling a separate script. `bash` parses the words into separate
+  variables and assigns them to `$1`, `$2`, etc. Our function can just assign each positional parameter to a separate
+  variable. If the variables are not declared locally, then they also available inside the function.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.6. Parsing Text with a `read` Statement
@@ -9738,94 +9719,55 @@ file called donors that looked like this:
 
 #### 1.2.15.9. Getting Your Plurals Right
 
--
+- If you want to use a plural noun when you have more than one of an object, but you don't want to scatter `if`
+  statements throughout your code, you can use a function similar to the following script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: pluralize
+  #
+  # A function to make words plural by adding an s
+  # when the value ($2) is != 1 or -1.
+  # It only adds an 's'; it is not very smart.
+  #
+
+  function plural () {
+    if [ $2 -eq 1 -o $2 -eq -1 ]
+    then
+    echo ${1}
+    else
+    echo ${1}s
+    fi
+  }
+
+  while read num name
+  do
+    echo $num $(plural "$name" $num)
+  done
+  ```
+
+- The following shows the execution of the script from the previous code block.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ cat input.file
+  1 hen
+  2 duck
+  3 squawking goose
+  4 limerick oyster
+  5 corpulent porpoise
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./pluralize < input.file
+  1 hen
+  2 ducks
+  3 squawking gooses
+  4 limerick oysters
+  5 corpulent porpoises
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The `if` statement could be rewritten as the following: `if (( $2 == 1 || $2 == -1 ))`. The square bracket with the
+  `if` statement is the older form, and is more common across the various versions of `bash`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.10. Taking It One Character at a Time
@@ -10214,7 +10156,7 @@ file called donors that looked like this:
   10.10.10.13
   ```
 
-#### 1.2.15.14. Updating Specific Fields in Datafiles
+#### 1.2.15.14. Updating Specific Fields in Data Files
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -10674,188 +10616,52 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.15.19. Converting a Datafile to CSV
+#### 1.2.15.19. Converting a Data File to CSV
 
--
+- If you have a data file that you need to confer to a Comma-Separate Values (CSV) file, use `awk` or Perl to convert
+  the data into a CSV format.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `awk` splits up the input fields using a tab as the field separator and set the output field separator (OFS) to
+  `","`, which will provide the trailing quote for each field, and then the leading quote for the next field as well as
+  the command in between them.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using `awk`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ awk 'BEGIN { FS="\t"; OFS="\",\"" } { gsub(/"/, "\"\""); $1 = $1; > printf "\"%s\"\n", $0}' tab_delimited
+  "Line 1","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 2","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 3","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 4","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+
+  $
+  ```
+
+- Using Perl.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ perl -naF'\t' -e 'chomp @F; s/"/""/g for @F; print q(").join(q(","),@F)
+  > .qq("\n);' tab_delimited
+  "Line 1","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 2","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 3","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+  "Line 4","Field 2","Field 3","Field 4","Field 5 with ""internal"" double-quotes"
+
+  $
+  ```
+
+- There's no format specification for CSV, making it tricky to define exactly what CSV really means. Various vendors
+  have implemented various versions.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+#### 1.2.15.20. Parsing a CSV Data File
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.15.20. Parsing a CSV Datafile
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you have a comma-separated values (CSV) data file that you need to parse, unfortunately there is no easy way to do
+  this, since it's tricky to define exactly what CST really means.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 ### 1.2.16. Writing Secure Shell Scripts
