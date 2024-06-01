@@ -44,6 +44,7 @@ to install it with a lint to an external link or reference to a section in this 
 - column
 - comm
 - command
+- compgen
 - complete
 - compress
 - coproc
@@ -82,6 +83,7 @@ to install it with a lint to an external link or reference to a section in this 
 - git
 - gpasswd
 - grep
+- gsub
 - gunzip
 - gzcat
 - gzip
@@ -131,6 +133,7 @@ to install it with a lint to an external link or reference to a section in this 
 - printf
 - pr
 - ps
+- psql
 - python
 - rd
 - read
@@ -851,7 +854,7 @@ TODO: Order in which to do this testing.
       - [1.2.18.5. Changing Your `$PATH` Temporarily](#12185-changing-your-path-temporarily)
       - [1.2.18.6. Setting Your `$CDPATH`](#12186-setting-your-cdpath)
       - [1.2.18.7. When Programs Are Not Found](#12187-when-programs-are-not-found)
-      - [1.2.18.8. Shorting or Changing Command Names](#12188-shorting-or-changing-command-names)
+      - [1.2.18.8. Shortening or Changing Command Names](#12188-shortening-or-changing-command-names)
       - [1.2.18.9. Adjusting Shell Behaviour \& Environment](#12189-adjusting-shell-behaviour--environment)
       - [1.2.18.10. Adjusting `readline` Behaviour Using `.inputrc`](#121810-adjusting-readline-behaviour-using-inputrc)
       - [1.2.18.11. Keeping a Private Stash of Utility by Adding `~/bin`](#121811-keeping-a-private-stash-of-utility-by-adding-bin)
@@ -4568,8 +4571,8 @@ file called donors that looked like this:
   ```
 
 - The select statement makes it trivial to present a numbered list to the user on `STDERR`, from which they may make a
-  choice. Don't forget to provide an "exit" or "finished" choice, though Ctrl-D will end the `select` and empty input
-  will print the menu again.
+  choice. Don't forget to provide an "exit" or "finished" choice, though `<Ctrl> + d` will end the `select` and empty
+  input will print the menu again.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - The number the user typed is returned in `$REPLY`, and the value of that entry is returned in the variable you
@@ -4668,7 +4671,7 @@ file called donors that looked like this:
     long
     medium
     short
-    ^D # Ctrl-D, not visible
+    ^D # <Ctrl> + d, not visible
     $ bash ./simple.script
     ```
 
@@ -9165,95 +9168,88 @@ file called donors that looked like this:
 
 #### 1.2.14.4. Burning a CD
 
--
+- If you have a directory full of files on your Linux system that you would like to burn to a CD, you can do that with
+  two open source programs called `mkisofs` and `cdrecord`, and a `bash` script to organise the options.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Start by putting all the files that you want to copy to CD into a directory structure. The following script takes
+  that directory as an argument, makes an ISO file system image from those files, then burn the ISO image to the CD.
+  The following is an example of shell scripting, but it may not work on your system. It is not intended as a workable
+  CD recording and backup mechanism.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: cd_script
+  # cd_script - prep and burn a CD from a dir.
+  #
+  # usage: cd_script dir [ cddev ]
+  #
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if (( $# < 1 || $# > 2 ))
+  then
+    echo 'usage: cd_script dir [ cddev ]'
+    exit 2
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # set the defaults
+  SRCDIR=$1
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # your device might be "ATAPI:0,0,0" or other digits
+  CDDEV=${2:-"ATAPI:0,0,0"}
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Construct a temporary file name using the `$$` variable, giving us our process number. As long as the script is
+  # running, it will be the one and only process with that number, giving a name that is unique among all other running
+  # processes.
+  ISO_IMAGE=/tmp/cd$$.iso
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  echo "building ISO image..."
+  #
+  # make the ISO fs image
+  #
+  mkisofs -A "$(cat ~/.cdAnnotation)" \
+    -p "$(hostname)" -V "${SRCDIR##*/}" \
+    -r -o "$ISO_IMAGE" $SRCDIR
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Saving the status of the `mkisofs` command. This will be a `0` on a success, and a non-zero value if it fails.
+  # The `$?` could be used in the `if` statement below, but setting the `STATUS` variable allows that return value to
+  # be passed back out to this script's return value.
+  STATUS=$?
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if (( STATUS != 0 ))
+  then
+    echo "Error. ISO image failed."
+    echo "Investigate then remove $ISO_IMAGE"
+    exit $STATUS
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  echo "ISO image built; burning to cd..."
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  #
+  # burn the CD
+  #
+  SPD=8
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  OPTS="-eject -v fs=64M driveropts=burnproof"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  cdrecord $OPTS -speed=$SPD dev=${CDDEV} $ISO_IMAGE
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Saving the status of the `cdrecord` command. This will be a `0` on a success, and a non-zero value if it fails.
+  # The `$?` could be used in the `if` statement below, but setting the `STATUS` variable allows that return value to
+  # be passed back out to this script's return value.
+  STATUS=$?
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if (( STATUS != 0 ))
+  then
+    echo "Error. CD Burn failed."
+    echo "Investigate then remove $ISO_IMAGE"
+    exit $STATUS
+  fi
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  rm -f $ISO_IMAGE
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  echo "Done."
+  ```
 
 #### 1.2.14.5. Comparing Two Documents
 
@@ -9772,278 +9768,120 @@ file called donors that looked like this:
 
 #### 1.2.15.10. Taking It One Character at a Time
 
--
+- If you have a string and you need to parse a string one character at a time, a substring function can be used to
+  split a string into characters, and tells you the length of a string.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: one_by_one
+  #
+  # parsing input one character at a time
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  while read ALINE
+  do
+    for ((i=0; i < ${#ALINE}; i++))
+    do
+      A_CHARACTER=${ALINE:i:1}
+      # do something here, e.g. echo $A_CHARACTER
+      echo $A_CHARACTER
+    done
+  done
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - The `read` statement will take input from the standard input and place it, one line at a time, into the variable
+    `$ALINE`. Since there are no other variables in the `read` statement, it takes the entire line and removes leading
+    and trailing `$IFS` whitespace, unless you use `IFS = read`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - The `for` loop will iterate once for each character in the `$ALINE` variable. The amount of times to compute in the
+    `for` loop can be identified with `${#ALINE}`, which returns the length of the contents of `$ALINE`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `$A_CHARACTER` is assigned at each iteration through the loop, from the value of the one-character substring of
+    `$ALINE`, that begins at the `i`th position.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.11. Cleaning Up an SVN Source Tree
 
--
+- Subversion's `svn status` command shows all the files that have been modified, but if there are any auto-generated
+  files in the source tree, `svn` will also list those files.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You can `grep` output from the `svn status` command and `read` that to create a list of files to delete from the
+  source tree.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  svn status src | grep '^\?' | \
+    while read status filename; do echo "$filename"; rm -rf "$filename"; done
+  ```
+
+- The `svn status` lists one file per line. It puts an `M` as the first character of a line for files that have been,
+  modified, an `A` for newly added (but not yet committed) files, and a `?` for those which it knows nothing.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Use `grep` for those lines beginning with a question mark. Process the output in a `while` loop with a `read`
+  statement. The `echo` isn't necessary, but it's useful to see what's being removed, just in case there is a mistake
+  or an error.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- When removing the file, use the `-rf` options in case the file is a directory. Problems encountered with permissions
+  and such are squelched by the `-f` option; it removes the to the level of privilege allowed by your permissions.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.12. Setting Up a Database with MySQL
 
--
+- If you want to create and initialise several databases using MySQL, they should be initialised using the same SQL
+  commands. Each database needs its own name, but each database will have the same contents, at least at
+  initialisation. You may need to regularly perform this setup, possibly as part of a test suite.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: db_initialiser
+  #
+  # initialize databases from a standard file
+  # creating databases as needed
+
+  # The `tail -n +2` in the following line is added to remove the heading from the list of databases.
+  DB_LIST=$(mysql -e "SHOW DATABASES;" | tail -n +2)
+
+  # The `select` in the following line creates the menus showing the existing databases. The literal `"new..."` is
+  # added as an extra choice for the `select` command.
+  select DB in $DB_LIST "new..."
+  do
+    if [[ $DB == "new..." ]]
+    then
+      printf "%b" "name for new db: "
+      read DB rest
+      echo creating new database $DB
+      mysql -e "CREATE DATABASE IF NOT EXISTS $DB;"
+    fi
+
+    if [ -n "$DB" ]
+    then
+      echo Initializing database: $DB
+      mysql $DB < ourInit.sql
+    fi
+  done
+  ```
+
+- When the user wants to create a new database, in the code example, we prompt for and parse a new name, but two
+  fields are used in the `read` statement to act as error handling. If the user types more than one name on the line,
+  we only assign the first value to the variable `$DB`, while the rest of the input is assigned to `$rest` and ignored.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If the `$DB` variable is not empty, it will invoke `mysql` one more time to execute the set of SQL statements that
+  we've saved in a file named `outInit.sql`, as our standard initialisation sequence.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You may need to add username and password parameters or prompts to the `mysql` commands if you plan to use the script
+  in this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Error checking could be added after the creation of the new database to confirm if it succeeded. If it did not
+  succeed, `DB` could be unset, thereby bypassing the initialisation.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.13. Isolating Specific Fields in Data
@@ -10158,370 +9996,431 @@ file called donors that looked like this:
 
 #### 1.2.15.14. Updating Specific Fields in Data Files
 
--
+- There are multiple options for extracting cert parts (fields) of a line (record) and updating them.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- In a simple case, you can extract a single field from a line, then perform the desired operation on it. You can use
+  `awk` or `cut` for that requirement.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- In a more complicated case, you would need to modify a field in a datafile without extracting it. For a simple search
+  and replace, use `sed`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- For example, switching everyone from `csh` to `sh` on a NetBSD system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ grep csh /etc/passwd
+  root:*:0:0:Charlie &:/root:/bin/csh
+
+  $ sed 's;/csh$;/sh;' /etc/passwd | grep '^root'
+  root:*:0:0:Charlie &:/root:/bin/sh
+  ```
+
+- You can use `awk` if your need to perform arithmetic on a field or modify a string only in a certain field.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ cat data_file
+  Line 1 ends
+  Line 2 ends
+  Line 3 ends
+  Line 4 ends
+  Line 5 ends
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ awk '{print $1, $2+5, $3}' data_file
+  Line 6 ends
+  Line 7 ends
+  Line 8 ends
+  Line 9 ends
+  Line 10 ends
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # If the second field contains '3', change it to '8' and mark it
+  $ awk '{ if ($2 == "3") print $1, $2+5, $3, "Tweaked" ; else print $0; }' \
+  data_file
+  Line 1 ends
+  Line 2 ends
+  Line 8 ends Tweaked
+  Line 4 ends
+  Line 5 ends
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- There are many possibilities for how to update specific fields in data.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.15. Trimming Whitespace
 
--
+- There are a few possibilities for how to trim leading and/or trailing whitespace from lines for fields of data.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The following solutions rely on a `bash`-specific treatment of `read` and `$REPLY`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - First, we'll show a file with some leading and trailing whitespace. `~~` is added to show the whitespace, and the
+    `→` denotes a literal tab character in the output.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    # Show the whitespace in our sample file
+    $ while read; do echo ~~"$REPLY"~~; done < whitespace
+    ~~ This line has leading spaces.~~
+    ~~This line has trailing spaces. ~~
+    ~~ This line has both leading and trailing spaces. ~~
+    ~~ → Leading tab.~~
+    ~~Trailing tab. → ~~
+    ~~ → Leading and trailing tab. → ~~
+    ~~ → Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace. → ~~
+    ~~ → Leading and trailing mixed whitespace. → ~~
+
+    $
+    ```
+
+  - To trim both leading and trailing whitespace, use `$IFS` and the builtin `$REPLY` variable. The builtin `$REPLY`
+    variable that `read` uses when you do not supply your own variable name(s).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ while read REPLY; do echo ~~"$REPLY"~~; done < whitespace
+    ~~This line has leading spaces.~~
+    ~~This line has trailing spaces.~~
+    ~~This line has both leading and trailing spaces.~~
+    ~~Leading tab.~~
+    ~~Trailing tab.~~
+    ~~Leading and trailing tab.~~
+    ~~Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace.~~
+    ~~Leading and trailing mixed whitespace.~~
+
+    $
+    ```
+
+  - Trim trim only leading or only trailing *spaces*, use a simple pattern match. When one more more variable names are
+    passed to `read`, it does parse the input, using the values in `$IFS` (which are space, tab, and newline by
+    default).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    # Leading spaces only
+    $ while read; do echo "~~${REPLY## }~~"; done < whitespace
+    ~~This line has leading spaces.~~
+    ~~This line has trailing spaces. ~~
+    ~~This line has both leading and trailing spaces. ~~
+    ~~ → Leading tab.~~
+    ~~Trailing tab. ~~
+    ~~ → Leading and trailing tab. → ~~
+    ~~ → Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace. → ~~
+    ~~ → Leading and trailing mixed whitespace. → ~~
+
+    # Trailing spaces only
+    $ while read; do echo "~~${REPLY%% }~~"; done < whitespace
+    ~~ This line has leading spaces.~~
+    ~~This line has trailing spaces.~~
+    ~~ This line has both leading and trailing spaces.~~
+    ~~ → Leading tab.~~
+    ~~Trailing tab. ~~
+    ~~ → Leading and trailing tab. → ~~
+    ~~ → Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace. → ~~
+    ~~ → Leading and trailing mixed whitespace. → ~~
+    ```
+
+  - Trimming only leading or only trailing *whitespace* (including tabs) is more complicated than the previous
+    solutions.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    # You need this either way
+    $ shopt -s extglob
+
+    # Leading whitespace only
+    $ while read; do echo "~~${REPLY##+([[:space:]])}~~"; done < whitespace
+    ~~This line has leading spaces.~~
+    ~~This line has trailing spaces. ~~
+    ~~This line has both leading and trailing spaces. ~~
+    ~~Leading tab.~~
+    ~~Trailing tab. ~~
+    ~~Leading and trailing tab. → ~~
+    ~~Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace. → ~~
+    ~~Leading and trailing mixed whitespace. → ~~
+
+    $
+
+    # Trailing whitespace only
+    $ while read; do echo "~~${REPLY%%+([[:space:]])}~~"; done < whitespace
+    ~~ This line has leading spaces.~~
+    ~~This line has trailing spaces.~~
+    ~~ This line has both leading and trailing spaces.~~
+    ~~ → Leading tab.~~
+    ~~Trailing tab.~~
+    ~~ → Leading and trailing tab.~~
+    ~~ → Leading mixed whitespace.~~
+    ~~Trailing mixed whitespace.~~
+    ~~ → Leading and trailing mixed whitespace.~~
+    ```
+
+- Trimming leading or trailing spaces (but not both) is easy using the `${##}` or `${%%}` operators.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  while read; do echo "~~${REPLY## }~~"; done < whitespace
+  while read; do echo "~~${REPLY%% }~~"; done < whitespace
+  ```
+
+- Removing trailing or leading tabs is more difficult than spaces. If there are only tabs, you could use `${##}` or
+  `${%%}` operators and insert literal tabs using the `<Ctrl> + v`, `<CTRL> + i` key sequence. That can be risky if
+  there's a mix of spaces and tabs. To resolve that, turn on extended globbing and use a character class to make the
+  intent more clear. The `[:space:]` character class would work without `extglob`, but `+()` is needed to specify "one
+  or more occurrences", or else it would trim single spaces or tabs, but not multiples of both on the same line. You
+  could also use the `[:blank:]` character class instead if you only care about spaces or tabs, since `[:space:]`
+  includes other characters like the vertical tab `\v` and DOS CR (carriage return) `\r`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # This works, need extglob for +() part
+  $ shopt -s extglob
+  ...
+  $ while read; do echo "~~${REPLY##+([[:space:]])}~~"; done < whitespace
+  ...
+  $ while read; do echo "~~${REPLY%%+([[:space:]])}~~"; done < whitespace
+  ...
+
+  # This doesn't
+  $ while read; do echo "~~${REPLY##[[:space:]]}~~"; done < whitespace
+  ~~This line has leading spaces.~~
+  ~~This line has trailing spaces. ~~
+  ~~This line has both leading and trailing spaces. ~~
+  ~~Leading tab.~~
+  ~~Trailing tab. ~~
+  ~~Leading and trailing tab. ~~
+  ~~ → Leading mixed whitespace.~~
+  ~~Trailing mixed whitespace. → ~~
+  ~~ → Leading and trailing mixed whitespace. → ~~
+  ```
+
+- The following is another approach, exploiting the same `$IFS` parsing, but to parse out fields (or words) instead of
+  records (or lines).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ for i in $(cat white_space); do echo ~~$i~~; done
+  ~~This~~
+  ~~line~~
+  ~~has~~
+  ~~leading~~
+  ~~white~~
+  ~~space.~~
+  ~~This~~
+  ~~line~~
+  ~~has~~
+  ~~trailing~~
+  ~~white~~
+  ~~space.~~
+  ~~This~~
+  ~~line~~
+  ~~has~~
+  ~~both~~
+  ~~leading~~
+  ~~and~~
+  ~~trailing~~
+  ~~white~~
+  ~~space.~~
+
+  $
+  ```
+
+- The following is a compiled solution for trimming all leading and trailing whitespace and then show the trimmed text.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  shopt -s extglob
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  while IFS= read -r line; do
+  echo "None: ~~$line~~" # preserve all whitespaces
+  echo "Ld: ~~${line##+([[:space:]])}~~" # trim leading whitespace
+  echo "Tr: ~~${line%%+([[:space:]])}~~" # trim trailing whitespace
+  line="${line##+([[:space:]])}" # trim leading and...
+  line="${line%%+([[:space:]])}" # ...trailing whitespace
+  echo "All: ~~$line~~" # Show all trimmed
+  done < whitespace
+  ```
 
 #### 1.2.15.16. Compressing Whitespace
 
--
+- If you sections of whitespace in a file (perhaps it is fixed-length, space-padded) and you need to compress the
+  spaces down to a single character or delimiter, use `tr` or `awk` as appropriate.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you are trying to compress sections of whitespace down to a single character, you can use `tr`, but be aware that
+  you may damage the structure of the file if it is not well-formed. For example, if fields are delimited by multiple
+  whitespace characters, but internally have spaces, compressing multiple spaces down to one will remove that
+  distinction.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cat data_file
+  Header1 Header2 Header3
+  Rec1_Field1 Rec1_Field2 Rec1_Field3
+  Rec2_Field1 Rec2_Field2 Rec2_Field3
+  Rec3_Field1 Rec3_Field2 Rec3_Field3
+
+  $ cat data_file | tr -s ' ' '\t'
+  Header1 → Header2 → Header3
+  Rec1_Field1 → Rec1_Field2 → Rec1_Field3
+  Rec2_Field1 → Rec2_Field2 → Rec2_Field3
+  Rec3_Field1 → Rec3_Field2 → Rec3_Field3
+  ```
+
+- If you field delimiter is more than a single character, `tr` won't work since it translates single characters from
+  its first set into the matching single character on the second set. You can use `awk` to combine or convert field
+  separators, `awk`'s internal field separate `FS` accepts regular expressions, so you separate on basically any
+  character. An assignment to any field causes `awk` to reassemble the record using the output separator, `OFS`, so
+  assigning field 1 to itself and then printing the record has the effect of translating `FS` to `OFS` without having
+  to worry about the number of records in the data.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- In the following example, multiple spaces delimit fields also have internal spaces, so the following example won't
+  work.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cat data_file1
+  Header1 Header2 Header3
+  Rec1_Field1 Rec1_Field2 Rec1_Field3
+  Rec2_Field1 Rec2_Field2 Rec2_Field3
+  Rec3_Field1 Rec3_Field2 Rec3_Field3
+
+  $ awk 'BEGIN {OFS="\t"} {$1=$1; print }' data_file1
+  ```
+
+- In the following example, two spaces as assigned to `FS` and the `tab` to OFS. The assignment of `($1 = $1`) is then
+  made to ensure `awk` rebuilds the record, but that results in strings of tabs replacing the double quotes, so `gsub`
+  is used to squash the tabs, then print the output. There is also a hex dump outputted below, with `09` being the
+  ASCII tab value and `20` being the ASCII space value.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ awk 'BEGIN { FS = " "; OFS = "\t" } { $1 = $1; gsub(/\t+ ?/, "\t"); print }' \
+  data_file1
+  Header1 → Header2 → Header3
+  Rec1 Field1 → Rec1 Field2 → Rec1 Field3
+  Rec2 Field1 → Rec2 Field2 → Rec2 Field3
+  Rec3 Field1 → Rec3 Field2 → Rec3 Field3
+
+  $ awk 'BEGIN { FS = " "; OFS = "\t" } { $1 = $1; gsub(/\t+ ?/, "\t"); print }' \
+  data_file1 | hexdump -C
+  00000000 48 65 61 64 65 72 31 09 48 65 61 64 65 72 32 09 |Header1.Header2.|
+  00000010 48 65 61 64 65 72 33 0a 52 65 63 31 20 46 69 65 |Header3.Rec1 Fie|
+  00000020 6c 64 31 09 52 65 63 31 20 46 69 65 6c 64 32 09 |ld1.Rec1 Field2.|
+  00000030 52 65 63 31 20 46 69 65 6c 64 33 0a 52 65 63 32 |Rec1 Field3.Rec2|
+  00000040 20 46 69 65 6c 64 31 09 52 65 63 32 20 46 69 65 | Field1.Rec2 Fie|
+  00000050 6c 64 32 09 52 65 63 32 20 46 69 65 6c 64 33 0a |ld2.Rec2 Field3.|
+  00000060 52 65 63 33 20 46 69 65 6c 64 31 09 52 65 63 33 |Rec3 Field1.Rec3|
+  00000070 20 46 69 65 6c 64 32 09 52 65 63 33 20 46 69 65 | Field2.Rec3 Fie|
+  00000080 6c 64 0a |ld.|
+  00000083
+  ```
+
+- You can use `awk` to trim leading and trailing whitespace in the same way, but as noted previously, this will replace
+  your field separators unless they are already spaces.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  awk '{ $1 = $1; print }' white_space
+  ```
 
 #### 1.2.15.17. Processing Fixed-Length Records
 
--
+- If you need to read and process data that is in a fixed-length (also called fixed-width) form, use Perl or `gawk`
+  2.13 or greater.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Given the following file, you can process it using GNU's `gawk`, by setting `FIELDWIDTHS` to the correct field
+  lengths, settings `OFS` as desired, and making an assignment so that `gawk` rebuilds the record using this `OFS`.
+  However, `gawk` does not remove the spaces used in padding the original record, so use two `gsub`s to do that, one for
+  all the internal fields and the other for the last field in each record.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cat fixed-length_file
+  Header1-----------Header2-------------------------Header3---------
+  Rec1 Field1       Rec1 Field2                     Rec1 Field3
+  Rec2 Field1       Rec2 Field2                     Rec2 Field3
+  Rec3 Field1       Rec3 Field2                     Rec3 Field3
+
+  $ gawk 'BEGIN { FIELDWIDTHS = "18 32 16"; OFS = "\t" }
+  > { $1 = $1; gsub(/ +\t/, "\t"); gsub(/ +$/, ""); print }' fixed-length_file
+  Header1----------- → Header2------------------------- → Header3---------
+  Rec1 Field1 → Rec1 Field2 → Rec1 Field3
+  Rec2 Field1 → Rec2 Field2 → Rec2 Field3
+  Rec3 Field1 → Rec3 Field2 → Rec3 Field3
+
+  $ gawk 'BEGIN { FIELDWIDTHS = "18 32 16"; OFS = "\t" }
+  > { $1 = $1; gsub(/ +\t/, "\t"); gsub(/ +$/, ""); print }' fixed-length_file \
+  > | hexdump -C
+  00000000 48 65 61 64 65 72 31 2d 2d 2d 2d 2d 2d 2d 2d 2d |Header1---------|
+  00000010 2d 2d 09 48 65 61 64 65 72 32 2d 2d 2d 2d 2d 2d |--.Header2------|
+  00000020 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d |----------------|
+  00000030 2d 2d 2d 09 48 65 61 64 65 72 33 2d 2d 2d 2d 2d |---.Header3-----|
+  00000040 2d 2d 2d 2d 0a 52 65 63 31 20 46 69 65 6c 64 31 |----.Rec1 Field1|
+  00000050 09 52 65 63 31 20 46 69 65 6c 64 32 09 52 65 63 |.Rec1 Field2.Rec|
+  00000060 31 20 46 69 65 6c 64 33 0a 52 65 63 32 20 46 69 |1 Field3.Rec2 Fi|
+  00000070 65 6c 64 31 09 52 65 63 32 20 46 69 65 6c 64 32 |eld1.Rec2 Field2|
+  00000080 09 52 65 63 32 20 46 69 65 6c 64 33 0a 52 65 63 |.Rec2 Field3.Rec|
+  00000090 33 20 46 69 65 6c 64 31 09 52 65 63 33 20 46 69 |3 Field1.Rec3 Fi|
+  000000a0 65 6c 64 32 09 52 65 63 33 20 46 69 65 6c 64 33 |eld2.Rec3 Field3|
+  000000b0 0a |.|
+  000000b1
+  ```
+
+- If you don't have `gawk`, you can use Perl, which has a simpler solution than the `gawk` solution. The caveat with
+  this solution is that new lines should be added to end of each record before processing. The following is done in the
+  Perl solution:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - A non-printing `while` input loop is used (`n`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Unpack each record `($_)` as it's read.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Turn the resulting list back into a scalar by joining the elements with a tab.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Print each record, adding a new line at the end.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ perl -ne 'print join("\t", unpack("A18 A32 A16", $_) ) . "\n";' \
+  > fixed-length_file
+  Header1----------- → Header2------------------------- → Header3---------
+  Rec1 Field1 → Rec1 Field2 → Rec1 Field3
+  Rec2 Field1 → Rec2 Field2 → Rec2 Field3
+  Rec3 Field1 → Rec3 Field2 → Rec3 Field3
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ perl -ne 'print join("\t", unpack("A18 A32 A16", $_) ) . "\n";' \
+  > fixed-length_file |
+  > hexdump -C
+  00000000 48 65 61 64 65 72 31 2d 2d 2d 2d 2d 2d 2d 2d 2d |Header1---------|
+  00000010 2d 2d 09 48 65 61 64 65 72 32 2d 2d 2d 2d 2d 2d |--.Header2------|
+  00000020 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d 2d |----------------|
+  00000030 2d 2d 2d 09 48 65 61 64 65 72 33 2d 2d 2d 2d 2d |---.Header3-----|
+  00000040 2d 2d 2d 2d 0a 52 65 63 31 20 46 69 65 6c 64 31 |----.Rec1 Field1|
+  00000050 09 52 65 63 31 20 46 69 65 6c 64 32 09 52 65 63 |.Rec1 Field2.Rec|
+  00000060 31 20 46 69 65 6c 64 33 0a 52 65 63 32 20 46 69 |1 Field3.Rec2 Fi|
+  00000070 65 6c 64 31 09 52 65 63 32 20 46 69 65 6c 64 32 |eld1.Rec2 Field2|
+  00000080 09 52 65 63 32 20 46 69 65 6c 64 33 0a 52 65 63 |.Rec2 Field3.Rec|
+  00000090 33 20 46 69 65 6c 64 31 09 52 65 63 33 20 46 69 |3 Field1.Rec3 Fi|
+  000000a0 65 6c 64 32 09 52 65 63 33 20 46 69 65 6c 64 33 |eld2.Rec3 Field3|
+  000000b0 0a |.|
+  000000b1
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Fixed-length (a.k.a fixed-width) records are rare in the Unix world, but they are very common in the mainframe world,
+  but they will occasionally appear in large applications.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.15.18. Processing Files with No Line Breaks
@@ -13673,6 +13572,17 @@ file called donors that looked like this:
 
 #### 1.2.18.1. `bash` Startup Options
 
+- If you'd like to understand the various options you can use when starting `bash`, but `bash --help` is not helping
+  you, you can try `bash -c "help set"` and `bash -c help`, or `help set` and `help` if you are already running in a
+  `bash` shell.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- As shown in this section, `bash` can have several different ways to set the same option. You can set an option on
+  startup, then later turn off the same option interactively.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+#### 1.2.18.2. Customising Your Prompt
+
 - Customise the `$PS1` and `$PS2` variables as you desire to add more useful information to the default `bash` prompt,
   which is usually something uninformative that ends in with `$` and doesn't tell you much.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13903,98 +13813,6 @@ file called donors that looked like this:
   your screen by separating the prompt string from the commands that you type. Because your string may contain other
   spaces or special characters, it is a good idea to use double (or even single) quotes to quote the string when you
   assign it to `$PS1`.
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.18.2. Customising Your Prompt
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.3. A Prompt Before Your Program Runs
@@ -14457,7 +14275,7 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.18.8. Shorting or Changing Command Names
+#### 1.2.18.8. Shortening or Changing Command Names
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -19972,371 +19790,163 @@ file called donors that looked like this:
 
 #### 1.2.21.12. Testing `bash` Script Syntax
 
--
+- If you are editing a `bash` script and want to ensure your syntax is correct, use the `-n` argument in the `bash`
+  command on the script you wish to test the syntax.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ bash -n my_script
+
+  $ echo 'echo "Broken line' >> my_script
+
+  $ bash -n my_script
+  my_script: line 4: unexpected EOF while looking for matching `"'
+  my_script: line 5: syntax error: unexpected end of file
+  ```
+
+- Ensure you test the `bash` syntax, ideally after every save, and certainly before committing any changes to a version
+  control system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The `-n` option can be tricky to find in the `bash` manpage or other reference materials, because it's located under
+  the `set` builtin. It is noted in the `bash --help` for `-D`, but it is not explained.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- As with all syntax checker, `-n` will not catch logic errors or syntax errors in other commands called by the script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.21.13. Debugging Scripts
 
--
+- If you can't identify why your script is not operating as you expect, you can add `set -x` to the top of the script
+  when you run to turn on `xtrace` for the entire file, or use `set -x` before a troublesome section of your script to
+  enable `xtrace` for that troublesome section, allowing you to disable it with `+x`. `xtrace` also works on the
+  interactive command line. The `$PS4` prompt could also be updated to enable `xtrace` on the interactive command line.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- For example, the following script could be suspected as being buggy.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: buggy
+  #
+
+  set -x
+
+  result=$1
+
+  [ $result = 1 ] \
+    && { echo "Result is 1; excellent." ; exit 0; } \
+    || { echo "Uh-oh, RUN AWAY! " ; exit 120; }
+  ```
+
+- Invoking the problematic script, by first exporting the value of `$PS4` prompt. `bash` will print out the value of
+  `$PS4` before each command that it displays during an execution trace (i.e., after a `set -x`).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ export PS4='+xtrace $LINENO:'
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ echo $PS4
+  +xtrace $LINENO:
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./buggy
+  +xtrace 4: result=
+  +xtrace 6: '[' = 1 ']'
+  ./buggy: line 6: [: =: unary operator expected
+  +xtrace 8: echo 'Uh-oh, RUN AWAY! '
+  Uh-oh, RUN AWAY!
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./buggy 1
+  +xtrace 4: result=1
+  +xtrace 6: '[' 1 = 1 ']'
+  +xtrace 7: echo 'Result is 1; excellent.'
+  Result is 1; excellent.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./buggy 2
+  +xtrace 4: result=2
+  +xtrace 6: '[' 2 = 1 ']'
+  +xtrace 8: echo 'Uh-oh, RUN AWAY! '
+  Uh-oh, RUN AWAY!
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ /tmp/jp-test.sh 3
+  +xtrace 4: result=3
+  +xtrace 6: '[' 3 = 1 ']'
+  +xtrace 8: echo 'Uh-oh, RUN AWAY! '
+  Uh-oh, RUN AWAY!
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- As of `bash` 3.0, there are a number of new variables to better support debugging: `$BASH_ARGC`, `$BASH_ARGV`,
+  `$BASH_SOURCE`, `$BASH_LINENO`, `$BASH_SUBSHELL`, `$BASH_EXECUTION_STRING`, and `$BASH_COMMAND`. There is also a new
+  `extdebug` shell option, a new `bash` variable like `$LINENO` and the array variable `$FUNCNAME`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.21.14. Avoid `"command not found"` When Using Functions
 
--
+- Some programming languages allow you to call a function in a section of your code that comes before the actual
+  function definition.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Shell scripts are read and executed in a top-to-bottom linear way, so functions must be defined before they are used.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Some programming languages read through the entire file in its entirety, allowing you to write your code so that
+  `main()` is at the top, and functions (or subroutines) are defined lower in the file. In contract, a shell script is
+  read into memory and then executed line by line, so you can't use a function before you define it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.21.15. Confusing Shell Wildcards & Regular Expressions
 
--
+- You may see `.*`, or `*`, and sometime `[a-z]*`, but they each have their own special meaning.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Regular expression syntax is only used with the `=~` syntax in `bash`. All of the other expressions in `bash` use
+  shell pattern matching.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The pattern matching used by `bash` uses some of the same symbols as regular expressions, but with different
+  meanings. That is also the case that you often have calls in your shell scripts to commands that use regular
+  expressions - commands like `grep` and `sed`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Shell pattern matching is performed by the following:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - File name globbing (path name expansion)
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `==` and `!=` operators for `[[`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `case` statements
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `$GLOBIGNORE` handling
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `$HISTIGNORE` handling
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `${parameter#[#]word}`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `${parameter%[%]word}`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `${parameter/pattern/string}`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Several bindable `readline` commands: `glob-expand-word`, `glob-complete-word`, etc.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `complete -G` and `compgen -G`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `complete -X` and `compgen -X`
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - The `help` builtin's `pattern` argument
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 </details>
 
@@ -29024,7 +28634,7 @@ file called donors that looked like this:
 - Typing `U` in Normal mode undoes changes on a whole line.
   [5.6.1. Pi\_tutor](#561-pi_tutor)
 
-- Pressing `<Ctrl> + R` in Normal mode to redoes the commands.
+- Pressing `<Ctrl> + r` in Normal mode to redoes the commands.
   [5.6.1. Pi\_tutor](#561-pi_tutor)
 
 ### 4.1.15. Lesson 3.1: The Put Command
@@ -29459,4 +29069,4 @@ file called donors that looked like this:
 
 ### 5.11.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch
 
-- <https://www.youtube.com/watch?v=w7i4amO_zaE&t=41s>
+- <https://www.youtube.com/watch?v=w7i4amO_zaE>
