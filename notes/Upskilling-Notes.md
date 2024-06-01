@@ -640,7 +640,7 @@ TODO: Order in which to do this testing.
       - [1.2.3.1. Writing Output to the Terminal/Window](#1231-writing-output-to-the-terminalwindow)
       - [1.2.3.2. Writing Output but Preserving Space](#1232-writing-output-but-preserving-space)
       - [1.2.3.3. Writing Output with More Formatting Control](#1233-writing-output-with-more-formatting-control)
-      - [1.2.3.4. Writing Output Without the Newline](#1234-writing-output-without-the-newline)
+      - [1.2.3.4. Writing Output Without the New Line](#1234-writing-output-without-the-new-line)
       - [1.2.3.5. Appending Rather than Clobbering Output](#1235-appending-rather-than-clobbering-output)
       - [1.2.3.6. Using Just the Beginning of End of a File](#1236-using-just-the-beginning-of-end-of-a-file)
       - [1.2.3.7. Throwing Output Away](#1237-throwing-output-away)
@@ -4083,9 +4083,9 @@ TODO: Order in which to do this testing.
     Gigahertz = 1.93
   ```
 
-#### 1.2.3.4. Writing Output Without the Newline
+#### 1.2.3.4. Writing Output Without the New Line
 
-- Exclude the `\n` when using `printf` to produce an output without the default newline:
+- Exclude the `\n` when using `printf` to produce an output without the default new line:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   ```bash
@@ -4589,8 +4589,8 @@ file called donors that looked like this:
   the user is put into the variable named `$PASSWD`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-- With echoing disabled, when the user presses the Enter key no newline is echoed and any subsequent output would
-  appear on the same line as the prompt. Printing the newline gets us to the next line, as you would expect.
+- With echoing disabled, when the user presses the Enter key no new line is echoed and any subsequent output would
+  appear on the same line as the prompt. Printing the new line gets us to the next line, as you would expect.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - If you read a password into an environment variable it is in memory in plain text, and thus may be accessed via a
@@ -6196,7 +6196,7 @@ file called donors that looked like this:
   sed starting_value increment ending_value
   ```
 
-- In this example, the `$()` runs the command in a subshell and returns the result with the newlines replaced by just
+- In this example, the `$()` runs the command in a subshell and returns the result with the new lines replaced by just
   whitespace, so each value is a string value for the `for` loop.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -7096,8 +7096,8 @@ file called donors that looked like this:
 
 #### 1.2.10.11. Converting DOS Files to Linux Format
 
-- In DOS, each line ends with a pair of characters - the return and the newline. In Linux, each line ends with a single
-  newline.
+- In DOS, each line ends with a pair of characters - the return and the new line. In Linux, each line ends with a single
+  new line.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - Use the `-d` option on `tr` to delete the character(s) in the supplied list. The following example deletes all DOS
@@ -7146,7 +7146,7 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - One intricacy about `fmt` is that it expects blank lines to separate headers and paragraphs. If your input file
-  doesn't have those blanks, it has no means to differentiate different paragraphs and extra newlines inside the same
+  doesn't have those blanks, it has no means to differentiate different paragraphs and extra new lines inside the same
   paragraph - so you will be outputted one giant paragraph, with the correct lengths.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -8132,7 +8132,7 @@ file called donors that looked like this:
     Output "# $text"
   ;;
 
-  term ) # Terms. Sometimes the operation is a bit more complicated, with embedded newlines and expanded escape
+  term ) # Terms. Sometimes the operation is a bit more complicated, with embedded new lines and expanded escape
          # characters.
   Output "term_here::\n $text"
   ;;
@@ -9332,7 +9332,7 @@ file called donors that looked like this:
   cd "$PRIV1"
   unzip -q "$FULL1"
   # The following sed command means that each '>' is taken in the first substitution and each `>` in the second
-  # substitution, and replaces both plus itself with a newline. This is applied to an XML file and get the contents on
+  # substitution, and replaces both plus itself with a new line. This is applied to an XML file and get the contents on
   # lines by itself. This means the 'diff' command doesn't show any XML tags, just content text.
   sed -e 's/>/>\
   /g' -e 's/</\
@@ -9523,7 +9523,7 @@ file called donors that looked like this:
   ```
 
 - Parsing HTML from `bash` is pretty tricky, mainly because `bash` tends to be very line-oriented whereas HTML was
-  designed to treat newlines like white space. So, it's not uncommon to see tags split across two or more lines, like
+  designed to treat new lines like whitespace. So, it's not uncommon to see tags split across two or more lines, like
   the following.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -10097,7 +10097,7 @@ file called donors that looked like this:
     ```
 
   - Trim trim only leading or only trailing *spaces*, use a simple pattern match. When one more more variable names are
-    passed to `read`, it does parse the input, using the values in `$IFS` (which are space, tab, and newline by
+    passed to `read`, it does parse the input, using the values in `$IFS` (which are space, tab, and new line by
     default).
     [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
