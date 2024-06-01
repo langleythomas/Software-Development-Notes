@@ -2,6 +2,9 @@
 
 " Text Rendering
 
+" Enable syntax highlighting
+filetype plugin on
+
 " Enable syntax processing
 syntax enable
 
