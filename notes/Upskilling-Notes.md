@@ -6030,14 +6030,14 @@ file called donors that looked like this:
   character, e.g., `-eq`) are for numbers and the numeric-looking comparators (e.g., `+<=+`) are for strings.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-  | **Numeric** | **String** |        **Meaning**       |
-  |:-----------:|:----------:|:------------------------:|
-  |    `-lt`    |     `<`    |         Less than        |
-  |    `-le`    |    `<=`    |   Less than or equal to  |
-  |    `-gt`    |     `>`    |       Greater than       |
+  | **Numeric** | **String** |       **Meaning**        |
+  | :---------: | :--------: | :----------------------: |
+  |    `-lt`    |    `<`     |        Less than         |
+  |    `-le`    |    `<=`    |  Less than or equal to   |
+  |    `-gt`    |    `>`     |       Greater than       |
   |    `-ge`    |    `>=`    | Greater than or equal to |
-  |    `-eq`    |     `=`    |         Equal to         |
-  |    `-eq`    |    `= =`   |         Equal to         |
+  |    `-eq`    |    `=`     |         Equal to         |
+  |    `-eq`    |   `= =`    |         Equal to         |
   |    `-ne`    |    `!=`    |       Not equal to       |
 
 - The best solution is to always do your numerical tests with the double parentheses syntax and your string comparison
@@ -6078,11 +6078,11 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   | **Grouping** |         **Meaning**         |
-  |:------------:|:---------------------------:|
+  | :----------: | :-------------------------: |
   |   `@(...)`   |     Only one occurrence     |
-  |   `*(...)`   |   Zero or more occurrences  |
+  |   `*(...)`   |  Zero or more occurrences   |
   |   `+(...)`   |   One or more occurrences   |
-  |   `?(...)`   |    Zero or one occurrence   |
+  |   `?(...)`   |   Zero or one occurrence    |
   |   `!(...)`   | Not this, but anything else |
 
 - Matches are case-sensitive, but you may use `shopt -s nocasematch` to change that. This option affects `case` and
@@ -7011,13 +7011,13 @@ file called donors that looked like this:
   tools to extract their contents.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-  | **File Extension** |                   **Command**                  |
-  |:------------------:|:----------------------------------------------:|
+  | **File Extension** |                  **Command**                   |
+  | :----------------: | :--------------------------------------------: |
   |       `.tar`       |  `tar tf` (list contents), `tar xf` (extract)  |
   | `.tar.tgz`, `.tgz` | `tar tzf` (list contents), `tar xzf` (extract) |
-  |      `tar.bz2`     | `tar tjf` (list contents), `tar xjf` (extract) |
-  |       `tar.Z`      | `tar tZf` (list contents), `tar xZf` (extract) |
-  |       `.zip`       |                     `unzip`                    |
+  |     `tar.bz2`      | `tar tjf` (list contents), `tar xjf` (extract) |
+  |      `tar.Z`       | `tar tZf` (list contents), `tar xZf` (extract) |
+  |       `.zip`       |                    `unzip`                     |
 
 - The `file` command is helpful as it can tell you the type of a file even if the name is incorrect.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -7328,11 +7328,11 @@ file called donors that looked like this:
 - There are several types of files for which you can check.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-  | **Key** |       **Meaning**      |
-  |:-------:|:----------------------:|
+  | **Key** |      **Meaning**       |
+  | :-----: | :--------------------: |
   |   `b`   |   Block special file   |
   |   `c`   | Character special file |
-  |   `d`   |        Directory       |
+  |   `d`   |       Directory        |
   |   `p`   |    Pipe (or "fifo")    |
   |   `f`   |       Plain file       |
 
@@ -8710,19 +8710,19 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   | **Seconds** | **Minutes** | **Hours** | **Days** | **Years** |
-  |:-----------:|:-----------:|:---------:|:--------:|:---------:|
-  |      60     |      1      |    N/A    |    N/A   |    N/A    |
-  |     300     |      5      |    N/A    |    N/A   |    N/A    |
-  |     600     |      5      |    N/A    |    N/A   |    N/A    |
-  |    3,600    |      60     |     1     |    N/A   |    N/A    |
-  |    18,000   |     300     |     5     |    N/A   |    N/A    |
-  |    36,000   |     600     |     10    |    N/A   |    N/A    |
-  |    86,400   |    1,400    |     24    |     1    |    N/A    |
-  |   172,800   |    2,880    |     48    |     2    |    N/A    |
-  |   604,800   |    10,080   |    168    |     7    |    N/A    |
-  |  1,209,600  |    20,160   |    336    |    14    |    N/A    |
-  |  2,592,000  |    43,200   |    720    |    30    |    N/A    |
-  |  31,536,000 |   525,600   |   8,760   |    365   |     1     |
+  | :---------: | :---------: | :-------: | :------: | :-------: |
+  |     60      |      1      |    N/A    |   N/A    |    N/A    |
+  |     300     |      5      |    N/A    |   N/A    |    N/A    |
+  |     600     |      5      |    N/A    |   N/A    |    N/A    |
+  |    3,600    |     60      |     1     |   N/A    |    N/A    |
+  |   18,000    |     300     |     5     |   N/A    |    N/A    |
+  |   36,000    |     600     |    10     |   N/A    |    N/A    |
+  |   86,400    |    1,400    |    24     |    1     |    N/A    |
+  |   172,800   |    2,880    |    48     |    2     |    N/A    |
+  |   604,800   |   10,080    |    168    |    7     |    N/A    |
+  |  1,209,600  |   20,160    |    336    |    14    |    N/A    |
+  |  2,592,000  |   43,200    |    720    |    30    |    N/A    |
+  | 31,536,000  |   525,600   |   8,760   |   365    |     1     |
 
 #### 1.2.13.8. Handling Time Zones, Daylight Saving Time, & Leap Years
 
@@ -8777,12 +8777,12 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   | **Week** | **Day Range** |
-  |:--------:|:-------------:|
-  |   First  |      1-7      |
-  |  Second  |      8-14     |
-  |   Third  |     15-21     |
+  | :------: | :-----------: |
+  |  First   |      1-7      |
+  |  Second  |     8-14      |
+  |  Third   |     15-21     |
   |  Fourth  |     22-27     |
-  |   Fifth  |     28-31     |
+  |  Fifth   |     28-31     |
 
 #### 1.2.13.10. Logging with Dates
 
