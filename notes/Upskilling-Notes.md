@@ -52,6 +52,7 @@ to install it with a lint to an external link or reference to a section in this 
 - crontab
 - curl
 - cut
+- cvs
 - date
 - dd
 - declare
@@ -135,13 +136,17 @@ to install it with a lint to an external link or reference to a section in this 
 - ps
 - psql
 - python
+- rcp
 - rd
+- rdist
 - read
 - readarray
 - readline
+- rlogin
 - rm
 - rmdir
 - rpm
+- rsh
 - rsync
 - scp
 - screen
@@ -151,6 +156,8 @@ to install it with a lint to an external link or reference to a section in this 
 - seq
 - service
 - set
+- setgid
+- setuid
 - sftp
 - shift
 - shutdown
@@ -170,6 +177,7 @@ to install it with a lint to an external link or reference to a section in this 
 - tail
 - tar
 - tee
+- textutils
 - time
 - tmux
 - top
@@ -178,6 +186,7 @@ to install it with a lint to an external link or reference to a section in this 
 - traceroute
 - trap
 - type
+- ulimit
 - unalias
 - uname
 - uniq
@@ -824,8 +833,8 @@ TODO: Order in which to do this testing.
       - [1.2.16.19. Using `sudo` More Securely](#121619-using-sudo-more-securely)
       - [1.2.16.20. Using Passwords in Scripts](#121620-using-passwords-in-scripts)
       - [1.2.16.21. Using SSH Without a Password](#121621-using-ssh-without-a-password)
-      - [1.2.16.22. Restricting SSH Commands](#121622-restricting-ssh-commands)
-      - [1.2.16.23. Disconnecting Inactive Sessions](#121623-disconnecting-inactive-sessions)
+  - [1.2.16.22. Restricting SSH Commands](#121622-restricting-ssh-commands)
+  - [1.2.16.23. Disconnecting Inactive Sessions](#121623-disconnecting-inactive-sessions)
     - [1.2.17. Advanced Scripting](#1217-advanced-scripting)
       - [1.2.17.1. Finding `bash` Portable for `#!`](#12171-finding-bash-portable-for-)
       - [1.2.17.2. Setting a POSIX `$PATH`](#12172-setting-a-posix-path)
@@ -10425,35 +10434,78 @@ file called donors that looked like this:
 
 #### 1.2.15.18. Processing Files with No Line Breaks
 
--
+- If you have a large file with no line breaks, and you need to process it, pre-process the file and add line breaks in
+  appropriate places.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- OpenOffice's OpenDocument Format (ODF) files as basically zipped XML files. It is possible to `unzip` them and then
+  `grep` the XML.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- In the following example, a new line is inserted after every closing angle bracket (`>`). That makes it much easier
+  to process the file using `grep` or other `textutils`. Note that the following must be entered to embed an escaped
+  new line in the `sed` script: a backslash (`\`) followed immediately by the `<Enter>` key.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ wc -l content.xml
+  1 content.xml
+
+  $ sed -e 's/>/>\
+  > /g' content.xml | wc -l
+  1687
+  ```
+
+- If you have fixed-length records with no new lines, do the following, where `48` is the length of the record.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ cat fixed-length
+  Line_1_ _aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_2__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_3__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_4__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_5__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_6__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_7__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_8__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_9__
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_10_
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_11_
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZLine_12_
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ wc -l fixed-length
+  1 fixed-length
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ sed 's/.\{48\}/&\
+  > /g;' fixed-length
+  Line_1__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_2__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_3__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_4__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_5__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_6__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_7__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_8__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_9__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_10_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_11_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_12_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ perl -pe 's/(.{48})/$1\n/g;' fixed-length
+  Line_1__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_2__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_3__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_4__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_5__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_6__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_7__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_8__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_9__aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_10_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_11_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  Line_12_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
+  ```
 
 #### 1.2.15.19. Converting a Data File to CSV
 
@@ -10660,130 +10712,109 @@ file called donors that looked like this:
 
 #### 1.2.16.5. Clearing the Command Hash
 
--
+- If you need to ensure your command hash has not been subverted, use the `hash -r` command to clear entries from the
+  command hash.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- On execution of a command, `bash` "remembers" the location of most commands found in the `$PATH` to speed up
+  subsequent invocations.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If an attacker can trick *root* or even another user into running a command, they will be able to gain access to data
+  or privileges they shouldn't have. One way to trick another user into running a malicious program is to manipulate
+  the hash so that the wrong program may be executed without the other user's awareness they are running a corrupted
+  program.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.6. Preventing Core Dumps
 
--
+- If you want to program your script from dumping core in the case of an unrecoverable error, since core dumps may
+  contain sensitive data from memory (such as passwords), use the `bash` builtin `ulimit` to set the core size limit to
+  `0`, typically in your `.bashrc` file.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  ulimit -H -c 0 --
+  ```
+
+- Core dumps are intended for debugging and containing an image of the memory used by the process at the time it
+  failed. That means the file will contain anything the process had stored in memory, e.g., user-entered passwords.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- This can be set in a system-level file such as `/etc/profile` or `/etc/bashrc` to which users have to write access if
+  you don't want them to be able to change it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.7. Setting a Secure `$IFS`
 
--
+- If you want to ensure your internal field separator environment variable is clean, set it to a known good state at
+  the beginning of every script using the following syntax. Note that it is not POSIX-compliant.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Set a sane/secure IFS (note this is bash & ksh93 syntax only--not portable!)
+  IFS=$' \t\n'
+  ```
+
+- As noted in the code block, the syntax is not portable. However, the canonical portable syntax is unreliable because
+  it may easily be inadvertently stripped by editors that trim whitespace. The values are traditionally space, tab, new
+  line - the order is important. All of the following use the first value of `$IFS` as their separator: `$*` (which
+  returns all positional parameters), the special `${!prefix@}` and `${!prefix*}`, and programmable completion.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The typical method for writing leaves a trailing space and tab on the first line.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  IFS=' • → ¶
+  '
+  ```
+
+- New line, space, then tab is less likely to be trimmed, but that changes the default order, and may result in
+  unexpected results from some commands.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  IFS=' ¶
+  • → '
+  ```
 
 #### 1.2.16.8. Setting a Secure `umask`
 
--
+- If you want to ensure you are using a secure `umask`, use the `bash` builtin `umask` to set a known good state at the
+  beginning of every script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Set the `$UMASK` variable in case you need to use different masks elsewhere in the program. You could just as easily
+  skip it and do the following.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Run a new shell so you don't affect your current
+  # environment
+  /tmp$ bash
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Check the current settings
+  /tmp$ touch um_current
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Check some other settings
+  /tmp$ umask 000 ; touch um_000
+  /tmp$ umask 022 ; touch um_022
+  /tmp$ umask 077 ; touch um_077
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  /tmp$ ls -l um_*
+  -rw-rw-rw- 1 jp jp 0 Jul 22 06:05 um000
+  -rw-r--r-- 1 jp jp 0 Jul 22 06:05 um022
+  -rw------- 1 jp jp 0 Jul 22 06:05 um077
+  -rw-rw-r-- 1 jp jp 0 Jul 22 06:05 umcurrent
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Clean up and exit the subshell
+  /tmp$ rm um_*
+  /tmp$ exit
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- `umask` is a mask that specifies the bits to be *taken away* from the default permissions of *777* for directories
+  and *666* for files.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.9. Finding World-Writeable Directories in Your `$PATH`
@@ -10852,34 +10883,76 @@ file called donors that looked like this:
 
 #### 1.2.16.11. Using Secure Temporary Files
 
--
+- If you need to create a temporary file or directory, but are aware of the security implications of using a
+  predictable name, try using `echo "~$TMPDIR~"` to see if your system provides a secure temporary directory. "~" is
+  used as brackets so an output is provided if no value is assigned to the provided variable.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The easy, portable, and "usually good enough" solution is to use the "$RANDOM" inline in your script, like in the
+  following example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Make sure $TMP is set to something
+  [ -n "$TMP" ] || TMP='/tmp'
+
+  # Make a "good enough" random temp directory
+  until [ -n "$temp_dir" -a ! -d "$temp_dir" ]; do
+    temp_dir="/$TMP/meaningful_prefix.${RANDOM}${RANDOM}${RANDOM}"
+  done
+
+  mkdir -p -m 0700 $temp_dir
+    || { echo "FATAL: Failed to create temp dir '$temp_dir': $?"; exit 100 }
+    # Make a "good enough" random temp file
+    until [ -n "$temp_file" -a ! -e "$temp_file" ]; do
+      temp_file="/$TMP/meaningful_prefix.${RANDOM}${RANDOM}${RANDOM}"
+  done
+
+  touch $temp_file && chmod 0600 $temp_file
+    || { echo "FATAL: Failed to create temp file '$temp_file': $?"; exit 101 }
+  ```
+
+- A better solution is to use both a random temporary directory and a random file name, like in the following example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: make_temp
+
+  # Make sure $TMP is set to something
+  [ -n "$TMP" ] || TMP='/tmp'
+
+  # Make a "good enough" random temp directory
+  until [ -n "$temp_dir" -a ! -d "$temp_dir" ]; do
+    temp_dir="/$TMP/meaningful_prefix.${RANDOM}${RANDOM}${RANDOM}"
+  do
+  e
+  mkdir -p -m 0700 $temp_dir \
+    || { echo "FATAL: Failed to create temp dir '$temp_dir': $?"; exit 100; }
+
+  # Make a "good enough" random temp file in the temp dir
+  temp_file="$temp_dir/meaningful_prefix.${RANDOM}${RANDOM}${RANDOM}"
+  touch $temp_file && chmod 0600 $temp_file \
+    || { echo "FATAL: Failed to create temp file '$temp_file': $?"; exit 101; }
+  ```
+
+- No matter what solution you choose, don't forget to set a "trap" to clean up. As noted previously, `$temp_dir` must
+  be set before this "trap" is declared. If those things aren't true, rewrite the logic to account for your needs.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # cookbook filename: clean_temp
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Do our best to clean up temp files no matter what
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Note $temp_dir must be set before this, and must not change!
+  cleanup="rm -rf $temp_dir"
+  trap "$cleanup" ABRT EXIT HUP INT QUIT
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- `$RANDOM` is not available in `dash`, which is `/bin/sh` in some Linux distributions. Current versions of Debian and
+  Ubuntu use `dash` because it is smaller and faster than `bash`, thus helping with faster boot faster. That means that
+  `/bin/sh` (which used to be a symlink to `bash`) is not a symlink to `dash` instead, and various `bash`-specific
+  features will not work.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.12. Validating Input
@@ -10985,66 +11058,145 @@ file called donors that looked like this:
 
 #### 1.2.16.15. Writing `setuid` or `setgid` Scripts
 
--
+- You may have a problem that you think you can solve by using the `setuid` or `setgid` bit on a shell script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using Unix groups and file permissions and/or `sudo` to grant the appropriate users the least privileges they need to
+  accomplish their tasks.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using the `setuid`  or `setgid` bit on a shell script will create more problems (especially security problems) than
+  it solves. Some systems (such as Linux) don't even honour the `setuid` bit on shell scripts, so creating `setuid`
+  shell scripts creates an unnecessarily portability problem in addition to the security risks.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `setuid root` scripts are especially dangerous. Use `sudo` instead.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `setuid` and `setgid` have a different meaning when applied to directories than they when applied to executable
+  files. When one of these is set on a directory, it causes any newly-created files or subdirectories to be owned by
+  the directory's owner or group, respectively.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You can check a file to see if it is `setuid` by using `[ -u <file_path> ]` and check to see if it is `setgid` by
+  using `[ -g <file_path> ]`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ mkdir suid_dir sgid_dir
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ touch suid_file sgid_file
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ls -l
+  total 4
+  drwxr-xr-x 2 jp users 512 Dec 9 03:45 sgid_dir
+  -rw-r--r-- 1 jp users 0 Dec 9 03:45 sgid_file
+  drwxr-xr-x 2 jp users 512 Dec 9 03:45 suid_dir
+  -rw-r--r-- 1 jp users 0 Dec 9 03:45 suid_file
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ chmod 4755 suid_dir suid_file
+
+  $ chmod 2755 sgid_dir sgid_file
+
+  $ ls -l
+  total 4
+  drwxr-sr-x 2 jp users 512 Dec 9 03:45 sgid_dir
+  -rwxr-sr-x 1 jp users 0 Dec 9 03:45 sgid_file
+  drwsr-xr-x 2 jp users 512 Dec 9 03:45 suid_dir
+  -rwsr-xr-x 1 jp users 0 Dec 9 03:45 suid_file
+
+  $ [ -u suid_dir ] && echo 'Yup, suid' || echo 'Nope, not suid'
+  Yup, suid
+
+  $ [ -u sgid_dir ] && echo 'Yup, suid' || echo 'Nope, not suid'
+  Nope, not suid
+
+  $ [ -g sgid_file ] && echo 'Yup, sgid' || echo 'Nope, not sgid'
+  Yup, sgid
+
+  $ [ -g suid_file ] && echo 'Yup, sgid' || echo 'Nope, not sgid'
+  Nope, not sgid
+  ```
 
 #### 1.2.16.16. Restricting Guest Users
 
--
+- If you need to allow some guest users on your system and need to restrict what they can do, ensure to avoid using
+  shared accounts where possible, since you lose accountability and create logistical headaches when users leaves and
+  you need to change the password. Create separate accounts with the least possible permissions necessary to perform
+  the necessary actions. Consider using the following:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - A `chroot` jail.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - SSH to allow non-interactive access to commands or resources.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `bash`'s restricted shell.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- The restricted shell is designed to put the user into an environment where their ability to move around and write
+  files is severely limited. It's typically used for guest accounts. You can make a user's login shell restricted by
+  putting `rbash` in the user's `/etc/passwd` entry if this option was included when `bash` was compiled.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The specific constraints imposed by the restricted shell disallow the users from doing the following. These
+  restrictions are applied after the user's `.bash_profile` and environment variables are run. It is wise to change the
+  owner of the user's `.bash_profile` and `.bash` files to `root`, and make these files read-only. The user's home
+  directory should also be made read-only.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - Changing working directories. `cd` is inoperative. You will get the following error message if you try to use `cd`:
+    `cd:restricted from bash`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Redirecting output. The redirectors `>`, `>|`, `<>`, and `>>` are not allowed.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Assigning a new value to the environment variables `$END`, `$BASH_ENV`, `$SHELL`, or `$PATH`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Specifying any command with slashes (`/`) in them. The shell will treat files outside the current directory as "not
+    found".
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Using the `exec` builtin.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Specifying a file name containing `/` as an argument to the `.` (`source`) builtin command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Importing function definitions from the shell environment at startup.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Adding or deleting builtin commands with the `-f` and `-d` options to the `enable` builtin command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Specifying the `-p` option to the `command` builtin command.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - Turning off restricted mode with `set +r`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- The restricted shell user's entire environment is set up in `/etc/profile` and `.bash_profile`. Since the user can't
+  access `/etc/profile` and can't overwrite `.bash_profile`, this lets the system administrator configure the
+  environment as required. It's also a good idea that the last command in the startup file be `cd` to some other
+  directory, usually a subdirectory of the user's `$HOME` for an extra layer or protection.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Two common ways of setting up such environments are to set up a directory of safe commands and have that directory be
+  the only one in `$PATH`, and to set up a command menu from which the user can't escape without exiting the shell.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The restricted shell is not a catch-all for security against a determined attacker. It can also be difficult to lock
+  down as well as you think you, since many applications (such as `vi` and Emacs) allow shell escapes that might bypass
+  the restricted shell entirely. The restricted shell can be a valuably layer of security, but it should not be the
+  only layer.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The only original Bourne shell has a restricted version called `rsh`, which may be confused with the so-called
+  *r-tools* remote shell program (`rsh`, `rcp`, `rlogin`, etc.), which is also `rsh`. The very insecure `rsh` has been
+  mostly replaced by `ssh`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.17. Using `chroot` Jails
@@ -11213,39 +11365,149 @@ file called donors that looked like this:
   somewhere else rerunning `ssh-agent` and getting things out of sync.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.16.22. Restricting SSH Commands
+## 1.2.16.22. Restricting SSH Commands
 
--
+- If you'd like to restrict what an incoming SSH user or script can do, edit the `~/.ssh/authorized_keys` file, use SSH
+  forced commands, and optionally disable unnecessary SSH features.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- First, you need to determine exactly what command is being run on the remote side.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  - Create a key (as outlined in [1.2.16.21. Using SSH Without a Password](#121621-using-ssh-without-a-password)) and
+  add a forced command. Edit the `~/.ssh/authorized_keys` file and add the following before the key.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+    ```bash
+    command="/bin/echo Command was: $SSH_ORIGINAL_COMMAND"
+    ```
+
+  - The key with the preceding contents (from the previous code block) should look like the following.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    command="/bin/echo Command was: $SSH_ORIGINAL_COMMAND" ssh-dss
+    AAAAB3NzaC1kc3MAAAEBANpgvvTslst2m0ZJA0ayhh1Mqa3aWwU3kfv0m9+myFZ9veFsxM7
+    IVxIjWfAlQh3jplY+Q78fMzCTiG+ZrGZYn8adZ9yg5wAC03KXm2vKt8LfTx6I+qkMR7v15N
+    I7tZyhxGah5qHNehReFWLuk7JXCtRrzRvWMdsHcL2SA1Y4fJ9Y9FfVlBdE1Er+ZIuc5xIlO
+    6D1HFjKjt3wjbAal+oJxwZJaupZ0Q7N47uwMslmc5ELQBRNDsaoqFRKlerZASPQ5P+AH/+C
+    xa/fCGYwsogXSJJ0H5S7+QJJHFze35YZI+A1D3BIa4JBf1KvtoaFr5bMdhVAkChdAdMjo96
+    xhbdEAAAAVAJSKzCEsrUo3KAvyUO8KVD6e0B/NAAAA/3uAx2TIB/M9MmPqjeH67Mh5Y5NaV
+    WuMqwebDIXuvKQQDMUU4EPjRGmS89Hl8UKAN0Cq/C1T+OGzn4zrbE06COSm3SRMP24HyIbE
+    lhlWV49sfLR05Qmh9fRl1s7ZdcUrxkDkr2J6on5cMVB9M2nIl90IhRVLd5RxP01u81yqvhv
+    E61ORdA6IMjzXcQ8ebuD2R733O37oGFD7e2O7DaabKKkHZIduL/zFbQkzMDK6uAMP8ylRJN
+    0fUsqIhHhtc/16OT2H6nMU09MccxZTFUfqF8xIOndElP6um4jXYk5Q30i/CtU3TZyvNeWVw
+    yGwDi4wg2jeVe0YHU2RhZcZpwAAAQEAv2O86701U9sIuRijp8sO4h13eZrsE5rdn6aul/mk
+    m+xAlO+WQeDXRONm9BwVSrNEmIJB74tEJL3qQTMEFoCoN9Kp00Ya7Qt8n4gZ0vcZlI5u+cg
+    yd1mKaggS2SnoorsRlb2LhHpe6mXus8pUTf5QT8apgXM3TgFsLDT+3rCt40IdGCZLaP+UDB
+    uNUSKfFwCru6uGoXEwxaL08Nv1wZOc19qrc0Yzp7i33m6i3a0Z9Pu+TPHqYC74QmBbWq8U9
+    DAo+7yhRIhqfdJzk3vIKSLbCxg4PbMwx2Qfh4dLk+L7wOasKnl5//W+RWBUrOlaZ1ZP1/az
+    sK0Ncygno/0F1ew== This is my new key
+    ```
+
+- Execute your command to see the output.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ ssh remote_host 'ls -l /etc'
+  Command was: ls -l /etc
+
+  $
+  ```
+
+- The problem with the previous solution is that it will break a program like `rsync` that depends on having the
+  STDOUT/STDIN channel all to itself.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ rsync -avzL -e ssh remote_host:/etc .
+  protocol version mismatch -- is your shell clean?
+  (see the rsync manpage for an explanation)
+  rsync error: protocol incompatibility (code 2) at compat.c(64)
+
+  $
+  ```
+
+  - That can be resolved by modifying the forced command like the following.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    command="/bin/echo Command was: $SSH_ORIGINAL_COMMAND >> ~/ssh_command"
+    ```
+
+  - On the client side, the command can be tried again.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ rsync -avzL -e ssh 192.168.99.56:/etc .
+    rsync: connection unexpectedly closed (0 bytes received so far) [receiver]
+    rsync error: error in rsync protocol data stream (code 12) at io.c(420)
+
+    $
+    ```
+
+  - On the remote host side, the following is the output.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ cat ../ssh_command
+    Command was: rsync --server --sender -vlLogDtprz . /etc
+
+    $
+    ```
+
+- Two other things that can be done are (1) set a from host restriction, and (2) disable SSH commands. The host
+  restriction specifies the hostname or IP address of the source host.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty
+  ```
+
+- When all put together, it looks like the following.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  no-port-forwarding,no-X11-forwarding,no-agent-forwarding,no-pty,from="local_
+  client",command="rsync --server --sender -vlLogDtprz . /etc" ssh-dss
+  AAAAB3NzaC1kc3MAAAEBANpgvvTslst2m0ZJA0ayhh1Mqa3aWwU3kfv0m9+myFZ9veFsxM7
+  IVxIjWfAlQh3jplY+Q78fMzCTiG+ZrGZYn8adZ9yg5wAC03KXm2vKt8LfTx6I+qkMR7v15N
+  I7tZyhxGah5qHNehReFWLuk7JXCtRrzRvWMdsHcL2SA1Y4fJ9Y9FfVlBdE1Er+ZIuc5xIlO
+  6D1HFjKjt3wjbAal+oJxwZJaupZ0Q7N47uwMslmc5ELQBRNDsaoqFRKlerZASPQ5P+AH/+C
+  xa/fCGYwsogXSJJ0H5S7+QJJHFze35YZI+A1D3BIa4JBf1KvtoaFr5bMdhVAkChdAdMjo96
+  xhbdEAAAAVAJSKzCEsrUo3KAvyUO8KVD6e0B/NAAAA/3uAx2TIB/M9MmPqjeH67Mh5Y5NaV
+  WuMqwebDIXuvKQQDMUU4EPjRGmS89Hl8UKAN0Cq/C1T+OGzn4zrbE06COSm3SRMP24HyIbE
+  lhlWV49sfLR05Qmh9fRl1s7ZdcUrxkDkr2J6on5cMVB9M2nIl90IhRVLd5RxP01u81yqvhv
+  E61ORdA6IMjzXcQ8ebuD2R733O37oGFD7e2O7DaabKKkHZIduL/zFbQkzMDK6uAMP8ylRJN
+  0fUsqIhHhtc/16OT2H6nMU09MccxZTFUfqF8xIOndElP6um4jXYk5Q30i/CtU3TZyvNeWVw
+  yGwDi4wg2jeVe0YHU2RhZcZpwAAAQEAv2O86701U9sIuRijp8sO4h13eZrsE5rdn6aul/mk
+  m+xAlO+WQeDXRONm9BwVSrNEmIJB74tEJL3qQTMEFoCoN9Kp00Ya7Qt8n4gZ0vcZlI5u+cg
+  yd1mKaggS2SnoorsRlb2LhHpe6mXus8pUTf5QT8apgXM3TgFsLDT+3rCt40IdGCZLaP+UDB
+  uNUSKfFwCru6uGoXEwxaL08Nv1wZOc19qrc0Yzp7i33m6i3a0Z9Pu+TPHqYC74QmBbWq8U9
+  DAo+7yhRIhqfdJzk3vIKSLbCxg4PbMwx2Qfh4dLk+L7wOasKnl5//W+RWBUrOlaZ1ZP1/az
+  sK0Ncygno/0F1ew== This is my new key
+  ```
+
+- If you'd like to be a little more open about what the key can and can't do, look into the OpenSSH restricted shell,
+  `rssh`, which supports `scp`, `sftp`, `rdist`, `rsync`, and `cvs`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You’d think restrictions like these would be easy, but it turns out they are not. The problem has to do with the way
+  SSH (and the `r`-commands before it) actually works. It’s a brilliant idea and it works very well, except that it’s
+  hard to limit. To vastly over‐simplify it, you can think of SSH as connecting your local `STDOUT` to `STDIN` on the
+  remote side and the remote `STDOUT` to your local `STDIN`, so all things like `scp` or `rsync` do is stream bytes
+  from the local machine to the remote machine as if over a pipe. But that very flexibility precludes SSH from being
+  able to restrict interactive access while allowing `scp`. There’s no difference. And that’s why you can’t put lots of
+  `echo` and debugging statements in your bash configuration files that output will intermingle with the byte stream
+  and cause havoc.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `rssh` works by providing a wrapper that you use instead of a default login shell (like `bash`) in `/etc/passwd`.
+  That wrapper determines what it will and will not allow, but with much more flexibility than a plain old
+  SSH-restricted command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.16.23. Disconnecting Inactive Sessions
+## 1.2.16.23. Disconnecting Inactive Sessions
 
 - Set the `$TMOUT` environment variable in `/etc/bashrc` or `~/.bashrc` to the number of seconds of inactivity before
   ending a session when you'd like to be able to automatically log out inactive users, especially `root`. In
