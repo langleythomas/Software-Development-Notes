@@ -76,7 +76,7 @@ to install it with a lint to an external link or reference to a section in this 
 |        enable         |                        |                            |
 |          env          |                        |                            |
 |         exec          |                        |                            |
-|         execve        |                        |                            |
+|        execve         |                        |                            |
 |         exit          |                        |                            |
 |        ffmpeg         |                        |                            |
 |        ffprobe        |                        |                            |
@@ -125,7 +125,7 @@ to install it with a lint to an external link or reference to a section in this 
 |         lshw          |                        |                            |
 |         lspci         |                        |                            |
 |         lsusb         |                        |                            |
-|        lynx           |                        |                            |
+|         lynx          |                        |                            |
 |          man          |                        |                            |
 |       maparray        |                        |                            |
 |        mapfile        |                        |                            |
@@ -221,7 +221,7 @@ to install it with a lint to an external link or reference to a section in this 
 |        visudo         |                        |                            |
 |         watch         |                        |                            |
 |          wc           |                        |                            |
-|        wget           |                        |                            |
+|         wget          |                        |                            |
 |        whatis         |                        |                            |
 |         which         |                        |                            |
 |        whoami         |                        |                            |
@@ -552,106 +552,6 @@ TODO: Order in which to do this testing.
 
 -->
 
-- [1. Book Notes](#1-book-notes)
-  - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
-    - [1.1.1. A Comment on Comments](#111-a-comment-on-comments)
-    - [1.1.2. A Message to the Future](#112-a-message-to-the-future)
-    - [1.1.3. Act with Prudence](#113-act-with-prudence)
-    - [1.1.4. Apply Functional Programming Principles](#114-apply-functional-programming-principles)
-    - [1.1.5. Ask, "What Would the User Do?" (You Are Not the User)](#115-ask-what-would-the-user-do-you-are-not-the-user)
-    - [1.1.6. Automate Your Coding Standard](#116-automate-your-coding-standard)
-    - [1.1.7. Beauty Is in Simplicity](#117-beauty-is-in-simplicity)
-    - [1.1.8. Before You Refactor](#118-before-you-refactor)
-    - [1.1.9. Beware the Share](#119-beware-the-share)
-    - [1.1.10. Check Your Code First Before Looking to Blame Others](#1110-check-your-code-first-before-looking-to-blame-others)
-    - [1.1.11. Choose Your Tools with Care](#1111-choose-your-tools-with-care)
-    - [1.1.12. Code in the Language of the Domain](#1112-code-in-the-language-of-the-domain)
-    - [1.1.13. Code is Design](#1113-code-is-design)
-    - [1.1.14. Code Layout Matters](#1114-code-layout-matters)
-    - [1.1.15. Code Reviews](#1115-code-reviews)
-    - [1.1.16. Coding with Reason](#1116-coding-with-reason)
-    - [1.1.17. Comment Only What the Code Cannot Say](#1117-comment-only-what-the-code-cannot-say)
-    - [1.1.18. Continuous Learning](#1118-continuous-learning)
-    - [1.1.19. Convenience is Not an -ility](#1119-convenience-is-not-an--ility)
-    - [1.1.20. Deploy Early and Often](#1120-deploy-early-and-often)
-    - [1.1.21. Distinguish Business Exceptions from Technical](#1121-distinguish-business-exceptions-from-technical)
-    - [1.1.22. Do Lots of Deliberate Practice](#1122-do-lots-of-deliberate-practice)
-    - [1.1.23. Domain-Specific Languages](#1123-domain-specific-languages)
-    - [1.1.24. Don't Be Afraid to Break Things](#1124-dont-be-afraid-to-break-things)
-    - [1.1.25. Don't Be Cute with Your Test Data](#1125-dont-be-cute-with-your-test-data)
-    - [1.1.26. Don't Ignore That Error](#1126-dont-ignore-that-error)
-    - [1.1.27. Don't Just Learn the Language, Understand Its Culture](#1127-dont-just-learn-the-language-understand-its-culture)
-    - [1.1.28. Don't Nail Your Program into the Upright Position](#1128-dont-nail-your-program-into-the-upright-position)
-    - [1.1.29. Don't Rely on "Magic Happens Here"](#1129-dont-rely-on-magic-happens-here)
-    - [1.1.30. Don't Repeat Yourself](#1130-dont-repeat-yourself)
-      - [1.1.30.1. Duplication is Waste](#11301-duplication-is-waste)
-      - [1.1.30.2. Repetition in Process Calls for Automation](#11302-repetition-in-process-calls-for-automation)
-      - [1.1.30.3. Repetition in Logic Calls for Abstraction](#11303-repetition-in-logic-calls-for-abstraction)
-      - [1.1.30.4. A Matter of Principle](#11304-a-matter-of-principle)
-    - [1.1.31. Don't Touch That Code](#1131-dont-touch-that-code)
-    - [1.1.32. Encapsulate Behaviour, Not Just State](#1132-encapsulate-behaviour-not-just-state)
-    - [1.1.33. Floating-Point Numbers Aren't Real](#1133-floating-point-numbers-arent-real)
-    - [1.1.34. Fulfil Your Ambitions with Open Source](#1134-fulfil-your-ambitions-with-open-source)
-    - [1.1.35. Hard Work Does Not Pay Off](#1135-hard-work-does-not-pay-off)
-    - [1.1.36. How to Use a Bug Tracker](#1136-how-to-use-a-bug-tracker)
-    - [1.1.37. Improve Code by Removing It](#1137-improve-code-by-removing-it)
-    - [1.1.38. Interprocess Communication Affects Application Response Time](#1138-interprocess-communication-affects-application-response-time)
-    - [1.1.39. Keep the Build Clean](#1139-keep-the-build-clean)
-    - [1.1.40. Know How to Use Command-Line Tools](#1140-know-how-to-use-command-line-tools)
-    - [1.1.41. Know Well More Than Two Programming Languages](#1141-know-well-more-than-two-programming-languages)
-    - [1.1.42. Know Your IDE](#1142-know-your-ide)
-    - [1.1.43. Know Your Limits](#1143-know-your-limits)
-
-#### 0.0.0.1. Scalability Testing
-
-    - [1.1.49. Let Your Project to Speak for Itself](#1149-let-your-project-to-speak-for-itself)
-    - [1.1.50. Make Interfaces Easy to Use Correct and Hard to Use Incorrectly](#1150-make-interfaces-easy-to-use-correct-and-hard-to-use-incorrectly)
-    - [1.1.51. Make the Invisible More Visible](#1151-make-the-invisible-more-visible)
-    - [1.1.52. Message Passing Leads to Better Scalability in Parallel Systems](#1152-message-passing-leads-to-better-scalability-in-parallel-systems)
-    - [1.1.53. Missing Opportunities for Polymorphism](#1153-missing-opportunities-for-polymorphism)
-    - [1.1.54. News of the Weird: Testers Are Your Friends](#1154-news-of-the-weird-testers-are-your-friends)
-    - [1.1.55. One Binary](#1155-one-binary)
-    - [1.1.56. Only the Code Tells the Truth](#1156-only-the-code-tells-the-truth)
-    - [1.1.57. Own (and Refactor) the Build](#1157-own-and-refactor-the-build)
-    - [1.1.58. Pair Program and Feel the Flow](#1158-pair-program-and-feel-the-flow)
-    - [1.1.59. Prefer Domain-Specific Types to Primitive Types](#1159-prefer-domain-specific-types-to-primitive-types)
-    - [1.1.60. Prevent Errors](#1160-prevent-errors)
-    - [1.1.61. Put Everything Under Version Control](#1161-put-everything-under-version-control)
-    - [1.1.62. Put the Mouse Down and Step Away from the Keyboard](#1162-put-the-mouse-down-and-step-away-from-the-keyboard)
-    - [1.1.63. Read Code](#1163-read-code)
-    - [1.1.64. Read the Humanities](#1164-read-the-humanities)
-    - [1.1.65. Reinvent the Wheel Often](#1165-reinvent-the-wheel-often)
-    - [1.1.66. Resist the Temptation of the Singleton Pattern](#1166-resist-the-temptation-of-the-singleton-pattern)
-    - [1.1.67. Simplicity Comes from Reduction](#1167-simplicity-comes-from-reduction)
-    - [1.1.68. Start from Yes](#1168-start-from-yes)
-    - [1.1.69. Step Back and Automate, Automate, Automate](#1169-step-back-and-automate-automate-automate)
-    - [1.1.70. Take Advantage of Code Analysis Tools](#1170-take-advantage-of-code-analysis-tools)
-    - [1.1.71. Test for Required Behaviour, Not Incidental Behaviour](#1171-test-for-required-behaviour-not-incidental-behaviour)
-    - [1.1.72. Test Precisely and Concretely](#1172-test-precisely-and-concretely)
-    - [1.1.73. Test While You Sleep (And Over Weekends)](#1173-test-while-you-sleep-and-over-weekends)
-    - [1.1.74. Testing is the Engineering Rigour of Software Development](#1174-testing-is-the-engineering-rigour-of-software-development)
-    - [1.1.75. The Boy Scout Rule](#1175-the-boy-scout-rule)
-    - [1.1.76. The Golden Rule of API Design](#1176-the-golden-rule-of-api-design)
-    - [1.1.77. The Guru Myth](#1177-the-guru-myth)
-    - [1.1.78. The Linker Is Not a Magical Program](#1178-the-linker-is-not-a-magical-program)
-    - [1.1.79. The Longevity of Interim Solutions](#1179-the-longevity-of-interim-solutions)
-    - [1.1.80. The Professional Programmer](#1180-the-professional-programmer)
-    - [1.1.81. The Road to Performance is Littered with Dirty Code Bombs](#1181-the-road-to-performance-is-littered-with-dirty-code-bombs)
-    - [1.1.82. The Single Responsibility Principle](#1182-the-single-responsibility-principle)
-    - [1.1.83. The Unix Tools Are Your Friends](#1183-the-unix-tools-are-your-friends)
-    - [1.1.84. Thinking in States](#1184-thinking-in-states)
-    - [1.1.85. Two Heads Are Often Better Than One](#1185-two-heads-are-often-better-than-one)
-    - [1.1.86. Two Wrongs Can Make a Right (And Are Difficult to Fix)](#1186-two-wrongs-can-make-a-right-and-are-difficult-to-fix)
-    - [1.1.87. Ubuntu Coding for Your Friends](#1187-ubuntu-coding-for-your-friends)
-    - [1.1.88. Use the Right Algorithm and Data Structure](#1188-use-the-right-algorithm-and-data-structure)
-    - [1.1.89. Verbose Logging Will Disturb Your Sleep](#1189-verbose-logging-will-disturb-your-sleep)
-    - [1.1.90. WET Dilutes Performance Bottlenecks](#1190-wet-dilutes-performance-bottlenecks)
-    - [1.1.91. When Programmers and Testers Collaborate](#1191-when-programmers-and-testers-collaborate)
-    - [1.1.92. Write Code As If You Had to Support It for the Rest of Your Life](#1192-write-code-as-if-you-had-to-support-it-for-the-rest-of-your-life)
-    - [1.1.93. Write Small Functions Using Examples](#1193-write-small-functions-using-examples)
-    - [1.1.94. Write Tests for People](#1194-write-tests-for-people)
-    - [1.1.95. You Gotta Care About the Code](#1195-you-gotta-care-about-the-code)
-    - [1.1.96. Your Customers Do Not Mean What They Say](#1196-your-customers-do-not-mean-what-they-say)
 - [1. Book Notes](#1-book-notes)
   - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
     - [1.1.1. A Comment on Comments](#111-a-comment-on-comments)
@@ -1317,6 +1217,7 @@ TODO: Order in which to do this testing.
     - [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](#5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
   - [5.11. YouTube](#511-youtube)
     - [5.11.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#5111-theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+
 <!-- markdownlint-restore -->
 
 # 1. Book Notes
