@@ -107,6 +107,7 @@ to install it with a lint to an external link or reference to a section in this 
 |         host          |                        |                            |
 |         htop          |                        |                            |
 |          id           |                        |                            |
+|       install         |                        |                            |
 |          ip           |                        |                            |
 |         java          |                        |                            |
 |          jf           |                        |                            |
