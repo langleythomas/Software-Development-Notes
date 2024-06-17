@@ -20,195 +20,217 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 ## List of Terminal Tools Documentation on Which to Write Cheat Sheets & Compile Links
 Find all the `bash` programs from the following following list in man7. For any non-`bash` documentation, explain how
 to install it with a lint to an external link or reference to a section in this page.
-- 7za
-- alias
-- apropos
-- awk
-- aws
-- apt
-- ar
-- base64
-- basename
-- bash
-- bc
-- bind
-- builtin
-- bzip2
-- cal
-- case
-- cat
-- cattt
-- chmod
-- chown
-- cmp
-- column
-- comm
-- command
-- compgen
-- complete
-- compress
-- coproc
-- cp
-- crontab
-- curl
-- cut
-- cvs
-- date
-- dd
-- declare
-- df
-- diff
-- dig
-- dirname
-- docker
-- dos2unix
-- dotnet
-- dpkg
-- du
-- echo
-- egrep
-- enable
-- env
-- exit
-- ffmpeg
-- ffprobe
-- file
-- find
-- fmt
-- for
-- gawk
-- getconf
-- getdate
-- getopt
-- getopts
-- git
-- gpasswd
-- grep
-- gsub
-- gunzip
-- gzcat
-- gzip
-- hash
-- head
-- help
-- helm
-- helmfile
-- hexdump
-- history
-- host
-- id
-- ip
-- java
-- jq
-- keychain
-- keytool
-- kill
-- killall
-- kubectl
-- less
-- lessfile
-- ln
-- locate
-- ls
-- lshw
-- lspci
-- lsusb
-- man
-- maparray
-- mapfile
-- mkdir
-- mktemp
-- mtr
-- mvn
-- mysql
-- neovim
-- netstat
-- nmap
-- nohup
-- npm
-- open
-- openssl
-- passwd
-- ping
-- pip
-- printf
-- pr
-- ps
-- psql
-- python
-- rcp
-- rd
-- rdist
-- read
-- readarray
-- readline
-- rlogin
-- rm
-- rmdir
-- rpm
-- rsh
-- rsync
-- scp
-- screen
-- script
-- sed
-- select
-- seq
-- service
-- set
-- setgid
-- setuid
-- sftp
-- shift
-- shutdown
-- slocate
-- snap
-- sort
-- source
-- ssh
-- ssh-agent
-- ssh-keygen
-- sshpass
-- stat
-- strftime
-- sudo
-- sudoers
-- svn
-- tail
-- tar
-- tee
-- textutils
-- time
-- tmux
-- top
-- touch
-- tr
-- traceroute
-- trap
-- type
-- ulimit
-- unalias
-- uname
-- uniq
-- unix2dos
-- unzip
-- useradd
-- usermod
-- vi
-- vim
-- vipw
-- visudo
-- watch
-- wc
-- whatis
-- which
-- whoami
-- xargs
-- zt-dlp
-- zcat
-- zgrep
-- zip
-- zypper
+| **Command Line Tool** | **Documentation Link** | **Installation Procedure** |
+| :-------------------: | :--------------------: | :------------------------: |
+|          7za          |                        |                            |
+|         alias         |                        |                            |
+|        anchore        |                        |                            |
+|        apropos        |                        |                            |
+|          apt          |                        |                            |
+|          ar           |                        |                            |
+|         atlas         |                        |                            |
+|          awk          |                        |                            |
+|          aws          |                        |                            |
+|          apt          |                        |                            |
+|          ar           |                        |                            |
+|        base64         |                        |                            |
+|       basename        |                        |                            |
+|         bash          |                        |                            |
+|          bc           |                        |                            |
+|         bind          |                        |                            |
+|        builtin        |                        |                            |
+|         bzip2         |                        |                            |
+|          cal          |                        |                            |
+|         case          |                        |                            |
+|          cat          |                        |                            |
+|         cattt         |                        |                            |
+|         chmod         |                        |                            |
+|         chown         |                        |                            |
+|          cmp          |                        |                            |
+|        column         |                        |                            |
+|         comm          |                        |                            |
+|        command        |                        |                            |
+|        compgen        |                        |                            |
+|       complete        |                        |                            |
+|       compress        |                        |                            |
+|        coproc         |                        |                            |
+|          cp           |                        |                            |
+|        crontab        |                        |                            |
+|         curl          |                        |                            |
+|          cut          |                        |                            |
+|          cvs          |                        |                            |
+|         date          |                        |                            |
+|          dd           |                        |                            |
+|        declare        |                        |                            |
+|          df           |                        |                            |
+|         diff          |                        |                            |
+|          dig          |                        |                            |
+|        dirname        |                        |                            |
+|        docker         |                        |                            |
+|       dos2unix        |                        |                            |
+|        dotnet         |                        |                            |
+|         dpkg          |                        |                            |
+|          du           |                        |                            |
+|         echo          |                        |                            |
+|         egrep         |                        |                            |
+|        enable         |                        |                            |
+|          env          |                        |                            |
+|         exec          |                        |                            |
+|         execve        |                        |                            |
+|         exit          |                        |                            |
+|        ffmpeg         |                        |                            |
+|        ffprobe        |                        |                            |
+|         file          |                        |                            |
+|         find          |                        |                            |
+|          fmt          |                        |                            |
+|          for          |                        |                            |
+|         gawk          |                        |                            |
+|        getconf        |                        |                            |
+|        getdate        |                        |                            |
+|        getopt         |                        |                            |
+|        getopts        |                        |                            |
+|          git          |                        |                            |
+|        gpasswd        |                        |                            |
+|         grep          |                        |                            |
+|         grype         |                        |                            |
+|         gsub          |                        |                            |
+|        gunzip         |                        |                            |
+|         gzcat         |                        |                            |
+|         gzip          |                        |                            |
+|         hash          |                        |                            |
+|         head          |                        |                            |
+|         help          |                        |                            |
+|         helm          |                        |                            |
+|       helmfile        |                        |                            |
+|        hexdump        |                        |                            |
+|        history        |                        |                            |
+|         host          |                        |                            |
+|         htop          |                        |                            |
+|          id           |                        |                            |
+|          ip           |                        |                            |
+|         java          |                        |                            |
+|          jf           |                        |                            |
+|          jq           |                        |                            |
+|       keychain        |                        |                            |
+|        keytool        |                        |                            |
+|         kill          |                        |                            |
+|        killall        |                        |                            |
+|        kubectl        |                        |                            |
+|         less          |                        |                            |
+|       lessfile        |                        |                            |
+|          ln           |                        |                            |
+|        locate         |                        |                            |
+|        logger         |                        |                            |
+|          ls           |                        |                            |
+|         lshw          |                        |                            |
+|         lspci         |                        |                            |
+|         lsusb         |                        |                            |
+|        lynx           |                        |                            |
+|          man          |                        |                            |
+|       maparray        |                        |                            |
+|        mapfile        |                        |                            |
+|         mkdir         |                        |                            |
+|        mktemp         |                        |                            |
+|       mongocli        |                        |                            |
+|          mtr          |                        |                            |
+|          mvn          |                        |                            |
+|         mysql         |                        |                            |
+|        neovim         |                        |                            |
+|        netstat        |                        |                            |
+|          nl           |                        |                            |
+|         nmap          |                        |                            |
+|         nohup         |                        |                            |
+|          npm          |                        |                            |
+|         nvim          |                        |                            |
+|          od           |                        |                            |
+|         open          |                        |                            |
+|        openssl        |                        |                            |
+|        passwd         |                        |                            |
+|         perl          |                        |                            |
+|         ping          |                        |                            |
+|          pip          |                        |                            |
+|        printf         |                        |                            |
+|          pr           |                        |                            |
+|          ps           |                        |                            |
+|         psql          |                        |                            |
+|        python         |                        |                            |
+|          rcp          |                        |                            |
+|          rd           |                        |                            |
+|         rdist         |                        |                            |
+|         read          |                        |                            |
+|       readarray       |                        |                            |
+|       readline        |                        |                            |
+|        rlogin         |                        |                            |
+|          rm           |                        |                            |
+|         rmdir         |                        |                            |
+|          rpm          |                        |                            |
+|          rsh          |                        |                            |
+|         rsync         |                        |                            |
+|          scp          |                        |                            |
+|        screen         |                        |                            |
+|        script         |                        |                            |
+|          sed          |                        |                            |
+|        select         |                        |                            |
+|          seq          |                        |                            |
+|        service        |                        |                            |
+|          set          |                        |                            |
+|        setgid         |                        |                            |
+|        setuid         |                        |                            |
+|         sftp          |                        |                            |
+|         shift         |                        |                            |
+|       shutdown        |                        |                            |
+|        slocate        |                        |                            |
+|         snap          |                        |                            |
+|         sort          |                        |                            |
+|        source         |                        |                            |
+|         split         |                        |                            |
+|          ssh          |                        |                            |
+|       ssh-agent       |                        |                            |
+|      ssh-keygen       |                        |                            |
+|        sshpass        |                        |                            |
+|         stat          |                        |                            |
+|       strftime        |                        |                            |
+|         sudo          |                        |                            |
+|        sudoers        |                        |                            |
+|          svn          |                        |                            |
+|        syslog         |                        |                            |
+|         tail          |                        |                            |
+|          tar          |                        |                            |
+|          tee          |                        |                            |
+|       textutils       |                        |                            |
+|         time          |                        |                            |
+|         tmux          |                        |                            |
+|          top          |                        |                            |
+|         touch         |                        |                            |
+|          tr           |                        |                            |
+|      traceroute       |                        |                            |
+|         trap          |                        |                            |
+|         trivy         |                        |                            |
+|         type          |                        |                            |
+|        ulimit         |                        |                            |
+|        unalias        |                        |                            |
+|         uname         |                        |                            |
+|         uniq          |                        |                            |
+|       unix2dos        |                        |                            |
+|         unzip         |                        |                            |
+|        useradd        |                        |                            |
+|        usermod        |                        |                            |
+|          vi           |                        |                            |
+|          vim          |                        |                            |
+|         vipw          |                        |                            |
+|        visudo         |                        |                            |
+|         watch         |                        |                            |
+|          wc           |                        |                            |
+|        wget           |                        |                            |
+|        whatis         |                        |                            |
+|         which         |                        |                            |
+|        whoami         |                        |                            |
+|         xargs         |                        |                            |
+|        zt-dlp         |                        |                            |
+|         zcat          |                        |                            |
+|         zgrep         |                        |                            |
+|          zip          |                        |                            |
+|        zypper         |                        |                            |
 
 # Tutorials
 ## Deployment
@@ -442,9 +464,12 @@ TODO: Order in which to do this testing.
 #### Load Testing
 
 <https://www.browserstack.com/guide/performance-testing>
-
-#### Scalability Testing
-
+- SSH: The Secure Shell: The Definitive Guide, 4th Edition
+- Linux Security Cookbook
+## Deployment
+- Docker Cookbook (Humble Bundle)
+## Pipelines
+- Data Pipeline Pocket Reference (Humble Bundle)
 <https://www.browserstack.com/guide/performance-testing>
 
 #### Stress Testing
@@ -527,6 +552,106 @@ TODO: Order in which to do this testing.
 
 -->
 
+- [1. Book Notes](#1-book-notes)
+  - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
+    - [1.1.1. A Comment on Comments](#111-a-comment-on-comments)
+    - [1.1.2. A Message to the Future](#112-a-message-to-the-future)
+    - [1.1.3. Act with Prudence](#113-act-with-prudence)
+    - [1.1.4. Apply Functional Programming Principles](#114-apply-functional-programming-principles)
+    - [1.1.5. Ask, "What Would the User Do?" (You Are Not the User)](#115-ask-what-would-the-user-do-you-are-not-the-user)
+    - [1.1.6. Automate Your Coding Standard](#116-automate-your-coding-standard)
+    - [1.1.7. Beauty Is in Simplicity](#117-beauty-is-in-simplicity)
+    - [1.1.8. Before You Refactor](#118-before-you-refactor)
+    - [1.1.9. Beware the Share](#119-beware-the-share)
+    - [1.1.10. Check Your Code First Before Looking to Blame Others](#1110-check-your-code-first-before-looking-to-blame-others)
+    - [1.1.11. Choose Your Tools with Care](#1111-choose-your-tools-with-care)
+    - [1.1.12. Code in the Language of the Domain](#1112-code-in-the-language-of-the-domain)
+    - [1.1.13. Code is Design](#1113-code-is-design)
+    - [1.1.14. Code Layout Matters](#1114-code-layout-matters)
+    - [1.1.15. Code Reviews](#1115-code-reviews)
+    - [1.1.16. Coding with Reason](#1116-coding-with-reason)
+    - [1.1.17. Comment Only What the Code Cannot Say](#1117-comment-only-what-the-code-cannot-say)
+    - [1.1.18. Continuous Learning](#1118-continuous-learning)
+    - [1.1.19. Convenience is Not an -ility](#1119-convenience-is-not-an--ility)
+    - [1.1.20. Deploy Early and Often](#1120-deploy-early-and-often)
+    - [1.1.21. Distinguish Business Exceptions from Technical](#1121-distinguish-business-exceptions-from-technical)
+    - [1.1.22. Do Lots of Deliberate Practice](#1122-do-lots-of-deliberate-practice)
+    - [1.1.23. Domain-Specific Languages](#1123-domain-specific-languages)
+    - [1.1.24. Don't Be Afraid to Break Things](#1124-dont-be-afraid-to-break-things)
+    - [1.1.25. Don't Be Cute with Your Test Data](#1125-dont-be-cute-with-your-test-data)
+    - [1.1.26. Don't Ignore That Error](#1126-dont-ignore-that-error)
+    - [1.1.27. Don't Just Learn the Language, Understand Its Culture](#1127-dont-just-learn-the-language-understand-its-culture)
+    - [1.1.28. Don't Nail Your Program into the Upright Position](#1128-dont-nail-your-program-into-the-upright-position)
+    - [1.1.29. Don't Rely on "Magic Happens Here"](#1129-dont-rely-on-magic-happens-here)
+    - [1.1.30. Don't Repeat Yourself](#1130-dont-repeat-yourself)
+      - [1.1.30.1. Duplication is Waste](#11301-duplication-is-waste)
+      - [1.1.30.2. Repetition in Process Calls for Automation](#11302-repetition-in-process-calls-for-automation)
+      - [1.1.30.3. Repetition in Logic Calls for Abstraction](#11303-repetition-in-logic-calls-for-abstraction)
+      - [1.1.30.4. A Matter of Principle](#11304-a-matter-of-principle)
+    - [1.1.31. Don't Touch That Code](#1131-dont-touch-that-code)
+    - [1.1.32. Encapsulate Behaviour, Not Just State](#1132-encapsulate-behaviour-not-just-state)
+    - [1.1.33. Floating-Point Numbers Aren't Real](#1133-floating-point-numbers-arent-real)
+    - [1.1.34. Fulfil Your Ambitions with Open Source](#1134-fulfil-your-ambitions-with-open-source)
+    - [1.1.35. Hard Work Does Not Pay Off](#1135-hard-work-does-not-pay-off)
+    - [1.1.36. How to Use a Bug Tracker](#1136-how-to-use-a-bug-tracker)
+    - [1.1.37. Improve Code by Removing It](#1137-improve-code-by-removing-it)
+    - [1.1.38. Interprocess Communication Affects Application Response Time](#1138-interprocess-communication-affects-application-response-time)
+    - [1.1.39. Keep the Build Clean](#1139-keep-the-build-clean)
+    - [1.1.40. Know How to Use Command-Line Tools](#1140-know-how-to-use-command-line-tools)
+    - [1.1.41. Know Well More Than Two Programming Languages](#1141-know-well-more-than-two-programming-languages)
+    - [1.1.42. Know Your IDE](#1142-know-your-ide)
+    - [1.1.43. Know Your Limits](#1143-know-your-limits)
+
+#### 0.0.0.1. Scalability Testing
+
+    - [1.1.49. Let Your Project to Speak for Itself](#1149-let-your-project-to-speak-for-itself)
+    - [1.1.50. Make Interfaces Easy to Use Correct and Hard to Use Incorrectly](#1150-make-interfaces-easy-to-use-correct-and-hard-to-use-incorrectly)
+    - [1.1.51. Make the Invisible More Visible](#1151-make-the-invisible-more-visible)
+    - [1.1.52. Message Passing Leads to Better Scalability in Parallel Systems](#1152-message-passing-leads-to-better-scalability-in-parallel-systems)
+    - [1.1.53. Missing Opportunities for Polymorphism](#1153-missing-opportunities-for-polymorphism)
+    - [1.1.54. News of the Weird: Testers Are Your Friends](#1154-news-of-the-weird-testers-are-your-friends)
+    - [1.1.55. One Binary](#1155-one-binary)
+    - [1.1.56. Only the Code Tells the Truth](#1156-only-the-code-tells-the-truth)
+    - [1.1.57. Own (and Refactor) the Build](#1157-own-and-refactor-the-build)
+    - [1.1.58. Pair Program and Feel the Flow](#1158-pair-program-and-feel-the-flow)
+    - [1.1.59. Prefer Domain-Specific Types to Primitive Types](#1159-prefer-domain-specific-types-to-primitive-types)
+    - [1.1.60. Prevent Errors](#1160-prevent-errors)
+    - [1.1.61. Put Everything Under Version Control](#1161-put-everything-under-version-control)
+    - [1.1.62. Put the Mouse Down and Step Away from the Keyboard](#1162-put-the-mouse-down-and-step-away-from-the-keyboard)
+    - [1.1.63. Read Code](#1163-read-code)
+    - [1.1.64. Read the Humanities](#1164-read-the-humanities)
+    - [1.1.65. Reinvent the Wheel Often](#1165-reinvent-the-wheel-often)
+    - [1.1.66. Resist the Temptation of the Singleton Pattern](#1166-resist-the-temptation-of-the-singleton-pattern)
+    - [1.1.67. Simplicity Comes from Reduction](#1167-simplicity-comes-from-reduction)
+    - [1.1.68. Start from Yes](#1168-start-from-yes)
+    - [1.1.69. Step Back and Automate, Automate, Automate](#1169-step-back-and-automate-automate-automate)
+    - [1.1.70. Take Advantage of Code Analysis Tools](#1170-take-advantage-of-code-analysis-tools)
+    - [1.1.71. Test for Required Behaviour, Not Incidental Behaviour](#1171-test-for-required-behaviour-not-incidental-behaviour)
+    - [1.1.72. Test Precisely and Concretely](#1172-test-precisely-and-concretely)
+    - [1.1.73. Test While You Sleep (And Over Weekends)](#1173-test-while-you-sleep-and-over-weekends)
+    - [1.1.74. Testing is the Engineering Rigour of Software Development](#1174-testing-is-the-engineering-rigour-of-software-development)
+    - [1.1.75. The Boy Scout Rule](#1175-the-boy-scout-rule)
+    - [1.1.76. The Golden Rule of API Design](#1176-the-golden-rule-of-api-design)
+    - [1.1.77. The Guru Myth](#1177-the-guru-myth)
+    - [1.1.78. The Linker Is Not a Magical Program](#1178-the-linker-is-not-a-magical-program)
+    - [1.1.79. The Longevity of Interim Solutions](#1179-the-longevity-of-interim-solutions)
+    - [1.1.80. The Professional Programmer](#1180-the-professional-programmer)
+    - [1.1.81. The Road to Performance is Littered with Dirty Code Bombs](#1181-the-road-to-performance-is-littered-with-dirty-code-bombs)
+    - [1.1.82. The Single Responsibility Principle](#1182-the-single-responsibility-principle)
+    - [1.1.83. The Unix Tools Are Your Friends](#1183-the-unix-tools-are-your-friends)
+    - [1.1.84. Thinking in States](#1184-thinking-in-states)
+    - [1.1.85. Two Heads Are Often Better Than One](#1185-two-heads-are-often-better-than-one)
+    - [1.1.86. Two Wrongs Can Make a Right (And Are Difficult to Fix)](#1186-two-wrongs-can-make-a-right-and-are-difficult-to-fix)
+    - [1.1.87. Ubuntu Coding for Your Friends](#1187-ubuntu-coding-for-your-friends)
+    - [1.1.88. Use the Right Algorithm and Data Structure](#1188-use-the-right-algorithm-and-data-structure)
+    - [1.1.89. Verbose Logging Will Disturb Your Sleep](#1189-verbose-logging-will-disturb-your-sleep)
+    - [1.1.90. WET Dilutes Performance Bottlenecks](#1190-wet-dilutes-performance-bottlenecks)
+    - [1.1.91. When Programmers and Testers Collaborate](#1191-when-programmers-and-testers-collaborate)
+    - [1.1.92. Write Code As If You Had to Support It for the Rest of Your Life](#1192-write-code-as-if-you-had-to-support-it-for-the-rest-of-your-life)
+    - [1.1.93. Write Small Functions Using Examples](#1193-write-small-functions-using-examples)
+    - [1.1.94. Write Tests for People](#1194-write-tests-for-people)
+    - [1.1.95. You Gotta Care About the Code](#1195-you-gotta-care-about-the-code)
+    - [1.1.96. Your Customers Do Not Mean What They Say](#1196-your-customers-do-not-mean-what-they-say)
 - [1. Book Notes](#1-book-notes)
   - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
     - [1.1.1. A Comment on Comments](#111-a-comment-on-comments)
@@ -833,28 +958,28 @@ TODO: Order in which to do this testing.
       - [1.2.16.19. Using `sudo` More Securely](#121619-using-sudo-more-securely)
       - [1.2.16.20. Using Passwords in Scripts](#121620-using-passwords-in-scripts)
       - [1.2.16.21. Using SSH Without a Password](#121621-using-ssh-without-a-password)
-  - [1.2.16.22. Restricting SSH Commands](#121622-restricting-ssh-commands)
-  - [1.2.16.23. Disconnecting Inactive Sessions](#121623-disconnecting-inactive-sessions)
-    - [1.2.17. Advanced Scripting](#1217-advanced-scripting)
-      - [1.2.17.1. Finding `bash` Portable for `#!`](#12171-finding-bash-portable-for-)
-      - [1.2.17.2. Setting a POSIX `$PATH`](#12172-setting-a-posix-path)
-      - [1.2.17.3. Developing Portable Shell Scripts](#12173-developing-portable-shell-scripts)
-      - [1.2.17.4. Testing Scripts Using Virtual Machines](#12174-testing-scripts-using-virtual-machines)
-      - [1.2.17.5. Using `for` Loops Portably](#12175-using-for-loops-portably)
-      - [1.2.17.6. Using `echo` Portably](#12176-using-echo-portably)
-      - [1.2.17.7. Splitting Output Only When Necessary](#12177-splitting-output-only-when-necessary)
-      - [1.2.17.8. Viewing Output in Hex](#12178-viewing-output-in-hex)
-      - [1.2.17.9. Using `bash` Net-Redirection](#12179-using-bash-net-redirection)
-      - [1.2.17.10. Finding My IP Address](#121710-finding-my-ip-address)
-      - [1.2.17.11. Getting Input from Another Machine](#121711-getting-input-from-another-machine)
-      - [1.2.17.12. Redirecting Output for the Life of a Script](#121712-redirecting-output-for-the-life-of-a-script)
-      - [1.2.17.13. Working Around `"Argument list too long"` Errors](#121713-working-around-argument-list-too-long-errors)
-      - [1.2.17.14. Logging to `syslog` from Your Script](#121714-logging-to-syslog-from-your-script)
-      - [1.2.17.15. Using `logger` Correctly](#121715-using-logger-correctly)
-      - [1.2.17.16. Sending Email from Your Script](#121716-sending-email-from-your-script)
-      - [1.2.17.17. Automating a Process Using Phases](#121717-automating-a-process-using-phases)
-      - [1.2.17.18. Doing Two Things at Once](#121718-doing-two-things-at-once)
-      - [1.2.17.19. Running an SSH Command on Multiple Hosts](#121719-running-an-ssh-command-on-multiple-hosts)
+      - [1.2.16.22. Restricting SSH Commands](#121622-restricting-ssh-commands)
+    - [1.2.17. Disconnecting Inactive Sessions](#1217-disconnecting-inactive-sessions)
+      - [1.2.17.1. Advanced Scripting](#12171-advanced-scripting)
+      - [1.2.17.2. Finding `bash` Portable for `#!`](#12172-finding-bash-portable-for-)
+      - [1.2.17.3. Setting a POSIX `$PATH`](#12173-setting-a-posix-path)
+      - [1.2.17.4. Developing Portable Shell Scripts](#12174-developing-portable-shell-scripts)
+      - [1.2.17.5. Testing Scripts Using Virtual Machines](#12175-testing-scripts-using-virtual-machines)
+      - [1.2.17.6. Using `for` Loops Portably](#12176-using-for-loops-portably)
+      - [1.2.17.7. Using `echo` Portably](#12177-using-echo-portably)
+      - [1.2.17.8. Splitting Output Only When Necessary](#12178-splitting-output-only-when-necessary)
+      - [1.2.17.9. Viewing Output in Hex](#12179-viewing-output-in-hex)
+      - [1.2.17.10. Using `bash` Net-Redirection](#121710-using-bash-net-redirection)
+      - [1.2.17.11. Finding My IP Address](#121711-finding-my-ip-address)
+      - [1.2.17.12. Getting Input from Another Machine](#121712-getting-input-from-another-machine)
+      - [1.2.17.13. Redirecting Output for the Life of a Script](#121713-redirecting-output-for-the-life-of-a-script)
+      - [1.2.17.14. Working Around `"Argument list too long"` Errors](#121714-working-around-argument-list-too-long-errors)
+      - [1.2.17.15. Logging to `syslog` from Your Script](#121715-logging-to-syslog-from-your-script)
+      - [1.2.17.16. Using `logger` Correctly](#121716-using-logger-correctly)
+      - [1.2.17.17. Sending Email from Your Script](#121717-sending-email-from-your-script)
+      - [1.2.17.18. Automating a Process Using Phases](#121718-automating-a-process-using-phases)
+      - [1.2.17.19. Doing Two Things at Once](#121719-doing-two-things-at-once)
+      - [1.2.17.20. Running an SSH Command on Multiple Hosts](#121720-running-an-ssh-command-on-multiple-hosts)
     - [1.2.18. Configuring \& Customising `bash`](#1218-configuring--customising-bash)
       - [1.2.18.1. `bash` Startup Options](#12181-bash-startup-options)
       - [1.2.18.2. Customising Your Prompt](#12182-customising-your-prompt)
@@ -11365,7 +11490,7 @@ file called donors that looked like this:
   somewhere else rerunning `ssh-agent` and getting things out of sync.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-## 1.2.16.22. Restricting SSH Commands
+#### 1.2.16.22. Restricting SSH Commands
 
 - If you'd like to restrict what an incoming SSH user or script can do, edit the `~/.ssh/authorized_keys` file, use SSH
   forced commands, and optionally disable unnecessary SSH features.
@@ -11507,7 +11632,7 @@ file called donors that looked like this:
   SSH-restricted command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-## 1.2.16.23. Disconnecting Inactive Sessions
+### 1.2.17. Disconnecting Inactive Sessions
 
 - Set the `$TMOUT` environment variable in `/etc/bashrc` or `~/.bashrc` to the number of seconds of inactivity before
   ending a session when you'd like to be able to automatically log out inactive users, especially `root`. In
@@ -11528,7 +11653,7 @@ file called donors that looked like this:
   readonly TMOUT=3600
   ```
 
-### 1.2.17. Advanced Scripting
+#### 1.2.17.1. Advanced Scripting
 
 - One of the biggest problems for advanced scripts is writing scripts that are portable, i.e., that can work on any
   machine that has `bash` installed.
@@ -11544,7 +11669,7 @@ file called donors that looked like this:
   and redirecting output.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.1. Finding `bash` Portable for `#!`
+#### 1.2.17.2. Finding `bash` Portable for `#!`
 
 - If you need to run a `bash` script on several machines, but `bash` is not always in the same place, use the
   `/usr/bin/env` command in the shebang line. If your system doesn't have `env` in `/usr/bin`, ask your system
@@ -11576,7 +11701,7 @@ file called donors that looked like this:
   using `env` for portability, and to hard-code the interpreter and trailing, when security is critical.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.2. Setting a POSIX `$PATH`
+#### 1.2.17.3. Setting a POSIX `$PATH`
 
 - If you are on a machine that provides older or proprietary tools (e.g., Solaris) and you need to set your path so
   that you get POSIX-compliant tools.
@@ -11624,7 +11749,7 @@ file called donors that looked like this:
   /usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin
   ```
 
-#### 1.2.17.3. Developing Portable Shell Scripts
+#### 1.2.17.4. Developing Portable Shell Scripts
 
 - When you are writing a shell script that will need to run on multiple versions of multiple Unix or POSIX operating
   systems, try using the `command` builtin with its `-p` option to find the POSIX version of `program`.
@@ -11668,39 +11793,22 @@ file called donors that looked like this:
 - If you don't have a non-Linux system, then the issues described in this section are irrelevant.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.4. Testing Scripts Using Virtual Machines
+#### 1.2.17.5. Testing Scripts Using Virtual Machines
 
--
+- If you need to develop cross-platform scripts but do not have the appropriate systems or hardware, and if the target
+  platforms runs on x86 architecture, you can use of the many free and commercial virtualisation solutions and build
+  your own test virtual machine, or search for pre-built virtual machines on the OS vendor or distributor's site, or
+  the internet. The flaw with this solutions is that some systems don't run on an x86 architecture, and thus don't run
+  under x86 virtualisation.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Testing shell scripts is not very resource-intensive, so even moderate hardware capable of running a virtualisation
+  package should be fine. Minimal virtual machines with 128 MB of RAM, or sometimes even less, should be more than
+  enough for a shell environment for testing. Setting up an NFS (Network File System) share to store your test scripts
+  and data, and then SSH to the test system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.17.5. Using `for` Loops Portably
+#### 1.2.17.6. Using `for` Loops Portably
 
 - There are multiple options of implementing a `for` loop but want it to work on older versions of `bash`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -11757,263 +11865,615 @@ file called donors that looked like this:
   10
   ```
 
-#### 1.2.17.6. Using `echo` Portably
+#### 1.2.17.7. Using `echo` Portably
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.17.7. Splitting Output Only When Necessary
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
-#### 1.2.17.8. Viewing Output in Hex
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you are writing a script that will run on multiple versions of Unix and Linux and you need `echo` to behave
+  consistently even if it is not running on `bash`, use `printf "$b" whatever`, or test for the system and set
+  `xpg_echo` using `shopt -s xpg_echo` as needed.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you omit the `"$b"` format string, then `printf` will try to interpret any `%` characters in `whatever`, which is
+  probably not what you want. The `"$b"` format is an addition to the standard `printf` format that will prevent that
+  misinterpretation and also expand backslash escape sequences in `whatever`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Setting `spg_echo` is less consistent since it only works on `bash`. It can be effective if you are sure that you'll
+  only ever run under `bash`, and not under `sh` or another similar shell that doesn't use `xg_echo`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using `printf` required changes to how you write `echo` statements, but it's defined by POSIX and should be
+  consistent across any POSIX shell anywhere. Specifically, you will have to write `printf "$b"` instead of just
+  `echo`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you automatically type `$b` instead of `%b` you will be unhappy, because that will print a blank line, since you
+  have specified a null format. Unless `$b` is actually defined, in which case the results depend on the value of `$b`.
+  Either way, this can be a very difficult bug to find since `$b` and `%b` look very similar.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.9. Using `bash` Net-Redirection
+  ```bash
+  $ printf "%b" "Works"
+  Works
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ printf "$b" "Broken"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
--
+- In some shells, the builtin `echo` behaves differently than the external `echo` used on other systems. This is not
+  always obvious when running on Linux since `/bin/sh` is actually `bash` (usually; it could also be `dash` on Ubuntu
+  6.10+), and there are similar circumstances on some BSDs. The difference is in how `echo` does or does not expand
+  backslash-escape sequences. Shell builtin versions tend not to expand, while external versions (e.g., `/bin/echo` and
+  `/usr/bin/echo`) tend to expand; but again, that can change from system to system.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Typical Linux (`/bin/bash`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ type -a echo
+    echo is a shell builtin
+    echo is /bin/echo
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ builtin echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ /bin/echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ echo -e "one\ttwo\nthree"
+    one → two
+    three
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ /bin/echo -e "one\ttwo\nthree"
+    one → two
+    three
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ shopt -s xpg_echo
 
-#### 1.2.17.10. Finding My IP Address
+    $ builtin echo "one\ttwo\nthree"
+    one → two
+    three
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ shopt -u xpg_echo
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ builtin echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
+    ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - Typical BSD (`/bin/csh`, then `/bin/sh`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ which echo
+    echo: shell builtin command.
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ /bin/echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ echo -e "one\ttwo\nthree"
+    -e one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ /bin/echo -e "one\ttwo\nthree"
+    -e one\ttwo\nthree\n
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ printf "%b" "one\ttwo\nthree"
+    one → two
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ /bin/sh
 
-#### 1.2.17.11. Getting Input from Another Machine
+    $ echo "one\ttwo\nthree"
+    one\ttwo\nthree\n
+
+    $ echo -e "one\ttwo\nthree"
+    one → two
+    three
+
+    $ printf "%b" "one\ttwo\nthree"
+    one → two
+    three
+    ```
+
+  - Solaris 10 (`/bin/sh`).
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ which echo
+    /usr/bin/echo
+
+    $ type echo
+    echo is a shell builtin
+
+    $ echo "one\ttwo\nthree"
+    one → two
+    three
+
+    $ echo -e "one\ttwo\nthree"
+    -e one → two
+    three
+
+    $ printf "%b" "one\ttwo\nthree"
+    one → two
+    three
+    ```
+
+#### 1.2.17.8. Splitting Output Only When Necessary
+
+- If you want to only split an output if the input exceeds your limit, but the `split` command always creates at least
+  one new file, you can use the following example to break up the input into fixed sizes, only if the input exceeds the
+  size limit. Depending on your system, some options (e.g., `-C`) may not available in `split` or `wc`.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # cookbook filename: func_split
+  # Output fixed-size pieces of input ONLY if the limit is exceeded
+  # Called like: Split <file> <prefix> <limit option> <limit argument>
+  # e.g. Split $output ${output}_ --lines 100
+  # See split(1) and wc(1) for option details
+  function Split {
+    local file=$1
+    local prefix=$2
+    local limit_type=$3
+    local limit_size=$4
+    local wc_option
+
+    # Sanity checks
+    if [ -z "$file" ]; then
+      printf "%b" "Split: requires a file name!\n"
+      return 1
+    fi
+
+    if [ -z "$prefix" ]; then
+      printf "%b" "Split: requires an output file prefix!\n"
+      return 1
+    fi
+
+    if [ -z "$limit_type" ]; then
+      printf "%b" \
+      "Split: requires a limit option (e.g. --lines), see 'man split'!\n"
+      return 1
+    fi
+
+    if [ -z "$limit_size" ]; then
+      printf "%b" "Split: requires a limit size (e.g. 100), see 'man split'!\n"
+      return 1
+    fi
+
+    # Convert split options to wc options. Sigh.
+    # Not all options supported by all wc/splits on all systems
+    case $limit_type in
+      -b|--bytes) wc_option='-c';;
+      -C|--line-bytes) wc_option='-L';;
+      -l|--lines) wc_option='-l';;
+    esac
+
+    # If whatever limit is exceeded
+    if [ "$(wc $wc_option $file | awk '{print $1}')" -gt $limit_size ]; then
+      # Actually do something
+      split --verbose $limit_type $limit_size $file $prefix
+    fi
+  } # end of function Split
+  ```
+
+#### 1.2.17.9. Viewing Output in Hex
+
+- If you need to see an output in hex mode to verify that a certain whitespace or unprintable character is as expected,
+  pipe the output through `hexdump` using the `-C` option for a canonical output.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ hexdump -C filename
+  00000000 4c 69 6e 65 20 31 0a 4c 69 6e 65 20 32 0a 0a 4c |Line 1.Line 2..L|
+  00000010 69 6e 65 20 34 0a 4c 69 6e 65 20 35 0a 0a |ine 4.Line 5..|
+  0000001e
+
+  $
+  ```
+
+- For another example, `nl` uses spaces, then the line number, then a tab in its output.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ nl -ba filename | hexdump -C
+  00000000 20 20 20 20 20 31 09 4c 69 6e 65 20 31 0a 20 20 | 1.Line 1. |
+  00000010 20 20 20 32 09 4c 69 6e 65 20 32 0a 20 20 20 20 | 2.Line 2. |
+  00000020 20 33 09 0a 20 20 20 20 20 34 09 4c 69 6e 65 20 | 3.. 4.Line |
+  00000030 34 0a 20 20 20 20 20 35 09 4c 69 6e 65 20 35 0a |4. 5.Line 5.|
+  00000040 20 20 20 20 20 36 09 0a | 6..|
+  00000048
+
+  $
+  ```
+
+- `hexdump` is a BSD utility that's also provided with many Linux distributions. Other systems (notable Solaris) do not
+  have it by default. You can use the octal dump command `od`, but its output is only one format at a time, and its
+  addresses are in octal, not hex.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ nl -ba filename | od -x
+  0000000 2020 2020 3120 4c09 6e69 2065 0a31 2020
+  0000020 2020 3220 4c09 6e69 2065 0a32 2020 2020
+  0000040 3320 0a09 2020 2020 3420 4c09 6e69 2065
+  0000060 0a34 2020 2020 3520 4c09 6e69 2065 0a35
+  0000100 2020 2020 3620 0a09
+  0000110
+
+  $ nl -ba filename | od -tx1
+  0000000 20 20 20 20 20 31 09 4c 69 6e 65 20 31 0a 20 20
+  0000020 20 20 20 32 09 4c 69 6e 65 20 32 0a 20 20 20 20
+  0000040 20 33 09 0a 20 20 20 20 20 34 09 4c 69 6e 65 20
+  0000060 34 0a 20 20 20 20 20 35 09 4c 69 6e 65 20 35 0a
+  0000100 20 20 20 20 20 36 09 0a
+  0000110
+
+  $ nl -ba filename | od -c
+  0000000 1 \t L i n e 1 \n
+  0000020 2 \t L i n e 2 \n
+  0000040 3 \t \n 4 \t L i n e
+  0000060 4 \n 5 \t L i n e 5 \n
+  0000100 6 \t \n
+  0000110
+  ```
+
+- The following is a simple Perl script that might work.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ cat ./hex_dump.pl
+  #!/usr/bin/perl
+
+  # @(#) Usage : hexdump.pl infile
+  # @(#) Example : hexdump.pl tmp.txt
+  # @(#) Copyright (C) 1998, Web Sailor Production, All Rights Reserved.
+  # @(#) 06Aug98 -  khngai, Initial creation.
+  # @(#)
+  # @(#) This program hexdump an ascii file or a binary file.
+
+  open(FPTR,$ARGV[0]) || die("\07Error opening file $ARGV[0]");
+  binmode(FPTR);
+
+  $num = 0;
+
+  while(eof(FPTR) != 1)
+  {
+      $num_byte_read = read(FPTR,$buf,16);
+
+      if (($num & 0xFF) == 0)
+      {
+          printf("\n       /0 /1 /2 /3 /4 /5 /6 /7 /8 /9/ A /B /C /D /E /F   0123456789ABCDEF\n");
+      }
+
+      printf("%04X :",$num);
+
+      $lhs = "";
+      $rhs = "";
+
+      foreach $i ($buf =~ m/./gs)
+      {
+          # This loop is to process each character at a time.
+          $lhs .= sprintf(" %02X",ord($i));
+
+          if ($i =~ m/[ -~]/)
+          {
+              $rhs .= $i;
+          }
+          else
+          {
+              $rhs .= ".";
+          }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+          $num++;
+      }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+      printf("%-50s %s\n",$lhs,$rhs);
+  }
+
+  close(FPTR);
+
+  $ ./hexdump.pl filename
+      /0 /1 /2 /3 /4 /5 /6 /7 /8 /9/ A /B /C /D /E /F 0123456789ABCDEF
+  0000 : 4C 69 6E 65 20 31 0A 4C 69 6E 65 20 32 0A 0A 4C Line 1.Line 2..L
+  0010 : 69 6E 65 20 34 0A 4C 69 6E 65 20 35 0A 0A ine 4.Line 5..
+  ```
+
+#### 1.2.17.10. Using `bash` Net-Redirection
+
+- If you need to send or receive very simple network traffic, but you do not have a tool such as Netcat installed, and
+  if you have `bash` version 2.04+ compiled with `--enable-net-redirections` (the default), you can use `bash` itself,
+  you can use the following commands.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  $ exec 3<> /dev/tcp/checkip.dyndns.org/80
+
+  $ echo -e "GET / HTTP/1.0\n" >&3
+
+  $ cat <&3
+  HTTP/1.1 200 OK
+  Content-Type: text/html
+  Server: DynDNS-CheckIP/1.0
+  Connection: close
+  Cache-Control: no-cache
+  Pragma: no-cache
+  Content-Length: 105
+  <html><head><title>Current IP Check</title></head>
+  <body>Current IP Address: 72.NN.NN.225</body></html>
+
+  $ exec 3<> /dev/tcp/checkip.dyndns.org/80
+
+  $ echo -e "GET / HTTP/1.0\n" >&3
+
+  $ egrep --only-matching 'Current IP Address: [0-9.]+' <&3
+  Current IP Address: 72.NN.NN.225
+
+  $
+  ```
+
+  - Debian and its derivatives such as Ubuntu expressly compiled with `--disable-net-redirections` until `bash` version
+    4, so the previous example will not work on those versions.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - It is possible to use `exec` to redirect file handles within the current shell session, so the first command sets
+    up input and output on file handle `3`. The second line sends a trivial command to a path on the web server defined
+    in the first command. The user agent will appear as `-` on the web server side, causing the "flagged User Agent"
+    warning. The third command simply displays the results.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+- Both TCP and UDP are supported. The following is a trivial way to send `syslog` messages to a remove server, although
+  the `logger` utility should be used in production, as it is more user-friendly and robust.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  echo "<133>${0##*/}[$$]: Test syslog message from bash" \
+    > /dev/udp/loghost.example.com/514
+  ```
+
+  - Since UDP connection, the second example is much easier to use than the first example.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `<133>` is the `syslog` priority value for `local0.notice`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$0` is the name, so `${0##*/}` is the "basename".
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - `$$` is the process ID of the current program. This will be `-bash` for a login shell.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+#### 1.2.17.11. Finding My IP Address
+
+- If you need to know the IP address of the machine you are running on, there is no good way to do this that will work
+  on all systems in all situations, so there are several possible solutions.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - You can parse output from `ifconfig` to look for IP addresses. The commands in the following code block will either
+    return the first IP address that is not a loopback, or nothing if there are no interfaces configured or up.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    # cookbook filename: finding_ipas
+
+    # IPv4 Using awk, cut, and head
+    $ /sbin/ifconfig -a | awk '/(cast)/ { print $2 }' | cut -d':' -f2 | head -1
+
+    # IPv4 Using Perl, just for fun
+    $ /sbin/ifconfig -a | perl -ne 'if ( m/^\s*inet (?:addr:)?([\d.]+).*?cast/ )
+    > { print qq($1\n); exit 0; }'
+
+    # IPv6 Using awk, cut, and head
+    $ /sbin/ifconfig -a | egrep 'inet6 addr: |address: ' | cut -d':' -f2- \
+    | cut -d'/' -f1 | head -1 | tr -d ' '
+
+    # IPv6 Using Perl, just for fun
+    $ /sbin/ifconfig -a | perl -ne 'if
+    > ( m/^\s*(?:inet6)? \s*addr(?:ess)?: ([0-9A-Fa-f:]+)/ ) { print qq($1\n);
+    > exit 0; }'
+    ```
+
+  - You can get your host name and resolve it back to an IP address. This is often unreliable, because today's systems
+    (especially workstations) might have incomplete or incorrect host names and/or might be on a dynamic network that
+    lacks proper reverse lookup. Use at your own risk and test thoroughly.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    host $(hostname)
+    ```
+
+  - You may be more interested in your host's external, routeable address than its internal RFC 1918 address. In that
+    case, you can use an external host, such as <http://whatismyip.akamai.com>, <http://checkip.amazonaws.com/>,
+    <http://ipinfo.io/>, or others to learn the address of your firewall or NAT (Network Address Translation) device.
+    The caveat here is that non-Linux systems often have no command line tool like `wget` installed by default. `lynx`
+    or `curl` will also work, but they usually aren't installed by default either. The IP address and other information
+    is deliberately obscured in the following examples.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ wget -qO - http://ipinfo.io/
+    {
+    "ip": "8.8.8.8",
+    "hostname": "google-public-dns-a.google.com",
+    "city": "Mountain View",
+    "region": "California",
+    "country": "US",
+    "loc": "37.3860,-122.0840",
+    "org": "AS15169 Google Inc.",
+    "postal": "94035",
+    "phone": "650"
+    }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ wget -qO - http://ipinfo.io/ip/
+    72.NN.NN.225
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ lynx -dump http://ipinfo.io/ip/
+    72.NN.NN.225
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ curl whatismyip.akamai.com
+    72.NN.NN.225
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ curl http://checkip.amazonaws.com
+    72.NN.NN.225
+    ```
 
--
+- If you do not have any of the programs used in this section, but you do have `bash` version *2.04+* compiled with
+  `--enable-net-redirections` (it isn't compiled this way prior to `bash` 4 in Debian and derivatives), you can use
+  `bash` itself.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    ```bash
+    $ exec 3<> /dev/tcp/checkip.dyndns.org/80
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ echo -e "GET / HTTP/1.0\n" >&3
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    $ cat <&3
+    HTTP/1.1 200 OK
+    Content-Type: text/html
+    Server: DynDNS-CheckIP/1.0
+    Connection: close
+    Cache-Control: no-cache
+    Pragma: no-cache
+    Content-Length: 105
+    <html><head><title>Current IP Check</title></head>
+    <body>Current IP Address: 96.245.41.129</body></html>
+
+    $ exec 3<> /dev/tcp/checkip.dyndns.org/80
+
+    $ echo -e "GET / HTTP/1.0\n" >&3
+
+    $ egrep --only-matching 'Current IP Address: [0-9.]+' <&3
+    Current IP Address: 72.NN.NN.225
+
+    $
+    ```
+
+#### 1.2.17.12. Getting Input from Another Machine
+
+- If your script needs to get input from another machine, perhaps to check if a file exists or a process is running,
+  use SSH with public keys and command substitution. To do this, set up SSH so that you do not need a password. Next,
+  tailor the command run by SSH to output exactly what you script needs as input. Then, simply use command
+  substitution.
+  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.12. Redirecting Output for the Life of a Script
+  ```bash
+  #!/usr/bin/env bash
+
+  # cookbook filename: command_substitution
+
+  REMOTE_HOST='host.example.com' # Required
+  REMOTE_FILE='/etc/passwd' # Required
+  SSH_USER='user@' # Optional, set to '' to not use
+  #SSH_ID='-i ~/.ssh/foo.id' # Optional, set to '' to not use
+  SSH_ID=''
+
+  result=$(
+    ssh $SSH_ID $SSH_USER$REMOTE_HOST \
+      "[ -r $REMOTE_FILE ] && echo 1 || echo 0"
+  ) || { echo "SSH command failed!" >&2; exit 1; }
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  if [ $result = 1 ]; then
+    echo "$REMOTE_FILE present on $REMOTE_HOST"
+  else
+    echo "$REMOTE_FILE not present on $REMOTE_HOST"
+  fi
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+#### 1.2.17.13. Redirecting Output for the Life of a Script
 
--
+- If you'd like to redirect output for an entire script, and you'd rather not have to every `echo` or `printf`
+  statement, you can use a little-known feature of the `exec` command to redirect `STDOUT` or `STDERR`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Optional, save the "old" STDERR
+  exec 3>&2
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Redirect any output to STDERR to an error logfile instead
+  exec 2> /path/to/error_log
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Script with "globally" redirected STDERR goes here
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Turn off redirect by reverting STDERR and closing FH3
+  exec 2>&3-
+  ```
 
--
+- Usually `exec` replaces the running shell with the command supplied in its arguments, destroying the original shell.
+  However, if no command is given, it can manipulate redirection in the current shell. You are not limited to
+  redirecting `STDOUT` or `STDERR`, but they are the most common targets for redirection in this case.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+#### 1.2.17.14. Working Around `"Argument list too long"` Errors
 
--
+- If you get an "argument list too long" error while trying to do an operation involving shell wildcard expansion, use
+  the `xargs` command, possibly in conjunction with `find`, to break up your argument list.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.13. Working Around `"Argument list too long"` Errors
-
--
+- For simple cases, use a `for` loop or `find`, instead of `ls`. This example works correctly with the `echo` command,
+  but when you feed that `"$i"` into other programs, especially other constructs, `$IFS` and other parsing may come
+  into play.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ ls /path/with/many/many/files/*e*
+  -/bin/bash: /bin/ls: Argument list too long
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Short demo, surrounding ~ are for illustration only
+  $ for i in ./some_files/*e*; do echo "~$i~"; done
+  ~./some_files/A file with (parens)~
+  ~./some_files/A file with [brackets]~
+  ~./some_files/File with embedded
+  newline~
+  ~./some_files/file with = sign~
+  ~./some_files/file with spaces~
+  ~./some_files/file with |~
+  ~./some_files/file with:~
+  ~./some_files/file with;~
+  ~./some_files/regular_file~
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ find ./some_files -name '*e*' -exec echo ~{}~ \;
+  ~./some_files~
+  ~./some_files/A file with [brackets]~
+  ~./some_files/A file with (parens)~
+  ~./some_files/regular_file~
+  ~./some_files/file with spaces~
+  ~./some_files/file with = sign~
+  ~./some_files/File with embedded
+  newline~
+  ~./some_files/file with;~
+  ~./some_files/file with:~
+  ~./some_files/file with |~
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ for i in /path/with/many/many/files/*e*; do echo "$i"; done
+  [This works, but the output is too long to list]
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ find /path/with/many/many/files/ -name '*e*'
+  [This works, but the output is too long to list]
+  ```
 
--
+- Note that the default behaviour of `bash` (and `sh`) is to return unmatched patterns unchanged. That means you could
+  end your for loop setting `$i` to `./some_files/*e*` if no files match the wildcard pattern.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- You might assume that the `for` loop solution in the simple case would run into the same problem as the `ls` command,
+  but it doesn't. `ARG_MAX` bounds the total space requirement of the `exec*` family of system calls, so the kernel
+  knows the largest buffer it will have to allocate. This is all three arguments to `execve`: program name, argument
+  vector, and environment. The `ls` command fails because the total bytes taken up by the arguments to `execve` exceeds
+  `ARG_MAX`. The `for loop` succeeds because everything is done internally: though the entire list is generated and
+  stored, `execve` is never called.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Be careful that `find` doesn't find too many files, since it will recursively descend into all subdirectories by
+  default while ls will not. Some versions of find have a `-maxdepth` option to control how deep it goes. Using the
+  `for` loop may be easier.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Use the `getconf ARG_MAX` command to see what the limit is on your system. It varies wildly (see also
+  `getconf LINE_MAX`).
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.14. Logging to `syslog` from Your Script
+#### 1.2.17.15. Logging to `syslog` from Your Script
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12045,7 +12505,7 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.15. Using `logger` Correctly
+#### 1.2.17.16. Using `logger` Correctly
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12077,7 +12537,7 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.16. Sending Email from Your Script
+#### 1.2.17.17. Sending Email from Your Script
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12109,7 +12569,7 @@ file called donors that looked like this:
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.17. Automating a Process Using Phases
+#### 1.2.17.18. Automating a Process Using Phases
 
 - Use a `case` statement to break your script into sections or *phases* if you have a long job or process you need to
   automate, but it may require manual intervention and you need to be able to restart at various points in the
@@ -12198,7 +12658,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.2.17.18. Doing Two Things at Once
+#### 1.2.17.19. Doing Two Things at Once
 
 - As of `bash` version 4, the `coproc` command can allow to processes to converse with each other, each reading as its
   input the output of the other command.
@@ -12263,7 +12723,7 @@ file called donors that looked like this:
   for the timeout value. Older versions only allowed integers.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.17.19. Running an SSH Command on Multiple Hosts
+#### 1.2.17.20. Running an SSH Command on Multiple Hosts
 
 - If you need to run a command over SSH on multiple hosts, wrap your SSH command in a `for` loop.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
