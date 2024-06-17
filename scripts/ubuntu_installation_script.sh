@@ -250,15 +250,23 @@ function configure_vim() {
 }
 
 function install_visual_studio_code() {
-  update_snap
+  update_and_upgrade_apt
 
   printf "Installing Visual Studio Code.\n"
-  sudo snap install code
+  sudo apt install wget gpg --yes
+  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+  rm -f packages.microsoft.gpg
+  update_and_upgrade_apt
+  sudo apt install apt-transport-https --yes
+  update_and_upgrade_apt
+  sudo apt install code --yes 
+
+  print_separator
 
   # If there is an issue loading the Visual Studio Code GUI after an update, as described here https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
   # rm -r ~/.config/Code/GPUCache
-
-  print_separator
 }
 
 function call_text_editor_installation_functions() {
