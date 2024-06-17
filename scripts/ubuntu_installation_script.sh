@@ -58,7 +58,7 @@ function install_dot_net_sdk() {
   printf "Installing .NET SDK.\n"
 
   sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
-  sudo apt-get install --yes dotnet-sdk-7.0
+  sudo apt install --yes dotnet-sdk-7.0
   dotnet --list-sdks
   dotnet --info
 
@@ -70,7 +70,7 @@ function install_dot_net_runtime() {
 
   printf "Installing .NET Runtime.\n"
 
-  sudo apt-get install --yes aspnetcore-runtime-7.0
+  sudo apt install --yes aspnetcore-runtime-7.0
   dotnet --list-runtimes
   dotnet --info
 
@@ -96,7 +96,7 @@ function install_javascript_development_tools() {
   NODE_MAJOR=20
   echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
-  sudo apt-get install nodejs --yes
+  sudo apt install nodejs --yes
 }
 
 function call_javascript_development_tool_functions() {
@@ -113,9 +113,9 @@ function install_docker() {
   printf "Installing Docker.\n"
 
   # Add Docker's official GPG key:
-  sudo apt-get install ca-certificates curl
-  sudo install -m 0755 -d /etc/apt/keyrings
-  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+  sudo apt install ca-certificates curl
+  sudo install --mode=0755 --directory="/etc/apt/keyrings"
+  sudo curl --fail --silent --show-error --location "https://download.docker.com/linux/ubuntu/gpg" --output "/etc/apt/keyrings/docker.asc"
   sudo chmod a+r /etc/apt/keyrings/docker.asc
 
   # Add the repository to Apt sources:
@@ -254,10 +254,10 @@ function install_visual_studio_code() {
 
   printf "Installing Visual Studio Code.\n"
   sudo apt install wget gpg --yes
-  wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
-  sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+  wget --quiet -output-document=- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+  sudo install -D --owner=root --group=root --mode=644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
   echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
-  rm -f packages.microsoft.gpg
+  rm --force --verbose packages.microsoft.gpg
   update_and_upgrade_apt
   sudo apt install apt-transport-https --yes
   update_and_upgrade_apt
