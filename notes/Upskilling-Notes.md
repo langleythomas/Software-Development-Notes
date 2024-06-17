@@ -107,7 +107,7 @@ to install it with a lint to an external link or reference to a section in this 
 |         host          |                        |                            |
 |         htop          |                        |                            |
 |          id           |                        |                            |
-|       install         |                        |                            |
+|        install        |                        |                            |
 |          ip           |                        |                            |
 |         java          |                        |                            |
 |          jf           |                        |                            |
@@ -136,6 +136,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          mtr          |                        |                            |
 |          mvn          |                        |                            |
 |         mysql         |                        |                            |
+|          nc           |                        |                            |
 |        neovim         |                        |                            |
 |        netstat        |                        |                            |
 |          nl           |                        |                            |
@@ -12377,67 +12378,64 @@ file called donors that looked like this:
 
 #### 1.2.17.15. Logging to `syslog` from Your Script
 
--
+- If you'd like your script to be able to log to `syslog`, use `logger`, Netcat, or `bash`'s built-in network
+  redirection features.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `logger` is installed by default on most systems and is an easy way t send message to the local `syslog` service.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  logger -p local0.notice -t ${0##*/}[$$] test message
+  ```
+
+- However, it does not send `syslog` to remote hosts by itself. If you need to do that, you can use `bash`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+```bash
+echo "<133>${0##*/}[$$]: Test syslog message from bash" \
+  > /dev/udp/loghost.example.com/514
+```
+
+- Netcat can also be used as an alternative to the previous example. Netcat is known as the "TCP/IP Swiss Army knife",
+  and is usually not installed by default. It may also be prohibited as a hacking tool by some security policies,
+  though `bash`'s net-redirection features mostly do the same thing.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  echo "<133>${0##*/}[$$]: Test syslog message from Netcat" | nc -w1 -u loghost 514
+  ```
 
 #### 1.2.17.16. Using `logger` Correctly
 
--
+- If you want to use the `logger` tool so your script can send `syslog` messages, but the defaults do not provide
+  enough useful information, use `logger` as follows.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  logger -t "${0##*/}[$$]" 'Your message here
+  ```
+
+- The `-t` option is for "tag". The `manpage` says `-t` will mark every line with the specified tag. Without `-t`, you
+  will have a difficult time finding where your message came from.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The tag of `${0##*/}[$$]` is the base name of your script and the process ID.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ logger -t "${0##*/}[$$]" 'Your message here'
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ tail -1 /var/log/syslog
+  Oct 26 12:16:01 hostname your_script[977]: Your message here
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ logger 'Your message here'
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ tail -1 /var/log/syslog
+  Oct 26 12:16:01 hostname Your message here
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
 #### 1.2.17.17. Sending Email from Your Script
 
