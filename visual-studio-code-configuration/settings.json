@@ -899,7 +899,7 @@
 
   "explorer.compactFolders": false,
 
-  "files.dialog.defaultPath": "/home/thomas/Repos", // Linux
+  // "files.dialog.defaultPath": "/home/thomas/Repos", // Linux
   // "files.dialog.defaultPath": "C:\\Repos", // Windows
   "files.insertFinalNewline": true,
 
@@ -933,14 +933,20 @@
   "terminal.integrated.cursorStyleInactive": "line",
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.enableMultiLinePasteWarning": "always",
   "terminal.integrated.middleClickBehavior": "paste",
+  "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.stickyScroll.enabled": true,
 
   // "vscode-neovim.neovimExecutablePaths.linux": "nvim",
 
+  "window.autoDetectColorScheme": true,
+
   "workbench.activityBar.location": "top",
   "workbench.preferredDarkColorTheme": "Dracula Pro Edition",
+  "workbench.preferredHighContrastColorTheme": "Default High Contrast",
+  "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
+  "workbench.preferredLightColorTheme": "Quiet Light",
   "workbench.sideBar.location": "right",
   "workbench.tree.enableStickyScroll": true,
   "workbench.tree.renderIndentGuides": "always",
