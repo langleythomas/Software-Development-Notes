@@ -123,13 +123,13 @@ function install_docker() {
   echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
     $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
-    sudo tee /etc/apt/sources.list.d/docker.list >/dev/null
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
   # Install and Start Docker Engine.
   sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --yes
 
   # Add user to Docker group
-  sudo usermod -aG docker "${USER}" && newgrp docker
+  sudo usermod --append --groups docker "${USER}" && newgrp docker
 
   print_separator
 }
@@ -154,7 +154,7 @@ function test_docker_installation() {
 function install_minikube() {
   printf "Installing Minikube.\n"
 
-  curl -Lo minikube "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+  curl --location --output minikube "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
   chmod +x minikube
   sudo mv minikube /usr/local/bin/
 
@@ -174,7 +174,7 @@ function install_kubernetes() {
 
   local -r latest_kubernetes_release="$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)"
 
-  curl -LO "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
+  curl --location --output "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
   chmod +x ./kubectl
   sudo mv ./kubectl /usr/local/bin/kubectl
 
@@ -194,7 +194,7 @@ function test_kubernetes_installation() {
 function install_helm() {
   printf "Installing Helm.\n"
 
-  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" >"get_helm.sh"
+  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "get_helm.sh"
   chmod 700 "get_helm.sh"
   ./"get_helm.sh"
 
@@ -256,12 +256,12 @@ function install_visual_studio_code() {
   sudo apt install wget gpg --yes
   wget --quiet -output-document=- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
   sudo install -D --owner=root --group=root --mode=644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
-  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" |sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
   rm --force --verbose packages.microsoft.gpg
   update_and_upgrade_apt
   sudo apt install apt-transport-https --yes
   update_and_upgrade_apt
-  sudo apt install code --yes 
+  sudo apt install code --yes
 
   print_separator
 
@@ -367,7 +367,7 @@ function configure_bashrc() {
   printf "Configuring .bashrc.\n"
 
   # TODO: Add the .bashrc steps.
-  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" >>~/."bashrc"
+  curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" >> ~/."bashrc"
   # shellcheck disable=SC1090
   source ~/."bashrc"
 
