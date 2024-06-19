@@ -20,6 +20,10 @@
     "editor.unicodeHighlight.invisibleCharacters": true
   },
 
+  "[python]": {
+    "editor.tabSize": 4
+  },
+
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -550,6 +554,7 @@
     "Nessie",
     "Netcat",
     "Neverwinter",
+    "newgrp",
     "Nexian",
     "Nightlow",
     "Nixbrix",
@@ -885,13 +890,11 @@
   "editor.indentSize": "tabSize",
   "editor.insertSpaces": true,
   "editor.minimap.showSlider": "always",
+  "editor.occurrencesHighlight": "multiFile",
   "editor.rulers": [120],
   "editor.showFoldingControls": "always",
   "editor.stickyScroll.enabled": true,
   "editor.tabSize": 2,
-  "[python]": {
-    "editor.tabSize": 4
-  },
 
   "extensions.experimental.affinity": {
     "yzhang.markdown-all-in-one": 1
@@ -901,6 +904,7 @@
 
   // "files.dialog.defaultPath": "/home/thomas/Repos", // Linux
   // "files.dialog.defaultPath": "C:\\Repos", // Windows
+  "files.eol": "\n",
   "files.insertFinalNewline": true,
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
@@ -943,12 +947,13 @@
   "window.autoDetectColorScheme": true,
 
   "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Dracula Pro Edition",
+  "workbench.editor.showTabs": "multiple",
   "workbench.preferredDarkColorTheme": "Dracula Pro Edition",
   "workbench.preferredHighContrastColorTheme": "Default High Contrast",
   "workbench.preferredHighContrastLightColorTheme": "Default High Contrast Light",
   "workbench.preferredLightColorTheme": "Quiet Light",
   "workbench.sideBar.location": "right",
   "workbench.tree.enableStickyScroll": true,
-  "workbench.tree.renderIndentGuides": "always",
-  "workbench.colorTheme": "Dracula Pro Edition"
+  "workbench.tree.renderIndentGuides": "always"
 }
