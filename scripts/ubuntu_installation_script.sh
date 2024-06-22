@@ -366,7 +366,6 @@ function install_vlc() {
 function configure_bashrc() {
   printf "Configuring .bashrc.\n"
 
-  # TODO: Add the .bashrc steps.
   curl "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" >> ~/."bashrc"
   # shellcheck disable=SC1090
   source ~/."bashrc"
@@ -382,6 +381,8 @@ function call_miscellaneous_tool_functions() {
   install_gnome_tweaks
 
   install_vlc
+
+  configure_bashrc
 }
 
 #######################################################################################################################
