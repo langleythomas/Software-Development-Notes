@@ -8,3 +8,5 @@ function execute_script() {
 
   time ./"${full_script_file_path=}" | tee "${script_file_path_without_file_extension}-$(date +%F-%T).txt"
 }
+
+alias rm="rm -i --verbose"
