@@ -235,7 +235,8 @@ function install_vim() {
   update_and_upgrade_apt
 
   printf "Installing vim.\n"
-  sudo apt install vim --yes
+  printf "Note: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard. vim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
+  sudo apt-get install vim-gtk3 --yes
 
   print_separator
 }
