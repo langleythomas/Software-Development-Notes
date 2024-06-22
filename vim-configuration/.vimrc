@@ -1,6 +1,6 @@
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Text Rendering
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Enable syntax highlighting
 filetype plugin on
@@ -14,12 +14,9 @@ set linebreak
 " Enable line wrapping
 set wrap
 
-" The amount of tenths of a second to blink when matching brackets
-set mat=2
-
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Text Navigation
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Allow backspace over indentation, line breaks, and insertion start
 set backspace=indent,eol,start
@@ -28,8 +25,8 @@ set backspace=indent,eol,start
 set whichwrap+=<,>,[,]
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Spell Checking
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Enable spellcheck
 set spell
@@ -48,8 +45,8 @@ hi SpellBad cterm=underline ctermfg=red
 hi SpellLocal cterm=underline ctermfg=blue
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Spaces & Tabs
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Number of visual spaces per TAB
 set tabstop=2
@@ -73,17 +70,14 @@ set shiftround
 set smarttab
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " UI Configuration
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Show line numbers
 set number
 
 " Set the window's title to match the current file being edited
 set title
-
-" Redraw only when necessary
-" set lazyredraw
 
 " Highlight matching curly braces, parentheses and square brackets
 set showmatch
@@ -95,8 +89,8 @@ set showcmd
 set colorcolumn=120
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Searching
+" ---------------------------------------------------------------------------------------------------------------------
 
 "Search as characters are entered
 set incsearch
@@ -111,32 +105,32 @@ set hlsearch
 set smartcase
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Clipboard
-
-" Ensure that Vim uses the system clipboard when copying and pasting test
-set clipboard=unnamedplus
-
 " ---------------------------------------------------------------------------------------------------------------------
 
+" Ensure that Vim uses the system clipboard when copying and pasting test
+" Linux
+set clipboard=unnamedplus
+" Windows/MacOS
+" set clipboard=unnamed
+
+" ---------------------------------------------------------------------------------------------------------------------
 " File Type
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Set file format
 set fileformat=unix
-
 
 " Set file encoding type
 set encoding=UTF-8
 
 " ---------------------------------------------------------------------------------------------------------------------
-
 " Vim Exit
+" ---------------------------------------------------------------------------------------------------------------------
 
 " Display confirmation dialogue when closing an unsaved dialogue
 set confirm
 
 " Enable Vim to resume editing a file from the previous location
 autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview
-
-" ---------------------------------------------------------------------------------------------------------------------
+autocmd BufWinEnter * silent loadview+
