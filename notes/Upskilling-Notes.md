@@ -9,8 +9,25 @@ Essential Notes to Look At:
 ## Professional Programmer Advice
 - The Pragmatic Programmer (Physical)
 ## Command Line
+### Bash
 - bash Cookbook (Humble Bundle)
+### Exit Codes
 - Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
+## Text Editors
+### Vi, Vim
+- `vi` and `vim` Editors (Physical)
+
+# Online
+## Command Line
+### Bash
+#### Variable Declaration and Differences
+- Local Variables: https://tldp.org/LDP/abs/html/localvar.html
+- Special Variable Types: https://tldp.org/LDP/abs/html/othertypesv.html
+- Declare/Typeset Options: https://tldp.org/LDP/abs/html/declareref.html
+- declare -r vs readonly in Bash: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
+#### Best Practices
+- https://mywiki.wooledge.org/BashGuide/Practices
+- https://bertvv.github.io/cheat-sheets/Bash.html
 
 Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
@@ -73,6 +90,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          du           |                        |                            |
 |         echo          |                        |                            |
 |         egrep         |                        |                            |
+|        elvis          |                        |                            |
 |        enable         |                        |                            |
 |          env          |                        |                            |
 |         exec          |                        |                            |
@@ -139,10 +157,12 @@ to install it with a lint to an external link or reference to a section in this 
 |          nc           |                        |                            |
 |        neovim         |                        |                            |
 |        netstat        |                        |                            |
+|        newgrp         |                        |                            |
 |          nl           |                        |                            |
 |         nmap          |                        |                            |
 |         nohup         |                        |                            |
 |          npm          |                        |                            |
+|         nvi           |                        |                            |
 |         nvim          |                        |                            |
 |          od           |                        |                            |
 |         open          |                        |                            |
@@ -192,6 +212,7 @@ to install it with a lint to an external link or reference to a section in this 
 |        sshpass        |                        |                            |
 |         stat          |                        |                            |
 |       strftime        |                        |                            |
+|          su           |                        |                            |
 |         sudo          |                        |                            |
 |        sudoers        |                        |                            |
 |          svn          |                        |                            |
@@ -218,6 +239,7 @@ to install it with a lint to an external link or reference to a section in this 
 |        useradd        |                        |                            |
 |        usermod        |                        |                            |
 |          vi           |                        |                            |
+|         vile          |                        |                            |
 |          vim          |                        |                            |
 |         vipw          |                        |                            |
 |        visudo         |                        |                            |
@@ -296,33 +318,44 @@ Nice Notes to Look At:
 ## Professional Programmer Advice
 - Apprenticeship Patterns (Humble Bundle)
 ## Automation
+### Shell
 - Wicked Cool Shell Scripts (Humble Bundle)
+### PowerShell
 - PowerShell Cookbook (Humble Bundle)
-- Wicked Cool Ruby Scripts (Humble Bundle)
 ## Algorithms
 - Learning Algorithms (Humble Bundle)
 - Algorithms in a Nutshell (Humble Bundle)
 - Advanced Algorithms & Data Structures (Humble Bundle)
 ## Professional Programmer Advice
+### Agile
 - The Art of Agile Development (Humble Bundle)
+- Head First Agile (Humble Bundle)
+### Better Programmer
 - Becoming a Better Programmer (Humble Bundle)
 - Apprenticeship Patterns (Humble Bundle)
+### Software Design & Development
 - Code Complete (Microsoft Press)
 - Skills of a Successful Software Engineer (Humble Bundle)
+### Making Decisions
 - Software Mistakes and Trade-offs: How to Make Good Programming Decisions (Humble Bundle)
 ## Agile
-- Head First Agile (Humble Bundle)
 ## Clean Code
+### Readable Code
 - The Art of Readable Code (Humble Bundle)
-- Head First Design Patterns (Humble Bundle)
 - The Clean Coder (Physical)
-- Refactoring (Physical)
 - Street Coder: The Rules to Break and How to Break Them (Humble Bundle)
-- Five Lines of Code: How and When to Refactor (Humble Bundle)
 - Good Code, Bad Code (Humble Bundle)
+### Design Patterns
+- Head First Design Patterns (Humble Bundle)
+### Refactoring
+- Refactoring (Physical)
+- Five Lines of Code: How and When to Refactor (Humble Bundle)
+### Legacy Code
 - Working Effectively with Legacy Code (To Be Bought)
 ## Architecture
+### Clean Architecture
 - Clean Architecture (Physical)
+### Designing Software
 - Software Architecture: The Hard Parts (Physical)
 ## C Development
 - Head First C (Humble Bundle)
@@ -1096,6 +1129,26 @@ TODO: Order in which to do this testing.
       - [1.3.11.3. Pragmatic Starter Kit](#13113-pragmatic-starter-kit)
       - [1.3.11.4. Delight Your Users](#13114-delight-your-users)
       - [1.3.11.5. Pride \& Prejudice](#13115-pride--prejudice)
+  - [1.4. `vi` and `vim` Editors](#14-vi-and-vim-editors)
+    - [1.4.1. Introduction](#141-introduction)
+    - [1.4.2. Conventions](#142-conventions)
+    - [1.4.3. Acknowledgements](#143-acknowledgements)
+    - [1.4.4. Command Line Options](#144-command-line-options)
+    - [1.4.5. `vi` Commands](#145-vi-commands)
+    - [1.4.6. Input Mode Shortcuts](#146-input-mode-shortcuts)
+    - [1.4.7. Substitution \& Regular Expressions](#147-substitution--regular-expressions)
+    - [1.4.8. `ex` Commands](#148-ex-commands)
+    - [1.4.9. Initialisation](#149-initialisation)
+    - [1.4.10. Recovery](#1410-recovery)
+    - [1.4.11. `vi set` Options](#1411-vi-set-options)
+    - [1.4.12. Nothing Like the Original](#1412-nothing-like-the-original)
+    - [1.4.13. Enhanced Tags \& Tag Stacks](#1413-enhanced-tags--tag-stacks)
+    - [1.4.14. `vim` - `vi` Improved](#1414-vim---vi-improved)
+    - [1.4.15. `nvi` - New `vi`](#1415-nvi---new-vi)
+    - [1.4.16. `elvis`](#1416-elvis)
+    - [1.4.17. `vile` - `vi` like Emacs](#1417-vile---vi-like-emacs)
+    - [1.4.18. Internet Resources for `vi`](#1418-internet-resources-for-vi)
+    - [1.4.19. Program Source and Contact Information](#1419-program-source-and-contact-information)
 - [2. Cheat Sheets](#2-cheat-sheets)
   - [2.1. `yt-dlp`](#21-yt-dlp)
     - [2.1.1. Install `yt-dlp`](#211-install-yt-dlp)
@@ -1211,6 +1264,7 @@ TODO: Order in which to do this testing.
   - [5.7. O'Reilly](#57-oreilly)
     - [5.7.1. O'Reilly: 97 Things Every Programmer Should Know](#571-oreilly-97-things-every-programmer-should-know)
     - [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+    - [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](#573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
   - [5.8. Tech Target](#58-tech-target)
     - [5.8.1. Tech Target: Network Slicing](#581-tech-target-network-slicing)
   - [5.9. Techradar](#59-techradar)
@@ -10847,66 +10901,142 @@ file called donors that looked like this:
 
 #### 1.2.16.9. Finding World-Writeable Directories in Your `$PATH`
 
--
+- If you want to ensure there are no world-writeable directories in `root`'s `$PATH`, use the following script to check
+  your `$PATH`. Use it in conjunction with `su` or `sudo` to check paths for other users.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+
+  # cookbook filename: chkpath.1
+  # Check your $PATH for world-writeable or missing directories
+
+  exit_code=0
+
+  for dir in ${PATH//:/ }; do
+    [ -L "$dir" ] && printf "%b" "symlink, "
+
+    if [ ! -d "$dir" ]; then
+      printf "%b" "missing\t\t"
+      (( exit_code++ ))
+    elif [ -n "$(ls -lLd $dir | grep '^d.......w. ')" ]; then
+      printf "%b" "world writeable\t"
+      (( exit_code++ ))
+    else
+      printf "%b" "ok\t\t"
+    fi
+
+    printf "%b" "$dir\n"
+  done
+
+  exit $exit_code
+  ```
+
+- The following is an example of executing the script in this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # ./chkpath
+  ok /usr/local/sbin
+  ok /usr/local/bin
+  ok /sbin
+  ok /bin
+  ok /usr/sbin
+  ok /usr/bin
+  ok /usr/X11R6/bin
+  ok /root/bin
+  missing /does_not_exist
+  world writeable /tmp
+  symlink, world writeable /tmp/bin
+  symlink, ok /root/sbin
+  #
+  ```
+
+- The scripts converts the `$PATH` to a space-delimited list using the technique from, test for symbolic links (`-L`),
+  and ensure the directory actually exists (`-d`). Then the script gets a long directory listing (`-l`), dereferencing
+  symbolic links (`-L`) and listing the directory name only (`-d`), not the directory’s contents. The script then
+  finally get to `grep` for world-writeable directories.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The `ok` directories are spaced output, but directories with a problem can get a little cluttered.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The script also provides an exit code of zero on success with no problems detected in the `$PATH`, or the count of
+  errors found.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The script can also be updated with the file's mode, owner, and group being added to the output. This information
+  could be more valuable than the initial output.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+
+  # cookbook filename: chkpath.2
+  # Check your $PATH for world-writeable or missing directories, with 'stat'
+
+  exit_code=0
+
+  for dir in ${PATH//:/ }; do
+    [ -L "$dir" ] && printf "%b" "symlink, "
+
+    if [ ! -d "$dir" ]; then
+      printf "%b" "missing\t\t\t\t"
+    (( exit_code++ ))
+    else
+      stat=$(ls -lHd $dir | awk '{print $1, $3, $4}')
+
+      if [ -n "$(echo $stat | grep '^d.......w. ')" ]; then
+        printf "%b" "world writeable\t$stat "
+        (( exit_code++ ))
+      else
+        printf "%b" "ok\t\t$stat "
+      fi
+    fi
+
+    printf "%b" "$dir\n"
+  done
+
+  exit $exit_code
+  ```
+
+- The following is an example of executing the updated script in this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # ./chkpath ; echo $?
+  ok drwxr-xr-x root root /usr/local/sbin
+  ok drwxr-xr-x root root /usr/local/bin
+  ok drwxr-xr-x root root /sbin
+  ok drwxr-xr-x root root /bin
+  ok drwxr-xr-x root root /usr/sbin
+  ok drwxr-xr-x root root /usr/bin
+  ok drwxr-xr-x root root /usr/X11R6/bin
+  ok drwx------ root root /root/bin
+  missing /does_not_exist
+  world writeable drwxrwxrwt root root /tmp
+  symlink, ok drwxr-xr-x root root /root/sbin
+  2
+  #
+  ```
 
 #### 1.2.16.10. Adding the Current Directory to the `$PATH`
 
--
+- If you are find typing `./<script>` is tedious, and you'd rather just add `.` (or an empty directory, meaning a
+  leading or trailing `:` or a `::` in the middle) to your `$PATH`, it is strongly recommended against doing that for
+  `root`. However, if you must do that, ensure the `.` comes last and never run the script as `root`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The shell searches the directories listed in `$PATH` when you enter a command name without a path. The reason not to
+  add `.` is the same reason not to allow world-writeable directories in your `$PATH`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- For example, if you are in `/tmp` and have `.` as the first thing in your `$PATH`. If you type `ls` and there happens
+  to be a file called `/tmp/ls`, you will run that file instead of the `/bin/ls` you intended to run. If you add `.`
+  as the last thing in your `$PATH`, you could also run into the same issue.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The easiest solution to this is to not `.` anywhere in the `$PATH`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.11. Using Secure Temporary Files
@@ -18954,6 +19084,846 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [5.10.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
     #5101-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
+## 1.4. `vi` and `vim` Editors
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.1. Introduction
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.2. Conventions
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.3. Acknowledgements
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.4. Command Line Options
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.5. `vi` Commands
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.6. Input Mode Shortcuts
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.7. Substitution & Regular Expressions
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.8. `ex` Commands
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.9. Initialisation
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.10. Recovery
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.11. `vi set` Options
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.12. Nothing Like the Original
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.13. Enhanced Tags & Tag Stacks
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.14. `vim` - `vi` Improved
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.15. `nvi` - New `vi`
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.16. `elvis`
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.17. `vile` - `vi` like Emacs
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.18. Internet Resources for `vi`
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+### 1.4.19. Program Source and Contact Information
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
+-
+  [5.7.3. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](
+    #573-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
+
 </details>
 
 # 2. Cheat Sheets
@@ -20408,6 +21378,10 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 ### 5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition
 
 - <https://www.oreilly.com/library/view/bash-cookbook-2nd/9781491975329/>
+
+### 5.7.3. O'Reilly: `vi` & `vim` Editors Pocket Reference, 2nd Edition
+
+- <https://www.oreilly.com/library/view/vi-and-vim/9781449303082/>
 
 ## 5.8. Tech Target
 
