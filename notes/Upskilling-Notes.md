@@ -60,9 +60,9 @@ to install it with a lint to an external link or reference to a section in this 
 |          cal          |                        |                            |
 |         case          |                        |                            |
 |          cat          |                        |                            |
-|         cattt         |                        |                            |
 |         chmod         |                        |                            |
 |         chown         |                        |                            |
+|        chroot         |                        |                            |
 |          cmp          |                        |                            |
 |        column         |                        |                            |
 |         comm          |                        |                            |
@@ -72,6 +72,7 @@ to install it with a lint to an external link or reference to a section in this 
 |       compress        |                        |                            |
 |        coproc         |                        |                            |
 |          cp           |                        |                            |
+|         cron          |                        |                            |
 |        crontab        |                        |                            |
 |         curl          |                        |                            |
 |          cut          |                        |                            |
@@ -90,7 +91,8 @@ to install it with a lint to an external link or reference to a section in this 
 |          du           |                        |                            |
 |         echo          |                        |                            |
 |         egrep         |                        |                            |
-|        elvis          |                        |                            |
+|         elm           |                        |                            |
+|         elvis         |                        |                            |
 |        enable         |                        |                            |
 |          env          |                        |                            |
 |         exec          |                        |                            |
@@ -125,6 +127,9 @@ to install it with a lint to an external link or reference to a section in this 
 |         host          |                        |                            |
 |         htop          |                        |                            |
 |          id           |                        |                            |
+|         info          |                        |                            |
+|       info2man        |                        |                            |
+|       info2www        |                        |                            |
 |        install        |                        |                            |
 |          ip           |                        |                            |
 |         java          |                        |                            |
@@ -145,13 +150,19 @@ to install it with a lint to an external link or reference to a section in this 
 |         lspci         |                        |                            |
 |         lsusb         |                        |                            |
 |         lynx          |                        |                            |
+|         mail          |                        |                            |
+|        mailto         |                        |                            |
+|         mailx         |                        |                            |
 |          man          |                        |                            |
 |       maparray        |                        |                            |
 |        mapfile        |                        |                            |
+|        mimeencode     |                        |                            |
 |         mkdir         |                        |                            |
 |        mktemp         |                        |                            |
 |       mongocli        |                        |                            |
 |          mtr          |                        |                            |
+|         mutt          |                        |                            |
+|          mv           |                        |                            |
 |          mvn          |                        |                            |
 |         mysql         |                        |                            |
 |          nc           |                        |                            |
@@ -162,13 +173,14 @@ to install it with a lint to an external link or reference to a section in this 
 |         nmap          |                        |                            |
 |         nohup         |                        |                            |
 |          npm          |                        |                            |
-|         nvi           |                        |                            |
+|          nvi          |                        |                            |
 |         nvim          |                        |                            |
 |          od           |                        |                            |
 |         open          |                        |                            |
 |        openssl        |                        |                            |
 |        passwd         |                        |                            |
 |         perl          |                        |                            |
+|         pinfo         |                        |                            |
 |         ping          |                        |                            |
 |          pip          |                        |                            |
 |        printf         |                        |                            |
@@ -182,6 +194,7 @@ to install it with a lint to an external link or reference to a section in this 
 |         read          |                        |                            |
 |       readarray       |                        |                            |
 |       readline        |                        |                            |
+|        rename         |                        |                            |
 |        rlogin         |                        |                            |
 |          rm           |                        |                            |
 |         rmdir         |                        |                            |
@@ -222,6 +235,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          tee          |                        |                            |
 |       textutils       |                        |                            |
 |         time          |                        |                            |
+|         tkman         |                        |                            |
 |         tmux          |                        |                            |
 |          top          |                        |                            |
 |         touch         |                        |                            |
@@ -238,6 +252,8 @@ to install it with a lint to an external link or reference to a section in this 
 |         unzip         |                        |                            |
 |        useradd        |                        |                            |
 |        usermod        |                        |                            |
+|       uudecode        |                        |                            |
+|       uuencode        |                        |                            |
 |          vi           |                        |                            |
 |         vile          |                        |                            |
 |          vim          |                        |                            |
@@ -254,6 +270,7 @@ to install it with a lint to an external link or reference to a section in this 
 |         zcat          |                        |                            |
 |         zgrep         |                        |                            |
 |          zip          |                        |                            |
+|        zmodem         |                        |                            |
 |        zypper         |                        |                            |
 
 # Tutorials
@@ -926,7 +943,7 @@ TODO: Order in which to do this testing.
       - [1.2.18.8. Shortening or Changing Command Names](#12188-shortening-or-changing-command-names)
       - [1.2.18.9. Adjusting Shell Behaviour \& Environment](#12189-adjusting-shell-behaviour--environment)
       - [1.2.18.10. Adjusting `readline` Behaviour Using `.inputrc`](#121810-adjusting-readline-behaviour-using-inputrc)
-      - [1.2.18.11. Keeping a Private Stash of Utility by Adding `~/bin`](#121811-keeping-a-private-stash-of-utility-by-adding-bin)
+      - [1.2.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`](#121811-keeping-a-private-stash-of-utilities-by-adding-bin)
       - [1.2.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`](#121812-using-secondary-prompts-ps2-ps3-ps4)
       - [1.2.18.13. Synchronising Shell History Between Sessions](#121813-synchronising-shell-history-between-sessions)
       - [1.2.18.14. Setting Shell History Options](#121814-setting-shell-history-options)
@@ -6406,7 +6423,7 @@ file called donors that looked like this:
   DB_LIST=$(sh ./listdb | tail -n +2)
   select DB in $DB_LIST
   do
-    echo Initializing database: $DB
+    echo Initialising database: $DB
     mysql -u user -p $DB <myinit.sql
   done
   ```
@@ -6421,7 +6438,7 @@ file called donors that looked like this:
   3) masterInventory
   4) otherDB
   #? 2
-  Initializing database: simpleInventory
+  Initialising database: simpleInventory
   #?
 
   $
@@ -6448,7 +6465,7 @@ file called donors that looked like this:
   do
     if [ $DB ]
     then
-      echo Initializing database: $DB
+      echo Initialising database: $DB
 
       PS3="$((++i)) inits> "
 
@@ -8130,8 +8147,8 @@ file called donors that looked like this:
   }
 
   SELF="$0" # Set a more readable name for recursion.
-  action="$1" # Set a more readable name for the command or action we’re going to take.
-  shift # Remove the shift argument from the list so we don’t reuse or include it in the input or output later.
+  action="$1" # Set a more readable name for the command or action we're going to take.
+  shift # Remove the shift argument from the list so we don't reuse or include it in the input or output later.
 
   # If the xsel command is available and executable, and we passed no other arguments, then set up the input and
   # output to be from and to the clipboard. That turns this script into an application-generic macro tool! No matter
@@ -8186,7 +8203,7 @@ file called donors that looked like this:
       )"
     ;;
 
-    table ) # Sometimes the boilerplate markup doesn’t include any input text.
+    table ) # Sometimes the boilerplate markup doesn't include any input text.
       Output "$(cat <<- EoF
                    .A Table
                    [options="header"]
@@ -8234,7 +8251,7 @@ file called donors that looked like this:
             # automate!
     rm -fv {ch??,app?}.{pdf,xml,html} book.xml docbook-xsl.css
   ;;
-  * ) # If you don’t provide any arguments, or provide incorrect arguments, even including ones like -h or --help, you
+  * ) # If you don't provide any arguments, or provide incorrect arguments, even including ones like -h or --help, you
       # get a generated usage message.
     \cd - > /dev/null # UGLY cheat to revert the 'cd' above...
     # See also: http://stackoverflow.com/questions/59895/can-a-bash-script-tell-what-directory-its-stored-in
@@ -9625,7 +9642,7 @@ file called donors that looked like this:
 
 - There are also two ways to write `<a>` tags, one with a separate ending `</a>` tag and one without, where instead the
   singular `<a>` tag itself ends with a `/>`. Between this and the potential for multiple tags on a line and tags split
-  across lines, it’s a bit messy to parse, and our simple bash technique for this is often not foolproof.
+  across lines, it's a bit messy to parse, and our simple bash technique for this is often not foolproof.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - The following are the steps involved in the solution at the start of this section.
@@ -9812,7 +9829,7 @@ file called donors that looked like this:
 
   ```bash
   #!/usr/bin/env bash
-  # cookbook filename: pluralize
+  # cookbook filename: pluralise
   #
   # A function to make words plural by adding an s
   # when the value ($2) is != 1 or -1.
@@ -9932,7 +9949,7 @@ file called donors that looked like this:
   #!/usr/bin/env bash
   # cookbook filename: db_initialiser
   #
-  # initialize databases from a standard file
+  # initialise databases from a standard file
   # creating databases as needed
 
   # The `tail -n +2` in the following line is added to remove the heading from the list of databases.
@@ -9952,7 +9969,7 @@ file called donors that looked like this:
 
     if [ -n "$DB" ]
     then
-      echo Initializing database: $DB
+      echo Initialising database: $DB
       mysql $DB < ourInit.sql
     fi
   done
@@ -10954,7 +10971,7 @@ file called donors that looked like this:
 
 - The scripts converts the `$PATH` to a space-delimited list using the technique from, test for symbolic links (`-L`),
   and ensure the directory actually exists (`-d`). Then the script gets a long directory listing (`-l`), dereferencing
-  symbolic links (`-L`) and listing the directory name only (`-d`), not the directory’s contents. The script then
+  symbolic links (`-L`) and listing the directory name only (`-d`), not the directory's contents. The script then
   finally get to `grep` for world-writeable directories.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -11359,66 +11376,28 @@ file called donors that looked like this:
 
 #### 1.2.16.17. Using `chroot` Jails
 
--
+- If you have to use a script or application that you don't trust, consider placing it in a so-called *chroot jail*.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The `chroot` command changes the root directory of the current process to the directory you specify then returns a
+  shell of `execs` a given command. This has the effect of placing the process (and therefore the program) into a fail
+  from which it theoretically can't escape to the parent directory. If that application is compromised or otherwise
+  does something malicious, it can only affect the small portion of the filesystem you restricted it to. In conjunction
+  with running as a user with very limited rights, this is a very useful layer of security to add.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The reason why not everything runs in *chroot jails* is because many applications need to interact with other
+  applications, files, directories, or sockets all over the file system. That's the tricky part about using chroot
+  jails; the application can't see outside of its walls, so everything it needs must be inside those walls. The more
+  complicated the application, the more difficult it is to run in a jail.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.18. Running as Non-root User
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you'd l;ike to run your scripts as a non-root user, but are afraid you won't be able to do the things you need to
+  do, run your scripts under your non-root user IDs (either as you or as dedicated users), and run interactively as
+  non-root, but configure `sudo` to handle any tasks that require any elevated privileges. `sudo` may be used in a
+  script as easily as it may be used interactively.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.16.19. Using `sudo` More Securely
@@ -11650,12 +11629,12 @@ file called donors that looked like this:
   `rssh`, which supports `scp`, `sftp`, `rdist`, `rsync`, and `cvs`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-- You’d think restrictions like these would be easy, but it turns out they are not. The problem has to do with the way
-  SSH (and the `r`-commands before it) actually works. It’s a brilliant idea and it works very well, except that it’s
+- You'd think restrictions like these would be easy, but it turns out they are not. The problem has to do with the way
+  SSH (and the `r`-commands before it) actually works. It's a brilliant idea and it works very well, except that it's
   hard to limit. To vastly over‐simplify it, you can think of SSH as connecting your local `STDOUT` to `STDIN` on the
   remote side and the remote `STDOUT` to your local `STDIN`, so all things like `scp` or `rsync` do is stream bytes
   from the local machine to the remote machine as if over a pipe. But that very flexibility precludes SSH from being
-  able to restrict interactive access while allowing `scp`. There’s no difference. And that’s why you can’t put lots of
+  able to restrict interactive access while allowing `scp`. There's no difference. And that's why you can't put lots of
   `echo` and debugging statements in your bash configuration files that output will intermingle with the byte stream
   and cause havoc.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -12569,34 +12548,116 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.17.17. Sending Email from Your Script
 
--
+- If you'd like your script to be able to send email (optionally with attachments), you must have a compatible mailer
+  installed on your system, such as `mail`, `mailto`, or `mailto`, a message transfer agent (MTA) being installed and
+  running, and proper configuration of your email environment.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The first way to send mail from your script is to write some code to generate and send a message, like the following
+  examples:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  Simple
+  cat email_body | \
+  mail -s "Message subject" recipient1@example.com recipient2@example.com
+
+  # Attachment only
+  uuencode /path/to/attachment_file attachment_name | \
+  mail -s "Message Subject" recipient1@example.com recipient2@example.com
+
+  # Attachment and body
+  (cat email_body ; uuencode /path/to/attachment_file attachment_name) | \
+  mail -s "Message Subject" recipient1@example.com recipient2@example.com
+  ```
+
+- While `uuencode` will probably be there, mail and friends may or may not, and their capabilities may vary. In some
+  cases, `mail` and `mailx` are even the same program, hard- or soft-linked together. In production, you will want to
+  use some abstraction to allow for portability. For example, mail works on Linux and the BSDs, but `mailx` is required
+  for Solaris since its mail lacks support for `-s`. `mailx` works on some Linux distributions (e.g., Debian), but not
+  others. We choose the mailer based on hostname in the following examples, but depending on your environment using
+  `uname -o` might make more sense.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: email_sample
+
+  # Define some mail settings. Use a case statement with uname or hostname
+  # to tweak settings as required for your environment.
+  case $HOSTNAME in
+    *.company.com ) MAILER='mail' ;; # Linux and BSD
+    host1.* ) MAILER='mailx' ;; # Solaris, BSD, and some Linuxes
+    host2.* ) MAILER='mailto' ;; # Handy, if installed
+  esac
+
+  RECIPIENTS='recipient1@example.com recipient2@example.com'
+  SUBJECT="Data from $0"
+
+  [...]
+  # Create the body as a file or variable using echo, printf, or a here-document
+  # Create or modify $SUBJECT and/or $RECIPIENTS as needed)
+
+  [...]
+  ( echo $email_body ; uuencode $attachment $(basename $attachment) ) \
+  | $MAILER -s "$SUBJECT" "$RECIPIENTS"
+  ```
+
+- Sending attachments like in the previous examples depends somewhat on the client used to read the resulting message.
+  Modern clients like Thunderbird and Outlook will detect an `uuencode`d message and present it as an attachment. Other
+  clients may not. You can always save the message and `uudecode` it (`uudecode` is smart enough to just skip the
+  message part and handle the attachment part), but that can be a major inconvenience.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Another way to send a mail from your script is to outsource the task to `cron`. The exact feature set of `cron`
+  varies between systems, but one thing in common is that any output from a `cron` job is mailed to the job's owner or
+  the user-defined `MAILTO` variable. The proper way to design a script intended to run from `cron` (and, many would
+  argue, any script or Unix tool at all) is to make it silent unless it encounters a warning or error. The reason for
+  this is as noted: `cron` emails you all the output. If you get an email message from `cron` every time your script
+  runs, you'll soon start ignoring them. But if your script is silent except when there's a problem, you'll only get a
+  notification when there is a problem, which is ideal.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `mailto` is intended to be a multimedia- and MIME-aware update to mail, and thus you could avoid using `uuencode` for
+  sending attachments, but it's not as widely available as `mail` or `mailx`. If all else fails, `elm` or `mutt` may be
+  used in place of `mail`, `mailx`, or `mailto`, though they are even less likely to be installed by default than
+  `mail*` by default. The `mpack` program encodes the named file in one or more MIME messages. The resulting messages
+  are mailed to one or more recipients, written to a named file or set of files, or posted to a set of newsgroups.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  cat "$message_body" | mutt -s "$subject" -a "$attachment_file" "$recipients"
+  ```
+
+- Another way to handle the various names and locations of mail clients is shown in the following example.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: email_sample_css
+  # From Chapter 8 of Classic Shell Scripting
+  for MAIL in /bin/mailx /usr/bin/mailx /usr/sbin/mailx /usr/ucb/mailx /bin/mail usr/bin/mail; do
+    [ -x $MAIL ] && break
+  done
+
+  [ -x $MAIL ] || { echo 'Cannot find a mailer!' >&2; exit 1; }
+  ```
+
+- `uuencode` is an old method for translating binary data into ASCII text for transmission over links that could not
+  support binary, which is to say most of the internet before it became the internet and the web. We have it on good
+  authority that at least some such links still remain, but even if you never encounter one it's still useful to be
+  able to convert an attachment into an otherwise ASCII medium in such a way that modern mail clients will recognise
+  it. See also `uudecode` and `mimeencode`. Note that `uuencode`d files are about one-third larger than their binary
+  equivalent, so you probably want to compress the file before `uuencode`ing it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The problem with email, aside from the differing frontend mail user agent (MUA) programs like `mail` and `mailx`, is
+  that there are a lot of moving parts that must all work together. This is exacerbated by the spam problem: mail
+  administrators have had to so severely lock down mail servers that it can easily affect your scripts. In order to
+  fully test your solution, and talk to your system and mail administrators if necessary.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- One other problem you might see is that some workstation-oriented Linux distributions, such as Ubuntu, don't install
+  or run an MTA by default since they assume you will be using a full-featured GUI client such as Evolution or
+  Thunderbird. If that's the case, command-line MUAs and email from `cron` won't work either.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.17.18. Automating a Process Using Phases
@@ -12612,7 +12673,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ```bash
   # cookbook filename: func_choice.1
 
-  # Let the user make a choice about something and return a standardized
+  # Let the user make a choice about something and return a standardised
   # answer. How the default is handled and what happens next is up to
   # the if/then after the choice in main.
   # Called like: choice <prompt>
@@ -12645,9 +12706,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
         ThisPhase=0
         NextPhase="$(( $ThisPhase + 1 ))"
         echo '############################################'
-        echo "Phase$ThisPhase = Initialization of FooBarBaz build"
+        echo "Phase$ThisPhase = Initialisation of FooBarBaz build"
 
-        # Things that should only be initialized at the beginning of a
+        # Things that should only be initialised at the beginning of a
         # new build cycle go here
         # ...
 
@@ -13345,7 +13406,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $endif
   ```
 
-#### 1.2.18.11. Keeping a Private Stash of Utility by Adding `~/bin`
+#### 1.2.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
@@ -13736,66 +13797,88 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.19.1. Renaming Many Files
 
--
+- If you want to rename many files, but `mv *.foo *.bar` doesn't work, or if you want to rename a group of files in
+  arbitrary ways, you can use the following script to rename a number of files using a `for` loop.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  for FN in *.bad
+  do
+    mv "${FN}" "${FN%bad}bash"
+  done
+  ```
+
+- For more arbitrary changes, e.g., you are writing a book and want the chapter filenames to follow a certain format,
+  but the publisher has a conflicting format. You could name the files like `chNN=Title=Author.odt`, then use a simple
+  `for` loop and `cut` in a command substitution to rename them.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Initial Command
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ for i in *.odt; do mv "$i" "$(echo "$i" | cut -d'=' -f1,3)"; done
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Testing
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ for i in *.odt; do echo "<$i>" "<$(echo "$i" | cut -d'=' -f1,3)>"; done
+  <ch01=Beginning Shell Scripting=JP.odt><ch01=JP.odt>
+  <ch02=Standard Output=CA.odt><ch02=CA.odt>
+  <ch03=Standard Input=CA.odt><ch03=CA.odt>
+  <ch04=Executing Commands=CA.odt><ch04=CA.odt>
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  [...]
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  # Even More Testing
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ set -x
 
--
+  $ for i in *.odt; do echo "<$i>" "<$(echo "$i" | cut -d'=' -f1,3)>"; done
+  ++xtrace 1: echo ch01=Beginning Shell Scripting=JP.odt
+  ++xtrace 1: cut -d= -f1,3
+  +xtrace 535: echo '<ch01=Beginning Shell Scripting=JP.odt>' '<ch01=JP.odt>'
+  <ch01=Beginning Shell Scripting=JP.odt><ch01=JP.odt>
+  ++xtrace 1: echo ch02=Standard Output=CA.odt
+  ++xtrace 1: cut -d= -f1,3
+  +xtrace 535: echo '<ch02=Standard Output=CA.odt>' '<ch02=CA.odt>'
+  <ch02=Standard Output=CA.odt><ch02=CA.odt>
+  ++xtrace 1: echo ch03=Standard Input=CA.odt
+  ++xtrace 1: cut -d= -f1,3
+  +xtrace 535: echo '<ch03=Standard Input=CA.odt>' '<ch03=CA.odt>'
+  <ch03=Standard Input=CA.odt><ch03=CA.odt>
+  ++xtrace 1: echo ch04=Executing Commands=CA.odt
+  ++xtrace 1: cut -d= -f1,3
+  +xtrace 535: echo '<ch04=Executing Commands=CA.odt>' '<ch04=CA.odt>'
+  <ch04=Executing Commands=CA.odt><ch04=CA.odt>
+
+  $ set +x
+  +xtrace 536: set +x
+  ```
+
+- Don't name your script `rename`. There are at least two different `rename` commands in major Linux, and there are
+  certainly many others.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.2. Using GNU Texinfo & `info` on Linux
 
--
+- If you are having trouble accessing documentation because much of the documentation for GNU tools on Linux is in
+  Texinfo documents, the traditional manpages are just stubs, and the default info program is user-hostile (and you
+  don't feel like learning yet another single-use program), pipe the `info` command into a useful pager, such as
+  `less`, but you will lose `info`'s link navigation features.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  info bash | less
+  ```
+
+- `info` is essentially a standalone version of the Emacs info reader, so if you are an Emacs fan, maybe it will make
+  sense to you. However, piping it into `less` is a quick and simple way to view the documentation using a tool with
+  which you're already familiar.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- The idea behind Texinfo is good: generate various output formats from a single source. It's not new, since many other
+  markup languages exist to do the same thing. However, it is not used for manpages, as they follow a standard,
+  structures, and time-tested format while Texinfo is more free-form. There are other other Texinfo viewers and
+  converters, such as `pinfo`, `info2www`, `tkman`, and even `info2man`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.3. Unzipping Many ZIP Files
@@ -13826,29 +13909,65 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.19.4. Recovering Disconnected Sessions Using `screen`
 
--
+- If you run long processes over SSH, perhaps over the WAN, and when you get disconnected you lose a lot of work. You
+  could run your process using `nohup`, but then you won't be able to reattach to it when your connection recovers.
+  Installing and using GNU `screen` is the best solution.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using `screen` is very simple. Type `screen` or `screen -a`. The `-a` option includes all of `screen`'s capabilities,
+  at the expense of some redraw (thus bandwidth) efficiency.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you use the `screen` command, it will look like nothing happened, but you are now running inside a `screen`.
+  `echo $SHLVL` should return a number greater than one if this worked. To test it, do an `ls -la`, then `kill` your
+  terminal (do not exit cleanly, as you will also exit `screen`). Log back into the machine and type `screen -r` to
+  reconnect to screen. If that doesn't put you back where you left off, try `screen -d -r`. If that doesn't work, try
+  `ps auwx | grep [s]creen` to see if screen is still running, and then try man screen for troubleshooting information
+  - but it should just work.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Starting `screen` with something like the following will make it easier to figure out what session to reattach to
+  later if necessary.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  screen -aS "$(whoami).$(date$$'$$ $$+$$%Y-%m-%d$$_$$%H:%M:%S%z$$'$$)
+  ```
+
+- You can have more than one `screen` session in a single SSH terminal. `screen` also allows you to SSH into a machine,
+  start a process, disconnect your terminal, then reconnect and pick up - not where you left off, but where the process
+  has continued to. It also allows multiple people to share a single session for training, troubleshooting, or
+  collaboration.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `screen` is often installed by default on Linux, but rarely on other systems. The `screen` binary must run as SUID
+  `root` so it can write to the appropriate `/usr/dev/` pseudo-terminals (PTYs). If `screen` doesn't work, this is
+  likely the reason. To fix it, run the command `chmod u+s /usr/bin/screen` as `root`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- `screen` also interfaces with inline transfer protocols like `zmodem`. Newer versions of `screen` have configuration
+  settings that support this.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- The default Emacs mode of bash command-line editing uses `<Ctrl> + a` to go to the start of the line. That's also the
+  `screen` command mode, or meta key, so if you use `<Ctrl> + a` a lot, you may want to add the following to your
+  `~/.screenrc` file.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # Sample settings for ~/.screenrc
+  # Change the C-a default to C-n (use C-n n to send literal ^N)
+  escape ^Nn
+
+  # Yes annoying audible bell, please
+  vbell off
+
+  # Detach on hangup
+  autodetach on
+
+  # Make the shell in every window a login shell
+  shell -$SHELL
+  ```
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
