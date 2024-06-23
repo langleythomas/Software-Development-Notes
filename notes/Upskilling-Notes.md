@@ -178,6 +178,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          od           |                        |                            |
 |         open          |                        |                            |
 |        openssl        |                        |                            |
+|          opt          |                        |                            |
 |        passwd         |                        |                            |
 |         perl          |                        |                            |
 |         pinfo         |                        |                            |
@@ -213,6 +214,7 @@ to install it with a lint to an external link or reference to a section in this 
 |        setuid         |                        |                            |
 |         sftp          |                        |                            |
 |         shift         |                        |                            |
+|         shopt         |                        |                            |
 |       shutdown        |                        |                            |
 |        slocate        |                        |                            |
 |         snap          |                        |                            |
@@ -286,6 +288,8 @@ to install it with a lint to an external link or reference to a section in this 
 - PTY and TTY (https://www.baeldung.com/linux/pty-vs-tty)
 
 # Books
+## Command Line
+- Efficient Linux at the Command Line (Humble Bundle)
 ## Automation
 - Automate the Boring Stuff with Python: Practical Programming for Total Beginners (Humble Bundle)
 ## Security
@@ -294,11 +298,18 @@ to install it with a lint to an external link or reference to a section in this 
 - Practical UNIX and Internet Security, 3rd Edition (https://www.oreilly.com/library/view/practical-unix-and/0596003234/)
 - SSH: The Secure Shell: The Definitive Guide, 4th Edition
 - Linux Security Cookbook
+## DevOps
+- Python for DevOps (Humble Bundle)
 ## Deployment
 - Docker Cookbook (Humble Bundle)
+- Docker: Up & Running, 3rd Edition (Humble Bundle)
+- Kubernetes: Up and Running, 3rd Edition (Humble Bundle)
 ## Pipelines
 - Data Pipeline Pocket Reference (Humble Bundle)
 - Cost-Effective Data Pipelines (Humble Bundle)
+## Version Control:
+- Learning Git (Humble Bundle)
+- Learning GitHub Actions (Humble Bundle)
 
 # Online Notes
 ## Energy Efficient Software
@@ -954,7 +965,7 @@ TODO: Order in which to do this testing.
       - [1.2.18.19. Improving Programmable Completion](#121819-improving-programmable-completion)
       - [1.2.18.20. Using Initialisation Files Correctly](#121820-using-initialisation-files-correctly)
       - [1.2.18.21. Creating Self-Contained, Portable `rc` Files](#121821-creating-self-contained-portable-rc-files)
-      - [1.2.18.22. Getting Start with a Custom Configuration](#121822-getting-start-with-a-custom-configuration)
+      - [1.2.18.22. Getting Started with a Custom Configuration](#121822-getting-started-with-a-custom-configuration)
     - [1.2.19. Housekeeping \& Administrative Tasks](#1219-housekeeping--administrative-tasks)
       - [1.2.19.1. Renaming Many Files](#12191-renaming-many-files)
       - [1.2.19.2. Using GNU Texinfo \& `info` on Linux](#12192-using-gnu-texinfo--info-on-linux)
@@ -4022,7 +4033,7 @@ TODO: Order in which to do this testing.
 
   - Almost all commands come with some form of help on how to use them. Usually there is online documentation called
     manpages, where `man` is short for manual. These are accessed using the man command. Many programs also have a
-    built-in help facility, accessed by providing a "help me" argument such as `-h` or `--help`. Some programs,
+    builtin help facility, accessed by providing a "help me" argument such as `-h` or `--help`. Some programs,
     especially on other operating systems, will give you help if you don't give them arguments. Some Unix commands will
     also do that, but a great many of them will not. This is due to the way that Unix commands fit together into
     something called pipelines.
@@ -5079,7 +5090,7 @@ file called donors that looked like this:
 
 - `bash` shell programming is a lot like any kind of programming, and that includes having variables - containers that
   hold strings and numbers, which can be changed, compared, and passed around. `bash` variables have some very special
-  operators that can be used when you refer to a variable. `bash` also has some important built-in variables, ones that
+  operators that can be used when you refer to a variable. `bash` also has some important builtin variables, ones that
   provide important information about the other variables in your script.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -5915,7 +5926,7 @@ file called donors that looked like this:
 ### 1.2.7. Shell Logic & Arithmetic
 
 - One of the big improvements in modern versions of `bash` compared with the original Bourne shell is in the area of
-  arithmetic. Early versions of the shell had no built-in arithmetic; it had to be done by invoking a separate
+  arithmetic. Early versions of the shell had no builtin arithmetic; it had to be done by invoking a separate
   executable.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -7486,7 +7497,7 @@ file called donors that looked like this:
 
 #### 1.2.11.10. Finding a File Using a List of Possible Locations
 
-- `source` a file located somewhere on the `$PATH`. `bash`'s built-in `source` command will search the `$PATH` if the
+- `source` a file located somewhere on the `$PATH`. `bash`'s builtin `source` command will search the `$PATH` if the
   `sourcepath` shell option is set, which it is by default.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -8121,7 +8132,7 @@ file called donors that looked like this:
   - Simple to add to.
     [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-  - Built-in, inline help that's easy to write.
+  - Builtin, inline help that's easy to write.
     [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   - Easy to use and remember.
@@ -9468,7 +9479,7 @@ file called donors that looked like this:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 - The need to parse options for a shell script is a common situation. Lots of scripts have options. You can use
-  `bash`'s built-in `getopts` command to help parse options.
+  `bash`'s builtin `getopts` command to help parse options.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
   ```bash
@@ -12487,7 +12498,7 @@ file called donors that looked like this:
 
 #### 1.2.17.15. Logging to `syslog` from Your Script
 
-- If you'd like your script to be able to log to `syslog`, use `logger`, Netcat, or `bash`'s built-in network
+- If you'd like your script to be able to log to `syslog`, use `logger`, Netcat, or `bash`'s builtin network
   redirection features.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
@@ -13226,130 +13237,147 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.18.6. Setting Your `$CDPATH`
 
--
+- If you want to make it easier to switch between several directories in various locations, set your `$CDPATH`
+  appropriately. Your commonly used directories will likely be unique.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- For an example, if you are working a lot with `init`'s `rc` directories.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  /home/jp$ cd rc3.d
+  bash: cd: rc3.d: No such file or directory
+
+  /home/jp$ export CDPATH='.:/etc'
+
+  /home/jp$ cd rc3.d
+  /etc/rc3.d
+
+  /etc/rc3.d$ cd rc5.d
+  /etc/rc5.d
+
+  /etc/rc5.d$ cd games
+  bash: cd: games: No such file or directory
+
+  /etc/rc5.d$ export CDPATH='.:/etc:/usr'
+  /etc/rc5.d$ cd games
+
+  /usr/games
+
+  /usr/games$
+  ```
+
+- `$CDPATH` is a colon-separated list of directories used as a search path for the `cd` builtin command. Think of it as
+  `$PATH` for the `cd` command. If the argument to `cd` begins with a slash, `$CDPATH` will not be used. If `$CDPATH`
+  is used, the absolute pathname to the new directory is printed to `STDOUT`, like in the example in this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Be careful running bash in POSIX mode (e.g., as `/bin/sh` or with `--posix`). If a non-empty directory name from
+  `$CDPATH` is used, or if `-` is the first argument, and the directory change is successful, the absolute pathname of
+  the new working directory is written to the standard output. Every time oyu use `cd`, it will echo the new path to
+  `STDOUT`, which is not the standard behaviour.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Common directories to include in `$CDPATH` are as follows:
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `.`: The current directory. This is optional, because this is implied.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `~/`: Your home directory.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `..`: The parent directory.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `../..`: The grandparent directory.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  - `~/.dirlinks`: A hidden directory containing nothing but symbolic links to other commonly used directories.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  - The following common suggestions result in the following assignment for `$CDPATH`.
+    [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  export CDPATH='.:~/:..:../..:~/.dirlinks'
+  ```
 
 #### 1.2.18.7. When Programs Are Not Found
 
--
+- If you want better control over what happens when a command is not found, perhaps to give a better message, you can
+  add something like the following to the top of your script or `rc` file.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  function command_not_found_handle ()
+  {
+    echo "Sorry. $0: $1 not there."
+    return 1
+  }
+  ```
+
+- In `bash` 4.3 and later there is a special function that is called if the shell cannot find the executable you want
+  to run. The function is called `command_not_found_handle`, and you can (re)define it for your custom purposes, like
+  the example in this section.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- It is important that your function return a non-zero value to indicate that the invocation of the command did not
+  succeed. Other parts of your script, or other callers of your script, may be depending on that information.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.8. Shortening or Changing Command Names
 
--
+- If you'd like to shorten a long or complex command you use often, or if you'd like to rename a command, do not
+  manually rename or move executable files, as many aspects of Unix and Linux depend on certain commands existing in
+  certain places; instead you should use aliases, functions, and possibly symbolic links.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Aliases allow a string to be substituted for a word when it is used as the first word of a simple command. The shell
+  maintains a list of aliases that may be set and unset with the `alias` and `unalias` builtin commands. You can rename
+  commands, or create a macro, by listing many commands in one alias, e.g., `alias copy="cp"` or `alias ll.="ls -ld .*`
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Aliases are only expanded once, so you can change how a command words, without going into an endless loop. Aliases
+  are strictly text substitutions; they cannot use arguments to themselves, i.e., `alias="mkdir $1 && cd $1"` because
+  that doesn't work.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Functions are used in two different ways. First, they can be sourced into your interactive shell, where they
+  essentially become shell scripts that are always head in memory. They are usually small, and are very fast since they
+  are already in memory and are executed in the current process, not in a spawned subshell. Secondly, they may be used
+  within a script as subroutines. Functions do allow arguments.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- For personal or system-wide use, you are probably better off using aliases or functions to rename or tweak commands,
+  but symbolic links are very useful in allowing a command to be in more than one place at a time. For example, Linux
+  systems almost always use `/bin/bash` while other systems may use `/usr/bin/bash`, `/usr/local/bin/bash`, or
+  `/usr/pkg/bin/bash`. While there is a better way to handle this particular issue in general symbolic links may be
+  used as a workaround. It is recommended to not use hard links, as they are harder to see if you are not looking for
+  them, and they are more easily disrupted by badly behaved editors and such. Symbolic links are just more obvious and
+  intuitive.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Usually, only the first word of a command line is checked for alias expansion. However, if the last character of the
+  value of that alias is a space, the next word will be checked as well. In practice, this is rarely an issue.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Since in `bash` aliases can't use arguments (unlike in `csh`), you'll need to use a function if you need to pass in
+  arguments. Because both aliases and functions reside in memory, this is not a big difference.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- Unless the `expand_aliases` shell option is set, aliases are not expanded when the shell is not interactive. Best
+  practices for writing scripts dictate that you not use aliases, since they may not be present on another system. You
+  also need to define functions inside your script, or explicitly source them before use. Thus, the best place to
+  define them is in your global `/etc/bashrc` or your local `~/.bashrc`.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.9. Adjusting Shell Behaviour & Environment
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you'd like to adjust your shell environment to account for the way you work, your physical location, your
+  language, etc, there are three ways to adjust various aspects of your environment. set is standardised in POSIX and
+  uses one-letter options. shopt is specifically for bash shell options. And there are many environment variables in
+  use for historical reasons, as well as for compatibility with many third-party applications.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.10. Adjusting `readline` Behaviour Using `.inputrc`
@@ -13408,98 +13436,150 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`
 
--
+- You have a stash of personal utilities you like to use, but you are not root on the system and can't place them into
+  the normal locations like `/bin` or `/usr/local/bin`, or there is some other reason to separate them, you can create
+  a `~/bin` directory, place your utilities in it, and add it to your path.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  PATH="$PATH:~/bin"
+  ```
+
+- You'll want to make this change in one of your shell initialisation files, such as `~/.bashrc`. Some systems already
+  add `$HOME/bin` as the last directory in a non-privileged user account by default, so check that first before adding
+  it to your `bash` configuration.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- It's inconvenient to invoke scripts with their full pathname. By collecting your scripts in a `~/bin` directory, you
+  can make your scripts look like regular Unix programs - at least to you.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- For security reasons, don't put your bin directory at the start of your path. Starting your path with `~/bin` makes
+  it easy to override system commands, which is inconvenient if it happens  accidentally and dangerous if it's done
+  maliciously.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`
 
--
+- `$PS2` is called the secondary prompt string. It is used to interactively enter a command that you have not completed
+  yet. It is usually set `>`, but you can redefine it.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ export PS2='Secondary: '
+
+  $ for i in $(ls)
+  Secondary: do
+  Secondary: echo $i
+  Secondary: done
+  colors
+  deepdir
+  trunc_PWD
+  ```
+
+- `$PS3` is the `select` prompt, and is used by the `select` statement to prompt the user for a value. It defaults to
+  `#?`, which is not very intuitive. You should change it before using the `select` command.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ select i in $(ls)
+  Secondary: do
+  Secondary: echo $i
+  Secondary: done
+  1) colors
+  2) deepdir
+  3) trunc_PWD
+  #? 1
+  colors
+  #? ^C
+
+  $ export PS3='Choose a directory to echo: '
+
+  $ select i in $(ls); do echo $i; done
+  1) colors
+  2) deepdir
+  3) trunc_PWD
+  Choose a directory to echo: 2
+  deepdir
+  Choose a directory to echo: ^C
+  ```
+
+- `$PS4` is displayed during trace output. Its first character is shown as many times as necessary to denote the
+  nesting depth. The default is `+`. The `$PS4` prompt uses the `$LINENO` variable, which returns the line number in
+  the function. The single quotes also defers expansion of the variable until display time.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ cat demo
+  #!/usr/bin/env bash
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  set -o xtrace
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  alice=girl
+  echo "$alice"
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ls -l $(type -path vi)
+  echo line 10
+  ech0 line 11
+  echo line 12
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./demo
+  + alice=girl
+  + echo girl
+  girl
+  ++ type -path vi
+  + ls -l /usr/bin/vi
+  -r-xr-xr-x 6 root wheel 285108 May 8 2005 /usr/bin/vi
+  + echo line 10
+  line 10
+  + ech0 line 11
+  ./demo: line 11: ech0: command not found
+  + echo line 12
+  line 12
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ export PS4='+xtrace $LINENO: '
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  $ ./demo
+  +xtrace 5: alice=girl
+  +xtrace 6: echo girl
+  girl
+  ++xtrace 8: type -path vi
+  +xtrace 8: ls -l /usr/bin/vi
+  -r-xr-xr-x 6 root wheel 285108 May 8 2005 /usr/bin/vi
+  +xtrace 10: echo line 10
+  line 10
+  +xtrace 11: ech0 line 11
+  ./demo: line 11: ech0: command not found
+  +xtrace 12: echo line 12
+  line 12
+  ```
 
 #### 1.2.18.13. Synchronising Shell History Between Sessions
 
--
+- If you run more than one `bash` session at a time and you would like to have a shared history between them, and you'd
+  also like to prevent the last session closed from clobbering the history from any other sessions, you can use the
+  `history` command to synchronise your history between sessions manually or automatically.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Using the default settings, the last shell to gracefully exit will overwrite your history file, so unless it is
+  synchronized with any other shells you had open at the same time, it will clobber their histories.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
+- Manually synchronising history involves writing an alias to append the current history to the history file
+  (`history -a`), then rereading anything new in that file into the current shell's history (`history -n`). The
+  disadvantage to this approach is that you must manually run the commands in each shell when you want to synchronise
+  your history.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  alias hs="history -a ; history -n"
+  ```
 
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
-
--
+- To automate the synchronisation of a history file, you could use the following `$PROMPT_COMMAND` variable. The value
+  of `$PROMPT_COMMAND` is interpreted as a command to execute each time the default interactive prompt, `$PS1`, is
+  displayed. The disadvantage to that approach is that it runs those commands every time `$PS1` is displayed. That is
+  very often, and on a heavily loaded or slower system that can cause a significant slowdown in your shell, especially
+  if you have a large history.
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.14. Setting Shell History Options
@@ -13758,7 +13838,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.2.18.22. Getting Start with a Custom Configuration
+#### 1.2.18.22. Getting Started with a Custom Configuration
 
 -
   [5.7.2. O'Reilly: `bash` Cookbook, 2nd Edition](#572-oreilly-bash-cookbook-2nd-edition)
