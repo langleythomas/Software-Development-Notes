@@ -91,7 +91,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          du           |                        |                            |
 |         echo          |                        |                            |
 |         egrep         |                        |                            |
-|         elm           |                        |                            |
+|          elm          |                        |                            |
 |         elvis         |                        |                            |
 |        enable         |                        |                            |
 |          env          |                        |                            |
@@ -156,7 +156,7 @@ to install it with a lint to an external link or reference to a section in this 
 |          man          |                        |                            |
 |       maparray        |                        |                            |
 |        mapfile        |                        |                            |
-|        mimeencode     |                        |                            |
+|      mimeencode       |                        |                            |
 |         mkdir         |                        |                            |
 |        mktemp         |                        |                            |
 |       mongocli        |                        |                            |
