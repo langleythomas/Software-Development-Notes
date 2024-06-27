@@ -40,243 +40,275 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 - Terminal Tools Documentation Links and Installation Procedures
   - Find all the `bash` programs from the following following list in man7. For any non-`bash` documentation, explain
     how to install it with a lint to an external link or reference to a section in this page.
-| **Command Line Tool** | **Documentation Link** | **Installation Procedure (Linux) ** | **Installation Procedure (MacOS) ** | **Installation Procedure (Windows) ** |
-| :-------------------: | :--------------------: | :---------------------------------: | :---------------------------------: | :-----------------------------------: |
-|          7za          |                        |                                     |                                     |                                       |
-|         alias         |                        |                                     |                                     |                                       |
-|        anchore        |                        |                                     |                                     |                                       |
-|        apropos        |                        |                                     |                                     |                                       |
-|          apt          |                        |                                     |                                     |                                       |
-|          ar           |                        |                                     |                                     |                                       |
-|         atlas         |                        |                                     |                                     |                                       |
-|          awk          |                        |                                     |                                     |                                       |
-|          aws          |                        |                                     |                                     |                                       |
-|          apt          |                        |                                     |                                     |                                       |
-|          ar           |                        |                                     |                                     |                                       |
-|        base64         |                        |                                     |                                     |                                       |
-|       basename        |                        |                                     |                                     |                                       |
-|         bash          |                        |                                     |                                     |                                       |
-|          bc           |                        |                                     |                                     |                                       |
-|         bind          |                        |                                     |                                     |                                       |
-|        builtin        |                        |                                     |                                     |                                       |
-|         bzip2         |                        |                                     |                                     |                                       |
-|          cal          |                        |                                     |                                     |                                       |
-|         case          |                        |                                     |                                     |                                       |
-|          cat          |                        |                                     |                                     |                                       |
-|         chmod         |                        |                                     |                                     |                                       |
-|         chown         |                        |                                     |                                     |                                       |
-|        chroot         |                        |                                     |                                     |                                       |
-|          cmp          |                        |                                     |                                     |                                       |
-|        column         |                        |                                     |                                     |                                       |
-|         comm          |                        |                                     |                                     |                                       |
-|        command        |                        |                                     |                                     |                                       |
-|        compgen        |                        |                                     |                                     |                                       |
-|       complete        |                        |                                     |                                     |                                       |
-|       compress        |                        |                                     |                                     |                                       |
-|        coproc         |                        |                                     |                                     |                                       |
-|          cp           |                        |                                     |                                     |                                       |
-|         cron          |                        |                                     |                                     |                                       |
-|        crontab        |                        |                                     |                                     |                                       |
-|         curl          |                        |                                     |                                     |                                       |
-|          cut          |                        |                                     |                                     |                                       |
-|          cvs          |                        |                                     |                                     |                                       |
-|         date          |                        |                                     |                                     |                                       |
-|          dd           |                        |                                     |                                     |                                       |
-|        declare        |                        |                                     |                                     |                                       |
-|          df           |                        |                                     |                                     |                                       |
-|         diff          |                        |                                     |                                     |                                       |
-|          dig          |                        |                                     |                                     |                                       |
-|        dirname        |                        |                                     |                                     |                                       |
-|        docker         |                        |                                     |                                     |                                       |
-|       dos2unix        |                        |                                     |                                     |                                       |
-|        dotnet         |                        |                                     |                                     |                                       |
-|         dpkg          |                        |                                     |                                     |                                       |
-|          du           |                        |                                     |                                     |                                       |
-|         echo          |                        |                                     |                                     |                                       |
-|         egrep         |                        |                                     |                                     |                                       |
-|          elm          |                        |                                     |                                     |                                       |
-|         elvis         |                        |                                     |                                     |                                       |
-|        enable         |                        |                                     |                                     |                                       |
-|          env          |                        |                                     |                                     |                                       |
-|         exec          |                        |                                     |                                     |                                       |
-|        execve         |                        |                                     |                                     |                                       |
-|         exit          |                        |                                     |                                     |                                       |
-|        ffmpeg         |                        |                                     |                                     |                                       |
-|        ffprobe        |                        |                                     |                                     |                                       |
-|         file          |                        |                                     |                                     |                                       |
-|         find          |                        |                                     |                                     |                                       |
-|          fmt          |                        |                                     |                                     |                                       |
-|          for          |                        |                                     |                                     |                                       |
-|         gawk          |                        |                                     |                                     |                                       |
-|        getconf        |                        |                                     |                                     |                                       |
-|        getdate        |                        |                                     |                                     |                                       |
-|        getopt         |                        |                                     |                                     |                                       |
-|        getopts        |                        |                                     |                                     |                                       |
-|          git          |                        |                                     |                                     |                                       |
-|        gpasswd        |                        |                                     |                                     |                                       |
-|         grep          |                        |                                     |                                     |                                       |
-|         grype         |                        |                                     |                                     |                                       |
-|         gsub          |                        |                                     |                                     |                                       |
-|        gunzip         |                        |                                     |                                     |                                       |
-|         gzcat         |                        |                                     |                                     |                                       |
-|         gzip          |                        |                                     |                                     |                                       |
-|         hash          |                        |                                     |                                     |                                       |
-|         head          |                        |                                     |                                     |                                       |
-|         help          |                        |                                     |                                     |                                       |
-|         helm          |                        |                                     |                                     |                                       |
-|       helmfile        |                        |                                     |                                     |                                       |
-|        hexdump        |                        |                                     |                                     |                                       |
-|        history        |                        |                                     |                                     |                                       |
-|         host          |                        |                                     |                                     |                                       |
-|         htop          |                        |                                     |                                     |                                       |
-|          id           |                        |                                     |                                     |                                       |
-|         info          |                        |                                     |                                     |                                       |
-|       info2man        |                        |                                     |                                     |                                       |
-|       info2www        |                        |                                     |                                     |                                       |
-|        install        |                        |                                     |                                     |                                       |
-|          ip           |                        |                                     |                                     |                                       |
-|         java          |                        |                                     |                                     |                                       |
-|          jf           |                        |                                     |                                     |                                       |
-|          jq           |                        |                                     |                                     |                                       |
-|       keychain        |                        |                                     |                                     |                                       |
-|        keytool        |                        |                                     |                                     |                                       |
-|         kill          |                        |                                     |                                     |                                       |
-|        killall        |                        |                                     |                                     |                                       |
-|        kubectl        |                        |                                     |                                     |                                       |
-|         less          |                        |                                     |                                     |                                       |
-|       lessfile        |                        |                                     |                                     |                                       |
-|          ln           |                        |                                     |                                     |                                       |
-|        locate         |                        |                                     |                                     |                                       |
-|        logger         |                        |                                     |                                     |                                       |
-|          ls           |                        |                                     |                                     |                                       |
-|         lshw          |                        |                                     |                                     |                                       |
-|         lspci         |                        |                                     |                                     |                                       |
-|         lsusb         |                        |                                     |                                     |                                       |
-|         lynx          |                        |                                     |                                     |                                       |
-|         mail          |                        |                                     |                                     |                                       |
-|        mailto         |                        |                                     |                                     |                                       |
-|         mailx         |                        |                                     |                                     |                                       |
-|          man          |                        |                                     |                                     |                                       |
-|       maparray        |                        |                                     |                                     |                                       |
-|        mapfile        |                        |                                     |                                     |                                       |
-|      mimeencode       |                        |                                     |                                     |                                       |
-|         mkdir         |                        |                                     |                                     |                                       |
-|        mktemp         |                        |                                     |                                     |                                       |
-|       mongocli        |                        |                                     |                                     |                                       |
-|          mtr          |                        |                                     |                                     |                                       |
-|         mutt          |                        |                                     |                                     |                                       |
-|          mv           |                        |                                     |                                     |                                       |
-|          mvn          |                        |                                     |                                     |                                       |
-|         mysql         |                        |                                     |                                     |                                       |
-|          nc           |                        |                                     |                                     |                                       |
-|        neovim         |                        |                                     |                                     |                                       |
-|        netstat        |                        |                                     |                                     |                                       |
-|        newgrp         |                        |                                     |                                     |                                       |
-|          nl           |                        |                                     |                                     |                                       |
-|         nmap          |                        |                                     |                                     |                                       |
-|         nohup         |                        |                                     |                                     |                                       |
-|          npm          |                        |                                     |                                     |                                       |
-|          nvi          |                        |                                     |                                     |                                       |
-|         nvim          |                        |                                     |                                     |                                       |
-|          od           |                        |                                     |                                     |                                       |
-|         open          |                        |                                     |                                     |                                       |
-|        openssl        |                        |                                     |                                     |                                       |
-|          opt          |                        |                                     |                                     |                                       |
-|        passwd         |                        |                                     |                                     |                                       |
-|         perl          |                        |                                     |                                     |                                       |
-|         pinfo         |                        |                                     |                                     |                                       |
-|         ping          |                        |                                     |                                     |                                       |
-|          pip          |                        |                                     |                                     |                                       |
-|        printf         |                        |                                     |                                     |                                       |
-|          pr           |                        |                                     |                                     |                                       |
-|          ps           |                        |                                     |                                     |                                       |
-|         psql          |                        |                                     |                                     |                                       |
-|        python         |                        |                                     |                                     |                                       |
-|          rcp          |                        |                                     |                                     |                                       |
-|          rd           |                        |                                     |                                     |                                       |
-|         rdist         |                        |                                     |                                     |                                       |
-|         read          |                        |                                     |                                     |                                       |
-|       readarray       |                        |                                     |                                     |                                       |
-|       readline        |                        |                                     |                                     |                                       |
-|        rename         |                        |                                     |                                     |                                       |
-|        rlogin         |                        |                                     |                                     |                                       |
-|          rm           |                        |                                     |                                     |                                       |
-|         rmdir         |                        |                                     |                                     |                                       |
-|          rpm          |                        |                                     |                                     |                                       |
-|          rsh          |                        |                                     |                                     |                                       |
-|         rsync         |                        |                                     |                                     |                                       |
-|          scp          |                        |                                     |                                     |                                       |
-|        screen         |                        |                                     |                                     |                                       |
-|        script         |                        |                                     |                                     |                                       |
-|          sed          |                        |                                     |                                     |                                       |
-|        select         |                        |                                     |                                     |                                       |
-|          seq          |                        |                                     |                                     |                                       |
-|        service        |                        |                                     |                                     |                                       |
-|          set          |                        |                                     |                                     |                                       |
-|        setgid         |                        |                                     |                                     |                                       |
-|        setuid         |                        |                                     |                                     |                                       |
-|         sftp          |                        |                                     |                                     |                                       |
-|         shift         |                        |                                     |                                     |                                       |
-|         shopt         |                        |                                     |                                     |                                       |
-|       shutdown        |                        |                                     |                                     |                                       |
-|        slocate        |                        |                                     |                                     |                                       |
-|         snap          |                        |                                     |                                     |                                       |
-|         sort          |                        |                                     |                                     |                                       |
-|        source         |                        |                                     |                                     |                                       |
-|         split         |                        |                                     |                                     |                                       |
-|          ssh          |                        |                                     |                                     |                                       |
-|       ssh-agent       |                        |                                     |                                     |                                       |
-|      ssh-keygen       |                        |                                     |                                     |                                       |
-|        sshpass        |                        |                                     |                                     |                                       |
-|         stat          |                        |                                     |                                     |                                       |
-|       strftime        |                        |                                     |                                     |                                       |
-|          su           |                        |                                     |                                     |                                       |
-|         sudo          |                        |                                     |                                     |                                       |
-|        sudoers        |                        |                                     |                                     |                                       |
-|          svn          |                        |                                     |                                     |                                       |
-|        syslog         |                        |                                     |                                     |                                       |
-|         tail          |                        |                                     |                                     |                                       |
-|          tar          |                        |                                     |                                     |                                       |
-|          tee          |                        |                                     |                                     |                                       |
-|       textutils       |                        |                                     |                                     |                                       |
-|         time          |                        |                                     |                                     |                                       |
-|         tkman         |                        |                                     |                                     |                                       |
-|         tmux          |                        |                                     |                                     |                                       |
-|          top          |                        |                                     |                                     |                                       |
-|         touch         |                        |                                     |                                     |                                       |
-|          tr           |                        |                                     |                                     |                                       |
-|      traceroute       |                        |                                     |                                     |                                       |
-|         trap          |                        |                                     |                                     |                                       |
-|         trivy         |                        |                                     |                                     |                                       |
-|         type          |                        |                                     |                                     |                                       |
-|        ulimit         |                        |                                     |                                     |                                       |
-|        unalias        |                        |                                     |                                     |                                       |
-|         uname         |                        |                                     |                                     |                                       |
-|         uniq          |                        |                                     |                                     |                                       |
-|       unix2dos        |                        |                                     |                                     |                                       |
-|         unzip         |                        |                                     |                                     |                                       |
-|        useradd        |                        |                                     |                                     |                                       |
-|        usermod        |                        |                                     |                                     |                                       |
-|       uudecode        |                        |                                     |                                     |                                       |
-|       uuencode        |                        |                                     |                                     |                                       |
-|          vi           |                        |                                     |                                     |                                       |
-|         vile          |                        |                                     |                                     |                                       |
-|          vim          |                        |                                     |                                     |                                       |
-|         vipw          |                        |                                     |                                     |                                       |
-|        visudo         |                        |                                     |                                     |                                       |
-|         watch         |                        |                                     |                                     |                                       |
-|          wc           |                        |                                     |                                     |                                       |
-|         wget          |                        |                                     |                                     |                                       |
-|        whatis         |                        |                                     |                                     |                                       |
-|         which         |                        |                                     |                                     |                                       |
-|        whoami         |                        |                                     |                                     |                                       |
-|         xargs         |                        |                                     |                                     |                                       |
-|        zt-dlp         |                        |                                     |                                     |                                       |
-|         zcat          |                        |                                     |                                     |                                       |
-|         zgrep         |                        |                                     |                                     |                                       |
-|          zip          |                        |                                     |                                     |                                       |
-|        zmodem         |                        |                                     |                                     |                                       |
-|        zypper         |                        |                                     |                                     |                                       |
+| **Command Line Tool Name** | **Command Line Tool Summary** | **Documentation Link** | **Installation Procedure (Linux) ** | **Installation Procedure (MacOS) ** | **Installation Procedure (Windows) ** |
+| :------------------------: | :---------------------------: | :--------------------: | :---------------------------------: | :---------------------------------: | :-----------------------------------: |
+|            7za             |                               |                        |                                     |                                     |                                       |
+|           alias            |                               |                        |                                     |                                     |                                       |
+|          anchore           |                               |                        |                                     |                                     |                                       |
+|          apropos           |                               |                        |                                     |                                     |                                       |
+|            apt             |                               |                        |                                     |                                     |                                       |
+|             ar             |                               |                        |                                     |                                     |                                       |
+|           aria2            |                               |                        |                                     |                                     |                                       |
+|           atlas            |                               |                        |                                     |                                     |                                       |
+|            awk             |                               |                        |                                     |                                     |                                       |
+|            aws             |                               |                        |                                     |                                     |                                       |
+|            apt             |                               |                        |                                     |                                     |                                       |
+|             ar             |                               |                        |                                     |                                     |                                       |
+|         bandwhich          |                               |                        |                                     |                                     |                                       |
+|           base64           |                               |                        |                                     |                                     |                                       |
+|          basename          |                               |                        |                                     |                                     |                                       |
+|            bash            |                               |                        |                                     |                                     |                                       |
+|            bat             |                               |                        |                                     |                                     |                                       |
+|             bc             |                               |                        |                                     |                                     |                                       |
+|            bind            |                               |                        |                                     |                                     |                                       |
+|           bpytop           |                               |                        |                                     |                                     |                                       |
+|          builtin           |                               |                        |                                     |                                     |                                       |
+|           bzip2            |                               |                        |                                     |                                     |                                       |
+|            cal             |                               |                        |                                     |                                     |                                       |
+|            case            |                               |                        |                                     |                                     |                                       |
+|            cat             |                               |                        |                                     |                                     |                                       |
+|           chmod            |                               |                        |                                     |                                     |                                       |
+|           chown            |                               |                        |                                     |                                     |                                       |
+|           chroot           |                               |                        |                                     |                                     |                                       |
+|            cmp             |                               |                        |                                     |                                     |                                       |
+|            code            |                               |                        |                                     |                                     |                                       |
+|           column           |                               |                        |                                     |                                     |                                       |
+|            comm            |                               |                        |                                     |                                     |                                       |
+|          command           |                               |                        |                                     |                                     |                                       |
+|          compgen           |                               |                        |                                     |                                     |                                       |
+|          complete          |                               |                        |                                     |                                     |                                       |
+|          compress          |                               |                        |                                     |                                     |                                       |
+|           coproc           |                               |                        |                                     |                                     |                                       |
+|             cp             |                               |                        |                                     |                                     |                                       |
+|            cron            |                               |                        |                                     |                                     |                                       |
+|          crontab           |                               |                        |                                     |                                     |                                       |
+|            ctop            |                               |                        |                                     |                                     |                                       |
+|            curl            |                               |                        |                                     |                                     |                                       |
+|            cut             |                               |                        |                                     |                                     |                                       |
+|            cvs             |                               |                        |                                     |                                     |                                       |
+|            date            |                               |                        |                                     |                                     |                                       |
+|             dd             |                               |                        |                                     |                                     |                                       |
+|          declare           |                               |                        |                                     |                                     |                                       |
+|             df             |                               |                        |                                     |                                     |                                       |
+|            diff            |                               |                        |                                     |                                     |                                       |
+|       diff-so-fancy        |                               |                        |                                     |                                     |                                       |
+|            dig             |                               |                        |                                     |                                     |                                       |
+|          dirname           |                               |                        |                                     |                                     |                                       |
+|           docker           |                               |                        |                                     |                                     |                                       |
+|            dog             |                               |                        |                                     |                                     |                                       |
+|          dos2unix          |                               |                        |                                     |                                     |                                       |
+|           dotnet           |                               |                        |                                     |                                     |                                       |
+|            dpkg            |                               |                        |                                     |                                     |                                       |
+|             du             |                               |                        |                                     |                                     |                                       |
+|          dua-cli           |                               |                        |                                     |                                     |                                       |
+|            duf             |                               |                        |                                     |                                     |                                       |
+|            echo            |                               |                        |                                     |                                     |                                       |
+|           egrep            |                               |                        |                                     |                                     |                                       |
+|            elm             |                               |                        |                                     |                                     |                                       |
+|           elvis            |                               |                        |                                     |                                     |                                       |
+|           emacs            |                               |                        |                                     |                                     |                                       |
+|           enable           |                               |                        |                                     |                                     |                                       |
+|            env             |                               |                        |                                     |                                     |                                       |
+|            exa             |                               |                        |                                     |                                     |                                       |
+|            exec            |                               |                        |                                     |                                     |                                       |
+|           execve           |                               |                        |                                     |                                     |                                       |
+|            exit            |                               |                        |                                     |                                     |                                       |
+|           fdupes           |                               |                        |                                     |                                     |                                       |
+|           ffmpeg           |                               |                        |                                     |                                     |                                       |
+|          ffprobe           |                               |                        |                                     |                                     |                                       |
+|            file            |                               |                        |                                     |                                     |                                       |
+|            find            |                               |                        |                                     |                                     |                                       |
+|          firefox           |                               |                        |                                     |                                     |                                       |
+|            fmt             |                               |                        |                                     |                                     |                                       |
+|            for             |                               |                        |                                     |                                     |                                       |
+|            fzf             |                               |                        |                                     |                                     |                                       |
+|            gawk            |                               |                        |                                     |                                     |                                       |
+|           gedit            |                               |                        |                                     |                                     |                                       |
+|          getconf           |                               |                        |                                     |                                     |                                       |
+|          getdate           |                               |                        |                                     |                                     |                                       |
+|           getopt           |                               |                        |                                     |                                     |                                       |
+|          getopts           |                               |                        |                                     |                                     |                                       |
+|            git             |                               |                        |                                     |                                     |                                       |
+|          glances           |                               |                        |                                     |                                     |                                       |
+|          gpasswd           |                               |                        |                                     |                                     |                                       |
+|           gping            |                               |                        |                                     |                                     |                                       |
+|            grep            |                               |                        |                                     |                                     |                                       |
+|           grype            |                               |                        |                                     |                                     |                                       |
+|            gsub            |                               |                        |                                     |                                     |                                       |
+|           gunzip           |                               |                        |                                     |                                     |                                       |
+|           gzcat            |                               |                        |                                     |                                     |                                       |
+|            gzip            |                               |                        |                                     |                                     |                                       |
+|            hash            |                               |                        |                                     |                                     |                                       |
+|            head            |                               |                        |                                     |                                     |                                       |
+|            help            |                               |                        |                                     |                                     |                                       |
+|            helm            |                               |                        |                                     |                                     |                                       |
+|          helmfile          |                               |                        |                                     |                                     |                                       |
+|          hexdump           |                               |                        |                                     |                                     |                                       |
+|          history           |                               |                        |                                     |                                     |                                       |
+|            host            |                               |                        |                                     |                                     |                                       |
+|            htop            |                               |                        |                                     |                                     |                                       |
+|         hyperfine          |                               |                        |                                     |                                     |                                       |
+|             id             |                               |                        |                                     |                                     |                                       |
+|            info            |                               |                        |                                     |                                     |                                       |
+|          info2man          |                               |                        |                                     |                                     |                                       |
+|          info2www          |                               |                        |                                     |                                     |                                       |
+|          install           |                               |                        |                                     |                                     |                                       |
+|             ip             |                               |                        |                                     |                                     |                                       |
+|            java            |                               |                        |                                     |                                     |                                       |
+|             jf             |                               |                        |                                     |                                     |                                       |
+|             jq             |                               |                        |                                     |                                     |                                       |
+|          keychain          |                               |                        |                                     |                                     |                                       |
+|          keytool           |                               |                        |                                     |                                     |                                       |
+|            kill            |                               |                        |                                     |                                     |                                       |
+|          killall           |                               |                        |                                     |                                     |                                       |
+|          kubectl           |                               |                        |                                     |                                     |                                       |
+|            less            |                               |                        |                                     |                                     |                                       |
+|          lessfile          |                               |                        |                                     |                                     |                                       |
+|             ln             |                               |                        |                                     |                                     |                                       |
+|           locate           |                               |                        |                                     |                                     |                                       |
+|           logger           |                               |                        |                                     |                                     |                                       |
+|             ls             |                               |                        |                                     |                                     |                                       |
+|            lshw            |                               |                        |                                     |                                     |                                       |
+|           lspci            |                               |                        |                                     |                                     |                                       |
+|           lsusb            |                               |                        |                                     |                                     |                                       |
+|            lynx            |                               |                        |                                     |                                     |                                       |
+|            mail            |                               |                        |                                     |                                     |                                       |
+|           mailto           |                               |                        |                                     |                                     |                                       |
+|           mailx            |                               |                        |                                     |                                     |                                       |
+|            man             |                               |                        |                                     |                                     |                                       |
+|          maparray          |                               |                        |                                     |                                     |                                       |
+|          mapfile           |                               |                        |                                     |                                     |                                       |
+|         mimeencode         |                               |                        |                                     |                                     |                                       |
+|           mkdir            |                               |                        |                                     |                                     |                                       |
+|           mktemp           |                               |                        |                                     |                                     |                                       |
+|          mongocli          |                               |                        |                                     |                                     |                                       |
+|            mtr             |                               |                        |                                     |                                     |                                       |
+|            mutt            |                               |                        |                                     |                                     |                                       |
+|             mv             |                               |                        |                                     |                                     |                                       |
+|            mvn             |                               |                        |                                     |                                     |                                       |
+|           mysql            |                               |                        |                                     |                                     |                                       |
+|            nano            |                               |                        |                                     |                                     |                                       |
+|            navi            |                               |                        |                                     |                                     |                                       |
+|             nc             |                               |                        |                                     |                                     |                                       |
+|          neofetch          |                               |                        |                                     |                                     |                                       |
+|           neovim           |                               |                        |                                     |                                     |                                       |
+|          netstat           |                               |                        |                                     |                                     |                                       |
+|           newgrp           |                               |                        |                                     |                                     |                                       |
+|             nl             |                               |                        |                                     |                                     |                                       |
+|            nmap            |                               |                        |                                     |                                     |                                       |
+|           nohup            |                               |                        |                                     |                                     |                                       |
+|            npm             |                               |                        |                                     |                                     |                                       |
+|            nvi             |                               |                        |                                     |                                     |                                       |
+|            nvim            |                               |                        |                                     |                                     |                                       |
+|             od             |                               |                        |                                     |                                     |                                       |
+|            open            |                               |                        |                                     |                                     |                                       |
+|          openssl           |                               |                        |                                     |                                     |                                       |
+|            opt             |                               |                        |                                     |                                     |                                       |
+|           passwd           |                               |                        |                                     |                                     |                                       |
+|            perl            |                               |                        |                                     |                                     |                                       |
+|           pinfo            |                               |                        |                                     |                                     |                                       |
+|            ping            |                               |                        |                                     |                                     |                                       |
+|            pip             |                               |                        |                                     |                                     |                                       |
+|           printf           |                               |                        |                                     |                                     |                                       |
+|             pr             |                               |                        |                                     |                                     |                                       |
+|           procs            |                               |                        |                                     |                                     |                                       |
+|             ps             |                               |                        |                                     |                                     |                                       |
+|            psql            |                               |                        |                                     |                                     |                                       |
+|           python           |                               |                        |                                     |                                     |                                       |
+|            rcp             |                               |                        |                                     |                                     |                                       |
+|             rd             |                               |                        |                                     |                                     |                                       |
+|           rdist            |                               |                        |                                     |                                     |                                       |
+|            read            |                               |                        |                                     |                                     |                                       |
+|         readarray          |                               |                        |                                     |                                     |                                       |
+|          readline          |                               |                        |                                     |                                     |                                       |
+|           rename           |                               |                        |                                     |                                     |                                       |
+|            rip             |                               |                        |                                     |                                     |                                       |
+|          ripgrep           |                               |                        |                                     |                                     |                                       |
+|           rlogin           |                               |                        |                                     |                                     |                                       |
+|             rm             |                               |                        |                                     |                                     |                                       |
+|           rmdir            |                               |                        |                                     |                                     |                                       |
+|            rpm             |                               |                        |                                     |                                     |                                       |
+|            rsh             |                               |                        |                                     |                                     |                                       |
+|           rsync            |                               |                        |                                     |                                     |                                       |
+|            css             |                               |                        |                                     |                                     |                                       |
+|            scp             |                               |                        |                                     |                                     |                                       |
+|           screen           |                               |                        |                                     |                                     |                                       |
+|           script           |                               |                        |                                     |                                     |                                       |
+|             sd             |                               |                        |                                     |                                     |                                       |
+|            sed             |                               |                        |                                     |                                     |                                       |
+|           select           |                               |                        |                                     |                                     |                                       |
+|            seq             |                               |                        |                                     |                                     |                                       |
+|          service           |                               |                        |                                     |                                     |                                       |
+|            set             |                               |                        |                                     |                                     |                                       |
+|           setgid           |                               |                        |                                     |                                     |                                       |
+|           setuid           |                               |                        |                                     |                                     |                                       |
+|            sftp            |                               |                        |                                     |                                     |                                       |
+|           shift            |                               |                        |                                     |                                     |                                       |
+|           shopt            |                               |                        |                                     |                                     |                                       |
+|          shutdown          |                               |                        |                                     |                                     |                                       |
+|          slocate           |                               |                        |                                     |                                     |                                       |
+|            snap            |                               |                        |                                     |                                     |                                       |
+|            sort            |                               |                        |                                     |                                     |                                       |
+|           source           |                               |                        |                                     |                                     |                                       |
+|       speedtest-cli        |                               |                        |                                     |                                     |                                       |
+|           split            |                               |                        |                                     |                                     |                                       |
+|            ssh             |                               |                        |                                     |                                     |                                       |
+|         ssh-agent          |                               |                        |                                     |                                     |                                       |
+|         ssh-keygen         |                               |                        |                                     |                                     |                                       |
+|          sshpass           |                               |                        |                                     |                                     |                                       |
+|            stat            |                               |                        |                                     |                                     |                                       |
+|          strftime          |                               |                        |                                     |                                     |                                       |
+|             su             |                               |                        |                                     |                                     |                                       |
+|            sudo            |                               |                        |                                     |                                     |                                       |
+|          sudoers           |                               |                        |                                     |                                     |                                       |
+|            svn             |                               |                        |                                     |                                     |                                       |
+|           syslog           |                               |                        |                                     |                                     |                                       |
+|            tail            |                               |                        |                                     |                                     |                                       |
+|            tar             |                               |                        |                                     |                                     |                                       |
+|            tee             |                               |                        |                                     |                                     |                                       |
+|         textutils          |                               |                        |                                     |                                     |                                       |
+|            time            |                               |                        |                                     |                                     |                                       |
+|           tkman            |                               |                        |                                     |                                     |                                       |
+|            tldr            |                               |                        |                                     |                                     |                                       |
+|            tmux            |                               |                        |                                     |                                     |                                       |
+|            top             |                               |                        |                                     |                                     |                                       |
+|           touch            |                               |                        |                                     |                                     |                                       |
+|             tr             |                               |                        |                                     |                                     |                                       |
+|         traceroute         |                               |                        |                                     |                                     |                                       |
+|            trap            |                               |                        |                                     |                                     |                                       |
+|             tr             |                               |                        |                                     |                                     |                                       |
+|            tree            |                               |                        |                                     |                                     |                                       |
+|           trivy            |                               |                        |                                     |                                     |                                       |
+|            type            |                               |                        |                                     |                                     |                                       |
+|           ulimit           |                               |                        |                                     |                                     |                                       |
+|          unalias           |                               |                        |                                     |                                     |                                       |
+|           uname            |                               |                        |                                     |                                     |                                       |
+|            uniq            |                               |                        |                                     |                                     |                                       |
+|          unix2dos          |                               |                        |                                     |                                     |                                       |
+|           unzip            |                               |                        |                                     |                                     |                                       |
+|          useradd           |                               |                        |                                     |                                     |                                       |
+|          usermod           |                               |                        |                                     |                                     |                                       |
+|          uudecode          |                               |                        |                                     |                                     |                                       |
+|          uuencode          |                               |                        |                                     |                                     |                                       |
+|             vi             |                               |                        |                                     |                                     |                                       |
+|            vile            |                               |                        |                                     |                                     |                                       |
+|            vim             |                               |                        |                                     |                                     |                                       |
+|            vipw            |                               |                        |                                     |                                     |                                       |
+|           visudo           |                               |                        |                                     |                                     |                                       |
+|           watch            |                               |                        |                                     |                                     |                                       |
+|             wc             |                               |                        |                                     |                                     |                                       |
+|            wget            |                               |                        |                                     |                                     |                                       |
+|           whatis           |                               |                        |                                     |                                     |                                       |
+|           which            |                               |                        |                                     |                                     |                                       |
+|           whoami           |                               |                        |                                     |                                     |                                       |
+|           xargs            |                               |                        |                                     |                                     |                                       |
+|            xsel            |                               |                        |                                     |                                     |                                       |
+|           zt-dlp           |                               |                        |                                     |                                     |                                       |
+|            zcat            |                               |                        |                                     |                                     |                                       |
+|           zgrep            |                               |                        |                                     |                                     |                                       |
+|            zip             |                               |                        |                                     |                                     |                                       |
+|           zmodem           |                               |                        |                                     |                                     |                                       |
+|           zypper           |                               |                        |                                     |                                     |                                       |
 
 # Tutorials
 ## Deployment
@@ -1099,6 +1131,189 @@ TODO: Order in which to do this testing.
     - [1.4.7. Next Steps](#147-next-steps)
   - [1.5. Refactoring](#15-refactoring)
   - [1.6. Software Architecture: The Hard Parts](#16-software-architecture-the-hard-parts)
+    - [Preface](#preface)
+      - [What Happens When There Are No "Best Practices"?](#what-happens-when-there-are-no-best-practices)
+      - [Giving Timeless Advice About Software Architecture](#giving-timeless-advice-about-software-architecture)
+      - [The Importance of Data in Architecture](#the-importance-of-data-in-architecture)
+      - [Architectural Decision Records](#architectural-decision-records)
+      - [Architectural Fitness Functions](#architectural-fitness-functions)
+        - [Using Fitness Functions](#using-fitness-functions)
+      - [Architecture versus Design: Keeping Definitions Simple](#architecture-versus-design-keeping-definitions-simple)
+      - [Introducing the Sysops Squad Saga](#introducing-the-sysops-squad-saga)
+        - [Non-Ticketing Workflow](#non-ticketing-workflow)
+        - [A Bad Scenario](#a-bad-scenario)
+        - [Sysops Squad Architectural Components](#sysops-squad-architectural-components)
+        - [Sysops Squad Data Model](#sysops-squad-data-model)
+    - [Pulling Things Apart](#pulling-things-apart)
+      - [Discerning Coupling in Software Architecture](#discerning-coupling-in-software-architecture)
+        - [Architecture (Quantum | Quanta)](#architecture-quantum--quanta)
+          - [Independently Deployable](#independently-deployable)
+          - [High Functional Cohesion](#high-functional-cohesion)
+          - [High Static Coupling](#high-static-coupling)
+          - [Dynamic Quantum Coupling](#dynamic-quantum-coupling)
+        - [Sysops Squad Saga: Understanding Quanta](#sysops-squad-saga-understanding-quanta)
+      - [Architectural Decomposition](#architectural-decomposition)
+        - [Is the Codebase Decomposable?](#is-the-codebase-decomposable)
+          - [Afferent \& Efferent Coupling](#afferent--efferent-coupling)
+          - [Abstractness \& Instability](#abstractness--instability)
+          - [Distance From the Main Sequence](#distance-from-the-main-sequence)
+        - [Component-Based Decomposition](#component-based-decomposition)
+        - [Tactical Forking](#tactical-forking)
+          - [Trade-Offs](#trade-offs)
+        - [Sysops Squad Saga: Choosing a Decomposition Approach](#sysops-squad-saga-choosing-a-decomposition-approach)
+      - [Component-Based Decomposition Patterns](#component-based-decomposition-patterns)
+        - [Identify \& Size Components Pattern](#identify--size-components-pattern)
+          - [Pattern Description (Identify \& Size Components Pattern)](#pattern-description-identify--size-components-pattern)
+          - [Fitness Functions for Governance (Identify \& Size Components Pattern)](#fitness-functions-for-governance-identify--size-components-pattern)
+          - [Sysops Squad Saga: Sizing Components](#sysops-squad-saga-sizing-components)
+        - [Gather Common Domain Components Pattern](#gather-common-domain-components-pattern)
+          - [Pattern Description (Gather Common Domain Components Pattern)](#pattern-description-gather-common-domain-components-pattern)
+          - [Fitness Functions for Governance (Gather Common Domain Components Pattern)](#fitness-functions-for-governance-gather-common-domain-components-pattern)
+          - [Sysops Squad Saga: Gathering Common Components](#sysops-squad-saga-gathering-common-components)
+        - [Flatten Components](#flatten-components)
+          - [Pattern Description (Flatten Components)](#pattern-description-flatten-components)
+          - [Fitness Functions for Governance (Flatten Components)](#fitness-functions-for-governance-flatten-components)
+          - [Sysops Squad Saga: Flattening Components](#sysops-squad-saga-flattening-components)
+        - [Determine Component Dependencies Pattern](#determine-component-dependencies-pattern)
+          - [Pattern Description (Determine Component Dependencies Pattern)](#pattern-description-determine-component-dependencies-pattern)
+          - [Fitness Functions for Governance (Determine Component Dependencies Pattern)](#fitness-functions-for-governance-determine-component-dependencies-pattern)
+          - [Sysops Squad Saga: Creating Component Domains](#sysops-squad-saga-creating-component-domains)
+        - [Create Domain Services Pattern](#create-domain-services-pattern)
+          - [Pattern Description (Create Domain Services Pattern)](#pattern-description-create-domain-services-pattern)
+          - [Fitness Functions for Governance (Create Domain Services Pattern)](#fitness-functions-for-governance-create-domain-services-pattern)
+          - [Sysops Squad Saga: Creating Domain Services](#sysops-squad-saga-creating-domain-services)
+      - [Pulling Apart Operational Data](#pulling-apart-operational-data)
+        - [Data Decomposition Pattern](#data-decomposition-pattern)
+          - [Data Disintegration](#data-disintegration)
+          - [Data Integrators](#data-integrators)
+          - [Sysops Squad Saga: Justifying Database Decomposition](#sysops-squad-saga-justifying-database-decomposition)
+        - [Decomposing Monolithic Data](#decomposing-monolithic-data)
+          - [Step 1: Analyse Database \& Create Data Domain](#step-1-analyse-database--create-data-domain)
+          - [Step 2: Assign Tables to Data Domains](#step-2-assign-tables-to-data-domains)
+          - [Step 3: Separate Database Connections to Data Domains](#step-3-separate-database-connections-to-data-domains)
+          - [Step 4: Move Schemas to Separate Database Servers](#step-4-move-schemas-to-separate-database-servers)
+          - [Switch Over to Independent Database Servers](#switch-over-to-independent-database-servers)
+        - [Selecting a Database Type](#selecting-a-database-type)
+          - [Relational Databases](#relational-databases)
+          - [Key-Value Databases](#key-value-databases)
+          - [Document Databases](#document-databases)
+          - [Column Family Databases](#column-family-databases)
+          - [Graph Databases](#graph-databases)
+          - [NewSQL Databases](#newsql-databases)
+          - [Cloud Native Databases](#cloud-native-databases)
+          - [Time-Series Databases](#time-series-databases)
+          - [Sysops Squad Saga: Polyglot Databases](#sysops-squad-saga-polyglot-databases)
+      - [Service Granularity](#service-granularity)
+        - [Granularity Disintegrators](#granularity-disintegrators)
+          - [Service Scope \& Function](#service-scope--function)
+          - [Code Volatility](#code-volatility)
+          - [Scalability \& Throughput](#scalability--throughput)
+          - [Fault Tolerance (Service Granularity)](#fault-tolerance-service-granularity)
+          - [Security](#security)
+          - [Extensibility](#extensibility)
+        - [Granularity Integrators](#granularity-integrators)
+          - [Database Transactions](#database-transactions)
+          - [Workflow \& Choreography](#workflow--choreography)
+          - [Shared Code](#shared-code)
+          - [Data Relationships](#data-relationships)
+        - [Finding the Right Balance](#finding-the-right-balance)
+        - [Sysops Squad Saga: Ticket Assignment Granularity](#sysops-squad-saga-ticket-assignment-granularity)
+        - [Sysops Squad Saga: Customer Registration Granularity](#sysops-squad-saga-customer-registration-granularity)
+    - [Putting Things Back Together](#putting-things-back-together)
+      - [Reuse Patterns](#reuse-patterns)
+        - [Code Replication](#code-replication)
+          - [When to Use Code Replication](#when-to-use-code-replication)
+        - [Shared Library](#shared-library)
+          - [Dependency Management \& Change Control](#dependency-management--change-control)
+          - [Versioning Strategies](#versioning-strategies)
+          - [When To Use Shared Library](#when-to-use-shared-library)
+        - [Shared Service](#shared-service)
+          - [Change Risk](#change-risk)
+          - [Performance](#performance)
+          - [Scalability](#scalability)
+          - [Fault Tolerance (Reuse Patterns)](#fault-tolerance-reuse-patterns)
+          - [When to Use Shared Service](#when-to-use-shared-service)
+        - [Sidecars \& Service Mesh](#sidecars--service-mesh)
+          - [When to Use Sidecars \& Service Mesh](#when-to-use-sidecars--service-mesh)
+          - [Sysops Squad Saga: Common Infrastructure Logic](#sysops-squad-saga-common-infrastructure-logic)
+        - [Code Reuse: When Does It Add Value?](#code-reuse-when-does-it-add-value)
+          - [Reuse via Platforms](#reuse-via-platforms)
+          - [Sysops Squad Saga: Shared Domain Functionality](#sysops-squad-saga-shared-domain-functionality)
+      - [Data Ownership \& Distributed Transactions](#data-ownership--distributed-transactions)
+        - [Assigning Data Ownership](#assigning-data-ownership)
+        - [Single Ownership Scenario](#single-ownership-scenario)
+        - [Common Ownership Scenario](#common-ownership-scenario)
+        - [Joint Ownership Scenario](#joint-ownership-scenario)
+          - [Table Split Technique](#table-split-technique)
+          - [Data Domain Technique](#data-domain-technique)
+          - [Delegate Technique](#delegate-technique)
+        - [Service Consolidation Technique](#service-consolidation-technique)
+        - [Data Ownership Summary](#data-ownership-summary)
+        - [Distributed Transactions](#distributed-transactions)
+        - [Eventual Consistency Patterns](#eventual-consistency-patterns)
+          - [Background Synchronisation Pattern](#background-synchronisation-pattern)
+          - [Orchestrated Request-Based Pattern](#orchestrated-request-based-pattern)
+          - [Event-Based Pattern](#event-based-pattern)
+        - [Sysops Squad Saga: Data Ownership for Ticket Processing](#sysops-squad-saga-data-ownership-for-ticket-processing)
+      - [Distributed Data Access](#distributed-data-access)
+        - [Inter-Service Communication Pattern](#inter-service-communication-pattern)
+        - [Column Schema Replication Pattern](#column-schema-replication-pattern)
+        - [Replicated Caching Pattern](#replicated-caching-pattern)
+        - [Data Domain Pattern](#data-domain-pattern)
+        - [Sysops Squad Saga: Data Access for Ticket Assignment](#sysops-squad-saga-data-access-for-ticket-assignment)
+      - [Managing Distributed Workflows](#managing-distributed-workflows)
+        - [Orchestration Communication Style](#orchestration-communication-style)
+        - [Choreography Communication Style](#choreography-communication-style)
+          - [Workflow State Management](#workflow-state-management)
+        - [Trade-Off Between Orchestration and Choreography](#trade-off-between-orchestration-and-choreography)
+          - [State Owner \& Coupling](#state-owner--coupling)
+        - [Sysops Squad Saga: Managing Workflows](#sysops-squad-saga-managing-workflows)
+      - [Transactional Sagas](#transactional-sagas)
+        - [Transactional Saga Patterns](#transactional-saga-patterns)
+          - [Epic Saga Pattern](#epic-saga-pattern)
+          - [Phone Tag Pattern](#phone-tag-pattern)
+          - [Fairy Tale Saga Pattern](#fairy-tale-saga-pattern)
+          - [Time Travel Saga Pattern](#time-travel-saga-pattern)
+          - [Fantasy Fiction Saga Pattern](#fantasy-fiction-saga-pattern)
+          - [Horror Story Pattern](#horror-story-pattern)
+          - [Parallel Saga Pattern](#parallel-saga-pattern)
+          - [Anthology Saga Pattern](#anthology-saga-pattern)
+        - [State Management \& Eventual Consistency](#state-management--eventual-consistency)
+          - [Saga State Machines](#saga-state-machines)
+        - [Techniques for Managing Sagas](#techniques-for-managing-sagas)
+        - [Sysops Squad Saga: Atomic Transactions \& Compensating Updates](#sysops-squad-saga-atomic-transactions--compensating-updates)
+      - [Contracts](#contracts)
+        - [Contracts Versus Loose Contracts](#contracts-versus-loose-contracts)
+          - [Trade-Offs Between Strict \& Loose Contracts](#trade-offs-between-strict--loose-contracts)
+          - [Contracts in Microservices](#contracts-in-microservices)
+        - [Stamp Coupling](#stamp-coupling)
+          - [Over-Coupling via Stamp Coupling](#over-coupling-via-stamp-coupling)
+          - [Bandwidth](#bandwidth)
+          - [Stamp Coupling for Workflow Management](#stamp-coupling-for-workflow-management)
+        - [Sysops Squad Saga: Managing Ticketing Contracts](#sysops-squad-saga-managing-ticketing-contracts)
+      - [Managing Analytical Data](#managing-analytical-data)
+        - [Previous Approaches](#previous-approaches)
+          - [The Data Warehouse](#the-data-warehouse)
+          - [The Data Lake](#the-data-lake)
+        - [The Data Mesh](#the-data-mesh)
+          - [Definition of Data Mesh](#definition-of-data-mesh)
+          - [Data Product Quantum](#data-product-quantum)
+          - [Data Mesh, Coupling, \& Architecture Quantum](#data-mesh-coupling--architecture-quantum)
+          - [When to Use Data Mesh](#when-to-use-data-mesh)
+        - [Sysops Squad Saga: Data Mesh](#sysops-squad-saga-data-mesh)
+      - [Build Your Own Trade-Off Analysis](#build-your-own-trade-off-analysis)
+        - [Finding Entangled Dimensions](#finding-entangled-dimensions)
+          - [Coupling](#coupling)
+          - [Analyse Coupling Points](#analyse-coupling-points)
+          - [Assess Trade-Offs](#assess-trade-offs)
+        - [Trade-Off Techniques](#trade-off-techniques)
+          - [Qualitative Versus Quantitative Analysis](#qualitative-versus-quantitative-analysis)
+          - [MECE Lists](#mece-lists)
+          - [The "Out-Of-Context" Trap](#the-out-of-context-trap)
+          - [Model-Relevant Domain Cases](#model-relevant-domain-cases)
+          - [Prefer Bottom Line over Overwhelming Evidence](#prefer-bottom-line-over-overwhelming-evidence)
+          - [Avoiding Snake Oil \& Evangelism](#avoiding-snake-oil--evangelism)
+        - [Sysops Squad Saga: Epilogue](#sysops-squad-saga-epilogue)
   - [1.7. The Art of Readable Code](#17-the-art-of-readable-code)
   - [1.8. The Clean Coder](#18-the-clean-coder)
     - [1.8.1. Prerequisite Introduction](#181-prerequisite-introduction)
@@ -1559,7 +1774,7 @@ TODO: Order in which to do this testing.
   - [5.6. Nginx](#56-nginx)
     - [5.6.1. Nginx: What Is A Service Mesh?](#561-nginx-what-is-a-service-mesh)
   - [5.7. Neovim](#57-neovim)
-    - [5.7.1. Neovim: Pi_tutor](#571-neovim-pi_tutor)
+    - [5.7.1. Neovim: Pi\_tutor](#571-neovim-pi_tutor)
   - [5.8. O'Reilly](#58-oreilly)
     - [5.8.1. O'Reilly: 97 Things Every Programmer Should Know](#581-oreilly-97-things-every-programmer-should-know)
     - [5.8.2. O'Reilly: `bash` Cookbook, 2nd Edition](#582-oreilly-bash-cookbook-2nd-edition)
@@ -18353,6 +18568,5862 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
+
+### 1.6.1. Preface
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.1. What Happens When There Are No "Best Practices"?
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.2. Giving Timeless Advice About Software Architecture
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.3. The Importance of Data in Architecture
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.4. Architectural Decision Records
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.5. Architectural Fitness Functions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.1.5.1. Using Fitness Functions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.6. Architecture versus Design: Keeping Definitions Simple
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.1.7. Introducing the Sysops Squad Saga
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.1.7.1. Non-Ticketing Workflow
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.1.7.2. A Bad Scenario
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.1.7.3. Sysops Squad Architectural Components
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.1.7.4. Sysops Squad Data Model
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+### 1.6.2. Pulling Things Apart
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.2.1. Discerning Coupling in Software Architecture
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.1.1. Architecture (Quantum | Quanta)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.1.1.1. Independently Deployable
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.1.1.2. High Functional Cohesion
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.1.1.3. High Static Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.1.1.4. Dynamic Quantum Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.1.2. Sysops Squad Saga: Understanding Quanta
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.2.2. Architectural Decomposition
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.2.1. Is the Codebase Decomposable?
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.2.1.1. Afferent & Efferent Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.2.1.2. Abstractness & Instability
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.2.1.3. Distance From the Main Sequence
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.2.2. Component-Based Decomposition
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.2.3. Tactical Forking
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.2.3.1. Trade-Offs
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.2.3. Component-Based Decomposition Patterns
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.3.1. Identify & Size Components Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.1.1. Pattern Description (Identify & Size Components Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.1.2. Fitness Functions for Governance (Identify & Size Components Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.1.3. Sysops Squad Saga: Sizing Components
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.3.2. Gather Common Domain Components Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.2.3. Sysops Squad Saga: Gathering Common Components
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.3.3. Flatten Components
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.3.1. Pattern Description (Flatten Components)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.3.2. Fitness Functions for Governance (Flatten Components)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.3.3. Sysops Squad Saga: Flattening Components
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.3.4. Determine Component Dependencies Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.4.3. Sysops Squad Saga: Creating Component Domains
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.3.5. Create Domain Services Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.5.1. Pattern Description (Create Domain Services Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.3.5.3. Sysops Squad Saga: Creating Domain Services
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+#### 1.6.2.4. Pulling Apart Operational Data
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.4.1. Data Decomposition Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.1.1. Data Disintegration
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.1.2. Data Integrators
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.4.2. Decomposing Monolithic Data
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.2.1. Step 1: Analyse Database & Create Data Domain
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.2.2. Step 2: Assign Tables to Data Domains
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.2.3. Step 3: Separate Database Connections to Data Domains
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.2.4. Step 4: Move Schemas to Separate Database Servers
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.2.5. Switch Over to Independent Database Servers
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.4.3. Selecting a Database Type
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.1. Relational Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.2. Key-Value Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.3. Document Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.4. Column Family Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.5. Graph Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.6. NewSQL Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.7. Cloud Native Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.8. Time-Series Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.4.3.9. Sysops Squad Saga: Polyglot Databases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.2.5. Service Granularity
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.5.1. Granularity Disintegrators
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.1. Service Scope & Function
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.2. Code Volatility
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.3. Scalability & Throughput
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.4. Fault Tolerance (Service Granularity)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.5. Security
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.1.6. Extensibility
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.5.2. Granularity Integrators
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.2.1. Database Transactions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.2.2. Workflow & Choreography
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.2.3. Shared Code
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.2.5.2.4. Data Relationships
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.5.3. Finding the Right Balance
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.2.5.5. Sysops Squad Saga: Customer Registration Granularity
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+### 1.6.3. Putting Things Back Together
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.1. Reuse Patterns
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.1.1. Code Replication
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.1.1. When to Use Code Replication
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.1.2. Shared Library
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.2.1. Dependency Management & Change Control
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.2.2. Versioning Strategies
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.2.3. When To Use Shared Library
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.1.3. Shared Service
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.3.1. Change Risk
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.3.2. Performance
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.3.3. Scalability
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.3.4. Fault Tolerance (Reuse Patterns)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.3.5. When to Use Shared Service
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.1.4. Sidecars & Service Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.4.1. When to Use Sidecars & Service Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.1.5. Code Reuse: When Does It Add Value?
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.5.1. Reuse via Platforms
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.2. Data Ownership & Distributed Transactions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.1. Assigning Data Ownership
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.2. Single Ownership Scenario
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.3. Common Ownership Scenario
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.4. Joint Ownership Scenario
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.4.1. Table Split Technique
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.4.2. Data Domain Technique
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.4.3. Delegate Technique
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.5. Service Consolidation Technique
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.6. Data Ownership Summary
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.7. Distributed Transactions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.8. Eventual Consistency Patterns
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.8.1. Background Synchronisation Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.8.2. Orchestrated Request-Based Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.2.8.3. Event-Based Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.3. Distributed Data Access
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.3.1. Inter-Service Communication Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.3.2. Column Schema Replication Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.3.3. Replicated Caching Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.3.4. Data Domain Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.4. Managing Distributed Workflows
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.4.1. Orchestration Communication Style
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.4.2. Choreography Communication Style
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.4.2.1. Workflow State Management
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.4.3. Trade-Off Between Orchestration and Choreography
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.4.3.1. State Owner & Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.4.4. Sysops Squad Saga: Managing Workflows
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.5. Transactional Sagas
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.5.1. Transactional Saga Patterns
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.1. Epic Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.2. Phone Tag Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.3. Fairy Tale Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.4. Time Travel Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.5. Fantasy Fiction Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.6. Horror Story Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.7. Parallel Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.1.8. Anthology Saga Pattern
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.5.2. State Management & Eventual Consistency
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.5.2.1. Saga State Machines
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.5.3. Techniques for Managing Sagas
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.5.4. Sysops Squad Saga: Atomic Transactions & Compensating Updates
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.6. Contracts
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.6.1. Contracts Versus Loose Contracts
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.6.1.1. Trade-Offs Between Strict & Loose Contracts
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.6.1.2. Contracts in Microservices
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.6.2. Stamp Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.6.2.1. Over-Coupling via Stamp Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.6.2.2. Bandwidth
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.6.2.3. Stamp Coupling for Workflow Management
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.7. Managing Analytical Data
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.7.1. Previous Approaches
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.1.1. The Data Warehouse
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.1.2. The Data Lake
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.7.2. The Data Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.2.1. Definition of Data Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.2.2. Data Product Quantum
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.2.3. Data Mesh, Coupling, & Architecture Quantum
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.7.2.4. When to Use Data Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.7.3. Sysops Squad Saga: Data Mesh
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+#### 1.6.3.8. Build Your Own Trade-Off Analysis
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.8.1. Finding Entangled Dimensions
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.1.1. Coupling
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.1.2. Analyse Coupling Points
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.1.3. Assess Trade-Offs
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.8.2. Trade-Off Techniques
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.1. Qualitative Versus Quantitative Analysis
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.2. MECE Lists
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.3. The "Out-Of-Context" Trap
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.4. Model-Relevant Domain Cases
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+###### 1.6.3.8.2.6. Avoiding Snake Oil & Evangelism
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+##### 1.6.3.8.3. Sysops Squad Saga: Epilogue
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+  
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
+
+-
+  [5.8.5. O'Reilly: Software Architecture: The Hard Parts](#585-oreilly-software-architecture-the-hard-parts)
 
 </details>
 
