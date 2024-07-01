@@ -1021,8 +1021,6 @@
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.stickyScroll.enabled": true,
 
-  // "vscode-neovim.neovimExecutablePaths.linux": "nvim",
-
   "window.autoDetectColorScheme": true,
 
   "workbench.activityBar.location": "top",
