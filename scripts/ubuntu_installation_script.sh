@@ -107,13 +107,17 @@ function install_javascript_development_tools() {
 
   sudo mkdir --parents /etc/apt/keyrings
 
-  curl --fail --silent --show-error --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" \
-  | sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
+  curl \
+    --fail \
+    --silent \
+    --show-error \
+    --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" \
+    | sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
 
   NODE_MAJOR=20
 
   echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" \
-  | sudo tee /etc/apt/sources.list.d/nodesource.list
+    | sudo tee /etc/apt/sources.list.d/nodesource.list
 
   sudo apt install nodejs --yes
 }
@@ -136,7 +140,12 @@ function install_docker() {
 
   sudo install --mode=0755 --directory="/etc/apt/keyrings"
 
-  sudo curl --fail --silent --show-error --location "https://download.docker.com/linux/ubuntu/gpg" --output "/etc/apt/keyrings/docker.asc"
+  sudo curl \
+    --fail \
+    --silent \
+    --show-error \
+    --location "https://download.docker.com/linux/ubuntu/gpg" \
+    --output "/etc/apt/keyrings/docker.asc"
 
   sudo chmod a+r /etc/apt/keyrings/docker.asc
 
@@ -200,7 +209,7 @@ function start_minikube() {
 function install_kubernetes() {
   printf "Installing Kubernetes.\n"
 
-  local -r latest_kubernetes_release="$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)"
+  local -r latest_kubernetes_release="$(curl --silent https://storage.googleapis.com/kubernetes-release/release/stable.txt)"
 
   curl \
     --location \
@@ -228,11 +237,15 @@ function test_kubernetes_installation() {
 function install_helm() {
   printf "Installing Helm.\n"
 
-  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "get_helm.sh"
+  local -r install_helm_file_name="get_helm.sh"
 
-  chmod 700 "get_helm.sh"
+  curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "${install_helm_file_name}"
 
-  ./"get_helm.sh"
+  chmod 700 "${install_helm_file_name}"
+
+  ./"${install_helm_file_name}"
+
+  rm --force --verbose "${install_helm_file_name}"
 
   print_separator
 }
@@ -306,10 +319,10 @@ function install_visual_studio_code() {
 
   sudo apt install wget gpg --yes
 
-  wget --quiet -output-document=- https://packages.microsoft.com/keys/microsoft.asc \
-  | gpg --dearmor > packages.microsoft.gpg
+  wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
+    | gpg --dearmor > packages.microsoft.gpg
 
-  sudo install -D --owner=root --group=root --mode=644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+  sudo install -D --owner=root --group=root --mode=644 "packages.microsoft.gpg" "/etc/apt/keyrings/packages.microsoft.gpg"
 
   echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
   | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
