@@ -379,6 +379,7 @@
     "Grimon",
     "Grundle",
     "grype",
+    "gshadow",
     "gsub",
     "gules",
     "Gunworks",
@@ -552,6 +553,7 @@
     "mapfile",
     "mapleader",
     "Margaery",
+    "mariadb",
     "Marketh",
     "Marlandrian",
     "marshcutters",
@@ -962,6 +964,7 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line",
   "editor.fontFamily": "'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
+  "editor.fontLigatures": false,
   "editor.fontSize": 13,
   "editor.guides.indentation": true,
   "editor.indentSize": "tabSize",
@@ -989,6 +992,7 @@
 
   "markdown.extension.toc.updateOnSave": true,
 
+  "markdownlint.run": "onSave",
   "markdownlint.config": {
     "MD013": {
       "code_blocks": false,
@@ -1016,7 +1020,7 @@
   "terminal.integrated.defaultProfile.linux": "bash",
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.enableMultiLinePasteWarning": "always",
-  "terminal.integrated.fontFamily": "'Jetbrains Mono'",
+  "terminal.integrated.fontFamily": "'Jetbrains Mono', 'Droid Sans Mono', 'monospace', monospace",
   "terminal.integrated.middleClickBehavior": "paste",
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.stickyScroll.enabled": true,
