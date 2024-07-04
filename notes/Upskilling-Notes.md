@@ -17,6 +17,8 @@ Essential Notes to Look At:
 ### Vi, Vim
 - `vi` and `vim` Editors (Physical)
 
+Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
+
 # Online
 ## Command Line
 ### Bash
@@ -28,8 +30,6 @@ Essential Notes to Look At:
 #### Best Practices
 - https://mywiki.wooledge.org/BashGuide/Practices
 - https://bertvv.github.io/cheat-sheets/Bash.html
-
-Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
 # Cheat Sheets
 ## Regular Expressions
@@ -197,6 +197,7 @@ Unordered List of Topics:
 - nano
 - vim
 
+# Online
 ## Application Architecture
 ### Monolith
 ### Microservice
@@ -286,6 +287,60 @@ TODO: Order in which to do this testing.
 #### Distributed
 ##### Mercurial
 ##### Git
+
+## Design/Development Methodologies
+### Behaviour-Driven Design/Development
+### Domain-Driven Design/Development
+### Test-Driven Design/Development
+
+## Containerisation
+### Docker
+### LXC
+### Podman
+
+## Delivery Paradigms
+### DevOps
+### GitOps
+
+## Deployment
+### Container Orchestration Systems
+#### Kubernetes
+### Declarative Continuous Delivery Tools
+#### Argo CD
+#### Helmfile
+### Package Managers
+#### Helm
+#### Kustomize
+
+## Hyperscalers
+### AWS
+### Azure
+### Google Cloud
+
+## File Formats
+### .json (JSON)
+### .md (Markdown)
+### .tar (Tar Archive/Tarball)
+### .tgz (GZip Compressed TAR Archive)
+### .txt (Plain Text)
+### .xml (XML)
+### .yaml (YAML)
+### .yml (YML)
+### .zip (Zip)
+
+## Communication Paradigms
+### HTTP
+#### API Design (HTTP)
+### Data Streaming
+#### API Design (Data Streaming)
+
+## Data Streaming Platforms
+### Kafka
+### RabbitMQ
+
+## HTTP Protocols
+### REST
+### SOAP
 
 ## Template
 ### Overview ()
@@ -639,7 +694,7 @@ TODO: Order in which to do this testing.
       - [1.2.18.15. Creating a Better `cd` Command](#121815-creating-a-better-cd-command)
       - [1.2.18.16. Creating \& Changing Into a New Directory in One Step](#121816-creating--changing-into-a-new-directory-in-one-step)
       - [1.2.18.17. Getting to the Bottom of Things](#121817-getting-to-the-bottom-of-things)
-      - [1.2.18.18. Adding New Features to `bash` Using Loadable Builtins](#121818-adding-new-features-to-bash-using-loadable-builtins)
+      - [1.2.18.18. Adding New Features to `bash` Using Loadable Built-ins](#121818-adding-new-features-to-bash-using-loadable-built-ins)
       - [1.2.18.19. Improving Programmable Completion](#121819-improving-programmable-completion)
       - [1.2.18.20. Using Initialisation Files Correctly](#121820-using-initialisation-files-correctly)
       - [1.2.18.21. Creating Self-Contained, Portable `rc` Files](#121821-creating-self-contained-portable-rc-files)
@@ -1305,37 +1360,37 @@ TODO: Order in which to do this testing.
     - [1.11.18. Internet Resources for `vi`](#11118-internet-resources-for-vi)
     - [1.11.19. Program Source and Contact Information](#11119-program-source-and-contact-information)
 - [2. Cheat Sheets](#2-cheat-sheets)
-  - [2.1. Command Line Tools Overview](#21-command-line-tools-overview)
-  - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
-    - [2.2.1. `yt-dlp`](#221-yt-dlp)
-      - [2.2.1.1. Install `yt-dlp`](#2211-install-yt-dlp)
-        - [2.2.1.1.1. Install `yt-dlp` \& Dependencies](#22111-install-yt-dlp--dependencies)
-        - [2.2.1.1.2. Install `ffmpeg`](#22112-install-ffmpeg)
-          - [2.2.1.1.2.1. Install `ffmpeg` in Linux](#221121-install-ffmpeg-in-linux)
-        - [2.2.1.1.3. Verify `yt-dlp` Installation](#22113-verify-yt-dlp-installation)
-      - [2.2.1.2. Download from YouTube](#2212-download-from-youtube)
-        - [2.2.1.2.1. Playlists](#22121-playlists)
-          - [2.2.1.2.1.1. Funhaus (Playlists)](#221211-funhaus-playlists)
-          - [2.2.1.2.1.2. Funhaus Members Playlist](#221212-funhaus-members-playlist)
-          - [2.2.1.2.1.3. Funhaus Live Playlist](#221213-funhaus-live-playlist)
-        - [2.2.1.2.2. Channels](#22122-channels)
-          - [2.2.1.2.2.1. Achievement Hunter](#221221-achievement-hunter)
-          - [2.2.1.2.2.2. Call Me Kevin](#221222-call-me-kevin)
-          - [2.2.1.2.2.3. Funhaus (Channel)](#221223-funhaus-channel)
-          - [2.2.1.2.2.4. Funhaus Too](#221224-funhaus-too)
-          - [2.2.1.2.2.5. Inside Gaming (Formerly "The Know")](#221225-inside-gaming-formerly-the-know)
-          - [2.2.1.2.2.6. IMSON1NJA](#221226-imson1nja)
-          - [2.2.1.2.2.7. Lets Play](#221227-lets-play)
-          - [2.2.1.2.2.8. Marlene Mizulo](#221228-marlene-mizulo)
-          - [2.2.1.2.2.9. Overly Sarcastic Productions](#221229-overly-sarcastic-productions)
-          - [2.2.1.2.2.10. Rooster Teeth](#2212210-rooster-teeth)
-          - [2.2.1.2.2.11. Rooster Teeth Podcasts](#2212211-rooster-teeth-podcasts)
-          - [2.2.1.2.2.12. The Escapist](#2212212-the-escapist)
-  - [2.3. Regex Cheat Sheets](#23-regex-cheat-sheets)
-    - [2.3.1. Markdown Table](#231-markdown-table)
-      - [2.3.1.1. Start of Line to First Word in First Column](#2311-start-of-line-to-first-word-in-first-column)
-      - [2.3.1.2. End of Last Word in First Column to Start of Second Column](#2312-end-of-last-word-in-first-column-to-start-of-second-column)
-      - [2.3.1.3. Markdown Table, End of Line, Ending with `|` Character](#2313-markdown-table-end-of-line-ending-with--character)
+  - [2.1. Command Line Tool Cheat Sheets](#21-command-line-tool-cheat-sheets)
+    - [2.1.1. Command Line Tools Overview](#211-command-line-tools-overview)
+    - [2.1.2. `yt-dlp`](#212-yt-dlp)
+      - [2.1.2.1. Install `yt-dlp`](#2121-install-yt-dlp)
+        - [2.1.2.1.1. Install `yt-dlp` \& Dependencies](#21211-install-yt-dlp--dependencies)
+        - [2.1.2.1.2. Install `ffmpeg`](#21212-install-ffmpeg)
+          - [2.1.2.1.2.1. Install `ffmpeg` in Linux](#212121-install-ffmpeg-in-linux)
+        - [2.1.2.1.3. Verify `yt-dlp` Installation](#21213-verify-yt-dlp-installation)
+      - [2.1.2.2. Download from YouTube](#2122-download-from-youtube)
+        - [2.1.2.2.1. Playlists](#21221-playlists)
+          - [2.1.2.2.1.1. Funhaus (Playlists)](#212211-funhaus-playlists)
+          - [2.1.2.2.1.2. Funhaus Members Playlist](#212212-funhaus-members-playlist)
+          - [2.1.2.2.1.3. Funhaus Live Playlist](#212213-funhaus-live-playlist)
+        - [2.1.2.2.2. Channels](#21222-channels)
+          - [2.1.2.2.2.1. Achievement Hunter](#212221-achievement-hunter)
+          - [2.1.2.2.2.2. Call Me Kevin](#212222-call-me-kevin)
+          - [2.1.2.2.2.3. Funhaus (Channel)](#212223-funhaus-channel)
+          - [2.1.2.2.2.4. Funhaus Too](#212224-funhaus-too)
+          - [2.1.2.2.2.5. Inside Gaming (Formerly "The Know")](#212225-inside-gaming-formerly-the-know)
+          - [2.1.2.2.2.6. IMSON1NJA](#212226-imson1nja)
+          - [2.1.2.2.2.7. Lets Play](#212227-lets-play)
+          - [2.1.2.2.2.8. Marlene Mizulo](#212228-marlene-mizulo)
+          - [2.1.2.2.2.9. Overly Sarcastic Productions](#212229-overly-sarcastic-productions)
+          - [2.1.2.2.2.10. Rooster Teeth](#2122210-rooster-teeth)
+          - [2.1.2.2.2.11. Rooster Teeth Podcasts](#2122211-rooster-teeth-podcasts)
+          - [2.1.2.2.2.12. The Escapist](#2122212-the-escapist)
+  - [2.2. Regex](#22-regex)
+    - [2.2.1. Markdown Table](#221-markdown-table)
+      - [2.2.1.1. Start of Line to First Word in First Column](#2211-start-of-line-to-first-word-in-first-column)
+      - [2.2.1.2. End of Last Word in First Column to Start of Second Column](#2212-end-of-last-word-in-first-column-to-start-of-second-column)
+      - [2.2.1.3. Markdown Table, End of Line, Ending with `|` Character](#2213-markdown-table-end-of-line-ending-with--character)
 - [3. Online Notes](#3-online-notes)
   - [3.1. Databases](#31-databases)
     - [3.1.1. Database Management](#311-database-management)
@@ -1440,14 +1495,16 @@ TODO: Order in which to do this testing.
     - [5.9.6. O'Reilly: The Art of Readable Code](#596-oreilly-the-art-of-readable-code)
     - [5.9.7. O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers](#597-oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers)
     - [5.9.8. O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition](#598-oreilly-vi--vim-editors-pocket-reference-2nd-edition)
-  - [5.10. Tech Target](#510-tech-target)
-    - [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
-  - [5.11. Techradar](#511-techradar)
-    - [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
-  - [5.12. The Pragmatic Bookshelf](#512-the-pragmatic-bookshelf)
-    - [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](#5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
-  - [5.13. YouTube](#513-youtube)
-    - [5.13.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#5131-theprimeagen-0-to-lsp-neovim-rc-from-scratch)
+  - [5.10. Stack Exchange](#510-stack-exchange)
+    - [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](#5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+  - [5.11. Tech Target](#511-tech-target)
+    - [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
+  - [5.12. Techradar](#512-techradar)
+    - [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
+  - [5.13. The Pragmatic Bookshelf](#513-the-pragmatic-bookshelf)
+    - [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](#5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  - [5.14. YouTube](#514-youtube)
+    - [5.14.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch](#5141-theprimeagen-0-to-lsp-neovim-rc-from-scratch)
 
 <!-- markdownlint-restore -->
 
@@ -14124,36 +14181,19 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   alias bot='cd $(dirname $(find . | sort -r | tail -n 5 | head -1))'
   ```
 
-#### 1.2.18.18. Adding New Features to `bash` Using Loadable Builtins
+#### 1.2.18.18. Adding New Features to `bash` Using Loadable Built-ins
 
--
+- If you have something that you'd like `bash` to do, but there's no built-in command for it, or, for efficient
+  reasons, use the dynamically loadable built-ins introduced in `bash` version 2.0.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- The `bash` archive contains a number of pre-written built-ins in the directory `./examples/loadables/`, especially
+  the canonical `hello.c`. You can build them by uncommenting the lines in the file `Makefile` that are relevant to
+  your system, and typing `make`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
+- On systems that support dynamic loading, you can write your own built-ins in C, compile them into shared objects, and
+  load them at any time from within the shell with the `enable` built-in.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.19. Improving Programmable Completion
@@ -14463,42 +14503,37 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   shell -$SHELL
   ```
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
 #### 1.2.19.5. Sharing a Single `bash` Session
 
--
+- If you need to share a single `bash` session for any reason, you can use GNU `screen` in multi-user mode.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- As the host, perform the following step to enable sharing of a single `bash` session among multiple users.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  - Enter `screen -S <session_name>`.
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+  - Enter `<Ctrl> + a` (the default meta key) `addacl usernames`, listing the accounts (comma-delimited) that may
+    access the display. This allows full read/write access.
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+  - Enter `<Ctrl> + a` (the default meta key) `chacacl usernames permbits list` to refine permissions if required.
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+  - Turn on multi-user mode with `<Ctrl> + a` (the default meta key) `multiuser on`.
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+- As the viewer, perform the following steps to enable sharing of a single `bash` session among multiple users.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  - Enter `screen -x <user>/<name>` to connect to a shared screen, e.g., `screen -x host/training`.
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  - Enter `<Ctrl> + a + k` to kill the window and end the session
+    [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
+- For multi-user mode, `/tmp/screens` must exist and be world-readable and executable.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.6. Logging an Entire Session or Batch Job
@@ -27760,13 +27795,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 #### 1.9.1.1. How the Book is Organised
 
 - The book is written as a collection of short topics. Each topic is self-contained and addresses a particular theme.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There is a list of tips throughout the book, often emphasising points in the accompanying text. The following is the
   list of tips:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - [Tip 1: Care About Your Craft](#19221-tip-1-care-about-your-craft)
 
@@ -27808,230 +27843,50 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - [Tip 19: Forego Following Fads](#19442-tip-19-forego-following-fads)
 
-  <!-- - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx)
-
-  - [Tip xx:](#tip-xx) -->
-
 - Exercises and challenges have been added where appropriate. Exercises normally have straightforward answers, while
   the challenges are more open-ended.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.1.2. What's In a Name?
 
 - The first time jargon is used in the book, it is usually defined, or at least a hint is given to its meaning.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Perfectly good jargon is ignored numerous times throughout the book, as the jargon is normally restricted to a
   particular problem domain, or to a particular phase of development.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.2. From the Preface to the First Edition
 
 - Programming is a craft. At its simplest, it comes down to getting a computer to do what you want it to do (or what
   the user wants it to do). As a programmer, you are part listener, part adviser, part interpreter, and part dictator
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - You try to capture elusive requirements and find a way of expressing them so that a mere machine can do them justice.
   You try to document your work so that others can understand it, and you try to engineer your work so that others can
   build on it.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There are no easy answers. There is no best solution, be it a tool, a language, or an operating system. There can
   only be systems that are more appropriate in a particular set of circumstances.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - You shouldn't be wedded to any particular technology, but have a broad enough background and experience base to allow
   you to choose good solutions in particular situations.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - You adjust your approach to suit the current circumstances and environment. You judge the relative importance of all
   the factors affecting a project and use your experience to produce appropriate solutions. You do this continuously as
   the work progresses.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.2.1. Who Should Read This Book?
 
@@ -28039,81 +27894,81 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   frustrated you don't seem to be achieving your potential. Perhaps you look at colleagues who seem to be using tools
   to make themselves more producing than you. Maybe your current job uses older technologies, and you want to know how
   newer ideas can be applied to what you do.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.2.2. What Makes a Pragmatic Programmer?
 
 - Each developer is unique, with individual strengths and weaknesses, preferences and dislikes. Over time, each will
   craft their own personal environment, reflecting the developer's individuality.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - If you're a Pragmatic Programmer, you'll share many of the following characteristics:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Early Adopter/Fast Adapter**:
 
     - You have an instinct for technologies and techniques, and you love trying things out. When given something new,
       you can grasp it quickly and integrate it with the rest of your knowledge.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Inquisitive**:
 
     - You tend to ask questions, eager to learn facts, each of which may affect some decision years from now.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Critical Thinker**:
 
     - You rarely take things as given without first getting the facts.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Realistic**:
 
     - You try to understand the underlying nature of each problem you face. Deeply understanding that a process
       shouldn't be difficult or will take a while to complete gives you the stamina and confidence to keep at it and
       suggest improvements where appropriate.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Jack of All Trades**:
 
     - You try hard to be familiar with a broad range of technologies and environments, and you work to keep abreast of
       new developments. Although your current job may require you to be a specialist, you will always be able to move
       on to new areas and new challenges.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.2.2.1. Tip 1: Care About Your Craft
 
 - There is no point in developing software unless you care about doing it well.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.2.2.2. Tip 2: Think! About Your Work
 
 - Think about what you're doing while you're doing it. An ongoing critical appraisal of every decision you make, every
   day, and on every project is required to truly make a difference to you and your organisation. Never run on
   auto-pilot. Constantly be thing, critiquing your work in real time.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.2.3. Individual Pragmatists, Large Teams
 
 - Within the overall structure of a project, there is always room for individuality and craftsmanship. This is
   particularly true given the state of software engineering.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.2.4. It's a Continuous Process
 
 - Every day, work to refine the skills you have and to add new tools to your repertoire.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.3. A Pragmatic Philosophy
 
@@ -28122,189 +27977,189 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Software development must appear close to the top of any list of carers where you have control. Our skills are in
   demand, our knowledge crosses geographic boundaries, we can work remotely. We're paid well. We really can do just
   about anything we want.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - For some reasons, developers seem to resist change. They hunker down and hope things will get better. They look on,
   passively, as their skills become dated and complain their companies don't train them.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.1.1. Tip 3: You Have Agency
 
 - If technology seems to be passing you by, make time (in your own time) to study new material that looks interesting.
   You're investing in yourself, so doing it while you're off the clock is only reasonable.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The industry give you a remarkable set of opportunities. Be proactive, and take them.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.2. The Cat Ate My Source Code
 
 - Pragmatic Programmers take charge of their own career, and aren't afraid to admit ignorance or error. These things
   happen, and we try to deal with them as professionally as we can. This means being honest and direct. We can be proud
   of our abilities, but we must own up to our own shortcomings - our ignorance and our mistakes.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.2.1. Team Trust
 
 - Above all, your team needs to be able to trust and rely on you - and you need to be comfortable relying on each of
   them as well.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - In a healthy environment based on trust, you can safely speak your mind, present your ideas, and rely on your team
   members who can in turn rely on you.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.2.2. Take Responsibility
 
 - Responsibility is something you actively agree to. You make a commitment to ensure everything is done right, but you
   don't necessarily have direct control over every aspect of it.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - You have the right to not take on a responsibility or an impossible situation, or one in which the risks are too
   great, or the ethical implications too sketchy.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When you do accept the responsibility for an outcome, you should expect to be held accountable for it. When you make
   a mistake (as we all do) or an error in judgement, admit it honestly, and try to offer options.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Don't blame someone or something else, or make up an excuse. Don't blame all the problems on a vendor, a programming
   language, management, or your coworkers. All of them may play a role, but it is up to you to provide solutions, and
   try to offer options.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses
 
 - Before you approach anyone to tell them why something can't be done, is late, or is broken, stop and listen to
   yourself. Instead of excuses, provide options. Don't say it can't be done: explain what can be done to salvage the
   situation.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Perhaps you need additional resources to complete this task. Don't be afraid to ask for anything to help complete
   your work, or to admit that you need help.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.2.4. Challenges (Take Responsibility)
 
 - How do you react when someone comes to you with a lame excuse? What do you think of them and their organisation as a
   result?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When you find yourself saving "I don't know", be sure to follow up with with "but I'll find out". It's a great way to
   admit what you don't know, but then take responsibility for finding information like a professional.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.3. Software Entropy
 
 - Entropy is a term from physics that refers to the amount of "disorder" in a system.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When disorder increases in software, we call it "software rot", or more optimistically, "technical debt".
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There are many factors that can contribute to software rot. The most important seems to be the psychology, or
   culture, at work on a project.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.3.1. Tip 5: Don't Live with Broken Windows
 
 - Don't leave "broken windows" - bad designs, wrong decisions, or poor code - unrepaired. Fix each one as soon as it is
   discovered. If there is an insufficient time to fix it properly, then provide a temporary fix. Take some action to
   prevent further damage and to show that you're on top of a situation.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There are other factors that can contribute to software rot, but neglect accelerates the rot faster than any other
   factor.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Don't let entropy win.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.3.2. First, Do No Harm
 
 - One "broken window" - a badly designed piece of code, a poor management decision that the team must live with for the
   duration of the project - is all it takes to start the decline.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - If you start working on a project with quite a few "broken windows". It's all too easy to slip into the mindset of
   "All the rest of this code is crap, I'll just follow suit."
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - In the same token, if you find yourself on a project where the code is immaculate - pristine, cleanly written,
   well-designed, and elegant - you will likely take extract special care not to mess it up. Even if there's pressure on
   make a change, you don't want to be the first one to make a mess and inflict any additional damage to the project.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.3.3. Challenges (Software Entropy)
 
 - Help strengthen your team be surveying your project "neighbourhood". Choose two or three "broken windows" and discuss
   the problems - and their possible solution - with your colleagues.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Can you tell when a "window" first gets "broken"? What is your reaction? If it was the result of someone else's
   decision, or a management edict, what can you do about it?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.4. Stone Soup & Boiled Frogs
 
 - You may be in a situation where you know exactly what needs doing and how to do it. Ask permission to tackle the
   whole thing and you'll be met with delays and blank stares. People will form committees, budgets will need approval,
   and things will get complicated. Everyone will guard their resources. Sometimes this is called "start-up fatigue."
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Work out what you can reasonably ask for. Develop it well. Once you've got it, show people, and let them marvel. Then
   say it would be better to add minor things, pretending they aren't important. Keep in mind, it's easier to ask
   forgiveness than it is to get permission.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.4.1. Tip 6 Be a Catalyst for Change
 
 - You can't force change on people. Instead, show them how the future might be and help them participate in creating it.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.5. The Villager's Side
 
 - Projects slowly and inexorably get totally out of hand. Most software disasters start out too small to notice, and
   most project overruns happen a day at a time. It's often the accumulation of small things that breaks morale and
   teams.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.5.1. Tip 7: Remember the Big Picture
 
 - Don't get so engrossed on the details that you forget to check what's happening around you. Keep an eye on the big
   picture. Constantly review what's happening around you, not just what you personally are doing.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.5.2. Challenges (The Villager's Side)
 
@@ -28312,105 +28167,105 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [1.3.3.4. Stone Soup & Boiled Frogs](#1934-stone-soup--boiled-frogs) section), you're doing it harm. Can you determine
   whether you're making the necessary changes for the right reasons or causing unnecessary scope creep? Is the decision
   subjective or objective?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Get in the habit at looking for anything that seems out of place for your project, such as existing code, practices,
   or requirements.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.6. Good Enough Software
 
 - The phrase "good enough" does not imply sloppy or poorly produced code. All systems must meet their users'
   requirements to be successful, and meet basic performance, privacy, and security standards. Users should be given the
   opportunity to participate in the process of deciding when what you've produced is good enough for their needs.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.6.1. Involve Your Users in the Trade Off
 
 - Normally software is written for other people. What is required is often asked, but how good it is wanted is rarely
   considered. Sometime there will be no choice.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The scope and quality of the system you produce should be discussed as part of that system's requirements.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.6.2. Tip 8: Make Quality a Requirements Issue
 
 - Many customers would rather use software with some rough edges today than wait a year for a pristine version,
   especially considering their requirements are likely to change during that year. If you give your users something to
   play with early, their feedback will often lead you to a better eventual solution.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.6.3. Know When to Stop
 
 - Don't spoil a perfectly good program by over-embellishment and over-refinement. Move on, and let your code stand in
   its own right for a while. It may not be perfect, but don't worry, it could never be perfect.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.6.4. Challenges (Good Enough Software)
 
 - Look at the software tools and operating systems that you use regularly. Can you find any evidence that these
   organisations and/or developers are comfortable shipping software they know is not perfect?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Consider the effect of modularisation on the delivery of software. Will it take more or less time to deliver a
   tightly-coupled monolithic block of software to the required quality compared with a system designed as very
   loosely-coupled modules or microservices?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Can you think of popular software that suffers from feature bloat (more features than you would ever use), each
   feature introducing more opportunity for bugs and security vulnerabilities, and making it harder to use and manage
   the features you do use? Are you in danger of falling into this trap yourself?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.7. Your Knowledge Portfolio
 
 - Your knowledge and experience are your most important day-to-day professional assets. Unfortunately, they're expiring
   assets. Your knowledge becomes out of date as new techniques, and environments are developed. As the value of your
   knowledge declines, so does your value to your company or client. We want to prevent this from ever happening.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - A programmer's knowledge portfolio can be considered as all the facts they know about computing, the application
   domains they work in, and their experience. Managing a knowledge portfolio is very similar to managing a financial
   portfolio:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Serious investors invest regularly, as a habit.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Diversification is the key to long-term success.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Smart investors balance their portfolios between conservative and high-risk, high-reward investments.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Investors try to buy low and sell high for maximum return.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Portfolios should be reviewed and rebalanced periodically.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Managing this kind of investment is a skill just like any other - it can be learned. The trick is to do it initially
   and to format a habit. Develop a routine which you follow until your brain internalises it.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.1. Building Your Portfolio
 
@@ -28418,446 +28273,446 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - You must invest in your knowledge portfolio regularly, even if it's just a small amount. Plan to use a consistent
     time and place, away from interruptions.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Diversify**:
 
   - The more different things you know, the more valuable you are. The more technologies you are comfortable with, the
     better you will be able to adjust to change.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Manage Risk**:
 
   - Technology exists on a spectrum from risky, potentially high-reward to low-risk, low-reward standards. It's not a
     good idea to invest all your money or skills in one basket.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Buy Low, Sell High**:
 
   - Learning an emerging technology before it becomes popular can be just as hard as finding an undervalued stock, but
     the payoff can be just as rewarding.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Review & Rebalance**:
 
   - This is a very dynamic industry. You might spend time learning a technology that ends up dying, or have to re-learn
     a technology you learned and possibly used in the past.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio
 
 - Aspire to the following goals:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Learn at Least One New Language Every Year**:
 
     - Different languages solve the same problems in different ways. By learning several different approaches, you can
       help broaden your thinking.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Read a Technical Book Each Month**:
 
     - Browse the booksellers for technical books on interesting topics related to your current project. After you've
       mastered the technologies you're currently using, branch out and study some that don't relate to your project.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Read Non-Technical Books, Too**:
 
     - Don't forget the human side of software development, as that requires an entirely different skill set than
       technical skills.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Take Classes**:
 
     - Look for interesting courses at a hotel or online college or university, or perhaps at the next nearby trade show
       or conference.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Participate in Local User Groups and Meetups**:
 
     - Isolation can be deadly to your career: find out what people are working on outside of your company.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Experiment with Different Environments**:
 
     - Spend some time with Linux if you've only worked on Windows. Use an IDE if you've only used command line tools,
       or vice versa.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Stay Current**:
 
     - Read news and posts online on technology different from that of your current project.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Once you feel comfortable with some new language or bit of technology, move on. Learn another one. The
   cross-pollination of ideas is important: try to apply the lessons you've learned to your current project. Even if
   your project doesn't use that technology, perhaps you can borrow some ideas.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.3. Opportunities for Learning
 
 - If someone asks you a question that you can't answer, take it as a personal challenge to find the answer.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Reading and researching takes time, and time is already in short support. You need to plan ahead. Always have
   something to read in an otherwise quiet/idle moment.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.4. Critical Thinking
 
 - You need to ensure the knowledge in your portfolio is accurate and unswayed by either vendor or media hype. Beware of
   the zealots who insist their dogma provides the only answer - it may or may not applicable to you and your project.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Never underestimate the power of commercialism. Just because a web search engine lists a hit first doesn't mean that
   it's the best match.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.5. Tip 10: Critically Analyse What You Read & Hear
 
 - Critical thinking is an entire discipline unto itself. Read and study all you can about it. The following are a few
   questions to ask and think about every time you work on something in future:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Ask the "Five Whys"**:
 
     - Ask "Why?" at least five times. Ask a question and get an answer. Dig deeper by asking "Why?" You might be able
       to get closer to a root cause this way.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Who Does This Benefit?**:
 
     - Follow the money can be a very helpful path to analyse. The benefits to someone else or another organisation may
       be aligned with your own, or not.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **What's the Context?**:
 
     - Everything occurs in its own context, which is why "one size fits all" solutions often don't. Consider an article
       or book touting "best practices." Good questions to ask are "best for who?" What are the prerequisites, what are
       the consequences, short and long term?
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **When or Where Would This Work?**:
 
     - Under what circumstances? Is it too late? Is it too early? Don't stop with thinking what will happen next, think
       about what will happen after that.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Why is This a Problem?**:
 
     - Is there an underlying model? How does the underlying model?
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Unfortunately, there are very few simple answers, but your knowledge portfolio should help you understand the
   increasingly complex answers.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.7.6. Challenges (Your Knowledge Portfolio)
 
 - Start learning a new language this week.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Start reading a new book. If you are doing very detailed implementation and coding, read a book on design and
   architecture.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Get out and talk technology with people who aren't involved in your current project, or who don't work for the same
   company.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.3.8. Communicate
 
 - A good idea is an orphan without effective communication.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - As developers, we have to communicate on many levels. A large part of our day is spend communicating, so we need to
   do it well.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.1. Tip 11: English is Just Another Language
 
 - Treat your native tongue as just another programming language. Write natural language as you would code: honour the
   DRY (Don't Repeat Yourself) principle, the ETC (Easier to Change) principle, automation, etc.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.2. Know Your Audience
 
 - You're communicating only if you're conveying what you mean to convey - just talking isn't enough. To do that, you
   need to understand the needs, interests, and capabilities of your audience.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - By making the appropriate pitch to the relevant group, you'll get them all excited about your project.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - As with all forms of communication, the key is to gather feedback. Don't just wait for questions: ask for them.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.3. Know What You Want to Say
 
 - Plan what you want to say. Write an outline. Then ask yourself. "Does this communicate what I want to express to my
   audience in a way that works for them?" If not, refine it until it does.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When you're faced with an important meeting or a chat with a major client, jot down the ideas you want to
   communicate, and plan a few strategies for getting them across.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.4. Choose Your Moment
 
 - As part of understanding what your audience needs to hear, you need to work out what their priorities are. Make sure
   what you're saying is relevant in time, as well as in content. Sometime, all it takes is a simple question "Is this a
   good time to talk about...?"
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.5. Choose a Style
 
 - Adjust the style of your delivery to suit your audience. Determine the style of your delivery based on what they are
   likely to expect or appreciate, or what they've explicitly said they want.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - If you are unable to communicate in the way your audience expects, be sure to provide that feedback. Feedback is also
   a form of communication.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.6. Make it Look Good
 
 - Your ideas are important. They ought to look good to convey them to your audience.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Too many developers (and their managers) concentrate solely on content when producing written documents. This is a
   mistake. There is no excuse today for producing poor-looking printed documented. Check the spelling, first
   automatically and then by hand.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.7. Involve Your Audience
 
 - The documents we produce can often end up being less important than the process we go through to produce them. If
   possible, provide readers with early drafts of your document. Get their feedback, and pick their brains. You'll
     build a good working relationship and produce a better document.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.8. Be a Listener
 
 - Listen to people if you want people to listen to you.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Encourage people to talk by asking questions, or ask them to restate the discussion in their own words. Turn the
   meeting into a dialogue, and you'll make your point more effectively.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.9. Get Back to People
 
 - Always respond to people, even if the response is simple "I'll get back to you later." Keeping people informed makes
   them far more forgiving of the occasional slip, and them feel like you haven't forgotten them.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.10. Tip 12: It's Both What You Say and the Way You Say It
 
 - Unless you work in a vacuum, you need to be able to communicate. The more effective that communication, the more
   influential you become.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.11. Communication Through Documentation
 
 - Typically, developers don't give much though to documentation. At best, it is an unfortunate necessity. At work, it
   is treated as a low-priority task that will hopefully be forgotten.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Pragmatic Programmers embrace documentation as an integral part of the overall development process. Writing
   documentation can be made easier by not duplicating effort or wasting time.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On
 
 - It's easy to produce good-looking documentation from the comment in source code. Restrict non-API commenting to
   discussing why something is done, it's purpose and goal. The code already shows how it is done, so commenting on this
   is redundant, and a violation of the DRY principle.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.3.8.13. Challenges (Communicate)
 
 - Make a point to read some of the many good books on communications between teams.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The next time you have to give a presentation, or write a message advocating some position, try working through the
   advice in this section before you start.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.4. A Pragmatic Approach
 
 - There are certain tips and tricks that apply at all levels of software development, processes that are virtually
   universal, and ideas that are almost axiomatic. However, these approaches are rarely documented; you'll mostly find
   them written down as odd sentences in discussions of design, project management, or coding.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.1. The Essence of Good Design
 
 - The world is full of gurus and pundits, all eager to share their hard-earned wisdom when it comes to How to Design
   Software.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design
 
 - A thing is well-designed if it adapts to the people who use it. For code, that means it must adapt by changing.
   Therefore, that means the ETC (Easier to Change) principle is required.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Every design principle out there is a special case of ETC, such as the single responsibility principle, decoupling,
   good naming.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.1.2. ETC is a Value, Not a Rule
 
 - Values are things that help you make decisions. When it comes to software, ETC is a guide, helping you choose between
   paths.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - It requires some initial conscious reinforcement. You may ned to spend a week or so deliberately asking yourself when
   you work on things, such as saving a file, writing a test, fixing a bug.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The ETC principle assumes that a person can tell which of many paths will be easier to change in the future.
   Sometimes, however, you won't have a clue. In those cases, you can do two things:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Try to make what you write replaceable. That way, that chunk of code won't be a roadblock. That approach will also
     help keep code decoupled and cohesive.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Treat the opportunity to develop your instincts. Note the situation, the choices you have, and some guesses about
     change.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.1.3. Challenges (The Essence of Good Design)
 
 - Consider if a design principle you use regularly makes things easy to change.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Think about languages and programming paradigms (object-oriented, functional programming, reactive, etc.) Do they
   have either major positives or negatives when it comes to helping writing ETC code? Do any have both?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When coding, what can you do to eliminate the negatives and accentuate the positives?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Get your editor to create a prompt when you save a file and use it as a cure to consider the code you wrote. Is it
   easy to change?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.2. DRY - The Evils of Duplication
 
 - As programmers, we collect, organise, maintain, and harness knowledge. We document knowledge in specifications, we
   make it come alive in running code, and we use it to provide the checks needed during testing.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Unfortunately, knowledge isn't stable. It changes - often rapidly. All this instability means that we spend a large
   part of time in maintenance mode, reorganising and re-expressing the knowledge in our systems.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Programmers are constantly in maintenance mode. Our understanding constantly changes and often our tools, the
   development environment, the people around us, etc. Whatever the reason, maintenance is not a discrete activity, but
   a routine part of the entire development process.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - When we perform maintenance, we have to find and change the representations of things - those capsules of knowledge
   embedded in the application. It is too easy to duplicate knowledge in the specifications, processes, and programs
   that we develop, and when we do so, we invite a maintenance nightmare - one that starts well before the delivery of
   the application.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The DRY principle: Every piece of knowledge must have a single, unambiguous, authoritative representation within a
   system.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.1. Tip 15: DRY - Don't Repeat Yourself
 
 - If the same thing is expressed in multiple places, and you have to make an update, it isn't a question of whether
   you'll remember to remember every instance, it's a question of when you'll forget.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.2. DRY is More Than Code
 
 - DRY is about the duplication of knowledge, or intent. It's about expressing the same thing in two difference places,
   possibly in two totally different ways.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.3. Duplication in Code
 
 - Here's an example of code duplication:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   ```python
   def print_balance(account)
@@ -28884,8 +28739,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - The following is not an example of a duplication, as although the code is the same, the knowledge they represent is
   different. The two functions in the example validate two separate things, but just happen to have the same rules.
   That's coincidence, not a duplication.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   ```python
   def validate_age(value):
@@ -28901,14 +28756,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - A comment that explains the functionality in source code is unnecessary duplication. It is almost certain that the
   comment and the code will be inconsistent with each other.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.2.4.1. DRY Violations in Data
 
 - The following data structure represents knowledge, but it can fall afoul of the DRY principle:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   ```java
   class Line {
@@ -28921,8 +28776,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ```
 
 - The following code example removes the duplication from the previous code block:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   ```java
   class Line {
@@ -28940,8 +28795,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   to avoid repeating expensive operations. The trick is to localise the impact. The violation is not exposed outside
   the class containing the violation: only the methods within the class have to worry about keeping things consistent.
   This is illustrated in the following code block:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   ```java
   class Line {
@@ -28992,8 +28847,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - When a module exposes a data structure, you're coupling all that code that uses that structure to that module's
   implementation. Aim to always use accessor functions to read and write the attributes to objects. It will make it
   easier to add functionality in the future. This can also be seen in the example in the previous code block.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.5. Representational Duplication
 
@@ -29001,100 +28856,100 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   your code has to have knowledge that is also present in that external client. It needs to know the API, or the
   schema, or the meaning of error code, etc. Change the information at one end, and the other end breaks. This
   duplication is inevitable, but there are ways to mitigate it.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.2.5.1. Duplication Across Internal APIs
 
 - Look for tools that let you specify the API in some kind of neutral format. These tools will typically generate
   documentation, mock APIs, functional tests, and API clients.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.2.5.2. Duplication Across External APIs
 
 - Public APIs are typically documented formally using something like OpenAPI. This allows you to import the API
   specification into your local API tools and integrate more reliably with the service. Consider creating and
   publishing one if you can't find such a specification.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.2.5.3. Duplication within Data Sources
 
 - Rather than manually creating the code to contain stored data, you can generate the contains from the schema. Many
   persistence frameworks will do the heavy lifting for you.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.6. Interdeveloper Duplication
 
 - This is perhaps the hardest type of duplication to detect, handle, and mitigate.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Entire sets of functionality may be inadvertently duplicated, and that duplication could go undetected for years,
   leading to maintenance problems.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - At a high level, address the problem by building a strong, tight-knit team with good communication.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - At a module level in code, the problem can be more insidious, commonly needed functionality or data that doesn't fall
   into an obvious area of responsibility can get implemented many times over across a project.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Appoint a team member as the project librarian, whose job is to facilitate the exchange of knowledge in and out of
   the team. Make a point of reading other people's source code and documentation, either informally or during code
   reviews. Use that as an opportunity to learn from them.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.2.7. Tip 16: Make It Easy to Rescue
 
 - You are aiming to foster an environment where it's easier to find and reuse existing stuff than to write it yourself.
   If it isn't easy, people won't do it. If you fail to reuse, you risk duplicating knowledge.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.3. Orthogonality
 
 - Orthogonality is a critical concept if you want to produce systems that are easy to design, test, and extend.
   Unfortunately, the concept of orthogonality is rarely taught directly, it is often a an implicit feature of various
   other methods and techniques you may learn.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.1. What is Orthogonality?
 
 - "Orthogonality" is a term borrowed from geometry. Two lines are orthogonal if they meet at right angles. As one line
   moves along the `x` axis, it doesn't change its `y` position. As the other line moves along the `y` axis, it doesn't
   change its `x` position.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - In computing, the term signifies a kind of independency or decoupling. Multiple things are orthogonal if changes in
   one do not affect any of the others. In a well-designed system, the database code will be orthogonal to the user
   interface.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.2. Benefits of Orthogonality
 
 - Non-orthogonal systems are inherently more complex to change and control. When components of a system are highly
   interdependent, there is no such thing as a local or a small fix.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.3. Tip 17: Eliminate Effects Between Things
 
 - When components are isolated from one another, you know you can one without having to worry about the rest. As long
   as you don't change that component's external interfaces, you can be confident that you won't have any impacts that
   propagate throughout the entire system.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.3.3.1. Gain Productivity
 
@@ -29102,23 +28957,23 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - It is easier to write relatively small, self-contained components than a single large block of code. Simple
     components can be more easily designed, coded, tested, and then forgotten.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Promotes Reuse**:
 
   - If components have specific, well-defined responsibilities, they can be contained with new components in ways that
     were originally envisioned by the authors of the original components.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Increased Code Effectiveness**:
 
   - Assume that one component does `M` distinct things and another does `N` things. If they are orthogonal and you
     combine then, the result does `M * N` things. You get more functionality per unit of effort by combining orthogonal
     components.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.3.3.2. Reduce Risk
 
@@ -29127,49 +28982,49 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - Segments of code with issues are separate in an orthogonal system from the rest of the system's code, which would
     also be organised orthogonally. Isolated segments of code also make it easier to replace the code without any
     issues.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Greater Stability**:
 
   - The resulting system is less fragile. Make small changes and fixes to a particular area, and any problems you
     generate will be restricted to that area.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Better Testing**:
 
   - The system will most likely be better tested, as it will be easier to design and run tests on its components.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Greater Flexibility**:
 
   - You will not be tied to a particular vendor, product, or platform, as the interfaces to third-party components will
     be isolated to smaller parts of the overall development.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.4. Design
 
 - Most developers are already familiar with the need to design orthogonal systems, although they may use terms such as
   modular, component-based, and layered to describe the project structure and the process to create software.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There is an easy test for orthogonal design. Once you have your components mapped out, "If I dramatically change the
   requirements behind a particular function, how many modules are affected?" In an orthogonal system, the answer should
   be one, or as close to one as possible. Moving a button on a GUI panel should not require a change in the database
   schema. Adding context-sensitive help should not change the billing subsystem.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Also ask yourself how decoupled your design is from changes in the real world. Are you using a telephone number as a
   customer identifier? What happens when the company reassigns area code? Postal code, Social Security Numbers, or
   government IDs, email addresses, and domains are all external identifiers that you have no control over, and could
   change at any time for any reason. Don't rely on the properties of things you can't control.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.5. Toolkits & Libraries
 
@@ -29178,104 +29033,104 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   code that shouldn't be there. If an object persistence scheme is transparent, then it's orthogonal. If it required
   you to create or access objects in a special way, then it's not. Keeping such details isolated from your code has the
   additional benefit of making it easier to change vendors in future.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.6. Coding
 
 - You run the risk of reducing the orthogonality of your application every time you write code. You need to constantly
   monitor the larger context of the application to ensure you do not inadvertently reduce the application's
   orthogonality.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There are several techniques you can use to main orthogonality:
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Keep Your Code Decoupled**:
 
     - Write shy code - modules that don't reveal anything unnecessary to other modules, and that don't rely on other
       modules' implementations. This way your code remains isolated from the other code's implementation and increases
       the chances you'll remain orthogonal.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Avoid Global Data**:
 
     - Every time your code references global data, it tiers itself into the other components that share the data.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
     - Generally, your code is easier to understand and maintain if you explicitly pass any required context into your
       modules.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
     - The Singleton pattern is a way of ensuring there is only one instance of an object of a particular class. Many
       people use these singleton objects as a kind of global variable. Be careful with singletons - they can lead to
       unnecessary linkage.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - **Avoid Similar Functions**:
 
     - You'll often come across a set of functions that all look similar - possibly sharing common code at the start and
       end, but each has a different central algorithm. Duplicate code is symptom of structural problems that can be
       addressed with the Strategy pattern.
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Habitually be critical of your code. Identify and opportunities to reorganise it to refactor the project (to improve
   its structure and orthogonality).
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.7. Testing
 
 - An orthogonally designed and implemented system is easier to test. More of the testing can be performed at the
   individual module level, as the interactions between the system's components are formalised and limited.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Writing unit tests is a good test of orthogonality. If there's a large amount of setup required to write a unit test,
   then the module being tested is not well decoupled from the rest of the system.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Bug fixing is also a good time to assess a system's orthogonality. When you come across a problem, assess how
   localised the fix is. Do you change just one module, or are the changes scattered throughout the entire system? When
   you make a change, does it fix everything, or do other problems mysteriously arise?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.8. Orthogonality Through Documentation
 
 - Orthogonality also applies to documentation. Content and presentation are the focus areas. With truly orthogonal
   documentation, you should be able to change the appearance dramatically without changing the content. Word processors
   provide style sheets and macros to help with that. Markup systems such as Markdown are recommended.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.3.9. Living with Orthogonality
 
 - Orthogonality is closely related to the DRY principle. With DRY, you're looking to minimise duplication within a
   system, whereas with orthogonality you reduce the interdependency among the system's components.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.3.9.1. Challenges (Living with Orthogonality)
 
 - Consider the difference between tools which gave a GUI and small but combinable command-line utilities used at shell
   prompts. Which set is more orthogonal, and why? Why set is easier to combine with other tools to meet new challenges?
   Which set is easier to learn?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Is there a difference in impact between multiple inheritance and multiple interfaces? Is there a difference between
   using delegation and using inheritance?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ###### 1.9.4.3.9.2. Exercises (Living with Orthogonality)
 
@@ -29285,12 +29140,12 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - You're asked to read a file a line at a time. For each line, you have to split it into fields. Which of the
     following sets of pseudo class definitions is likely to be more orthogonal?
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
     - Example A:
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
       ```js
       class SplitA {
@@ -29301,8 +29156,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       ```
 
     - Example B:
-      [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-        #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+      [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+        #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
       ```js
       class SplitB {
@@ -29316,90 +29171,90 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - The class `SplitB` is more orthogonal. It only focuses on its own task- - splitting lines - and ignores details
     such as where the lines are coming from. This makes the code easier to develop and makes it more flexible for
     reuse.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Exercise 2**:
 
   - What are the differences in orthogonality between object-oriented and functional languages? Are these differences
     inherent in the languages themselves or just in the way people use them?
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - **Answer 2**:
 
   - You can write good, orthogonal code in almost any language.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - Every language has temptations: features that can lead to increased coupling and decreased orthogonality.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - In object-oriented languages, features such as multiple inheritance, exceptions, operator overloading and
     parent-method overriding (via sub-classing) provide many ways of accidentally increasing coupling in non-obvious
     ways. Coupling classes to data is another form of coupling. If you don't make your classes focused enough, it can
     lead to interfaces with too many parameters and/or functions.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
   - In functional languages, you're encouraged to write lots of small, decoupled functions, and to combine them in
     different ways to solve your problem. This is usually a way of increasing orthogonality, but there is a form of
     coupling that can occur in functional languages. These functions typically transform data, meaning the result of
     one function can become the input to another. If you're not careful, making a change to the data format a function
     generates can result in a failure elsewhere. Languages with good type systems can help mitigate this.
-    [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-      #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+    [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+      #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.4. Reversibility
 
 - Engineers prefer simple, singular solutions to problems.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - There is always more than one way to implement something. There is usually more than one vendor to provide a
   third-party product. You may be surprised if you are convinced there is only one way to implement or use something.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - As time goes by, and your project progresses, you may find yourself stuck in an untenable position. With every
   critical decision, the project team commits to a smaller target - a narrow version that has fewer options. The
   0problem is that critical decisions aren't reversible.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - Many of the topics in this book are tailored to producing flexible, adaptable software. By sticking to this book's
   recommendations, we don't have to make as many critical, irreversible decisions. This is a good thing, as we don't
   always make the best decisions the first time around. Another source of change is that the requirements, users, and
   hardware change faster than we can get the software developed.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - The mistake in making decisions that will be hard is change comes from the assumption that any decision is cast in
   stone - and in not preparing for the contingencies that might arise. Instead of carving decisions in stone, think of
   them more as being written in the sand at the beach. A big wave can come along and wipe them out at any time.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.4.1. Tip 18: There Are No Final Decisions
 
 - While many people try to keep their code flexible, you also need to think about maintaining flexibility in areas of
   architecture, deployment, and vendor integration.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 - You can't plan for architectural volatility, but what you can do is make it easy to change. Hide third-party APIs
   behind your own abstraction layers. Break your code into components; even if you end up deploying them on a single
   server, this approach is a lot easier than splitting a monolithic application.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.4.2. Tip 19: Forego Following Fads
 
 - No one knows what the future may hold, especially not us. Enable your code to rock-n-roll: to "rock on" when it can,
   and to "roll with the punches" when it must.
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ##### 1.9.4.4.3. Challenges (Reversibility)
 
@@ -29410,2066 +29265,2066 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   box do you know which universe you are in. Think of code evolution along the same lines as a box full of
   Schrödinger's cats: every decision results in a different version of the future. How many possible futures can your
   code support? Which ones are more likely? How hard would it to be support them when the time comes?
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.5. Tracer Bullets
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.6. Prototypes & Post-It Notes
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.7. Domain Languages
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.4.8. Estimating
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.5. The Basic Tools
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.1. The Power of Plain Text
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.2. Shell Games
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.3. Power Editing
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.4. Version Control
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.5. Debugging
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.6. Text Manipulation
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.5.7. Engineering Daybooks
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.6. Pragmatic Paranoia
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.6.1. Design by Contract
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.6.2. Dead Programs Tell No Tales
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.6.3. Assertive Programming
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.6.4. How to Balance Resources
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.6.5. Don't Outrun Your Headlights
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.7. Bend, or Break
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.7.1. Decoupling
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.7.2. Juggling the Real World
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.7.3. Transforming Programming
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.7.4. Inheritance Task
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.7.5. Configuration
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.8. Concurrency
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.8.1. Breaking Temporal Coupling
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.8.2. Shared State is Incorrect State
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.8.3. Actors & Processes
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.8.4. Blackboards
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.9. While You Are Coding
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.1. Listen to Your Lizard Brain
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.2. Programming by Coincidence
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.3. Algorithm Speed
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.4. Refactoring
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.5. Test to Code
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.6. Property-Based Testing
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.7. Stay Safe Out There
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.9.8. Naming Things
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.10. Before the Project
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.10.1. The Requirements Pit
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.10.2. Solving Impossible Puzzles
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.10.3. Working Together
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.10.4. The Essence of Agility
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 ### 1.9.11. Pragmatic Projects
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.11.1. Pragmatic Teams
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.11.2. Coconuts Don't Cut It
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.11.3. Pragmatic Starter Kit
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.11.4. Delight Your Users
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 #### 1.9.11.5. Pride & Prejudice
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 -
-  [5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
-    #5121-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
+  [5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition](
+    #5131-the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition)
 
 </details>
 
@@ -35911,299 +35766,297 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 # 2. Cheat Sheets
 
-## 2.1. Command Line Tools Overview
+## 2.1. Command Line Tool Cheat Sheets
 
-| **Command Line Tool Name** |                                                                                 **Command Line Tool Summary**                                                                                  |                     **Documentation Link**                     |      **Cheat Sheet Link**      |              **Installation Procedure (Linux)**               |          **Installation Procedure (Windows)**           |
-| :------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------: | :----------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------: |
-|           `7za`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `alias`           |                                                                                   Define or display aliases.                                                                                   |     <https://man7.org/linux/man-pages/man1/alias.1p.html>      |                                |                                                               |                                                         |
-|         `anchore`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `apropos`          |                                                             Search a command's manual page names and descriptions for keyword(s).                                                              |     <https://man7.org/linux/man-pages/man1/apropos.1.html>     |                                |                                                               |                                                         |
-|           `apt`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `ar`            |                                                                           Create, modify, and extract from archives.                                                                           |       <https://man7.org/linux/man-pages/man1/ar.1.html>        |                                |                                                               |                                                         |
-|          `aria2`           |                                     `aria2` is a utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink.                                      |      <https://aria2.github.io/manual/en/html/aria2c.html>      |                                |                                                               |                                                         |
-|          `atlas`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `awk`            |                                                                  Execute programs written in the `awk` programming language.                                                                   |      <https://man7.org/linux/man-pages/man1/awk.1p.html>       |                                |                                                               |                                                         |
-|           `aws`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `apt`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `bandwhich`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `base64`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `basename`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `bash`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `bat`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `bc`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `bind`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `bpytop`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `builtin`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `bzip2`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cal`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `case`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cat`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `chmod`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `chown`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `chroot`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cmp`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `code`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `column`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `comm`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `command`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `compgen`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `complete`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `compress`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `coproc`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `cp`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cron`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `crontab`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `ctop`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `curl`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cut`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `cvs`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `date`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `dd`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `declare`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `df`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `diff`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|      `diff-so-fancy`       |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `dig`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `dirname`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `docker`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `dog`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `dos2unix`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `dotnet`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `dpkg`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `du`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `dua-cli`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `duf`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `echo`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `egrep`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `elm`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `elvis`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `emacs`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `enable`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `env`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `exa`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `exec`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `execve`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `exit`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `fdupes`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `ffmpeg`          |                                                                                                                                                                                                |                                                                |                                | <https://gcore.com/learning/how-to-install-ffmpeg-on-ubuntu/> |       <https://phoenixnap.com/kb/ffmpeg-windows>        |
-|         `ffprobe`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `file`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `find`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `firefox`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `fmt`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `for`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `fzf`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `gawk`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `gedit`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `getconf`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `getdate`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `getopt`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `getopts`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `git`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `glances`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `gpasswd`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `gping`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `grep`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `grype`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `gsub`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `gunzip`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `gzcat`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `gzip`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `hash`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `head`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `help`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `helm`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `helmfile`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `hexdump`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `history`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `host`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `htop`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `hyperfine`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `id`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `info`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `info2man`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `info2www`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `install`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `ip`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `java`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `jf`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `jq`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `keychain`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `keytool`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `kill`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `killall`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `kubectl`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `less`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `lessfile`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `ln`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `locate`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `logger`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `ls`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `lshw`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `lspci`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `lsusb`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `lynx`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `mail`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `mailto`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `mailx`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `man`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `maparray`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `mapfile`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `mimeencode`        |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `mkdir`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `mktemp`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `mongocli`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `mtr`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `mutt`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `mv`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `mvn`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `mysql`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `nano`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `navi`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `nc`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `neofetch`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `neovim`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `netstat`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `newgrp`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `nl`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `nmap`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `nohup`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `npm`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `nvi`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `nvim`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `od`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `open`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `openssl`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `opt`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `passwd`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `perl`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `pinfo`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `ping`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `pip`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `printf`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `pr`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `procs`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `ps`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `psql`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `python`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `rcp`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `rd`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `rdist`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `read`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `readarray`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `readline`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `rename`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `rip`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `ripgrep`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `rlogin`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `rm`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `rmdir`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `rpm`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `rsh`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `rsync`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `css`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `scp`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `screen`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `script`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `sd`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `sed`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `select`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `seq`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `service`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `set`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `setgid`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `setuid`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `sftp`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `shift`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `shopt`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `shutdown`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `slocate`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `snap`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `sort`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `source`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|      `speedtest-cli`       |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `split`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `ssh`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `ssh-agent`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `ssh-keygen`        |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `sshpass`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `stat`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `strftime`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `su`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `sudo`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `sudoers`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `svn`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `syslog`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `tail`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `tar`            |                                                                                                                                                                                                |       <https://man7.org/linux/man-pages/man1/tar.1.html>       |                                |                                                               |                                                         |
-|           `tee`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `textutils`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `time`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `tkman`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `tldr`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `tmux`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `top`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `touch`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `tr`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|        `traceroute`        |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `trap`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `tr`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `tree`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `trivy`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `type`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `ulimit`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `unalias`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `uname`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `uniq`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `unix2dos`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `unzip`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `useradd`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `usermod`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `uudecode`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|         `uuencode`         |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `vi`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `vile`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `vim`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `vipw`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `visudo`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `watch`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|            `wc`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `wget`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `whatis`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `which`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `whoami`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `wsl`            | Windows Subsystem for Linux (WSL) is a feature of Windows that allows you to run a Linux environment on your Windows machine, without the need for a separate virtual machine or dual booting. | <https://learn.microsoft.com/en-us/windows/wsl/basic-commands> |                                |                              N/A                              | <https://learn.microsoft.com/en-us/windows/wsl/install> |
-|          `xargs`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `xsel`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `yt-dlp`          |             `yt-dlp` is a feature-rich command-line audio/video downloader with support for [thousands of sites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md).              |    <https://github.com/yt-dlp/yt-dlp/blob/master/README.md>    | [2.2.1. `yt-dlp`](#221-yt-dlp) |                                                               |                                                         |
-|           `zcat`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `zgrep`           |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|           `zip`            |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `zmodem`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
-|          `zypper`          |                                                                                                                                                                                                |                                                                |                                |                                                               |                                                         |
+### 2.1.1. Command Line Tools Overview
 
-## 2.2. Command Line Tool Cheat Sheets
+| **Command Line Tool Name** |                                                               **Command Line Tool Summary**                                                               |                       **Documentation Link**                        |     **Cheat Sheet Link**      |              **Installation Procedure (Linux)**               |          **Installation Procedure (Windows)**           |
+| :------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------: | :-----------------------------------------------------------------: | :---------------------------: | :-----------------------------------------------------------: | :-----------------------------------------------------: |
+|           `7za`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `alias`           |                                                                Define or display aliases.                                                                 |        <https://man7.org/linux/man-pages/man1/alias.1p.html>        |                               |                                                               |                                                         |
+|         `anchore`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `apropos`          |                                           Search a command's manual page names and descriptions for keyword(s).                                           |       <https://man7.org/linux/man-pages/man1/apropos.1.html>        |                               |                                                               |                                                         |
+|           `apt`            |                                                                APT command line interface.                                                                |    <https://manpages.ubuntu.com/manpages/xenial/man8/apt.8.html>    |                               |     Pre-installed in Ubuntu systems and its derivatives.      |                                                         |
+|        `apt-cache`         |                                                                   Query the APT cache.                                                                    | <https://manpages.ubuntu.com/manpages/xenial/man8/apt-cache.8.html> |                               |     Pre-installed in Ubuntu systems and its derivatives.      |                                                         |
+|         `apt-get`          |                                                               APT package handling utility.                                                               |  <https://manpages.ubuntu.com/manpages/xenial/man8/apt-get.8.html>  |                               |     Pre-installed in Ubuntu systems and its derivatives.      |                                                         |
+|            `ar`            |                                                        Create, modify, and extract from archives.                                                         |          <https://man7.org/linux/man-pages/man1/ar.1.html>          |                               |                                                               |                                                         |
+|          `aria2`           |                        A utility for downloading files. The supported protocols are HTTP(S), FTP, SFTP, BitTorrent, and Metalink.                         |        <https://aria2.github.io/manual/en/html/aria2c.html>         |                               |                                                               |                                                         |
+|           `awk`            |                                                Execute programs written in the `awk` programming language.                                                |         <https://man7.org/linux/man-pages/man1/awk.1p.html>         |                               |                                                               |                                                         |
+|           `aws`            |                        A unified tool that provides a consistent interface for interacting with all parts of Amazon Web Services.                         |                 <https://docs.aws.amazon.com/cli/>                  |                               |                                                               |                                                         |
+|          `base64`          |                                                     Encode/decode data and print to standard output.                                                      |                 <https://ss64.com/bash/base64.html>                 |                               |                                                               |                                                         |
+|         `basename`         |                                                        Strip directory and suffix from file names.                                                        |       <https://man7.org/linux/man-pages/man1/basename.1.html>       |                               |                                                               |                                                         |
+|           `bash`           |                    An `sh`-compatible command language interpreter that executes commands read from the standard input or from a file.                    |         <https://man7.org/linux/man-pages/man1/bash.1.html>         |                               |                                                               |                                                         |
+|           `bat`            |                                                 `cat` clone with syntax highlighting and Git integration.                                                 | <https://manpages.ubuntu.com/manpages/focal/en/man1/batcat.1.html>  |                               |                                                               |                                                         |
+|          `bzip2`           |                                                           Compress or decompress named file(s).                                                           |                 <https://ss64.com/bash/bzip2.html>                  |                               |                                                               |                                                         |
+|           `cal`            |                                Displays a simple calendar. If no arguments are specified, the current month is displayed.                                 |         <https://man7.org/linux/man-pages/man1/cal.1.html>          |                               |                                                               |                                                         |
+|           `case`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `cat`            |                                                          Concatenates files to standard output.                                                           |         <https://man7.org/linux/man-pages/man1/cat.1.html>          |                               |                                                               |                                                         |
+|          `chmod`           |                                                                  Change file mode bits.                                                                   |        <https://man7.org/linux/man-pages/man1/chmod.1.html>         |                               |                                                               |                                                         |
+|          `chown`           |                                                               Change file owner and group.                                                                |        <https://man7.org/linux/man-pages/man1/chown.1.html>         |                               |                                                               |                                                         |
+|          `chroot`          |                                               Run command or interactive shell with special root directory.                                               |        <https://man7.org/linux/man-pages/man1/chroot.1.html>        |                               |                                                               |                                                         |
+|           `cmp`            |                                                              Compare two files byte by byte.                                                              |         <https://man7.org/linux/man-pages/man1/cmp.1.html>          |                               |                                                               |                                                         |
+|           `code`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `column`          |                                                          Formats an input into multiple columns.                                                          |        <https://man7.org/linux/man-pages/man1/column.1.html>        |                               |                                                               |                                                         |
+|           `comm`           |                                                          Compare two sorted files line by line.                                                           |         <https://man7.org/linux/man-pages/man1/comm.1.html>         |                               |                                                               |                                                         |
+|         `command`          |                                                                 Execute a simple command.                                                                 |       <https://man7.org/linux/man-pages/man1/command.1p.html>       |                               |                                                               |                                                         |
+|         `compgen`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `complete`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `compress`         |                                                                      Compress data.                                                                       |      <https://man7.org/linux/man-pages/man1/compress.1p.html>       |                               |                                                               |                                                         |
+|          `coproc`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `cp`            |                                              Copy source to destination, or multiple source(s) to directory.                                              |          <https://man7.org/linux/man-pages/man1/cp.1.html>          |                               |                                                               |                                                         |
+|           `cron`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `crontab`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `css`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `ctop`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `curl`           |                                                                      Transfer a URL.                                                                      |         <https://man7.org/linux/man-pages/man1/curl.1.html>         |                               |                                                               |                                                         |
+|           `cut`            |                                                         Remove sections from each line of files.                                                          |         <https://man7.org/linux/man-pages/man1/cut.1.html>          |                               |                                                               |                                                         |
+|           `cvs`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `date`           |                                                          Print of set the system date and time.                                                           |         <https://man7.org/linux/man-pages/man1/date.1.html>         |                               |                                                               |                                                         |
+|            `dd`            |                                                                                                                                                           |          <https://man7.org/linux/man-pages/man1/dd.1.html>          |                               |                                                               |                                                         |
+|         `declare`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `df`            |                                                              Report file system space usage.                                                              |          <https://man7.org/linux/man-pages/man1/df.1.html>          |                               |                                                               |                                                         |
+|           `diff`           |                                                                Compare files line by line.                                                                |         <https://man7.org/linux/man-pages/man1/diff.1.html>         |                               |                                                               |                                                         |
+|      `diff-so-fancy`       |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `dig`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `dir`            |                                                                 List directory contents.                                                                  |         <https://man7.org/linux/man-pages/man1/dir.1.html>          |                               |                                                               |                                                         |
+|         `dirname`          |                                                           Strip last component from file name.                                                            |       <https://man7.org/linux/man-pages/man1/dirname.1.html>        |                               |                                                               |                                                         |
+|          `docker`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `dog`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `dos2unix`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `dotnet`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `dpkg`           |                                                    Install, build, remove and manage Debian packages.                                                     |         <https://man7.org/linux/man-pages/man1/dpkg.1.html>         |                               |                                                               |                                                         |
+|            `du`            |                                                                Estimate file usage space.                                                                 |          <https://man7.org/linux/man-pages/man1/du.1.html>          |                               |                                                               |                                                         |
+|         `dua-cli`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `duf`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `echo`           |                                                                  Display a line of text.                                                                  |         <https://man7.org/linux/man-pages/man1/echo.1.html>         |                               |                                                               |                                                         |
+|          `egrep`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `elm`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `elvis`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `emacs`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `enable`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `env`            |                                                         Run a program in a modified environment.                                                          |         <https://man7.org/linux/man-pages/man1/env.1.html>          |                               |                                                               |                                                         |
+|           `exa`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `exec`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `execve`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `exit`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `fdupes`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `ffmpeg`          |                                                                Universal media converter.                                                                 |                  <https://ffmpeg.org/ffmpeg.html>                   |                               | <https://gcore.com/learning/how-to-install-ffmpeg-on-ubuntu/> |       <https://phoenixnap.com/kb/ffmpeg-windows>        |
+|         `ffprobe`          |                             Gathers information from multimedia streams and prints it in human- and machine-readable fashion.                             |                  <https://ffmpeg.org/ffprobe.html>                  |                               |                                                               |                                                         |
+|           `file`           |                                                                   Determine file type.                                                                    |         <https://man7.org/linux/man-pages/man1/file.1.html>         |                               |                                                               |                                                         |
+|           `find`           |                                                        Search for files in a directory hierarchy.                                                         |         <https://man7.org/linux/man-pages/man1/find.1.html>         |                               |                                                               |                                                         |
+|         `firefox`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `fmt`            |                                                              Simply optimal text formatter.                                                               |         <https://man7.org/linux/man-pages/man1/fmt.1.html>          |                               |                                                               |                                                         |
+|           `for`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `fzf`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `gcc`            |                                                              GNU project C and C++ compiler.                                                              |         <https://man7.org/linux/man-pages/man1/gcc.1.html>          |                               |                                                               |                                                         |
+|           `gawk`           |                                                         Pattern scanning and processing language.                                                         |         <https://man7.org/linux/man-pages/man1/gawk.1.html>         |                               |                                                               |                                                         |
+|          `gedit`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `getconf`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `getdate`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `getopt`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `getopts`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `git`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `glances`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `gpasswd`          |                                                        Administer `/etc/group` and `/etc/gshadow`.                                                        |       <https://man7.org/linux/man-pages/man1/gpasswd.1.html>        |                               |                                                               |                                                         |
+|          `gping`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `grep`           |                                                             Print lines that match patterns.                                                              |         <https://man7.org/linux/man-pages/man1/grep.1.html>         |                               |                                                               |                                                         |
+|          `grype`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `gsub`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `gunzip`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `gzcat`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `gzip`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `hash`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `head`           |                                                              Output the first part of files.                                                              |         <https://man7.org/linux/man-pages/man1/head.1.html>         |                               |                                                               |                                                         |
+|           `help`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `helm`           |                                                              Package manager for Kubernetes.                                                              |                    <https://helm.sh/docs/helm/>                     |                               |                                                               |                                                         |
+|         `helmfile`         |                                                        Declarative spec for deploying Helm charts.                                                        |     <https://helmfile.readthedocs.io/en/latest/#cli-reference>      |                               |                                                               |                                                         |
+|         `hexdump`          |                                              Display file contents in hexadecimal, decimal, octal, or ascii.                                              |       <https://man7.org/linux/man-pages/man1/hexdump.1.html>        |                               |                                                               |                                                         |
+|         `history`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `host`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `htop`           |                                                                Interactive process viewer.                                                                |         <https://man7.org/linux/man-pages/man1/htop.1.html>         |                               |                                                               |                                                         |
+|        `hyperfine`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `id`            |                                                       Print real and effective user and groups IDs.                                                       |          <https://man7.org/linux/man-pages/man1/id.1.html>          |                               |                                                               |                                                         |
+|           `info`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `info2man`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `info2www`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `install`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `ip`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `java`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `jf`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `jq`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `keychain`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `keytool`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `kill`           |                                                                   Terminate a process.                                                                    |         <https://man7.org/linux/man-pages/man1/kill.1.html>         |                               |                                                               |                                                         |
+|         `killall`          |                                                                  Kill processes by name.                                                                  |       <https://man7.org/linux/man-pages/man1/killall.1.html>        |                               |                                                               |                                                         |
+|         `kubectl`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `less`           |                        A program similar to `move(1)`, but which allows backward movement in the file as well as forward movement.                        |         <https://man7.org/linux/man-pages/man1/less.1.html>         |                               |                                                               |                                                         |
+|         `lessfile`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `ln`            |                                                                 Make links between files.                                                                 |          <https://man7.org/linux/man-pages/man1/ln.1.html>          |                               |                                                               |                                                         |
+|          `locate`          |                                                       List files in databases that match a pattern.                                                       |        <https://man7.org/linux/man-pages/man1/locate.1.html>        |                               |                                                               |                                                         |
+|          `logger`          |                                                            Enter messages into the system log.                                                            |        <https://man7.org/linux/man-pages/man1/logger.1.html>        |                               |                                                               |                                                         |
+|            `ls`            |                                                                 List directory contents.                                                                  |          <https://man7.org/linux/man-pages/man1/ls.1.html>          |                               |                                                               |                                                         |
+|           `lshw`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `lspci`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `lsusb`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `lynx`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `mail`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `mailto`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `mailx`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `man`            |                                                        Interface to the system reference manuals.                                                         |         <https://man7.org/linux/man-pages/man1/man.1.html>          |                               |                                                               |                                                         |
+|         `maparray`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `mapfile`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `mariadb`          |                                          The MariaDB command-line tool (`mysql` is now a symlink to `mariadb`).                                           |        <https://man7.org/linux/man-pages/man1/mysql.1.html>         |                               |                                                               |                                                         |
+|        `mimeencode`        |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `mkdir`           |                                                                     Make directories.                                                                     |        <https://man7.org/linux/man-pages/man1/mkdir.1.html>         |                               |                                                               |                                                         |
+|          `mktemp`          |                                                           Create a temporary file or directory.                                                           |        <https://man7.org/linux/man-pages/man1/mktemp.1.html>        |                               |                                                               |                                                         |
+|         `mongocli`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `mtr`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `mutt`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `mv`            |                                                                   Move (rename) files.                                                                    |          <https://man7.org/linux/man-pages/man1/mv.1.html>          |                               |                                                               |                                                         |
+|           `mvn`            |                                                   Java-based project management and comprehension tool.                                                   |                <https://www.manpagez.com/man/1/mvn/>                |                               |                                                               |                                                         |
+|          `mysql`           |                                          The MariaDB command-line tool (`mysql` is now a symlink to `mariadb`).                                           |        <https://man7.org/linux/man-pages/man1/mysql.1.html>         |                               |                                                               |                                                         |
+|           `nano`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `navi`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `nc`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `neofetch`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `netstat`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `newgrp`          |                                                                  Log in to a new group.                                                                   |        <https://man7.org/linux/man-pages/man1/newgrp.1.html>        |                               |                                                               |                                                         |
+|            `nl`            |                                                                  Number lines of files.                                                                   |          <https://man7.org/linux/man-pages/man1/nl.1.html>          |                               |                                                               |                                                         |
+|           `nmap`           |                                                    Network exploration tool and security/port scanner.                                                    |         <https://man7.org/linux/man-pages/man1/nmap.1.html>         |                               |                                                               |                                                         |
+|          `nohup`           |                                                Run a command immune to hangups, with output to a non-tty.                                                 |        <https://man7.org/linux/man-pages/man1/nohup.1.html>         |                               |                                                               |                                                         |
+|           `npm`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `nvi`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `nvim`           |                                                                        Edit text.                                                                         |                     <https://manpages.org/nvim>                     |                               |                                                               |                                                         |
+|            `od`            |                                                          Dump files in octal and other formats.                                                           |          <https://man7.org/linux/man-pages/man1/od.1.html>          |                               |                                                               |                                                         |
+|           `open`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `openssl`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `opt`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `passwd`          |                                                                   Change user password.                                                                   |        <https://man7.org/linux/man-pages/man1/passwd.1.html>        |                               |                                                               |                                                         |
+|           `perl`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `pinfo`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `ping`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `pip`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `pr`            |                                                             Convert text files for printing.                                                              |          <https://man7.org/linux/man-pages/man1/pr.1.html>          |                               |                                                               |                                                         |
+|          `printf`          |                                                                  Format and print data.                                                                   |        <https://man7.org/linux/man-pages/man1/printf.1.html>        |                               |                                                               |                                                         |
+|          `procs`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `ps`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `psql`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `python`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `rcp`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `rd`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `rdist`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `read`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|        `readarray`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `readline`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `rename`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `rip`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `ripgrep`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `rlogin`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `rm`            |                                                               Remove files or directories.                                                                |          <https://man7.org/linux/man-pages/man1/rm.1.html>          |                               |                                                               |                                                         |
+|          `rmdir`           |                                                                 Remove empty directories.                                                                 |        <https://man7.org/linux/man-pages/man1/rmdir.1.html>         |                               |                                                               |                                                         |
+|           `rpm`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `rsh`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `rsync`           |                                                 A fast, versatile, remote (and local) file-copying tool.                                                  |        <https://man7.org/linux/man-pages/man1/rsync.1.html>         |                               |                                                               |                                                         |
+|           `scp`            |                                                                 OpenSSH secure file copy.                                                                 |         <https://man7.org/linux/man-pages/man1/scp.1.html>          |                               |                                                               |                                                         |
+|          `screen`          |                                                     Screen manager with VT100/ANSI terminal emulation                                                     |        <https://man7.org/linux/man-pages/man1/screen.1.html>        |                               |                                                               |                                                         |
+|          `script`          |                                                  Make typescript of everything on your terminal session.                                                  |        <https://man7.org/linux/man-pages/man1/script.1.html>        |                               |                                                               |                                                         |
+|            `sd`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `sed`            |                                                    Stream editor for filtering and transforming text.                                                     |         <https://man7.org/linux/man-pages/man1/sed.1.html>          |                               |                                                               |                                                         |
+|          `select`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `seq`            |                                                               Print a sequence of numbers.                                                                |         <https://man7.org/linux/man-pages/man1/seq.1.html>          |                               |                                                               |                                                         |
+|         `service`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `set`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `setgid`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `setuid`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `sftp`           |                                                              Open SSH secure file transfer.                                                               |                                                                     |                               |                                                               |                                                         |
+|          `shift`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `shopt`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `shutdown`         |                                                          Halt, power off or reboot the machine.                                                           |       <https://man7.org/linux/man-pages/man8/shutdown.8.html>       |                               |                                                               |                                                         |
+|         `slocate`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `snap`           |                                                  Install, configure, refresh, and remove snap packages.                                                   |   <https://manpages.ubuntu.com/manpages/bionic/man1/snap.1.html>    |                               |                                                               |                                                         |
+|           `sort`           |                                                                 Sort lines of text files.                                                                 |         <https://man7.org/linux/man-pages/man1/sort.1.html>         |                               |                                                               |                                                         |
+|          `source`          |                                                    Execute commands from a file in the current shell.                                                     |        <https://linuxcommand.org/lc3_man_pages/sourceh.html>        |                               |                                                               |                                                         |
+|      `speedtest-cli`       |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `split`           |                                                                 Split a file into pieces.                                                                 |        <https://man7.org/linux/man-pages/man1/split.1.html>         |                               |                                                               |                                                         |
+|           `ssh`            |                                                               OpenSSH remote login client.                                                                |         <https://man7.org/linux/man-pages/man1/ssh.1.html>          |                               |                                                               |                                                         |
+|        `ssh-agent`         |                                                               OpenSSH authentication agent.                                                               |      <https://man7.org/linux/man-pages/man1/ssh-agent.1.html>       |                               |                                                               |                                                         |
+|        `ssh-keygen`        |                                                            OpenSSH authentication key utility.                                                            |      <https://man7.org/linux/man-pages/man1/ssh-keygen.1.html>      |                               |                                                               |                                                         |
+|         `sshpass`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `stat`           |                                                            Display file or file system status.                                                            |         <https://man7.org/linux/man-pages/man1/stat.1.html>         |                               |                                                               |                                                         |
+|         `strftime`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `su`            |                                                      Run a command with substitute user and group ID                                                      |          <https://man7.org/linux/man-pages/man1/su.1.html>          |                               |                                                               |                                                         |
+|           `sudo`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `sudoers`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `svn`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `syslog`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `tac`            |                                                          Concatenate and print files in reverse.                                                          |         <https://man7.org/linux/man-pages/man1/tac.1.html>          |                               |                                                               |                                                         |
+|           `tail`           |                                                              Output the last part of files.                                                               |         <https://man7.org/linux/man-pages/man1/tail.1.html>         |                               |                                                               |                                                         |
+|           `tar`            |                   An archiving program designed to store multiple files in a single file (an archive), and to manipulate such archives.                   |         <https://man7.org/linux/man-pages/man1/tar.1.html>          |                               |                                                               |                                                         |
+|           `tee`            |                                             Read from standard input and write to standard output and files.                                              |         <https://man7.org/linux/man-pages/man1/tee.1.html>          |                               |                                                               |                                                         |
+|        `textutils`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `time`           |                                                       Time a simple command or give resource usage.                                                       |         <https://man7.org/linux/man-pages/man1/time.1.html>         |                               |                                                               |                                                         |
+|          `tkman`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `tldr`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `tmux`           |                                                                   Terminal multiplexer.                                                                   |         <https://man7.org/linux/man-pages/man1/tmux.1.html>         |                               |                                                               |                                                         |
+|           `top`            |                                                                 Display Linux processes.                                                                  |         <https://man7.org/linux/man-pages/man1/top.1.html>          |                               |                                                               |                                                         |
+|          `touch`           |                                                                  Change file timestamps.                                                                  |        <https://man7.org/linux/man-pages/man1/touch.1.html>         |                               |                                                               |                                                         |
+|            `tr`            |                                                              Translate or delete characters.                                                              |          <https://man7.org/linux/man-pages/man1/tr.1.html>          |                               |                                                               |                                                         |
+|        `traceroute`        |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `trap`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `tree`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `trivy`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `type`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `ulimit`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `unalias`          |                                                                 Remove alias definitions.                                                                 |       <https://man7.org/linux/man-pages/man1/unalias.1p.html>       |                               |                                                               |                                                         |
+|          `uname`           |                                                             Print certain system information.                                                             |        <https://man7.org/linux/man-pages/man1/uname.1.html>         |                               |                                                               |                                                         |
+|           `uniq`           |                                                              Report or omit repeated lines.                                                               |         <https://man7.org/linux/man-pages/man1/uniq.1.html>         |                               |                                                               |                                                         |
+|         `unix2dos`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `unzip`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `useradd`          |                                                 Create a new user or update default new user information.                                                 |       <https://man7.org/linux/man-pages/man8/useradd.8.html>        |                               |                                                               |                                                         |
+|         `usermod`          |                                                                  Modify a user account.                                                                   |       <https://man7.org/linux/man-pages/man8/usermod.8.html>        |                               |                                                               |                                                         |
+|         `uudecode`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|         `uuencode`         |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|            `vi`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `vile`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `vim`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `vipw`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `visudo`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `watch`           |                                                Execute a program periodically, showing output full screen.                                                |        <https://man7.org/linux/man-pages/man1/watch.1.html>         |                               |                                                               |                                                         |
+|            `wc`            |                                                   Print new line, word, and byte counts for each file.                                                    |          <https://man7.org/linux/man-pages/man1/wc.1.html>          |                               |                                                               |                                                         |
+|           `wget`           |                     Non-interactive network downloader, meaning that it can work in the background, while the user is not logged in.                      |         <https://man7.org/linux/man-pages/man1/wget.1.html>         |                               |                                                               |                                                         |
+|          `whatis`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `which`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `who`            |                                                                  Show who is logged in.                                                                   |         <https://man7.org/linux/man-pages/man1/who.1.html>          |                               |                                                               |                                                         |
+|          `whoami`          |                                                                Print effective user name.                                                                 |        <https://man7.org/linux/man-pages/man1/whoami.1.html>        |                               |                                                               |                                                         |
+|           `wsl`            |                     Run a Linux environment on your Windows machine, without the need for a separate virtual machine or dual booting.                     |   <https://learn.microsoft.com/en-us/windows/wsl/basic-commands>    |                               |                              N/A                              | <https://learn.microsoft.com/en-us/windows/wsl/install> |
+|          `xargs`           |                                                   Build and execute command lines from standard input.                                                    |        <https://man7.org/linux/man-pages/man1/xargs.1.html>         |                               |                                                               |                                                         |
+|           `xsel`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `yt-dlp`          | A feature-rich command-line audio/video downloader with support for [thousands of sites](https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md). |      <https://github.com/yt-dlp/yt-dlp/blob/master/README.md>       | [2.1.2 `yt-dlp`](#212-yt-dlp) |                                                               |                                                         |
+|           `zcat`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `zgrep`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|           `zip`            |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `zmodem`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
+|          `zypper`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
 
-### 2.2.1. `yt-dlp`
+### 2.1.2. `yt-dlp`
 
-#### 2.2.1.1. Install `yt-dlp`
+#### 2.1.2.1. Install `yt-dlp`
 
-##### 2.2.1.1.1. Install `yt-dlp` & Dependencies
+##### 2.1.2.1.1. Install `yt-dlp` & Dependencies
 
 - Download from [yt_dlp_x86.exe](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#recommended).
 
-##### 2.2.1.1.2. Install `ffmpeg`
+##### 2.1.2.1.2. Install `ffmpeg`
 
-###### 2.2.1.1.2.1. Install `ffmpeg` in Linux
+###### 2.1.2.1.2.1. Install `ffmpeg` in Linux
 
 - Install `ffmpeg` using the link for your operating system of choice in the
-  [Command Line Tools Overview](#21-command-line-tools-overview) table.
+  table in [2.1.1. Command Line Tools Overview](#211-command-line-tools-overview).
 
 - Note: `ffmpeg` is required to download YouTube videos at 1080p. Installing and configuring `ffmpeg` also install
   `ffprobe`.
 
-##### 2.2.1.1.3. Verify `yt-dlp` Installation
+##### 2.1.2.1.3. Verify `yt-dlp` Installation
 
 - Run the `yt-dlp` commands in the directory containing the `yt-dlp` executable file.
 
@@ -36213,7 +36066,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ./yt-dlp_x86.exe --help
   ```
 
-#### 2.2.1.2. Download from YouTube
+#### 2.1.2.2. Download from YouTube
 
 - Set the environment variables for each of the YouTube resources you wish to download before executing the following
   command. You must run each of the commands in this section in the same directory as which you have have downloaded
@@ -36223,11 +36076,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ./yt-dlp_x86.exe --cookies-from-browser chrome "${YOUTUBE_URL}" --output "${OUTPUT_DIRECTORY}"
   ```
 
-##### 2.2.1.2.1. Playlists
+##### 2.1.2.2.1. Playlists
 
-###### 2.2.1.2.1.1. Funhaus (Playlists)
+###### 2.1.2.2.1.1. Funhaus (Playlists)
 
-###### 2.2.1.2.1.2. Funhaus Members Playlist
+###### 2.1.2.2.1.2. Funhaus Members Playlist
 
 - Set the following variables to download the videos in the Funhaus Member playlist:
 
@@ -36236,7 +36089,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Members/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.1.3. Funhaus Live Playlist
+###### 2.1.2.2.1.3. Funhaus Live Playlist
 
 - Set the following variables to download the videos in the Funhaus Live playlist:
 
@@ -36245,9 +36098,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Live/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-##### 2.2.1.2.2. Channels
+##### 2.1.2.2.2. Channels
 
-###### 2.2.1.2.2.1. Achievement Hunter
+###### 2.1.2.2.2.1. Achievement Hunter
 
 - Set the following variables to download all the contents in the Achievement Hunter channel:
 
@@ -36256,7 +36109,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.2. Call Me Kevin
+###### 2.1.2.2.2.2. Call Me Kevin
 
 - Set the following variables to download all the contents in the Call Me Kevin channel:
 
@@ -36265,7 +36118,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.3. Funhaus (Channel)
+###### 2.1.2.2.2.3. Funhaus (Channel)
 
 - Set the following variables to download all the contents in the Funhaus channel:
 
@@ -36274,7 +36127,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.4. Funhaus Too
+###### 2.1.2.2.2.4. Funhaus Too
 
 - Set the following variables to download all the contents in the Funhaus Too channel:
 
@@ -36283,7 +36136,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus Too/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.5. Inside Gaming (Formerly "The Know")
+###### 2.1.2.2.2.5. Inside Gaming (Formerly "The Know")
 
 - Set the following variables to download all the contents in the Inside Gaming (Formerly "The Know") channel:
 
@@ -36292,7 +36145,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Inside Gaming (Formerly \"The Know\")/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.6. IMSON1NJA
+###### 2.1.2.2.2.6. IMSON1NJA
 
 - Set the following variables to download all the contents in the IMSON1NJA channel, to download the deleted Funhaus
   videos in that channel:
@@ -36302,7 +36155,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.7. Lets Play
+###### 2.1.2.2.2.7. Lets Play
 
 - Set the following variables to download all the contents in the Lets Play channel:
 
@@ -36311,7 +36164,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Lets Play/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.8. Marlene Mizulo
+###### 2.1.2.2.2.8. Marlene Mizulo
 
 - Set the following variables to download all the contents in the Marlene Mizulo channel, to download the deleted
   Funhaus videos in that channel:
@@ -36321,7 +36174,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.9. Overly Sarcastic Productions
+###### 2.1.2.2.2.9. Overly Sarcastic Productions
 
 - Set the following variables to download all the contents in the Overly Sarcastic Productions channel:
 
@@ -36330,7 +36183,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Overly Sarcastic Productions/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.10. Rooster Teeth
+###### 2.1.2.2.2.10. Rooster Teeth
 
 - Set the following variables to download all the contents in the Rooster Teeth channel:
 
@@ -36339,7 +36192,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.11. Rooster Teeth Podcasts
+###### 2.1.2.2.2.11. Rooster Teeth Podcasts
 
 - Set the following variables to download all the contents in the Rooster Teeth Podcasts channel:
 
@@ -36348,7 +36201,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth Podcasts/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.1.2.2.12. The Escapist
+###### 2.1.2.2.2.12. The Escapist
 
 - Set the following variables to download all the contents in the The Escapist channel:
 
@@ -36357,11 +36210,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/The Escapist/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-## 2.3. Regex Cheat Sheets
+## 2.2. Regex
 
-### 2.3.1. Markdown Table
+### 2.2.1. Markdown Table
 
-#### 2.3.1.1. Start of Line to First Word in First Column
+#### 2.2.1.1. Start of Line to First Word in First Column
 
 - Highlighting the start of a line, starting with a `|`, up to the first word in the first column of a Markdown table.
   The number of spaces from the start of the line and the pipe can be modified when using this regex expression.
@@ -36370,7 +36223,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ^\|        (?!`)
   ```
 
-#### 2.3.1.2. End of Last Word in First Column to Start of Second Column
+#### 2.2.1.2. End of Last Word in First Column to Start of Second Column
 
 - Highlighting the end of the last word in the first column of a Markdown table up to the start of the second column.
 
@@ -36378,7 +36231,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   \b\s+\|
   ```
 
-#### 2.3.1.3. Markdown Table, End of Line, Ending with `|` Character
+#### 2.2.1.3. Markdown Table, End of Line, Ending with `|` Character
 
 - Highlighting the a line Markdown table (ending with a `|` character) up to the start of the second column. You can
   replace the `.*` with as many spaces as required if you need to remove the last column in a table.
@@ -36621,97 +36474,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-<!-- ## Design/Development Methodologies
-
-### Behaviour-Driven Design/Development
-
-### Domain-Driven Design/Development
-
-### Test-Driven Design/Development -->
-
-<!-- ## Containerisation
-
-### Docker
-
-### LXC
-
-### Podman -->
-
-<!-- ## Delivery Paradigms
-
-### DevOps
-
-### GitOps -->
-
-<!-- ## Deployment
-
-### Container Orchestration Systems
-
-#### Kubernetes
-
-### Declarative Continuous Delivery Tools
-
-#### Argo CD
-
-#### Helmfile
-
-### Package Managers
-
-#### Helm
-
-#### Kustomize
-
-## Hyperscalers
-
-### AWS
-
-### Azure
-
-### Google Cloud -->
-
-<!-- ## File Formats
-
-### .json (JSON)
-
-### .md (Markdown)
-
-### .tar (Tar Archive/Tarball)
-
-### .tgz (GZip Compressed TAR Archive)
-
-### .txt (Plain Text)
-
-### .xml (XML)
-
-### .yaml (YAML)
-
-### .yml (YML)
-
-### .zip (Zip) -->
-
 ## 3.2. Inter-Service Communication
-
-<!-- ### Communication Paradigms
-
-#### HTTP
-
-##### API Design (HTTP)
-
-#### Data Streaming
-
-##### API Design (Data Streaming)
-
-### Data Streaming Platforms
-
-#### Kafka
-
-#### RabbitMQ
-
-### HTTP Protocols
-
-#### REST
-
-#### SOAP -->
 
 ### 3.2.1. Security
 
@@ -36878,21 +36641,21 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - **TLS**:
 
   - TLS: Transport Layer Security
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - A security protocol that is used to establish encrypted between a web server and a browser to protect the data
     exchanged between them.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - The successor of Secure Sockets Layer (SSL).
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - Now the most widely-used protocol for securing web communications.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - TLS ensures that data cannot be read or tampered with during transit and that the identity of the communicating
     parties can be verified.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 <details open>
 
@@ -36905,75 +36668,75 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - **Public-Key Cryptography**:
 
     - Aka, asymmetric cryptography.
-      [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+      [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
     - Relies on a pair of keys to decrypt data; a public key and a private key.
-      [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+      [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
       - The public key can be shared with anyone.
-        [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+        [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
       - The private key must be kept secret.
-        [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+        [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - **Symmetric-Key Cryptography**:
 
     - Uses a single shared key to encrypt and decrypt data.
-      [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+      [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
     - **Advantage**: Much faster than public-key cryptography.
-      [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+      [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
     - **Disadvantage**: Both parties must securely share the secret key before they can communicate securely.
-      [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+      [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - When two parties want to establish a secure connection using TLS, they first use public-key cryptography to agree on
   a shared secret key. They can then use symmetric-key cryptography for all further communications using that shared
   secret key. This allows TLS to take advantage of the speed of symmetric-key cryptography, while ensuring the shared
   secret key remains confidential. The shared secret key never needs to be transmitted over the network. It can be
   generated from within each party's own computer.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 ##### 3.2.1.2.3. SSL vs TLS
 
 - SSL was initially developed to secure sensitive information, e.g, credit card numbers and passwords, as it is passed
   around the internet.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - TLS is based on SSL, but includes a number of security enhancements making it more effective at protecting data.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - TLS provides stronger authentication than SSL, by verifying the identity of the server (like SSL) and the client.
   This two-way authentication helps prevent "man-in-the-middle" attacks; when an attacker intercepts communications
   between a server and a client to impersonate both parties.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - TLS also offers Perfect Forward Secrecy (PFS). If an attacker is able to compromise a private key, they would only be
   able to access data that was encrypted with that key. PFS is achieved by using the Diffie-Hellman exchange to
   generate unique keys for each session.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 ##### 3.2.1.2.4. How Does TLS Affect Web Application Performance?
 
 ###### 3.2.1.2.4.1. TLS Handshake Protocol
 
 - One of the most common ways that TLS affects web application performance.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - The TLS handshake occurs when two devices first establish a secure communication channel.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - During the handshake, the devices exchange information about their preferred security protocols and cipher suites.
   This adds significant overhead to web applications, especially if the handshake is renegotiated frequently.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 ###### 3.2.1.2.4.2. Cipher Suites
 
 - **Cipher Suites**: Algorithms used to encrypt communication between two devices.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - Some cipher suites are more resource-intensive than others, which can impact the performance of web applications.
-  [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+  [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 ##### 3.2.1.2.5. Mitigating the Negative Effects of TLS on Web Application Performance
 
@@ -36981,36 +36744,36 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - Use only the encryption algorithms and key sizes that are absolutely necessary to maintain an acceptable level of
     security.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - 128-bit is sufficient for most applications.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - **Offload Cryptographic Processing**:
 
   - Use hardware accelerators or specialised processors to offload the cryptographic processing required for TLS from
     the main CPU.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - Can free up valuable CPU resources for other tasks and improve overall system performance.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - **Use Connection Pooling**:
 
   - Connection pooling allows multiple clients to reuse a small number of pre-opened connections.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - Reduces the overhead from opening and closing connections, improving both throughput and latency.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 - **Cache Session IDs**:
 
   - Session IDs can be cached locally to avoid the overhead of performing a full handshake each time a new session is
     needed.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
   - Most effective for short-lived sessions that are reused frequently.
-    [5.11.1. Techradar: What is TLS and How Does it Work?](#5111-techradar-what-is-tls-and-how-does-it-work)
+    [5.12.1. Techradar: What is TLS and How Does it Work?](#5121-techradar-what-is-tls-and-how-does-it-work)
 
 </details>
 
@@ -37020,31 +36783,63 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 3.3.1.1. Sections of the Manual Pages
 
-1. **User Commands (Programs)**: Commands that can be executed by the user from within a shell.
+- **0**: Header files.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **0p**: Header files (POSIX).
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **1**: User Commands (Programs). Commands that can be executed by the user from within a shell.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **System Calls**: Functions which wrap operations performed by the kernel.
+- **1p**: Executable programs or shell commands (POSIX).
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **2**: System calls. Functions which wrap operations performed by the kernel.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **Library Calls**: All library functions excluding the system call wrappers.
+- **3**: Library calls. All library functions excluding the system call wrappers.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **Special Files (Devices)**: Files found in `/dev` which allow to access to devices through the kernel.
+- **3n**: Network functions.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **3p**: Perl modules.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **4**: Special Files (Devices). Files found in `/dev` which allow to access to devices through the kernel.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **File Formats & Configuration Files**: Describes various human-readable file formats and configuration files.
+- **5. File Formats & Configuration Files**: Describes various human-readable file formats and configuration files.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **Games**: Games and funny little programs available on the system.
+- **6**: Games and funny little programs available on the system.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **Overview, Conventions, & Miscellaneous**: Overviews or descriptions of various topics, conventions, and protocols,
-  character set standards, the standard file system layout, and miscellaneous other things.
+- **7**: Overviews or descriptions of various topics, conventions, and
+  protocols, character set standards, the standard file system layout, and miscellaneous other things.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
 
-1. **System Management Commands**: Commands like [mount(8)](https://man7.org/linux/man-pages/man8/mount.8.html), many
-  of which only root can execute.
+- **8**: System Management Commands. Commands like [mount(8)](https://man7.org/linux/man-pages/man8/mount.8.html), many
+  of which only `root` can execute.
   [5.2.1. Linux Manual Pages](#521-linux-manual-pages)
+
+- **g**: Kernel routines.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **l**: Local documentation.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
+
+- **n**: New manpages.
+  [5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?](
+    #5101-stack-exchange-what-do-the-numbers-in-a-man-page-mean)
 
 ## 3.4. Telecommunications
 
@@ -37118,42 +36913,42 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - Network slicing supports use cases that focus on performance, capacity and security. Many use cases involve the
   business models based on the Internet of Things. Some network slicing use cases involve the following:
-  [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+  [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
   - **Real-Time Performance**:
 
     - A company depending on a 5G network for autonomous vehicle management might contract for a mobile network slice
       with latencies under 5 ms and stringent guarantees of packet delivery on the minimum throughput required to
       ensure responsive control.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
     - The provider would use URLLC (UltraReliable Low-Latency Communications) functionality to guarantee the slice on
       the lowest-latency equipment and paths between vehicles and cloud or edge resources and reserve enough capacity
       to meet the throughput target.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
   - **Capacity**:
 
     - For a security monitoring system in a large auditorium, latency may not matter, but the security company may want
       to buy guaranteed delivery of the camera data.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
     - In other words, the company would want its traffic to get 1.5 megabits per second of throughput per camera with
       no packets dropped, ever.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
     - The provider might aggregate multiple connectivity and processing device options to meet the needs of this slice.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
   - **Security**:
 
     - For a human health monitoring system in a metropolitan area, a hospital might want to isolate all traffic to and
       from pacemakers.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
     - This would minimise the risk of a leak of customer data and the threat of compromise of the control channel - so
       it would require a slice with single-user virtual resources.
-      [5.10.1. Tech Target: Network Slicing](#5101-tech-target-network-slicing)
+      [5.11.1. Tech Target: Network Slicing](#5111-tech-target-network-slicing)
 
 </details>
 
@@ -37732,26 +37527,32 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - <https://www.oreilly.com/library/view/vi-and-vim/9781449303082/>
 
-## 5.10. Tech Target
+## 5.10. Stack Exchange
 
-### 5.10.1. Tech Target: Network Slicing
+### 5.10.1. Stack Exchange: What Do the Numbers in a Man Page Mean?
+
+- <https://unix.stackexchange.com/a/138643>
+
+## 5.11. Tech Target
+
+### 5.11.1. Tech Target: Network Slicing
 
 - <https://www.techtarget.com/whatis/definition/network-slicing>
 
-## 5.11. Techradar
+## 5.12. Techradar
 
-### 5.11.1. Techradar: What is TLS and How Does it Work?
+### 5.12.1. Techradar: What is TLS and How Does it Work?
 
 - <https://www.techradar.com/features/what-is-tls-and-how-does-it-work>
 
-## 5.12. The Pragmatic Bookshelf
+## 5.13. The Pragmatic Bookshelf
 
-### 5.12.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition
+### 5.13.1. The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition
 
 - <https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/>
 
-## 5.13. YouTube
+## 5.14. YouTube
 
-### 5.13.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch
+### 5.14.1. ThePrimeagen: 0 to LSP: Neovim RC from Scratch
 
 - <https://www.youtube.com/watch?v=w7i4amO_zaE>
