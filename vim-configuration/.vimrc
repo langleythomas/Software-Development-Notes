@@ -88,6 +88,9 @@ set showcmd
 " Set column colour at the designated column width
 set colorcolumn=120
 
+"Setting the colour scheme
+colorscheme slate
+
 " ---------------------------------------------------------------------------------------------------------------------
 " Searching
 " ---------------------------------------------------------------------------------------------------------------------
@@ -132,5 +135,4 @@ set encoding=UTF-8
 set confirm
 
 " Enable Vim to resume editing a file from the previous location
-autocmd BufWinLeave * mkview
-autocmd BufWinEnter * silent loadview+
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
