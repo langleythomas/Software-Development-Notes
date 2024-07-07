@@ -36784,7 +36784,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@AchievementHunter"
-  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
 ###### 2.1.2.2.2.2. Call Me Kevin
@@ -36793,7 +36793,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   ```bash
   export YOUTUBE_URL="https://www.youtube.com/@CallMeKevin"
-  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
+  export OUTPUT_DIRECTORY="/f/Downloaded Videos/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
 ###### 2.1.2.2.2.3. Funhaus (Channel)
