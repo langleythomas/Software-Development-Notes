@@ -12,11 +12,20 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-" Let Vundle manage Markdown Preview
+" Let Vundle manage Markdown Preview, as documented in
+" https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage
 Plugin 'iamcco/markdown-preview.nvim'
 
 " All of your Plugins must be added before the following line.
 call vundle#end()
+
+" ---------------------------------------------------------------------------------------------------------------------
+" MarkdownPreview Configuration
+" ---------------------------------------------------------------------------------------------------------------------
+
+" Enabling an automatic Markdown Preview window to be opened after entering the Markdown buffer, as documented in
+" https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
+let g:mkdp_auto_start = 1
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Text Rendering
