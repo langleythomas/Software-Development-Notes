@@ -1,3 +1,5 @@
+export PATH="$PATH:/opt/nvim/"
+
 function execute_script() {
   local -r full_script_file_path="example.sh"
   echo "full_script_file_path: ${full_script_file_path}"
