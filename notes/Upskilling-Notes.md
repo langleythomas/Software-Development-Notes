@@ -14198,131 +14198,809 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.18.19. Improving Programmable Completion
 
--
+- If you wish that `bash`'s programmable completion was more aware of context, then you can find and install additional
+  programmable completion libraries, or write your own.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- Programmable completion is a feature that was introduced in `bash` version 2.04. It extends the built-in textual
+  completion by providing hooks into the completion mechanism. This means that it is possible to write virtually any
+  form of completion desired, by entering `<Tab>` to complete the program.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
+- To do textual completion in a particular way, you first have to tell the shell how to do it when you press the
+  `<Tab>` key. This is done via the `complete` command. The main argument of complete is a name that can be the name of
+  a command or anything else that you want textual completion to work with.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.20. Using Initialisation Files Correctly
 
--
+- The following is a cheat sheet for all the initialisation, or `rc`, files. Some or all of these files may be missing
+  from your system, depending on how it is set up. Systems that use `bash` by default to have a complete set, while
+  systems that use some other shell by default are usually missing at least some of them.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `/etc/profile`: Global login environment file for Bourne and similar login shells. Do not update this unless you are
+  the system administrator and know what you are doing.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `/etc/bashrc` (Red Hat) or `/etc/bash.bashrc` (Debian): Global environment for interactive `bash` subshells. Do not
+  update this unless you are the system administrator and know what you are doing.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `/etc/bash_completion`: The configuration file for Iam Macdonald's programmable completion library.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `/etc/profile.d/bash_completion.sh` and `/etc/bash_completion.d`: Other possibly distribution-specific `bash`
+  completion files. Most commonly found in Fedora systems.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `/etc/inputrc`: Global GNU `readline` configuration. Tweak this as required for the entire system (if you are the
+  administrator), or `~/.inputrc` for just your profile. This is not executed or sourced but read in via `readline`
+  and `$INPUTRC`, and `$include` (or `bind -f`).
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `~/.bashrc`: Personal environment file for interactive `bash` subshells.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `~/.bash_profile`: Personal profile for `bash` login shells. Ensure this sources `~/.bashrc`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `~/.bash_login`: Personal profile for Bourne login shells. Only used if `~/.bash_profile` is not present. Ignore
+  this.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- `~/.profile`: Personal profile file for Bourne login shells. Only used if `~/.bash_profile` and `~/.bash_login` are
+  not present. Ignore this unless you also use other shells that use it.
+  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+- `~/.bash_history`: Default storage file for your shell command history. Use the `history` tools to manipulate it
+  instead of trying to directly edit it. It is not directly executed or sourced, it's just a datafile.
+  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+- `~/.bash_logout`: Executed when you log out. Place and cleanup routines in this file. This file is only executed on a
+  clean logout, i.e., if your sessions has not crashed due a dropped WAN link.
+  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+- `~/.inputrc`: Personal customisations for GNU `readline`. Tweak this as required for for just your profile. This is
+  not executed or sourced but read in via `readline` and `$INPUTRC`, and `$include` (or `bind -f`).
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.21. Creating Self-Contained, Portable `rc` Files
 
--
+- If you want to replicate a consistent `bash` environment while still allowing custom settings by operating system,
+  machines, or other (e.g., work, home, etc.) criteria, store all of your customisations in files in a `settings`
+  subdirectory, then copy or `rsync` that directory to a location such as `~/` or `/etc`, and use includes and
+  symbolic links (e.g., `ln -s ~/settings/screenrc ~/.screenrc`) as necessary.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- While it may be tempting to put `echo` statements in your configuration files to see what's going on, be careful. If
+  you do that, `scp`, `rsync`, and probably any other `rsh`-like programs will fail with mysterious errors such as the
+  following. If you need to determine the configuration files that are in use to identify a fix, run a
+  `tail -f ~/rc.log` command in one session and run your troublesome command (e.g., `scp`, `cvs`) from elsewhere to
+  determine which configuration files are in use.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # scp
+  # protocol error: bad mode
+
+  # rsync
+  # protocol version mismatch - is your shell clean?
+  # (see the rsync manpage for an explanation)
+  # rsync error: protocol incompatibility (code 2) at compat.
+  # c(62)
+  ```
+
+- For debugging, you can add the following lines to any or all of your configuration files. As there is not output to
+  the terminal, the following examples do not cause a failure like described in the previous point.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # E.g. in ~/.bash_profile
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  case "$-" in
+    *i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
+      "~/.bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+    * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
+      "~/.bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  esac
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  # In ~/.bashrc
+  case "$-" in
+    *i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
+      "~/.bashrc ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+    * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
+      "~/.bashrc ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  esac
+  ```
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
+- When making any changes to your configuration files, it is strongly recommended that you open two sessions. Make all
+  your changes in one session and then log out and back in. If you broke something so that you can't log back in, fix
+  it in the second session, and then try again from the first one. `source`ing the changed files is a help, but any
+  changes from the previous environment may allow things to work temporarily, until you log back in to the session.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.18.22. Getting Started with a Custom Configuration
 
--
+- If you'd like to tweak your environment, but aren't sure where to start, follow the following suggestions to keep
+  customisations for easy backups and portability between systems.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- For system-wide profile settings, add the contents in the following code block to `/etc/profile`. Since that file is
+  also used by the true Bourne shell, ensure not to use any `bash`-only features (e.g., `source` instead of `.`) if you
+  do this on a non-Linux system. Linux uses `bash` as the default shell for both `/bin/sh` and `/bin/bash` (except for
+  `bash` in Ubuntu 6.10+). For user-only settings, add it to only one of the following, whichever exists first:
+  `~/.bash_profile`, `~/.bash_login` or `~/profile`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- Changes to the `~/.bash_profile`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: add_to_bash_profile
+  # Add this code to your ~/.bash_profile
+
+  # If we're running in bash, search for then source our settings
+  # You can also just hardcode $SETTINGS, but this is more flexible
+  if [ -n "$BASH_VERSION" ]; then
+    for path in /opt/bin /etc ~ ; do
+      # Use the first one found
+      if [ -d "$path/settings" -a -r "$path/settings" -a -x "$path/settings" ]
+      then
+        export SETTINGS="$path/settings"
+      fi
+    done
+    source "$SETTINGS/bash_profile"
+    #source "$SETTINGS/bashrc" # If necessary
+  fi
+  ```
+
+- Changes to `~/.bashrc`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: add_to_bashrc
+  # Add this code to your ~/.bashrc
+
+  # If we're running in bash, and it isn't already set,
+  # search for then source our settings
+  # You can also just hard code $SETTINGS, but this is more flexible
+  if [ -n "$BASH_VERSION" ]; then
+    if [ -z "$SETTINGS" ]; then
+      for path in /opt/bin /etc ~ ; do
+        # Use the first one found
+        if [ -d "$path/settings" -a -r "$path/settings" -a -x "$path/settings" ]
+        then
+          export SETTINGS="$path/settings"
+        fi
+      done
+    fi
+    source "$SETTINGS/bashrc"
+  fi
+  ```
+
+- Sample full `~/.bash_profile`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: bash_profile
+
+  # settings/bash_profile: Login shell environment settings
+  # To reread (and implement changes to this file) use:
+  # source $SETTINGS/bash_profile
+
+  # Only if interactive bash with a terminal!
+  [ -t 1 -a -n "$BASH_VERSION" ] || return
+
+  # Failsafe. This should be set when we're called, but if not, the
+  # "not found" error messages should be pretty clear.
+  # Use leading ':' to prevent this from being run as a program after
+  # it is expanded.
+  : ${SETTINGS:='SETTINGS_variable_not_set'}
+
+  # DEBUGGING only--will break scp, rsync
+  # echo "Sourcing $SETTINGS/bash_profile..."
+  # export PS4='+xtrace $LINENO: '
+  # set -x
+
+  # Debugging/logging--will not break scp, rsync
+  #case "$-" in
+  #   *i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
+  #     "$SETTINGS/bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  #   * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
+  #     "$SETTINGS/bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  #esac
+
+  # Use the keychain (http://www.funtoo.org/Keychain/) shell script
+  # to manage ssh-agent, if it's available. If it's not, you should look
+  # into adding it.
+  for path in $SETTINGS ${PATH//:/ }; do
+    if [ -x "$path/keychain" ]; then
+      # Load default id_rsa and/or id_dsa keys, add others here as needed
+      # See also --clear --ignore-missing --noask --quiet --time-out
+      $path/keychain ~/.ssh/id_?sa ~/.ssh/${USER}_?sa
+       break
+    fi
+  done
+
+  # Apply interactive subshell customizations to login shells too.
+  # The system profile file in /etc probably already does this.
+  # If not, it's probably better to do it manually in wherever you:
+  # source "$SETTINGS/bash_profile"
+  # But just in case...
+  # for file in /etc/bash.bashrc /etc/bashrc ~/.bashrc; do
+  #   [ -r "$file" ] && source $file && break # Use the first one found
+  #done
+
+  # Do site- or host-specific things here
+  case $HOSTNAME in
+    *.company.com ) # source $SETTINGS/company.com
+      ;;
+    host1.* ) # host1 stuff
+      ;;
+    host2.company.com ) # source .bashrc.host2
+      ;;
+    drake.* ) # echo DRAKE in bash_profile.jp!
+    ;;
+  esac
+
+  # Do this last because we basically fork off from here. If we exit screen
+  # we return to a fully configured session. The screen session gets configured
+  # as well, and if we never leave it, well, this session isn't that bloated.
+
+  # Only run if we are interactive and not already running screen
+  # AND '~/.use_screen' exists.
+  if [ "$PS1" -a $TERM != "screen" -a "$USING_SCREEN" != "YES" -a -f ~/.use_screen ]; \
+  then
+    # We'd rather use 'type -P' here, but that was added in bash-2.05b and we
+    # use systems we don't control with versions older than that. We can't
+    # easily use 'which' since on some systems that produces output whether
+    # the file is found or not.
+    for path in ${PATH//:/ }; do
+      if [ -x "$path/screen" ]; then
+        # If screen(1) exists and is executable, run our wrapper
+        [ -x "$SETTINGS/run_screen" ] && $SETTINGS/run_screen
+      fi
+    done
+  fi
+  ```
+
+- Sample full `bashrc`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: bashrc
+
+  # settings/bash_profile: subshell environment settings
+  # To reread (and implement changes to this file) use:
+  # source $SETTINGS/bashrc
+
+  # Only if interactive bash with a terminal!
+  [ -t 1 -a -n "$BASH_VERSION" ] || return
+
+  # Failsafe. This should be set when we're called, but if not, the
+  # "not found" error messages should be pretty clear.
+  # Use leading ':' to prevent this from being run as a program after
+  # it is expanded.
+  : ${SETTINGS:='SETTINGS_variable_not_set'}
+
+  # DEBUGGING only--will break scp, rsync
+  # echo "Sourcing $SETTINGS/bash_profile..."
+  # export PS4='+xtrace $LINENO: '
+  # set -x
+
+  # Debugging/logging--will not break scp, rsync
+  # case "$-" in
+  #   *i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
+  #     "$SETTINGS/bashrc ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  #   * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
+  #     "$SETTINGS/bashrc ssh=$SSH_CONNECTION" >> ~/rc.log ;;
+  #esac
+
+  # In theory this is also sourced from /etc/bashrc (/etc/bash.bashrc)
+  # or ~/.bashrc to apply all these settings to login shells too. In practice
+  # if these settings only work sometimes (like in subshells), verify that.
+
+  # Source keychain file (if it exists) for SSH and GPG agents
+  [ -r "$HOME/.keychain/${HOSTNAME}-sh" ] \
+    && source "$HOME/.keychain/${HOSTNAME}-sh"
+  [ -r "$HOME/.keychain/${HOSTNAME}-sh-gpg" ] \
+    && source "$HOME/.keychain/${HOSTNAME}-sh-gpg"
+
+  # Set some more useful prompts
+  # Interactive command-line prompt
+  # ONLY set one of these if we really are interactive, since lots of people
+  # (even us sometimes) test to see if a shell is interactive using
+  # something like: if [ "$PS1" ]; then
+  case "$-" in
+    *i*)
+    #export PS1='\n[\u@\h t:\l l:$SHLVL h:\! j:\j v:\V]\n$PWD\$ '
+    #export PS1='\n[\u@\h:T\l:L$SHLVL:C\!:\D{%Y-%m-%d_%H:%M:%S_%Z}]\n$PWD\$ '
+    export PS1='\n[\u@\h:T\l:L$SHLVL:C\!:J\j:\D{%Y-%m-%d_%H:%M:%S_%Z}]\n$PWD\$ '
+    #export PS2='> ' # Secondary (i.e. continued) prompt
+    #export PS3='Please make a choice: ' # Select prompt
+    #export PS4='+xtrace $LINENO: ' # xtrace (debug) prompt
+    export PS4='+xtrace $BASH_SOURCE::$FUNCNAME-$LINENO: ' # xtrace prompt
+
+      # If this is an xterm set the title to user@host:dir
+      case "$TERM" in
+        xterm*|rxvt*)
+          PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}:$PWD\007"'
+        ;;
+      esac
+    ;;
+  esac
+
+  # Make sure custom inputrc is handled, if we can find it; note different
+  # names. Also note different order, since for this one we probably want
+  # our custom settings to override the system file, if present.
+  for file in $SETTINGS/inputrc ~/.inputrc /etc/inputrc; do
+    [ -r "$file" ] && export INPUTRC="$file" && break # Use first found
+  done
+
+  # No core files by default
+  # See also /etc/security/limits.conf on many Linux systems.
+  ulimit -S -c 0 > /dev/null 2>&1
+
+  # Set various aspects of the bash history
+  export HISTSIZE=5000 # Num. of commands in history stack in memory
+  export HISTFILESIZE=5000 # Num. of commands in history file
+  #export HISTCONTROL=ignoreboth # bash < 3, omit dups & lines starting with spaces
+  export HISTCONTROL='erasedups:ignoredups:ignorespace'
+  export HISTIGNORE='&:[ ]*' # bash >= 3, omit dups & lines starting with spaces
+  #export HISTTIMEFORMAT='%Y-%m-%d_%H:%M:%S_%Z=' # bash >= 3, timestamp hist file
+  shopt -s histappend # Append rather than overwrite history on exit
+  shopt -q -s cdspell # Auto-fix minor typos in interactive use of 'cd'
+  shopt -q -s checkwinsize # Update the values of LINES and COLUMNS
+  shopt -q -s cmdhist # Make multiline commands 1 line in history
+  set -o notify # (or set -b) # Immediate notify. of background job termination.
+  set -o ignoreeof # Don't let Ctrl-D exit the shell
+
+  # Other bash settings
+  PATH="$PATH:/opt/bin"
+  export MANWIDTH=80 # Manpage width, use < 80 if COLUMNS=80 & less -N
+  export LC_COLLATE='C' # Set traditional C sort order (e.g. UC first)
+  export HOSTFILE='/etc/hosts' # Use /etc/hosts for hostname completion
+  export CDPATH='.:~/:..:../..' # Similar to $PATH, but for use by 'cd'
+  # Note that the '.' in $CDPATH is needed so that cd will work under POSIX mode
+  # but this will also cause cd to echo the new directory to STDOUT!
+  # And see also "cdspell" above!
+
+  # Import bash completion settings, if they exist in the default location
+  # and if not already imported (e.g. "$BASH_COMPLETION_COMPAT_DIR" NOT set).
+  # This can take a second or two on a slow system, so you may not always
+  # want to do it, even if it does exist (which it doesn't by default on many
+  # systems, e.g. Red Hat).
+  if [ -z "$BASH_COMPLETION_COMPAT_DIR" ] && ! shopt -oq posix; then
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+      . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+    fi
+  fi
+
+  # Use a lesspipe filter, if we can find it. This sets the $LESSOPEN variable.
+  # Globally replace the $PATH ':' delimiter with space for use in a list.
+  for path in $SETTINGS /opt/bin ~/ ${PATH//:/ }; do
+    # Use first one found of 'lesspipe.sh' (preferred) or 'lesspipe' (Debian)
+    [ -x "$path/lesspipe.sh" ] && eval $("$path/lesspipe.sh") && break
+    [ -x "$path/lesspipe" ] && eval $("$path/lesspipe") && break
+  done
+
+  # Set other less & editor prefs (overkill)
+  export LESS="--LONG-PROMPT --LINE-NUMBERS --ignore-case --QUIET --no-init"
+  export VISUAL='vi' # Set a default that should always work
+  # We'd rather use 'type -P' here, but that was added in bash-2.05b and we use
+  # systems we don't control with versions older than that. We can't easily
+  # use 'which' since that produces output whether the file is found or not.
+  #for path in ${PATH//:/ }; do
+  # # Overwrite VISUAL if we can find nano
+  # [ -x "$path/nano" ] \
+  # && export VISUAL='nano --smooth --const --nowrap --suspend' && break
+  #done
+  # See above notes re: nano for why we're using this for loop
+  for path in ${PATH//:/ }; do
+    # Alias vi to vim in binary mode if we can
+    [ -x "$path/vim" ] && alias vi='vim -b' && break
+  done
+  export EDITOR="$VISUAL" # Yet Another Possibility
+  export SVN_EDITOR="$VISUAL" # Subversion
+  alias edit=$VISUAL # Provide a command to use on all systems
+
+  # Set ls options and aliases.
+  # Note all the colourising may or may not work depending on your terminal
+  # emulation and settings, esp. ANSI color. But it shouldn't hurt to have.
+  # See above notes re: nano for why we're using this for loop.
+  for path in ${PATH//:/ }; do
+    [ -r "$path/dircolors" ] && eval "$(dircolors)" \
+      && LS_OPTIONS='--color=auto' && break
+  done
+  export LS_OPTIONS="$LS_OPTIONS -F -h"
+  # Using dircolors may cause csh scripts to fail with an
+  # "Unknown colorls variable 'do'." error. The culprit is the ":do=01;35:"
+  # part in the LS_COLORS environment variable. For a possible solution see
+  # http://forums.macosxhints.com/showthread.php?t=7287
+  # eval "$(dircolors)"
+  alias ls="ls $LS_OPTIONS"
+  alias ll="ls $LS_OPTIONS -l"
+  alias ll.="ls $LS_OPTIONS -ld" # Usage: ll. ~/.*
+  alias la="ls $LS_OPTIONS -la"
+  alias lrt="ls $LS_OPTIONS -alrt"
+
+  # Useful aliases
+  # Moved to a function: alias bot='cd $(dirname $(find . | tail -1))'
+  #alias clip='xsel -b' # pipe stuff into right "X" clipboard
+  alias gc='xsel -b' # "GetClip" get stuff from right "X" clipboard
+  alias pc='xsel -bi' # "PutClip" put stuff to right "X" clipboard
+  alias clr='cd ~/ && clear' # Clear and return $HOME
+  alias cls='clear' # DOS-ish for clear
+  alias cal='cal -M' # Start calendars on Monday
+  alias copy='cp' # DOS-ish for cp
+  #alias cp='cp -i' # Annoying Red Hat default from /root/.bashrc
+  alias cvsst='cvs -qn update' # Hack to get concise CVS status (like svn st)
+  alias del='rm' # DOS-ish for rm
+  alias df='df --print-type --exclude-type=tmpfs --exclude-type=devtmpfs'
+  alias diff='diff -u' # Make unified diffs the default
+  alias jdiff="\diff --side-by-side --ignore-case --ignore-blank-lines\
+    --ignore-all-space --suppress-common-lines" # Useful GNU diff command
+  alias dir='ls' # DOS-ish for ls
+  alias hu='history -n && history -a' # Read new hist. lines; append current lines
+  alias hr='hu' # "History update" backward compat to 'hr'
+  alias inxi='inxi -c19' # (Ubuntu) system information script
+  alias ipconfig='ifconfig' # Windows-ish for ifconfig
+  alias lesss='less -S' # Don't wrap lines
+  alias locate='locate -i' # Case-insensitive locate
+  alias man='LANG=C man' # Display manpages properly
+  alias md='mkdir' # DOS-ish for mkdir
+  alias move='mv' # DOS-ish for mv
+  #alias mv='mv -i' # Annoying Red Hat default from /root/.bashrc
+  alias ntsysv='rcconf' # Debian rcconf is pretty close to Red Hat ntsysv
+  #alias open='gnome-open' # Open files & URLs using GNOME handlers; see run below
+  alias pathping='mtr' # mtr - a network diagnostic tool
+  alias ping='ping -c4' # Only 4 pings by default
+  alias r='fc -s' # Recall and execute 'command' starting with...
+  alias rd='rmdir' # DOS-ish for rmdir
+  # Tweaked from http://bit.ly/2fc4e8Z
+  alias randomwords="shuf -n102 /usr/share/dict/words \
+    | perl -ne 'print qq(\u\$_);' | column"
+  alias ren='mv' # DOS-ish for mv/rename
+  #alias rm='rm -i' # Annoying Red Hat default from /root/.bashrc
+  alias reloadbind='rndc -k /etc/bind/rndc.key freeze \
+    && rndc -k /etc/bind/rndc.key reload && rndc -k /etc/bind/rndc.key thaw'
+    # Reload dynamic BIND zones after editing db.* files
+  alias svndiff='meld' # Cool GUI diff, similar to TortoiseMerge
+  alias svnpropfix='svn propset svn:keywords "id url date"'
+  alias svnkey='svn propset svn:keywords "id url"'
+  alias svneol='svn propset svn:eol-style' # One of 'native', 'LF', 'CR', 'CRLF'
+  alias svnexe='svn propset svn:executable on'
+  alias top10='sort | uniq -c | sort -rn | head'
+  alias tracert='traceroute' # DOS-ish for traceroute
+  alias vzip='unzip -lvM' # View contents of ZIP file
+  alias wgetdir="wget --no-verbose --recursive --no-parent --no-directories \
+    --level=1" # Grab a whole directory using wget
+  alias wgetsdir="wget --no-verbose --recursive --timestamping --no-parent \
+    --no-host-directories --reject 'index.*'" # Grab a dir and subdirs
+  alias zonex='host -l' # Extract (dump) DNS zone
+
+  # Date/time
+  alias iso8601="date '+%Y-%m-%dT%H:%M:%S%z'" # ISO 8601 time
+  alias now="date '+%F %T %Z(%z)'" # More readable ISO 8601 local
+  alias utc="date --utc '+%F %T %Z(%z)'" # More readable ISO 8601 UTC
+
+  # Neat stuff from http://xmodulo.com/useful-bash-aliases-functions.html
+  alias meminfo='free -m -l -t' # See how much memory you have left
+  alias whatpid='ps auwx | grep' # Get PID and process info
+  alias port='netstat -tulanp' # Show which apps are connecting to the network
+
+  # If the script exists and is executable, create an alias to get
+  # web server headers
+  for path in ${PATH//:/ }; do
+    [ -x "$path/lwp-request" ] && alias httpdinfo='lwp-request -eUd' && break
+  done
+
+  # Useful functions
+
+  # Use 'gnome-open' to "run" things
+  function run {
+    [ -r "$*" ] && {
+      gnome-open "$*" >& /dev/null
+    } || {
+      echo "'$*' not found or not readable!"
+    }
+  }
+
+  # Python version of 'perl -c'
+  function python-c {
+    python -m py_compile "$1" && rm -f "${1}c"
+  }
+
+  # cd to the bottom of a narrow but deep dir tree
+  function bot {
+    local dir=${1:-.}
+    #\cd $(dirname $(find $dir | tail -1))
+    \cd $(find . -name CVS -prune -o -type d -print | tail -1)
+  }
+
+  # mkdir newdir then cd into it
+  # usage: mcd (<mode>) <dir>
+  function mcd {
+    local newdir='_mcd_command_failed_'
+    if [ -d "$1" ]; then # Dir exists, mention that...
+      echo "$1 exists..."
+      newdir="$1"
+    else
+      if [ -n "$2" ]; then # We've specified a mode
+        command mkdir -p -m $1 "$2" && newdir="$2"
+      else # Plain old mkdir
+        command mkdir -p "$1" && newdir="$1"
+      fi
+    fi
+    builtin cd "$newdir" # No matter what, cd into it
+  } # end of mcd
+
+  # Trivial command-line calculator
+  function calc {
+    # INTEGER ONLY! --> echo The answer is: $(( $* ))
+    # Floating point
+    awk "BEGIN {print \"$* = \" $* }";
+    #awk "BEGIN {printf \"$* = %f\", $* }";
+  } # end of calc
+
+  function add_up {
+  awk '{sum += $1} END {print sum}'
+  }
+
+  # Allow use of 'cd ...' to cd up 2 levels, 'cd ....' up 3, etc. (like 4NT/4DOS)
+  # Usage: cd ..., etc.
+  function cd {
+    local option= length= count= cdpath= i= # Local scope and start clean
+    # If we have a -L or -P symlink option, save then remove it
+    if [ "$1" = "-P" -o "$1" = "-L" ]; then
+      option="$1"
+      shift
+    fi
+
+    # Are we using the special syntax? Make sure $1 isn't empty, then
+    # match the first 3 characters of $1 to see if they are '...', then
+    # make sure there isn't a slash by trying a substitution; if it fails,
+    # there's no slash.
+    if [ -n "$1" -a "${1:0:3}" = '...' -a "$1" = "${1%/*}" ]; then
+      # We are using special syntax
+      length=${#1} # Assume that $1 has nothing but dots and count them
+      count=2 # 'cd ..' still means up one level, so ignore first two
+
+      # While we haven't run out of dots, keep cd'ing up 1 level
+      for ((i=$count;i<=$length;i++)); do
+        cdpath="${cdpath}../" # Build the cd path
+      done
+
+      # Actually do the cd
+      builtin cd $option "$cdpath"
+    elif [ -n "$1" ]; then
+      # We are NOT using special syntax; just plain old cd by itself
+      builtin cd $option "$*"
+    else
+      # We are NOT using special syntax; plain old cd by itself to home dir
+      builtin cd $option
+    fi
+  } # end of cd
+
+  # Do site- or host-specific things here
+  case $HOSTNAME in
+    *.company.com ) # source $SETTINGS/company.com
+      ;;
+    host1.* ) # host1 stuff
+      ;;
+    host2.company.com ) # source .bashrc.host2
+      ;;
+    drake.* ) # echo DRAKE in bashrc.jp!
+      export TAPE=/dev/tape
+      ;;
+  esac
+  ```
+
+- Sample `~/.inputrc`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: inputrc
+  # settings/inputrc: # readline settings
+  # To reread (and implement changes to this file) use:
+  # bind -f $SETTINGS/inputrc
+
+  # First, include any system-wide bindings and variable
+  # assignments from /etc/inputrc
+  # (fails silently if file doesn't exist)
+  $include /etc/inputrc
+
+  $if Bash
+    # Ignore case when doing completion
+    set completion-ignore-case on
+
+    # Completed dir names have a slash appended
+    set mark-directories on
+
+    # Completed names which are symlinks to dirs have a slash appended
+    set mark-symlinked-directories on
+
+    # List ls -F for completion
+    set visible-stats on
+
+    # Cycle through ambiguous completions instead of list
+    "\C-i": menu-complete
+
+    # Set bell to audible
+    set bell-style audible
+
+    # List possible completions instead of ringing bell
+    set show-all-if-ambiguous on
+
+    # From the readline documentation at
+    # https://cnswww.cns.cwru.edu/php/chet/readline/readline.html#SEC12
+    # Macros that are convenient for shell interaction
+    # edit the path
+    "\C-xp": "PATH=${PATH}\e\C-e\C-a\ef\C-f"
+
+    # prepare to type a quoted word -- insert open and close double quotes
+    # and move to just after the open quote
+    "\C-x\"": "\"\"\C-b"
+
+    # insert a backslash (testing backslash escapes in sequences and macros)
+    "\C-x\\": "\\"
+
+    Quote the current or previous word
+    "\C-xq": "\eb\"\ef\""
+
+    # Add a binding to refresh the line, which is unbound
+    "\C-xr": redraw-current-line
+
+    # Edit variable on current line.
+    #"\M-\C-v": "\C-a\C-k$\C-y\M-\C-e\C-a\C-y="
+    "\C-xe": "\C-a\C-k$\C-y\M-\C-e\C-a\C-y="
+  $endif
+
+  # some defaults / modifications for the emacs mode
+  $if mode=emacs
+    # allow the use of the Home/End keys
+    "\e[1~": beginning-of-line
+    "\e[4~": end-of-line
+
+    # allow the use of the Delete/Insert keys
+    "\e[3~": delete-char
+    "\e[2~": quoted-insert
+
+    # mappings for "page up" and "page down" to step to beginning/end of the history
+    # "\e[5~": beginning-of-history
+    # "\e[6~": end-of-history
+
+    # alternate mappings for "page up" and "page down" to search the history
+    # "\e[5~": history-search-backward
+    # "\e[6~": history-search-forward
+
+    # MUCH nicer up-arrow search behaviour!
+    "\e[A": history-search-backward ## up-arrow
+    "\e[B": history-search-forward ## down-arrow
+
+    # mappings for Ctrl-left-arrow and Ctrl-right-arrow for word moving
+    ### These were/are broken, and /etc/inputrc has better anyway
+    # "\e[5C": forward-word
+    # "\e[5D": backward-word
+    # "\e\e[C": forward-word
+    # "\e\e[D": backward-word
+
+    # for non RH/Debian xterm, can't hurt for RH/Debian xterm
+    "\eOH": beginning-of-line
+    "\eOF": end-of-line
+
+    # for FreeBSD console
+    "\e[H": beginning-of-line
+    "\e[F": end-of-line
+  $endif
+  ```
+
+- Sample `~/.bash_logout`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: bash_logout
+
+  # settings/bash_logout: execute on shell logout
+
+  # Clear the screen on logout to prevent information leaks, if not already
+  # set as an exit trap elsewhere
+  [ -n "$PS1" ] && clear
+  ```
+
+- Sample `~/.run_screen`, for GNU `screen`, which you may need to install.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  #!/usr/bin/env bash
+  # cookbook filename: run_screen
+
+  # run_screen--Wrapper script intended to run from a "profile" file to run
+  # screen at login time with a friendly menu.
+
+  # Sanity check
+  if [ "$TERM" == "screen" -o "$TERM" == "screen-256color" ]; then
+    printf "%b" "According to \$TERM = '$TERM' we're *already* using" \
+      " screen.\nAborting...\n"
+    exit 1
+  elif [ "$USING_SCREEN" == "YES" ]; then
+    printf "%b" "According to \$USING_SCREEN = '$USING_SCREEN' we're"
+      " *already* using screen.\nAborting...\n"
+    exit 1
+  fi
+
+  # The "$USING_SCREEN" variable is for the rare cases when screen does NOT set
+  # $TERM=screen. This can happen when 'screen' is not in `TERMCAP` or friends,
+  # as is the case on a Solaris 9 box we use but don't control. If we don't
+  # have some way to tell when we're inside screen, this wrapper goes into an
+  # ugly and confusing endless loop.
+
+  # Seed list with Exit and New options and see what screens are already running.
+  # The select list is whitespace-delimited, and we only want actual screen
+  # sessions, so use perl to remove whitespace, filter for sessions, and show
+  # only useful info from 'screen -ls' output.
+  available_screens="Exit New $(screen -ls \
+    | perl -ne 's/\s+//g; print if s/^(\d+\..*?)(?:\(.*?\))?(\(.*?\))$/$1$2\n/;')"
+
+  # Print a warning if using runtime feedback
+  run_time_feedback=0
+  [ "$run_time_feedback" == 1 ] && printf "%b" "
+  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  'screen' Notes:
+
+  1) Sessions marked 'unreachable' or 'dead' should be investigated and
+  removed with the -wipe option if appropriate.\n\n"
+
+  # Present a list of choices
+  PS3='Choose a screen for this session: '
+
+  select selection in $available_screens; do
+    if [ "$selection" == "Exit" ]; then
+      break
+    elif [ "$selection" == "New" ]; then
+      export USING_SCREEN=YES
+      exec screen -c $SETTINGS/screenrc -a \
+        -S $USER.$(date '+%Y-%m-%d_%H:%M:%S%z')
+      break
+    elif [ "$selection" ]; then
+      # Pull out just the part we need using cut
+      # We'd rather use a 'here string' [$(cut -d'(' -f1 <<< $selection)]
+      # than this echo, but they are only in bash-2.05b+
+      screen_to_use="$(echo $selection | cut -d'(' -f1)"
+      # Old: exec screen -dr $screen_to_use
+      # Alt: exec screen -x $USER/$screen_to_use
+      exec screen -r $USER/$screen_to_use
+      break
+    else
+      printf "%b" "Invalid selection.\n"
+    fi
+  done
+  ```
+
+- You should not set `$PS1` at inappropriate times, or if you set traps using `clear`. You can use the following to
+  determine if the current shell in interactive.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  if [ -n "$PS1" ]; then
+    : Interactive code here
+  fi
+  ```
+
+- If you arbitrarily set `$PS1` if the shell isn't interactive, or if you set a trap using just `clear` instead of
+  `["$PS1"]&&clear`, you'll get errors like the following when using `scp` or `ssh` non-interactively.
+  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+
+  ```bash
+  # e.g. from tput
+  No value for $TERM and no -T specified
+
+  # e.g. from clear
+  TERM environment variable not set.
+  ```
 
 ### 1.2.19. Housekeeping & Administrative Tasks
 
