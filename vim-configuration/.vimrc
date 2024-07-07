@@ -1,9 +1,29 @@
 " ---------------------------------------------------------------------------------------------------------------------
+" Vundle Configuration, as documented in https://github.com/vundlevim/vundle.vim?tab=readme-ov-file#quick-start
+" ---------------------------------------------------------------------------------------------------------------------
+
+set nocompatible
+filetype off
+
+" Set the runtime path to include Vundle and initialise
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" Let Vundle manage Vundle
+Plugin 'VundleVim/Vundle.vim'
+
+" Let Vundle manage Markdown Preview
+Plugin 'iamcco/markdown-preview.nvim'
+
+" All of your Plugins must be added before the following line.
+call vundle#end()
+
+" ---------------------------------------------------------------------------------------------------------------------
 " Text Rendering
 " ---------------------------------------------------------------------------------------------------------------------
 
 " Enable syntax highlighting
-filetype plugin on
+filetype plugin indent on
 
 " Enable syntax processing
 syntax enable
