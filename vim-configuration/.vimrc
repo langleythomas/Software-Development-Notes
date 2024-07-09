@@ -118,7 +118,7 @@ set smartcase
 
 " Ensure that Vim uses the system clipboard when copying and pasting test
 " Linux
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
 " Windows/MacOS
 " set clipboard+=unnamed
 
