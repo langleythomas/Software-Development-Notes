@@ -15208,7 +15208,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - Enter `screen -x <user>/<name>` to connect to a shared screen, e.g., `screen -x host/training`.
     [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
-  - Enter `<Ctrl> + a + k` to kill the window and end the session
+  - Enter `<Ctrl> + a + k` to kill the window and end the session.
     [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 - For multi-user mode, `/tmp/screens` must exist and be world-readable and executable.
@@ -15216,131 +15216,121 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.19.6. Logging an Entire Session or Batch Job
 
--
+- If you need to capture all the output from an entire session or a long batch job, there are many ways to solve this
+  problem, depending on your needs and environment.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- The simplest solution is to enable logging to memory or disk in your terminal program. The issues with that are:
+  your terminal program may not allow it, and when it gets disconnected, you lose your logs.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- The next simplest solution is to modify the job to log itself, or redirect the entire output to `tee` or a file. The
+  problems here are that you may not be able to modify the job, or the job itself may do something that precludes these
+  solutions, e.g., if it requires input, it could get stuck asking for the input before the prompt is displayed. This
+  may happen because `STDOUT` is buffered, so the prompt could be in buffer waiting to be displayed when more data is
+  outputted, but no more data will be generated since the program is waiting for input.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  long_noisy_job >& log_file
+  long_noisy_job 2>&1 | tee log_file
+
+  ( long_noisy_job ) >& log_file
+  ( long_noisy_job ) 2>&1 | tee log_file
+  ```
+
+- The third solution is to use a program called `script`that exists for this very purpose, and is most likely already
+  installed on your system. You run `script`, and it logs everything that happens to the logfile (called a
+  *typescript*) you've given it. `script` logs the entire sessions, but if you only want to capture part of the
+  session, there is no way to have your code start `script`, run something to log it, then stop `script`. You can't
+  script `script`, because once you run it, you're in a subshell at a prompt, i.e., you can't do something like
+  `script <file_to_log> <some_command_to_run>`
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- The final solution uses the terminal multiplexer `screen`. With `screen`, you can turn whole session logging on or
+  off from inside your script. Once you are already running `screen`, do the following in your script.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Set a logfile and turn on logging
+  screen -X logfile /path/to/logfile && screen -X log on
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  # Your commands here
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  # Turn logging back off
+  screen -X logfile 1 # Set buffer to 1 sec
+  sleep 3 # Wait to avoid file truncation...
+  screen -X log off
+  ```
 
 #### 1.2.19.7. Clearing the Screen When You Log Out
 
--
+- If you use or administers that do not clear the screen you log out, and you'd prefer to hide your work for any
+  reason, add the `clear` command in your `~/.bash_logout` file.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # cookbook filename: bash_logout
+
+  # settings/bash_logout: execute on shell logout
+
+  # Clear the screen on logout to prevent information leaks, if not already
+  # set as an exit trap elsewhere
+  [ -n "$PS1" ] && clear
+  ```
+
+- Alternatively, you could set a trap to run `clear` on shell termination.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Trap to clear the screen on exit from the shell to prevent
+  # information leaks, if not already set in ~/.bash_logout
+  trap ' [ -n "$PS1" ] && clear ' 0
+  ```
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
+- If you are connected remotely and your client has a scrollback bugger, your work may still be there. `clear` has no
+  effect on your shell's command history.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.2.19.8. Capturing File Metadata for Recovery
 
--
+- If you want to create a list of files and their details for archival purposes, e.g., to verify backups, recreate
+  directories, a backup plan for a large `chmod -R`, you can use GNU `find` with some `printf` formats to capture
+  file metadata. Note that the `-printf` expressions is in the GNU version of `find`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  printf "%b" "Mode\tUser\tGroup\tBytes\tModified\tFileSpec\n" > archive_file
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  find / \( -path /proc -o -path /mnt -o -path /tmp -o -path /var/tmp \
+    -o -path /var/cache -o -path /var/spool \) -prune \
+    -o -type d -printf 'd%m\t%u\t%g\t%s\t%t\t%p/\n' \
+    -o -type l -printf 'l%m\t%u\t%g\t%s\t%t\t%p -> %l\n' \
+    -o -printf '%m\t%u\t%g\t%s\t%t\t%p\n' >> archive_file
+  ```
 
 #### 1.2.19.9. Creating an Index of Many Files
 
--
+- If you have a large number of files for which you'd like to create an index, use the `find` command in conjunction
+  with `head`, `grep`, or other commands that parse out comments or summary information from each file.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+- E.g., if the second line of all of your shell scripts follows the format "name - description", then the following
+  example will create a suitable index
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  for i in $(grep -El '#![[:space:]]?/bin/sh' *); do head -2 $i | tail -1; done
+  ```
+
+- The technique described in this section depends on each file having some kind of summary information (such as
+  comments) that may be parsed out. If the files do not not easily parsed summary information, you can do something
+  like the following to manually read through the output to create an index.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  for dir in $(find . -type d); do head -15 $dir/*; done
+  ```
 
 #### 1.2.19.10. Using `diff` & `patch`
 
@@ -15376,35 +15366,83 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.2.19.11. Counting Differences in Files
 
--
+- If you have two files and need to know about the number of differences that exist between them, count the *hunks*
+  in the output from `diff`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ diff -C0 original_file modified_file | grep -c "^\*\*\*\*\*"
+  2
+
+  $ diff -C0 original_file modified_file
+  *** original_file Fri Nov 24 12:48:35 2006
+  --- modified_file Fri Nov 24 12:48:43 2006
+  ***************
+  *** 1 ****
+  ! This is original_file, and this line is different.
+  --- 1 ---
+  ! This is modified_file, and this line is different.
+  ***************
+  *** 6 ****
+  ! But this one is different.
+  --- 6 ---
+  ! But this 1 is different.
+  ```
+
+- If you only need to know whether the files are different and not how many differences there are, use `cmp`. It will
+  exit at the first difference, which can save time on larger files.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cmp original_file modified_file
+  original_file modified_file differ: char 9, line 1
+  ```
+
+- *Hunk* is actually the technical term, but *chunk* has also been used to refer to the same thing. In possible, it is
+  theoretically possible to get slightly different results for the same files across different machines or versions of
+  `diff`, as the number of hunks is a result of the algorithm used by `diff`.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ diff -u original_file modified_file | grep -c "^@@"
+  1
+
+  $ diff -u original_file modified_file
+  --- original_file 2006-11-24 12:48:35.000000000 -0500
+  +++ modified_file 2006-11-24 12:48:43.000000000 -0500
+  @@ -1,8 +1,8 @@
+  -This is original_file, and this line is different.
+  +This is modified_file, and this line is different.
+  This line is the same.
+  So is this one.
+  And this one.
+  Ditto.
+  -But this one is different.
+  +But this 1 is different.
+  However, not this line.
+  And this is the last same, same, same.
+  ```
+
+- A normal or `ed`-style `diff` also works, but the `grep` pattern is more complicated.
   [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ diff -e original_file modified_file | egrep -c '^[[:digit:],]+[[:alpha:]]+'
+  2
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  $ diff original_file modified_file | egrep -c '^[[:digit:],]+[[:alpha:]]+'
+  2
 
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.9.2. O'Reilly: `bash` Cookbook, 2nd Edition](#592-oreilly-bash-cookbook-2nd-edition)
+  $ diff original_file modified_file
+  1c1
+  < This is original_file, and this line is different.
+  ---
+  > This is modified_file, and this line is different.
+  6c6
+  < But this one is different.
+  ---
+  > But this 1 is different.
+  ```
 
 #### 1.2.19.12. Removing or Renaming Files Named with Special Characters
 
