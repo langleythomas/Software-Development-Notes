@@ -12,9 +12,13 @@ call vundle#begin()
 " Let Vundle manage Vundle
 Plugin 'VundleVim/Vundle.vim'
 
-" Let Vundle manage Markdown Preview, as documented in
+" Let Vundle manage Markdown Preview, as documented in:
 " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage
 Plugin 'iamcco/markdown-preview.nvim'
+
+" Let Vundle manage the Dracula theme, as documented in:
+" https://draculatheme.com/vim
+Plugin 'dracula/vim', { 'name': 'dracula' }
 
 " All of your Plugins must be added before the following line.
 call vundle#end()
@@ -27,34 +31,16 @@ call vundle#end()
 " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
 let g:mkdp_auto_start = 1
 
+" Enabling the Markdown Preview window to only be updated after saving the buffer or when leaving insert mode, as
+" documented in https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
+let g:mkdp_refresh_slow = 1 
+
 " ---------------------------------------------------------------------------------------------------------------------
 " Text Rendering
 " ---------------------------------------------------------------------------------------------------------------------
 
 " Enable syntax highlighting
 filetype plugin indent on
-
-" Enable syntax processing
-syntax enable
-
-" Avoid wrapping a line in the middle of a word
-set linebreak
-
-" Enable line wrapping
-set wrap
-
-" Set font
-set guifont=JetBrains\ Mono\ NL\ Light\ 10
-
-" ---------------------------------------------------------------------------------------------------------------------
-" Text Navigation
-" ---------------------------------------------------------------------------------------------------------------------
-
-" Allow backspace over indentation, line breaks, and insertion start
-set backspace=indent,eol,start
-
-" Enable wrapping to new/previous lines with arrow keys
-set whichwrap+=<,>,[,]
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Spell Checking
@@ -65,16 +51,6 @@ set spell
 
 " Set dictionary
 set spelllang=en_gb
-
-" Disable block colour highlighting for both (1) words not recognised, and (2) the wrong spelling for a selected region
-hi clear SpellBad
-hi clear SpellLocal
-
-" Change highlighting of text error (word not recognised) from a red block to red and underlined text
-hi SpellBad cterm=underline ctermfg=red
-
-" Change highlighting of text error (wrong spelling for selected region) from a blue block to blue and underlined text
-hi SpellLocal cterm=underline ctermfg=blue
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Spaces & Tabs
@@ -93,7 +69,7 @@ set expandtab
 set shiftwidth=2
 
 " New lines inherit the indentation of previous lines
-set autoindent
+" set autoindent
 
 " Round the indentation to the nearest multiple of shiftwidth
 set shiftround
@@ -117,11 +93,8 @@ set showmatch
 " Show (partial) command in the last line of the screen
 set showcmd
 
-" Set column colour at the designated column width
-set colorcolumn=120
-
 "Setting the colour scheme
-colorscheme slate
+colorscheme dracula
 
 " ---------------------------------------------------------------------------------------------------------------------
 " Searching
@@ -145,9 +118,9 @@ set smartcase
 
 " Ensure that Vim uses the system clipboard when copying and pasting test
 " Linux
-set clipboard=unnamedplus
+set clipboard+=unnamedplus
 " Windows/MacOS
-" set clipboard=unnamed
+" set clipboard+=unnamed
 
 " ---------------------------------------------------------------------------------------------------------------------
 " File Type
