@@ -43,6 +43,16 @@ let g:mkdp_refresh_slow = 1
 filetype plugin indent on
 
 " ---------------------------------------------------------------------------------------------------------------------
+" Text Navigation
+" ---------------------------------------------------------------------------------------------------------------------
+
+" Allow backspace over indentation, line breaks, and insertion start
+set backspace=indent,eol,start
+
+" Enable wrapping to new/previous lines with arrow keys
+set whichwrap+=<,>,[,]
+
+" ---------------------------------------------------------------------------------------------------------------------
 " Spell Checking
 " ---------------------------------------------------------------------------------------------------------------------
 
@@ -118,7 +128,7 @@ set smartcase
 
 " Ensure that Vim uses the system clipboard when copying and pasting test
 " Linux
-" set clipboard+=unnamedplus
+set clipboard+=unnamedplus
 " Windows/MacOS
 " set clipboard+=unnamed
 
