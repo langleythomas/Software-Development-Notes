@@ -283,6 +283,31 @@ function install_vundle_plugins() {
   vim ~/".vimrc" -c "call mkdp#util#install()" +qall
 }
 
+function install_neovim() {
+  log_output "Installing Neovim.\n"
+
+  log_output "Downloading Neovim AppImage.\n"
+  curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+  chmod u+x "nvim.appimage"
+
+  log_output "Moving Neovim Making it Globally Accessible.\n"
+  sudo mkdir --parents "/opt/nvim"
+  sudo mv "nvim.appimage" "/opt/nvim/nvim"
+}
+
+function configure_neovim() {
+  log_output "Creating Neovim configuration directories and configuration files.\n"
+
+  mkdir --verbose --parents ~/".config/nvim"
+  touch ~/".config/nvim/init.lua"
+  curl \
+    "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.lua" \
+    >> ~/".config/nvim/init.lua"
+
+  # There is no need for a source command on the init.vim, as the init.vim is automatically read and validated when
+  # executing the vim command in a terminal.
+}
+
 function install_visual_studio_code() {
   update_and_upgrade_apt
 
@@ -312,6 +337,9 @@ function call_text_editor_installation_functions() {
   install_vundle
   configure_vim
   install_vundle_plugins
+
+  install_neovim
+  configure_neovim
 
   install_visual_studio_code
 }
