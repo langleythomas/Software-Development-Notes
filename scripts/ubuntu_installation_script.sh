@@ -319,6 +319,14 @@ function configure_neovim() {
   # executing the vim command in a terminal.
 }
 
+function install_neovim_system_clipboard_dependency() {
+  update_and_upgrade_apt
+
+  log_output "Installing xclip, in order to enable neovim's use of the system clipboard.\n"
+
+  sudo apt install xclip --yes
+}
+
 function install_visual_studio_code() {
   update_and_upgrade_apt
 
@@ -351,6 +359,7 @@ function call_text_editor_installation_functions() {
 
   install_neovim
   configure_neovim
+  install_neovim_system_clipboard_dependency
 
   install_visual_studio_code
 }
