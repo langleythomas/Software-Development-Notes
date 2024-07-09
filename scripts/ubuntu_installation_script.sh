@@ -299,10 +299,10 @@ function configure_neovim() {
   log_output "Creating Neovim configuration directories and configuration files.\n"
 
   mkdir --verbose --parents ~/".config/nvim"
-  touch ~/".config/nvim/init.lua"
+  touch ~/".config/nvim/init.vim"
   curl \
-    "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.lua" \
-    >> ~/".config/nvim/init.lua"
+    "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.vim" \
+    >> ~/".config/nvim/init.vim"
 
   # There is no need for a source command on the init.vim, as the init.vim is automatically read and validated when
   # executing the vim command in a terminal.
