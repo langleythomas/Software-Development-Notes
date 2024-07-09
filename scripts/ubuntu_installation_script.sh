@@ -275,12 +275,23 @@ function configure_vim() {
   # executing the vim command in a terminal.
 }
 
-function install_vundle_plugins() {
+function install_vim_dracula_theme() {
+  log_output "Installing the Dracula Vim theme, as documented in: https://draculatheme.com/vim\n"
+
+  vim +PluginInstall +qall
+}
+
+function install_vim_markdown_preview() {
   log_output "Installing Vim plugins using Vundle, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
 
   vim ~/".vimrc" --cmd "source %" +qall
   vim +PluginInstall +qall
   vim ~/".vimrc" -c "call mkdp#util#install()" +qall
+}
+
+function install_vundle_plugins() {
+  install_vim_dracula_theme
+  install_vim_markdown_preview
 }
 
 function install_neovim() {
