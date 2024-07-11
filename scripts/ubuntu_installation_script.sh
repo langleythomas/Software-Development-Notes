@@ -8,6 +8,7 @@ function log_output() {
   local -r logger_output="${1}"
 
   printf "%s" "${logger_output}"
+
   printf -- "-----------------------------------------------------------------------------------------------------------------------\n"
 }
 
@@ -18,6 +19,7 @@ function update_and_upgrade_apt() {
   log_output "Updating and updating releases in apt.\n"
 
   sudo apt update
+
   sudo apt upgrade --yes
 }
 
@@ -47,7 +49,8 @@ function purge_nvidia_drivers() {
   log_output "Purging Nvidia drivers.\n"
 
   sudo apt purge nvidia* --yes
-  sudo ubuntu-drivers autoinstall
+
+  sudo ubuntu-drivers autoinstall --yes
 }
 
 function call_nvidia_driver_function() {
@@ -64,9 +67,11 @@ function install_dot_net_sdk() {
   log_output "Installing .NET SDK.\n"
 
   sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
+
   sudo apt install --yes dotnet-sdk-7.0
 
   dotnet --list-sdks
+
   dotnet --info
 }
 
@@ -78,6 +83,7 @@ function install_dot_net_runtime() {
   sudo apt install --yes aspnetcore-runtime-7.0
 
   dotnet --list-runtimes
+
   dotnet --info
 }
 
@@ -96,6 +102,7 @@ function install_javascript_development_tools() {
   log_output "Installing JavaScript Development Tools.\n"
 
   sudo apt install --yes ca-certificates curl gnupg
+
   sudo mkdir --parents /etc/apt/keyrings
 
   curl \
@@ -103,12 +110,13 @@ function install_javascript_development_tools() {
     --silent \
     --show-error \
     --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" \
-    | sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
+  | sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
 
   local -r node_version=20
 
-  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$node_version.x nodistro main" \
-    | sudo tee /etc/apt/sources.list.d/nodesource.list
+  echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
+    https://deb.nodesource.com/node_$node_version.x nodistro main" \
+  | sudo tee /etc/apt/sources.list.d/nodesource.list
 
   sudo apt install nodejs --yes
 }
@@ -129,7 +137,9 @@ function install_docker() {
   # Add Docker's official GPG key:
   sudo apt install ca-certificates curl
 
-  sudo install --mode=0755 --directory="/etc/apt/keyrings"
+  sudo install \
+    --mode=0755 \
+    --directory="/etc/apt/keyrings"
 
   sudo curl \
     --fail \
@@ -143,15 +153,16 @@ function install_docker() {
   # Add the repository to Apt sources:
   # shellcheck disable=SC1091
   echo \
-    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
-    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+    https://download.docker.com/linux/ubuntu \
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" \
+  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
   # Install and Start Docker Engine.
   sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --yes
 
   # Add user to Docker group
-  sudo usermod --append --groups docker "${USER}" && newgrp docker
+  sudo usermod --append --groups "docker" "${USER}" && newgrp "docker"
 }
 
 function start_docker() {
@@ -190,21 +201,23 @@ function start_minikube() {
 function install_kubernetes() {
   log_output "Installing Kubernetes.\n"
 
-  local -r latest_kubernetes_release="$(curl --silent https://storage.googleapis.com/kubernetes-release/release/stable.txt)"
+  local -r latest_kubernetes_release="$(curl --silent \"https://storage.googleapis.com/kubernetes-release/release/stable.txt\")"
 
   curl \
     --location \
     --output \
     "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
 
-  chmod +x ./kubectl
-  sudo mv ./kubectl /usr/local/bin/kubectl
+  chmod +x ./"kubectl"
+
+  sudo mv ./"kubectl" "/usr/local/bin/kubectl"
 }
 
 function test_kubernetes_installation() {
   log_output "Testing Kubernetes Installation.\n"
 
   kubectl version
+
   kubectl cluster-info
 }
 
@@ -213,9 +226,13 @@ function install_helm() {
   log_output "Installing Helm.\n"
 
   local -r install_helm_file_name="get_helm.sh"
+
   curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "${install_helm_file_name}"
+
   chmod 700 "${install_helm_file_name}"
+
   ./"${install_helm_file_name}"
+
   rm --force --verbose "${install_helm_file_name}"
 }
 
@@ -223,8 +240,11 @@ function test_helm_installation() {
   log_output "Testing Helm Installation.\n"
 
   helm repo add bitnami "https://charts.bitnami.com/bitnami"
+
   helm install odoo bitnami/odoo --set serviceType=NodePort
+
   kubectl get pods | grep "Running"
+
   helm delete odoo
 }
 
@@ -251,8 +271,11 @@ function install_vim() {
   update_and_upgrade_apt
 
   log_output "Installing vim.\n"
+
   log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard\n."
+
   log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
+
   sudo apt-get install vim-gtk3 --yes
 }
 
@@ -266,7 +289,9 @@ function configure_vim() {
   log_output "Creating Vim configuration directories and configuration file.\n"
 
   mkdir --verbose --parents ~/".vim" ~/".vim/autoload" ~/".vim/backup" ~/".vim/colors" ~/".vim/plugged"
+
   touch ~/".vimrc"
+
   curl \
     "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/vim-configuration/.vimrc" \
     >> ~/".vimrc"
@@ -285,7 +310,9 @@ function install_vim_markdown_preview() {
   log_output "Installing Vim plugins using Vundle, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
 
   vim ~/".vimrc" --cmd "source %" +qall
+
   vim +PluginInstall +qall
+
   vim ~/".vimrc" -c "call mkdp#util#install()" +qall
 }
 
@@ -298,11 +325,15 @@ function install_neovim() {
   log_output "Installing Neovim.\n"
 
   log_output "Downloading Neovim AppImage.\n"
+
   curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+
   chmod u+x "nvim.appimage"
 
   log_output "Moving Neovim Making it Globally Accessible.\n"
+
   sudo mkdir --parents "/opt/nvim"
+
   sudo mv "nvim.appimage" "/opt/nvim/nvim"
 }
 
@@ -310,7 +341,9 @@ function configure_neovim() {
   log_output "Creating Neovim configuration directories and configuration files.\n"
 
   mkdir --verbose --parents ~/".config/nvim"
+
   touch ~/".config/nvim/init.vim"
+
   curl \
     "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.vim" \
     >> ~/".config/nvim/init.vim"
@@ -333,11 +366,21 @@ function install_visual_studio_code() {
   log_output "Installing Visual Studio Code.\n"
 
   sudo apt install wget gpg --yes
+
   wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
     | gpg --dearmor > "packages.microsoft.gpg"
-  sudo install -D --owner=root --group=root --mode=644 "packages.microsoft.gpg" "/etc/apt/keyrings/packages.microsoft.gpg"
-  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" \
+
+  sudo install -D \
+    --owner=root \
+    --group=root \
+    --mode=644 \
+    "packages.microsoft.gpg" \
+    "/etc/apt/keyrings/packages.microsoft.gpg"
+  
+  echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] \
+    https://packages.microsoft.com/repos/code stable main" \
     | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+
   rm --force --verbose "packages.microsoft.gpg"
 
   update_and_upgrade_apt
@@ -400,6 +443,7 @@ function configure_git_username_email() {
   log_output "Setting up Git with a default username and email.\n"
 
   git config --global user.name "langleythomas"
+
   git config --global user.email "thomas.moorhead.langley@gmail.com"
 }
 
@@ -407,7 +451,9 @@ function generate_github_ssh_key() {
   log_output "Generating SSH key for cloning private GitHub repositories.\n"
 
   ssh-keygen -t ed25519 -C "thomas.moorhead.langley@gmail.com"
+
   eval "$(ssh-agent -s)"
+
   ssh-add ~/.ssh/id_ed25519
 
   log_output "Opening the generated ssh key.\n"
