@@ -351,6 +351,22 @@ function install_visual_studio_code() {
   # rm -r ~/.config/Code/GPUCache
 }
 
+function install_intellij() {
+  update_snap
+
+  log_output "Installing IntelliJ IDEA Community Edition"
+
+  sudo snap install intellij-idea-community --classic --yes
+}
+
+function install_pycharm() {
+  update_snap
+
+  log_output "Installing PyCharm Community Edition."
+
+  sudo snap install pycharm-community --classic --yes
+}
+
 function call_text_editor_installation_functions() {
   install_vim
   install_vundle
@@ -362,6 +378,9 @@ function call_text_editor_installation_functions() {
   install_neovim_system_clipboard_dependency
 
   install_visual_studio_code
+
+  install_intellij
+  install_pycharm
 }
 
 #######################################################################################################################
