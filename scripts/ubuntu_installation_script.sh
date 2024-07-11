@@ -109,14 +109,14 @@ function install_javascript_development_tools() {
     --fail \
     --silent \
     --show-error \
-    --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" \
-  | sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
+    --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" |
+    sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
 
   local -r node_version=20
 
   echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
-    https://deb.nodesource.com/node_$node_version.x nodistro main" \
-  | sudo tee /etc/apt/sources.list.d/nodesource.list
+    https://deb.nodesource.com/node_$node_version.x nodistro main" |
+    sudo tee /etc/apt/sources.list.d/nodesource.list
 
   sudo apt install nodejs --yes
 }
@@ -155,8 +155,8 @@ function install_docker() {
   echo \
     "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
     https://download.docker.com/linux/ubuntu \
-    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" \
-  | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+    sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
   # Install and Start Docker Engine.
   sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --yes
@@ -367,8 +367,8 @@ function install_visual_studio_code() {
 
   sudo apt install wget gpg --yes
 
-  wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
-    | gpg --dearmor > "packages.microsoft.gpg"
+  wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" |
+    gpg --dearmor > "packages.microsoft.gpg"
 
   sudo install -D \
     --owner=root \
@@ -376,10 +376,10 @@ function install_visual_studio_code() {
     --mode=644 \
     "packages.microsoft.gpg" \
     "/etc/apt/keyrings/packages.microsoft.gpg"
-  
+
   echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] \
-    https://packages.microsoft.com/repos/code stable main" \
-    | sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+    https://packages.microsoft.com/repos/code stable main" |
+    sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
 
   rm --force --verbose "packages.microsoft.gpg"
 
