@@ -32244,35 +32244,164 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.10. Using `diff` & `patch`
 
--
+- If you can never remember how to use `diff` to create patches that may later be applied using `patch`, use the
+  following code examples.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  - If you are creating a simple patch for a single file.
+    [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ diff -u "<original_file< "<modified_file>" > "<your_patch>"
+
+    # Make changes here
+
+    $ diff -Nru original_dirs/ modified_dirs/ > your_comprehensive_patch
+
+    $
+    ```
+
+  - To be especially careful, force `diff` to treat all files as ASCII using `-a`, and set your language and time zone
+    to the universal default, as shown below.
+    [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+
+    ```bash
+    $ LC_ALL=C TZ=UTC diff -aNru original_dirs/ modified_dirs/ \
+    > > your_comprehensive_patch
+
+    $
+    $ LC_ALL=C TZ=UTC diff -aNru original_dirs/ modified_dirs/
+    diff -aNru original_dirs/changed_file modified_dirs/changed_file
+    --- original_dirs/changed_file 2006-11-23 01:04:07.000000000 +0000
+    +++ modified_dirs/changed_file 2006-11-23 01:04:35.000000000 +0000
+    @@ -1,2 +1,2 @@
+    This file is common to both dirs.
+    -But it changes from one to the other.
+    +But it changes from 1 to the other.
+    diff -aNru original_dirs/only_in_mods modified_dirs/only_in_mods
+    --- original_dirs/only_in_mods 1970-01-01 00:00:00.000000000 +0000
+    +++ modified_dirs/only_in_mods 2006-11-23 01:05:58.000000000 +0000
+    @@ -0,0 +1,2 @@
+    +While this file is only in the modified dirs.
+    +It also has two lines, this is the last.
+    diff -aNru original_dirs/only_in_orig modified_dirs/only_in_orig
+    --- original_dirs/only_in_orig 2006-11-23 01:05:18.000000000 +0000
+    +++ modified_dirs/only_in_orig 1970-01-01 00:00:00.000000000 +0000
+    @@ -1,2 +0,0 @@
+    -This file is only in the original dirs.
+    -It has two lines, this is the last.
+    ```
+
+- To apply a patch file, `cd` to the directory of the single file or to the parent of the directory tree and use the
+  `patch` command.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  <!-- markdownlint-disable MD014 -->
+  ```bash
+  $ cd /path/to/files
+
+  $ patch -Np1 < your_patch
+  ```
+  <!-- markdownlint-disable MD014 -->
+
+- The `-N` argument to patch prevents it from reversing patches or reapplying patches that have already been made.
+  `-p <number>` removes number of leading directories to allow for differences in directory structure between whoever
+  created the patch and whoever is applying it. Using `-p1` will often work; if not, experiment with `-p0`, then `-p2`,
+  etc. It’ll either work or complain and ask you what to do, in which case you cancel and try something else unless
+  you really know what you are doing.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+- `diff` can produce output in various forms, some of which are more useful than others. Unified output, using `-u`, is
+  generally considered the best because it is both reasonably human-readable and very robust when used with patch. It
+  provides three lines of context around the change, which allows a human reader to get oriented, and allows the
+  `patch` command to work correctly even if the file to be patched is different from the one used to create the patch.
+  As long as the context lines are intact, patch can usually figure it out. Context output, using `-c`, is similar to
+  `-u` output but is more redundant and not quite as easy to read. The `ed` format, using `-e`, produces a script
+  suitable for use with the ancient `ed` editor. Finally, the default output is similar to the `ed` output, with a
+  little more human-readable context.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  # Unified format (preferred)
+  $ diff -u original_file modified_file
+  --- original_file 2006-11-22 19:29:07.000000000 -0500
+  +++ modified_file 2006-11-22 19:29:47.000000000 -0500
+  @@ -1,9 +1,9 @@
+  -This is original_file, and this line is different.
+  +This is modified_file, and this line is different.
+  This line is the same.
+  So is this one.
+  And this one.
+  Ditto.
+  -But this one is different.
+  +But this 1 is different.
+  However, not this line.
+  And this is the last same, same, same
+
+  # Context format
+  $ diff -c original_file modified_file
+  *** original_file Wed Nov 22 19:29:07 2006
+  --- modified_file Wed Nov 22 19:29:47 2006
+  ***************
+  *** 1,9 ****
+  ! This is original_file, and this line is different.
+    This line is the same.
+    So is this one.
+    And this one.
+    Ditto.
+  ! But this one is different.
+    However, not this line.
+    And this is the last same, same, same.
+  --- 1,9 ---
+  ! This is modified_file, and this line is different.
+    This line is the same.
+    So is this one.
+    And this one.
+    Ditto.
+  ! But this 1 is different.
+    However,
+
+  # 'ed' format
+  $ diff -e original_file modified_file
+  6c
+  But this 1 is different.
+  .
+  1c
+  This is modified_file, and this line is different.
+  .
+
+  # Normal format
+  $ diff original_file modified_file
+  1c1
+  < This is original_file, and this line is different.
+  ---
+  > This is modified_file, and this line is different.
+  6c6
+  < But this one is different.
+  ---
+  > But this 1 is different.
+  ```
+
+- There is another little-known tool called `wdiff` that is also of interest here. `wdiff` compares files to detect
+  changes in words, as defined by surrounding whitespace. It can handle differing line breaks and tries to use
+  `termcap` strings to produce more readable output. It can be handy when comparing line-by-line is not granular
+  enough, and it is similar to the word `diff` feature of Emacs and `git diff --word-diff`. Note that it is rarely
+  installed on a system by default.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ wdiff original_file modified_file
+  This is [-original_file,-] {+modified_file,+} and this line is different.
+  This line is the same.
+  So is this one.
+  And this one.
+  Ditto.
+  But this [-one-] {+1+} is different.
+  However, not this line.
+  And this is the last same, same, same.
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
 #### 1.3.19.11. Counting Differences in Files
 
@@ -53649,6 +53778,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |          `visudo`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
 |          `watch`           |                                                Execute a program periodically, showing output full screen.                                                |        <https://man7.org/linux/man-pages/man1/watch.1.html>         |                               |                                                               |                                                         |
 |            `wc`            |                                                   Print new line, word, and byte counts for each file.                                                    |          <https://man7.org/linux/man-pages/man1/wc.1.html>          |                               |                                                               |                                                         |
+|          `wdiff`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
 |           `wget`           |                     Non-interactive network downloader, meaning that it can work in the background, while the user is not logged in.                      |         <https://man7.org/linux/man-pages/man1/wget.1.html>         |                               |                                                               |                                                         |
 |          `whatis`          |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
 |          `which`           |                                                                                                                                                           |                                                                     |                               |                                                               |                                                         |
