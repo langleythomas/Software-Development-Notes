@@ -110,7 +110,7 @@ set showmatch
 set showcmd
 
 " Add a column ruler to help identify any lines longer than desired
-"set colorcolumn=120
+set colorcolumn=120
 
 "Setting the colour scheme
 try
