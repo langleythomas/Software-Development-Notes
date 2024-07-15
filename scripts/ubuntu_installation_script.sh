@@ -4,12 +4,16 @@
 ################################################ Script Output Function ###############################################
 #######################################################################################################################
 
+function print_separator() {
+  printf -- "-----------------------------------------------------------------------------------------------------------------------\n"
+}
+
 function log_output() {
   local -r logger_output="${1}"
 
+  print_separator
   printf "%s" "${logger_output}"
-
-  printf -- "-----------------------------------------------------------------------------------------------------------------------\n"
+  print_separator
 }
 
 #######################################################################################################################
@@ -19,7 +23,6 @@ function update_and_upgrade_apt() {
   log_output "Updating and updating releases in apt.\n"
 
   sudo apt update
-
   sudo apt upgrade --yes
 }
 
@@ -49,7 +52,6 @@ function purge_nvidia_drivers() {
   log_output "Purging Nvidia drivers.\n"
 
   sudo apt purge nvidia* --yes
-
   sudo ubuntu-drivers autoinstall --yes
 }
 
@@ -67,11 +69,9 @@ function install_dot_net_sdk() {
   log_output "Installing .NET SDK.\n"
 
   sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
-
   sudo apt install --yes dotnet-sdk-7.0
 
   dotnet --list-sdks
-
   dotnet --info
 }
 
@@ -83,7 +83,6 @@ function install_dot_net_runtime() {
   sudo apt install --yes aspnetcore-runtime-7.0
 
   dotnet --list-runtimes
-
   dotnet --info
 }
 
@@ -102,8 +101,7 @@ function install_javascript_development_tools() {
   log_output "Installing JavaScript Development Tools.\n"
 
   sudo apt install --yes ca-certificates curl gnupg
-
-  sudo mkdir --parents /etc/apt/keyrings
+  sudo mkdir --parents "/etc/apt/keyrings"
 
   curl \
     --fail \
@@ -169,7 +167,6 @@ function start_docker() {
   log_output "Starting Docker.\n"
 
   sudo service docker start
-
   systemctl status docker.service
 }
 
@@ -217,7 +214,6 @@ function test_kubernetes_installation() {
   log_output "Testing Kubernetes Installation.\n"
 
   kubectl version
-
   kubectl cluster-info
 }
 
@@ -271,9 +267,7 @@ function install_vim() {
   update_and_upgrade_apt
 
   log_output "Installing vim.\n"
-
   log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard\n."
-
   log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
 
   sudo apt-get install vim-gtk3 --yes
@@ -282,19 +276,21 @@ function install_vim() {
 function install_vundle() {
   log_output "Installing Vundle, the Vim package manager, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
 
-  git clone "https://github.com/VundleVim/Vundle.vim.git" ~/".vim/bundle/Vundle.vim"
+  git clone "https://github.com/VundleVim/Vundle.vim.git" "${dot_vim_directory_path}/bundle/Vundle.vim"
 }
 
 function configure_vim() {
+  local -r vimrc_file_path="${1}"
+  local -r dot_vim_directory_path="${2}"
+
   log_output "Creating Vim configuration directories and configuration file.\n"
 
-  mkdir --verbose --parents ~/".vim" ~/".vim/autoload" ~/".vim/backup" ~/".vim/colors" ~/".vim/plugged"
-
-  touch ~/".vimrc"
+  mkdir --verbose --parents "${dot_vim_directory_path}" "${dot_vim_directory_path}/autoload" "${dot_vim_directory_path}/backup" "${dot_vim_directory_path}/colors" "${dot_vim_directory_path}/plugged"
+  touch "${vimrc_file_path}"
 
   curl \
     "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/vim-configuration/.vimrc" \
-    >> ~/".vimrc"
+    >> "${vimrc_file_path}"
 
   # There is no need for a source command on the .vimrc, as the .vimrc is automatically read and validated when
   # executing the vim command in a terminal.
@@ -309,16 +305,9 @@ function install_vim_dracula_theme() {
 function install_vim_markdown_preview() {
   log_output "Installing Vim plugins using Vundle, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
 
-  vim ~/".vimrc" --cmd "source %" +qall
-
+  vim "${vimrc_file_path}" --cmd "source %" +qall
   vim +PluginInstall +qall
-
-  vim ~/".vimrc" -c "call mkdp#util#install()" +qall
-}
-
-function install_vundle_plugins() {
-  install_vim_dracula_theme
-  install_vim_markdown_preview
+  vim "${vimrc_file_path}" -c "call mkdp#util#install()" +qall
 }
 
 function install_neovim() {
@@ -327,26 +316,25 @@ function install_neovim() {
   log_output "Downloading Neovim AppImage.\n"
 
   curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
-
   chmod u+x "nvim.appimage"
 
   log_output "Moving Neovim Making it Globally Accessible.\n"
 
   sudo mkdir --parents "/opt/nvim"
-
   sudo mv "nvim.appimage" "/opt/nvim/nvim"
 }
 
 function configure_neovim() {
+  local -r dot_config_neovim_directory_path="${HOME}/.config/nvim"
+
   log_output "Creating Neovim configuration directories and configuration files.\n"
 
-  mkdir --verbose --parents ~/".config/nvim"
-
-  touch ~/".config/nvim/init.vim"
+  mkdir --verbose --parents "${dot_config_neovim_directory_path}"
+  touch "${dot_config_neovim_directory_path}/init.vim"
 
   curl \
     "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.vim" \
-    >> ~/".config/nvim/init.vim"
+    >> "${dot_config_neovim_directory_path}/init.vim"
 
   # There is no need for a source command on the init.vim, as the init.vim is automatically read and validated when
   # executing the vim command in a terminal.
@@ -367,8 +355,8 @@ function install_visual_studio_code() {
 
   sudo apt install wget gpg --yes
 
-  wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" |
-    gpg --dearmor > "packages.microsoft.gpg"
+  wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
+    | gpg --dearmor > "packages.microsoft.gpg"
 
   sudo install -D \
     --owner=root \
@@ -379,12 +367,12 @@ function install_visual_studio_code() {
 
   echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] \
     https://packages.microsoft.com/repos/code stable main" |
-    sudo tee /etc/apt/sources.list.d/vscode.list > /dev/null
+    sudo tee /etc/apt/sources.list.d/vscode.list > "/dev/null"
 
   rm --force --verbose "packages.microsoft.gpg"
 
   update_and_upgrade_apt
-  sudo apt install apt-transport-https --ye
+  sudo apt install apt-transport-https --yes
 
   update_and_upgrade_apt
   sudo apt install code --yes
@@ -411,10 +399,12 @@ function install_pycharm() {
 }
 
 function call_text_editor_installation_functions() {
-  install_vim
-  install_vundle
-  configure_vim
-  install_vundle_plugins
+  local -r vimrc_file_path="${HOME}/.bashrc"
+  local -r dot_vim_directory_path="${HOME}/.vim"
+  install_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
+  configure_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
+  install_vim_dracula_theme
+  install_vim_markdown_preview "${vimrc_file_path}"
 
   install_neovim
   configure_neovim
@@ -436,10 +426,11 @@ function install_git() {
   log_output "Installing Git.\n"
 
   sudo apt install git --yes
+
   git --version
 }
 
-function configure_git_username_email() {
+function configure_git_global_parameters() {
   log_output "Setting up Git with a default username and email.\n"
 
   git config --global user.name "langleythomas"
@@ -464,7 +455,8 @@ function generate_github_ssh_key() {
 function call_version_control_functions() {
   install_git
 
-  configure_git_username_email
+  configure_git_global_parameters
+
   generate_github_ssh_key
 }
 
@@ -477,10 +469,11 @@ function configure_bashrc() {
 
   curl \
     "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" \
-    >> ~/."bashrc"
+    >> "${HOME}/.bashrc"
 
   # shellcheck disable=SC1090
-  source ~/".bashrc"
+  # shellcheck disable=SC1091
+  source "${HOME}/.bashrc"
 }
 
 function call_linux_system_overrides_function() {
