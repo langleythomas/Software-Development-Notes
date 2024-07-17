@@ -387,7 +387,7 @@ function install_intellij() {
 
   log_output "Installing IntelliJ IDEA Community Edition"
 
-  sudo snap install intellij-idea-community --classic --yes
+  sudo snap install intellij-idea-community --classic
 }
 
 function install_pycharm() {
@@ -395,7 +395,7 @@ function install_pycharm() {
 
   log_output "Installing PyCharm Community Edition."
 
-  sudo snap install pycharm-community --classic --yes
+  sudo snap install pycharm-community --classic
 }
 
 function call_text_editor_installation_functions() {
