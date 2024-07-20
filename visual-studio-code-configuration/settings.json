@@ -550,6 +550,7 @@
     "lexer",
     "Leyndgeit",
     "libexec",
+    "libzypp",
     "lineterminator",
     "LINQ",
     "linux",
@@ -609,6 +610,7 @@
     "Medani",
     "Melchett",
     "Mephistoles",
+    "metalink",
     "Metalink",
     "mimeencode",
     "Minkatus",
@@ -743,6 +745,7 @@
     "Puffypants",
     "Punchup",
     "punct",
+    "pwsh",
     "pyautogui",
     "pycharm",
     "pyperclip",
@@ -902,6 +905,7 @@
     "Swiftblade",
     "Sylas",
     "Sylphina",
+    "Sysnative",
     "tabnew",
     "tabnext",
     "tabprev",
@@ -1037,6 +1041,7 @@
     "Whitebox",
     "whitespaces",
     "Widgetworks",
+    "windir",
     "Wispwing",
     "Wspro",
     "Wyrmbane",
@@ -1131,13 +1136,57 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "line",
   "terminal.integrated.defaultProfile.linux": "bash",
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
   "terminal.integrated.enableMultiLinePasteWarning": "always",
   "terminal.integrated.hideOnStartup": "always",
   "terminal.integrated.letterSpacing": 0.3,
   "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.middleClickBehavior": "paste",
   "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Ubuntu (WSL)": {
+      "path": "C:\\Windows\\System32\\wsl.exe",
+      "args": [
+        "-d",
+        "Ubuntu"
+      ]
+    }
+  },
   "terminal.integrated.stickyScroll.enabled": true,
   "terminal.integrated.tabs.title": "${process} > ${sequence}",
 
