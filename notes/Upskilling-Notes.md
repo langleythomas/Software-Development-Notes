@@ -1131,7 +1131,7 @@ TODO: Order in which to do this testing.
     - [1.3.21. Tips \& Traps: Common Goofs for Notices](#1321-tips--traps-common-goofs-for-notices)
       - [1.3.21.1. Forgetting to Set Execute Permissions](#13211-forgetting-to-set-execute-permissions)
       - [1.3.21.2. Fixing `"No such file or directory"` Errors](#13212-fixing-no-such-file-or-directory-errors)
-      - [1.3.21.3. Forgetting That the Current Directory Is Not in the `$PATH`](#13213-forgetting-that-the-current-directory-is-not-in-the-path)
+      - [1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`](#13213-forgetting-that-the-current-directory-is-not-in-the-path)
       - [1.3.21.4. Naming Your Script `"test"`](#13214-naming-your-script-test)
       - [1.3.21.5. Expecting to Change Exported Variables](#13215-expecting-to-change-exported-variables)
       - [1.3.21.6. Forgetting Quotes Leads to `"command not found"` on Assignments](#13216-forgetting-quotes-leads-to-command-not-found-on-assignments)
@@ -32485,71 +32485,96 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.12. Removing or Renaming Files Named with Special Characters
 
--
+- If you need to remove or rename a file that was created with a special character that causes `rm` or `mv` to behave
+  in unexpected ways. The canonical example of this is any file starting with a `-`, such as `-f` or `--help`, which
+  will cause any command you try to use to interpret the file name as an argument.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  <!-- markdownlint-disable MD038 -->
+- If the file name begins with a `-`, use `--` to signal the end of arguments to the command, or use a full or relative
+  path. If the file contains other special characters that are interpreted by the shell, such as spaces or asterisks,
+  use shell quoting. If you use file name completion (via the `<Tab>` key by default), it will automatically quote
+  special characters for you. You can also use single quotes around the troublesome name.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  <!-- markdownlint-disable MD038 -->
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ ls
+  --help this is a *crazy* file name!
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ mv --help help
+  mv: unknown option -- -
+  usage: mv [-fiv] source target
+  mv [-fiv] source ... directory
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ mv -- --help my_help
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ mv this\ is\ a\ \*crazy\*\ file\ name\! this_is_a_better_name
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ ls
+  my_help this_is_a_better_name
+  ```
 
 #### 1.3.19.13. Prepending Data to a File
 
--
+- If you want to prepend date to an existing file, e.g., to add a header after sorting, use `cat` in a subshell.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  temp_file="temp.$RANDOM$RANDOM$$"
+  (echo 'static header line1'; cat data_file) > $temp_file \
+    && cat $temp_file > data_file
+  rm $temp_file
+  unset temp_fil
+  ```
+
+- You could also use `sed`, the streaming editor. To prepend static text, not that `\` escape sequences are expanded in
+  GNU `sed`, but not in some other versions. Also, under some shell, any trailing `\` may need to be doubled.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  # Any sed, e.g., Solaris 10 /usr/bin/sed
+  $ sed -e '1i\
+  > static header line1
+  > ' data_file
+  static header line1
+  1 foo
+  2 bar
+  3 baz
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ sed -e '1i\
+  > static header line1\
+  > static header line2
+  > ' data_file
+  static header line1
+  static header line2
+  1 foo
+  2 bar
+  3 baz
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  # GNU sed
+  $ sed -e '1istatic header line1\nstatic header line2' data_file
+  static header line1
+  static header line2
+  1 foo
+  2 bar
+  3 baz
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  # To prepend an existing file
+  $ sed -e '$r data_file' header_file
+  Header Line1
+  Header Line2
+  1 foo
+  2 bar
+  3 baz
+  ```
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
+- The `cat` solution is faster and simpler, while the `sed` solution is arguably more flexible.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.19.14. Editing a File in Place
 
--
+- If you want to edit an existing file without affecting the inode or permissions,
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
 -
@@ -32613,34 +32638,128 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.16. Finding Lines That Appear in One File but Not in Another
 
--
+- If you have two date files and you need to compare them and find lines that exist in one file but not in the other,
+  sort the files and isolate the date of interest using `cut` or `awk` if necessary, and then use `comm`, `diff`,
+  `grep`, or `uniq` depending on your needs.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+- `comm` is designed for just this type of problem.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cat left
+  record_01
+  record_02.left only
+  record_03
+  record_05.differ
+  record_06
+  record_07
+  record_08
+  record_09
+  record_10
+
+  $ cat right
+  record_01
+  record_02
+  record_04
+  record_05
+  record_06.differ
+  record_07
+  record_08
+  record_09.right only
+  record_10
+
+  # Only show lines in the left file
+  $ comm -23 left right
+  record_02.left only
+  record_03
+  record_05.differ
+  record_06
+  record_09
+
+  # Only show lines in the right file
+  $ comm -13 left right
+  record_02
+  record_04
+  record_05
+  record_06.differ
+  record_09.right only
+
+  # Only show lines common to both files
+  $ comm -12 left right
+  record_01
+  record_07
+  record_08
+  record_10
+  ```
+
+- `diff` will quickly show you all the differences from both files, but its output is not very readable, and you may
+  not need to know all the differences. GNU `diff`'s `--side-by-side` and `--width=` options can be useful for
+  readability.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ diff --side-by-side --width=60 left right
+  record_01 record_01
+  record_02.left only | record_02
+  record_03 | record_04
+  record_05.differ | record_05
+  record_06 | record_06.differ
+  record_07 record_07
+  record_08 record_08
+  record_09 | record_09.right only
+  record_10 record_10
+
+  $ diff --side-by-side --width=60 --suppress-common-lines left right
+  record_02.left only | record_02
+  record_03 | record_04
+  record_05.differ | record_05
+  record_06 | record_06.differ
+  record_09 | record_09.right only
+
+  $ diff left right
+  2,5c2,5
+  < record_02.left only
+  < record_03
+  < record_05.differ
+  < record_06
+  ---
+  > record_02
+  > record_04
+  > record_05
+  > record_06.differ
+  8c8
+  < record_09
+  ---
+  > record_09.right only
+  ```
+
+- `uniq --unique` can show you only lines that are unique in the files, but it will not tell you which file the line
+  came from. `uniq --repeated` will only show you lines that exist in both files.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ sort right left | uniq --unique
+  record_02
+  record_02.left only
+  record_03
+  record_04
+  record_05
+  record_05.differ
+  record_06
+  record_06.differ
+  record_09
+  record_09.right only
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $ sort right left | uniq --repeated
+  record_01
+  record_07
+  record_08
+  record_10
+  ```
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
+- `comm` if your best choice if it's available and you need the power of `diff`. You may need to `sort` and/or `cut` or
+  `awk` into temporary files and work from those if you can't disrupt the original files.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.19.17. Keeping the Most Recent N Objects
@@ -32741,35 +32860,30 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself
 
--
+- If you want to `grep` output from the `ps` command without also getting the `grep` process itself, change the pattern
+  you are looking for so that it is a valid regular expression that will not match the literal text that `ps` will
+  display.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ ps aux | grep 'ssh'
+  root 366 0.0 1.2 340 1588 ?? Is 20Oct06 0:00.68 /usr/sbin/sshd
+  root 25358 0.0 1.9 472 2404 ?? Ss Wed07PM 0:02.16 sshd: root@ttyp0
+  jp 27579 0.0 0.4 152 540 p0 S+ 3:24PM 0:00.04 grep ssh
+
+  $ ps aux | grep '[s]sh'
+  root 366 0.0 1.2 340 1588 ?? Is 20Oct06 0:00.68 /usr/sbin/sshd
+  root 25358 0.0 1.9 472 2404 ?? Ss Wed07PM 0:02.17 sshd: root@ttyp0
+  $
+  ```
+
+- This works, because `[s]` is a regular expression character class containing a single lowercase letter `s`,
+  meaning that `[s]sh` will match `ssh` but not the literal string `grep [s]sh` that `ps` will display.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  ps aux | grep 'ssh' | grep -v grep
+  ```
 
 #### 1.3.19.21. Finding Out Whether a Process Is Running
 
@@ -33315,37 +33429,20 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
-#### 1.3.21.3. Forgetting That the Current Directory Is Not in the `$PATH`
+#### 1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`
 
--
+- If you've written a script and want to test it and you see the following error message, even if you remembered to
+  add execute permissions to the script, either add the current directory to the `$PATH` variable (which is not
+  recommended, or reference the script via the current directory with a leading `./` before the script name, as in
+  `./my.script`.
   [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ my.script
+  bash: my.script: command not found
 
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.10.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5102-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
 #### 1.3.21.4. Naming Your Script `"test"`
 
