@@ -33,7 +33,7 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
   " Enabling an automatic Markdown Preview window to be opened after entering the
   " Markdown buffer, as documented in:
   " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
-  let g:mkdp_auto_start = 1
+  "let g:mkdp_auto_start = 1
 
   " Enabling the Markdown Preview window to only be updated after saving the
   " buffer or when leaving insert mode, as documented in:
@@ -116,7 +116,7 @@ set colorcolumn=120
 try
   colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme elflord
+  colorscheme torte
 endtry
 
 " -----------------------------------------------------------------------------
