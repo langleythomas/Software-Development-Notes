@@ -13,7 +13,7 @@
 
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
-    "editor.unicodeHighlight.invisibleCharacters": true
+    "editor.unicodeHighlight.invisibleCharacters": true    
   },
 
   "[plaintext]": {
@@ -127,6 +127,7 @@
     "Azoun",
     "Azul",
     "badcommand",
+    "Baeldung",
     "bandwhich",
     "Bararog",
     "Barnam",
@@ -337,6 +338,7 @@
     "fileformat",
     "findall",
     "Finnothy",
+    "FIPS",
     "Firebeak",
     "firefox",
     "Flametongue",
@@ -811,6 +813,7 @@
     "Sergish",
     "Serley",
     "Serpentwood",
+    "Servlet",
     "setdefault",
     "setgid",
     "setuid",
@@ -1099,7 +1102,7 @@
   "explorer.compactFolders": false,
 
   // Linux-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Linux distribution)
-  // "files.dialog.defaultPath": "/home/thomas/Repos",
+  "files.dialog.defaultPath": "/home/thomas/Repos",
 
   // Windows-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Windows release)
   // "files.dialog.defaultPath": "C:\\Repos",
@@ -1128,7 +1131,7 @@
     }
   },
 
-  "shellcheck.run": "onSave",
+  "shellcheck.run": "onType",
 
   "telemetry.telemetryLevel": "off",
 
@@ -1137,6 +1140,7 @@
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorStyleInactive": "line",
   "terminal.integrated.defaultProfile.linux": "bash",
+  "terminal.integrated.defaultProfile.osx": "bash",
   "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
   "terminal.integrated.enableMultiLinePasteWarning": "always",
   "terminal.integrated.hideOnStartup": "always",
@@ -1154,6 +1158,35 @@
     },
     "fish": {
       "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.profiles.osx": {
+    "bash": {
+      "path": "bash",
+      "args": [
+        "-l"
+      ],
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh",
+      "args": [
+        "-l"
+      ]
+    },
+    "fish": {
+      "path": "fish",
+      "args": [
+        "-l"
+      ]
     },
     "tmux": {
       "path": "tmux",
