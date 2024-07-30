@@ -32733,25 +32733,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   306189 data_file
   ```
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
+- One disadvantage to `ed` is that there isn't much documentation for it any more. However, since both `vi` (via `ex`)
+  and `sed` (spiritually at least) are descended from `ed`, you should be able to figure out anything you might want
+  to do. Note that `ex` is a symbolic link to `vi` or a variant on many systems, while `ed` is just `ed`.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.19.15. Using `sudo` on a Group of Commands
