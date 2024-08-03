@@ -380,9 +380,11 @@ TODO: Order in which to do this testing.
 [oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]: <https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/>
 [oreilly-vi--vim-editors-pocket-reference-2nd-edition]: <https://www.oreilly.com/library/view/vi-and-vim/9781449303082/>
 [stack-exchange-what-do-the-numbers-in-a-man-page-mean]: <https://unix.stackexchange.com/a/138643>
-[techradar-what-is-tls-and-how-does-it-work]: <https://www.techradar.com/features/what-is-tls-and-how-does-it-work>
 [tech-target-network-slicing]: <https://www.techtarget.com/whatis/definition/network-slicing>
+[techradar-what-is-tls-and-how-does-it-work]: <https://www.techradar.com/features/what-is-tls-and-how-does-it-work>
 [the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]: <https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/>
+
+<!-- Table of Contents -->
 
 - [1. Book Notes](#1-book-notes)
   - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
@@ -2022,7 +2024,6 @@ TODO: Order in which to do this testing.
     - [4.2.2. Buffers](#422-buffers)
     - [4.2.3. Windows](#423-windows)
     - [4.2.4. Tabs](#424-tabs)
-- [5. References](#5-references)
 
 <!-- markdownlint-restore -->
 
