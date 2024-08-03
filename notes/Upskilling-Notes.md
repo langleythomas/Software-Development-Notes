@@ -1140,7 +1140,7 @@ TODO: Order in which to do this testing.
       - [1.3.20.5. Finishing Names for You](#13205-finishing-names-for-you)
       - [1.3.20.6. Playing It Safe](#13206-playing-it-safe)
       - [1.3.20.7. Big Changes, More Lines](#13207-big-changes-more-lines)
-    - [1.3.21. Tips \& Traps: Common Goofs for Notices](#1321-tips--traps-common-goofs-for-notices)
+    - [1.3.21. Tips \& Traps: Common Goofs for Novices](#1321-tips--traps-common-goofs-for-novices)
       - [1.3.21.1. Forgetting to Set Execute Permissions](#13211-forgetting-to-set-execute-permissions)
       - [1.3.21.2. Fixing `"No such file or directory"` Errors](#13212-fixing-no-such-file-or-directory-errors)
       - [1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`](#13213-forgetting-that-the-current-directory-is-not-in-the-path)
@@ -1766,39 +1766,52 @@ TODO: Order in which to do this testing.
     - [1.12.18. Internet Resources for `vi`](#11218-internet-resources-for-vi)
     - [1.12.19. Program Source and Contact Information](#11219-program-source-and-contact-information)
 - [2. Cheat Sheets](#2-cheat-sheets)
-  - [2.1. Command Line Tool Cheat Sheets](#21-command-line-tool-cheat-sheets)
-    - [2.1.1. Command Line Tools Overview](#211-command-line-tools-overview)
-    - [2.1.2. `yt-dlp`](#212-yt-dlp)
-      - [2.1.2.1. Install `yt-dlp`](#2121-install-yt-dlp)
-        - [2.1.2.1.1. Install `yt-dlp` \& Dependencies](#21211-install-yt-dlp--dependencies)
-        - [2.1.2.1.2. Install `ffmpeg`](#21212-install-ffmpeg)
-          - [2.1.2.1.2.1. Install `ffmpeg` in Linux](#212121-install-ffmpeg-in-linux)
-        - [2.1.2.1.3. Verify `yt-dlp` Installation](#21213-verify-yt-dlp-installation)
-      - [2.1.2.2. Download from YouTube](#2122-download-from-youtube)
-        - [2.1.2.2.1. Playlists](#21221-playlists)
-          - [2.1.2.2.1.1. Funhaus (Playlists)](#212211-funhaus-playlists)
-          - [2.1.2.2.1.2. Funhaus Members Playlist](#212212-funhaus-members-playlist)
-          - [2.1.2.2.1.3. Funhaus Live Playlist](#212213-funhaus-live-playlist)
-        - [2.1.2.2.2. Channels](#21222-channels)
-          - [2.1.2.2.2.1. Achievement Hunter](#212221-achievement-hunter)
-          - [2.1.2.2.2.2. Call Me Kevin](#212222-call-me-kevin)
-          - [2.1.2.2.2.3. Funhaus (Channel)](#212223-funhaus-channel)
-          - [2.1.2.2.2.4. Funhaus Too](#212224-funhaus-too)
-          - [2.1.2.2.2.5. Inside Gaming (Formerly "The Know")](#212225-inside-gaming-formerly-the-know)
-          - [2.1.2.2.2.6. IMSON1NJA](#212226-imson1nja)
-          - [2.1.2.2.2.7. Lets Play](#212227-lets-play)
-          - [2.1.2.2.2.8. Marlene Mizulo](#212228-marlene-mizulo)
-          - [2.1.2.2.2.9. Overly Sarcastic Productions](#212229-overly-sarcastic-productions)
-          - [2.1.2.2.2.10. Rooster Teeth](#2122210-rooster-teeth)
-          - [2.1.2.2.2.11. Rooster Teeth Podcasts](#2122211-rooster-teeth-podcasts)
-          - [2.1.2.2.2.12. The Escapist](#2122212-the-escapist)
-  - [2.2. Regex](#22-regex)
-    - [2.2.1. Command Line Arguments](#221-command-line-arguments)
-      - [2.2.1.1. Short-Hand Arguments](#2211-short-hand-arguments)
-    - [2.2.2. Markdown Table](#222-markdown-table)
-      - [2.2.2.1. Start of Line to First Word in First Column](#2221-start-of-line-to-first-word-in-first-column)
-      - [2.2.2.2. End of Last Word in First Column to Start of Second Column](#2222-end-of-last-word-in-first-column-to-start-of-second-column)
-      - [2.2.2.3. Markdown Table, End of Line, Ending with `|` Character](#2223-markdown-table-end-of-line-ending-with--character)
+  - [2.1. Command Line Tools Overview](#21-command-line-tools-overview)
+  - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
+    - [2.2.1. `docker`](#221-docker)
+    - [2.2.2. `du`](#222-du)
+    - [2.2.3. `git`](#223-git)
+    - [2.2.4. `helm`](#224-helm)
+    - [2.2.5. `helmfile`](#225-helmfile)
+    - [2.2.6. `java`](#226-java)
+    - [2.2.7. `kubectl`](#227-kubectl)
+    - [2.2.8. `vi`/`vim`/`nvim`](#228-vivimnvim)
+      - [2.2.8.1. Cutting Text](#2281-cutting-text)
+      - [2.2.8.2. Indenting Text](#2282-indenting-text)
+      - [2.2.8.3. Replacing Text](#2283-replacing-text)
+        - [2.2.8.3.1. Replace One Occurrence](#22831-replace-one-occurrence)
+        - [2.2.8.3.2. Replace All Contents in a Line](#22832-replace-all-contents-in-a-line)
+    - [2.2.9. `yt-dlp`](#229-yt-dlp)
+      - [2.2.9.1. Install `yt-dlp`](#2291-install-yt-dlp)
+        - [2.2.9.1.1. Install `yt-dlp` \& Dependencies](#22911-install-yt-dlp--dependencies)
+        - [2.2.9.1.2. Install `ffmpeg`](#22912-install-ffmpeg)
+          - [2.2.9.1.2.1. Install `ffmpeg` in Linux](#229121-install-ffmpeg-in-linux)
+        - [2.2.9.1.3. Verify `yt-dlp` Installation](#22913-verify-yt-dlp-installation)
+      - [2.2.9.2. Download from YouTube](#2292-download-from-youtube)
+        - [2.2.9.2.1. Playlists](#22921-playlists)
+          - [2.2.9.2.1.1. Funhaus (Playlists)](#229211-funhaus-playlists)
+          - [2.2.9.2.1.2. Funhaus Members Playlist](#229212-funhaus-members-playlist)
+          - [2.2.9.2.1.3. Funhaus Live Playlist](#229213-funhaus-live-playlist)
+        - [2.2.9.2.2. Channels](#22922-channels)
+          - [2.2.9.2.2.1. Achievement Hunter](#229221-achievement-hunter)
+          - [2.2.9.2.2.2. Call Me Kevin](#229222-call-me-kevin)
+          - [2.2.9.2.2.3. Funhaus (Channel)](#229223-funhaus-channel)
+          - [2.2.9.2.2.4. Funhaus Too](#229224-funhaus-too)
+          - [2.2.9.2.2.5. Inside Gaming (Formerly "The Know")](#229225-inside-gaming-formerly-the-know)
+          - [2.2.9.2.2.6. IMSON1NJA](#229226-imson1nja)
+          - [2.2.9.2.2.7. Lets Play](#229227-lets-play)
+          - [2.2.9.2.2.8. Marlene Mizulo](#229228-marlene-mizulo)
+          - [2.2.9.2.2.9. Overly Sarcastic Productions](#229229-overly-sarcastic-productions)
+          - [2.2.9.2.2.10. Rooster Teeth](#2292210-rooster-teeth)
+          - [2.2.9.2.2.11. Rooster Teeth Podcasts](#2292211-rooster-teeth-podcasts)
+          - [2.2.9.2.2.12. The Escapist](#2292212-the-escapist)
+  - [2.3. Regex](#23-regex)
+    - [2.3.1. Command Line Arguments](#231-command-line-arguments)
+      - [2.3.1.1. Short-Hand Arguments](#2311-short-hand-arguments)
+    - [2.3.2. Markdown Table](#232-markdown-table)
+      - [2.3.2.1. Start of Line to First Word in First Column](#2321-start-of-line-to-first-word-in-first-column)
+      - [2.3.2.2. End of Last Word in First Column to Start of Second Column](#2322-end-of-last-word-in-first-column-to-start-of-second-column)
+      - [2.3.2.3. Markdown Table, End of Line, Ending with `|` Character](#2323-markdown-table-end-of-line-ending-with--character)
 - [3. Online Notes](#3-online-notes)
   - [3.1. Automation](#31-automation)
     - [3.1.1. Replacing Bash Scripting with Python](#311-replacing-bash-scripting-with-python)
@@ -27532,7 +27545,7 @@ file called donors that looked like this:
   ```
 
 - Removing trailing or leading tabs is more difficult than spaces. If there are only tabs, you could use `${##}` or
-  `${%%}` operators and insert literal tabs using the `<Ctrl> + v`, `<CTRL> + i` key sequence. That can be risky if
+  `${%%}` operators and insert literal tabs using the `<Ctrl> + v`, `<Ctrl> + i` key sequence. That can be risky if
   there's a mix of spaces and tabs. To resolve that, turn on extended globbing and use a character class to make the
   intent more clear. The `[:space:]` character class would work without `extglob`, but `+()` is needed to specify "one
   or more occurrences", or else it would trim single spaces or tabs, but not multiples of both on the same line. You
@@ -32740,34 +32753,18 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.15. Using `sudo` on a Group of Commands
 
--
+- If you are running as a regular user and need to `sudo` several commands at once, or you need to use redirection that
+  applies to the commands and not to `sudo`, use `sudo` to run a subshell in which you may groups your commands and use
+  pipelines and redirection. This requires the ability to run a shell as `root`. If you can't, have your system
+  administrator write a quick script and add it to your `sudo` privilege escalation.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  sudo bash -c 'command1 && command2 || command3'
+  ```
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
+- Note the use of the `-c` argument to `bash`, which causes it to just execute the given commands and exist. Without
+  that, you will just end up running a new interactive `root` shell, which is probably not your desired outcome.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.19.16. Finding Lines That Appear in One File but Not in Another
@@ -33213,98 +33210,126 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 1.3.20. Working Faster by Typing Less
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
+- Despite all the improvements in processor speed, transmissions rates, network speed, and I/O capabilities, there is
+  still a limiting factor in many uses of `bash` - the typing speed of the user.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.20.1. Moving Quickly Among Arbitrary Directories
 
--
+- If you find yourself moving frequently between multiple directories, use the `pushd` and `popd` builtin commands to
+  manage a stack of directory locations, and to switch between them easily.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ cd /tmp/tank
+
+  $ pwd
+  /tmp/tank
+
+  $ pushd /var/log/cups
+  /var/log/cups /tmp/tank
+
+  $ pwd
+  /var/log/cups
+
+  $ ls
+  access_log error_log page_log
+
+  $ popd
+  /tmp/tank
+
+  $ ls
+  empty full
+
+  $ pushd /var/log/cups
+  /var/log/cups /tmp/tank
+
+  $ pushd
+  /tmp/tank /var/log/cups
+
+  $ pushd
+  /var/log/cups /tmp/tank
+
+  $ pushd
+  /tmp/tank /var/log/cups
+
+  $ dirs
+  /tmp/tank /var/log/cups
+  ```
+
+- Stacks are *last in, first out*, which is how the `pushd` and `popd` commands behave. When you `pushd` to a new
+  directory, it keeps the previous directory on a stack. When you `popd`, it pops the current location off of the stack
+  and puts you back in that first location. When you change locations using these commands, they will print the values
+  on the stack, corresponding to the top-to-bottom ordering of the stack.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
+- If you use `pushd` without specifying a directory, it swaps the top item on the stack with the next one down, so that
+  you can alternate between two directories using repeated `pushd` commands with no arguments. You can do the same
+  thing using the `cd -` command.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
+- You can still cd to locations - that will change the current directory, which is also the top of the directory stack.
+  If you can’t remember what is on your stack of directories, use the `dirs` builtin command to echo the stack,
+  left-to-right. For a more stack-like display, use the `-v` option.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ dirs -v
+  0 /var/tmp
+  1 ~/part/me/scratch
+  2 /tmp
+
+  $
+  ```
+
+- The `~` is a shorthand for your home directory. The numbers can be used to reorder the stack. If you `pushd +2`, then
+  `bash` will put the #2 entry on the top of the stack (and `cd` you there) and push the others down.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
+  ```bash
+  $ pushd +2
+  /tmp /var/tmp ~/part/me/scratch
+
+  $ dirs -v
+  0 /tmp
+  1 /var/tmp
+  2 ~/part/me/scratch
+
+  $
+  ```
+
+- If you want that stack-like listing of directories, but without the numbers, use the `-p` option.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ dirs -p
+  /tmp
+  /var/tmp
+  ~/part/me/scratch
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
 #### 1.3.20.2. Repeating the Last Command
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+- Typing two `!` at the command line prompt, `bash` will `echo` and repeat the previous command.
+  [5.12.
+  2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  ```bash
+  $ /usr/bin/somewhere/someprog -g -H -yknot -w /tmp/soforthandsoon
+  ...
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  $ !!
+  /usr/bin/somewhere/someprog -g -H -yknot -w /tmp/soforthandsoon
+  ...
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
+  $
+  ```
 
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
-  [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
-
--
+- The other (more modern) solution involved using the arrow keys. Pressing the `<Up Arrow>` key will scroll back
+  through the previous commands that you have issued. When you find the one you want, just press the `<Enter>` key and
+  that command will be executed (again).
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
 #### 1.3.20.3. Quick Substitution
@@ -33467,7 +33492,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
-### 1.3.21. Tips & Traps: Common Goofs for Notices
+### 1.3.21. Tips & Traps: Common Goofs for Novices
 
 -
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
@@ -33565,9 +33590,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`
 
-- If you've written a script and want to test it and you see the following error message, even if you remembered to
-  add execute permissions to the script, either add the current directory to the `$PATH` variable (which is not
-  recommended, or reference the script via the current directory with a leading `./` before the script name, as in
+- If you've written a script and want to test it and you see the following error message, even if you remembered to add
+  execute permissions to the script, either add the current directory to the `$PATH` variable -- which is not
+  recommended -- or reference the script via the current directory with a leading `./` before the script name, as in
   `./my.script`.
   [5.12.2. O'Reilly: `bash` Cookbook, 2nd Edition](#5122-oreilly-bash-cookbook-2nd-edition)
 
@@ -53752,9 +53777,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 # 2. Cheat Sheets
 
-## 2.1. Command Line Tool Cheat Sheets
-
-### 2.1.1. Command Line Tools Overview
+## 2.1. Command Line Tools Overview
 
 | **Command Line Tool Names** |                                          **Command Line Tool Summaries**                                          |                 **User Commands Documentation Links**                  |     **Cheat Sheet Links**     |              **Installation Procedures (Linux)**              |           **Installation Procedures (Windows)**            |
 | :-------------------------: | :---------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :---------------------------: | :-----------------------------------------------------------: | :--------------------------------------------------------: |
@@ -53807,6 +53830,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |            `dig`            |                                                DNS lookup utility.                                                |                    <https://www.mankier.com/1/dig>                     |             TBD.              |                                                               |                                                            |
 |            `dir`            |                                             List directory contents.                                              |                    <https://www.mankier.com/1/dir>                     |             TBD.              |                                                               |                                                            |
 |          `dirname`          |                                       Strip last component from file name.                                        |                  <https://www.mankier.com/1/dirname>                   |             TBD.              |                                                               |                                                            |
+|           `dirs`            |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                               |                                                            |
 |          `docker`           |                                         Base command for the Docker CLI.                                          |            <https://docs.docker.com/reference/cli/docker/>             |             TBD.              |       <https://docs.docker.com/engine/install/ubuntu/>        | <https://docs.docker.com/desktop/install/windows-install/> |
 |            `dog`            |                                       Command line DNS client, like `dig`.                                        | <https://github.com/ogham/dog?tab=readme-ov-file#command-line-options> |             TBD.              |                                                               |                                                            |
 |         `dos2unix`          |                            DOS/Mac to Unix and vice versa text file format converter.                             |                  <https://www.mankier.com/1/dos2unix>                  |             TBD.              |                                                               |                                                            |
@@ -53822,7 +53846,6 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |           `emacs`           |                                             GNU project Emacs editor.                                             |                   <https://www.mankier.com/1/emacs>                    |             TBD.              |                                                               |                                                            |
 |          `enable`           |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                               |                                                            |
 |            `env`            |                                     Run a program in a modified environment.                                      |                    <https://www.mankier.com/1/env>                     |             TBD.              |                                                               |                                                            |
-|            `exa`            |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |           `exec`            |                            Execute commands and open, close, or copy file descriptors.                            |                   <https://www.mankier.com/1p/exec>                    |             TBD.              |                                                               |                                                            |
 |          `execve`           |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |           `exit`            |                                             Cause the shell to exit.                                              |                   <https://www.mankier.com/1p/exit>                    |             TBD.              |                                                               |                                                            |
@@ -53841,7 +53864,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |          `getconf`          |                                             Get configuration values.                                             |                  <https://www.mankier.com/1p/getconf>                  |             TBD.              |                                                               |                                                            |
 |          `getdate`          |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |          `getopt`           |                                              Parse command options.                                               |                   <https://www.mankier.com/1/getopt>                   |             TBD.              |                                                               |                                                            |
-|          `getopts`          |                                      Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                            |             TBD.              |                                                               |                                                            |
+|          `getopts`          |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                               |                                                            |
 |            `git`            |                                       Distributed revision control system.                                        |                    <https://www.mankier.com/1/git>                     |             TBD.              |                                                               |                                                            |
 |          `glances`          |                                                Eye on your system.                                                |                  <https://www.mankier.com/1/glances>                   |             TBD.              |                                                               |                                                            |
 |          `gpasswd`          |                                    Administer `/etc/group` and `/etc/gshadow`.                                    |                  <https://www.mankier.com/1/gpasswd>                   |             TBD.              |                                                               |                                                            |
@@ -53921,12 +53944,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |           `pinfo`           |                              User-friendly, console-based viewed for Info documents.                              |                   <https://www.mankier.com/1/pinfo>                    |             TBD.              |                                                               |                                                            |
 |           `ping`            |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |            `pip`            |                                       Package manager for Python packages.                                        |                    <https://www.mankier.com/1/pip>                     |             TBD.              |                                                               |                                                            |
+|           `popd`            |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                               |                                                            |
 |            `pr`             |                                         Convert text files for printing.                                          |                     <https://www.mankier.com/1/pr>                     |             TBD.              |                                                               |                                                            |
 |         `prettier`          |                            Opinionated code formatted with support for many languages.                            |                   <https://prettier.io/docs/en/cli>                    |             TBD.              |          <https://prettier.io/docs/en/install.html>           |                                                            |
 |          `printf`           |                                              Format and print data.                                               |                   <https://www.mankier.com/1/printf>                   |             TBD.              |                                                               |                                                            |
 |           `procs`           |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |            `ps`             |                                    Report a snapshot of the current processes.                                    |                     <https://www.mankier.com/1/ps>                     |             TBD.              |                                                               |                                                            |
 |           `psql`            |                                         PostgreSQL interactive terminal.                                          |                    <https://www.mankier.com/1/psql>                    |             TBD.              |                                                               |                                                            |
+|           `pushd`           |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                               |                                                            |
 |          `python`           |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |          `python3`          |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |            `rcp`            |                                                 Remote file copy.                                                 |                    <https://www.mankier.com/1/rcp>                     |             TBD.              |                                                               |                                                            |
@@ -54016,31 +54041,81 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |            `wsl`            | Run a Linux environment on your Windows machine, without the need for a separate virtual machine or dual booting. |     <https://learn.microsoft.com/en-us/windows/wsl/basic-commands>     |             TBD.              |                              N/A                              |  <https://learn.microsoft.com/en-us/windows/wsl/install>   |
 |           `xargs`           |                               Build and execute command lines from standard input.                                |                   <https://www.mankier.com/1/xargs>                    |             TBD.              |                                                               |                                                            |
 |           `xsel`            |                                           Manipulate the `X` selection.                                           |                  <https://www.mankier.com/1/xsel.1x>                   |             TBD.              |                                                               |                                                            |
-|          `yt-dlp`           |                                 Feature-rich command line audio/video downloader.                                 |                   <https://www.mankier.com/1/yt-dlp>                   | [2.1.2 `yt-dlp`](#212-yt-dlp) |                                                               |                                                            |
+|          `yt-dlp`           |                                 Feature-rich command line audio/video downloader.                                 |                   <https://www.mankier.com/1/yt-dlp>                   | [2.2.9 `yt-dlp`](#229-yt-dlp) |                                                               |                                                            |
 |           `zcat`            |                                             Compress or expand files.                                             |                    <https://www.mankier.com/1/gzip>                    |             TBD.              |                                                               |                                                            |
 |           `zgrep`           |                            Search possibly compressed files for a regular expression.                             |                   <https://www.mankier.com/1/zgrep>                    |             TBD.              |                                                               |                                                            |
 |            `zip`            |                                       Package and compress (archive) files.                                       |                    <https://www.mankier.com/1/zip>                     |             TBD.              |                                                               |                                                            |
 |          `zypper`           |                     Command line interface to the ZYpp system management library (`libzypp`).                     |                   <https://www.mankier.com/8/zypper>                   |             TBD.              |                                                               |                                                            |
 
-### 2.1.2. `yt-dlp`
+## 2.2. Command Line Tool Cheat Sheets
 
-#### 2.1.2.1. Install `yt-dlp`
+### 2.2.1. `docker`
 
-##### 2.1.2.1.1. Install `yt-dlp` & Dependencies
+### 2.2.2. `du`
+
+### 2.2.3. `git`
+
+### 2.2.4. `helm`
+
+### 2.2.5. `helmfile`
+
+### 2.2.6. `java`
+
+### 2.2.7. `kubectl`
+
+### 2.2.8. `vi`/`vim`/`nvim`
+
+#### 2.2.8.1. Cutting Text
+
+- Highlight text, then press `d`.
+
+#### 2.2.8.2. Indenting Text
+
+- To adjust the indent on multiple lines:
+
+  - Put the cursor anywhere in the first line.
+
+  - Press `v` then move the arrow keys to visually select all lines.
+
+  - Press `>` to indent (shift text one 'shiftwidth' to the right), or press `<` to shift left.
+
+#### 2.2.8.3. Replacing Text
+
+##### 2.2.8.3.1. Replace One Occurrence
+
+- Replace a single occurrence of the `<search_term>` with the `<replacement_term>`.
+
+  ```vim
+  :s/search_term/replacement_term/
+  ```
+
+##### 2.2.8.3.2. Replace All Contents in a Line
+
+- Replace all occurrences of the `<search_term>` with the `<replacement_term>`.
+
+  ```vim
+  :s/search_term/replacement_term/g
+  ```
+
+### 2.2.9. `yt-dlp`
+
+#### 2.2.9.1. Install `yt-dlp`
+
+##### 2.2.9.1.1. Install `yt-dlp` & Dependencies
 
 - Download from [yt_dlp_x86.exe](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#recommended).
 
-##### 2.1.2.1.2. Install `ffmpeg`
+##### 2.2.9.1.2. Install `ffmpeg`
 
-###### 2.1.2.1.2.1. Install `ffmpeg` in Linux
+###### 2.2.9.1.2.1. Install `ffmpeg` in Linux
 
 - Install `ffmpeg` using the link for your operating system of choice in the
-  table in [2.1.1. Command Line Tools Overview](#211-command-line-tools-overview).
+  table in [2.1. Command Line Tools Overview](#21-command-line-tools-overview).
 
 - Note: `ffmpeg` is required to download YouTube videos at 1080p. Installing and configuring `ffmpeg` also install
   `ffprobe`.
 
-##### 2.1.2.1.3. Verify `yt-dlp` Installation
+##### 2.2.9.1.3. Verify `yt-dlp` Installation
 
 - Run the `yt-dlp` commands in the directory containing the `yt-dlp` executable file.
 
@@ -54050,7 +54125,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ./yt-dlp_x86.exe --help
   ```
 
-#### 2.1.2.2. Download from YouTube
+#### 2.2.9.2. Download from YouTube
 
 - Set the environment variables for each of the YouTube resources you wish to download before executing the following
   command. You must run each of the commands in this section in the same directory as which you have have downloaded
@@ -54060,11 +54135,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ./yt-dlp_x86.exe --cookies-from-browser chrome "${YOUTUBE_URL}" --output "${OUTPUT_DIRECTORY}"
   ```
 
-##### 2.1.2.2.1. Playlists
+##### 2.2.9.2.1. Playlists
 
-###### 2.1.2.2.1.1. Funhaus (Playlists)
+###### 2.2.9.2.1.1. Funhaus (Playlists)
 
-###### 2.1.2.2.1.2. Funhaus Members Playlist
+###### 2.2.9.2.1.2. Funhaus Members Playlist
 
 - Set the following variables to download the videos in the Funhaus Member playlist:
 
@@ -54073,7 +54148,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Members/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.1.3. Funhaus Live Playlist
+###### 2.2.9.2.1.3. Funhaus Live Playlist
 
 - Set the following variables to download the videos in the Funhaus Live playlist:
 
@@ -54082,9 +54157,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Live/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-##### 2.1.2.2.2. Channels
+##### 2.2.9.2.2. Channels
 
-###### 2.1.2.2.2.1. Achievement Hunter
+###### 2.2.9.2.2.1. Achievement Hunter
 
 - Set the following variables to download all the contents in the Achievement Hunter channel:
 
@@ -54093,7 +54168,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.2. Call Me Kevin
+###### 2.2.9.2.2.2. Call Me Kevin
 
 - Set the following variables to download all the contents in the Call Me Kevin channel:
 
@@ -54102,7 +54177,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.3. Funhaus (Channel)
+###### 2.2.9.2.2.3. Funhaus (Channel)
 
 - Set the following variables to download all the contents in the Funhaus channel:
 
@@ -54111,7 +54186,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.4. Funhaus Too
+###### 2.2.9.2.2.4. Funhaus Too
 
 - Set the following variables to download all the contents in the Funhaus Too channel:
 
@@ -54120,7 +54195,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus Too/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.5. Inside Gaming (Formerly "The Know")
+###### 2.2.9.2.2.5. Inside Gaming (Formerly "The Know")
 
 - Set the following variables to download all the contents in the Inside Gaming (Formerly "The Know") channel:
 
@@ -54129,7 +54204,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Inside Gaming (Formerly \"The Know\")/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.6. IMSON1NJA
+###### 2.2.9.2.2.6. IMSON1NJA
 
 - Set the following variables to download all the contents in the IMSON1NJA channel, to download the deleted Funhaus
   videos in that channel:
@@ -54139,7 +54214,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.7. Lets Play
+###### 2.2.9.2.2.7. Lets Play
 
 - Set the following variables to download all the contents in the Lets Play channel:
 
@@ -54148,7 +54223,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Lets Play/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.8. Marlene Mizulo
+###### 2.2.9.2.2.8. Marlene Mizulo
 
 - Set the following variables to download all the contents in the Marlene Mizulo channel, to download the deleted
   Funhaus videos in that channel:
@@ -54158,7 +54233,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.9. Overly Sarcastic Productions
+###### 2.2.9.2.2.9. Overly Sarcastic Productions
 
 - Set the following variables to download all the contents in the Overly Sarcastic Productions channel:
 
@@ -54167,7 +54242,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Overly Sarcastic Productions/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.10. Rooster Teeth
+###### 2.2.9.2.2.10. Rooster Teeth
 
 - Set the following variables to download all the contents in the Rooster Teeth channel:
 
@@ -54176,7 +54251,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.11. Rooster Teeth Podcasts
+###### 2.2.9.2.2.11. Rooster Teeth Podcasts
 
 - Set the following variables to download all the contents in the Rooster Teeth Podcasts channel:
 
@@ -54185,7 +54260,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth Podcasts/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.1.2.2.2.12. The Escapist
+###### 2.2.9.2.2.12. The Escapist
 
 - Set the following variables to download all the contents in the The Escapist channel:
 
@@ -54194,11 +54269,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/The Escapist/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-## 2.2. Regex
+## 2.3. Regex
 
-### 2.2.1. Command Line Arguments
+### 2.3.1. Command Line Arguments
 
-#### 2.2.1.1. Short-Hand Arguments
+#### 2.3.1.1. Short-Hand Arguments
 
 - Highlighting the short-hand versions of command line arguments, in order to identify them so they can be replaced
   with the full length arguments, where possible.
@@ -54207,9 +54282,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
    -\w
   ```
 
-### 2.2.2. Markdown Table
+### 2.3.2. Markdown Table
 
-#### 2.2.2.1. Start of Line to First Word in First Column
+#### 2.3.2.1. Start of Line to First Word in First Column
 
 - Highlighting the start of a line, starting with a `|`, up to the first word in the first column of a Markdown table.
   The number of spaces from the start of the line and the pipe can be modified when using this regex expression.
@@ -54218,7 +54293,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ^\|        (?!`)
   ```
 
-#### 2.2.2.2. End of Last Word in First Column to Start of Second Column
+#### 2.3.2.2. End of Last Word in First Column to Start of Second Column
 
 - Highlighting the end of the last word in the first column of a Markdown table up to the start of the second column.
 
@@ -54226,7 +54301,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   \b\s+\|
   ```
 
-#### 2.2.2.3. Markdown Table, End of Line, Ending with `|` Character
+#### 2.3.2.3. Markdown Table, End of Line, Ending with `|` Character
 
 - Highlighting the a line Markdown table (ending with a `|` character) up to the start of the second column. You can
   replace the `.*` with as many spaces as required if you need to remove the last column in a table.
@@ -58326,7 +58401,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 4.1.1. Lesson 0
 
-- Pressing the `U` key in Normal mode undoes the latest change.
+- Pressing the `u` key in Normal mode undoes the latest change.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 - Pressing `<Enter>` in Normal mode on hyperlinks opens them.
@@ -58443,7 +58518,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Typing `u` in Normal mode undoes the last command.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
-- Typing `U` in Normal mode undoes changes on a whole line.
+- Typing `<Shift> + u` in Normal mode undoes changes on a whole line.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 - Pressing `<Ctrl> + r` in Normal mode to redoes the commands.
@@ -58472,13 +58547,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Pressing `<Ctrl> + g` in Normal mode displays your location and the file status.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
-- Typing `G` in Normal mode moves to the end of the file.
+- Typing `<Shift> + g` in Normal mode moves to the end of the file.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 - Typing `<line_number> G` in Normal mode moves to that line number.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
-- Typing `gg` in Normal mode moves to the first line.
+- Typing `g + g` in Normal mode moves to the first line.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 ### 4.1.19. Lesson 4.2: The Search Command
@@ -58553,7 +58628,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 4.1.23. Lesson 5.2: More on Writing Files
 
-- Type `:!w <FILENAME>` in Normal mode to write the current Vim file to disk with the name `<FILENAME>`.
+- Type `:!w <file_name>` in Normal mode to write the current Vim file to disk with the name `<file_name>`.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 ### 4.1.24. Lesson 5.3: Selecting Text to Write
@@ -58568,12 +58643,12 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     highlighted.
     [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
-  - Type `:w <FILENAME>` in Normal Mode, where `<FILENAME>` does not exist yet.
+  - Type `:w <file_name>` in Normal Mode, where `<file_name>` does not exist yet.
     [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 ### 4.1.25. Lesson 5.4: Retrieving and Merging Files
 
-- Type `:r <FILENAME>` in Normal Mode to retrieve the contents of the file `<FILENAME>` and enter the output below the
+- Type `:r <file_name>` in Normal Mode to retrieve the contents of the file `<FILENAME>` and enter the output below the
   cursor position.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
@@ -58638,7 +58713,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Typing `:q` in Normal mode closes the help window.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
-- Typing `:help <TOPIC>` in Normal mode find helps on a particular `<TOPIC>`.
+- Typing `:help <Topic>` in Normal mode find helps on a particular `<Topic>`.
   [5.11.1. Neovim: Pi_tutor](#5111-neovim-pi_tutor)
 
 ### 4.1.32. Lesson 7.2: Create a Startup Script
@@ -58735,7 +58810,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - `:edit <file_path>`: Add a new file to the buffer with the file path, `<file_path>`.
     [5.7.1. Medium: Vim Buffers, Windows \& Tabs - An Overview](#571-medium-vim-buffers-windows--tabs---an-overview)
 
-  - `:bdelete <buffer_number>`: Delete the buffer with a buffer number, `buffer_number`.
+  - `:bdelete <buffer_number>`: Delete the buffer with a buffer number, `<buffer_number<`.
     [5.7.1. Medium: Vim Buffers, Windows \& Tabs - An Overview](#571-medium-vim-buffers-windows--tabs---an-overview)
 
   - `<Ctrl> + ^`: Open the previous buffer.
