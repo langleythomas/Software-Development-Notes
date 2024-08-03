@@ -382,6 +382,21 @@ function install_visual_studio_code() {
   # rm -r ~/.config/Code/GPUCache
 }
 
+function install_sublime_text() {
+  update_and_upgrade_apt
+
+  log_output "Installing Sublime Text.\n"
+
+  wget --quiet --output-document="-" "https://download.sublimetext.com/sublimehq-pub.gpg" \
+    | gpg --dearmor \
+    | sudo tee "/etc/apt/trusted.gpg.d/sublimehq-archive.gpg" > "/dev/null"
+
+  echo "deb https://download.sublimetext.com/ apt/stable/" \
+    | sudo tee "/etc/apt/sources.list.d/sublime-text.list"
+
+  sudo apt install sublime-text
+}
+
 function install_intellij() {
   update_snap
 
@@ -411,6 +426,8 @@ function call_text_editor_installation_functions() {
   install_neovim_system_clipboard_dependency
 
   install_visual_studio_code
+
+  install_sublime_text
 
   install_intellij
   install_pycharm
