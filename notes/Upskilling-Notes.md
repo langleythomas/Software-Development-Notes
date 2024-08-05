@@ -385,7 +385,6 @@ TODO: Order in which to do this testing.
 [the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]: <https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/>
 
 <!-- Table of Contents -->
-
 - [1. Book Notes](#1-book-notes)
   - [1.1. 97 Things Every Programmer Should Know](#11-97-things-every-programmer-should-know)
     - [1.1.1. A Comment on Comments](#111-a-comment-on-comments)
@@ -1148,7 +1147,7 @@ TODO: Order in which to do this testing.
       - [1.3.19.14. Editing a File in Place](#131914-editing-a-file-in-place)
       - [1.3.19.15. Using `sudo` on a Group of Commands](#131915-using-sudo-on-a-group-of-commands)
       - [1.3.19.16. Finding Lines That Appear in One File but Not in Another](#131916-finding-lines-that-appear-in-one-file-but-not-in-another)
-      - [1.3.19.17. Keeping the Most Recent N Objects](#131917-keeping-the-most-recent-n-objects)
+      - [1.3.19.17. Keeping the Most Recent `N` Objects](#131917-keeping-the-most-recent-n-objects)
       - [1.3.19.18. Writing to a Circular Log](#131918-writing-to-a-circular-log)
       - [1.3.19.19. Circular Backups](#131919-circular-backups)
       - [1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself](#131920-grepping-ps-output-without-also-getting-the-grep-process-itself)
@@ -1157,7 +1156,7 @@ TODO: Order in which to do this testing.
       - [1.3.19.23. Numbering Lines](#131923-numbering-lines)
       - [1.3.19.24. Writing Sequences](#131924-writing-sequences)
       - [1.3.19.25. Emulating the DOS Pause Command](#131925-emulating-the-dos-pause-command)
-      - [1.3.19.26. Commodifying Numbers](#131926-commodifying-numbers)
+      - [1.3.19.26. Commifying Numbers](#131926-commifying-numbers)
     - [1.3.20. Working Faster by Typing Less](#1320-working-faster-by-typing-less)
       - [1.3.20.1. Moving Quickly Among Arbitrary Directories](#13201-moving-quickly-among-arbitrary-directories)
       - [1.3.20.2. Repeating the Last Command](#13202-repeating-the-last-command)
@@ -32430,7 +32429,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - The `-N` argument to patch prevents it from reversing patches or reapplying patches that have already been made.
   `-p <number>` removes number of leading directories to allow for differences in directory structure between whoever
   created the patch and whoever is applying it. Using `-p1` will often work; if not, experiment with `-p0`, then `-p2`,
-  etc. It’ll either work or complain and ask you what to do, in which case you cancel and try something else unless
+  etc. It'll either work or complain and ask you what to do, in which case you cancel and try something else unless
   you really know what you are doing.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
@@ -32876,36 +32875,91 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   `awk` into temporary files and work from those if you can't disrupt the original files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.17. Keeping the Most Recent N Objects
+#### 1.3.19.17. Keeping the Most Recent `N` Objects
 
--
+- If you need to retain the most recent `N` duplicates of a given file or directory, and purge the remainder -- no
+  matter how many there are -- create an ordered list of the objects, pass them as arguments to a function, shift the
+  arguments by `N`, and return the remainder.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  # cookbook filename: func_shift_by
+
+  # Pop a given number of items from the top of a stack,
+  # such that you can then perform an action on whatever is left.
+  # Called like: shift_by <# to keep> <ls command, or whatever>
+  # Returns: the remainder of the stack or list
+  #
+  # For example, list some objects, then keep only the top 10.
+  #
+  # It is CRITICAL that you pass the items in order with the objects to
+  # be removed at the top (or front) of the list, since all this function
+  # does is remove (pop) the number of entries you specify from the top
+  # of the list.
+  #
+  # You should experiment with echo before using rm!
+  #
+  # For example:
+  # rm -rf $(shift_by $MAX_BUILD_DIRS_TO_KEEP $(ls -rd backup.2006*))
+  #
+
+  function shift_by {
+    # If $1 is zero or greater than $#, the positional parameters are not changed. In this case that is a BAD THING!
+    if (( $1 == 0 || $1 > ( $# - 1 ) )); then
+      echo ''
+    else
+      # Remove the given number of objects (plus 1) from the list.
+      shift $(( $1 + 1 ))
+      # Return whatever is left.
+      echo "$*"
+    fi
+  }
+  ```
+
+- If you try to shift the positional parameters by zero or by more than the total number of positional parameters
+  `($#`), `shift` will do nothing. If you are using `shift` to process a list then delete what it returns, that will
+  result in you deleting everything. Make sure to test the argument to shift to make sure that it's not zero and it is
+  greater than the number of positional parameters. The `shift_by` function given in this section does this.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  $ source shift_by
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ touch {1..9}
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ ls ?
+  1 2 3 4 5 6 7 8 9
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ shift_by 3 $(ls ?)
+  4 5 6 7 8 9
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ shift_by 5 $(ls ?)
+  6 7 8 9
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ shift_by 5 $(ls -r ?)
+  4 3 2 1
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ shift_by 7 $(ls ?)
+  8 9
 
--
+  $ shift_by 9 $(ls ?)
+  # Keep only the last 5 objects
+
+  $ echo "rm -rf $(shift_by 5 $(ls ?))"
+  rm -rf 6 7 8 9
+
+  # In production we'd test this first! See discussion.
+  $ rm -rf $(shift_by 5 $(ls ?))
+
+  $ ls ?
+  1 2 3 4 5
+  ```
+
+- Make sure you fully test both the argument returned and what you intend to do with it. For example, if you are
+  deleting old data, use `echo` to test the command that would be performed before doing it live. Also test that you
+  have a value at all, or else you could end up doing `rm -rf` and getting an error. Never do something like
+  `rm -rf /$variable`, because if `$variable` is ever null you will start deleting the root directory, which is
+  particularly bad if you are running as `root`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 #### 1.3.19.18. Writing to a Circular Log
@@ -33033,35 +33087,28 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.22. Adding a Prefix or Suffix to Output
 
--
+- If you'd like to add a prefix or a suffix to each line to output from a given command for some reason, pipe the
+  appropriate data into a `while read` loop and `printf` as needed.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+- For example, adding a prefix or suffix to the `$HOSTNAME` after manipulating the output from the `last` command.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  # Adding a tab, followed by any non-blank lines of output from the last command.
+  $ last | while read i; do [[ -n "$i" ]] && printf "%b" "$HOSTNAME\t$i\n"; done
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  # Using awk to add text to each line.
+  $ last | awk "BEGIN { OFS=\"\t\" } ! /^\$/ { print \"$HOSTNAME\", \$0}"
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  # Writing a new log file, option 1.
+  $ last | while read i; do [[ -n "$i" ]] && printf "%b" "$HOSTNAME\t$i\n"; \
+      done > last_$HOSTNAME.log
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  # Writing a new log file, option 2.
+  $ last | awk "BEGIN { OFS=\"\t\" } ! /^\$/ { print \"$HOSTNAME\", \$0}" \
+      > last_$HOSTNAME.log
+  ```
 
 #### 1.3.19.23. Numbering Lines
 
@@ -33159,7 +33206,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.26. Commodifying Numbers
+#### 1.3.19.26. Commifying Numbers
 
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -33252,7 +33299,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - You can still cd to locations - that will change the current directory, which is also the top of the directory stack.
-  If you can’t remember what is on your stack of directories, use the `dirs` builtin command to echo the stack,
+  If you can't remember what is on your stack of directories, use the `dirs` builtin command to echo the stack,
   left-to-right. For a more stack-like display, use the `-v` option.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
@@ -33477,99 +33524,95 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 1.3.21. Tips & Traps: Common Goofs for Novices
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
+- Certain mistakes seem common, almost predictable, among beginners.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 #### 1.3.21.1. Forgetting to Set Execute Permissions
 
--
+- You have two options if you try to execute a script and get the following error message: the first is you could
+  invoke `bash` and give it the name of the script as a parameter; the second (lor better still) is you could set
+  execute permissions on the script so that you can run it directly.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  # Error message
+  $ ./my.script
+  bash: ./my.script: Permission denied
+
+  # bash execution
+  $ bash my.script
+
+  # chmod execution
+  $ chmod a+x my.script
+  $./my.script
+  ```
+
+- Either method will get the script running. You'll probably want to set execute permissions on the script if you
+  intend to use it over and over. You only have to do this once, thereafter allowing you to invoke it directly. With
+  the permissions set it feels more like a command, since you don't have to explicitly invoke bash (of course, behind
+  the scenes bash is still being invoked, but you don't have to type it).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
+- In setting the permissions here, we used a+x to give execute permissions to all. There's little reason to restrict
+  execute permissions on the file unless it is in some directory where others might accidentally encounter your
+  executable (e.g., if as a system admin you were putting something of your own in `/usr/bin`). Besides, if the file
+  has read permissions for all, then others can still execute the script if they use our first form of invocation, with
+  the explicit reference to bash. In octal mode, common permissions on shell scripts are `0700` for the
+  suspicious/careful folk (giving read/write/execute permission to only the owner) and `0755` for the more
+  open/carefree folk (giving read and execute permissions to all others).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 #### 1.3.21.2. Fixing `"No such file or directory"` Errors
 
--
+- If you've set execute permission as previous in the previous heading of this section, but when you run the script,
+  you get a "No such file or directory" error, try running the script using `bash` explicitly.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  bash ./busted
+  ```
+
+- If it works, you have some kind of permissions error, or a type in your shebang line. If you get more errors, you
+  probably have the wrong line endings. This can happen in you've edited the file on Windows, or if you've simply
+  copied the file around among systems. To fix it, try the `dos2unix` program if you have it. Note that if you use
+  `dos2unix`, it will most likely create a new file and delete the old one, which will change the permissions and might
+  also change the owner or group and affect hard links, meaning you'll probably have to `chmod` it again.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  $ file ./busted
+  ./busted: Bourne-Again shell script, ASCII text executable, with CRLF line terminators
+
+  $
+  ```
+
+- If you really do have bad line endings -- i.e., anything that isn't ASCII 10 or hex 0a -- the error you get depends
+  on your shebang line, you might get the following outputs.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  $ cat busted
+  #!/bin/bash -
+  echo "Hello World!"
+  # This works
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ ./busted
+  Hello World!
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  # But if the file gets DOS line endings, we get:
+  $ ./busted
+  : invalid option
+  Usage: /bin/bash [GNU long option] [option] ...
+  [...]
+  # Different shebang line
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ cat ./busted
+  #!/usr/bin/env bash
+  echo "Hello World!"
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ ./busted
+  : No such file or directory
+  ```
 
 #### 1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`
 
@@ -53762,6 +53805,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ## 2.1. Command Line Tools Overview
 
+<!-- | `template_command` | | | TBD. | | | -->
+
 | **Command Line Tool Names** |                                          **Command Line Tool Summaries**                                          |                 **User Commands Documentation Links**                  |     **Cheat Sheet Links**     |              **Installation Procedures (Linux)**              |           **Installation Procedures (Windows)**            |
 | :-------------------------: | :---------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------: | :---------------------------: | :-----------------------------------------------------------: | :--------------------------------------------------------: |
 |            `7z`             |                                 File archiver with the highest compression ratio.                                 |                     <https://www.mankier.com/1/7z>                     |             TBD.              |                                                               |                                                            |
@@ -53882,13 +53927,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |           `kill`            |                                               Terminate a process.                                                |                    <https://www.mankier.com/1/kill>                    |             TBD.              |                                                               |                                                            |
 |          `killall`          |                                              Kill processes by name.                                              |                   <https://www.mankier.com/1/kilall>                   |             TBD.              |                                                               |                                                            |
 |          `kubectl`          |                                     Controls the Kubernetes cluster manager.                                      |            <https://kubernetes.io/docs/reference/kubectl/>             |             TBD.              |                                                               |                                                            |
+|           `last`            |                                            List logins on the system.                                             |                    <https://www.mankier.com/1/last>                    |             TBD.              |                                                               |                                                            |
 |           `less`            |     Program similar to `move(1)`, but which allows backward movement in the file as well as forward movement.     |                    <https://www.mankier.com/1/less>                    |             TBD.              |                                                               |                                                            |
 |         `lessfile`          |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |            `ln`             |                                             Make links between files.                                             |                     <https://www.mankier.com/1/ln>                     |             TBD.              |                                                               |                                                            |
 |          `locate`           |                                   List files in databases that match a pattern.                                   |         <https://man7.org/linux/man-pages/man1/locate.1.html>          |             TBD.              |                                                               |                                                            |
 |          `logger`           |                                        Enter messages into the system log.                                        |                   <https://www.mankier.com/1/logger>                   |             TBD.              |                                                               |                                                            |
 |            `ls`             |                                             List directory contents.                                              |                     <https://www.mankier.com/1/ls>                     |             TBD.              |                                                               |                                                            |
-|           `lshw`            |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
+|           `lshw`            |                                                  List hardware.                                                   |                    <https://www.mankier.com/1/lshw>                    |             TBD.              |                                                               |                                                            |
 |           `lspci`           |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |           `lsusb`           |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |           `lynx`            |                      General purpose distributed information browser for the World Wide Web.                      |                    <https://www.mankier.com/1/lynx>                    |             TBD.              |                                                               |                                                            |
@@ -54871,63 +54917,87 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 3.4.1.1. Sections of the Manual Pages
 
-- **0**: Header files.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+- **0**:
 
-- **0p**: Header files (POSIX).
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+  - Header files.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
 
-- **1**: User Commands (Programs). Commands that can be executed by the user from within a shell.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+- **0p**:
 
-- **1p**: Executable programs or shell commands (POSIX).
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+  - Header files (POSIX).
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
 
-- **2**: System calls. Functions which wrap operations performed by the kernel.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+- **1**:
 
-- **3**: Library calls. All library functions excluding the system call wrappers.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+  - User Commands (Programs). Commands that can be executed by the user from within a shell.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
 
-- **3n**: Network functions.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+- **1p**:
 
-- **3p**: Perl modules.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+  - Executable programs or shell commands (POSIX).
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
 
-- **4**: Special Files (Devices). Files found in `/dev` which allow to access to devices through the kernel.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+- **2**:
 
-- **5**: Describes various human-readable file formats and configuration files.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+  - System calls. Functions which wrap operations performed by the kernel.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
 
-- **6**: Games and funny little programs available on the system.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+- **3**:
 
-- **7**: Overviews or descriptions of various topics, conventions, and
-  protocols, character set standards, the standard file system layout, and miscellaneous other things.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+  - Library calls. All library functions excluding the system call wrappers.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
 
-- **8**: System Management Commands. Commands like [mount(8)](https://man7.org/linux/man-pages/man8/mount.8.html), many
-  of which only `root` can execute.
-  [man7: Linux Manual Pages][man7-linux-manual-pages]
+- **3n**:
 
-- **g**: Kernel routines.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+  - Network functions.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
 
-- **l**: Local documentation.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+- **3p**:
 
-- **n**: New manpages.
-  [Stack Exchange: What Do the Numbers in a Man Page Mean?][
-    stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+  - Perl modules.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+
+- **4**:
+
+  - Special Files (Devices). Files found in `/dev` which allow to access to devices through the kernel.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
+
+- **5**:
+
+  - Describes various human-readable file formats and configuration files.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
+
+- **6**:
+
+  - Games and funny little programs available on the system.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
+
+- **7**:
+
+  - Overviews or descriptions of various topics, conventions, and protocols, character set standards, the standard file
+    system layout, and miscellaneous other things.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
+
+- **8**:
+
+  - System Management Commands. Commands like [mount(8)](https://man7.org/linux/man-pages/man8/mount.8.html), many of
+    which only `root` can execute.
+    [man7: Linux Manual Pages][man7-linux-manual-pages]
+
+- **g**:
+
+  - Kernel routines.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+
+- **l**:
+
+  - Local documentation.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
+
+- **n**:
+
+  - New manpages.
+    [Stack Exchange: What Do the Numbers in a Man Page Mean?][stack-exchange-what-do-the-numbers-in-a-man-page-mean]
 
 ## 3.5. Pipelines
 
