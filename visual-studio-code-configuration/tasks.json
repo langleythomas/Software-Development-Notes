@@ -4,12 +4,12 @@
   "tasks": [
     {
       "label": "Add/Update Markdown Section Numbers",
-      "command": "${command:markdown.extension.toc.addSecNumbers}",
-      "problemMatcher": []
+      "command": "${command:markdown.extension.toc.addSecNumbers} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
+      "problemMatcher": [],
     },
     {
       "label": "Update Markdown Table of Contents",
-      "command": "${command:markdown.extension.toc.update}",
+      "command": "${command:markdown.extension.toc.update} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
       "problemMatcher": []
     },
     {
