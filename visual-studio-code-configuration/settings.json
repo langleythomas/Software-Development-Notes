@@ -4,11 +4,11 @@
     },
 
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 
     "[jsonc]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "vscode.json-language-features"
     },
 
     "[markdown]": {
@@ -127,6 +127,8 @@
         "Autotools",
         "Autumnburn",
         "auwx",
+        "Awwo",
+        "axwwo",
         "Azoun",
         "Azul",
         "badcommand",
@@ -321,6 +323,7 @@
         "esclapius",
         "Esravash",
         "Everbloom",
+        "ewwo",
         "execve",
         "expandtab",
         "extdebug",
@@ -730,8 +733,10 @@
         "permbits",
         "Peryton",
         "pformat",
+        "pgrep",
         "Phlan",
         "Pickleweed",
+        "pidof",
         "pinfo",
         "Pittmaker",
         "POCO",
@@ -1096,7 +1101,9 @@
     "editor.lineHeight": 1.7,
     "editor.minimap.showSlider": "always",
     "editor.occurrencesHighlight": "multiFile",
-    "editor.rulers": [120],
+    "editor.rulers": [
+        120
+    ],
     "editor.selectionClipboard": false,
     "editor.showFoldingControls": "always",
     "editor.stickyScroll.enabled": true,
@@ -1110,31 +1117,31 @@
 
     // Linux-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Linux distribution)
     "files.dialog.defaultPath": "/home/thomas/Repos",
-
     // Windows-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Windows release)
     // "files.dialog.defaultPath": "C:\\Repos",
-
     "files.eol": "\n",
     "files.insertFinalNewline": true,
 
     "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
 
     "markdown.extension.toc.updateOnSave": false,
-
     "markdownlint.run": "onSave",
     "markdownlint.config": {
+        "MD007": {
+            "indent": 4
+        },
         "MD013": {
-        "code_blocks": false,
-        "headings": false,
-        "line_length": 120,
-        "strict": true,
-        "tables": false
+            "code_blocks": false,
+            "headings": false,
+            "line_length": 120,
+            "strict": true,
+            "tables": false
         },
         "MD025": false,
         "MD033": false,
         "MD041": false,
         "MD046": {
-        "style": "fenced"
+            "style": "fenced"
         }
     },
 
@@ -1157,66 +1164,75 @@
     "terminal.integrated.mouseWheelZoom": true,
     "terminal.integrated.profiles.linux": {
         "bash": {
-        "path": "bash",
-        "icon": "terminal-bash"
+            "path": "bash",
+            "icon": "terminal-bash"
         },
         "zsh": {
-        "path": "zsh"
+            "path": "zsh"
         },
         "fish": {
-        "path": "fish"
+            "path": "fish"
         },
         "tmux": {
-        "path": "tmux",
-        "icon": "terminal-tmux"
+            "path": "tmux",
+            "icon": "terminal-tmux"
         },
         "pwsh": {
-        "path": "pwsh",
-        "icon": "terminal-powershell"
+            "path": "pwsh",
+            "icon": "terminal-powershell"
         }
     },
     "terminal.integrated.profiles.osx": {
         "bash": {
-        "path": "bash",
-        "args": ["-l"],
-        "icon": "terminal-bash"
+            "path": "bash",
+            "args": [
+                "-l"
+            ],
+            "icon": "terminal-bash"
         },
         "zsh": {
-        "path": "zsh",
-        "args": ["-l"]
+            "path": "zsh",
+            "args": [
+                "-l"
+            ]
         },
         "fish": {
-        "path": "fish",
-        "args": ["-l"]
+            "path": "fish",
+            "args": [
+                "-l"
+            ]
         },
         "tmux": {
-        "path": "tmux",
-        "icon": "terminal-tmux"
+            "path": "tmux",
+            "icon": "terminal-tmux"
         },
         "pwsh": {
-        "path": "pwsh",
-        "icon": "terminal-powershell"
+            "path": "pwsh",
+            "icon": "terminal-powershell"
         }
     },
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
-        "source": "PowerShell",
-        "icon": "terminal-powershell"
+            "source": "PowerShell",
+            "icon": "terminal-powershell"
         },
         "Command Prompt": {
-        "path": [
-            "${env:windir}\\Sysnative\\cmd.exe",
-            "${env:windir}\\System32\\cmd.exe"
-        ],
-        "args": [],
-        "icon": "terminal-cmd"
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ],
+            "args": [],
+            "icon": "terminal-cmd"
         },
         "Git Bash": {
-        "source": "Git Bash"
+            "source": "Git Bash"
         },
         "Ubuntu (WSL)": {
-        "path": "C:\\Windows\\System32\\wsl.exe",
-        "args": ["-d", "Ubuntu"]
+            "path": "C:\\Windows\\System32\\wsl.exe",
+            "args": [
+                "-d",
+                "Ubuntu"
+            ]
         }
     },
     "terminal.integrated.stickyScroll.enabled": true,
