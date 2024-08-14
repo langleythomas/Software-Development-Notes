@@ -2,36 +2,12 @@
 <!-- markdownlint-disable -->
 
 <!--
-
-Essential Notes to Look At:
-
 # Books
 ## Command Line
 ### Bash
 - bash Cookbook (Humble Bundle)
-
-# Online
-## Automation
-### Python Scripting
-- Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
-- Execute a Bash Command in Python Script: https://www.baeldung.com/linux/python-run-bash-command
-## Pipelines
-### Pipelines
-- Jenkins Handbook: https://www.jenkins.io/doc/book/
-- Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
-
-# Online
-## Automation
-- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
 ## Professional Programmer Advice
 - The Pragmatic Programmer (Physical)
-### Exit Codes
-- Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
-## Text Editors
-### Vi, Vim
-- `vi` and `vim` Editors (Physical)
-
-Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
 # Online
 ## Command Line
@@ -44,28 +20,33 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 #### Best Practices
 - https://mywiki.wooledge.org/BashGuide/Practices
 - https://bertvv.github.io/cheat-sheets/Bash.html
-
-# Cheat Sheets
-## Regular Expressions
-- List of Commonly Used RegEx
-## Text Editor Notes
-- Vim Cheat Sheet Commands/Shortcuts
-## List of Terminal Tools Documentation on Which to Write Cheat Sheets & Compile Links
-- Terminal Tools Documentation Links and Installation Procedures
-  - Find all the `bash` programs from the following following list in man7. For any non-`bash` documentation, explain
-    how to install it with a lint to an external link or reference to a section in this page.
+## Automation
+### Python Scripting
+- Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
+## Pipelines
+### Pipelines
+- Jenkins Handbook: https://www.jenkins.io/doc/book/
+- Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
 
 # Tutorials
-## Deployment
-- AWS course
 ## Microservice Development
-- Lean to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
+- Learn to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
+
+# Books
+## Automation
+- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
+## Professional Programmer Advice
+- The Pragmatic Programmer (Physical)
+## Text Editors
+### Vi, Vim
+- `vi` and `vim` Editors (Physical)
 
 # Online
-## Automation
-- Secure Unix Programming Checklist (https://web.archive.org/web/20080723191802/http:/www.auscert.org.au/render.html?it=1975)
-## Linux
-- PTY and TTY (https://www.baeldung.com/linux/pty-vs-tty)
+## Command Line
+### Bash
+- Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
+
+Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
 # Books
 ## Command Line
@@ -89,7 +70,11 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 - Learning Git (Humble Bundle)
 - Learning GitHub Actions (Humble Bundle)
 
-# Online Notes
+# Tutorials
+## Deployment
+- AWS course
+
+ Online Notes
 ## Energy Efficient Software
 - How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
 - Tutorial Starting Page: https://learn.greensoftware.foundation/
@@ -495,7 +480,7 @@ TODO: Order in which to do this testing.
         - [1.2.1.1.3. Storing Values in Variables](#12113-storing-values-in-variables)
           - [1.2.1.1.3.1. Assignment Statements](#121131-assignment-statements)
           - [1.2.1.1.3.2. Variable Names](#121132-variable-names)
-        - [1.2.1.1.4. Your First Program](#12114-your-first-program)
+        - [1.2.1.1.4. Your First Programs](#12114-your-first-programs)
         - [1.2.1.1.5. Dissecting Your Program](#12115-dissecting-your-program)
           - [1.2.1.1.5.1. Comments](#121151-comments)
           - [1.2.1.1.5.2. The `print()` Function](#121152-the-print-function)
@@ -33055,17 +33040,69 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.21. Finding Out Whether a Process Is Running
 
--
+- If you need to determine whether a process is running, and you might not already have a process ID (PID), `grep` the
+  output of the `ps` command to see if the program you are looking for is running, however, the issue with this
+  solution is that the behaviour of `ps` can vary wildly from system to system. Unfortunately, the `ps` command is one
+  of the most fragmented in all of Unix. It seems like every flavour of Unix and Linux has different arguments and
+  processes them in different ways.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  ps -ef | grep -q 'bin/[s]shd' && echo 'ssh is running' || echo 'ssh not running'
+  ```
+
+- The following a script you can use to find out if a process is running if you don't have a PID.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  # cookbook filename: is_process_running
+
+  # Can you believe this?!?
+  case `uname` in
+    Linux|AIX)
+      PS_ARGS='-ewwo pid,args'
+      ;;
+    SunOS)
+      PS_ARGS='-eo pid,args'
+      ;;
+    *BSD)
+      PS_ARGS='axwwo pid,args'
+      ;;
+    Darwin)
+      PS_ARGS='Awwo pid,command'
+      ;;
+  esac
+
+  if ps $PS_ARGS | grep -q 'bin/[s]shd'; then
+    echo 'sshd is running'
+  else
+    echo 'sshd not running'
+  fi
+  ```
+
+- If you do have a PID, search for it (be careful to match the PID with some other recognisable string so you don't
+  have a collision where some other random process just happens to have a stale PID that matches the one you are
+  using). Using the PID in the `grep` or in a `-p` argument to `ps`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  # Linux
+  $ ps -wwo pid,args -p 1394 | grep 'bin/sshd'
+  1394 /usr/sbin/sshd
+
+  # BSD
+  $ ps ww -p 366 | grep 'bin/sshd'
+  366 ?? Is 0:00.76 /usr/sbin/sshd
+  ```
+
+- You can also use `pgrep` if you system has that installed. Use the `-f` option to search the full command line
+  instead of just the process name, and `-a` to display the full command line.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+
+  ```bash
+  $ pgrep -f -a 'bin/[s]shd' ; echo $?
+  1278 /usr/sbin/sshd -D
+  ```
 
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -53970,6 +54007,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |            `opt`            |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |          `passwd`           |                                               Change user password.                                               |                   <https://www.mankier.com/1/passwd>                   |             TBD.              |                                                               |                                                            |
 |           `perl`            |                                           Perl 5 language interpreter.                                            |                    <https://www.mankier.com/1/perl>                    |             TBD.              |                                                               |                                                            |
+|           `pgrep`           |                    Look up, signal, or wait for processes based on name and other attributes.                     |                   <https://www.mankier.com/1/pgrep>                    |             TBD.              |                                                               |                                                            |
+|           `pidof`           |                                     Find the process ID of a running program.                                     |                   <https://www.mankier.com/1/pidof>                    |             TBD.              |                                                               |                                                            |
 |           `pinfo`           |                              User-friendly, console-based viewed for Info documents.                              |                   <https://www.mankier.com/1/pinfo>                    |             TBD.              |                                                               |                                                            |
 |           `ping`            |                                                                                                                   |                                                                        |             TBD.              |                                                               |                                                            |
 |            `pip`            |                                       Package manager for Python packages.                                        |                    <https://www.mankier.com/1/pip>                     |             TBD.              |                                                               |                                                            |
