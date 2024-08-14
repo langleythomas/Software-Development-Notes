@@ -73,16 +73,16 @@ set spelllang=en_gb
 " -----------------------------------------------------------------------------
 
 " Number of visual spaces per TAB
-set tabstop=2
+set tabstop=4
 
 " Number of spaces in TAB when editing
-set softtabstop=2
+set softtabstop=4
 
 " Tabs are spaces
 set expandtab
 
-" Indentations are 2 spaces
-set shiftwidth=2
+" Indentations space size
+set shiftwidth=4
 
 " New lines inherit the indentation of previous lines
 set autoindent
