@@ -46,7 +46,7 @@ endif
 " -----------------------------------------------------------------------------
 
 " Enable syntax highlighting
-filetype plugin indent on
+filetype plugin on
 
 " -----------------------------------------------------------------------------
 " Text Navigation
