@@ -1,37 +1,31 @@
 {
-  // See https://go.microsoft.com/fwlink/?LinkId=733558 for the documentation about the tasks.json format
-  "version": "2.0.0",
-  "tasks": [
-    {
-      "label": "Add/Update Markdown Section Numbers",
-      "command": "${command:markdown.extension.toc.addSecNumbers} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
-      "problemMatcher": [],
-    },
-    {
-      "label": "Update Markdown Table of Contents",
-      "command": "${command:markdown.extension.toc.update} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
-      "problemMatcher": []
-    },
-    {
-      "label": "Format Document",
-      "command": "${command:editor.action.formatDocument}",
-      "problemMatcher": []
-    },
-    {
-      "label": "Save All File Changes",
-      "command": "${command:workbench.action.files.saveAll}",
-      "problemMatcher": []
-    },
-    {
-      "label": "Compound Markdown Tasks",
-      "dependsOn": [
-        "Add/Update Markdown Section Numbers",
-        "Update Markdown Table of Contents",
-        "Format Document",
-        "Save All File Changes"
-      ],
-      "dependsOrder": "sequence",
-      "problemMatcher": []
-    }
-  ]
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Update Markdown Table of Contents",
+            "command": "${command:markdown.extension.toc.update} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
+            "problemMatcher": []
+        },
+        {
+            "label": "Format Document",
+            "command": "${command:editor.action.formatDocument}",
+            "problemMatcher": []
+        },
+        {
+            "label": "Save All File Changes",
+            "command": "${command:workbench.action.files.saveAll}",
+            "problemMatcher": []
+        },
+        {
+            "label": "Compound Markdown Tasks",
+            "dependsOn": [
+                "Update Markdown Table of Contents",
+                "Format Document",
+                "Save All File Changes"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": []
+        }
+    ]
 }
