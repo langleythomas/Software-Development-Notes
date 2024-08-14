@@ -1,44 +1,44 @@
 " Only calling the Vundle configuration if the Vundle.vim directory exists
 if !empty(glob("~/.vim/bundle/Vundle.vim"))
-  " ---------------------------------------------------------------------------
-  " Vundle Configuration, as documented in
-  " https://github.com/vundlevim/vundle.vim?tab=readme-ov-file#quick-start
-  " ---------------------------------------------------------------------------
+    " ---------------------------------------------------------------------------
+    " Vundle Configuration, as documented in
+    " https://github.com/vundlevim/vundle.vim?tab=readme-ov-file#quick-start
+    " ---------------------------------------------------------------------------
 
-  set nocompatible
-  filetype off
+    set nocompatible
+    filetype off
 
-  " Set the runtime path to include Vundle and initialise
-  set rtp+=~/.vim/bundle/Vundle.vim
-  call vundle#begin()
+    " Set the runtime path to include Vundle and initialise
+    set rtp+=~/.vim/bundle/Vundle.vim
+    call vundle#begin()
 
-  " Let Vundle manage Vundle
-  Plugin 'VundleVim/Vundle.vim'
+    " Let Vundle manage Vundle
+    Plugin 'VundleVim/Vundle.vim'
 
-  " Let Vundle manage Markdown Preview, as documented in:
-  " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage
-  Plugin 'iamcco/markdown-preview.nvim'
+    " Let Vundle manage Markdown Preview, as documented in:
+    " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage
+    Plugin 'iamcco/markdown-preview.nvim'
 
-  " Let Vundle manage the Dracula theme, as documented in:
-  " https://draculatheme.com/vim
-  Plugin 'dracula/vim', { 'name': 'dracula' }
+    " Let Vundle manage the Dracula theme, as documented in:
+    " https://draculatheme.com/vim
+    Plugin 'dracula/vim', { 'name': 'dracula' }
 
-  " All of your Plugins must be added before the following line.
-  call vundle#end()
+    " All of your Plugins must be added before the following line.
+    call vundle#end()
 
-  " -----------------------------------------------------------------------------
-  " MarkdownPreview Configuration
-  " -----------------------------------------------------------------------------
+    " -----------------------------------------------------------------------------
+    " MarkdownPreview Configuration
+    " -----------------------------------------------------------------------------
 
-  " Enabling an automatic Markdown Preview window to be opened after entering the
-  " Markdown buffer, as documented in:
-  " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
-  "let g:mkdp_auto_start = 1
+    " Enabling an automatic Markdown Preview window to be opened after entering the
+    " Markdown buffer, as documented in:
+    " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
+    "let g:mkdp_auto_start = 1
 
-  " Enabling the Markdown Preview window to only be updated after saving the
-  " buffer or when leaving insert mode, as documented in:
-  " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
-  let g:mkdp_refresh_slow = 1 
+    " Enabling the Markdown Preview window to only be updated after saving the
+    " buffer or when leaving insert mode, as documented in:
+    " https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#markdownpreview-config
+    let g:mkdp_refresh_slow = 1 
 endif
 
 " -----------------------------------------------------------------------------
@@ -114,9 +114,9 @@ set colorcolumn=120
 
 "Setting the colour scheme
 try
-  colorscheme dracula
+    colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
-  colorscheme torte
+    colorscheme torte
 endtry
 
 " -----------------------------------------------------------------------------
@@ -153,10 +153,10 @@ set smartcase
 " -----------------------------------------------------------------------------
 
 " Set file format
-"set fileformat=unix
+set fileformat=unix
 
 " Set file encoding type
-"set encoding=UTF-8
+set encoding=UTF-8
 
 " -----------------------------------------------------------------------------
 " Vim Exit
