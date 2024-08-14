@@ -46,7 +46,7 @@ endif
 " -----------------------------------------------------------------------------
 
 " Enable syntax highlighting
-filetype plugin on
+filetype plugin indent on
 
 " -----------------------------------------------------------------------------
 " Text Navigation
@@ -72,17 +72,8 @@ set spelllang=en_gb
 " Spaces & Tabs
 " -----------------------------------------------------------------------------
 
-" Number of visual spaces per TAB
-set tabstop=4
-
-" Number of spaces in TAB when editing
-set softtabstop=4
-
 " Tabs are spaces
 set expandtab
-
-" Indentations space size
-set shiftwidth=4
 
 " New lines inherit the indentation of previous lines
 set autoindent
