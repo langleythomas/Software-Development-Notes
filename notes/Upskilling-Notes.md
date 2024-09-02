@@ -10,6 +10,13 @@
 - The Pragmatic Programmer (Physical)
 
 # Online
+## Automation
+### Python Scripting
+- Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
+## Pipelines
+### Pipelines
+- Jenkins Handbook: https://www.jenkins.io/doc/book/
+- Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
 ## Command Line
 ### Bash
 #### Variable Declaration and Differences
@@ -20,13 +27,8 @@
 #### Best Practices
 - https://mywiki.wooledge.org/BashGuide/Practices
 - https://bertvv.github.io/cheat-sheets/Bash.html
-## Automation
-### Python Scripting
-- Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
-## Pipelines
-### Pipelines
-- Jenkins Handbook: https://www.jenkins.io/doc/book/
-- Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
+
+Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
 # Tutorials
 ## Microservice Development
@@ -45,8 +47,6 @@
 ## Command Line
 ### Bash
 - Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
-
-Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
 
 # Books
 ## Command Line
@@ -74,7 +74,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 ## Deployment
 - AWS course
 
- Online Notes
+# Online Notes
 ## Energy Efficient Software
 - How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
 - Tutorial Starting Page: https://learn.greensoftware.foundation/
@@ -33104,24 +33104,6 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   1278 /usr/sbin/sshd -D
   ```
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
 #### 1.3.19.22. Adding a Prefix or Suffix to Output
 
 - If you'd like to add a prefix or a suffix to each line to output from a given command for some reason, pipe the
@@ -33149,131 +33131,124 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.3.19.23. Numbering Lines
 
--
+- If you need to number the lines of a text file for reference or for use as an example, there are a few options.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+- The following is a command sequence for numbering the lines from reading a file called `lines`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  $ i=0; while IFS= read -r line; do (( i++ )); echo "$i $line"; done < lines
+  1 Line 1
+  2 Line 2
+  3
+  4 Line 4
+  5 Line 5
+  6
+  ```
+
+- The following is the `cat` implementation of numbering lines in a file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  $ cat -n lines
+  1 Line 1
+  2 Line 2
+  3
+  4 Line 4
+  5 Line 5
+  6
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ cat -b lines
+  1 Line 1
+  2 Line 2
+  3 Line 4
+  4 Line 5
+  ```
 
 #### 1.3.19.24. Writing Sequences
 
--
+- If you need to generate a sequence of numbers, possibly with other text, for testing or some other purpose, use `awk`
+  because it should work on any system. On some systems, notably Solaris, `awk` will hang waiting for a file unless you
+  give it one, such as `/dev/null`. This has no effect on other systems, so it's fine to always use the following
+  example.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  $ awk 'END { for (i=1; i <= 5; i++) print i, "text"}' /dev/null
+  1 text
+  2 text
+  3 text
+  4 text
+  5 text
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  $ awk 'BEGIN { for (i=1; i <= 5; i+=.5) print i}' /dev/null
+  1
+  1.5
+  2
+  2.5
+  3
+  3.5
+  4
+  4.5
+  5
+  ```
 
 #### 1.3.19.25. Emulating the DOS Pause Command
 
--
+- If you are migrating from DOS/Windows batch files and want to emulate the DOS `pause` command, use the `read -n1 -p`
+  command in a function.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  pause ()
+  {
+    read -n1 -p 'Press any key when ready...'
+  }
+  ```
 
 #### 1.3.19.26. Commifying Numbers
 
--
+- If you'd like to add a thousands-place separator to long number, depending on your system and configuration, you may
+  be able to use `printf`'s format flag with a suitable locale. The following is the easiest solution to this problem.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
+  ```bash
+  $ LC_NUMERIC=en_US.UTF-8 printf "%'d\n" 123456789
+  123,456,789
+
+  $ LC_NUMERIC=en_US.UTF-8 printf "%'f\n" 123456789.987
+  123,456,789.987000
+  $
+  ```
+
+- The following is the shell-only implementation for systems without `printf`. The shell function is written to follow
+  the same logical process as a person using a pencil and paper. First you examine the string and find the decimal
+  point, if any. You ignore everything after the dot, and work on the string before the dot. The shell function saves
+  the string before the dot in `$bdot`, and after the dot (including the dot) in `$adot`. If there is no dot, then
+  everything is in `$bdot`, and `$adot` is empty. Next, a person would move from right to left in the part before the
+  dot and insert a comma when these two conditions are met: there are four or more characters left; the character
+  before the comma is a number. The function implements this logic in a `while` loop.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  ```bash
+  function commify {
+    typeset text=${1}
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+    typeset bdot=${text%%.*}
+    typeset adot=${text#${bdot}}
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+    typeset i commified
+    (( i = ${#bdot} - 1 ))
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+    while (( i>=3 )) && [[ ${bdot:i-3:1} == [0-9] ]]; do
+      commified=",${bdot:i-2:3}${commified}"
+    (( i -= 3 ))
+    done
 
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
-
--
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+    echo "${bdot:0:i+1}${commified}${adot}"
+  }
+  ```
 
 ### 1.3.20. Working Faster by Typing Less
 
