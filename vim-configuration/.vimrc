@@ -46,7 +46,7 @@ endif
 " -----------------------------------------------------------------------------
 
 " Enable syntax highlighting
-filetype plugin indent on
+filetype plugin on
 
 " -----------------------------------------------------------------------------
 " Text Navigation
@@ -83,6 +83,10 @@ set shiftround
 
 " Insert 'tabstop' number of spaces when the '<TAB>' key is pressed
 set smarttab
+
+" Set indentation by file type
+" Markdown indentation configuration
+autocmd FileType markdown set tabstop=8|set shiftwidth=2|set expandtab
 
 " -----------------------------------------------------------------------------
 " UI Configuration
@@ -165,3 +169,8 @@ au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g
 
 " Disable mouse control and navigation in the buffer.
 set mouse=
+
+" -----------------------------------------------------------------------------
+" Memory Configuration
+" -----------------------------------------------------------------------------
+set maxmempattern=2000000
