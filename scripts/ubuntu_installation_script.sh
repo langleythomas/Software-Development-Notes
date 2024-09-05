@@ -16,9 +16,12 @@ function log_output() {
     print_separator
 }
 
+
+
 #######################################################################################################################
 ############################################## Generic Update Functions ###############################################
 #######################################################################################################################
+
 function update_and_upgrade_apt() {
     log_output "Updating and updating releases in apt.\n"
 
@@ -37,6 +40,8 @@ function update_snap() {
 
     sudo snap refresh
 }
+
+
 
 #######################################################################################################################
 ############################################### Nvidia-Specific Function ##############################################
@@ -58,6 +63,8 @@ function purge_nvidia_drivers() {
 function call_nvidia_driver_function() {
     purge_nvidia_drivers
 }
+
+
 
 #######################################################################################################################
 ########################################### .NET Development Tool Functions ###########################################
@@ -91,6 +98,8 @@ function call_dot_net_development_tool_functions() {
     install_dot_net_runtime
 }
 
+
+
 #######################################################################################################################
 ######################################## JavaScript Development Tool Functions ########################################
 #######################################################################################################################
@@ -122,6 +131,8 @@ function install_javascript_development_tools() {
 function call_javascript_development_tool_functions() {
     install_javascript_development_tools
 }
+
+
 
 #######################################################################################################################
 ################################################ Deployment Tool Functions ############################################
@@ -217,7 +228,6 @@ function test_kubernetes_installation() {
     kubectl cluster-info
 }
 
-# Helm
 function install_helm() {
     log_output "Installing Helm.\n"
 
@@ -258,6 +268,8 @@ function call_deployment_tool_functions() {
     install_helm
     test_helm_installation
 }
+
+
 
 #######################################################################################################################
 ########################################### Text Editors Functions ####################################################
@@ -433,6 +445,8 @@ function call_text_editor_installation_functions() {
     install_pycharm
 }
 
+
+
 #######################################################################################################################
 ############################################ Version Control Functions ################################################
 #######################################################################################################################
@@ -477,6 +491,8 @@ function call_version_control_functions() {
     generate_github_ssh_key
 }
 
+
+
 #######################################################################################################################
 ####################################### Configure Linux System Overrides ##############################################
 #######################################################################################################################
@@ -497,8 +513,10 @@ function call_linux_system_overrides_function() {
     configure_bashrc
 }
 
+
+
 #######################################################################################################################
-######################################## Miscellaneous Tool Functions #################################################
+############################################## Browser Function #######################################################
 #######################################################################################################################
 
 function install_chrome() {
@@ -509,6 +527,16 @@ function install_chrome() {
     flatpak install flathub com.google.Chrome --yes
 }
 
+function call_browser_installation_function() {
+    install_chrome
+}
+
+
+
+#######################################################################################################################
+############################################ Social Platform Function #################################################
+#######################################################################################################################
+
 function install_discord() {
     update_flatpak
 
@@ -516,6 +544,16 @@ function install_discord() {
 
     flatpak install flathub com.discordapp.Discord --yes
 }
+
+function call_social_platform_function() {
+    install_discord
+}
+
+
+
+#######################################################################################################################
+########################################## UI Configuration Function ##################################################
+#######################################################################################################################
 
 function install_gnome_tweaks() {
     update_and_upgrade_apt
@@ -525,23 +563,47 @@ function install_gnome_tweaks() {
     sudo apt install gnome-tweaks
 }
 
+function call_ui_configuration_installation_function() {
+    install_gnome_tweaks
+}
+
+
+
+#######################################################################################################################
+############################################ Media Player Function ####################################################
+#######################################################################################################################
+
 function install_vlc() {
-    update_and_upgrade_apt
+    update_flatpak
 
     log_output "Installing VLC.\n"
 
     flatpak install flathub org.videolan.VLC --yes
 }
 
-function call_miscellaneous_tool_functions() {
-    install_chrome
-
-    install_discord
-
-    install_gnome_tweaks
-
+function call_media_player_installation_function() {
     install_vlc
 }
+
+
+
+#######################################################################################################################
+############################################## Terminal Function ######################################################
+#######################################################################################################################
+
+function install_guake() {
+    update_and_upgrade_apt
+
+    log_output "Installing Guake.\n"
+
+    sudo apt install guake --yes
+}
+
+function call_terminal_installation_function() {
+    install_guake
+}
+
+
 
 #######################################################################################################################
 ######################################## Autoremove Dependency Function ###############################################
@@ -559,6 +621,8 @@ function call_autoremove_unused_dependency_function() {
     autoremove_unused_dependencies
 }
 
+
+
 #######################################################################################################################
 ########################################## Common Function Callers ####################################################
 #######################################################################################################################
@@ -575,6 +639,14 @@ function call_autoremove_unused_dependency_function() {
 
 # call_version_control_functions
 
-# call_miscellaneous_tool_functions
+# call_browser_installation_function
+
+# call_social_platform_function
+
+# call_ui_configuration_installation_function
+
+# call_media_player_installation_function
+
+# call_terminal_installation_function
 
 # call_autoremove_unused_dependency_function
