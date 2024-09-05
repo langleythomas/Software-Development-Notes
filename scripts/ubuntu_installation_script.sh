@@ -297,8 +297,14 @@ function configure_vim() {
 
     log_output "Creating Vim configuration directories and configuration file.\n"
 
-    mkdir --verbose --parents "${dot_vim_directory_path}" "${dot_vim_directory_path}/autoload" "${dot_vim_directory_path}/backup" "${dot_vim_directory_path}/colors" "${dot_vim_directory_path}/plugged"
-    touch "${vimrc_file_path}"
+    mkdir \
+        --verbose \
+        --parents \
+        "${dot_vim_directory_path}" \
+        "${dot_vim_directory_path}/autoload" \
+        "${dot_vim_directory_path}/backup" \
+        "${dot_vim_directory_path}/colors" \
+        "${dot_vim_directory_path}/plugged"
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/vim-configuration/.vimrc" \
@@ -341,8 +347,10 @@ function configure_neovim() {
 
     log_output "Creating Neovim configuration directories and configuration files.\n"
 
-    mkdir --verbose --parents "${dot_config_neovim_directory_path}"
-    touch "${dot_config_neovim_directory_path}/init.vim"
+    mkdir  \
+        --verbose \
+        --parents \
+        "${dot_config_neovim_directory_path}"
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.vim" \
@@ -381,7 +389,10 @@ function install_visual_studio_code() {
         https://packages.microsoft.com/repos/code stable main" |
         sudo tee /etc/apt/sources.list.d/vscode.list > "/dev/null"
 
-    rm --force --verbose "packages.microsoft.gpg"
+    rm \
+        --force \
+        --verbose \
+        "packages.microsoft.gpg"
 
     update_and_upgrade_apt
     sudo apt install apt-transport-https --yes
@@ -588,19 +599,31 @@ function call_media_player_installation_function() {
 
 
 #######################################################################################################################
-############################################## Terminal Function ######################################################
+############################################## Terminal Functions #####################################################
 #######################################################################################################################
 
 function install_guake() {
     update_and_upgrade_apt
 
-    log_output "Installing Guake.\n"
+    log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key.\n"
 
     sudo apt install guake --yes
 }
 
-function call_terminal_installation_function() {
+function configure_guake() {
+    log_output "Configuring Guake.\n"
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/guake-configuration/guake_configuration.conf" \
+        >> "${HOME}/Downloads/guake_configuration.conf"
+
+    guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
+}
+
+function call_terminal_installation_functions() {
     install_guake
+
+    configure_guake
 }
 
 
@@ -647,6 +670,6 @@ function call_autoremove_unused_dependency_function() {
 
 # call_media_player_installation_function
 
-# call_terminal_installation_function
+# call_terminal_installation_functions
 
 # call_autoremove_unused_dependency_function
