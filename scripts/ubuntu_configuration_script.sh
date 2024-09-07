@@ -659,7 +659,7 @@ function perform_unused_dependency_removal() {
 ########################################### Execute Other Functions ###################################################
 #######################################################################################################################
 
-function execute_ubuntu_configuration() {
+function perform_ubuntu_configuration() {
     perform_graphics_driver_configuration
 
     perform_deployment_tool_installation_configuration
@@ -689,4 +689,4 @@ function execute_ubuntu_configuration() {
     perform_unused_dependency_removal
 }
 
-execute_ubuntu_configuration
+perform_ubuntu_configuration
