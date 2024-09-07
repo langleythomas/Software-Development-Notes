@@ -19,7 +19,7 @@ function log_output() {
 
 
 #######################################################################################################################
-############################################## Generic Update Functions ###############################################
+##########################################  Packaging Tool Refresh Functions ##########################################
 #######################################################################################################################
 
 function update_and_upgrade_apt() {
@@ -44,98 +44,30 @@ function update_snap() {
 
 
 #######################################################################################################################
-############################################### Nvidia-Specific Function ##############################################
+############################################# Graphics Driver Configuration ###########################################
 #######################################################################################################################
 
-function purge_nvidia_drivers() {
+function remove_nvidia_drivers() {
     # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by Nvidia
     # driver issues. The commands in this function can resolve this issue. These commands can only be effective in a
     # fresh OS installation.
 
     update_and_upgrade_apt
 
-    log_output "Purging Nvidia drivers.\n"
+    log_output "Removing Nvidia drivers.\n"
 
     sudo apt purge nvidia* --yes
     sudo ubuntu-drivers autoinstall --yes
 }
 
-function call_nvidia_driver_function() {
-    purge_nvidia_drivers
+function perform_graphics_driver_configuration() {
+    remove_nvidia_drivers
 }
 
 
 
 #######################################################################################################################
-########################################### .NET Development Tool Functions ###########################################
-#######################################################################################################################
-
-function install_dot_net_sdk() {
-    update_and_upgrade_apt
-
-    log_output "Installing .NET SDK.\n"
-
-    sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
-    sudo apt install --yes dotnet-sdk-7.0
-
-    dotnet --list-sdks
-    dotnet --info
-}
-
-function install_dot_net_runtime() {
-    update_and_upgrade_apt
-
-    log_output "Installing .NET Runtime.\n"
-
-    sudo apt install --yes aspnetcore-runtime-7.0
-
-    dotnet --list-runtimes
-    dotnet --info
-}
-
-function call_dot_net_development_tool_functions() {
-    install_dot_net_sdk
-    install_dot_net_runtime
-}
-
-
-
-#######################################################################################################################
-######################################## JavaScript Development Tool Functions ########################################
-#######################################################################################################################
-
-function install_javascript_development_tools() {
-    update_and_upgrade_apt
-
-    log_output "Installing JavaScript Development Tools.\n"
-
-    sudo apt install --yes ca-certificates curl gnupg
-    sudo mkdir --parents "/etc/apt/keyrings"
-
-    curl \
-        --fail \
-        --silent \
-        --show-error \
-        --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" |
-        sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
-
-    local -r node_version=20
-
-    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
-        https://deb.nodesource.com/node_$node_version.x nodistro main" |
-        sudo tee /etc/apt/sources.list.d/nodesource.list
-
-    sudo apt install nodejs --yes
-}
-
-function call_javascript_development_tool_functions() {
-    install_javascript_development_tools
-}
-
-
-
-#######################################################################################################################
-################################################ Deployment Tool Functions ############################################
+###################################### Deployment Tools Installation & Configuration ##################################
 #######################################################################################################################
 
 function install_docker() {
@@ -254,7 +186,7 @@ function test_helm_installation() {
     helm delete odoo
 }
 
-function call_deployment_tool_functions() {
+function perform_deployment_tool_installation_configuration() {
     install_docker
     start_docker
     test_docker_installation
@@ -272,7 +204,141 @@ function call_deployment_tool_functions() {
 
 
 #######################################################################################################################
-########################################### Text Editors Functions ####################################################
+########################################## .NET Development Tool Installation #########################################
+#######################################################################################################################
+
+function install_dot_net_sdk() {
+    update_and_upgrade_apt
+
+    log_output "Installing the .NET SDK for C# development.\n"
+
+    sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
+    sudo apt install --yes dotnet-sdk-7.0
+
+    dotnet --list-sdks
+    dotnet --info
+}
+
+function install_dot_net_runtime() {
+    update_and_upgrade_apt
+
+    log_output "Installing .NET Runtime.\n"
+
+    sudo apt install --yes aspnetcore-runtime-7.0
+
+    dotnet --list-runtimes
+    dotnet --info
+}
+
+function perform_dot_net_development_tool_installation() {
+    install_dot_net_sdk
+    install_dot_net_runtime
+}
+
+
+
+#######################################################################################################################
+##################################### JavaScript Development Tool Installation ########################################
+#######################################################################################################################
+
+function install_nodejs_runtime() {
+    update_and_upgrade_apt
+
+    log_output "Installing the Node JS runtime for JavaScript development.\n"
+
+    sudo apt install --yes ca-certificates curl gnupg
+    sudo mkdir --parents "/etc/apt/keyrings"
+
+    curl \
+        --fail \
+        --silent \
+        --show-error \
+        --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" |
+        sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
+
+    local -r node_version=20
+
+    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
+        https://deb.nodesource.com/node_$node_version.x nodistro main" |
+        sudo tee /etc/apt/sources.list.d/nodesource.list
+
+    sudo apt install nodejs --yes
+}
+
+function perform_javascript_development_tool_installation() {
+    install_nodejs_runtime
+}
+
+
+#######################################################################################################################
+###################################### Version Control Installation & Configuration ###################################
+#######################################################################################################################
+
+function install_git() {
+    update_and_upgrade_apt
+
+    log_output "Installing Git.\n"
+
+    sudo apt install git --yes
+
+    git --version
+}
+
+function configure_git_global_parameters() {
+    log_output "Setting up Git with a default username and email.\n"
+
+    git config --global user.name "langleythomas"
+
+    git config --global user.email "thomas.moorhead.langley@gmail.com"
+}
+
+function generate_github_ssh_key() {
+    log_output "Generating SSH key for cloning private GitHub repositories.\n"
+
+    ssh-keygen -t ed25519 -C "thomas.moorhead.langley@gmail.com"
+
+    eval "$(ssh-agent -s)"
+
+    ssh-add ~/.ssh/id_ed25519
+
+    log_output "Opening the generated ssh key.\n"
+
+    cat ~/.ssh/id_ed25519.pub
+}
+
+function perform_version_control_installation_configuration() {
+    install_git
+
+    configure_git_global_parameters
+
+    generate_github_ssh_key
+}
+
+
+
+#######################################################################################################################
+###################################### Linux System Override Configuration ############################################
+#######################################################################################################################
+
+function configure_bashrc() {
+    log_output "Configuring .bashrc.\n"
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" \
+        >> "${HOME}/.bashrc"
+
+    # shellcheck disable=SC1090
+    # shellcheck disable=SC1091
+    source "${HOME}/.bashrc"
+}
+
+function perform_linux_system_override_configuration() {
+    configure_bashrc
+}
+
+
+#######################################################################################################################
+################################## Text Editors Installation & Configuration ##########################################
 #######################################################################################################################
 
 function install_vim() {
@@ -282,10 +348,12 @@ function install_vim() {
     log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard\n."
     log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
 
-    sudo apt-get install vim-gtk3 --yes
+    sudo apt install vim-gtk3 --yes
 }
 
 function install_vundle() {
+    local -r dot_vim_directory_path="${1}"
+
     log_output "Installing Vundle, the Vim package manager, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
 
     git clone "https://github.com/VundleVim/Vundle.vim.git" "${dot_vim_directory_path}/bundle/Vundle.vim"
@@ -420,6 +488,30 @@ function install_sublime_text() {
     sudo apt install sublime-text
 }
 
+function perform_text_editor_installation_configuration() {
+    local -r vimrc_file_path="${HOME}/.bashrc"
+    local -r dot_vim_directory_path="${HOME}/.vim"
+    install_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
+    install_vundle "${dot_vim_directory_path}"
+    configure_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
+    install_vim_dracula_theme
+    install_vim_markdown_preview "${vimrc_file_path}"
+
+    install_neovim
+    configure_neovim
+    install_neovim_system_clipboard_dependency
+
+    install_visual_studio_code
+
+    install_sublime_text
+}
+
+
+
+#######################################################################################################################
+################################# Integrated Development Environment (IDE) Installation ###############################
+#######################################################################################################################
+
 function install_intellij() {
     update_snap
 
@@ -436,98 +528,16 @@ function install_pycharm() {
     sudo snap install pycharm-community --classic
 }
 
-function call_text_editor_installation_functions() {
-    local -r vimrc_file_path="${HOME}/.bashrc"
-    local -r dot_vim_directory_path="${HOME}/.vim"
-    install_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
-    configure_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
-    install_vim_dracula_theme
-    install_vim_markdown_preview "${vimrc_file_path}"
-
-    install_neovim
-    configure_neovim
-    install_neovim_system_clipboard_dependency
-
-    install_visual_studio_code
-
-    install_sublime_text
-
+function perform_ide_installation() {
     install_intellij
+
     install_pycharm
 }
 
 
 
 #######################################################################################################################
-############################################ Version Control Functions ################################################
-#######################################################################################################################
-
-function install_git() {
-    update_and_upgrade_apt
-
-    log_output "Installing Git.\n"
-
-    sudo apt install git --yes
-
-    git --version
-}
-
-function configure_git_global_parameters() {
-    log_output "Setting up Git with a default username and email.\n"
-
-    git config --global user.name "langleythomas"
-
-    git config --global user.email "thomas.moorhead.langley@gmail.com"
-}
-
-function generate_github_ssh_key() {
-    log_output "Generating SSH key for cloning private GitHub repositories.\n"
-
-    ssh-keygen -t ed25519 -C "thomas.moorhead.langley@gmail.com"
-
-    eval "$(ssh-agent -s)"
-
-    ssh-add ~/.ssh/id_ed25519
-
-    log_output "Opening the generated ssh key.\n"
-
-    cat ~/.ssh/id_ed25519.pub
-}
-
-function call_version_control_functions() {
-    install_git
-
-    configure_git_global_parameters
-
-    generate_github_ssh_key
-}
-
-
-
-#######################################################################################################################
-####################################### Configure Linux System Overrides ##############################################
-#######################################################################################################################
-
-function configure_bashrc() {
-    log_output "Configuring .bashrc.\n"
-
-    curl \
-        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/bash-configuration/.bashrc" \
-        >> "${HOME}/.bashrc"
-
-    # shellcheck disable=SC1090
-    # shellcheck disable=SC1091
-    source "${HOME}/.bashrc"
-}
-
-function call_linux_system_overrides_function() {
-    configure_bashrc
-}
-
-
-
-#######################################################################################################################
-############################################## Browser Function #######################################################
+############################################# Browser Installation ####################################################
 #######################################################################################################################
 
 function install_chrome() {
@@ -538,14 +548,14 @@ function install_chrome() {
     flatpak install flathub com.google.Chrome --yes
 }
 
-function call_browser_installation_function() {
+function perform_browser_installation() {
     install_chrome
 }
 
 
 
 #######################################################################################################################
-############################################ Social Platform Function #################################################
+########################################## Social Platform Installation ###############################################
 #######################################################################################################################
 
 function install_discord() {
@@ -556,14 +566,14 @@ function install_discord() {
     flatpak install flathub com.discordapp.Discord --yes
 }
 
-function call_social_platform_function() {
+function perform_social_platform_installation() {
     install_discord
 }
 
 
 
 #######################################################################################################################
-########################################## UI Configuration Function ##################################################
+############################################ UI Tool Installation #####################################################
 #######################################################################################################################
 
 function install_gnome_tweaks() {
@@ -574,14 +584,14 @@ function install_gnome_tweaks() {
     sudo apt install gnome-tweaks
 }
 
-function call_ui_configuration_installation_function() {
+function perform_ui_configuration_tool_installation() {
     install_gnome_tweaks
 }
 
 
 
 #######################################################################################################################
-############################################ Media Player Function ####################################################
+############################################ Media Player Installation ################################################
 #######################################################################################################################
 
 function install_vlc() {
@@ -592,14 +602,14 @@ function install_vlc() {
     flatpak install flathub org.videolan.VLC --yes
 }
 
-function call_media_player_installation_function() {
+function perform_media_player_installation() {
     install_vlc
 }
 
 
 
 #######################################################################################################################
-############################################## Terminal Functions #####################################################
+############################################## Terminal Installation & Configuration #####################################################
 #######################################################################################################################
 
 function install_guake() {
@@ -620,16 +630,15 @@ function configure_guake() {
     guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
 }
 
-function call_terminal_installation_functions() {
+function perform_terminal_installation_configuration() {
     install_guake
-
     configure_guake
 }
 
 
 
 #######################################################################################################################
-######################################## Autoremove Dependency Function ###############################################
+##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
 #######################################################################################################################
 
 function autoremove_unused_dependencies() {
@@ -640,36 +649,44 @@ function autoremove_unused_dependencies() {
     sudo apt autoremove --yes
 }
 
-function call_autoremove_unused_dependency_function() {
+function perform_unused_dependency_removal() {
     autoremove_unused_dependencies
 }
 
 
 
 #######################################################################################################################
-########################################## Common Function Callers ####################################################
+########################################### Execute Other Functions ###################################################
 #######################################################################################################################
 
-# call_nvidia_driver_function
+function execute_ubuntu_configuration() {
+    perform_graphics_driver_configuration
 
-# call_dot_net_development_tool_functions
+    perform_deployment_tool_installation_configuration
 
-# call_javascript_development_tool_functions
+    perform_dot_net_development_tool_installation
 
-# call_deployment_tool_functions
+    perform_javascript_development_tool_installation
 
-# call_text_editor_installation_functions
+    perform_version_control_installation_configuration
 
-# call_version_control_functions
+    perform_linux_system_override_configuration
 
-# call_browser_installation_function
+    perform_text_editor_installation_configuration
 
-# call_social_platform_function
+    perform_ide_installation
 
-# call_ui_configuration_installation_function
+    perform_browser_installation
 
-# call_media_player_installation_function
+    perform_social_platform_installation
 
-# call_terminal_installation_functions
+    perform_ui_configuration_tool_installation
 
-# call_autoremove_unused_dependency_function
+    perform_media_player_installation
+
+    perform_terminal_installation_configuration
+
+    perform_unused_dependency_removal
+}
+
+execute_ubuntu_configuration
