@@ -6,17 +6,29 @@
 ## Command Line
 ### Bash
 - bash Cookbook (Humble Bundle)
-## Professional Programmer Advice
-- The Pragmatic Programmer (Physical)
+## Automation
+- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
 
 # Online
 ## Automation
 ### Python Scripting
 - Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
+## Python
+### Python Testing
+- Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
+- Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
 ## Pipelines
 ### Pipelines
 - Jenkins Handbook: https://www.jenkins.io/doc/book/
 - Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
+
+Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
+
+# Books
+## Professional Programmer Advice
+- The Pragmatic Programmer (Physical)
+
+# Online
 ## Command Line
 ### Bash
 #### Variable Declaration and Differences
@@ -28,15 +40,11 @@
 - https://mywiki.wooledge.org/BashGuide/Practices
 - https://bertvv.github.io/cheat-sheets/Bash.html
 
-Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
-
 # Tutorials
 ## Microservice Development
 - Learn to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
 
 # Books
-## Automation
-- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
 ## Professional Programmer Advice
 - The Pragmatic Programmer (Physical)
 ## Text Editors
