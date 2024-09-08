@@ -76,7 +76,11 @@ function install_docker() {
     log_output "Installing Docker.\n"
 
     # Add Docker's official GPG key:
-    sudo apt install ca-certificates curl
+    sudo apt install ca-certificates --yes
+    sudo apt show ca-certificates
+
+    sudo apt install curl --yes
+    sudo apt show curl
 
     sudo install \
         --mode=0755 \
@@ -99,11 +103,25 @@ function install_docker() {
         $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
         sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-    # Install and Start Docker Engine.
-    sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin --yes
+    # Install Docker Engine.
+    sudo apt install docker-ce --yes
+    sudo apt show docker-ce
+
+    sudo apt install docker-ce-cli --yes
+    sudo apt show docker-ce-cli
+
+    sudo apt install containerd.io --yes
+    sudo apt show containerd.io
+
+    sudo apt install docker-buildx-plugin --yes
+    sudo apt show docker-buildx-plugin
+
+    sudo apt install docker-compose-plugin --yes
+    sudo apt show docker-compose-plugin
 
     # Add user to Docker group
-    sudo usermod --append --groups "docker" "${USER}" && newgrp "docker"
+    sudo usermod --append --groups "docker" "${USER}"
+    newgrp "docker"
 }
 
 function start_docker() {
@@ -129,7 +147,7 @@ function install_minikube() {
 
     chmod +x "minikube"
 
-    sudo mv "minikube" "/usr/local/bin/"
+    sudo mv --verbose "minikube" "/usr/local/bin/"
 }
 
 function start_minikube() {
@@ -150,7 +168,7 @@ function install_kubernetes() {
 
     chmod +x ./"kubectl"
 
-    sudo mv ./"kubectl" "/usr/local/bin/kubectl"
+    sudo mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
 }
 
 function test_kubernetes_installation() {
@@ -204,7 +222,7 @@ function perform_deployment_tool_installation_configuration() {
 
 
 #######################################################################################################################
-########################################## .NET Development Tool Installation #########################################
+#################################### .NET Development Prerequisites Installation ######################################
 #######################################################################################################################
 
 function install_dot_net_sdk() {
@@ -212,8 +230,11 @@ function install_dot_net_sdk() {
 
     log_output "Installing the .NET SDK for C# development.\n"
 
-    sudo dpkg --purge packages-microsoft-prod && sudo dpkg --install packages-microsoft-prod.deb
-    sudo apt install --yes dotnet-sdk-7.0
+    sudo dpkg --purge packages-microsoft-prod
+    sudo dpkg --install packages-microsoft-prod.deb
+
+    sudo apt install dotnet-sdk-7.0 --yes
+    sudo apt show dotnet-sdk-7.0
 
     dotnet --list-sdks
     dotnet --info
@@ -224,13 +245,14 @@ function install_dot_net_runtime() {
 
     log_output "Installing .NET Runtime.\n"
 
-    sudo apt install --yes aspnetcore-runtime-7.0
+    sudo apt install aspnetcore-runtime-7.0 --yes
+    sudo apt show aspnetcore-runtime-7.0
 
     dotnet --list-runtimes
     dotnet --info
 }
 
-function perform_dot_net_development_tool_installation() {
+function perform_dot_net_development_prerequisite_installation() {
     install_dot_net_sdk
     install_dot_net_runtime
 }
@@ -238,7 +260,7 @@ function perform_dot_net_development_tool_installation() {
 
 
 #######################################################################################################################
-##################################### JavaScript Development Tool Installation ########################################
+################################# JavaScript Development Prerequisite Installation ####################################
 #######################################################################################################################
 
 function install_nodejs_runtime() {
@@ -246,7 +268,15 @@ function install_nodejs_runtime() {
 
     log_output "Installing the Node JS runtime for JavaScript development.\n"
 
-    sudo apt install --yes ca-certificates curl gnupg
+    sudo apt install ca-certificates --yes
+    sudo apt show ca-certificates
+
+    sudo apt install curl --yes
+    sudo apt show curl
+
+    sudo apt install gnupg --yes
+    sudo apt show gnupg
+
     sudo mkdir --parents "/etc/apt/keyrings"
 
     curl \
@@ -263,11 +293,42 @@ function install_nodejs_runtime() {
         sudo tee /etc/apt/sources.list.d/nodesource.list
 
     sudo apt install nodejs --yes
+    sudo apt show nodejs
 }
 
-function perform_javascript_development_tool_installation() {
+function perform_javascript_development_prerequisite_installation() {
     install_nodejs_runtime
 }
+
+
+
+#######################################################################################################################
+################################# JavaScript Development Prerequisite Installation ####################################
+#######################################################################################################################
+
+function install_python3() {
+    update_and_upgrade_apt
+
+    log_output "Installing Python 3.\n"
+
+    sudo apt install python3 --yes
+    sudo apt show python3
+}
+
+function install_python3_pip() {
+    update_and_upgrade_apt
+
+    log_output "Installing Python 3 PIP.\n"
+
+    sudo apt install python3-pip --yes
+    sudo apt show python3-pip
+}
+
+function perform_python_development_prerequisite_installation() {
+    install_python3
+    install_python3_pip
+}
+
 
 
 #######################################################################################################################
@@ -280,6 +341,7 @@ function install_git() {
     log_output "Installing Git.\n"
 
     sudo apt install git --yes
+    sudo apt show git
 
     git --version
 }
@@ -337,6 +399,7 @@ function perform_linux_system_override_configuration() {
 }
 
 
+
 #######################################################################################################################
 ################################## Text Editors Installation & Configuration ##########################################
 #######################################################################################################################
@@ -349,6 +412,7 @@ function install_vim() {
     log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
 
     sudo apt install vim-gtk3 --yes
+    sudo apt show vim-gtk3
 }
 
 function install_vundle() {
@@ -407,7 +471,7 @@ function install_neovim() {
     log_output "Moving Neovim Making it Globally Accessible.\n"
 
     sudo mkdir --parents "/opt/nvim"
-    sudo mv "nvim.appimage" "/opt/nvim/nvim"
+    sudo mv --verbose "nvim.appimage" "/opt/nvim/nvim"
 }
 
 function configure_neovim() {
@@ -434,14 +498,19 @@ function install_neovim_system_clipboard_dependency() {
     log_output "Installing xclip, in order to enable neovim's use of the system clipboard.\n"
 
     sudo apt install xclip --yes
+    sudo apt show xclip
 }
 
 function install_visual_studio_code() {
-    update_and_upgrade_apt
-
     log_output "Installing Visual Studio Code.\n"
 
-    sudo apt install wget gpg --yes
+    update_and_upgrade_apt
+    sudo apt install wget --yes
+    sudo apt show wget
+
+    update_and_upgrade_apt
+    sudo apt install gpg --yes
+    sudo apt show gpg
 
     wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
         | gpg --dearmor > "packages.microsoft.gpg"
@@ -464,9 +533,11 @@ function install_visual_studio_code() {
 
     update_and_upgrade_apt
     sudo apt install apt-transport-https --yes
+    sudo apt show apt-transport-https
 
     update_and_upgrade_apt
     sudo apt install code --yes
+    sudo apt show code
 
     # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
     # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
@@ -486,6 +557,7 @@ function install_sublime_text() {
         | sudo tee "/etc/apt/sources.list.d/sublime-text.list"
 
     sudo apt install sublime-text
+    sudo apt show sublime-text
 }
 
 function perform_text_editor_installation_configuration() {
@@ -582,6 +654,7 @@ function install_gnome_tweaks() {
     log_output "Installing GNOME Tweaks.\n"
 
     sudo apt install gnome-tweaks
+    sudo apt show gnome-tweaks
 }
 
 function perform_ui_configuration_tool_installation() {
@@ -609,7 +682,7 @@ function perform_media_player_installation() {
 
 
 #######################################################################################################################
-############################################## Terminal Installation & Configuration #####################################################
+####################################### Terminal Installation & Configuration #########################################
 #######################################################################################################################
 
 function install_guake() {
@@ -618,6 +691,7 @@ function install_guake() {
     log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key.\n"
 
     sudo apt install guake --yes
+    sudo apt show guake
 }
 
 function configure_guake() {
@@ -664,9 +738,11 @@ function perform_ubuntu_configuration() {
 
     perform_deployment_tool_installation_configuration
 
-    perform_dot_net_development_tool_installation
+    perform_dot_net_development_prerequisite_installation
 
-    perform_javascript_development_tool_installation
+    perform_javascript_development_prerequisite_installation
+
+    perform_python_development_prerequisite_installation
 
     perform_version_control_installation_configuration
 
