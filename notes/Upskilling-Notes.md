@@ -31204,7 +31204,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - Using the default settings, the last shell to gracefully exit will overwrite your history file, so unless it is
-  synchronized with any other shells you had open at the same time, it will clobber their histories.
+  synchronised with any other shells you had open at the same time, it will clobber their histories.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - Manually synchronising history involves writing an alias to append the current history to the history file
@@ -31663,7 +31663,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   #case "$-" in
   #   *i*) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Interactive" \
   #     "$SETTINGS/bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
-  #   * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%Z') Non-interactive" \
+  #   * ) echo "$(date '+%Y-%m-%d_%H:%M:%S_%s') Non-interactive" \
   #     "$SETTINGS/bash_profile ssh=$SSH_CONNECTION" >> ~/rc.log ;;
   #esac
 
@@ -41822,34 +41822,30 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 1.6.4.1. The Journey to Introduce Process Automation
 
--
+- This chapter will answer questions like: how can you introduce process automation into your organisation? How can you
+  make your first project successful? And how do you establish a company-wide practice to scale adoption?
   [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
--
+- To achieve this, it:
   [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  - Sketches two typical adoption journeys and derives a pattern from them.
+    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  - Describes the first steps in this journey, which are the crucial ones (particularly in the first one to three
+    process automation projects)
+    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  - Dives into scaling adoption across the entire organisation, and all the challenges that come with that.
+    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
-
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
-
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
-
--
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
-
--
+- As a developer or software architect, you need be aware of certain challenges to be able to address them. Even if
+  politics are beyond your direct control, you will be affected by them, and you need to take actions that will help
+  avoid major problems with your projects. If you are an enterprise architect, it is vital to learn best practices on
+  how to introduce process automation into your enterprise. Your job is not only to understand capabilities and
+  architecture, but also to find the right balance between giving important guidance, defining necessary guardrails,
+  and letting projects breathe. Instead of defining "the right architecture" for your company, you will much more
+  likely end up as an internal consultant and facilitator. This chapter will equip you with the basics to achieve that.
   [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
 
 ##### 1.6.4.1.1. Understanding the Adoption Journey
@@ -60610,7 +60606,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - The fundamental problem with `bash` and many other shell dialects is that text is identifiers and identifiers are
   text, and basically everything else is also text. In some sense, this makes the shell a homoiconic language, which
-  theoretically means it might have an interesting meta-programming story, until you realize that it basically just
+  theoretically means it might have an interesting meta-programming story, until you realise that it basically just
   amounts to running eval on strings, which is a feature in basically any interpreted language today, and one that is
   frequently considered harmful. The problem with eval is that it's a pretty direct path to arbitrary code execution.
   This is great if arbitrary code execution is actually what you're trying to accomplish (like, say, in an HTML
@@ -60662,7 +60658,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 #### 3.1.1.2. Choose the Right Tool for the Job
 
-- The "founding fathers" of Unix had already recognized the fundamental limitations of the Bourne shell for handling
+- The "founding fathers" of Unix had already recognised the fundamental limitations of the Bourne shell for handling
   data and created `awk`, a complementary, string-centric data parsing language. Modern `bash`, on the other hand, has
   added a lot of data related features which make it possible to do many of the things you might do in `awk` directly
   in `bash`. Do not use them. They are ugly and difficult to get right. Use `awk` instead, or Perl or Python or
