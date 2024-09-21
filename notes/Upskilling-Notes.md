@@ -4,19 +4,55 @@
 <!--
 # Books
 ## Command Line
-### Bash
+### `bash`
 - bash Cookbook (Humble Bundle)
-## Automation
-- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
+### Automation
+- Practical Process Automation (Humble Bundle), the following section:
+  - The Journey to Introduce Process Automation
 
 # Online
 ## Automation
-### Python Scripting
-- Replacing Bash Scripting with Python: https://github.com/ninjaaron/replacing-bash-scripting-with-python
 ## Python
 ### Python Testing
 - Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
 - Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
+- Python Practice Problems: Parsing CSV Files: https://realpython.com/python-interview-problem-parsing-csv-files/
+
+# Books
+## Automation
+- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
+  - Python Basics
+  - Flow Control
+  - Functions
+  - Lists
+  - Dictionaries and Structuring Data
+  - Manipulating Strings
+  - Pattern Matching with Regular Expressions
+  - Input Validation
+  - Reading and Writing Files
+  - Organizing Files
+  - Debugging
+  - Web Scraping
+  - Working with Excel Spreadsheets
+  - Working with Google Sheets
+  - Working with PDF and Word Documents
+  - Working with CSV Files and JSON Data
+  - Keeping Time, Scheduling Tasks, and Launching Programs
+  - Sending Email and Text Messages
+- Network Programmability and Automation (Humble Bundle), the following sections:
+  - Network Industry Trends
+  - Network Automation
+  - Linux
+  - Cloud
+  - Network Developer Environments
+  - Python
+  - Go
+  - Data Formats and Models
+  - Working with Network APIs
+  - Continuous Integration
+  - Network Automation Architecture
+
+# Online
 ## Pipelines
 ### Pipelines
 - Jenkins Handbook: https://www.jenkins.io/doc/book/
@@ -30,12 +66,12 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 # Online
 ## Command Line
-### Bash
+### `bash`
 #### Variable Declaration and Differences
 - Local Variables: https://tldp.org/LDP/abs/html/localvar.html
 - Special Variable Types: https://tldp.org/LDP/abs/html/othertypesv.html
 - Declare/Typeset Options: https://tldp.org/LDP/abs/html/declareref.html
-- declare -r vs readonly in Bash: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
+- declare -r vs readonly in `bash`: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
 #### Best Practices
 - https://mywiki.wooledge.org/BashGuide/Practices
 - https://bertvv.github.io/cheat-sheets/Bash.html
@@ -53,7 +89,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 # Online
 ## Command Line
-### Bash
+### `bash`
 - Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
 
 # Books
@@ -101,9 +137,9 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 ## Text Editor
 - Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
 ## Command Line
-- Bash Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
-- Bash Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
-- Bash Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
+- `bash` Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
+- `bash` Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
+- `bash` Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
 ## Java Refresher
 - Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
 
@@ -230,7 +266,7 @@ Unordered List of Topics:
 
 ## Scripting
 ### Scripting Languages
-#### Bash
+#### `bash`
 #### JavaScript (Scripting)
 #### Python (Scripting)
 
@@ -361,6 +397,7 @@ TODO: Order in which to do this testing.
 [jenkins-jenkins-handbook]: <https://www.jenkins.io/doc/pipeline/tour/getting-started/>
 [man7-linux-manual-pages]: <https://man7.org/linux/man-pages/man7/man-pages.7.html>
 [medium-vim-buffers-windows--tabs---an-overview]: <https://medium.com/@paulodiovani/vim-buffers-windows-and-tabs-an-overview-8e2a57c57afa>
+[medium-when-you-should-user-bash-over-pythn]: <https://dnastacio.medium.com/bash-over-python-39e0eba502f9>
 [microsoft-about-service-meshes]: <https://learn.microsoft.com/en-us/azure/aks/servicemesh-about>
 [mongodb-database-sharding]: <https://www.mongodb.com/features/database-sharding-explained>
 [neovim-pi_tutor]: <https://neovim.io/doc/user/pi_tutor.html>
@@ -368,6 +405,7 @@ TODO: Order in which to do this testing.
 [oreilly-97-things-every-programmer-should-know]: <https://www.oreilly.com/library/view/97-things-every/9780596809515/>
 [oreilly-bash-cookbook-2nd-edition]: <https://www.oreilly.com/library/view/bash-cookbook-2nd/9781491975329/>
 [oreilly-introducing-github]: <https://www.oreilly.com/library/view/introducing-github/9781491949801/>
+[oreilly-practical-process-automation]: <https://www.oreilly.com/library/view/practical-process-automation/9781492061441/>
 [oreilly-software-architecture-the-hard-parts]: <https://www.oreilly.com/library/view/software-architecture-the/9781492086888/>
 [oreilly-the-art-of-readable-code]: <https://www.oreilly.com/library/view/the-art-of/9781449318482/>
 [oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]: <https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/>
@@ -488,7 +526,7 @@ TODO: Order in which to do this testing.
         - [1.2.1.1.3. Storing Values in Variables](#12113-storing-values-in-variables)
           - [1.2.1.1.3.1. Assignment Statements](#121131-assignment-statements)
           - [1.2.1.1.3.2. Variable Names](#121132-variable-names)
-        - [1.2.1.1.4. Your First Programs](#12114-your-first-programs)
+        - [1.2.1.1.4. Your First Program](#12114-your-first-program)
         - [1.2.1.1.5. Dissecting Your Program](#12115-dissecting-your-program)
           - [1.2.1.1.5.1. Comments](#121151-comments)
           - [1.2.1.1.5.2. The `print()` Function](#121152-the-print-function)
@@ -1176,7 +1214,7 @@ TODO: Order in which to do this testing.
       - [1.3.21.15. Confusing Shell Wildcards \& Regular Expressions](#132115-confusing-shell-wildcards--regular-expressions)
   - [1.4. Clean Architecture](#14-clean-architecture)
   - [1.5. Introducing GitHub](#15-introducing-github)
-    - [1.5.1. Introduction](#151-introduction)
+    - [1.5.1. Introducing GitHub Introduction](#151-introducing-github-introduction)
       - [1.5.1.1. What is Git?](#1511-what-is-git)
       - [1.5.1.2. What is Github?](#1512-what-is-github)
       - [1.5.1.3. Why Use Git?](#1513-why-use-git)
@@ -1251,538 +1289,726 @@ TODO: Order in which to do this testing.
         - [1.5.6.4.1. Making a Commit Using GitHub for Windows](#15641-making-a-commit-using-github-for-windows)
         - [1.5.6.4.2. Configuring Command Line Tools in GitHub for Windows](#15642-configuring-command-line-tools-in-github-for-windows)
     - [1.5.7. Next Steps](#157-next-steps)
-  - [1.6. Refactoring](#16-refactoring)
-  - [1.7. Software Architecture: The Hard Parts](#17-software-architecture-the-hard-parts)
-    - [1.7.1. Preface](#171-preface)
-      - [1.7.1.1. What Happens When There Are No "Best Practices"?](#1711-what-happens-when-there-are-no-best-practices)
-      - [1.7.1.2. Giving Timeless Advice About Software Architecture](#1712-giving-timeless-advice-about-software-architecture)
-      - [1.7.1.3. The Importance of Data in Architecture](#1713-the-importance-of-data-in-architecture)
-      - [1.7.1.4. Architectural Decision Records](#1714-architectural-decision-records)
-      - [1.7.1.5. Architectural Fitness Functions](#1715-architectural-fitness-functions)
-        - [1.7.1.5.1. Using Fitness Functions](#17151-using-fitness-functions)
-      - [1.7.1.6. Architecture versus Design: Keeping Definitions Simple](#1716-architecture-versus-design-keeping-definitions-simple)
-      - [1.7.1.7. Introducing the Sysops Squad Saga](#1717-introducing-the-sysops-squad-saga)
-        - [1.7.1.7.1. Non-Ticketing Workflow](#17171-non-ticketing-workflow)
-        - [1.7.1.7.2. A Bad Scenario](#17172-a-bad-scenario)
-        - [1.7.1.7.3. Sysops Squad Architectural Components](#17173-sysops-squad-architectural-components)
-        - [1.7.1.7.4. Sysops Squad Data Model](#17174-sysops-squad-data-model)
-    - [1.7.2. Pulling Things Apart](#172-pulling-things-apart)
-      - [1.7.2.1. Discerning Coupling in Software Architecture](#1721-discerning-coupling-in-software-architecture)
-        - [1.7.2.1.1. Architecture (Quantum | Quanta)](#17211-architecture-quantum--quanta)
-          - [1.7.2.1.1.1. Independently Deployable](#172111-independently-deployable)
-          - [1.7.2.1.1.2. High Functional Cohesion](#172112-high-functional-cohesion)
-          - [1.7.2.1.1.3. High Static Coupling](#172113-high-static-coupling)
-          - [1.7.2.1.1.4. Dynamic Quantum Coupling](#172114-dynamic-quantum-coupling)
-        - [1.7.2.1.2. Sysops Squad Saga: Understanding Quanta](#17212-sysops-squad-saga-understanding-quanta)
-      - [1.7.2.2. Architectural Decomposition](#1722-architectural-decomposition)
-        - [1.7.2.2.1. Is the Codebase Decomposable?](#17221-is-the-codebase-decomposable)
-          - [1.7.2.2.1.1. Afferent \& Efferent Coupling](#172211-afferent--efferent-coupling)
-          - [1.7.2.2.1.2. Abstractness \& Instability](#172212-abstractness--instability)
-          - [1.7.2.2.1.3. Distance From the Main Sequence](#172213-distance-from-the-main-sequence)
-        - [1.7.2.2.2. Component-Based Decomposition](#17222-component-based-decomposition)
-        - [1.7.2.2.3. Tactical Forking](#17223-tactical-forking)
-          - [1.7.2.2.3.1. Trade-Offs](#172231-trade-offs)
-        - [1.7.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach](#17224-sysops-squad-saga-choosing-a-decomposition-approach)
-      - [1.7.2.3. Component-Based Decomposition Patterns](#1723-component-based-decomposition-patterns)
-        - [1.7.2.3.1. Identify \& Size Components Pattern](#17231-identify--size-components-pattern)
-          - [1.7.2.3.1.1. Pattern Description (Identify \& Size Components Pattern)](#172311-pattern-description-identify--size-components-pattern)
-          - [1.7.2.3.1.2. Fitness Functions for Governance (Identify \& Size Components Pattern)](#172312-fitness-functions-for-governance-identify--size-components-pattern)
-          - [1.7.2.3.1.3. Sysops Squad Saga: Sizing Components](#172313-sysops-squad-saga-sizing-components)
-        - [1.7.2.3.2. Gather Common Domain Components Pattern](#17232-gather-common-domain-components-pattern)
-          - [1.7.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)](#172321-pattern-description-gather-common-domain-components-pattern)
-          - [1.7.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)](#172322-fitness-functions-for-governance-gather-common-domain-components-pattern)
-          - [1.7.2.3.2.3. Sysops Squad Saga: Gathering Common Components](#172323-sysops-squad-saga-gathering-common-components)
-        - [1.7.2.3.3. Flatten Components](#17233-flatten-components)
-          - [1.7.2.3.3.1. Pattern Description (Flatten Components)](#172331-pattern-description-flatten-components)
-          - [1.7.2.3.3.2. Fitness Functions for Governance (Flatten Components)](#172332-fitness-functions-for-governance-flatten-components)
-          - [1.7.2.3.3.3. Sysops Squad Saga: Flattening Components](#172333-sysops-squad-saga-flattening-components)
-        - [1.7.2.3.4. Determine Component Dependencies Pattern](#17234-determine-component-dependencies-pattern)
-          - [1.7.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)](#172341-pattern-description-determine-component-dependencies-pattern)
-          - [1.7.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)](#172342-fitness-functions-for-governance-determine-component-dependencies-pattern)
-          - [1.7.2.3.4.3. Sysops Squad Saga: Creating Component Domains](#172343-sysops-squad-saga-creating-component-domains)
-        - [1.7.2.3.5. Create Domain Services Pattern](#17235-create-domain-services-pattern)
-          - [1.7.2.3.5.1. Pattern Description (Create Domain Services Pattern)](#172351-pattern-description-create-domain-services-pattern)
-          - [1.7.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)](#172352-fitness-functions-for-governance-create-domain-services-pattern)
-          - [1.7.2.3.5.3. Sysops Squad Saga: Creating Domain Services](#172353-sysops-squad-saga-creating-domain-services)
-      - [1.7.2.4. Pulling Apart Operational Data](#1724-pulling-apart-operational-data)
-        - [1.7.2.4.1. Data Decomposition Pattern](#17241-data-decomposition-pattern)
-          - [1.7.2.4.1.1. Data Disintegration](#172411-data-disintegration)
-          - [1.7.2.4.1.2. Data Integrators](#172412-data-integrators)
-          - [1.7.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition](#172413-sysops-squad-saga-justifying-database-decomposition)
-        - [1.7.2.4.2. Decomposing Monolithic Data](#17242-decomposing-monolithic-data)
-          - [1.7.2.4.2.1. Step 1: Analyse Database \& Create Data Domain](#172421-step-1-analyse-database--create-data-domain)
-          - [1.7.2.4.2.2. Step 2: Assign Tables to Data Domains](#172422-step-2-assign-tables-to-data-domains)
-          - [1.7.2.4.2.3. Step 3: Separate Database Connections to Data Domains](#172423-step-3-separate-database-connections-to-data-domains)
-          - [1.7.2.4.2.4. Step 4: Move Schemas to Separate Database Servers](#172424-step-4-move-schemas-to-separate-database-servers)
-          - [1.7.2.4.2.5. Switch Over to Independent Database Servers](#172425-switch-over-to-independent-database-servers)
-        - [1.7.2.4.3. Selecting a Database Type](#17243-selecting-a-database-type)
-          - [1.7.2.4.3.1. Relational Databases](#172431-relational-databases)
-          - [1.7.2.4.3.2. Key-Value Databases](#172432-key-value-databases)
-          - [1.7.2.4.3.3. Document Databases](#172433-document-databases)
-          - [1.7.2.4.3.4. Column Family Databases](#172434-column-family-databases)
-          - [1.7.2.4.3.5. Graph Databases](#172435-graph-databases)
-          - [1.7.2.4.3.6. NewSQL Databases](#172436-newsql-databases)
-          - [1.7.2.4.3.7. Cloud Native Databases](#172437-cloud-native-databases)
-          - [1.7.2.4.3.8. Time-Series Databases](#172438-time-series-databases)
-          - [1.7.2.4.3.9. Sysops Squad Saga: Polyglot Databases](#172439-sysops-squad-saga-polyglot-databases)
-      - [1.7.2.5. Service Granularity](#1725-service-granularity)
-        - [1.7.2.5.1. Granularity Disintegrators](#17251-granularity-disintegrators)
-          - [1.7.2.5.1.1. Service Scope \& Function](#172511-service-scope--function)
-          - [1.7.2.5.1.2. Code Volatility](#172512-code-volatility)
-          - [1.7.2.5.1.3. Scalability \& Throughput](#172513-scalability--throughput)
-          - [1.7.2.5.1.4. Fault Tolerance (Service Granularity)](#172514-fault-tolerance-service-granularity)
-          - [1.7.2.5.1.5. Security](#172515-security)
-          - [1.7.2.5.1.6. Extensibility](#172516-extensibility)
-        - [1.7.2.5.2. Granularity Integrators](#17252-granularity-integrators)
-          - [1.7.2.5.2.1. Database Transactions](#172521-database-transactions)
-          - [1.7.2.5.2.2. Workflow \& Choreography](#172522-workflow--choreography)
-          - [1.7.2.5.2.3. Shared Code](#172523-shared-code)
-          - [1.7.2.5.2.4. Data Relationships](#172524-data-relationships)
-        - [1.7.2.5.3. Finding the Right Balance](#17253-finding-the-right-balance)
-        - [1.7.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity](#17254-sysops-squad-saga-ticket-assignment-granularity)
-        - [1.7.2.5.5. Sysops Squad Saga: Customer Registration Granularity](#17255-sysops-squad-saga-customer-registration-granularity)
-    - [1.7.3. Putting Things Back Together](#173-putting-things-back-together)
-      - [1.7.3.1. Reuse Patterns](#1731-reuse-patterns)
-        - [1.7.3.1.1. Code Replication](#17311-code-replication)
-          - [1.7.3.1.1.1. When to Use Code Replication](#173111-when-to-use-code-replication)
-        - [1.7.3.1.2. Shared Library](#17312-shared-library)
-          - [1.7.3.1.2.1. Dependency Management \& Change Control](#173121-dependency-management--change-control)
-          - [1.7.3.1.2.2. Versioning Strategies](#173122-versioning-strategies)
-          - [1.7.3.1.2.3. When To Use Shared Library](#173123-when-to-use-shared-library)
-        - [1.7.3.1.3. Shared Service](#17313-shared-service)
-          - [1.7.3.1.3.1. Change Risk](#173131-change-risk)
-          - [1.7.3.1.3.2. Performance](#173132-performance)
-          - [1.7.3.1.3.3. Scalability](#173133-scalability)
-          - [1.7.3.1.3.4. Fault Tolerance (Reuse Patterns)](#173134-fault-tolerance-reuse-patterns)
-          - [1.7.3.1.3.5. When to Use Shared Service](#173135-when-to-use-shared-service)
-        - [1.7.3.1.4. Sidecars \& Service Mesh](#17314-sidecars--service-mesh)
-          - [1.7.3.1.4.1. When to Use Sidecars \& Service Mesh](#173141-when-to-use-sidecars--service-mesh)
-          - [1.7.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic](#173142-sysops-squad-saga-common-infrastructure-logic)
-        - [1.7.3.1.5. Code Reuse: When Does It Add Value?](#17315-code-reuse-when-does-it-add-value)
-          - [1.7.3.1.5.1. Reuse via Platforms](#173151-reuse-via-platforms)
-          - [1.7.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality](#173152-sysops-squad-saga-shared-domain-functionality)
-      - [1.7.3.2. Data Ownership \& Distributed Transactions](#1732-data-ownership--distributed-transactions)
-        - [1.7.3.2.1. Assigning Data Ownership](#17321-assigning-data-ownership)
-        - [1.7.3.2.2. Single Ownership Scenario](#17322-single-ownership-scenario)
-        - [1.7.3.2.3. Common Ownership Scenario](#17323-common-ownership-scenario)
-        - [1.7.3.2.4. Joint Ownership Scenario](#17324-joint-ownership-scenario)
-          - [1.7.3.2.4.1. Table Split Technique](#173241-table-split-technique)
-          - [1.7.3.2.4.2. Data Domain Technique](#173242-data-domain-technique)
-          - [1.7.3.2.4.3. Delegate Technique](#173243-delegate-technique)
-        - [1.7.3.2.5. Service Consolidation Technique](#17325-service-consolidation-technique)
-        - [1.7.3.2.6. Data Ownership Summary](#17326-data-ownership-summary)
-        - [1.7.3.2.7. Distributed Transactions](#17327-distributed-transactions)
-        - [1.7.3.2.8. Eventual Consistency Patterns](#17328-eventual-consistency-patterns)
-          - [1.7.3.2.8.1. Background Synchronisation Pattern](#173281-background-synchronisation-pattern)
-          - [1.7.3.2.8.2. Orchestrated Request-Based Pattern](#173282-orchestrated-request-based-pattern)
-          - [1.7.3.2.8.3. Event-Based Pattern](#173283-event-based-pattern)
-        - [1.7.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing](#17329-sysops-squad-saga-data-ownership-for-ticket-processing)
-      - [1.7.3.3. Distributed Data Access](#1733-distributed-data-access)
-        - [1.7.3.3.1. Inter-Service Communication Pattern](#17331-inter-service-communication-pattern)
-        - [1.7.3.3.2. Column Schema Replication Pattern](#17332-column-schema-replication-pattern)
-        - [1.7.3.3.3. Replicated Caching Pattern](#17333-replicated-caching-pattern)
-        - [1.7.3.3.4. Data Domain Pattern](#17334-data-domain-pattern)
-        - [1.7.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment](#17335-sysops-squad-saga-data-access-for-ticket-assignment)
-      - [1.7.3.4. Managing Distributed Workflows](#1734-managing-distributed-workflows)
-        - [1.7.3.4.1. Orchestration Communication Style](#17341-orchestration-communication-style)
-        - [1.7.3.4.2. Choreography Communication Style](#17342-choreography-communication-style)
-          - [1.7.3.4.2.1. Workflow State Management](#173421-workflow-state-management)
-        - [1.7.3.4.3. Trade-Off Between Orchestration and Choreography](#17343-trade-off-between-orchestration-and-choreography)
-          - [1.7.3.4.3.1. State Owner \& Coupling](#173431-state-owner--coupling)
-        - [1.7.3.4.4. Sysops Squad Saga: Managing Workflows](#17344-sysops-squad-saga-managing-workflows)
-      - [1.7.3.5. Transactional Sagas](#1735-transactional-sagas)
-        - [1.7.3.5.1. Transactional Saga Patterns](#17351-transactional-saga-patterns)
-          - [1.7.3.5.1.1. Epic Saga Pattern](#173511-epic-saga-pattern)
-          - [1.7.3.5.1.2. Phone Tag Pattern](#173512-phone-tag-pattern)
-          - [1.7.3.5.1.3. Fairy Tale Saga Pattern](#173513-fairy-tale-saga-pattern)
-          - [1.7.3.5.1.4. Time Travel Saga Pattern](#173514-time-travel-saga-pattern)
-          - [1.7.3.5.1.5. Fantasy Fiction Saga Pattern](#173515-fantasy-fiction-saga-pattern)
-          - [1.7.3.5.1.6. Horror Story Pattern](#173516-horror-story-pattern)
-          - [1.7.3.5.1.7. Parallel Saga Pattern](#173517-parallel-saga-pattern)
-          - [1.7.3.5.1.8. Anthology Saga Pattern](#173518-anthology-saga-pattern)
-        - [1.7.3.5.2. State Management \& Eventual Consistency](#17352-state-management--eventual-consistency)
-          - [1.7.3.5.2.1. Saga State Machines](#173521-saga-state-machines)
-        - [1.7.3.5.3. Techniques for Managing Sagas](#17353-techniques-for-managing-sagas)
-        - [1.7.3.5.4. Sysops Squad Saga: Atomic Transactions \& Compensating Updates](#17354-sysops-squad-saga-atomic-transactions--compensating-updates)
-      - [1.7.3.6. Contracts](#1736-contracts)
-        - [1.7.3.6.1. Contracts Versus Loose Contracts](#17361-contracts-versus-loose-contracts)
-          - [1.7.3.6.1.1. Trade-Offs Between Strict \& Loose Contracts](#173611-trade-offs-between-strict--loose-contracts)
-          - [1.7.3.6.1.2. Contracts in Microservices](#173612-contracts-in-microservices)
-        - [1.7.3.6.2. Stamp Coupling](#17362-stamp-coupling)
-          - [1.7.3.6.2.1. Over-Coupling via Stamp Coupling](#173621-over-coupling-via-stamp-coupling)
-          - [1.7.3.6.2.2. Bandwidth](#173622-bandwidth)
-          - [1.7.3.6.2.3. Stamp Coupling for Workflow Management](#173623-stamp-coupling-for-workflow-management)
-        - [1.7.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts](#17363-sysops-squad-saga-managing-ticketing-contracts)
-      - [1.7.3.7. Managing Analytical Data](#1737-managing-analytical-data)
-        - [1.7.3.7.1. Previous Approaches](#17371-previous-approaches)
-          - [1.7.3.7.1.1. The Data Warehouse](#173711-the-data-warehouse)
-          - [1.7.3.7.1.2. The Data Lake](#173712-the-data-lake)
-        - [1.7.3.7.2. The Data Mesh](#17372-the-data-mesh)
-          - [1.7.3.7.2.1. Definition of Data Mesh](#173721-definition-of-data-mesh)
-          - [1.7.3.7.2.2. Data Product Quantum](#173722-data-product-quantum)
-          - [1.7.3.7.2.3. Data Mesh, Coupling, \& Architecture Quantum](#173723-data-mesh-coupling--architecture-quantum)
-          - [1.7.3.7.2.4. When to Use Data Mesh](#173724-when-to-use-data-mesh)
-        - [1.7.3.7.3. Sysops Squad Saga: Data Mesh](#17373-sysops-squad-saga-data-mesh)
-      - [1.7.3.8. Build Your Own Trade-Off Analysis](#1738-build-your-own-trade-off-analysis)
-        - [1.7.3.8.1. Finding Entangled Dimensions](#17381-finding-entangled-dimensions)
-          - [1.7.3.8.1.1. Coupling](#173811-coupling)
-          - [1.7.3.8.1.2. Analyse Coupling Points](#173812-analyse-coupling-points)
-          - [1.7.3.8.1.3. Assess Trade-Offs](#173813-assess-trade-offs)
-        - [1.7.3.8.2. Trade-Off Techniques](#17382-trade-off-techniques)
-          - [1.7.3.8.2.1. Qualitative Versus Quantitative Analysis](#173821-qualitative-versus-quantitative-analysis)
-          - [1.7.3.8.2.2. MECE Lists](#173822-mece-lists)
-          - [1.7.3.8.2.3. The "Out-Of-Context" Trap](#173823-the-out-of-context-trap)
-          - [1.7.3.8.2.4. Model-Relevant Domain Cases](#173824-model-relevant-domain-cases)
-          - [1.7.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence](#173825-prefer-bottom-line-over-overwhelming-evidence)
-          - [1.7.3.8.2.6. Avoiding Snake Oil \& Evangelism](#173826-avoiding-snake-oil--evangelism)
-        - [1.7.3.8.3. Sysops Squad Saga: Epilogue](#17383-sysops-squad-saga-epilogue)
-  - [1.8. The Art of Readable Code](#18-the-art-of-readable-code)
-  - [1.9. The Clean Coder](#19-the-clean-coder)
-    - [1.9.1. Prerequisite Introduction](#191-prerequisite-introduction)
-    - [1.9.2. Professionalism](#192-professionalism)
-      - [1.9.2.1. Be Careful What You Ask For](#1921-be-careful-what-you-ask-for)
-      - [1.9.2.2. Taking Responsibility](#1922-taking-responsibility)
-      - [1.9.2.3. First, Do No Harm](#1923-first-do-no-harm)
-      - [1.9.2.4. Work Ethic](#1924-work-ethic)
-      - [1.9.2.5. Bibliography](#1925-bibliography)
-    - [1.9.3. Saying No](#193-saying-no)
-      - [1.9.3.1. Adversarial Roles](#1931-adversarial-roles)
-      - [1.9.3.2. High Stakes](#1932-high-stakes)
-      - [1.9.3.3. Being a "Team Player"](#1933-being-a-team-player)
-      - [1.9.3.4. The Cost of Saying Yes](#1934-the-cost-of-saying-yes)
-      - [1.9.3.5. Code Impossible](#1935-code-impossible)
-    - [1.9.4. Saying Yes](#194-saying-yes)
-      - [1.9.4.1. A Language of Commitment](#1941-a-language-of-commitment)
-      - [1.9.4.2. Learning How to Say "Yes"](#1942-learning-how-to-say-yes)
-    - [1.9.5. Coding](#195-coding)
-      - [1.9.5.1. Preparedness](#1951-preparedness)
-      - [1.9.5.2. The Flow Zone](#1952-the-flow-zone)
-      - [1.9.5.3. Writer's Block](#1953-writers-block)
-      - [1.9.5.4. Debugging](#1954-debugging)
-      - [1.9.5.5. Being Yourself](#1955-being-yourself)
-      - [1.9.5.6. Being Late](#1956-being-late)
-      - [1.9.5.7. Help](#1957-help)
-    - [1.9.6. Test-Driven Development](#196-test-driven-development)
-      - [1.9.6.1. The Jury Is In](#1961-the-jury-is-in)
-      - [1.9.6.2. The Three Laws of TDD](#1962-the-three-laws-of-tdd)
-      - [1.9.6.3. What TDD Is Not](#1963-what-tdd-is-not)
-    - [1.9.7. Practising](#197-practising)
-      - [1.9.7.1. Some Background on Practising](#1971-some-background-on-practising)
-      - [1.9.7.2. The Coding Dojo](#1972-the-coding-dojo)
-      - [1.9.7.3. Broadening Your Experience](#1973-broadening-your-experience)
-    - [1.9.8. Acceptance Testing](#198-acceptance-testing)
-      - [1.9.8.1. Communicating Requirements](#1981-communicating-requirements)
-      - [1.9.8.2. Acceptance Tests](#1982-acceptance-tests)
-    - [1.9.9. Testing Strategies](#199-testing-strategies)
-      - [1.9.9.1. QA Should Find Nothing](#1991-qa-should-find-nothing)
-      - [1.9.9.2. The Test Automation Pyramid](#1992-the-test-automation-pyramid)
-    - [1.9.10. Time Management](#1910-time-management)
-      - [1.9.10.1. Meetings](#19101-meetings)
-      - [1.9.10.2. Focus-Manna](#19102-focus-manna)
-      - [1.9.10.3. Time Boxing \& Tomatoes](#19103-time-boxing--tomatoes)
-      - [1.9.10.4. Avoidance](#19104-avoidance)
-      - [1.9.10.5. Blind Alleys](#19105-blind-alleys)
-      - [1.9.10.6. Marshes, Bogs, Swaps, \& Other Messes](#19106-marshes-bogs-swaps--other-messes)
-    - [1.9.11. Estimation](#1911-estimation)
-      - [1.9.11.1. What Is an Estimate?](#19111-what-is-an-estimate)
-      - [1.9.11.2. PERT](#19112-pert)
-      - [1.9.11.3. Estimating Tasks](#19113-estimating-tasks)
-      - [1.9.11.4. The Law of Large Numbers](#19114-the-law-of-large-numbers)
-    - [1.9.12. Pressure](#1912-pressure)
-      - [1.9.12.1. Avoiding Pressure](#19121-avoiding-pressure)
-      - [1.9.12.2. Handling Pressure](#19122-handling-pressure)
-    - [1.9.13. Collaboration](#1913-collaboration)
-      - [1.9.13.1. Programmers versus People](#19131-programmers-versus-people)
-      - [1.9.13.2. Cerebellums](#19132-cerebellums)
-    - [1.9.14. Teams \& Projects](#1914-teams--projects)
-      - [1.9.14.1. Does It Blend?](#19141-does-it-blend)
-    - [1.9.15. Mentoring, Apprenticeship, \& Craftsmanship](#1915-mentoring-apprenticeship--craftsmanship)
-      - [1.9.15.1. Degrees of Failure](#19151-degrees-of-failure)
-      - [1.9.15.2. Mentoring](#19152-mentoring)
-      - [1.9.15.3. Apprenticeship](#19153-apprenticeship)
-      - [1.9.15.4. Craftsmanship](#19154-craftsmanship)
-    - [1.9.16. Tooling](#1916-tooling)
-      - [1.9.16.1. Tools](#19161-tools)
-      - [1.9.16.2. Source Code Control](#19162-source-code-control)
-      - [1.9.16.3. IDE/Editor](#19163-ideeditor)
-      - [1.9.16.4. Issue Tracking](#19164-issue-tracking)
-      - [1.9.16.5. Continuous Building](#19165-continuous-building)
-      - [1.9.16.6. Unit Testing Tools](#19166-unit-testing-tools)
-      - [1.9.16.7. Component Testing Tools](#19167-component-testing-tools)
-      - [1.9.16.8. Integration Testing Tools](#19168-integration-testing-tools)
-      - [1.9.16.9. UML/MDA](#19169-umlmda)
-  - [1.10. The Pragmatic Programmer](#110-the-pragmatic-programmer)
-    - [1.10.1. Preface to the Second Edition](#1101-preface-to-the-second-edition)
-      - [1.10.1.1. How the Book is Organised](#11011-how-the-book-is-organised)
-      - [1.10.1.2. What's In a Name?](#11012-whats-in-a-name)
-    - [1.10.2. From the Preface to the First Edition](#1102-from-the-preface-to-the-first-edition)
-      - [1.10.2.1. Who Should Read This Book?](#11021-who-should-read-this-book)
-      - [1.10.2.2. What Makes a Pragmatic Programmer?](#11022-what-makes-a-pragmatic-programmer)
-        - [1.10.2.2.1. Tip 1: Care About Your Craft](#110221-tip-1-care-about-your-craft)
-        - [1.10.2.2.2. Tip 2: Think! About Your Work](#110222-tip-2-think-about-your-work)
-      - [1.10.2.3. Individual Pragmatists, Large Teams](#11023-individual-pragmatists-large-teams)
-      - [1.10.2.4. It's a Continuous Process](#11024-its-a-continuous-process)
-    - [1.10.3. A Pragmatic Philosophy](#1103-a-pragmatic-philosophy)
-      - [1.10.3.1. It's Your Life](#11031-its-your-life)
-        - [1.10.3.1.1. Tip 3: You Have Agency](#110311-tip-3-you-have-agency)
-      - [1.10.3.2. The Cat Ate My Source Code](#11032-the-cat-ate-my-source-code)
-        - [1.10.3.2.1. Team Trust](#110321-team-trust)
-        - [1.10.3.2.2. Take Responsibility](#110322-take-responsibility)
-        - [1.10.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses](#110323-tip-4-provide-options-dont-make-lame-excuses)
-        - [1.10.3.2.4. Challenges (Take Responsibility)](#110324-challenges-take-responsibility)
-      - [1.10.3.3. Software Entropy](#11033-software-entropy)
-        - [1.10.3.3.1. Tip 5: Don't Live with Broken Windows](#110331-tip-5-dont-live-with-broken-windows)
-        - [1.10.3.3.2. First, Do No Harm](#110332-first-do-no-harm)
-        - [1.10.3.3.3. Challenges (Software Entropy)](#110333-challenges-software-entropy)
-      - [1.10.3.4. Stone Soup \& Boiled Frogs](#11034-stone-soup--boiled-frogs)
-        - [1.10.3.4.1. Tip 6 Be a Catalyst for Change](#110341-tip-6-be-a-catalyst-for-change)
-      - [1.10.3.5. The Villager's Side](#11035-the-villagers-side)
-        - [1.10.3.5.1. Tip 7: Remember the Big Picture](#110351-tip-7-remember-the-big-picture)
-        - [1.10.3.5.2. Challenges (The Villager's Side)](#110352-challenges-the-villagers-side)
-      - [1.10.3.6. Good Enough Software](#11036-good-enough-software)
-        - [1.10.3.6.1. Involve Your Users in the Trade Off](#110361-involve-your-users-in-the-trade-off)
-        - [1.10.3.6.2. Tip 8: Make Quality a Requirements Issue](#110362-tip-8-make-quality-a-requirements-issue)
-        - [1.10.3.6.3. Know When to Stop](#110363-know-when-to-stop)
-        - [1.10.3.6.4. Challenges (Good Enough Software)](#110364-challenges-good-enough-software)
-      - [1.10.3.7. Your Knowledge Portfolio](#11037-your-knowledge-portfolio)
-        - [1.10.3.7.1. Building Your Portfolio](#110371-building-your-portfolio)
-        - [1.10.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio](#110372-tip-9-invest-regularly-in-your-knowledge-portfolio)
-        - [1.10.3.7.3. Opportunities for Learning](#110373-opportunities-for-learning)
-        - [1.10.3.7.4. Critical Thinking](#110374-critical-thinking)
-        - [1.10.3.7.5. Tip 10: Critically Analyse What You Read \& Hear](#110375-tip-10-critically-analyse-what-you-read--hear)
-        - [1.10.3.7.6. Challenges (Your Knowledge Portfolio)](#110376-challenges-your-knowledge-portfolio)
-      - [1.10.3.8. Communicate](#11038-communicate)
-        - [1.10.3.8.1. Tip 11: English is Just Another Language](#110381-tip-11-english-is-just-another-language)
-        - [1.10.3.8.2. Know Your Audience](#110382-know-your-audience)
-        - [1.10.3.8.3. Know What You Want to Say](#110383-know-what-you-want-to-say)
-        - [1.10.3.8.4. Choose Your Moment](#110384-choose-your-moment)
-        - [1.10.3.8.5. Choose a Style](#110385-choose-a-style)
-        - [1.10.3.8.6. Make it Look Good](#110386-make-it-look-good)
-        - [1.10.3.8.7. Involve Your Audience](#110387-involve-your-audience)
-        - [1.10.3.8.8. Be a Listener](#110388-be-a-listener)
-        - [1.10.3.8.9. Get Back to People](#110389-get-back-to-people)
-        - [1.10.3.8.10. Tip 12: It's Both What You Say and the Way You Say It](#1103810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
-        - [1.10.3.8.11. Communication Through Documentation](#1103811-communication-through-documentation)
-        - [1.10.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On](#1103812-tip-13-build-documentation-in-dont-bolt-it-on)
-        - [1.10.3.8.13. Challenges (Communicate)](#1103813-challenges-communicate)
-    - [1.10.4. A Pragmatic Approach](#1104-a-pragmatic-approach)
-      - [1.10.4.1. The Essence of Good Design](#11041-the-essence-of-good-design)
-        - [1.10.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design](#110411-tip-14-good-design-is-easier-to-change-than-bad-design)
-        - [1.10.4.1.2. ETC is a Value, Not a Rule](#110412-etc-is-a-value-not-a-rule)
-        - [1.10.4.1.3. Challenges (The Essence of Good Design)](#110413-challenges-the-essence-of-good-design)
-      - [1.10.4.2. DRY - The Evils of Duplication](#11042-dry---the-evils-of-duplication)
-        - [1.10.4.2.1. Tip 15: DRY - Don't Repeat Yourself](#110421-tip-15-dry---dont-repeat-yourself)
-        - [1.10.4.2.2. DRY is More Than Code](#110422-dry-is-more-than-code)
-        - [1.10.4.2.3. Duplication in Code](#110423-duplication-in-code)
-          - [1.10.4.2.3.1. Not All Code Duplication is Knowledge Duplication](#1104231-not-all-code-duplication-is-knowledge-duplication)
-        - [1.10.4.2.4. Duplication in Documentation](#110424-duplication-in-documentation)
-          - [1.10.4.2.4.1. DRY Violations in Data](#1104241-dry-violations-in-data)
-        - [1.10.4.2.5. Representational Duplication](#110425-representational-duplication)
-          - [1.10.4.2.5.1. Duplication Across Internal APIs](#1104251-duplication-across-internal-apis)
-          - [1.10.4.2.5.2. Duplication Across External APIs](#1104252-duplication-across-external-apis)
-          - [1.10.4.2.5.3. Duplication within Data Sources](#1104253-duplication-within-data-sources)
-        - [1.10.4.2.6. Interdeveloper Duplication](#110426-interdeveloper-duplication)
-        - [1.10.4.2.7. Tip 16: Make It Easy to Rescue](#110427-tip-16-make-it-easy-to-rescue)
-      - [1.10.4.3. Orthogonality](#11043-orthogonality)
-        - [1.10.4.3.1. What is Orthogonality?](#110431-what-is-orthogonality)
-        - [1.10.4.3.2. Benefits of Orthogonality](#110432-benefits-of-orthogonality)
-        - [1.10.4.3.3. Tip 17: Eliminate Effects Between Things](#110433-tip-17-eliminate-effects-between-things)
-          - [1.10.4.3.3.1. Gain Productivity](#1104331-gain-productivity)
-          - [1.10.4.3.3.2. Reduce Risk](#1104332-reduce-risk)
-        - [1.10.4.3.4. Design](#110434-design)
-        - [1.10.4.3.5. Toolkits \& Libraries](#110435-toolkits--libraries)
-        - [1.10.4.3.6. Coding](#110436-coding)
-        - [1.10.4.3.7. Testing](#110437-testing)
-        - [1.10.4.3.8. Orthogonality Through Documentation](#110438-orthogonality-through-documentation)
-        - [1.10.4.3.9. Living with Orthogonality](#110439-living-with-orthogonality)
-          - [1.10.4.3.9.1. Challenges (Living with Orthogonality)](#1104391-challenges-living-with-orthogonality)
-          - [1.10.4.3.9.2. Exercises (Living with Orthogonality)](#1104392-exercises-living-with-orthogonality)
-          - [1.10.4.3.9.3. Exercise 1](#1104393-exercise-1)
-      - [1.10.4.4. Reversibility](#11044-reversibility)
-        - [1.10.4.4.1. Tip 18: There Are No Final Decisions](#110441-tip-18-there-are-no-final-decisions)
-        - [1.10.4.4.2. Tip 19: Forego Following Fads](#110442-tip-19-forego-following-fads)
-        - [1.10.4.4.3. Challenges (Reversibility)](#110443-challenges-reversibility)
-      - [1.10.4.5. Tracer Bullets](#11045-tracer-bullets)
-      - [1.10.4.6. Prototypes \& Post-It Notes](#11046-prototypes--post-it-notes)
-      - [1.10.4.7. Domain Languages](#11047-domain-languages)
-      - [1.10.4.8. Estimating](#11048-estimating)
-    - [1.10.5. The Basic Tools](#1105-the-basic-tools)
-      - [1.10.5.1. The Power of Plain Text](#11051-the-power-of-plain-text)
-      - [1.10.5.2. Shell Games](#11052-shell-games)
-      - [1.10.5.3. Power Editing](#11053-power-editing)
-      - [1.10.5.4. Version Control](#11054-version-control)
-      - [1.10.5.5. Debugging](#11055-debugging)
-      - [1.10.5.6. Text Manipulation](#11056-text-manipulation)
-      - [1.10.5.7. Engineering Daybooks](#11057-engineering-daybooks)
-    - [1.10.6. Pragmatic Paranoia](#1106-pragmatic-paranoia)
-      - [1.10.6.1. Design by Contract](#11061-design-by-contract)
-      - [1.10.6.2. Dead Programs Tell No Tales](#11062-dead-programs-tell-no-tales)
-      - [1.10.6.3. Assertive Programming](#11063-assertive-programming)
-      - [1.10.6.4. How to Balance Resources](#11064-how-to-balance-resources)
-      - [1.10.6.5. Don't Outrun Your Headlights](#11065-dont-outrun-your-headlights)
-    - [1.10.7. Bend, or Break](#1107-bend-or-break)
-      - [1.10.7.1. Decoupling](#11071-decoupling)
-      - [1.10.7.2. Juggling the Real World](#11072-juggling-the-real-world)
-      - [1.10.7.3. Transforming Programming](#11073-transforming-programming)
-      - [1.10.7.4. Inheritance Task](#11074-inheritance-task)
-      - [1.10.7.5. Configuration](#11075-configuration)
-    - [1.10.8. Concurrency](#1108-concurrency)
-      - [1.10.8.1. Breaking Temporal Coupling](#11081-breaking-temporal-coupling)
-      - [1.10.8.2. Shared State is Incorrect State](#11082-shared-state-is-incorrect-state)
-      - [1.10.8.3. Actors \& Processes](#11083-actors--processes)
-      - [1.10.8.4. Blackboards](#11084-blackboards)
-    - [1.10.9. While You Are Coding](#1109-while-you-are-coding)
-      - [1.10.9.1. Listen to Your Lizard Brain](#11091-listen-to-your-lizard-brain)
-      - [1.10.9.2. Programming by Coincidence](#11092-programming-by-coincidence)
-      - [1.10.9.3. Algorithm Speed](#11093-algorithm-speed)
-      - [1.10.9.4. Refactoring](#11094-refactoring)
-      - [1.10.9.5. Test to Code](#11095-test-to-code)
-      - [1.10.9.6. Property-Based Testing](#11096-property-based-testing)
-      - [1.10.9.7. Stay Safe Out There](#11097-stay-safe-out-there)
-      - [1.10.9.8. Naming Things](#11098-naming-things)
-    - [1.10.10. Before the Project](#11010-before-the-project)
-      - [1.10.10.1. The Requirements Pit](#110101-the-requirements-pit)
-      - [1.10.10.2. Solving Impossible Puzzles](#110102-solving-impossible-puzzles)
-      - [1.10.10.3. Working Together](#110103-working-together)
-      - [1.10.10.4. The Essence of Agility](#110104-the-essence-of-agility)
-    - [1.10.11. Pragmatic Projects](#11011-pragmatic-projects)
-      - [1.10.11.1. Pragmatic Teams](#110111-pragmatic-teams)
-      - [1.10.11.2. Coconuts Don't Cut It](#110112-coconuts-dont-cut-it)
-      - [1.10.11.3. Pragmatic Starter Kit](#110113-pragmatic-starter-kit)
-      - [1.10.11.4. Delight Your Users](#110114-delight-your-users)
-      - [1.10.11.5. Pride \& Prejudice](#110115-pride--prejudice)
-  - [1.11. The Art of Readable Code](#111-the-art-of-readable-code)
-    - [1.11.1. Preface](#1111-preface)
-      - [1.11.1.1. Code Should Be Easy to Understand](#11111-code-should-be-easy-to-understand)
-        - [1.11.1.1.1. What Makes Code "Better"?](#111111-what-makes-code-better)
-        - [1.11.1.1.2. The Fundamental Theorem of Readability](#111112-the-fundamental-theorem-of-readability)
-        - [1.11.1.1.3. Is Smaller Always Better?](#111113-is-smaller-always-better)
-        - [1.11.1.1.4. Does Time-Till-Understanding Conflict with Other Goals?](#111114-does-time-till-understanding-conflict-with-other-goals)
-        - [1.11.1.1.5. The Hart Part](#111115-the-hart-part)
-    - [1.11.2. Surface-Level Improvements](#1112-surface-level-improvements)
-      - [1.11.2.1. Packing Information Into Names](#11121-packing-information-into-names)
-        - [1.11.2.1.1. Choose Specific Words](#111211-choose-specific-words)
-        - [1.11.2.1.2. Avoid Generic Names Like `tmp` and `ret_val`](#111212-avoid-generic-names-like-tmp-and-ret_val)
-        - [1.11.2.1.3. Prefer Concrete Names Over Abstract Names](#111213-prefer-concrete-names-over-abstract-names)
-        - [1.11.2.1.4. Attaching Extra Information to a Name](#111214-attaching-extra-information-to-a-name)
-        - [1.11.2.1.5. How Long Should a Name Be?](#111215-how-long-should-a-name-be)
-        - [1.11.2.1.6. Use Name Formatting to Convey Meaning](#111216-use-name-formatting-to-convey-meaning)
-      - [1.11.2.2. Names That Can't be Misconstrued](#11122-names-that-cant-be-misconstrued)
-        - [1.11.2.2.1. Example: `Filter()`](#111221-example-filter)
-        - [1.11.2.2.2. Example: `Clip(text, length)`](#111222-example-cliptext-length)
-        - [1.11.2.2.3. Prefer Min and Max for (Inclusive) Limits](#111223-prefer-min-and-max-for-inclusive-limits)
-        - [1.11.2.2.4. Prefer First and Last for (Inclusive) Ranges](#111224-prefer-first-and-last-for-inclusive-ranges)
-        - [1.11.2.2.5. Prefer Begin and End for Inclusive/Exclusive Ranges](#111225-prefer-begin-and-end-for-inclusiveexclusive-ranges)
-        - [1.11.2.2.6. Naming Booleans](#111226-naming-booleans)
-        - [1.11.2.2.7. Matching Expectations of Users](#111227-matching-expectations-of-users)
-        - [1.11.2.2.8. Example: Evaluating Multiple Name Candidates](#111228-example-evaluating-multiple-name-candidates)
-      - [1.11.2.3. Aesthetics](#11123-aesthetics)
-        - [1.11.2.3.1. Why Do Aesthetics Matter?](#111231-why-do-aesthetics-matter)
-        - [1.11.2.3.2. Rearrange Line Breaks to be Consistent and Compact](#111232-rearrange-line-breaks-to-be-consistent-and-compact)
-        - [1.11.2.3.3. Line Methods to Clean Up Irregularity](#111233-line-methods-to-clean-up-irregularity)
-        - [1.11.2.3.4. Use Column Adjustment When Helpful](#111234-use-column-adjustment-when-helpful)
-        - [1.11.2.3.5. Pick a Meaningful Order, and Use it Consistently](#111235-pick-a-meaningful-order-and-use-it-consistently)
-        - [1.11.2.3.6. Organise Declarations Into Blocks](#111236-organise-declarations-into-blocks)
-        - [1.11.2.3.7. Break Code Into "Paragraphs"](#111237-break-code-into-paragraphs)
-        - [1.11.2.3.8. Personal Style versus Consistency](#111238-personal-style-versus-consistency)
-      - [1.11.2.4. Knowing What to Comment](#11124-knowing-what-to-comment)
-        - [1.11.2.4.1. What NOT to Comment](#111241-what-not-to-comment)
-        - [1.11.2.4.2. Recording Your Thoughts](#111242-recording-your-thoughts)
-        - [1.11.2.4.3. Put Yourself in the Reader's Shoes](#111243-put-yourself-in-the-readers-shoes)
-        - [1.11.2.4.4. Final Thought - Getting Over the Writer's Block](#111244-final-thought---getting-over-the-writers-block)
-      - [1.11.2.5. Making Comments Precise \& Compact](#11125-making-comments-precise--compact)
-        - [1.11.2.5.1. Keep Components Compact](#111251-keep-components-compact)
-        - [1.11.2.5.2. Avoid Ambiguous Pronouns](#111252-avoid-ambiguous-pronouns)
-        - [1.11.2.5.3. Polish Sloppy Sentences](#111253-polish-sloppy-sentences)
-        - [1.11.2.5.4. Describe Function Behaviour Precisely](#111254-describe-function-behaviour-precisely)
-        - [1.11.2.5.5. Use Input/Output Examples That Illustrate Corner Cases](#111255-use-inputoutput-examples-that-illustrate-corner-cases)
-        - [1.11.2.5.6. Share the Intent of Your Code](#111256-share-the-intent-of-your-code)
-        - [1.11.2.5.7. "Named Function Parameter" Comments](#111257-named-function-parameter-comments)
-        - [1.11.2.5.8. Use Information-Dense Words](#111258-use-information-dense-words)
-    - [1.11.3. Simplifying Loops \& Logic](#1113-simplifying-loops--logic)
-      - [1.11.3.1. Making Control Flow Easy to Read](#11131-making-control-flow-easy-to-read)
-        - [1.11.3.1.1. The Order of Arguments in Conditionals](#111311-the-order-of-arguments-in-conditionals)
-        - [1.11.3.1.2. The Order of `if`/`else` Blocks](#111312-the-order-of-ifelse-blocks)
-        - [1.11.3.1.3. The `?:` Conditional Expression (a.k.a "Ternary Operator")](#111313-the--conditional-expression-aka-ternary-operator)
-        - [1.11.3.1.4. Avoid `do`/`while` Loops](#111314-avoid-dowhile-loops)
-        - [1.11.3.1.5. Returning Early From a Function](#111315-returning-early-from-a-function)
-        - [1.11.3.1.6. The Infamous `goto`](#111316-the-infamous-goto)
-        - [1.11.3.1.7. Minimise Nesting](#111317-minimise-nesting)
-        - [1.11.3.1.8. Can You Follow the Flow of Execution?](#111318-can-you-follow-the-flow-of-execution)
-      - [1.11.3.2. Breaking Down Giant Expressions](#11132-breaking-down-giant-expressions)
-        - [1.11.3.2.1. Explaining Variables](#111321-explaining-variables)
-        - [1.11.3.2.2. Summary Variables](#111322-summary-variables)
-        - [1.11.3.2.3. Using De Morgan's Law](#111323-using-de-morgans-law)
-        - [1.11.3.2.4. Abusing Short-Circuit Logic](#111324-abusing-short-circuit-logic)
-        - [1.11.3.2.5. Example: Wrestling with Complicated Logic](#111325-example-wrestling-with-complicated-logic)
-        - [1.11.3.2.6. Breaking Down Giant Statements](#111326-breaking-down-giant-statements)
-        - [1.11.3.2.7. Another Creative Way to Simplify Expressions](#111327-another-creative-way-to-simplify-expressions)
-      - [1.11.3.3. Variables \& Readability](#11133-variables--readability)
-        - [1.11.3.3.1. Eliminating Variables](#111331-eliminating-variables)
-        - [1.11.3.3.2. Shrink the Scope of Your Variables](#111332-shrink-the-scope-of-your-variables)
-        - [1.11.3.3.3. Prefer Write-Once Variables](#111333-prefer-write-once-variables)
-        - [1.11.3.3.4. A Final Example](#111334-a-final-example)
-    - [1.11.4. Reorganising Your Code](#1114-reorganising-your-code)
-      - [1.11.4.1. Extracting Unrelated Subproblems](#11141-extracting-unrelated-subproblems)
-        - [1.11.4.1.1. Introducing Example: `findClosestLocation()`](#111411-introducing-example-findclosestlocation)
-        - [1.11.4.1.2. Pure Utility Code](#111412-pure-utility-code)
-        - [1.11.4.1.3. Other General-Purpose Code](#111413-other-general-purpose-code)
-        - [1.11.4.1.4. Create a Lot of General-Purpose Code](#111414-create-a-lot-of-general-purpose-code)
-        - [1.11.4.1.5. Project-Specific Functionality](#111415-project-specific-functionality)
-        - [1.11.4.1.6. Simplifying an Existing Interface](#111416-simplifying-an-existing-interface)
-        - [1.11.4.1.7. Reshaping Interface to Your Needs](#111417-reshaping-interface-to-your-needs)
-        - [1.11.4.1.8. Taking Things Too Far](#111418-taking-things-too-far)
-      - [1.11.4.2. One Task at a Time](#11142-one-task-at-a-time)
-        - [1.11.4.2.1. Tasks Can Be Small](#111421-tasks-can-be-small)
-        - [1.11.4.2.2. Extracting Values from an Object](#111422-extracting-values-from-an-object)
-        - [1.11.4.2.3. A Larger Example](#111423-a-larger-example)
-      - [1.11.4.3. Turning Thoughts Into Code](#11143-turning-thoughts-into-code)
-        - [1.11.4.3.1. Describing Logic Clearly](#111431-describing-logic-clearly)
-        - [1.11.4.3.2. Knowing Your Libraries Helps](#111432-knowing-your-libraries-helps)
-        - [1.11.4.3.3. Applying This Method to Larger Problems](#111433-applying-this-method-to-larger-problems)
-      - [1.11.4.4. Writing Less Code](#11144-writing-less-code)
-        - [1.11.4.4.1. Don't Bother Implementing That Feature - You Won't Need It](#111441-dont-bother-implementing-that-feature---you-wont-need-it)
-        - [1.11.4.4.2. Question \& Break Down Your Requirements](#111442-question--break-down-your-requirements)
-        - [1.11.4.4.3. Keeping Your Codebase Small](#111443-keeping-your-codebase-small)
-        - [1.11.4.4.4. Be Familiar with the Libraries Around You](#111444-be-familiar-with-the-libraries-around-you)
-        - [1.11.4.4.5. Example: Using Unix Tools Instead of Coding](#111445-example-using-unix-tools-instead-of-coding)
-    - [1.11.5. Selected Topics](#1115-selected-topics)
-      - [1.11.5.1. Testing \& Readability](#11151-testing--readability)
-        - [1.11.5.1.1. Make Tests Easy to Read \& Maintain](#111511-make-tests-easy-to-read--maintain)
-        - [1.11.5.1.2. What's Wrong With This Unit Test?](#111512-whats-wrong-with-this-unit-test)
-        - [1.11.5.1.3. Making This Test More Readable](#111513-making-this-test-more-readable)
-        - [1.11.5.1.4. Choosing Good Test Inputs](#111514-choosing-good-test-inputs)
-        - [1.11.5.1.5. Naming Test Functions](#111515-naming-test-functions)
-        - [1.11.5.1.6. What Was Wrong With That Test?](#111516-what-was-wrong-with-that-test)
-        - [1.11.5.1.7. Test-Friendly Development](#111517-test-friendly-development)
-        - [1.11.5.1.8. Going Too Far](#111518-going-too-far)
-      - [1.11.5.2. Designing \& Implementing a "Minute/Hour" Counter](#11152-designing--implementing-a-minutehour-counter)
-        - [1.11.5.2.1. The Problem](#111521-the-problem)
-        - [1.11.5.2.2. Defining the Class Interface](#111522-defining-the-class-interface)
-        - [1.11.5.2.3. Attempt 1: A Naïve Solution](#111523-attempt-1-a-naïve-solution)
-        - [1.11.5.2.4. Attempt 2: Conveyor Belt Design](#111524-attempt-2-conveyor-belt-design)
-        - [1.11.5.2.5. Attempt 3: A Time-Bucketed Design](#111525-attempt-3-a-time-bucketed-design)
-        - [1.11.5.2.6. Comparing the Three Solutions](#111526-comparing-the-three-solutions)
-  - [1.12. `vi` and `vim` Editors](#112-vi-and-vim-editors)
-    - [1.12.1. Introduction](#1121-introduction)
-    - [1.12.2. Conventions](#1122-conventions)
-    - [1.12.3. Acknowledgements](#1123-acknowledgements)
-    - [1.12.4. Command Line Options](#1124-command-line-options)
-    - [1.12.5. `vi` Commands](#1125-vi-commands)
-    - [1.12.6. Input Mode Shortcuts](#1126-input-mode-shortcuts)
-    - [1.12.7. Substitution \& Regular Expressions](#1127-substitution--regular-expressions)
-    - [1.12.8. `ex` Commands](#1128-ex-commands)
-    - [1.12.9. Initialisation](#1129-initialisation)
-    - [1.12.10. Recovery](#11210-recovery)
-    - [1.12.11. `vi set` Options](#11211-vi-set-options)
-    - [1.12.12. Nothing Like the Original](#11212-nothing-like-the-original)
-    - [1.12.13. Enhanced Tags \& Tag Stacks](#11213-enhanced-tags--tag-stacks)
-    - [1.12.14. `vim` - `vi` Improved](#11214-vim---vi-improved)
-    - [1.12.15. `nvi` - New `vi`](#11215-nvi---new-vi)
-    - [1.12.16. `elvis`](#11216-elvis)
-    - [1.12.17. `vile` - `vi` like Emacs](#11217-vile---vi-like-emacs)
-    - [1.12.18. Internet Resources for `vi`](#11218-internet-resources-for-vi)
-    - [1.12.19. Program Source and Contact Information](#11219-program-source-and-contact-information)
+  - [1.6. Practical Process Automation](#16-practical-process-automation)
+    - [1.6.1. Practical Process Automation Introduction](#161-practical-process-automation-introduction)
+      - [1.6.1.1. Process Automation](#1611-process-automation)
+      - [1.6.1.2. Wild West Integrations](#1612-wild-west-integrations)
+      - [1.6.1.3. Workflow Engines \& Executable Process Models](#1613-workflow-engines--executable-process-models)
+      - [1.6.1.4. A Business Scenario](#1614-a-business-scenario)
+      - [1.6.1.5. Long-Running Processes](#1615-long-running-processes)
+      - [1.6.1.6. Business Processes, Integration Process, \& Workflows](#1616-business-processes-integration-process--workflows)
+      - [1.6.1.7. Business-IT Collaboration](#1617-business-it-collaboration)
+      - [1.6.1.8. Business Drivers \& The Value of Process Automation](#1618-business-drivers--the-value-of-process-automation)
+      - [1.6.1.9. Not Your Parents' Process Automation Tools](#1619-not-your-parents-process-automation-tools)
+        - [1.6.1.9.1. A Brief History of Process Automation](#16191-a-brief-history-of-process-automation)
+        - [1.6.1.9.2. The Story of Camunda](#16192-the-story-of-camunda)
+    - [1.6.2. Part I: Fundamentals](#162-part-i-fundamentals)
+      - [1.6.2.1. Workflow Engines \& Process Solutions](#1621-workflow-engines--process-solutions)
+        - [1.6.2.1.1. The Workflow Engine](#16211-the-workflow-engine)
+          - [1.6.2.1.1.1. Core Capabilities](#162111-core-capabilities)
+          - [1.6.2.1.1.2. Additional Features of Workflow Patterns](#162112-additional-features-of-workflow-patterns)
+          - [1.6.2.1.1.3. Architecture](#162113-architecture)
+        - [1.6.2.1.2. A Process Solution](#16212-a-process-solution)
+        - [1.6.2.1.3. An Executable Example](#16213-an-executable-example)
+        - [1.6.2.1.4. Application, Processes, \& Workflow Engines](#16214-application-processes--workflow-engines)
+        - [1.6.2.1.5. Typical Workflow Tools in a Project's Life Cycle](#16215-typical-workflow-tools-in-a-projects-life-cycle)
+          - [1.6.2.1.5.1. Graphical Process Modeller](#162151-graphical-process-modeller)
+          - [1.6.2.1.5.2. Collaboration Tools](#162152-collaboration-tools)
+          - [1.6.2.1.5.3. Operations Tooling](#162153-operations-tooling)
+          - [1.6.2.1.5.4. Tasklist Applications](#162154-tasklist-applications)
+          - [1.6.2.1.5.5. Business Monitoring \& Reporting](#162155-business-monitoring--reporting)
+      - [1.6.2.2. Developing Process Solutions](#1622-developing-process-solutions)
+        - [1.6.2.2.1. Business Process Model \& Notation (BPMN)](#16221-business-process-model--notation-bpmn)
+          - [1.6.2.2.1.1. Start \& End Events](#162211-start--end-events)
+          - [1.6.2.2.1.2. The Token Concepts: Implementing Control Flow](#162212-the-token-concepts-implementing-control-flow)
+          - [1.6.2.2.1.3. Sequence Flows: Controlling the Flow of Execution](#162213-sequence-flows-controlling-the-flow-of-execution)
+          - [1.6.2.2.1.4. Tasks: Units of Work](#162214-tasks-units-of-work)
+          - [1.6.2.2.1.5. Gateways: Steering Flow](#162215-gateways-steering-flow)
+          - [1.6.2.2.1.6. Events@ Waiting for Something to Happen](#162216-events-waiting-for-something-to-happen)
+          - [1.6.2.2.1.7. Message Events: Waiting for a Trigger from the Outside](#162217-message-events-waiting-for-a-trigger-from-the-outside)
+        - [1.6.2.2.2. Combining Process Models \& Programming Code](#16222-combining-process-models--programming-code)
+          - [1.6.2.2.2.1. Publish/Subscribe to a Process](#162221-publishsubscribe-to-a-process)
+          - [1.6.2.2.2.2. Referencing Code in Process Models](#162222-referencing-code-in-process-models)
+          - [1.6.2.2.2.3. Using Prebuilt Connectors](#162223-using-prebuilt-connectors)
+          - [1.6.2.2.2.4. Model or Code?](#162224-model-or-code)
+        - [1.6.2.2.3. Testing Processes](#16223-testing-processes)
+        - [1.6.2.2.4. Versioning of Process Solutions](#16224-versioning-of-process-solutions)
+        - [1.6.2.2.5. Running Versions in Parallel](#16225-running-versions-in-parallel)
+      - [1.6.2.3. Orchestrate Anything](#1623-orchestrate-anything)
+        - [1.6.2.3.1. Orchestrate Software](#16231-orchestrate-software)
+          - [1.6.2.3.1.1. Service-Oriented Architecture (SOA) Services](#162311-service-oriented-architecture-soa-services)
+          - [1.6.2.3.1.2. Microservices](#162312-microservices)
+          - [1.6.2.3.1.3. Serverless Functions](#162313-serverless-functions)
+          - [1.6.2.3.1.4. Modular Functions](#162314-modular-functions)
+          - [1.6.2.3.1.5. Deconstructing the Monolith](#162315-deconstructing-the-monolith)
+        - [1.6.2.3.2. Orchestrate Decisions](#16232-orchestrate-decisions)
+          - [1.6.2.3.2.1. Decision Model \& Notation (DMN)](#162321-decision-model--notation-dmn)
+          - [1.6.2.3.2.2. Decisions in a Process Model](#162322-decisions-in-a-process-model)
+        - [1.6.2.3.3. Orchestrate Humans](#16233-orchestrate-humans)
+          - [1.6.2.3.3.1. Task Assignment](#162331-task-assignment)
+          - [1.6.2.3.3.2. Additional Tool Support](#162332-additional-tool-support)
+          - [1.6.2.3.3.3. The User Interface of User Tasks](#162333-the-user-interface-of-user-tasks)
+        - [1.6.2.3.4. Orchestrate RPA Bots](#16234-orchestrate-rpa-bots)
+        - [1.6.2.3.5. Orchestrate Physical Devices \& Things](#16235-orchestrate-physical-devices--things)
+      - [1.6.2.4. Championing Workflow Engines \& BPMN](#1624-championing-workflow-engines--bpmn)
+        - [1.6.2.4.1. Limitation of Other Implementation Options](#16241-limitation-of-other-implementation-options)
+          - [1.6.2.4.1.1. Hardcoded Processes](#162411-hardcoded-processes)
+          - [1.6.2.4.1.2. Batch Processing](#162412-batch-processing)
+          - [1.6.2.4.1.3. Data Pipelines \& Streaming](#162413-data-pipelines--streaming)
+          - [1.6.2.4.1.4. The Actor Model](#162414-the-actor-model)
+          - [1.6.2.4.1.5. Stateful Functions](#162415-stateful-functions)
+        - [1.6.2.4.2. Process Modelling Languages](#16242-process-modelling-languages)
+          - [1.6.2.4.2.1. Workflow Patterns](#162421-workflow-patterns)
+          - [1.6.2.4.2.2. Benefits of Graphical Process Visualisations](#162422-benefits-of-graphical-process-visualisations)
+          - [1.6.2.4.2.3. Textual Process Modelling Approaches](#162423-textual-process-modelling-approaches)
+          - [1.6.2.4.2.4. Typical Concerns of Graphical Modelling](#162424-typical-concerns-of-graphical-modelling)
+          - [1.6.2.4.2.5. Graphical vs Textual Approaches](#162425-graphical-vs-textual-approaches)
+        - [1.6.2.4.3. Process Automation with Blockchain?](#16243-process-automation-with-blockchain)
+    - [1.6.3. Part II: Process Automation in the Enterprise](#163-part-ii-process-automation-in-the-enterprise)
+      - [1.6.3.1. Solution Architecture](#1631-solution-architecture)
+        - [1.6.3.1.1. When to Use a Workflow Engine](#16311-when-to-use-a-workflow-engine)
+        - [1.6.3.1.2. Architecture Trade-Offs](#16312-architecture-trade-offs)
+          - [1.6.3.1.2.1. Running the Workflow Engine](#163121-running-the-workflow-engine)
+          - [1.6.3.1.2.2. Decentralised Engines](#163122-decentralised-engines)
+          - [1.6.3.1.2.3. Sharing Engines](#163123-sharing-engines)
+          - [1.6.3.1.2.4. Ownership of Process Models](#163124-ownership-of-process-models)
+          - [1.6.3.1.2.5. Using the Workflow Engine as a Communication Channel](#163125-using-the-workflow-engine-as-a-communication-channel)
+          - [1.6.3.1.2.6. In-House Workflow Patterns](#163126-in-house-workflow-patterns)
+          - [1.6.3.1.2.7. Performance \& Scalability](#163127-performance--scalability)
+          - [1.6.3.1.2.8. Developer Experience \& Continuous Delivery](#163128-developer-experience--continuous-delivery)
+        - [1.6.3.1.3. Evaluating Workflow Engines](#16313-evaluating-workflow-engines)
+      - [1.6.3.2. Autonomy, Boundaries, \& Isolation](#1632-autonomy-boundaries--isolation)
+        - [1.6.3.2.1. Strong Cohesion \& Low Coupling](#16321-strong-cohesion--low-coupling)
+        - [1.6.3.2.2. Domain-Driven Design, Bounded Context, \& Services](#16322-domain-driven-design-bounded-context--services)
+        - [1.6.3.2.3. Boundaries \& Business Processes](#16323-boundaries--business-processes)
+          - [1.6.3.2.3.1. Respect Process \& Avoid Process Monoliths](#163231-respect-process--avoid-process-monoliths)
+          - [1.6.3.2.3.2. Foster Your Understanding of Responsibilities](#163232-foster-your-understanding-of-responsibilities)
+          - [1.6.3.2.3.3. Long-Running Behaviour Help You Defend Boundaries](#163233-long-running-behaviour-help-you-defend-boundaries)
+        - [1.6.3.2.4. How Processes Communicate Across Boundaries](#16324-how-processes-communicate-across-boundaries)
+          - [1.6.3.2.4.1. Call Activities: Handy Shortcuts Only Within the Boundary](#163241-call-activities-handy-shortcuts-only-within-the-boundary)
+          - [1.6.3.2.4.2. Crossing Boundaries as an API Call](#163242-crossing-boundaries-as-an-api-call)
+        - [1.6.3.2.5. Decentralised Workflow Tooling](#16325-decentralised-workflow-tooling)
+      - [1.6.3.3. Balancing Orchestration \& Choreography](#1633-balancing-orchestration--choreography)
+        - [1.6.3.3.1. Event-Driven Systems](#16331-event-driven-systems)
+          - [1.6.3.3.1.1. Emergent Behaviour](#163311-emergent-behaviour)
+          - [1.6.3.3.1.2. Event Chains](#163312-event-chains)
+          - [1.6.3.3.1.3. The Risk of Distributed Monoliths](#163313-the-risk-of-distributed-monoliths)
+        - [1.6.3.3.2. Contrasting Orchestration \& Choreography](#16332-contrasting-orchestration--choreography)
+          - [1.6.3.3.2.1. Introducing Commands](#163321-introducing-commands)
+          - [1.6.3.3.2.2. Messages, Events \& Commands](#163322-messages-events--commands)
+          - [1.6.3.3.2.3. Terminology \& Definitions](#163323-terminology--definitions)
+          - [1.6.3.3.2.4. Avoid Event Chains by Using Commands](#163324-avoid-event-chains-by-using-commands)
+          - [1.6.3.3.2.5. The Direction of Dependency](#163325-the-direction-of-dependency)
+        - [1.6.3.3.3. Finding the Right Balance](#16333-finding-the-right-balance)
+          - [1.6.3.3.3.1. Deciding Whether to Use Commands or Events](#163331-deciding-whether-to-use-commands-or-events)
+          - [1.6.3.3.3.2. Mixing Commands \& Events](#163332-mixing-commands--events)
+          - [1.6.3.3.3.3. Designing Responsibilities](#163333-designing-responsibilities)
+          - [1.6.3.3.3.4. Evaluating Change Scenarios to Validate Decisions](#163334-evaluating-change-scenarios-to-validate-decisions)
+        - [1.6.3.3.4. Debunking Common Myths](#16334-debunking-common-myths)
+          - [1.6.3.3.4.1. Commands Do Not Require Synchronous Communication](#163341-commands-do-not-require-synchronous-communication)
+          - [1.6.3.3.4.2. Orchestration Does Not Need to be Central](#163342-orchestration-does-not-need-to-be-central)
+          - [1.6.3.3.4.3. Choreography Does Not Automatically Lead to More Decoupling](#163343-choreography-does-not-automatically-lead-to-more-decoupling)
+        - [1.6.3.3.5. The Role of Workflow Engines](#16335-the-role-of-workflow-engines)
+      - [1.6.3.4. Workflow Engines \& Integration Challenges](#1634-workflow-engines--integration-challenges)
+        - [1.6.3.4.1. Communication Patterns for Service Invocation](#16341-communication-patterns-for-service-invocation)
+          - [1.6.3.4.1.1. Synchronous Request/Response](#163411-synchronous-requestresponse)
+          - [1.6.3.4.1.2. Asynchronous Request/Response](#163412-asynchronous-requestresponse)
+          - [1.6.3.4.1.3. BPMN \& Being Ready to Receive](#163413-bpmn--being-ready-to-receive)
+          - [1.6.3.4.1.4. Aggregating \& Dead Messages](#163414-aggregating--dead-messages)
+          - [1.6.3.4.1.5. Poisoned \& Dead Messages](#163415-poisoned--dead-messages)
+          - [1.6.3.4.1.6. Synchronous Facades Hiding Asynchronous Communication](#163416-synchronous-facades-hiding-asynchronous-communication)
+        - [1.6.3.4.2. Transactions \& Consistency](#16342-transactions--consistency)
+          - [1.6.3.4.2.1. Eventual Consistency](#163421-eventual-consistency)
+          - [1.6.3.4.2.2. Business Strategies to Handle Inconsistency](#163422-business-strategies-to-handle-inconsistency)
+          - [1.6.3.4.2.3. The Saga Pattern \& Compensation](#163423-the-saga-pattern--compensation)
+          - [1.6.3.4.2.4. Chaining Resources by Using the Outbox Pattern](#163424-chaining-resources-by-using-the-outbox-pattern)
+        - [1.6.3.4.3. Eventual Consistency Applies to Every Form of Remote Communication](#16343-eventual-consistency-applies-to-every-form-of-remote-communication)
+        - [1.6.3.4.4. The Importance of Idempotency](#16344-the-importance-of-idempotency)
+      - [1.6.3.5. Business-IT Collaboration](#1635-business-it-collaboration)
+        - [1.6.3.5.1. A Typical Project](#16351-a-typical-project)
+          - [1.6.3.5.1.1. The Moral of the Story](#163511-the-moral-of-the-story)
+        - [1.6.3.5.2. Including All the People: BizDevOps](#16352-including-all-the-people-bizdevops)
+          - [1.6.3.5.2.1. Development](#163521-development)
+          - [1.6.3.5.2.2. Business](#163522-business)
+          - [1.6.3.5.2.3. Operations](#163523-operations)
+        - [1.6.3.5.3. The Power of One Joined Model](#16353-the-power-of-one-joined-model)
+          - [1.6.3.5.3.1. From a Process Pyramid to a House](#163531-from-a-process-pyramid-to-a-house)
+        - [1.6.3.5.4. Who Does the Modelling?](#16354-who-does-the-modelling)
+        - [1.6.3.5.5. Creating Better Business Models](#16355-creating-better-business-models)
+          - [1.6.3.5.5.1. Extracting (Integration) Logic into Subprocesses](#163551-extracting-integration-logic-into-subprocesses)
+          - [1.6.3.5.5.2. Distinguishing Between Results, Exceptions, \& Errors](#163552-distinguishing-between-results-exceptions--errors)
+          - [1.6.3.5.5.3. Increasing Readability](#163553-increasing-readability)
+      - [1.6.3.6. Process Visibility](#1636-process-visibility)
+        - [1.6.3.6.1. The Value of Process Visibility](#16361-the-value-of-process-visibility)
+        - [1.6.3.6.2. Getting the Data](#16362-getting-the-data)
+          - [1.6.3.6.2.1. Leverage Audit Data from Your Workflow Engine](#163621-leverage-audit-data-from-your-workflow-engine)
+          - [1.6.3.6.2.2. Model Events to Measure Key Performance Indicators](#163622-model-events-to-measure-key-performance-indicators)
+        - [1.6.3.6.3. Status Inquiries](#16363-status-inquiries)
+        - [1.6.3.6.4. Understanding Process That Span Multiple Systems](#16364-understanding-process-that-span-multiple-systems)
+          - [1.6.3.6.4.1. Observability \& Distributed Tracing Tools](#163641-observability--distributed-tracing-tools)
+          - [1.6.3.6.4.2. Custom Centralised Monitoring](#163642-custom-centralised-monitoring)
+          - [1.6.3.6.4.3. Data Warehouses, Data Lakes, \& Business Intelligence Tools](#163643-data-warehouses-data-lakes--business-intelligence-tools)
+          - [1.6.3.6.4.4. Process Mining](#163644-process-mining)
+          - [1.6.3.6.4.5. Process Event Monitoring](#163645-process-event-monitoring)
+          - [1.6.3.6.4.6. Current Market Dynamics](#163646-current-market-dynamics)
+        - [1.6.3.6.5. Setting Up Process Reporting \& Monitoring](#16365-setting-up-process-reporting--monitoring)
+          - [1.6.3.6.5.1. Typical Metrics \& Reports](#163651-typical-metrics--reports)
+          - [1.6.3.6.5.2. Allowing for a Deeper Understanding](#163652-allowing-for-a-deeper-understanding)
+    - [1.6.4. Part III: Get Going](#164-part-iii-get-going)
+      - [1.6.4.1. The Journey to Introduce Process Automation](#1641-the-journey-to-introduce-process-automation)
+        - [1.6.4.1.1. Understanding the Adoption Journey](#16411-understanding-the-adoption-journey)
+          - [1.6.4.1.1.1. Failures You Want to Avoid](#164111-failures-you-want-to-avoid)
+          - [1.6.4.1.1.2. A Success Story](#164112-a-success-story)
+          - [1.6.4.1.1.3. The Pattern of Successful Adoption Journeys](#164113-the-pattern-of-successful-adoption-journeys)
+          - [1.6.4.1.1.4. Different Journeys for Different Scenarios](#164114-different-journeys-for-different-scenarios)
+        - [1.6.4.1.2. Starting Your Journey](#16412-starting-your-journey)
+          - [1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption](#164121-bottom-up-vs-top-down-adoption)
+          - [1.6.4.1.2.2. Proofs of Concepts](#164122-proofs-of-concepts)
+          - [1.6.4.1.2.3. Presenting the Business Case](#164123-presenting-the-business-case)
+          - [1.6.4.1.2.4. Don't Build Your Own Platform](#164124-dont-build-your-own-platform)
+          - [1.6.4.1.2.5. Dos and Don'ts Around Reuse](#164125-dos-and-donts-around-reuse)
+        - [1.6.4.1.3. From Project to Program: Scaling Adoption](#16413-from-project-to-program-scaling-adoption)
+          - [1.6.4.1.3.1. Perception Management: What Is Process Automation?](#164131-perception-management-what-is-process-automation)
+          - [1.6.4.1.3.2. Establishing a Centre of Excellence](#164132-establishing-a-centre-of-excellence)
+          - [1.6.4.1.3.3. Managing Architecture Decisions](#164133-managing-architecture-decisions)
+          - [1.6.4.1.3.4. Decentralised Workflow Tooling](#164134-decentralised-workflow-tooling)
+          - [1.6.4.1.3.5. Role \& Skill Development](#164135-role--skill-development)
+      - [1.6.4.2. Parting Words](#1642-parting-words)
+        - [1.6.4.2.1. Current Architecture Trends Influence Process Automation](#16421-current-architecture-trends-influence-process-automation)
+        - [1.6.4.2.2. Rethinking Business Processes \& The User Experience](#16422-rethinking-business-processes--the-user-experience)
+        - [1.6.4.2.3. Where To Go From Here](#16423-where-to-go-from-here)
+  - [1.7. Refactoring](#17-refactoring)
+  - [1.8. Software Architecture: The Hard Parts](#18-software-architecture-the-hard-parts)
+    - [1.8.1. Preface](#181-preface)
+      - [1.8.1.1. What Happens When There Are No "Best Practices"?](#1811-what-happens-when-there-are-no-best-practices)
+      - [1.8.1.2. Giving Timeless Advice About Software Architecture](#1812-giving-timeless-advice-about-software-architecture)
+      - [1.8.1.3. The Importance of Data in Architecture](#1813-the-importance-of-data-in-architecture)
+      - [1.8.1.4. Architectural Decision Records](#1814-architectural-decision-records)
+      - [1.8.1.5. Architectural Fitness Functions](#1815-architectural-fitness-functions)
+        - [1.8.1.5.1. Using Fitness Functions](#18151-using-fitness-functions)
+      - [1.8.1.6. Architecture versus Design: Keeping Definitions Simple](#1816-architecture-versus-design-keeping-definitions-simple)
+      - [1.8.1.7. Introducing the Sysops Squad Saga](#1817-introducing-the-sysops-squad-saga)
+        - [1.8.1.7.1. Non-Ticketing Workflow](#18171-non-ticketing-workflow)
+        - [1.8.1.7.2. A Bad Scenario](#18172-a-bad-scenario)
+        - [1.8.1.7.3. Sysops Squad Architectural Components](#18173-sysops-squad-architectural-components)
+        - [1.8.1.7.4. Sysops Squad Data Model](#18174-sysops-squad-data-model)
+    - [1.8.2. Pulling Things Apart](#182-pulling-things-apart)
+      - [1.8.2.1. Discerning Coupling in Software Architecture](#1821-discerning-coupling-in-software-architecture)
+        - [1.8.2.1.1. Architecture (Quantum | Quanta)](#18211-architecture-quantum--quanta)
+          - [1.8.2.1.1.1. Independently Deployable](#182111-independently-deployable)
+          - [1.8.2.1.1.2. High Functional Cohesion](#182112-high-functional-cohesion)
+          - [1.8.2.1.1.3. High Static Coupling](#182113-high-static-coupling)
+          - [1.8.2.1.1.4. Dynamic Quantum Coupling](#182114-dynamic-quantum-coupling)
+        - [1.8.2.1.2. Sysops Squad Saga: Understanding Quanta](#18212-sysops-squad-saga-understanding-quanta)
+      - [1.8.2.2. Architectural Decomposition](#1822-architectural-decomposition)
+        - [1.8.2.2.1. Is the Codebase Decomposable?](#18221-is-the-codebase-decomposable)
+          - [1.8.2.2.1.1. Afferent \& Efferent Coupling](#182211-afferent--efferent-coupling)
+          - [1.8.2.2.1.2. Abstractness \& Instability](#182212-abstractness--instability)
+          - [1.8.2.2.1.3. Distance From the Main Sequence](#182213-distance-from-the-main-sequence)
+        - [1.8.2.2.2. Component-Based Decomposition](#18222-component-based-decomposition)
+        - [1.8.2.2.3. Tactical Forking](#18223-tactical-forking)
+          - [1.8.2.2.3.1. Trade-Offs](#182231-trade-offs)
+        - [1.8.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach](#18224-sysops-squad-saga-choosing-a-decomposition-approach)
+      - [1.8.2.3. Component-Based Decomposition Patterns](#1823-component-based-decomposition-patterns)
+        - [1.8.2.3.1. Identify \& Size Components Pattern](#18231-identify--size-components-pattern)
+          - [1.8.2.3.1.1. Pattern Description (Identify \& Size Components Pattern)](#182311-pattern-description-identify--size-components-pattern)
+          - [1.8.2.3.1.2. Fitness Functions for Governance (Identify \& Size Components Pattern)](#182312-fitness-functions-for-governance-identify--size-components-pattern)
+          - [1.8.2.3.1.3. Sysops Squad Saga: Sizing Components](#182313-sysops-squad-saga-sizing-components)
+        - [1.8.2.3.2. Gather Common Domain Components Pattern](#18232-gather-common-domain-components-pattern)
+          - [1.8.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)](#182321-pattern-description-gather-common-domain-components-pattern)
+          - [1.8.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)](#182322-fitness-functions-for-governance-gather-common-domain-components-pattern)
+          - [1.8.2.3.2.3. Sysops Squad Saga: Gathering Common Components](#182323-sysops-squad-saga-gathering-common-components)
+        - [1.8.2.3.3. Flatten Components](#18233-flatten-components)
+          - [1.8.2.3.3.1. Pattern Description (Flatten Components)](#182331-pattern-description-flatten-components)
+          - [1.8.2.3.3.2. Fitness Functions for Governance (Flatten Components)](#182332-fitness-functions-for-governance-flatten-components)
+          - [1.8.2.3.3.3. Sysops Squad Saga: Flattening Components](#182333-sysops-squad-saga-flattening-components)
+        - [1.8.2.3.4. Determine Component Dependencies Pattern](#18234-determine-component-dependencies-pattern)
+          - [1.8.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)](#182341-pattern-description-determine-component-dependencies-pattern)
+          - [1.8.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)](#182342-fitness-functions-for-governance-determine-component-dependencies-pattern)
+          - [1.8.2.3.4.3. Sysops Squad Saga: Creating Component Domains](#182343-sysops-squad-saga-creating-component-domains)
+        - [1.8.2.3.5. Create Domain Services Pattern](#18235-create-domain-services-pattern)
+          - [1.8.2.3.5.1. Pattern Description (Create Domain Services Pattern)](#182351-pattern-description-create-domain-services-pattern)
+          - [1.8.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)](#182352-fitness-functions-for-governance-create-domain-services-pattern)
+          - [1.8.2.3.5.3. Sysops Squad Saga: Creating Domain Services](#182353-sysops-squad-saga-creating-domain-services)
+      - [1.8.2.4. Pulling Apart Operational Data](#1824-pulling-apart-operational-data)
+        - [1.8.2.4.1. Data Decomposition Pattern](#18241-data-decomposition-pattern)
+          - [1.8.2.4.1.1. Data Disintegration](#182411-data-disintegration)
+          - [1.8.2.4.1.2. Data Integrators](#182412-data-integrators)
+          - [1.8.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition](#182413-sysops-squad-saga-justifying-database-decomposition)
+        - [1.8.2.4.2. Decomposing Monolithic Data](#18242-decomposing-monolithic-data)
+          - [1.8.2.4.2.1. Step 1: Analyse Database \& Create Data Domain](#182421-step-1-analyse-database--create-data-domain)
+          - [1.8.2.4.2.2. Step 2: Assign Tables to Data Domains](#182422-step-2-assign-tables-to-data-domains)
+          - [1.8.2.4.2.3. Step 3: Separate Database Connections to Data Domains](#182423-step-3-separate-database-connections-to-data-domains)
+          - [1.8.2.4.2.4. Step 4: Move Schemas to Separate Database Servers](#182424-step-4-move-schemas-to-separate-database-servers)
+          - [1.8.2.4.2.5. Switch Over to Independent Database Servers](#182425-switch-over-to-independent-database-servers)
+        - [1.8.2.4.3. Selecting a Database Type](#18243-selecting-a-database-type)
+          - [1.8.2.4.3.1. Relational Databases](#182431-relational-databases)
+          - [1.8.2.4.3.2. Key-Value Databases](#182432-key-value-databases)
+          - [1.8.2.4.3.3. Document Databases](#182433-document-databases)
+          - [1.8.2.4.3.4. Column Family Databases](#182434-column-family-databases)
+          - [1.8.2.4.3.5. Graph Databases](#182435-graph-databases)
+          - [1.8.2.4.3.6. NewSQL Databases](#182436-newsql-databases)
+          - [1.8.2.4.3.7. Cloud Native Databases](#182437-cloud-native-databases)
+          - [1.8.2.4.3.8. Time-Series Databases](#182438-time-series-databases)
+          - [1.8.2.4.3.9. Sysops Squad Saga: Polyglot Databases](#182439-sysops-squad-saga-polyglot-databases)
+      - [1.8.2.5. Service Granularity](#1825-service-granularity)
+        - [1.8.2.5.1. Granularity Disintegrators](#18251-granularity-disintegrators)
+          - [1.8.2.5.1.1. Service Scope \& Function](#182511-service-scope--function)
+          - [1.8.2.5.1.2. Code Volatility](#182512-code-volatility)
+          - [1.8.2.5.1.3. Scalability \& Throughput](#182513-scalability--throughput)
+          - [1.8.2.5.1.4. Fault Tolerance (Service Granularity)](#182514-fault-tolerance-service-granularity)
+          - [1.8.2.5.1.5. Security](#182515-security)
+          - [1.8.2.5.1.6. Extensibility](#182516-extensibility)
+        - [1.8.2.5.2. Granularity Integrators](#18252-granularity-integrators)
+          - [1.8.2.5.2.1. Database Transactions](#182521-database-transactions)
+          - [1.8.2.5.2.2. Workflow \& Choreography](#182522-workflow--choreography)
+          - [1.8.2.5.2.3. Shared Code](#182523-shared-code)
+          - [1.8.2.5.2.4. Data Relationships](#182524-data-relationships)
+        - [1.8.2.5.3. Finding the Right Balance](#18253-finding-the-right-balance)
+        - [1.8.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity](#18254-sysops-squad-saga-ticket-assignment-granularity)
+        - [1.8.2.5.5. Sysops Squad Saga: Customer Registration Granularity](#18255-sysops-squad-saga-customer-registration-granularity)
+    - [1.8.3. Putting Things Back Together](#183-putting-things-back-together)
+      - [1.8.3.1. Reuse Patterns](#1831-reuse-patterns)
+        - [1.8.3.1.1. Code Replication](#18311-code-replication)
+          - [1.8.3.1.1.1. When to Use Code Replication](#183111-when-to-use-code-replication)
+        - [1.8.3.1.2. Shared Library](#18312-shared-library)
+          - [1.8.3.1.2.1. Dependency Management \& Change Control](#183121-dependency-management--change-control)
+          - [1.8.3.1.2.2. Versioning Strategies](#183122-versioning-strategies)
+          - [1.8.3.1.2.3. When To Use Shared Library](#183123-when-to-use-shared-library)
+        - [1.8.3.1.3. Shared Service](#18313-shared-service)
+          - [1.8.3.1.3.1. Change Risk](#183131-change-risk)
+          - [1.8.3.1.3.2. Performance](#183132-performance)
+          - [1.8.3.1.3.3. Scalability](#183133-scalability)
+          - [1.8.3.1.3.4. Fault Tolerance (Reuse Patterns)](#183134-fault-tolerance-reuse-patterns)
+          - [1.8.3.1.3.5. When to Use Shared Service](#183135-when-to-use-shared-service)
+        - [1.8.3.1.4. Sidecars \& Service Mesh](#18314-sidecars--service-mesh)
+          - [1.8.3.1.4.1. When to Use Sidecars \& Service Mesh](#183141-when-to-use-sidecars--service-mesh)
+          - [1.8.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic](#183142-sysops-squad-saga-common-infrastructure-logic)
+        - [1.8.3.1.5. Code Reuse: When Does It Add Value?](#18315-code-reuse-when-does-it-add-value)
+          - [1.8.3.1.5.1. Reuse via Platforms](#183151-reuse-via-platforms)
+          - [1.8.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality](#183152-sysops-squad-saga-shared-domain-functionality)
+      - [1.8.3.2. Data Ownership \& Distributed Transactions](#1832-data-ownership--distributed-transactions)
+        - [1.8.3.2.1. Assigning Data Ownership](#18321-assigning-data-ownership)
+        - [1.8.3.2.2. Single Ownership Scenario](#18322-single-ownership-scenario)
+        - [1.8.3.2.3. Common Ownership Scenario](#18323-common-ownership-scenario)
+        - [1.8.3.2.4. Joint Ownership Scenario](#18324-joint-ownership-scenario)
+          - [1.8.3.2.4.1. Table Split Technique](#183241-table-split-technique)
+          - [1.8.3.2.4.2. Data Domain Technique](#183242-data-domain-technique)
+          - [1.8.3.2.4.3. Delegate Technique](#183243-delegate-technique)
+        - [1.8.3.2.5. Service Consolidation Technique](#18325-service-consolidation-technique)
+        - [1.8.3.2.6. Data Ownership Summary](#18326-data-ownership-summary)
+        - [1.8.3.2.7. Distributed Transactions](#18327-distributed-transactions)
+        - [1.8.3.2.8. Eventual Consistency Patterns](#18328-eventual-consistency-patterns)
+          - [1.8.3.2.8.1. Background Synchronisation Pattern](#183281-background-synchronisation-pattern)
+          - [1.8.3.2.8.2. Orchestrated Request-Based Pattern](#183282-orchestrated-request-based-pattern)
+          - [1.8.3.2.8.3. Event-Based Pattern](#183283-event-based-pattern)
+        - [1.8.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing](#18329-sysops-squad-saga-data-ownership-for-ticket-processing)
+      - [1.8.3.3. Distributed Data Access](#1833-distributed-data-access)
+        - [1.8.3.3.1. Inter-Service Communication Pattern](#18331-inter-service-communication-pattern)
+        - [1.8.3.3.2. Column Schema Replication Pattern](#18332-column-schema-replication-pattern)
+        - [1.8.3.3.3. Replicated Caching Pattern](#18333-replicated-caching-pattern)
+        - [1.8.3.3.4. Data Domain Pattern](#18334-data-domain-pattern)
+        - [1.8.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment](#18335-sysops-squad-saga-data-access-for-ticket-assignment)
+      - [1.8.3.4. Managing Distributed Workflows](#1834-managing-distributed-workflows)
+        - [1.8.3.4.1. Orchestration Communication Style](#18341-orchestration-communication-style)
+        - [1.8.3.4.2. Choreography Communication Style](#18342-choreography-communication-style)
+          - [1.8.3.4.2.1. Workflow State Management](#183421-workflow-state-management)
+        - [1.8.3.4.3. Trade-Off Between Orchestration and Choreography](#18343-trade-off-between-orchestration-and-choreography)
+          - [1.8.3.4.3.1. State Owner \& Coupling](#183431-state-owner--coupling)
+        - [1.8.3.4.4. Sysops Squad Saga: Managing Workflows](#18344-sysops-squad-saga-managing-workflows)
+      - [1.8.3.5. Transactional Sagas](#1835-transactional-sagas)
+        - [1.8.3.5.1. Transactional Saga Patterns](#18351-transactional-saga-patterns)
+          - [1.8.3.5.1.1. Epic Saga Pattern](#183511-epic-saga-pattern)
+          - [1.8.3.5.1.2. Phone Tag Pattern](#183512-phone-tag-pattern)
+          - [1.8.3.5.1.3. Fairy Tale Saga Pattern](#183513-fairy-tale-saga-pattern)
+          - [1.8.3.5.1.4. Time Travel Saga Pattern](#183514-time-travel-saga-pattern)
+          - [1.8.3.5.1.5. Fantasy Fiction Saga Pattern](#183515-fantasy-fiction-saga-pattern)
+          - [1.8.3.5.1.6. Horror Story Pattern](#183516-horror-story-pattern)
+          - [1.8.3.5.1.7. Parallel Saga Pattern](#183517-parallel-saga-pattern)
+          - [1.8.3.5.1.8. Anthology Saga Pattern](#183518-anthology-saga-pattern)
+        - [1.8.3.5.2. State Management \& Eventual Consistency](#18352-state-management--eventual-consistency)
+          - [1.8.3.5.2.1. Saga State Machines](#183521-saga-state-machines)
+        - [1.8.3.5.3. Techniques for Managing Sagas](#18353-techniques-for-managing-sagas)
+        - [1.8.3.5.4. Sysops Squad Saga: Atomic Transactions \& Compensating Updates](#18354-sysops-squad-saga-atomic-transactions--compensating-updates)
+      - [1.8.3.6. Contracts](#1836-contracts)
+        - [1.8.3.6.1. Contracts Versus Loose Contracts](#18361-contracts-versus-loose-contracts)
+          - [1.8.3.6.1.1. Trade-Offs Between Strict \& Loose Contracts](#183611-trade-offs-between-strict--loose-contracts)
+          - [1.8.3.6.1.2. Contracts in Microservices](#183612-contracts-in-microservices)
+        - [1.8.3.6.2. Stamp Coupling](#18362-stamp-coupling)
+          - [1.8.3.6.2.1. Over-Coupling via Stamp Coupling](#183621-over-coupling-via-stamp-coupling)
+          - [1.8.3.6.2.2. Bandwidth](#183622-bandwidth)
+          - [1.8.3.6.2.3. Stamp Coupling for Workflow Management](#183623-stamp-coupling-for-workflow-management)
+        - [1.8.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts](#18363-sysops-squad-saga-managing-ticketing-contracts)
+      - [1.8.3.7. Managing Analytical Data](#1837-managing-analytical-data)
+        - [1.8.3.7.1. Previous Approaches](#18371-previous-approaches)
+          - [1.8.3.7.1.1. The Data Warehouse](#183711-the-data-warehouse)
+          - [1.8.3.7.1.2. The Data Lake](#183712-the-data-lake)
+        - [1.8.3.7.2. The Data Mesh](#18372-the-data-mesh)
+          - [1.8.3.7.2.1. Definition of Data Mesh](#183721-definition-of-data-mesh)
+          - [1.8.3.7.2.2. Data Product Quantum](#183722-data-product-quantum)
+          - [1.8.3.7.2.3. Data Mesh, Coupling, \& Architecture Quantum](#183723-data-mesh-coupling--architecture-quantum)
+          - [1.8.3.7.2.4. When to Use Data Mesh](#183724-when-to-use-data-mesh)
+        - [1.8.3.7.3. Sysops Squad Saga: Data Mesh](#18373-sysops-squad-saga-data-mesh)
+      - [1.8.3.8. Build Your Own Trade-Off Analysis](#1838-build-your-own-trade-off-analysis)
+        - [1.8.3.8.1. Finding Entangled Dimensions](#18381-finding-entangled-dimensions)
+          - [1.8.3.8.1.1. Coupling](#183811-coupling)
+          - [1.8.3.8.1.2. Analyse Coupling Points](#183812-analyse-coupling-points)
+          - [1.8.3.8.1.3. Assess Trade-Offs](#183813-assess-trade-offs)
+        - [1.8.3.8.2. Trade-Off Techniques](#18382-trade-off-techniques)
+          - [1.8.3.8.2.1. Qualitative Versus Quantitative Analysis](#183821-qualitative-versus-quantitative-analysis)
+          - [1.8.3.8.2.2. MECE Lists](#183822-mece-lists)
+          - [1.8.3.8.2.3. The "Out-Of-Context" Trap](#183823-the-out-of-context-trap)
+          - [1.8.3.8.2.4. Model-Relevant Domain Cases](#183824-model-relevant-domain-cases)
+          - [1.8.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence](#183825-prefer-bottom-line-over-overwhelming-evidence)
+          - [1.8.3.8.2.6. Avoiding Snake Oil \& Evangelism](#183826-avoiding-snake-oil--evangelism)
+        - [1.8.3.8.3. Sysops Squad Saga: Epilogue](#18383-sysops-squad-saga-epilogue)
+  - [1.9. The Art of Readable Code](#19-the-art-of-readable-code)
+  - [1.10. The Clean Coder](#110-the-clean-coder)
+    - [1.10.1. The Clean Coder Introduction](#1101-the-clean-coder-introduction)
+    - [1.10.2. Professionalism](#1102-professionalism)
+      - [1.10.2.1. Be Careful What You Ask For](#11021-be-careful-what-you-ask-for)
+      - [1.10.2.2. Taking Responsibility](#11022-taking-responsibility)
+      - [1.10.2.3. First, Do No Harm](#11023-first-do-no-harm)
+      - [1.10.2.4. Work Ethic](#11024-work-ethic)
+      - [1.10.2.5. Bibliography](#11025-bibliography)
+    - [1.10.3. Saying No](#1103-saying-no)
+      - [1.10.3.1. Adversarial Roles](#11031-adversarial-roles)
+      - [1.10.3.2. High Stakes](#11032-high-stakes)
+      - [1.10.3.3. Being a "Team Player"](#11033-being-a-team-player)
+      - [1.10.3.4. The Cost of Saying Yes](#11034-the-cost-of-saying-yes)
+      - [1.10.3.5. Code Impossible](#11035-code-impossible)
+    - [1.10.4. Saying Yes](#1104-saying-yes)
+      - [1.10.4.1. A Language of Commitment](#11041-a-language-of-commitment)
+      - [1.10.4.2. Learning How to Say "Yes"](#11042-learning-how-to-say-yes)
+    - [1.10.5. Coding](#1105-coding)
+      - [1.10.5.1. Preparedness](#11051-preparedness)
+      - [1.10.5.2. The Flow Zone](#11052-the-flow-zone)
+      - [1.10.5.3. Writer's Block](#11053-writers-block)
+      - [1.10.5.4. Debugging](#11054-debugging)
+      - [1.10.5.5. Being Yourself](#11055-being-yourself)
+      - [1.10.5.6. Being Late](#11056-being-late)
+      - [1.10.5.7. Help](#11057-help)
+    - [1.10.6. Test-Driven Development](#1106-test-driven-development)
+      - [1.10.6.1. The Jury Is In](#11061-the-jury-is-in)
+      - [1.10.6.2. The Three Laws of TDD](#11062-the-three-laws-of-tdd)
+      - [1.10.6.3. What TDD Is Not](#11063-what-tdd-is-not)
+    - [1.10.7. Practising](#1107-practising)
+      - [1.10.7.1. Some Background on Practising](#11071-some-background-on-practising)
+      - [1.10.7.2. The Coding Dojo](#11072-the-coding-dojo)
+      - [1.10.7.3. Broadening Your Experience](#11073-broadening-your-experience)
+    - [1.10.8. Acceptance Testing](#1108-acceptance-testing)
+      - [1.10.8.1. Communicating Requirements](#11081-communicating-requirements)
+      - [1.10.8.2. Acceptance Tests](#11082-acceptance-tests)
+    - [1.10.9. Testing Strategies](#1109-testing-strategies)
+      - [1.10.9.1. QA Should Find Nothing](#11091-qa-should-find-nothing)
+      - [1.10.9.2. The Test Automation Pyramid](#11092-the-test-automation-pyramid)
+    - [1.10.10. Time Management](#11010-time-management)
+      - [1.10.10.1. Meetings](#110101-meetings)
+      - [1.10.10.2. Focus-Manna](#110102-focus-manna)
+      - [1.10.10.3. Time Boxing \& Tomatoes](#110103-time-boxing--tomatoes)
+      - [1.10.10.4. Avoidance](#110104-avoidance)
+      - [1.10.10.5. Blind Alleys](#110105-blind-alleys)
+      - [1.10.10.6. Marshes, Bogs, Swaps, \& Other Messes](#110106-marshes-bogs-swaps--other-messes)
+    - [1.10.11. Estimation](#11011-estimation)
+      - [1.10.11.1. What Is an Estimate?](#110111-what-is-an-estimate)
+      - [1.10.11.2. PERT](#110112-pert)
+      - [1.10.11.3. Estimating Tasks](#110113-estimating-tasks)
+      - [1.10.11.4. The Law of Large Numbers](#110114-the-law-of-large-numbers)
+    - [1.10.12. Pressure](#11012-pressure)
+      - [1.10.12.1. Avoiding Pressure](#110121-avoiding-pressure)
+      - [1.10.12.2. Handling Pressure](#110122-handling-pressure)
+    - [1.10.13. Collaboration](#11013-collaboration)
+      - [1.10.13.1. Programmers versus People](#110131-programmers-versus-people)
+      - [1.10.13.2. Cerebellums](#110132-cerebellums)
+    - [1.10.14. Teams \& Projects](#11014-teams--projects)
+      - [1.10.14.1. Does It Blend?](#110141-does-it-blend)
+    - [1.10.15. Mentoring, Apprenticeship, \& Craftsmanship](#11015-mentoring-apprenticeship--craftsmanship)
+      - [1.10.15.1. Degrees of Failure](#110151-degrees-of-failure)
+      - [1.10.15.2. Mentoring](#110152-mentoring)
+      - [1.10.15.3. Apprenticeship](#110153-apprenticeship)
+      - [1.10.15.4. Craftsmanship](#110154-craftsmanship)
+    - [1.10.16. Tooling](#11016-tooling)
+      - [1.10.16.1. Tools](#110161-tools)
+      - [1.10.16.2. Source Code Control](#110162-source-code-control)
+      - [1.10.16.3. IDE/Editor](#110163-ideeditor)
+      - [1.10.16.4. Issue Tracking](#110164-issue-tracking)
+      - [1.10.16.5. Continuous Building](#110165-continuous-building)
+      - [1.10.16.6. Unit Testing Tools](#110166-unit-testing-tools)
+      - [1.10.16.7. Component Testing Tools](#110167-component-testing-tools)
+      - [1.10.16.8. Integration Testing Tools](#110168-integration-testing-tools)
+      - [1.10.16.9. UML/MDA](#110169-umlmda)
+  - [1.11. The Pragmatic Programmer](#111-the-pragmatic-programmer)
+    - [1.11.1. Preface to the Second Edition](#1111-preface-to-the-second-edition)
+      - [1.11.1.1. How the Book is Organised](#11111-how-the-book-is-organised)
+      - [1.11.1.2. What's In a Name?](#11112-whats-in-a-name)
+    - [1.11.2. From the Preface to the First Edition](#1112-from-the-preface-to-the-first-edition)
+      - [1.11.2.1. Who Should Read This Book?](#11121-who-should-read-this-book)
+      - [1.11.2.2. What Makes a Pragmatic Programmer?](#11122-what-makes-a-pragmatic-programmer)
+        - [1.11.2.2.1. Tip 1: Care About Your Craft](#111221-tip-1-care-about-your-craft)
+        - [1.11.2.2.2. Tip 2: Think! About Your Work](#111222-tip-2-think-about-your-work)
+      - [1.11.2.3. Individual Pragmatists, Large Teams](#11123-individual-pragmatists-large-teams)
+      - [1.11.2.4. It's a Continuous Process](#11124-its-a-continuous-process)
+    - [1.11.3. A Pragmatic Philosophy](#1113-a-pragmatic-philosophy)
+      - [1.11.3.1. It's Your Life](#11131-its-your-life)
+        - [1.11.3.1.1. Tip 3: You Have Agency](#111311-tip-3-you-have-agency)
+      - [1.11.3.2. The Cat Ate My Source Code](#11132-the-cat-ate-my-source-code)
+        - [1.11.3.2.1. Team Trust](#111321-team-trust)
+        - [1.11.3.2.2. Take Responsibility](#111322-take-responsibility)
+        - [1.11.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses](#111323-tip-4-provide-options-dont-make-lame-excuses)
+        - [1.11.3.2.4. Challenges (Take Responsibility)](#111324-challenges-take-responsibility)
+      - [1.11.3.3. Software Entropy](#11133-software-entropy)
+        - [1.11.3.3.1. Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
+        - [1.11.3.3.2. First, Do No Harm](#111332-first-do-no-harm)
+        - [1.11.3.3.3. Challenges (Software Entropy)](#111333-challenges-software-entropy)
+      - [1.11.3.4. Stone Soup \& Boiled Frogs](#11134-stone-soup--boiled-frogs)
+        - [1.11.3.4.1. Tip 6 Be a Catalyst for Change](#111341-tip-6-be-a-catalyst-for-change)
+      - [1.11.3.5. The Villager's Side](#11135-the-villagers-side)
+        - [1.11.3.5.1. Tip 7: Remember the Big Picture](#111351-tip-7-remember-the-big-picture)
+        - [1.11.3.5.2. Challenges (The Villager's Side)](#111352-challenges-the-villagers-side)
+      - [1.11.3.6. Good Enough Software](#11136-good-enough-software)
+        - [1.11.3.6.1. Involve Your Users in the Trade Off](#111361-involve-your-users-in-the-trade-off)
+        - [1.11.3.6.2. Tip 8: Make Quality a Requirements Issue](#111362-tip-8-make-quality-a-requirements-issue)
+        - [1.11.3.6.3. Know When to Stop](#111363-know-when-to-stop)
+        - [1.11.3.6.4. Challenges (Good Enough Software)](#111364-challenges-good-enough-software)
+      - [1.11.3.7. Your Knowledge Portfolio](#11137-your-knowledge-portfolio)
+        - [1.11.3.7.1. Building Your Portfolio](#111371-building-your-portfolio)
+        - [1.11.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio](#111372-tip-9-invest-regularly-in-your-knowledge-portfolio)
+        - [1.11.3.7.3. Opportunities for Learning](#111373-opportunities-for-learning)
+        - [1.11.3.7.4. Critical Thinking](#111374-critical-thinking)
+        - [1.11.3.7.5. Tip 10: Critically Analyse What You Read \& Hear](#111375-tip-10-critically-analyse-what-you-read--hear)
+        - [1.11.3.7.6. Challenges (Your Knowledge Portfolio)](#111376-challenges-your-knowledge-portfolio)
+      - [1.11.3.8. Communicate](#11138-communicate)
+        - [1.11.3.8.1. Tip 11: English is Just Another Language](#111381-tip-11-english-is-just-another-language)
+        - [1.11.3.8.2. Know Your Audience](#111382-know-your-audience)
+        - [1.11.3.8.3. Know What You Want to Say](#111383-know-what-you-want-to-say)
+        - [1.11.3.8.4. Choose Your Moment](#111384-choose-your-moment)
+        - [1.11.3.8.5. Choose a Style](#111385-choose-a-style)
+        - [1.11.3.8.6. Make it Look Good](#111386-make-it-look-good)
+        - [1.11.3.8.7. Involve Your Audience](#111387-involve-your-audience)
+        - [1.11.3.8.8. Be a Listener](#111388-be-a-listener)
+        - [1.11.3.8.9. Get Back to People](#111389-get-back-to-people)
+        - [1.11.3.8.10. Tip 12: It's Both What You Say and the Way You Say It](#1113810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
+        - [1.11.3.8.11. Communication Through Documentation](#1113811-communication-through-documentation)
+        - [1.11.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On](#1113812-tip-13-build-documentation-in-dont-bolt-it-on)
+        - [1.11.3.8.13. Challenges (Communicate)](#1113813-challenges-communicate)
+    - [1.11.4. A Pragmatic Approach](#1114-a-pragmatic-approach)
+      - [1.11.4.1. The Essence of Good Design](#11141-the-essence-of-good-design)
+        - [1.11.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design](#111411-tip-14-good-design-is-easier-to-change-than-bad-design)
+        - [1.11.4.1.2. ETC is a Value, Not a Rule](#111412-etc-is-a-value-not-a-rule)
+        - [1.11.4.1.3. Challenges (The Essence of Good Design)](#111413-challenges-the-essence-of-good-design)
+      - [1.11.4.2. DRY - The Evils of Duplication](#11142-dry---the-evils-of-duplication)
+        - [1.11.4.2.1. Tip 15: DRY - Don't Repeat Yourself](#111421-tip-15-dry---dont-repeat-yourself)
+        - [1.11.4.2.2. DRY is More Than Code](#111422-dry-is-more-than-code)
+        - [1.11.4.2.3. Duplication in Code](#111423-duplication-in-code)
+          - [1.11.4.2.3.1. Not All Code Duplication is Knowledge Duplication](#1114231-not-all-code-duplication-is-knowledge-duplication)
+        - [1.11.4.2.4. Duplication in Documentation](#111424-duplication-in-documentation)
+          - [1.11.4.2.4.1. DRY Violations in Data](#1114241-dry-violations-in-data)
+        - [1.11.4.2.5. Representational Duplication](#111425-representational-duplication)
+          - [1.11.4.2.5.1. Duplication Across Internal APIs](#1114251-duplication-across-internal-apis)
+          - [1.11.4.2.5.2. Duplication Across External APIs](#1114252-duplication-across-external-apis)
+          - [1.11.4.2.5.3. Duplication within Data Sources](#1114253-duplication-within-data-sources)
+        - [1.11.4.2.6. Interdeveloper Duplication](#111426-interdeveloper-duplication)
+        - [1.11.4.2.7. Tip 16: Make It Easy to Rescue](#111427-tip-16-make-it-easy-to-rescue)
+      - [1.11.4.3. Orthogonality](#11143-orthogonality)
+        - [1.11.4.3.1. What is Orthogonality?](#111431-what-is-orthogonality)
+        - [1.11.4.3.2. Benefits of Orthogonality](#111432-benefits-of-orthogonality)
+        - [1.11.4.3.3. Tip 17: Eliminate Effects Between Things](#111433-tip-17-eliminate-effects-between-things)
+          - [1.11.4.3.3.1. Gain Productivity](#1114331-gain-productivity)
+          - [1.11.4.3.3.2. Reduce Risk](#1114332-reduce-risk)
+        - [1.11.4.3.4. Design](#111434-design)
+        - [1.11.4.3.5. Toolkits \& Libraries](#111435-toolkits--libraries)
+        - [1.11.4.3.6. Coding](#111436-coding)
+        - [1.11.4.3.7. Testing](#111437-testing)
+        - [1.11.4.3.8. Orthogonality Through Documentation](#111438-orthogonality-through-documentation)
+        - [1.11.4.3.9. Living with Orthogonality](#111439-living-with-orthogonality)
+          - [1.11.4.3.9.1. Challenges (Living with Orthogonality)](#1114391-challenges-living-with-orthogonality)
+          - [1.11.4.3.9.2. Exercises (Living with Orthogonality)](#1114392-exercises-living-with-orthogonality)
+          - [1.11.4.3.9.3. Exercise 1](#1114393-exercise-1)
+      - [1.11.4.4. Reversibility](#11144-reversibility)
+        - [1.11.4.4.1. Tip 18: There Are No Final Decisions](#111441-tip-18-there-are-no-final-decisions)
+        - [1.11.4.4.2. Tip 19: Forego Following Fads](#111442-tip-19-forego-following-fads)
+        - [1.11.4.4.3. Challenges (Reversibility)](#111443-challenges-reversibility)
+      - [1.11.4.5. Tracer Bullets](#11145-tracer-bullets)
+      - [1.11.4.6. Prototypes \& Post-It Notes](#11146-prototypes--post-it-notes)
+      - [1.11.4.7. Domain Languages](#11147-domain-languages)
+      - [1.11.4.8. Estimating](#11148-estimating)
+    - [1.11.5. The Basic Tools](#1115-the-basic-tools)
+      - [1.11.5.1. The Power of Plain Text](#11151-the-power-of-plain-text)
+      - [1.11.5.2. Shell Games](#11152-shell-games)
+      - [1.11.5.3. Power Editing](#11153-power-editing)
+      - [1.11.5.4. Version Control](#11154-version-control)
+      - [1.11.5.5. Debugging](#11155-debugging)
+      - [1.11.5.6. Text Manipulation](#11156-text-manipulation)
+      - [1.11.5.7. Engineering Daybooks](#11157-engineering-daybooks)
+    - [1.11.6. Pragmatic Paranoia](#1116-pragmatic-paranoia)
+      - [1.11.6.1. Design by Contract](#11161-design-by-contract)
+      - [1.11.6.2. Dead Programs Tell No Tales](#11162-dead-programs-tell-no-tales)
+      - [1.11.6.3. Assertive Programming](#11163-assertive-programming)
+      - [1.11.6.4. How to Balance Resources](#11164-how-to-balance-resources)
+      - [1.11.6.5. Don't Outrun Your Headlights](#11165-dont-outrun-your-headlights)
+    - [1.11.7. Bend, or Break](#1117-bend-or-break)
+      - [1.11.7.1. Decoupling](#11171-decoupling)
+      - [1.11.7.2. Juggling the Real World](#11172-juggling-the-real-world)
+      - [1.11.7.3. Transforming Programming](#11173-transforming-programming)
+      - [1.11.7.4. Inheritance Task](#11174-inheritance-task)
+      - [1.11.7.5. Configuration](#11175-configuration)
+    - [1.11.8. Concurrency](#1118-concurrency)
+      - [1.11.8.1. Breaking Temporal Coupling](#11181-breaking-temporal-coupling)
+      - [1.11.8.2. Shared State is Incorrect State](#11182-shared-state-is-incorrect-state)
+      - [1.11.8.3. Actors \& Processes](#11183-actors--processes)
+      - [1.11.8.4. Blackboards](#11184-blackboards)
+    - [1.11.9. While You Are Coding](#1119-while-you-are-coding)
+      - [1.11.9.1. Listen to Your Lizard Brain](#11191-listen-to-your-lizard-brain)
+      - [1.11.9.2. Programming by Coincidence](#11192-programming-by-coincidence)
+      - [1.11.9.3. Algorithm Speed](#11193-algorithm-speed)
+      - [1.11.9.4. Refactoring](#11194-refactoring)
+      - [1.11.9.5. Test to Code](#11195-test-to-code)
+      - [1.11.9.6. Property-Based Testing](#11196-property-based-testing)
+      - [1.11.9.7. Stay Safe Out There](#11197-stay-safe-out-there)
+      - [1.11.9.8. Naming Things](#11198-naming-things)
+    - [1.11.10. Before the Project](#11110-before-the-project)
+      - [1.11.10.1. The Requirements Pit](#111101-the-requirements-pit)
+      - [1.11.10.2. Solving Impossible Puzzles](#111102-solving-impossible-puzzles)
+      - [1.11.10.3. Working Together](#111103-working-together)
+      - [1.11.10.4. The Essence of Agility](#111104-the-essence-of-agility)
+    - [1.11.11. Pragmatic Projects](#11111-pragmatic-projects)
+      - [1.11.11.1. Pragmatic Teams](#111111-pragmatic-teams)
+      - [1.11.11.2. Coconuts Don't Cut It](#111112-coconuts-dont-cut-it)
+      - [1.11.11.3. Pragmatic Starter Kit](#111113-pragmatic-starter-kit)
+      - [1.11.11.4. Delight Your Users](#111114-delight-your-users)
+      - [1.11.11.5. Pride \& Prejudice](#111115-pride--prejudice)
+  - [1.12. The Art of Readable Code](#112-the-art-of-readable-code)
+    - [1.12.1. Preface](#1121-preface)
+      - [1.12.1.1. Code Should Be Easy to Understand](#11211-code-should-be-easy-to-understand)
+        - [1.12.1.1.1. What Makes Code "Better"?](#112111-what-makes-code-better)
+        - [1.12.1.1.2. The Fundamental Theorem of Readability](#112112-the-fundamental-theorem-of-readability)
+        - [1.12.1.1.3. Is Smaller Always Better?](#112113-is-smaller-always-better)
+        - [1.12.1.1.4. Does Time-Till-Understanding Conflict with Other Goals?](#112114-does-time-till-understanding-conflict-with-other-goals)
+        - [1.12.1.1.5. The Hart Part](#112115-the-hart-part)
+    - [1.12.2. Surface-Level Improvements](#1122-surface-level-improvements)
+      - [1.12.2.1. Packing Information Into Names](#11221-packing-information-into-names)
+        - [1.12.2.1.1. Choose Specific Words](#112211-choose-specific-words)
+        - [1.12.2.1.2. Avoid Generic Names Like `tmp` and `ret_val`](#112212-avoid-generic-names-like-tmp-and-ret_val)
+        - [1.12.2.1.3. Prefer Concrete Names Over Abstract Names](#112213-prefer-concrete-names-over-abstract-names)
+        - [1.12.2.1.4. Attaching Extra Information to a Name](#112214-attaching-extra-information-to-a-name)
+        - [1.12.2.1.5. How Long Should a Name Be?](#112215-how-long-should-a-name-be)
+        - [1.12.2.1.6. Use Name Formatting to Convey Meaning](#112216-use-name-formatting-to-convey-meaning)
+      - [1.12.2.2. Names That Can't be Misconstrued](#11222-names-that-cant-be-misconstrued)
+        - [1.12.2.2.1. Example: `Filter()`](#112221-example-filter)
+        - [1.12.2.2.2. Example: `Clip(text, length)`](#112222-example-cliptext-length)
+        - [1.12.2.2.3. Prefer Min and Max for (Inclusive) Limits](#112223-prefer-min-and-max-for-inclusive-limits)
+        - [1.12.2.2.4. Prefer First and Last for (Inclusive) Ranges](#112224-prefer-first-and-last-for-inclusive-ranges)
+        - [1.12.2.2.5. Prefer Begin and End for Inclusive/Exclusive Ranges](#112225-prefer-begin-and-end-for-inclusiveexclusive-ranges)
+        - [1.12.2.2.6. Naming Booleans](#112226-naming-booleans)
+        - [1.12.2.2.7. Matching Expectations of Users](#112227-matching-expectations-of-users)
+        - [1.12.2.2.8. Example: Evaluating Multiple Name Candidates](#112228-example-evaluating-multiple-name-candidates)
+      - [1.12.2.3. Aesthetics](#11223-aesthetics)
+        - [1.12.2.3.1. Why Do Aesthetics Matter?](#112231-why-do-aesthetics-matter)
+        - [1.12.2.3.2. Rearrange Line Breaks to be Consistent and Compact](#112232-rearrange-line-breaks-to-be-consistent-and-compact)
+        - [1.12.2.3.3. Line Methods to Clean Up Irregularity](#112233-line-methods-to-clean-up-irregularity)
+        - [1.12.2.3.4. Use Column Adjustment When Helpful](#112234-use-column-adjustment-when-helpful)
+        - [1.12.2.3.5. Pick a Meaningful Order, and Use it Consistently](#112235-pick-a-meaningful-order-and-use-it-consistently)
+        - [1.12.2.3.6. Organise Declarations Into Blocks](#112236-organise-declarations-into-blocks)
+        - [1.12.2.3.7. Break Code Into "Paragraphs"](#112237-break-code-into-paragraphs)
+        - [1.12.2.3.8. Personal Style versus Consistency](#112238-personal-style-versus-consistency)
+      - [1.12.2.4. Knowing What to Comment](#11224-knowing-what-to-comment)
+        - [1.12.2.4.1. What NOT to Comment](#112241-what-not-to-comment)
+        - [1.12.2.4.2. Recording Your Thoughts](#112242-recording-your-thoughts)
+        - [1.12.2.4.3. Put Yourself in the Reader's Shoes](#112243-put-yourself-in-the-readers-shoes)
+        - [1.12.2.4.4. Final Thought - Getting Over the Writer's Block](#112244-final-thought---getting-over-the-writers-block)
+      - [1.12.2.5. Making Comments Precise \& Compact](#11225-making-comments-precise--compact)
+        - [1.12.2.5.1. Keep Components Compact](#112251-keep-components-compact)
+        - [1.12.2.5.2. Avoid Ambiguous Pronouns](#112252-avoid-ambiguous-pronouns)
+        - [1.12.2.5.3. Polish Sloppy Sentences](#112253-polish-sloppy-sentences)
+        - [1.12.2.5.4. Describe Function Behaviour Precisely](#112254-describe-function-behaviour-precisely)
+        - [1.12.2.5.5. Use Input/Output Examples That Illustrate Corner Cases](#112255-use-inputoutput-examples-that-illustrate-corner-cases)
+        - [1.12.2.5.6. Share the Intent of Your Code](#112256-share-the-intent-of-your-code)
+        - [1.12.2.5.7. "Named Function Parameter" Comments](#112257-named-function-parameter-comments)
+        - [1.12.2.5.8. Use Information-Dense Words](#112258-use-information-dense-words)
+    - [1.12.3. Simplifying Loops \& Logic](#1123-simplifying-loops--logic)
+      - [1.12.3.1. Making Control Flow Easy to Read](#11231-making-control-flow-easy-to-read)
+        - [1.12.3.1.1. The Order of Arguments in Conditionals](#112311-the-order-of-arguments-in-conditionals)
+        - [1.12.3.1.2. The Order of `if`/`else` Blocks](#112312-the-order-of-ifelse-blocks)
+        - [1.12.3.1.3. The `?:` Conditional Expression (a.k.a "Ternary Operator")](#112313-the--conditional-expression-aka-ternary-operator)
+        - [1.12.3.1.4. Avoid `do`/`while` Loops](#112314-avoid-dowhile-loops)
+        - [1.12.3.1.5. Returning Early From a Function](#112315-returning-early-from-a-function)
+        - [1.12.3.1.6. The Infamous `goto`](#112316-the-infamous-goto)
+        - [1.12.3.1.7. Minimise Nesting](#112317-minimise-nesting)
+        - [1.12.3.1.8. Can You Follow the Flow of Execution?](#112318-can-you-follow-the-flow-of-execution)
+      - [1.12.3.2. Breaking Down Giant Expressions](#11232-breaking-down-giant-expressions)
+        - [1.12.3.2.1. Explaining Variables](#112321-explaining-variables)
+        - [1.12.3.2.2. Summary Variables](#112322-summary-variables)
+        - [1.12.3.2.3. Using De Morgan's Law](#112323-using-de-morgans-law)
+        - [1.12.3.2.4. Abusing Short-Circuit Logic](#112324-abusing-short-circuit-logic)
+        - [1.12.3.2.5. Example: Wrestling with Complicated Logic](#112325-example-wrestling-with-complicated-logic)
+        - [1.12.3.2.6. Breaking Down Giant Statements](#112326-breaking-down-giant-statements)
+        - [1.12.3.2.7. Another Creative Way to Simplify Expressions](#112327-another-creative-way-to-simplify-expressions)
+      - [1.12.3.3. Variables \& Readability](#11233-variables--readability)
+        - [1.12.3.3.1. Eliminating Variables](#112331-eliminating-variables)
+        - [1.12.3.3.2. Shrink the Scope of Your Variables](#112332-shrink-the-scope-of-your-variables)
+        - [1.12.3.3.3. Prefer Write-Once Variables](#112333-prefer-write-once-variables)
+        - [1.12.3.3.4. A Final Example](#112334-a-final-example)
+    - [1.12.4. Reorganising Your Code](#1124-reorganising-your-code)
+      - [1.12.4.1. Extracting Unrelated Subproblems](#11241-extracting-unrelated-subproblems)
+        - [1.12.4.1.1. Introducing Example: `findClosestLocation()`](#112411-introducing-example-findclosestlocation)
+        - [1.12.4.1.2. Pure Utility Code](#112412-pure-utility-code)
+        - [1.12.4.1.3. Other General-Purpose Code](#112413-other-general-purpose-code)
+        - [1.12.4.1.4. Create a Lot of General-Purpose Code](#112414-create-a-lot-of-general-purpose-code)
+        - [1.12.4.1.5. Project-Specific Functionality](#112415-project-specific-functionality)
+        - [1.12.4.1.6. Simplifying an Existing Interface](#112416-simplifying-an-existing-interface)
+        - [1.12.4.1.7. Reshaping Interface to Your Needs](#112417-reshaping-interface-to-your-needs)
+        - [1.12.4.1.8. Taking Things Too Far](#112418-taking-things-too-far)
+      - [1.12.4.2. One Task at a Time](#11242-one-task-at-a-time)
+        - [1.12.4.2.1. Tasks Can Be Small](#112421-tasks-can-be-small)
+        - [1.12.4.2.2. Extracting Values from an Object](#112422-extracting-values-from-an-object)
+        - [1.12.4.2.3. A Larger Example](#112423-a-larger-example)
+      - [1.12.4.3. Turning Thoughts Into Code](#11243-turning-thoughts-into-code)
+        - [1.12.4.3.1. Describing Logic Clearly](#112431-describing-logic-clearly)
+        - [1.12.4.3.2. Knowing Your Libraries Helps](#112432-knowing-your-libraries-helps)
+        - [1.12.4.3.3. Applying This Method to Larger Problems](#112433-applying-this-method-to-larger-problems)
+      - [1.12.4.4. Writing Less Code](#11244-writing-less-code)
+        - [1.12.4.4.1. Don't Bother Implementing That Feature - You Won't Need It](#112441-dont-bother-implementing-that-feature---you-wont-need-it)
+        - [1.12.4.4.2. Question \& Break Down Your Requirements](#112442-question--break-down-your-requirements)
+        - [1.12.4.4.3. Keeping Your Codebase Small](#112443-keeping-your-codebase-small)
+        - [1.12.4.4.4. Be Familiar with the Libraries Around You](#112444-be-familiar-with-the-libraries-around-you)
+        - [1.12.4.4.5. Example: Using Unix Tools Instead of Coding](#112445-example-using-unix-tools-instead-of-coding)
+    - [1.12.5. Selected Topics](#1125-selected-topics)
+      - [1.12.5.1. Testing \& Readability](#11251-testing--readability)
+        - [1.12.5.1.1. Make Tests Easy to Read \& Maintain](#112511-make-tests-easy-to-read--maintain)
+        - [1.12.5.1.2. What's Wrong With This Unit Test?](#112512-whats-wrong-with-this-unit-test)
+        - [1.12.5.1.3. Making This Test More Readable](#112513-making-this-test-more-readable)
+        - [1.12.5.1.4. Choosing Good Test Inputs](#112514-choosing-good-test-inputs)
+        - [1.12.5.1.5. Naming Test Functions](#112515-naming-test-functions)
+        - [1.12.5.1.6. What Was Wrong With That Test?](#112516-what-was-wrong-with-that-test)
+        - [1.12.5.1.7. Test-Friendly Development](#112517-test-friendly-development)
+        - [1.12.5.1.8. Going Too Far](#112518-going-too-far)
+      - [1.12.5.2. Designing \& Implementing a "Minute/Hour" Counter](#11252-designing--implementing-a-minutehour-counter)
+        - [1.12.5.2.1. The Problem](#112521-the-problem)
+        - [1.12.5.2.2. Defining the Class Interface](#112522-defining-the-class-interface)
+        - [1.12.5.2.3. Attempt 1: A Naïve Solution](#112523-attempt-1-a-naïve-solution)
+        - [1.12.5.2.4. Attempt 2: Conveyor Belt Design](#112524-attempt-2-conveyor-belt-design)
+        - [1.12.5.2.5. Attempt 3: A Time-Bucketed Design](#112525-attempt-3-a-time-bucketed-design)
+        - [1.12.5.2.6. Comparing the Three Solutions](#112526-comparing-the-three-solutions)
+  - [1.13. `vi` and `vim` Editors](#113-vi-and-vim-editors)
+    - [1.13.1. `vi` \& `vim` Introduction](#1131-vi--vim-introduction)
+    - [1.13.2. Conventions](#1132-conventions)
+    - [1.13.3. Acknowledgements](#1133-acknowledgements)
+    - [1.13.4. Command Line Options](#1134-command-line-options)
+    - [1.13.5. `vi` Commands](#1135-vi-commands)
+    - [1.13.6. Input Mode Shortcuts](#1136-input-mode-shortcuts)
+    - [1.13.7. Substitution \& Regular Expressions](#1137-substitution--regular-expressions)
+    - [1.13.8. `ex` Commands](#1138-ex-commands)
+    - [1.13.9. Initialisation](#1139-initialisation)
+    - [1.13.10. Recovery](#11310-recovery)
+    - [1.13.11. `vi set` Options](#11311-vi-set-options)
+    - [1.13.12. Nothing Like the Original](#11312-nothing-like-the-original)
+    - [1.13.13. Enhanced Tags \& Tag Stacks](#11313-enhanced-tags--tag-stacks)
+    - [1.13.14. `vim` - `vi` Improved](#11314-vim---vi-improved)
+    - [1.13.15. `nvi` - New `vi`](#11315-nvi---new-vi)
+    - [1.13.16. `elvis`](#11316-elvis)
+    - [1.13.17. `vile` - `vi` like Emacs](#11317-vile---vi-like-emacs)
+    - [1.13.18. Internet Resources for `vi`](#11318-internet-resources-for-vi)
+    - [1.13.19. Program Source and Contact Information](#11319-program-source-and-contact-information)
 - [2. Cheat Sheets](#2-cheat-sheets)
   - [2.1. Command Line Tools Overview](#21-command-line-tools-overview)
   - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
@@ -1832,7 +2058,12 @@ TODO: Order in which to do this testing.
       - [2.3.2.3. Markdown Table, End of Line, Ending with `|` Character](#2323-markdown-table-end-of-line-ending-with--character)
 - [3. Online Notes](#3-online-notes)
   - [3.1. Automation](#31-automation)
-    - [3.1.1. Replacing Bash Scripting with Python](#311-replacing-bash-scripting-with-python)
+    - [3.1.1. Replacing `bash` Scripting with Python](#311-replacing-bash-scripting-with-python)
+      - [3.1.1.1. Replacing `bash` Scripting with Python Introduction](#3111-replacing-bash-scripting-with-python-introduction)
+        - [3.1.1.1.1. If `bash` Is So Great, What's the Problem?](#31111-if-bash-is-so-great-whats-the-problem)
+      - [3.1.1.2. Choose the Right Tool for the Job](#3112-choose-the-right-tool-for-the-job)
+        - [3.1.1.2.1. When to Use `bash`](#31121-when-to-use-bash)
+        - [3.1.1.2.2. Warning Signs](#31122-warning-signs)
   - [3.2. Databases](#32-databases)
     - [3.2.1. Database Management](#321-database-management)
       - [3.2.1.1. Sharding](#3211-sharding)
@@ -34081,7 +34312,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.5.1. Introduction
+### 1.5.1. Introducing GitHub Introduction
 
 -
   [O'Reilly: Introducing GitHub][oreilly-introducing-github]
@@ -36303,7 +36534,5999 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.6. Refactoring
+## 1.6. Practical Process Automation
+
+<details open>
+
+<summary>Click to expand/minimise the full contents of this book.</summary>
+
+### 1.6.1. Practical Process Automation Introduction
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.1. Process Automation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.2. Wild West Integrations
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.3. Workflow Engines & Executable Process Models
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.4. A Business Scenario
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.5. Long-Running Processes
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.6. Business Processes, Integration Process, & Workflows
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.7. Business-IT Collaboration
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.8. Business Drivers & The Value of Process Automation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.1.9. Not Your Parents' Process Automation Tools
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.1.9.1. A Brief History of Process Automation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.1.9.2. The Story of Camunda
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+### 1.6.2. Part I: Fundamentals
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.2.1. Workflow Engines & Process Solutions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.1.1. The Workflow Engine
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.1.1. Core Capabilities
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.1.2. Additional Features of Workflow Patterns
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.1.3. Architecture
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.1.2. A Process Solution
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.1.3. An Executable Example
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.1.4. Application, Processes, & Workflow Engines
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.1.5. Typical Workflow Tools in a Project's Life Cycle
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.5.1. Graphical Process Modeller
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.5.2. Collaboration Tools
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.5.3. Operations Tooling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.5.4. Tasklist Applications
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.1.5.5. Business Monitoring & Reporting
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.2.2. Developing Process Solutions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.2.1. Business Process Model & Notation (BPMN)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.1. Start & End Events
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.2. The Token Concepts: Implementing Control Flow
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.3. Sequence Flows: Controlling the Flow of Execution
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.4. Tasks: Units of Work
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.5. Gateways: Steering Flow
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.6. Events@ Waiting for Something to Happen
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.1.7. Message Events: Waiting for a Trigger from the Outside
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.2.2. Combining Process Models & Programming Code
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.2.1. Publish/Subscribe to a Process
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.2.2. Referencing Code in Process Models
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.2.3. Using Prebuilt Connectors
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.2.2.4. Model or Code?
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.2.3. Testing Processes
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.2.4. Versioning of Process Solutions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.2.5. Running Versions in Parallel
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.2.3. Orchestrate Anything
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.3.1. Orchestrate Software
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.1.1. Service-Oriented Architecture (SOA) Services
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.1.2. Microservices
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.1.3. Serverless Functions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.1.4. Modular Functions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.1.5. Deconstructing the Monolith
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.3.2. Orchestrate Decisions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.2.1. Decision Model & Notation (DMN)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.2.2. Decisions in a Process Model
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.3.3. Orchestrate Humans
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.3.1. Task Assignment
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.3.2. Additional Tool Support
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.3.3.3. The User Interface of User Tasks
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.3.4. Orchestrate RPA Bots
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.3.5. Orchestrate Physical Devices & Things
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.2.4. Championing Workflow Engines & BPMN
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.4.1. Limitation of Other Implementation Options
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.1.1. Hardcoded Processes
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.1.2. Batch Processing
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.1.3. Data Pipelines & Streaming
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.1.4. The Actor Model
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.1.5. Stateful Functions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.4.2. Process Modelling Languages
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.2.1. Workflow Patterns
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.2.2. Benefits of Graphical Process Visualisations
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.2.3. Textual Process Modelling Approaches
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.2.4. Typical Concerns of Graphical Modelling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.2.4.2.5. Graphical vs Textual Approaches
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.2.4.3. Process Automation with Blockchain?
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+### 1.6.3. Part II: Process Automation in the Enterprise
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.1. Solution Architecture
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.1.1. When to Use a Workflow Engine
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.1.2. Architecture Trade-Offs
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.1. Running the Workflow Engine
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.2. Decentralised Engines
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.3. Sharing Engines
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.4. Ownership of Process Models
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.5. Using the Workflow Engine as a Communication Channel
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.6. In-House Workflow Patterns
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.7. Performance & Scalability
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.1.2.8. Developer Experience & Continuous Delivery
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.1.3. Evaluating Workflow Engines
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.2. Autonomy, Boundaries, & Isolation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.2.1. Strong Cohesion & Low Coupling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.2.2. Domain-Driven Design, Bounded Context, & Services
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.2.3. Boundaries & Business Processes
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.2.3.1. Respect Process & Avoid Process Monoliths
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.2.3.2. Foster Your Understanding of Responsibilities
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.2.3.3. Long-Running Behaviour Help You Defend Boundaries
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.2.4. How Processes Communicate Across Boundaries
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.2.4.1. Call Activities: Handy Shortcuts Only Within the Boundary
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.2.4.2. Crossing Boundaries as an API Call
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.2.5. Decentralised Workflow Tooling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.3. Balancing Orchestration & Choreography
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.3.1. Event-Driven Systems
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.1.1. Emergent Behaviour
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.1.2. Event Chains
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.1.3. The Risk of Distributed Monoliths
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.3.2. Contrasting Orchestration & Choreography
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.2.1. Introducing Commands
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.2.2. Messages, Events & Commands
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.2.3. Terminology & Definitions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.2.4. Avoid Event Chains by Using Commands
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.2.5. The Direction of Dependency
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.3.3. Finding the Right Balance
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.3.1. Deciding Whether to Use Commands or Events
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.3.2. Mixing Commands & Events
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.3.3. Designing Responsibilities
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.3.4. Evaluating Change Scenarios to Validate Decisions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.3.4. Debunking Common Myths
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.4.1. Commands Do Not Require Synchronous Communication
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.4.2. Orchestration Does Not Need to be Central
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.3.4.3. Choreography Does Not Automatically Lead to More Decoupling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.3.5. The Role of Workflow Engines
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.4. Workflow Engines & Integration Challenges
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.4.1. Communication Patterns for Service Invocation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.1. Synchronous Request/Response
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.2. Asynchronous Request/Response
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.3. BPMN & Being Ready to Receive
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.4. Aggregating & Dead Messages
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.5. Poisoned & Dead Messages
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.1.6. Synchronous Facades Hiding Asynchronous Communication
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.4.2. Transactions & Consistency
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.2.1. Eventual Consistency
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.2.2. Business Strategies to Handle Inconsistency
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.2.3. The Saga Pattern & Compensation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.4.2.4. Chaining Resources by Using the Outbox Pattern
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.4.3. Eventual Consistency Applies to Every Form of Remote Communication
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.4.4. The Importance of Idempotency
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.5. Business-IT Collaboration
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.5.1. A Typical Project
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.1.1. The Moral of the Story
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.5.2. Including All the People: BizDevOps
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.2.1. Development
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.2.2. Business
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.2.3. Operations
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.5.3. The Power of One Joined Model
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.3.1. From a Process Pyramid to a House
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.5.4. Who Does the Modelling?
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.5.5. Creating Better Business Models
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.5.1. Extracting (Integration) Logic into Subprocesses
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.5.2. Distinguishing Between Results, Exceptions, & Errors
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.5.5.3. Increasing Readability
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.3.6. Process Visibility
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.6.1. The Value of Process Visibility
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.6.2. Getting the Data
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.2.1. Leverage Audit Data from Your Workflow Engine
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.2.2. Model Events to Measure Key Performance Indicators
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.6.3. Status Inquiries
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.6.4. Understanding Process That Span Multiple Systems
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.1. Observability & Distributed Tracing Tools
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.2. Custom Centralised Monitoring
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.3. Data Warehouses, Data Lakes, & Business Intelligence Tools
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.4. Process Mining
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.5. Process Event Monitoring
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.4.6. Current Market Dynamics
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.3.6.5. Setting Up Process Reporting & Monitoring
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.5.1. Typical Metrics & Reports
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.3.6.5.2. Allowing for a Deeper Understanding
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+### 1.6.4. Part III: Get Going
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.4.1. The Journey to Introduce Process Automation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.1.1. Understanding the Adoption Journey
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.1.1. Failures You Want to Avoid
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.1.2. A Success Story
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.1.3. The Pattern of Successful Adoption Journeys
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.1.4. Different Journeys for Different Scenarios
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.1.2. Starting Your Journey
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.2.2. Proofs of Concepts
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.2.3. Presenting the Business Case
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.2.4. Don't Build Your Own Platform
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.2.5. Dos and Don'ts Around Reuse
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.1.3. From Project to Program: Scaling Adoption
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.3.1. Perception Management: What Is Process Automation?
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.3.2. Establishing a Centre of Excellence
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.3.3. Managing Architecture Decisions
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.3.4. Decentralised Workflow Tooling
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+###### 1.6.4.1.3.5. Role & Skill Development
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+#### 1.6.4.2. Parting Words
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.2.1. Current Architecture Trends Influence Process Automation
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.2.2. Rethinking Business Processes & The User Experience
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+##### 1.6.4.2.3. Where To Go From Here
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+-
+  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+
+</details>
+
+## 1.7. Refactoring
 
 <details open>
 
@@ -36311,13 +42534,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.7. Software Architecture: The Hard Parts
+## 1.8. Software Architecture: The Hard Parts
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.7.1. Preface
+### 1.8.1. Preface
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36349,7 +42572,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.1. What Happens When There Are No "Best Practices"?
+#### 1.8.1.1. What Happens When There Are No "Best Practices"?
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36381,7 +42604,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.2. Giving Timeless Advice About Software Architecture
+#### 1.8.1.2. Giving Timeless Advice About Software Architecture
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36413,7 +42636,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.3. The Importance of Data in Architecture
+#### 1.8.1.3. The Importance of Data in Architecture
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36445,7 +42668,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.4. Architectural Decision Records
+#### 1.8.1.4. Architectural Decision Records
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36477,7 +42700,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.5. Architectural Fitness Functions
+#### 1.8.1.5. Architectural Fitness Functions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36509,7 +42732,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.1.5.1. Using Fitness Functions
+##### 1.8.1.5.1. Using Fitness Functions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36541,7 +42764,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.6. Architecture versus Design: Keeping Definitions Simple
+#### 1.8.1.6. Architecture versus Design: Keeping Definitions Simple
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36573,7 +42796,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.1.7. Introducing the Sysops Squad Saga
+#### 1.8.1.7. Introducing the Sysops Squad Saga
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36605,7 +42828,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.1.7.1. Non-Ticketing Workflow
+##### 1.8.1.7.1. Non-Ticketing Workflow
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36637,7 +42860,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.1.7.2. A Bad Scenario
+##### 1.8.1.7.2. A Bad Scenario
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36669,7 +42892,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.1.7.3. Sysops Squad Architectural Components
+##### 1.8.1.7.3. Sysops Squad Architectural Components
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36701,7 +42924,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.1.7.4. Sysops Squad Data Model
+##### 1.8.1.7.4. Sysops Squad Data Model
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36733,7 +42956,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-### 1.7.2. Pulling Things Apart
+### 1.8.2. Pulling Things Apart
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36765,7 +42988,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.2.1. Discerning Coupling in Software Architecture
+#### 1.8.2.1. Discerning Coupling in Software Architecture
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36797,7 +43020,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.1.1. Architecture (Quantum | Quanta)
+##### 1.8.2.1.1. Architecture (Quantum | Quanta)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36829,7 +43052,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.1.1.1. Independently Deployable
+###### 1.8.2.1.1.1. Independently Deployable
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36861,7 +43084,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.1.1.2. High Functional Cohesion
+###### 1.8.2.1.1.2. High Functional Cohesion
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36893,7 +43116,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.1.1.3. High Static Coupling
+###### 1.8.2.1.1.3. High Static Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36925,7 +43148,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.1.1.4. Dynamic Quantum Coupling
+###### 1.8.2.1.1.4. Dynamic Quantum Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36957,7 +43180,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.1.2. Sysops Squad Saga: Understanding Quanta
+##### 1.8.2.1.2. Sysops Squad Saga: Understanding Quanta
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -36989,7 +43212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.2.2. Architectural Decomposition
+#### 1.8.2.2. Architectural Decomposition
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37021,7 +43244,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.2.1. Is the Codebase Decomposable?
+##### 1.8.2.2.1. Is the Codebase Decomposable?
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37053,7 +43276,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.2.1.1. Afferent & Efferent Coupling
+###### 1.8.2.2.1.1. Afferent & Efferent Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37085,7 +43308,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.2.1.2. Abstractness & Instability
+###### 1.8.2.2.1.2. Abstractness & Instability
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37117,7 +43340,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.2.1.3. Distance From the Main Sequence
+###### 1.8.2.2.1.3. Distance From the Main Sequence
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37149,7 +43372,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.2.2. Component-Based Decomposition
+##### 1.8.2.2.2. Component-Based Decomposition
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37181,7 +43404,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.2.3. Tactical Forking
+##### 1.8.2.2.3. Tactical Forking
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37213,7 +43436,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.2.3.1. Trade-Offs
+###### 1.8.2.2.3.1. Trade-Offs
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37245,7 +43468,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach
+##### 1.8.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37277,7 +43500,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.2.3. Component-Based Decomposition Patterns
+#### 1.8.2.3. Component-Based Decomposition Patterns
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37309,7 +43532,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.3.1. Identify & Size Components Pattern
+##### 1.8.2.3.1. Identify & Size Components Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37341,7 +43564,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.1.1. Pattern Description (Identify & Size Components Pattern)
+###### 1.8.2.3.1.1. Pattern Description (Identify & Size Components Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37373,7 +43596,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.1.2. Fitness Functions for Governance (Identify & Size Components Pattern)
+###### 1.8.2.3.1.2. Fitness Functions for Governance (Identify & Size Components Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37405,7 +43628,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.1.3. Sysops Squad Saga: Sizing Components
+###### 1.8.2.3.1.3. Sysops Squad Saga: Sizing Components
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37437,7 +43660,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.3.2. Gather Common Domain Components Pattern
+##### 1.8.2.3.2. Gather Common Domain Components Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37469,7 +43692,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)
+###### 1.8.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37501,7 +43724,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)
+###### 1.8.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37533,7 +43756,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.2.3. Sysops Squad Saga: Gathering Common Components
+###### 1.8.2.3.2.3. Sysops Squad Saga: Gathering Common Components
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37565,7 +43788,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.3.3. Flatten Components
+##### 1.8.2.3.3. Flatten Components
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37597,7 +43820,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.3.1. Pattern Description (Flatten Components)
+###### 1.8.2.3.3.1. Pattern Description (Flatten Components)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37629,7 +43852,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.3.2. Fitness Functions for Governance (Flatten Components)
+###### 1.8.2.3.3.2. Fitness Functions for Governance (Flatten Components)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37661,7 +43884,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.3.3. Sysops Squad Saga: Flattening Components
+###### 1.8.2.3.3.3. Sysops Squad Saga: Flattening Components
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37693,7 +43916,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.3.4. Determine Component Dependencies Pattern
+##### 1.8.2.3.4. Determine Component Dependencies Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37725,7 +43948,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)
+###### 1.8.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37757,7 +43980,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)
+###### 1.8.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37789,7 +44012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.4.3. Sysops Squad Saga: Creating Component Domains
+###### 1.8.2.3.4.3. Sysops Squad Saga: Creating Component Domains
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37821,7 +44044,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.3.5. Create Domain Services Pattern
+##### 1.8.2.3.5. Create Domain Services Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37853,7 +44076,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.5.1. Pattern Description (Create Domain Services Pattern)
+###### 1.8.2.3.5.1. Pattern Description (Create Domain Services Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37885,7 +44108,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)
+###### 1.8.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37917,7 +44140,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.3.5.3. Sysops Squad Saga: Creating Domain Services
+###### 1.8.2.3.5.3. Sysops Squad Saga: Creating Domain Services
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37949,7 +44172,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
   
-#### 1.7.2.4. Pulling Apart Operational Data
+#### 1.8.2.4. Pulling Apart Operational Data
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -37981,7 +44204,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.4.1. Data Decomposition Pattern
+##### 1.8.2.4.1. Data Decomposition Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38013,7 +44236,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.1.1. Data Disintegration
+###### 1.8.2.4.1.1. Data Disintegration
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38045,7 +44268,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.1.2. Data Integrators
+###### 1.8.2.4.1.2. Data Integrators
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38077,7 +44300,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition
+###### 1.8.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38109,7 +44332,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.4.2. Decomposing Monolithic Data
+##### 1.8.2.4.2. Decomposing Monolithic Data
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38141,7 +44364,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.2.1. Step 1: Analyse Database & Create Data Domain
+###### 1.8.2.4.2.1. Step 1: Analyse Database & Create Data Domain
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38173,7 +44396,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.2.2. Step 2: Assign Tables to Data Domains
+###### 1.8.2.4.2.2. Step 2: Assign Tables to Data Domains
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38205,7 +44428,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.2.3. Step 3: Separate Database Connections to Data Domains
+###### 1.8.2.4.2.3. Step 3: Separate Database Connections to Data Domains
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38237,7 +44460,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.2.4. Step 4: Move Schemas to Separate Database Servers
+###### 1.8.2.4.2.4. Step 4: Move Schemas to Separate Database Servers
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38269,7 +44492,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.2.5. Switch Over to Independent Database Servers
+###### 1.8.2.4.2.5. Switch Over to Independent Database Servers
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38301,7 +44524,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.4.3. Selecting a Database Type
+##### 1.8.2.4.3. Selecting a Database Type
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38333,7 +44556,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.1. Relational Databases
+###### 1.8.2.4.3.1. Relational Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38365,7 +44588,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.2. Key-Value Databases
+###### 1.8.2.4.3.2. Key-Value Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38397,7 +44620,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.3. Document Databases
+###### 1.8.2.4.3.3. Document Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38429,7 +44652,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.4. Column Family Databases
+###### 1.8.2.4.3.4. Column Family Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38461,7 +44684,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.5. Graph Databases
+###### 1.8.2.4.3.5. Graph Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38493,7 +44716,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.6. NewSQL Databases
+###### 1.8.2.4.3.6. NewSQL Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38525,7 +44748,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.7. Cloud Native Databases
+###### 1.8.2.4.3.7. Cloud Native Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38557,7 +44780,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.8. Time-Series Databases
+###### 1.8.2.4.3.8. Time-Series Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38589,7 +44812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.4.3.9. Sysops Squad Saga: Polyglot Databases
+###### 1.8.2.4.3.9. Sysops Squad Saga: Polyglot Databases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38621,7 +44844,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.2.5. Service Granularity
+#### 1.8.2.5. Service Granularity
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38653,7 +44876,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.5.1. Granularity Disintegrators
+##### 1.8.2.5.1. Granularity Disintegrators
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38685,7 +44908,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.1. Service Scope & Function
+###### 1.8.2.5.1.1. Service Scope & Function
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38717,7 +44940,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.2. Code Volatility
+###### 1.8.2.5.1.2. Code Volatility
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38749,7 +44972,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.3. Scalability & Throughput
+###### 1.8.2.5.1.3. Scalability & Throughput
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38781,7 +45004,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.4. Fault Tolerance (Service Granularity)
+###### 1.8.2.5.1.4. Fault Tolerance (Service Granularity)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38813,7 +45036,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.5. Security
+###### 1.8.2.5.1.5. Security
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38845,7 +45068,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.1.6. Extensibility
+###### 1.8.2.5.1.6. Extensibility
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38877,7 +45100,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.5.2. Granularity Integrators
+##### 1.8.2.5.2. Granularity Integrators
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38909,7 +45132,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.2.1. Database Transactions
+###### 1.8.2.5.2.1. Database Transactions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38941,7 +45164,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.2.2. Workflow & Choreography
+###### 1.8.2.5.2.2. Workflow & Choreography
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -38973,7 +45196,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.2.3. Shared Code
+###### 1.8.2.5.2.3. Shared Code
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39005,7 +45228,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.2.5.2.4. Data Relationships
+###### 1.8.2.5.2.4. Data Relationships
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39037,7 +45260,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.5.3. Finding the Right Balance
+##### 1.8.2.5.3. Finding the Right Balance
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39069,7 +45292,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity
+##### 1.8.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39101,7 +45324,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.2.5.5. Sysops Squad Saga: Customer Registration Granularity
+##### 1.8.2.5.5. Sysops Squad Saga: Customer Registration Granularity
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39133,7 +45356,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-### 1.7.3. Putting Things Back Together
+### 1.8.3. Putting Things Back Together
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39165,7 +45388,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.1. Reuse Patterns
+#### 1.8.3.1. Reuse Patterns
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39197,7 +45420,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.1.1. Code Replication
+##### 1.8.3.1.1. Code Replication
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39229,7 +45452,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.1.1. When to Use Code Replication
+###### 1.8.3.1.1.1. When to Use Code Replication
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39261,7 +45484,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.1.2. Shared Library
+##### 1.8.3.1.2. Shared Library
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39293,7 +45516,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.2.1. Dependency Management & Change Control
+###### 1.8.3.1.2.1. Dependency Management & Change Control
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39325,7 +45548,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.2.2. Versioning Strategies
+###### 1.8.3.1.2.2. Versioning Strategies
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39357,7 +45580,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.2.3. When To Use Shared Library
+###### 1.8.3.1.2.3. When To Use Shared Library
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39389,7 +45612,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.1.3. Shared Service
+##### 1.8.3.1.3. Shared Service
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39421,7 +45644,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.3.1. Change Risk
+###### 1.8.3.1.3.1. Change Risk
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39453,7 +45676,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.3.2. Performance
+###### 1.8.3.1.3.2. Performance
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39485,7 +45708,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.3.3. Scalability
+###### 1.8.3.1.3.3. Scalability
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39517,7 +45740,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.3.4. Fault Tolerance (Reuse Patterns)
+###### 1.8.3.1.3.4. Fault Tolerance (Reuse Patterns)
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39549,7 +45772,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.3.5. When to Use Shared Service
+###### 1.8.3.1.3.5. When to Use Shared Service
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39581,7 +45804,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.1.4. Sidecars & Service Mesh
+##### 1.8.3.1.4. Sidecars & Service Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39613,7 +45836,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.4.1. When to Use Sidecars & Service Mesh
+###### 1.8.3.1.4.1. When to Use Sidecars & Service Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39645,7 +45868,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic
+###### 1.8.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39677,7 +45900,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.1.5. Code Reuse: When Does It Add Value?
+##### 1.8.3.1.5. Code Reuse: When Does It Add Value?
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39709,7 +45932,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.5.1. Reuse via Platforms
+###### 1.8.3.1.5.1. Reuse via Platforms
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39741,7 +45964,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality
+###### 1.8.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39773,7 +45996,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.2. Data Ownership & Distributed Transactions
+#### 1.8.3.2. Data Ownership & Distributed Transactions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39805,7 +46028,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.1. Assigning Data Ownership
+##### 1.8.3.2.1. Assigning Data Ownership
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39837,7 +46060,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.2. Single Ownership Scenario
+##### 1.8.3.2.2. Single Ownership Scenario
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39869,7 +46092,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.3. Common Ownership Scenario
+##### 1.8.3.2.3. Common Ownership Scenario
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39901,7 +46124,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.4. Joint Ownership Scenario
+##### 1.8.3.2.4. Joint Ownership Scenario
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39933,7 +46156,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.4.1. Table Split Technique
+###### 1.8.3.2.4.1. Table Split Technique
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39965,7 +46188,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.4.2. Data Domain Technique
+###### 1.8.3.2.4.2. Data Domain Technique
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -39997,7 +46220,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.4.3. Delegate Technique
+###### 1.8.3.2.4.3. Delegate Technique
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40029,7 +46252,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.5. Service Consolidation Technique
+##### 1.8.3.2.5. Service Consolidation Technique
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40061,7 +46284,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.6. Data Ownership Summary
+##### 1.8.3.2.6. Data Ownership Summary
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40093,7 +46316,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.7. Distributed Transactions
+##### 1.8.3.2.7. Distributed Transactions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40125,7 +46348,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.8. Eventual Consistency Patterns
+##### 1.8.3.2.8. Eventual Consistency Patterns
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40157,7 +46380,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.8.1. Background Synchronisation Pattern
+###### 1.8.3.2.8.1. Background Synchronisation Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40189,7 +46412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.8.2. Orchestrated Request-Based Pattern
+###### 1.8.3.2.8.2. Orchestrated Request-Based Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40221,7 +46444,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.2.8.3. Event-Based Pattern
+###### 1.8.3.2.8.3. Event-Based Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40253,7 +46476,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing
+##### 1.8.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40285,7 +46508,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.3. Distributed Data Access
+#### 1.8.3.3. Distributed Data Access
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40317,7 +46540,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.3.1. Inter-Service Communication Pattern
+##### 1.8.3.3.1. Inter-Service Communication Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40349,7 +46572,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.3.2. Column Schema Replication Pattern
+##### 1.8.3.3.2. Column Schema Replication Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40381,7 +46604,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.3.3. Replicated Caching Pattern
+##### 1.8.3.3.3. Replicated Caching Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40413,7 +46636,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.3.4. Data Domain Pattern
+##### 1.8.3.3.4. Data Domain Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40445,7 +46668,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment
+##### 1.8.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40477,7 +46700,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.4. Managing Distributed Workflows
+#### 1.8.3.4. Managing Distributed Workflows
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40509,7 +46732,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.4.1. Orchestration Communication Style
+##### 1.8.3.4.1. Orchestration Communication Style
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40541,7 +46764,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.4.2. Choreography Communication Style
+##### 1.8.3.4.2. Choreography Communication Style
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40573,7 +46796,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.4.2.1. Workflow State Management
+###### 1.8.3.4.2.1. Workflow State Management
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40605,7 +46828,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.4.3. Trade-Off Between Orchestration and Choreography
+##### 1.8.3.4.3. Trade-Off Between Orchestration and Choreography
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40637,7 +46860,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.4.3.1. State Owner & Coupling
+###### 1.8.3.4.3.1. State Owner & Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40669,7 +46892,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.4.4. Sysops Squad Saga: Managing Workflows
+##### 1.8.3.4.4. Sysops Squad Saga: Managing Workflows
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40701,7 +46924,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.5. Transactional Sagas
+#### 1.8.3.5. Transactional Sagas
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40733,7 +46956,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.5.1. Transactional Saga Patterns
+##### 1.8.3.5.1. Transactional Saga Patterns
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40765,7 +46988,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.1. Epic Saga Pattern
+###### 1.8.3.5.1.1. Epic Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40797,7 +47020,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.2. Phone Tag Pattern
+###### 1.8.3.5.1.2. Phone Tag Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40829,7 +47052,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.3. Fairy Tale Saga Pattern
+###### 1.8.3.5.1.3. Fairy Tale Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40861,7 +47084,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.4. Time Travel Saga Pattern
+###### 1.8.3.5.1.4. Time Travel Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40893,7 +47116,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.5. Fantasy Fiction Saga Pattern
+###### 1.8.3.5.1.5. Fantasy Fiction Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40925,7 +47148,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.6. Horror Story Pattern
+###### 1.8.3.5.1.6. Horror Story Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40957,7 +47180,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.7. Parallel Saga Pattern
+###### 1.8.3.5.1.7. Parallel Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -40989,7 +47212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.1.8. Anthology Saga Pattern
+###### 1.8.3.5.1.8. Anthology Saga Pattern
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41021,7 +47244,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.5.2. State Management & Eventual Consistency
+##### 1.8.3.5.2. State Management & Eventual Consistency
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41053,7 +47276,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.5.2.1. Saga State Machines
+###### 1.8.3.5.2.1. Saga State Machines
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41085,7 +47308,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.5.3. Techniques for Managing Sagas
+##### 1.8.3.5.3. Techniques for Managing Sagas
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41117,7 +47340,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.5.4. Sysops Squad Saga: Atomic Transactions & Compensating Updates
+##### 1.8.3.5.4. Sysops Squad Saga: Atomic Transactions & Compensating Updates
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41149,7 +47372,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.6. Contracts
+#### 1.8.3.6. Contracts
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41181,7 +47404,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.6.1. Contracts Versus Loose Contracts
+##### 1.8.3.6.1. Contracts Versus Loose Contracts
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41213,7 +47436,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.6.1.1. Trade-Offs Between Strict & Loose Contracts
+###### 1.8.3.6.1.1. Trade-Offs Between Strict & Loose Contracts
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41245,7 +47468,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.6.1.2. Contracts in Microservices
+###### 1.8.3.6.1.2. Contracts in Microservices
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41277,7 +47500,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.6.2. Stamp Coupling
+##### 1.8.3.6.2. Stamp Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41309,7 +47532,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.6.2.1. Over-Coupling via Stamp Coupling
+###### 1.8.3.6.2.1. Over-Coupling via Stamp Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41341,7 +47564,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.6.2.2. Bandwidth
+###### 1.8.3.6.2.2. Bandwidth
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41373,7 +47596,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.6.2.3. Stamp Coupling for Workflow Management
+###### 1.8.3.6.2.3. Stamp Coupling for Workflow Management
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41405,7 +47628,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts
+##### 1.8.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41437,7 +47660,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.7. Managing Analytical Data
+#### 1.8.3.7. Managing Analytical Data
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41469,7 +47692,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.7.1. Previous Approaches
+##### 1.8.3.7.1. Previous Approaches
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41501,7 +47724,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.1.1. The Data Warehouse
+###### 1.8.3.7.1.1. The Data Warehouse
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41533,7 +47756,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.1.2. The Data Lake
+###### 1.8.3.7.1.2. The Data Lake
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41565,7 +47788,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.7.2. The Data Mesh
+##### 1.8.3.7.2. The Data Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41597,7 +47820,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.2.1. Definition of Data Mesh
+###### 1.8.3.7.2.1. Definition of Data Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41629,7 +47852,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.2.2. Data Product Quantum
+###### 1.8.3.7.2.2. Data Product Quantum
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41661,7 +47884,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.2.3. Data Mesh, Coupling, & Architecture Quantum
+###### 1.8.3.7.2.3. Data Mesh, Coupling, & Architecture Quantum
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41693,7 +47916,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.7.2.4. When to Use Data Mesh
+###### 1.8.3.7.2.4. When to Use Data Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41725,7 +47948,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.7.3. Sysops Squad Saga: Data Mesh
+##### 1.8.3.7.3. Sysops Squad Saga: Data Mesh
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41757,7 +47980,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-#### 1.7.3.8. Build Your Own Trade-Off Analysis
+#### 1.8.3.8. Build Your Own Trade-Off Analysis
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41789,7 +48012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.8.1. Finding Entangled Dimensions
+##### 1.8.3.8.1. Finding Entangled Dimensions
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41821,7 +48044,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.1.1. Coupling
+###### 1.8.3.8.1.1. Coupling
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41853,7 +48076,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.1.2. Analyse Coupling Points
+###### 1.8.3.8.1.2. Analyse Coupling Points
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41885,7 +48108,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.1.3. Assess Trade-Offs
+###### 1.8.3.8.1.3. Assess Trade-Offs
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41917,7 +48140,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.8.2. Trade-Off Techniques
+##### 1.8.3.8.2. Trade-Off Techniques
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41949,7 +48172,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.1. Qualitative Versus Quantitative Analysis
+###### 1.8.3.8.2.1. Qualitative Versus Quantitative Analysis
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -41981,7 +48204,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.2. MECE Lists
+###### 1.8.3.8.2.2. MECE Lists
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42013,7 +48236,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.3. The "Out-Of-Context" Trap
+###### 1.8.3.8.2.3. The "Out-Of-Context" Trap
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42045,7 +48268,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.4. Model-Relevant Domain Cases
+###### 1.8.3.8.2.4. Model-Relevant Domain Cases
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42077,7 +48300,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence
+###### 1.8.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42109,7 +48332,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-###### 1.7.3.8.2.6. Avoiding Snake Oil & Evangelism
+###### 1.8.3.8.2.6. Avoiding Snake Oil & Evangelism
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42141,7 +48364,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
 
-##### 1.7.3.8.3. Sysops Squad Saga: Epilogue
+##### 1.8.3.8.3. Sysops Squad Saga: Epilogue
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -42175,7 +48398,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.8. The Art of Readable Code
+## 1.9. The Art of Readable Code
 
 <details open>
 
@@ -42183,13 +48406,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.9. The Clean Coder
+## 1.10. The Clean Coder
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.9.1. Prerequisite Introduction
+### 1.10.1. The Clean Coder Introduction
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42239,7 +48462,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.2. Professionalism
+### 1.10.2. Professionalism
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42289,7 +48512,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.2.1. Be Careful What You Ask For
+#### 1.10.2.1. Be Careful What You Ask For
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42339,7 +48562,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.2.2. Taking Responsibility
+#### 1.10.2.2. Taking Responsibility
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42389,7 +48612,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.2.3. First, Do No Harm
+#### 1.10.2.3. First, Do No Harm
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42439,7 +48662,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.2.4. Work Ethic
+#### 1.10.2.4. Work Ethic
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42489,7 +48712,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.2.5. Bibliography
+#### 1.10.2.5. Bibliography
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42539,7 +48762,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.3. Saying No
+### 1.10.3. Saying No
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42589,7 +48812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.3.1. Adversarial Roles
+#### 1.10.3.1. Adversarial Roles
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42639,7 +48862,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.3.2. High Stakes
+#### 1.10.3.2. High Stakes
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42689,7 +48912,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.3.3. Being a "Team Player"
+#### 1.10.3.3. Being a "Team Player"
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42739,7 +48962,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.3.4. The Cost of Saying Yes
+#### 1.10.3.4. The Cost of Saying Yes
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42789,7 +49012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.3.5. Code Impossible
+#### 1.10.3.5. Code Impossible
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42839,7 +49062,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.4. Saying Yes
+### 1.10.4. Saying Yes
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42889,7 +49112,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.4.1. A Language of Commitment
+#### 1.10.4.1. A Language of Commitment
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42939,7 +49162,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.4.2. Learning How to Say "Yes"
+#### 1.10.4.2. Learning How to Say "Yes"
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -42989,7 +49212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.5. Coding
+### 1.10.5. Coding
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43039,7 +49262,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.1. Preparedness
+#### 1.10.5.1. Preparedness
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43089,7 +49312,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.2. The Flow Zone
+#### 1.10.5.2. The Flow Zone
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43139,7 +49362,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.3. Writer's Block
+#### 1.10.5.3. Writer's Block
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43189,7 +49412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.4. Debugging
+#### 1.10.5.4. Debugging
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43239,7 +49462,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.5. Being Yourself
+#### 1.10.5.5. Being Yourself
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43289,7 +49512,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.6. Being Late
+#### 1.10.5.6. Being Late
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43339,7 +49562,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.5.7. Help
+#### 1.10.5.7. Help
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43389,7 +49612,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.6. Test-Driven Development
+### 1.10.6. Test-Driven Development
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43439,7 +49662,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.6.1. The Jury Is In
+#### 1.10.6.1. The Jury Is In
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43489,7 +49712,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.6.2. The Three Laws of TDD
+#### 1.10.6.2. The Three Laws of TDD
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43539,7 +49762,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.6.3. What TDD Is Not
+#### 1.10.6.3. What TDD Is Not
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43589,7 +49812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.7. Practising
+### 1.10.7. Practising
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43639,7 +49862,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.7.1. Some Background on Practising
+#### 1.10.7.1. Some Background on Practising
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43689,7 +49912,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.7.2. The Coding Dojo
+#### 1.10.7.2. The Coding Dojo
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43739,7 +49962,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.7.3. Broadening Your Experience
+#### 1.10.7.3. Broadening Your Experience
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43789,7 +50012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.8. Acceptance Testing
+### 1.10.8. Acceptance Testing
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43839,7 +50062,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.8.1. Communicating Requirements
+#### 1.10.8.1. Communicating Requirements
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43889,7 +50112,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.8.2. Acceptance Tests
+#### 1.10.8.2. Acceptance Tests
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43939,7 +50162,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.9. Testing Strategies
+### 1.10.9. Testing Strategies
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -43989,7 +50212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.9.1. QA Should Find Nothing
+#### 1.10.9.1. QA Should Find Nothing
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44039,7 +50262,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.9.2. The Test Automation Pyramid
+#### 1.10.9.2. The Test Automation Pyramid
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44089,7 +50312,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.10. Time Management
+### 1.10.10. Time Management
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44139,7 +50362,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.1. Meetings
+#### 1.10.10.1. Meetings
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44189,7 +50412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.2. Focus-Manna
+#### 1.10.10.2. Focus-Manna
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44239,7 +50462,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.3. Time Boxing & Tomatoes
+#### 1.10.10.3. Time Boxing & Tomatoes
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44289,7 +50512,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.4. Avoidance
+#### 1.10.10.4. Avoidance
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44339,7 +50562,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.5. Blind Alleys
+#### 1.10.10.5. Blind Alleys
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44389,7 +50612,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.10.6. Marshes, Bogs, Swaps, & Other Messes
+#### 1.10.10.6. Marshes, Bogs, Swaps, & Other Messes
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44439,7 +50662,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.11. Estimation
+### 1.10.11. Estimation
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44489,7 +50712,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.11.1. What Is an Estimate?
+#### 1.10.11.1. What Is an Estimate?
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44539,7 +50762,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.11.2. PERT
+#### 1.10.11.2. PERT
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44589,7 +50812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.11.3. Estimating Tasks
+#### 1.10.11.3. Estimating Tasks
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44639,7 +50862,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.11.4. The Law of Large Numbers
+#### 1.10.11.4. The Law of Large Numbers
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44689,7 +50912,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.12. Pressure
+### 1.10.12. Pressure
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44739,7 +50962,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.12.1. Avoiding Pressure
+#### 1.10.12.1. Avoiding Pressure
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44789,7 +51012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.12.2. Handling Pressure
+#### 1.10.12.2. Handling Pressure
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44839,7 +51062,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.13. Collaboration
+### 1.10.13. Collaboration
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44889,7 +51112,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.13.1. Programmers versus People
+#### 1.10.13.1. Programmers versus People
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44939,7 +51162,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.13.2. Cerebellums
+#### 1.10.13.2. Cerebellums
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -44989,7 +51212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.14. Teams & Projects
+### 1.10.14. Teams & Projects
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45039,7 +51262,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.14.1. Does It Blend?
+#### 1.10.14.1. Does It Blend?
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45089,7 +51312,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.15. Mentoring, Apprenticeship, & Craftsmanship
+### 1.10.15. Mentoring, Apprenticeship, & Craftsmanship
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45139,7 +51362,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.15.1. Degrees of Failure
+#### 1.10.15.1. Degrees of Failure
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45189,7 +51412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.15.2. Mentoring
+#### 1.10.15.2. Mentoring
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45239,7 +51462,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.15.3. Apprenticeship
+#### 1.10.15.3. Apprenticeship
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45289,7 +51512,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.15.4. Craftsmanship
+#### 1.10.15.4. Craftsmanship
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45339,7 +51562,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-### 1.9.16. Tooling
+### 1.10.16. Tooling
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45389,7 +51612,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.1. Tools
+#### 1.10.16.1. Tools
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45439,7 +51662,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.2. Source Code Control
+#### 1.10.16.2. Source Code Control
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45489,7 +51712,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.3. IDE/Editor
+#### 1.10.16.3. IDE/Editor
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45539,7 +51762,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.4. Issue Tracking
+#### 1.10.16.4. Issue Tracking
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45589,7 +51812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.5. Continuous Building
+#### 1.10.16.5. Continuous Building
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45639,7 +51862,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.6. Unit Testing Tools
+#### 1.10.16.6. Unit Testing Tools
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45689,7 +51912,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.7. Component Testing Tools
+#### 1.10.16.7. Component Testing Tools
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45739,7 +51962,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.8. Integration Testing Tools
+#### 1.10.16.8. Integration Testing Tools
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45789,7 +52012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
     oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
 
-#### 1.9.16.9. UML/MDA
+#### 1.10.16.9. UML/MDA
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -45841,15 +52064,15 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.10. The Pragmatic Programmer
+## 1.11. The Pragmatic Programmer
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.10.1. Preface to the Second Edition
+### 1.11.1. Preface to the Second Edition
 
-#### 1.10.1.1. How the Book is Organised
+#### 1.11.1.1. How the Book is Organised
 
 - The book is written as a collection of short topics. Each topic is self-contained and addresses a particular theme.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -45860,52 +52083,52 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-  - [Tip 1: Care About Your Craft](#110221-tip-1-care-about-your-craft)
+  - [Tip 1: Care About Your Craft](#111221-tip-1-care-about-your-craft)
 
-  - [Tip 2: Think! About Your Work](#110222-tip-2-think-about-your-work)
+  - [Tip 2: Think! About Your Work](#111222-tip-2-think-about-your-work)
 
-  - [Tip 3: You Have Agency](#110311-tip-3-you-have-agency)
+  - [Tip 3: You Have Agency](#111311-tip-3-you-have-agency)
 
-  - [Tip 4: Provide Options, Don't Make Lame Excuses](#110323-tip-4-provide-options-dont-make-lame-excuses)
+  - [Tip 4: Provide Options, Don't Make Lame Excuses](#111323-tip-4-provide-options-dont-make-lame-excuses)
 
-  - [Tip 5: Don't Live with Broken Windows](#110331-tip-5-dont-live-with-broken-windows)
+  - [Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
 
-  - [Tip 5: Don't Live with Broken Windows](#110331-tip-5-dont-live-with-broken-windows)
+  - [Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
 
-  - [Tip 7: Remember the Big Picture](#110351-tip-7-remember-the-big-picture)
+  - [Tip 7: Remember the Big Picture](#111351-tip-7-remember-the-big-picture)
 
-  - [Tip 8: Make Quality a Requirements Issue](#110362-tip-8-make-quality-a-requirements-issue)
+  - [Tip 8: Make Quality a Requirements Issue](#111362-tip-8-make-quality-a-requirements-issue)
 
-  - [Tip 9: Invest Regularly in Your Knowledge Portfolio](#110372-tip-9-invest-regularly-in-your-knowledge-portfolio)
+  - [Tip 9: Invest Regularly in Your Knowledge Portfolio](#111372-tip-9-invest-regularly-in-your-knowledge-portfolio)
 
-  - [Tip 10: Critically Analyse What You Read \& Hear](#110375-tip-10-critically-analyse-what-you-read--hear)
+  - [Tip 10: Critically Analyse What You Read \& Hear](#111375-tip-10-critically-analyse-what-you-read--hear)
 
-  - [Tip 11: English is Just Another Language](#110381-tip-11-english-is-just-another-language)
+  - [Tip 11: English is Just Another Language](#111381-tip-11-english-is-just-another-language)
 
   - [Tip 12: It's Both What You Say and the Way You Say It](
-      #1103810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
+      #1113810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
 
-  - [Tip 13: Build Documentation In, Don't Bolt It On](#1103812-tip-13-build-documentation-in-dont-bolt-it-on)
+  - [Tip 13: Build Documentation In, Don't Bolt It On](#1113812-tip-13-build-documentation-in-dont-bolt-it-on)
 
   - [Tip 14: Good Design is Easier to Change Than Bad Design](
-      #110411-tip-14-good-design-is-easier-to-change-than-bad-design)
+      #111411-tip-14-good-design-is-easier-to-change-than-bad-design)
 
-  - [Tip 15: DRY - Don't Repeat Yourself](#110421-tip-15-dry---dont-repeat-yourself)
+  - [Tip 15: DRY - Don't Repeat Yourself](#111421-tip-15-dry---dont-repeat-yourself)
 
-  - [Tip 16: Make It Easy to Rescue](#110427-tip-16-make-it-easy-to-rescue)
+  - [Tip 16: Make It Easy to Rescue](#111427-tip-16-make-it-easy-to-rescue)
 
-  - [Tip 17: Eliminate Effects Between Things](#110433-tip-17-eliminate-effects-between-things)
+  - [Tip 17: Eliminate Effects Between Things](#111433-tip-17-eliminate-effects-between-things)
 
-  - [Tip 18: There Are No Final Decisions](#110441-tip-18-there-are-no-final-decisions)
+  - [Tip 18: There Are No Final Decisions](#111441-tip-18-there-are-no-final-decisions)
 
-  - [Tip 19: Forego Following Fads](#110442-tip-19-forego-following-fads)
+  - [Tip 19: Forego Following Fads](#111442-tip-19-forego-following-fads)
 
 - Exercises and challenges have been added where appropriate. Exercises normally have straightforward answers, while
   the challenges are more open-ended.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.1.2. What's In a Name?
+#### 1.11.1.2. What's In a Name?
 
 - The first time jargon is used in the book, it is usually defined, or at least a hint is given to its meaning.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -45916,7 +52139,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.2. From the Preface to the First Edition
+### 1.11.2. From the Preface to the First Edition
 
 - Programming is a craft. At its simplest, it comes down to getting a computer to do what you want it to do (or what
   the user wants it to do). As a programmer, you are part listener, part adviser, part interpreter, and part dictator
@@ -45945,7 +52168,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.2.1. Who Should Read This Book?
+#### 1.11.2.1. Who Should Read This Book?
 
 - The book is aimed at people who want to become more effective and more productive programmers. Perhaps you feel
   frustrated you don't seem to be achieving your potential. Perhaps you look at colleagues who seem to be using tools
@@ -45954,7 +52177,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.2.2. What Makes a Pragmatic Programmer?
+#### 1.11.2.2. What Makes a Pragmatic Programmer?
 
 - Each developer is unique, with individual strengths and weaknesses, preferences and dislikes. Over time, each will
   craft their own personal environment, reflecting the developer's individuality.
@@ -46000,13 +52223,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
         the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.2.2.1. Tip 1: Care About Your Craft
+##### 1.11.2.2.1. Tip 1: Care About Your Craft
 
 - There is no point in developing software unless you care about doing it well.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.2.2.2. Tip 2: Think! About Your Work
+##### 1.11.2.2.2. Tip 2: Think! About Your Work
 
 - Think about what you're doing while you're doing it. An ongoing critical appraisal of every decision you make, every
   day, and on every project is required to truly make a difference to you and your organisation. Never run on
@@ -46014,22 +52237,22 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.2.3. Individual Pragmatists, Large Teams
+#### 1.11.2.3. Individual Pragmatists, Large Teams
 
 - Within the overall structure of a project, there is always room for individuality and craftsmanship. This is
   particularly true given the state of software engineering.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.2.4. It's a Continuous Process
+#### 1.11.2.4. It's a Continuous Process
 
 - Every day, work to refine the skills you have and to add new tools to your repertoire.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.3. A Pragmatic Philosophy
+### 1.11.3. A Pragmatic Philosophy
 
-#### 1.10.3.1. It's Your Life
+#### 1.11.3.1. It's Your Life
 
 - Software development must appear close to the top of any list of carers where you have control. Our skills are in
   demand, our knowledge crosses geographic boundaries, we can work remotely. We're paid well. We really can do just
@@ -46042,7 +52265,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.1.1. Tip 3: You Have Agency
+##### 1.11.3.1.1. Tip 3: You Have Agency
 
 - If technology seems to be passing you by, make time (in your own time) to study new material that looks interesting.
   You're investing in yourself, so doing it while you're off the clock is only reasonable.
@@ -46053,7 +52276,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.2. The Cat Ate My Source Code
+#### 1.11.3.2. The Cat Ate My Source Code
 
 - Pragmatic Programmers take charge of their own career, and aren't afraid to admit ignorance or error. These things
   happen, and we try to deal with them as professionally as we can. This means being honest and direct. We can be proud
@@ -46061,7 +52284,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.2.1. Team Trust
+##### 1.11.3.2.1. Team Trust
 
 - Above all, your team needs to be able to trust and rely on you - and you need to be comfortable relying on each of
   them as well.
@@ -46073,7 +52296,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.2.2. Take Responsibility
+##### 1.11.3.2.2. Take Responsibility
 
 - Responsibility is something you actively agree to. You make a commitment to ensure everything is done right, but you
   don't necessarily have direct control over every aspect of it.
@@ -46096,7 +52319,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses
+##### 1.11.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses
 
 - Before you approach anyone to tell them why something can't be done, is late, or is broken, stop and listen to
   yourself. Instead of excuses, provide options. Don't say it can't be done: explain what can be done to salvage the
@@ -46109,7 +52332,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.2.4. Challenges (Take Responsibility)
+##### 1.11.3.2.4. Challenges (Take Responsibility)
 
 - How do you react when someone comes to you with a lame excuse? What do you think of them and their organisation as a
   result?
@@ -46121,7 +52344,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.3. Software Entropy
+#### 1.11.3.3. Software Entropy
 
 - Entropy is a term from physics that refers to the amount of "disorder" in a system.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46136,7 +52359,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.3.1. Tip 5: Don't Live with Broken Windows
+##### 1.11.3.3.1. Tip 5: Don't Live with Broken Windows
 
 - Don't leave "broken windows" - bad designs, wrong decisions, or poor code - unrepaired. Fix each one as soon as it is
   discovered. If there is an insufficient time to fix it properly, then provide a temporary fix. Take some action to
@@ -46153,7 +52376,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.3.2. First, Do No Harm
+##### 1.11.3.3.2. First, Do No Harm
 
 - One "broken window" - a badly designed piece of code, a poor management decision that the team must live with for the
   duration of the project - is all it takes to start the decline.
@@ -46171,7 +52394,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.3.3. Challenges (Software Entropy)
+##### 1.11.3.3.3. Challenges (Software Entropy)
 
 - Help strengthen your team be surveying your project "neighbourhood". Choose two or three "broken windows" and discuss
   the problems - and their possible solution - with your colleagues.
@@ -46183,7 +52406,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.4. Stone Soup & Boiled Frogs
+#### 1.11.3.4. Stone Soup & Boiled Frogs
 
 - You may be in a situation where you know exactly what needs doing and how to do it. Ask permission to tackle the
   whole thing and you'll be met with delays and blank stares. People will form committees, budgets will need approval,
@@ -46197,13 +52420,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.4.1. Tip 6 Be a Catalyst for Change
+##### 1.11.3.4.1. Tip 6 Be a Catalyst for Change
 
 - You can't force change on people. Instead, show them how the future might be and help them participate in creating it.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.5. The Villager's Side
+#### 1.11.3.5. The Villager's Side
 
 - Projects slowly and inexorably get totally out of hand. Most software disasters start out too small to notice, and
   most project overruns happen a day at a time. It's often the accumulation of small things that breaks morale and
@@ -46211,17 +52434,17 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.5.1. Tip 7: Remember the Big Picture
+##### 1.11.3.5.1. Tip 7: Remember the Big Picture
 
 - Don't get so engrossed on the details that you forget to check what's happening around you. Keep an eye on the big
   picture. Constantly review what's happening around you, not just what you personally are doing.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.5.2. Challenges (The Villager's Side)
+##### 1.11.3.5.2. Challenges (The Villager's Side)
 
 - By progressively deceiving your organisation (as outlined in the
-  [1.10.3.4. Stone Soup & Boiled Frogs](#11034-stone-soup--boiled-frogs) section), you're doing it harm. Can you
+  [1.10.3.4. Stone Soup & Boiled Frogs](#11134-stone-soup--boiled-frogs) section), you're doing it harm. Can you
   determine whether you're making the necessary changes for the right reasons or causing unnecessary scope creep? Is
   the decision subjective or objective?
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46232,7 +52455,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.6. Good Enough Software
+#### 1.11.3.6. Good Enough Software
 
 - The phrase "good enough" does not imply sloppy or poorly produced code. All systems must meet their users'
   requirements to be successful, and meet basic performance, privacy, and security standards. Users should be given the
@@ -46240,7 +52463,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.6.1. Involve Your Users in the Trade Off
+##### 1.11.3.6.1. Involve Your Users in the Trade Off
 
 - Normally software is written for other people. What is required is often asked, but how good it is wanted is rarely
   considered. Sometime there will be no choice.
@@ -46251,7 +52474,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.6.2. Tip 8: Make Quality a Requirements Issue
+##### 1.11.3.6.2. Tip 8: Make Quality a Requirements Issue
 
 - Many customers would rather use software with some rough edges today than wait a year for a pristine version,
   especially considering their requirements are likely to change during that year. If you give your users something to
@@ -46259,14 +52482,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.6.3. Know When to Stop
+##### 1.11.3.6.3. Know When to Stop
 
 - Don't spoil a perfectly good program by over-embellishment and over-refinement. Move on, and let your code stand in
   its own right for a while. It may not be perfect, but don't worry, it could never be perfect.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.6.4. Challenges (Good Enough Software)
+##### 1.11.3.6.4. Challenges (Good Enough Software)
 
 - Look at the software tools and operating systems that you use regularly. Can you find any evidence that these
   organisations and/or developers are comfortable shipping software they know is not perfect?
@@ -46285,7 +52508,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.7. Your Knowledge Portfolio
+#### 1.11.3.7. Your Knowledge Portfolio
 
 - Your knowledge and experience are your most important day-to-day professional assets. Unfortunately, they're expiring
   assets. Your knowledge becomes out of date as new techniques, and environments are developed. As the value of your
@@ -46324,7 +52547,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.1. Building Your Portfolio
+##### 1.11.3.7.1. Building Your Portfolio
 
 - **Invest Regularly**:
 
@@ -46361,7 +52584,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio
+##### 1.11.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio
 
 - Aspire to the following goals:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46420,7 +52643,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.3. Opportunities for Learning
+##### 1.11.3.7.3. Opportunities for Learning
 
 - If someone asks you a question that you can't answer, take it as a personal challenge to find the answer.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46431,7 +52654,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.4. Critical Thinking
+##### 1.11.3.7.4. Critical Thinking
 
 - You need to ensure the knowledge in your portfolio is accurate and unswayed by either vendor or media hype. Beware of
   the zealots who insist their dogma provides the only answer - it may or may not applicable to you and your project.
@@ -46443,7 +52666,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.5. Tip 10: Critically Analyse What You Read & Hear
+##### 1.11.3.7.5. Tip 10: Critically Analyse What You Read & Hear
 
 - Critical thinking is an entire discipline unto itself. Read and study all you can about it. The following are a few
   questions to ask and think about every time you work on something in future:
@@ -46490,7 +52713,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.7.6. Challenges (Your Knowledge Portfolio)
+##### 1.11.3.7.6. Challenges (Your Knowledge Portfolio)
 
 - Start learning a new language this week.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46506,7 +52729,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.3.8. Communicate
+#### 1.11.3.8. Communicate
 
 - A good idea is an orphan without effective communication.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46517,14 +52740,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.1. Tip 11: English is Just Another Language
+##### 1.11.3.8.1. Tip 11: English is Just Another Language
 
 - Treat your native tongue as just another programming language. Write natural language as you would code: honour the
   DRY (Don't Repeat Yourself) principle, the ETC (Easier to Change) principle, automation, etc.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.2. Know Your Audience
+##### 1.11.3.8.2. Know Your Audience
 
 - You're communicating only if you're conveying what you mean to convey - just talking isn't enough. To do that, you
   need to understand the needs, interests, and capabilities of your audience.
@@ -46539,7 +52762,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.3. Know What You Want to Say
+##### 1.11.3.8.3. Know What You Want to Say
 
 - Plan what you want to say. Write an outline. Then ask yourself. "Does this communicate what I want to express to my
   audience in a way that works for them?" If not, refine it until it does.
@@ -46551,7 +52774,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.4. Choose Your Moment
+##### 1.11.3.8.4. Choose Your Moment
 
 - As part of understanding what your audience needs to hear, you need to work out what their priorities are. Make sure
   what you're saying is relevant in time, as well as in content. Sometime, all it takes is a simple question "Is this a
@@ -46559,7 +52782,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.5. Choose a Style
+##### 1.11.3.8.5. Choose a Style
 
 - Adjust the style of your delivery to suit your audience. Determine the style of your delivery based on what they are
   likely to expect or appreciate, or what they've explicitly said they want.
@@ -46571,7 +52794,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.6. Make it Look Good
+##### 1.11.3.8.6. Make it Look Good
 
 - Your ideas are important. They ought to look good to convey them to your audience.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46583,7 +52806,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.7. Involve Your Audience
+##### 1.11.3.8.7. Involve Your Audience
 
 - The documents we produce can often end up being less important than the process we go through to produce them. If
   possible, provide readers with early drafts of your document. Get their feedback, and pick their brains. You'll
@@ -46591,7 +52814,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.8. Be a Listener
+##### 1.11.3.8.8. Be a Listener
 
 - Listen to people if you want people to listen to you.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46602,21 +52825,21 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.9. Get Back to People
+##### 1.11.3.8.9. Get Back to People
 
 - Always respond to people, even if the response is simple "I'll get back to you later." Keeping people informed makes
   them far more forgiving of the occasional slip, and them feel like you haven't forgotten them.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.10. Tip 12: It's Both What You Say and the Way You Say It
+##### 1.11.3.8.10. Tip 12: It's Both What You Say and the Way You Say It
 
 - Unless you work in a vacuum, you need to be able to communicate. The more effective that communication, the more
   influential you become.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.11. Communication Through Documentation
+##### 1.11.3.8.11. Communication Through Documentation
 
 - Typically, developers don't give much though to documentation. At best, it is an unfortunate necessity. At work, it
   is treated as a low-priority task that will hopefully be forgotten.
@@ -46628,7 +52851,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On
+##### 1.11.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On
 
 - It's easy to produce good-looking documentation from the comment in source code. Restrict non-API commenting to
   discussing why something is done, it's purpose and goal. The code already shows how it is done, so commenting on this
@@ -46636,7 +52859,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.3.8.13. Challenges (Communicate)
+##### 1.11.3.8.13. Challenges (Communicate)
 
 - Make a point to read some of the many good books on communications between teams.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46647,7 +52870,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.4. A Pragmatic Approach
+### 1.11.4. A Pragmatic Approach
 
 - There are certain tips and tricks that apply at all levels of software development, processes that are virtually
   universal, and ideas that are almost axiomatic. However, these approaches are rarely documented; you'll mostly find
@@ -46655,14 +52878,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.1. The Essence of Good Design
+#### 1.11.4.1. The Essence of Good Design
 
 - The world is full of gurus and pundits, all eager to share their hard-earned wisdom when it comes to How to Design
   Software.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design
+##### 1.11.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design
 
 - A thing is well-designed if it adapts to the people who use it. For code, that means it must adapt by changing.
   Therefore, that means the ETC (Easier to Change) principle is required.
@@ -46674,7 +52897,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.1.2. ETC is a Value, Not a Rule
+##### 1.11.4.1.2. ETC is a Value, Not a Rule
 
 - Values are things that help you make decisions. When it comes to software, ETC is a guide, helping you choose between
   paths.
@@ -46701,7 +52924,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.1.3. Challenges (The Essence of Good Design)
+##### 1.11.4.1.3. Challenges (The Essence of Good Design)
 
 - Consider if a design principle you use regularly makes things easy to change.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46721,7 +52944,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.2. DRY - The Evils of Duplication
+#### 1.11.4.2. DRY - The Evils of Duplication
 
 - As programmers, we collect, organise, maintain, and harness knowledge. We document knowledge in specifications, we
   make it come alive in running code, and we use it to provide the checks needed during testing.
@@ -46751,21 +52974,21 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.1. Tip 15: DRY - Don't Repeat Yourself
+##### 1.11.4.2.1. Tip 15: DRY - Don't Repeat Yourself
 
 - If the same thing is expressed in multiple places, and you have to make an update, it isn't a question of whether
   you'll remember to remember every instance, it's a question of when you'll forget.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.2. DRY is More Than Code
+##### 1.11.4.2.2. DRY is More Than Code
 
 - DRY is about the duplication of knowledge, or intent. It's about expressing the same thing in two difference places,
   possibly in two totally different ways.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.3. Duplication in Code
+##### 1.11.4.2.3. Duplication in Code
 
 - Here's an example of code duplication:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46791,7 +53014,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     end
   ```
 
-###### 1.10.4.2.3.1. Not All Code Duplication is Knowledge Duplication
+###### 1.11.4.2.3.1. Not All Code Duplication is Knowledge Duplication
 
 - The following is not an example of a duplication, as although the code is the same, the knowledge they represent is
   different. The two functions in the example validate two separate things, but just happen to have the same rules.
@@ -46809,14 +53032,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     validate_min_integer(value, 0)
   ```
 
-##### 1.10.4.2.4. Duplication in Documentation
+##### 1.11.4.2.4. Duplication in Documentation
 
 - A comment that explains the functionality in source code is unnecessary duplication. It is almost certain that the
   comment and the code will be inconsistent with each other.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.2.4.1. DRY Violations in Data
+###### 1.11.4.2.4.1. DRY Violations in Data
 
 - The following data structure represents knowledge, but it can fall afoul of the DRY principle:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46907,7 +53130,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.5. Representational Duplication
+##### 1.11.4.2.5. Representational Duplication
 
 - Your code interfaces to the outside world. Each time the code externally, you introduce some kind of DRY violation:
   your code has to have knowledge that is also present in that external client. It needs to know the API, or the
@@ -46916,14 +53139,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.2.5.1. Duplication Across Internal APIs
+###### 1.11.4.2.5.1. Duplication Across Internal APIs
 
 - Look for tools that let you specify the API in some kind of neutral format. These tools will typically generate
   documentation, mock APIs, functional tests, and API clients.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.2.5.2. Duplication Across External APIs
+###### 1.11.4.2.5.2. Duplication Across External APIs
 
 - Public APIs are typically documented formally using something like OpenAPI. This allows you to import the API
   specification into your local API tools and integrate more reliably with the service. Consider creating and
@@ -46931,14 +53154,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.2.5.3. Duplication within Data Sources
+###### 1.11.4.2.5.3. Duplication within Data Sources
 
 - Rather than manually creating the code to contain stored data, you can generate the contains from the schema. Many
   persistence frameworks will do the heavy lifting for you.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.6. Interdeveloper Duplication
+##### 1.11.4.2.6. Interdeveloper Duplication
 
 - This is perhaps the hardest type of duplication to detect, handle, and mitigate.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -46964,14 +53187,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.2.7. Tip 16: Make It Easy to Rescue
+##### 1.11.4.2.7. Tip 16: Make It Easy to Rescue
 
 - You are aiming to foster an environment where it's easier to find and reuse existing stuff than to write it yourself.
   If it isn't easy, people won't do it. If you fail to reuse, you risk duplicating knowledge.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.3. Orthogonality
+#### 1.11.4.3. Orthogonality
 
 - Orthogonality is a critical concept if you want to produce systems that are easy to design, test, and extend.
   Unfortunately, the concept of orthogonality is rarely taught directly, it is often a an implicit feature of various
@@ -46979,7 +53202,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.1. What is Orthogonality?
+##### 1.11.4.3.1. What is Orthogonality?
 
 - "Orthogonality" is a term borrowed from geometry. Two lines are orthogonal if they meet at right angles. As one line
   moves along the `x` axis, it doesn't change its `y` position. As the other line moves along the `y` axis, it doesn't
@@ -46993,14 +53216,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.2. Benefits of Orthogonality
+##### 1.11.4.3.2. Benefits of Orthogonality
 
 - Non-orthogonal systems are inherently more complex to change and control. When components of a system are highly
   interdependent, there is no such thing as a local or a small fix.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.3. Tip 17: Eliminate Effects Between Things
+##### 1.11.4.3.3. Tip 17: Eliminate Effects Between Things
 
 - When components are isolated from one another, you know you can one without having to worry about the rest. As long
   as you don't change that component's external interfaces, you can be confident that you won't have any impacts that
@@ -47008,7 +53231,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.3.3.1. Gain Productivity
+###### 1.11.4.3.3.1. Gain Productivity
 
 - **Localised Changes**:
 
@@ -47032,7 +53255,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.3.3.2. Reduce Risk
+###### 1.11.4.3.3.2. Reduce Risk
 
 - **Isolated Code**:
 
@@ -47062,7 +53285,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.4. Design
+##### 1.11.4.3.4. Design
 
 - Most developers are already familiar with the need to design orthogonal systems, although they may use terms such as
   modular, component-based, and layered to describe the project structure and the process to create software.
@@ -47083,7 +53306,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.5. Toolkits & Libraries
+##### 1.11.4.3.5. Toolkits & Libraries
 
 - Be careful to preserve the orthogonality of your system as you introduce third-party toolkits and libraries. Choose
   your technologies wisely. When you bring in a toolkit or library, ask yourself whether it imposes changes on your
@@ -47093,7 +53316,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.6. Coding
+##### 1.11.4.3.6. Coding
 
 - You run the risk of reducing the orthogonality of your application every time you write code. You need to constantly
   monitor the larger context of the application to ensure you do not inadvertently reduce the application's
@@ -47143,7 +53366,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.7. Testing
+##### 1.11.4.3.7. Testing
 
 - An orthogonally designed and implemented system is easier to test. More of the testing can be performed at the
   individual module level, as the interactions between the system's components are formalised and limited.
@@ -47161,7 +53384,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.8. Orthogonality Through Documentation
+##### 1.11.4.3.8. Orthogonality Through Documentation
 
 - Orthogonality also applies to documentation. Content and presentation are the focus areas. With truly orthogonal
   documentation, you should be able to change the appearance dramatically without changing the content. Word processors
@@ -47169,14 +53392,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.3.9. Living with Orthogonality
+##### 1.11.4.3.9. Living with Orthogonality
 
 - Orthogonality is closely related to the DRY principle. With DRY, you're looking to minimise duplication within a
   system, whereas with orthogonality you reduce the interdependency among the system's components.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.3.9.1. Challenges (Living with Orthogonality)
+###### 1.11.4.3.9.1. Challenges (Living with Orthogonality)
 
 - Consider the difference between tools which gave a GUI and small but combinable command line utilities used at shell
   prompts. Which set is more orthogonal, and why? Why set is easier to combine with other tools to meet new challenges?
@@ -47189,9 +53412,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.10.4.3.9.2. Exercises (Living with Orthogonality)
+###### 1.11.4.3.9.2. Exercises (Living with Orthogonality)
 
-###### 1.10.4.3.9.3. Exercise 1
+###### 1.11.4.3.9.3. Exercise 1
 
 - **Exercise 1**:
 
@@ -47263,7 +53486,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.4. Reversibility
+#### 1.11.4.4. Reversibility
 
 - Engineers prefer simple, singular solutions to problems.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47293,7 +53516,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.4.1. Tip 18: There Are No Final Decisions
+##### 1.11.4.4.1. Tip 18: There Are No Final Decisions
 
 - While many people try to keep their code flexible, you also need to think about maintaining flexibility in areas of
   architecture, deployment, and vendor integration.
@@ -47306,14 +53529,14 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.4.2. Tip 19: Forego Following Fads
+##### 1.11.4.4.2. Tip 19: Forego Following Fads
 
 - No one knows what the future may hold, especially not us. Enable your code to rock-n-roll: to "rock on" when it can,
   and to "roll with the punches" when it must.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.10.4.4.3. Challenges (Reversibility)
+##### 1.11.4.4.3. Challenges (Reversibility)
 
 - Suppose you have a cat in a closed box, along with a radioactive particle. The particle has exactly a 50% change of
   fissioning into two. If it does, the cat will be killed. If it doesn't, the cat will be okay. According to
@@ -47325,7 +53548,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.5. Tracer Bullets
+#### 1.11.4.5. Tracer Bullets
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47367,7 +53590,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.6. Prototypes & Post-It Notes
+#### 1.11.4.6. Prototypes & Post-It Notes
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47409,7 +53632,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.7. Domain Languages
+#### 1.11.4.7. Domain Languages
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47451,7 +53674,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.4.8. Estimating
+#### 1.11.4.8. Estimating
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47493,7 +53716,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.5. The Basic Tools
+### 1.11.5. The Basic Tools
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47535,7 +53758,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.1. The Power of Plain Text
+#### 1.11.5.1. The Power of Plain Text
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47577,7 +53800,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.2. Shell Games
+#### 1.11.5.2. Shell Games
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47619,7 +53842,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.3. Power Editing
+#### 1.11.5.3. Power Editing
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47661,7 +53884,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.4. Version Control
+#### 1.11.5.4. Version Control
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47703,7 +53926,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.5. Debugging
+#### 1.11.5.5. Debugging
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47745,7 +53968,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.6. Text Manipulation
+#### 1.11.5.6. Text Manipulation
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47787,7 +54010,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.5.7. Engineering Daybooks
+#### 1.11.5.7. Engineering Daybooks
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47829,7 +54052,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.6. Pragmatic Paranoia
+### 1.11.6. Pragmatic Paranoia
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47871,7 +54094,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.6.1. Design by Contract
+#### 1.11.6.1. Design by Contract
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47913,7 +54136,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.6.2. Dead Programs Tell No Tales
+#### 1.11.6.2. Dead Programs Tell No Tales
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47955,7 +54178,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.6.3. Assertive Programming
+#### 1.11.6.3. Assertive Programming
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -47997,7 +54220,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.6.4. How to Balance Resources
+#### 1.11.6.4. How to Balance Resources
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48039,7 +54262,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.6.5. Don't Outrun Your Headlights
+#### 1.11.6.5. Don't Outrun Your Headlights
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48081,7 +54304,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.7. Bend, or Break
+### 1.11.7. Bend, or Break
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48123,7 +54346,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.7.1. Decoupling
+#### 1.11.7.1. Decoupling
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48165,7 +54388,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.7.2. Juggling the Real World
+#### 1.11.7.2. Juggling the Real World
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48207,7 +54430,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.7.3. Transforming Programming
+#### 1.11.7.3. Transforming Programming
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48249,7 +54472,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.7.4. Inheritance Task
+#### 1.11.7.4. Inheritance Task
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48291,7 +54514,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.7.5. Configuration
+#### 1.11.7.5. Configuration
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48333,7 +54556,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.8. Concurrency
+### 1.11.8. Concurrency
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48375,7 +54598,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.8.1. Breaking Temporal Coupling
+#### 1.11.8.1. Breaking Temporal Coupling
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48417,7 +54640,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.8.2. Shared State is Incorrect State
+#### 1.11.8.2. Shared State is Incorrect State
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48459,7 +54682,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.8.3. Actors & Processes
+#### 1.11.8.3. Actors & Processes
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48501,7 +54724,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.8.4. Blackboards
+#### 1.11.8.4. Blackboards
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48543,7 +54766,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.9. While You Are Coding
+### 1.11.9. While You Are Coding
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48585,7 +54808,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.1. Listen to Your Lizard Brain
+#### 1.11.9.1. Listen to Your Lizard Brain
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48627,7 +54850,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.2. Programming by Coincidence
+#### 1.11.9.2. Programming by Coincidence
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48669,7 +54892,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.3. Algorithm Speed
+#### 1.11.9.3. Algorithm Speed
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48711,7 +54934,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.4. Refactoring
+#### 1.11.9.4. Refactoring
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48753,7 +54976,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.5. Test to Code
+#### 1.11.9.5. Test to Code
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48795,7 +55018,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.6. Property-Based Testing
+#### 1.11.9.6. Property-Based Testing
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48837,7 +55060,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.7. Stay Safe Out There
+#### 1.11.9.7. Stay Safe Out There
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48879,7 +55102,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.9.8. Naming Things
+#### 1.11.9.8. Naming Things
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48921,7 +55144,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.10. Before the Project
+### 1.11.10. Before the Project
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -48963,7 +55186,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.10.1. The Requirements Pit
+#### 1.11.10.1. The Requirements Pit
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49005,7 +55228,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.10.2. Solving Impossible Puzzles
+#### 1.11.10.2. Solving Impossible Puzzles
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49047,7 +55270,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.10.3. Working Together
+#### 1.11.10.3. Working Together
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49089,7 +55312,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.10.4. The Essence of Agility
+#### 1.11.10.4. The Essence of Agility
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49131,7 +55354,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.10.11. Pragmatic Projects
+### 1.11.11. Pragmatic Projects
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49173,7 +55396,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.11.1. Pragmatic Teams
+#### 1.11.11.1. Pragmatic Teams
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49215,7 +55438,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.11.2. Coconuts Don't Cut It
+#### 1.11.11.2. Coconuts Don't Cut It
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49257,7 +55480,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.11.3. Pragmatic Starter Kit
+#### 1.11.11.3. Pragmatic Starter Kit
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49299,7 +55522,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.11.4. Delight Your Users
+#### 1.11.11.4. Delight Your Users
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49341,7 +55564,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.10.11.5. Pride & Prejudice
+#### 1.11.11.5. Pride & Prejudice
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -49385,7 +55608,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.11. The Art of Readable Code
+## 1.12. The Art of Readable Code
 
 <details open>
 
@@ -49421,7 +55644,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-### 1.11.1. Preface
+### 1.12.1. Preface
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49453,7 +55676,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.1.1. Code Should Be Easy to Understand
+#### 1.12.1.1. Code Should Be Easy to Understand
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49485,7 +55708,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.1.1.1. What Makes Code "Better"?
+##### 1.12.1.1.1. What Makes Code "Better"?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49517,7 +55740,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.1.1.2. The Fundamental Theorem of Readability
+##### 1.12.1.1.2. The Fundamental Theorem of Readability
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49549,7 +55772,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.1.1.3. Is Smaller Always Better?
+##### 1.12.1.1.3. Is Smaller Always Better?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49581,7 +55804,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.1.1.4. Does Time-Till-Understanding Conflict with Other Goals?
+##### 1.12.1.1.4. Does Time-Till-Understanding Conflict with Other Goals?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49613,7 +55836,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.1.1.5. The Hart Part
+##### 1.12.1.1.5. The Hart Part
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49645,7 +55868,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-### 1.11.2. Surface-Level Improvements
+### 1.12.2. Surface-Level Improvements
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49677,7 +55900,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.2.1. Packing Information Into Names
+#### 1.12.2.1. Packing Information Into Names
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49709,7 +55932,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.1. Choose Specific Words
+##### 1.12.2.1.1. Choose Specific Words
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49741,7 +55964,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.2. Avoid Generic Names Like `tmp` and `ret_val`
+##### 1.12.2.1.2. Avoid Generic Names Like `tmp` and `ret_val`
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49773,7 +55996,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.3. Prefer Concrete Names Over Abstract Names
+##### 1.12.2.1.3. Prefer Concrete Names Over Abstract Names
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49805,7 +56028,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.4. Attaching Extra Information to a Name
+##### 1.12.2.1.4. Attaching Extra Information to a Name
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49837,7 +56060,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.5. How Long Should a Name Be?
+##### 1.12.2.1.5. How Long Should a Name Be?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49869,7 +56092,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.1.6. Use Name Formatting to Convey Meaning
+##### 1.12.2.1.6. Use Name Formatting to Convey Meaning
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49901,7 +56124,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.2.2. Names That Can't be Misconstrued
+#### 1.12.2.2. Names That Can't be Misconstrued
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49933,7 +56156,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.1. Example: `Filter()`
+##### 1.12.2.2.1. Example: `Filter()`
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49965,7 +56188,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.2. Example: `Clip(text, length)`
+##### 1.12.2.2.2. Example: `Clip(text, length)`
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -49997,7 +56220,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.3. Prefer Min and Max for (Inclusive) Limits
+##### 1.12.2.2.3. Prefer Min and Max for (Inclusive) Limits
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50029,7 +56252,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.4. Prefer First and Last for (Inclusive) Ranges
+##### 1.12.2.2.4. Prefer First and Last for (Inclusive) Ranges
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50061,7 +56284,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.5. Prefer Begin and End for Inclusive/Exclusive Ranges
+##### 1.12.2.2.5. Prefer Begin and End for Inclusive/Exclusive Ranges
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50093,7 +56316,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.6. Naming Booleans
+##### 1.12.2.2.6. Naming Booleans
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50125,7 +56348,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.7. Matching Expectations of Users
+##### 1.12.2.2.7. Matching Expectations of Users
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50157,7 +56380,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.2.8. Example: Evaluating Multiple Name Candidates
+##### 1.12.2.2.8. Example: Evaluating Multiple Name Candidates
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50189,7 +56412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.2.3. Aesthetics
+#### 1.12.2.3. Aesthetics
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50221,7 +56444,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.1. Why Do Aesthetics Matter?
+##### 1.12.2.3.1. Why Do Aesthetics Matter?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50253,7 +56476,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.2. Rearrange Line Breaks to be Consistent and Compact
+##### 1.12.2.3.2. Rearrange Line Breaks to be Consistent and Compact
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50285,7 +56508,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.3. Line Methods to Clean Up Irregularity
+##### 1.12.2.3.3. Line Methods to Clean Up Irregularity
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50317,7 +56540,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.4. Use Column Adjustment When Helpful
+##### 1.12.2.3.4. Use Column Adjustment When Helpful
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50349,7 +56572,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.5. Pick a Meaningful Order, and Use it Consistently
+##### 1.12.2.3.5. Pick a Meaningful Order, and Use it Consistently
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50381,7 +56604,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.6. Organise Declarations Into Blocks
+##### 1.12.2.3.6. Organise Declarations Into Blocks
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50413,7 +56636,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.7. Break Code Into "Paragraphs"
+##### 1.12.2.3.7. Break Code Into "Paragraphs"
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50445,7 +56668,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.3.8. Personal Style versus Consistency
+##### 1.12.2.3.8. Personal Style versus Consistency
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50477,7 +56700,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.2.4. Knowing What to Comment
+#### 1.12.2.4. Knowing What to Comment
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50509,7 +56732,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.4.1. What NOT to Comment
+##### 1.12.2.4.1. What NOT to Comment
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50541,7 +56764,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.4.2. Recording Your Thoughts
+##### 1.12.2.4.2. Recording Your Thoughts
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50573,7 +56796,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.4.3. Put Yourself in the Reader's Shoes
+##### 1.12.2.4.3. Put Yourself in the Reader's Shoes
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50605,7 +56828,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.4.4. Final Thought - Getting Over the Writer's Block
+##### 1.12.2.4.4. Final Thought - Getting Over the Writer's Block
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50637,7 +56860,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.2.5. Making Comments Precise & Compact
+#### 1.12.2.5. Making Comments Precise & Compact
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50669,7 +56892,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.1. Keep Components Compact
+##### 1.12.2.5.1. Keep Components Compact
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50701,7 +56924,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.2. Avoid Ambiguous Pronouns
+##### 1.12.2.5.2. Avoid Ambiguous Pronouns
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50733,7 +56956,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.3. Polish Sloppy Sentences
+##### 1.12.2.5.3. Polish Sloppy Sentences
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50765,7 +56988,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.4. Describe Function Behaviour Precisely
+##### 1.12.2.5.4. Describe Function Behaviour Precisely
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50797,7 +57020,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.5. Use Input/Output Examples That Illustrate Corner Cases
+##### 1.12.2.5.5. Use Input/Output Examples That Illustrate Corner Cases
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50829,7 +57052,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.6. Share the Intent of Your Code
+##### 1.12.2.5.6. Share the Intent of Your Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50861,7 +57084,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.7. "Named Function Parameter" Comments
+##### 1.12.2.5.7. "Named Function Parameter" Comments
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50893,7 +57116,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.2.5.8. Use Information-Dense Words
+##### 1.12.2.5.8. Use Information-Dense Words
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50925,7 +57148,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-### 1.11.3. Simplifying Loops & Logic
+### 1.12.3. Simplifying Loops & Logic
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50957,7 +57180,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.3.1. Making Control Flow Easy to Read
+#### 1.12.3.1. Making Control Flow Easy to Read
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -50989,7 +57212,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.1. The Order of Arguments in Conditionals
+##### 1.12.3.1.1. The Order of Arguments in Conditionals
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51021,7 +57244,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.2. The Order of `if`/`else` Blocks
+##### 1.12.3.1.2. The Order of `if`/`else` Blocks
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51053,7 +57276,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.3. The `?:` Conditional Expression (a.k.a "Ternary Operator")
+##### 1.12.3.1.3. The `?:` Conditional Expression (a.k.a "Ternary Operator")
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51085,7 +57308,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.4. Avoid `do`/`while` Loops
+##### 1.12.3.1.4. Avoid `do`/`while` Loops
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51117,7 +57340,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.5. Returning Early From a Function
+##### 1.12.3.1.5. Returning Early From a Function
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51149,7 +57372,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.6. The Infamous `goto`
+##### 1.12.3.1.6. The Infamous `goto`
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51181,7 +57404,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.7. Minimise Nesting
+##### 1.12.3.1.7. Minimise Nesting
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51213,7 +57436,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.1.8. Can You Follow the Flow of Execution?
+##### 1.12.3.1.8. Can You Follow the Flow of Execution?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51245,7 +57468,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.3.2. Breaking Down Giant Expressions
+#### 1.12.3.2. Breaking Down Giant Expressions
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51277,7 +57500,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.1. Explaining Variables
+##### 1.12.3.2.1. Explaining Variables
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51309,7 +57532,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.2. Summary Variables
+##### 1.12.3.2.2. Summary Variables
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51341,7 +57564,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.3. Using De Morgan's Law
+##### 1.12.3.2.3. Using De Morgan's Law
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51373,7 +57596,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.4. Abusing Short-Circuit Logic
+##### 1.12.3.2.4. Abusing Short-Circuit Logic
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51405,7 +57628,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.5. Example: Wrestling with Complicated Logic
+##### 1.12.3.2.5. Example: Wrestling with Complicated Logic
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51437,7 +57660,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.6. Breaking Down Giant Statements
+##### 1.12.3.2.6. Breaking Down Giant Statements
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51469,7 +57692,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.2.7. Another Creative Way to Simplify Expressions
+##### 1.12.3.2.7. Another Creative Way to Simplify Expressions
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51501,7 +57724,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.3.3. Variables & Readability
+#### 1.12.3.3. Variables & Readability
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51533,7 +57756,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.3.1. Eliminating Variables
+##### 1.12.3.3.1. Eliminating Variables
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51565,7 +57788,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.3.2. Shrink the Scope of Your Variables
+##### 1.12.3.3.2. Shrink the Scope of Your Variables
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51597,7 +57820,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.3.3. Prefer Write-Once Variables
+##### 1.12.3.3.3. Prefer Write-Once Variables
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51629,7 +57852,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.3.3.4. A Final Example
+##### 1.12.3.3.4. A Final Example
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51661,7 +57884,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-### 1.11.4. Reorganising Your Code
+### 1.12.4. Reorganising Your Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51693,7 +57916,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.4.1. Extracting Unrelated Subproblems
+#### 1.12.4.1. Extracting Unrelated Subproblems
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51725,7 +57948,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.1. Introducing Example: `findClosestLocation()`
+##### 1.12.4.1.1. Introducing Example: `findClosestLocation()`
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51757,7 +57980,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.2. Pure Utility Code
+##### 1.12.4.1.2. Pure Utility Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51789,7 +58012,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.3. Other General-Purpose Code
+##### 1.12.4.1.3. Other General-Purpose Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51821,7 +58044,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.4. Create a Lot of General-Purpose Code
+##### 1.12.4.1.4. Create a Lot of General-Purpose Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51853,7 +58076,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.5. Project-Specific Functionality
+##### 1.12.4.1.5. Project-Specific Functionality
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51885,7 +58108,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.6. Simplifying an Existing Interface
+##### 1.12.4.1.6. Simplifying an Existing Interface
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51917,7 +58140,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.7. Reshaping Interface to Your Needs
+##### 1.12.4.1.7. Reshaping Interface to Your Needs
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51949,7 +58172,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.1.8. Taking Things Too Far
+##### 1.12.4.1.8. Taking Things Too Far
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -51981,7 +58204,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.4.2. One Task at a Time
+#### 1.12.4.2. One Task at a Time
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52013,7 +58236,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.2.1. Tasks Can Be Small
+##### 1.12.4.2.1. Tasks Can Be Small
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52045,7 +58268,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.2.2. Extracting Values from an Object
+##### 1.12.4.2.2. Extracting Values from an Object
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52077,7 +58300,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.2.3. A Larger Example
+##### 1.12.4.2.3. A Larger Example
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52109,7 +58332,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.4.3. Turning Thoughts Into Code
+#### 1.12.4.3. Turning Thoughts Into Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52141,7 +58364,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.3.1. Describing Logic Clearly
+##### 1.12.4.3.1. Describing Logic Clearly
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52173,7 +58396,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.3.2. Knowing Your Libraries Helps
+##### 1.12.4.3.2. Knowing Your Libraries Helps
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52205,7 +58428,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.3.3. Applying This Method to Larger Problems
+##### 1.12.4.3.3. Applying This Method to Larger Problems
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52237,7 +58460,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.4.4. Writing Less Code
+#### 1.12.4.4. Writing Less Code
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52269,7 +58492,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.4.1. Don't Bother Implementing That Feature - You Won't Need It
+##### 1.12.4.4.1. Don't Bother Implementing That Feature - You Won't Need It
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52301,7 +58524,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.4.2. Question & Break Down Your Requirements
+##### 1.12.4.4.2. Question & Break Down Your Requirements
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52333,7 +58556,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.4.3. Keeping Your Codebase Small
+##### 1.12.4.4.3. Keeping Your Codebase Small
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52365,7 +58588,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.4.4. Be Familiar with the Libraries Around You
+##### 1.12.4.4.4. Be Familiar with the Libraries Around You
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52397,7 +58620,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.4.4.5. Example: Using Unix Tools Instead of Coding
+##### 1.12.4.4.5. Example: Using Unix Tools Instead of Coding
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52429,7 +58652,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-### 1.11.5. Selected Topics
+### 1.12.5. Selected Topics
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52461,7 +58684,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
   
-#### 1.11.5.1. Testing & Readability
+#### 1.12.5.1. Testing & Readability
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52493,7 +58716,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.1. Make Tests Easy to Read & Maintain
+##### 1.12.5.1.1. Make Tests Easy to Read & Maintain
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52525,7 +58748,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.2. What's Wrong With This Unit Test?
+##### 1.12.5.1.2. What's Wrong With This Unit Test?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52557,7 +58780,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.3. Making This Test More Readable
+##### 1.12.5.1.3. Making This Test More Readable
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52589,7 +58812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.4. Choosing Good Test Inputs
+##### 1.12.5.1.4. Choosing Good Test Inputs
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52621,7 +58844,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.5. Naming Test Functions
+##### 1.12.5.1.5. Naming Test Functions
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52653,7 +58876,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.6. What Was Wrong With That Test?
+##### 1.12.5.1.6. What Was Wrong With That Test?
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52685,7 +58908,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.7. Test-Friendly Development
+##### 1.12.5.1.7. Test-Friendly Development
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52717,7 +58940,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.1.8. Going Too Far
+##### 1.12.5.1.8. Going Too Far
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52749,7 +58972,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-#### 1.11.5.2. Designing & Implementing a "Minute/Hour" Counter
+#### 1.12.5.2. Designing & Implementing a "Minute/Hour" Counter
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52781,7 +59004,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.1. The Problem
+##### 1.12.5.2.1. The Problem
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52813,7 +59036,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.2. Defining the Class Interface
+##### 1.12.5.2.2. Defining the Class Interface
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52845,7 +59068,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.3. Attempt 1: A Naïve Solution
+##### 1.12.5.2.3. Attempt 1: A Naïve Solution
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52877,7 +59100,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.4. Attempt 2: Conveyor Belt Design
+##### 1.12.5.2.4. Attempt 2: Conveyor Belt Design
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52909,7 +59132,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.5. Attempt 3: A Time-Bucketed Design
+##### 1.12.5.2.5. Attempt 3: A Time-Bucketed Design
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52941,7 +59164,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
-##### 1.11.5.2.6. Comparing the Three Solutions
+##### 1.12.5.2.6. Comparing the Three Solutions
 
 -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
@@ -52975,7 +59198,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.12. `vi` and `vim` Editors
+## 1.13. `vi` and `vim` Editors
 
 <details open>
 
@@ -53021,7 +59244,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.1. Introduction
+### 1.13.1. `vi` & `vim` Introduction
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53063,7 +59286,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.2. Conventions
+### 1.13.2. Conventions
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53105,7 +59328,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.3. Acknowledgements
+### 1.13.3. Acknowledgements
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53147,7 +59370,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.4. Command Line Options
+### 1.13.4. Command Line Options
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53189,7 +59412,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.5. `vi` Commands
+### 1.13.5. `vi` Commands
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53231,7 +59454,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.6. Input Mode Shortcuts
+### 1.13.6. Input Mode Shortcuts
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53273,7 +59496,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.7. Substitution & Regular Expressions
+### 1.13.7. Substitution & Regular Expressions
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53315,7 +59538,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.8. `ex` Commands
+### 1.13.8. `ex` Commands
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53357,7 +59580,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.9. Initialisation
+### 1.13.9. Initialisation
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53399,7 +59622,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.10. Recovery
+### 1.13.10. Recovery
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53441,7 +59664,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.11. `vi set` Options
+### 1.13.11. `vi set` Options
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53483,7 +59706,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.12. Nothing Like the Original
+### 1.13.12. Nothing Like the Original
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53525,7 +59748,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.13. Enhanced Tags & Tag Stacks
+### 1.13.13. Enhanced Tags & Tag Stacks
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53567,7 +59790,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.14. `vim` - `vi` Improved
+### 1.13.14. `vim` - `vi` Improved
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53609,7 +59832,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.15. `nvi` - New `vi`
+### 1.13.15. `nvi` - New `vi`
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53651,7 +59874,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.16. `elvis`
+### 1.13.16. `elvis`
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53693,7 +59916,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.17. `vile` - `vi` like Emacs
+### 1.13.17. `vile` - `vi` like Emacs
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53735,7 +59958,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.18. Internet Resources for `vi`
+### 1.13.18. Internet Resources for `vi`
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -53777,7 +60000,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
-### 1.12.19. Program Source and Contact Information
+### 1.13.19. Program Source and Contact Information
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
@@ -54173,7 +60396,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - Run the `yt-dlp` commands in the directory containing the `yt-dlp` executable file.
 
-- Confirm you can run the `yt-dlp` in Git Bash, or an equivalent Linux command line.
+- Confirm you can run the `yt-dlp` in Git Bash, Windows Subsystem for Linux (WSL) 2.0, or an equivalent Linux command
+  line.
 
   ```bash
   ./yt-dlp_x86.exe --help
@@ -54368,37 +60592,139 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ## 3.1. Automation
 
-### 3.1.1. Replacing Bash Scripting with Python
+### 3.1.1. Replacing `bash` Scripting with Python
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+#### 3.1.1.1. Replacing `bash` Scripting with Python Introduction
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- For problems where the data can be expressed as a stream of similar objects separated by newlines to be processed
+  concurrently through a series of filters and handles a lot of I/O, it's difficult to think of a more ideal language
+  than the shell. A lot of the core parts on a Unix or Linux system is designed to express data in such formats.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+##### 3.1.1.1.1. If `bash` Is So Great, What's the Problem?
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- The problem is if you want to do basically anything else, e.g. write logic, use control structures, handle data, etc.
+  You're going to have big problems. When `bash` is coordinating external programs, it's fantastic. When it's doing any
+  work whatsoever itself, it becomes relatively difficult to write and maintain.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- The fundamental problem with `bash` and many other shell dialects is that text is identifiers and identifiers are
+  text, and basically everything else is also text. In some sense, this makes the shell a homoiconic language, which
+  theoretically means it might have an interesting meta-programming story, until you realize that it basically just
+  amounts to running eval on strings, which is a feature in basically any interpreted language today, and one that is
+  frequently considered harmful. The problem with eval is that it's a pretty direct path to arbitrary code execution.
+  This is great if arbitrary code execution is actually what you're trying to accomplish (like, say, in an HTML
+  template engine), but it's not generally what you want.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- `bash` basically defaults to `eval`ing everything. This is very handy for interactive use, since it cuts down in the
+  need for a lot of explicit syntax when all you really want to do is, say, open a file in a text editor. This is
+  bad in a scripting context because it turns the entire language into an injection honeypot. Yes, it is possible and
+  not so difficult to write safe `bash` once you know the tricks, but it takes extra consideration and it is easy to
+  forget or be lazy about it. Writing three or four lines of safe `bash` is easy; two-hundred is quite a bit more
+  challenging.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- `bash` has other problems. The syntax that isn't native to the Bourne Shell feels really ugly and bolted-on. For
+  example, most modern shells have arrays. Let's look at the syntax for iterating on an array, but let's take the long
+  way there.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+  ```bash
+  $ foo='this   and   that' # variable assignment
+  $ echo $foo
+  this and that
+  $ # Oh dear. Text inside the variable was split into arguments on
+  $ # whitespace, because eval all the things.
+  $
+  $ # To avoid this insane behaviour, do the obvious thing: use string
+  $ # interpolation. :-(
+  $ echo "$foo"
+  this   and   that
+  ```
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+- To properly iterate on the strings inside of an array (the only thing which an array can possibly contain), you also
+  use variable interpolation syntax. Why would string interpolation syntax ever be used to iterate over items in an
+  array? There are some possibilities, but that doesn't change the fact that this is an awkward syntax to work with. If
+  you're not too familiar with `bash`, you may also (rightly) wonder what this `@` is, or why everything is in curly
+  braces. The answer to all these questions is more or less that they didn't want to do anything that would break
+  compatibility with ancient Unix shell scripts, which didn't have these features. Everything just got shoe-horned in
+  with the weirdest syntax you can imagine. `bash` actually has a lot of features of modern programming languages, but
+  the problem is that the syntax provided to access them is completely contrary to modern syntax in order to ensure
+  backwards compatibility with existing scripts.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
--
-  [GitHub: Replacing Bash Scripting with Python][github-replacing-bash-scripting-with-python]
+  ```bash
+  for item in "${my_array[@]}"; do
+      stuff with "$item"
+  done
+  ```
+
+#### 3.1.1.2. Choose the Right Tool for the Job
+
+- The "founding fathers" of Unix had already recognized the fundamental limitations of the Bourne shell for handling
+  data and created `awk`, a complementary, string-centric data parsing language. Modern `bash`, on the other hand, has
+  added a lot of data related features which make it possible to do many of the things you might do in `awk` directly
+  in `bash`. Do not use them. They are ugly and difficult to get right. Use `awk` instead, or Perl or Python or
+  whatever.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+##### 3.1.1.2.1. When to Use `bash`
+
+- `bash` should be the first candidate when scripting programs that primarily deal with starting processes and
+  connecting their inputs and outputs, as well as certain kinds of file management tasks.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+##### 3.1.1.2.2. Warning Signs
+
+- Many people have rule about the length of their `bash` scripts. It is oft repeated on the Internet that, "If your
+  shell script gets to x number of lines, rewrite in another language," or something similar.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+- This kind of rule isn't too bad. Length isn't the problem, but length can be a side-effect of complexity, and
+  complexity is sort of the arch-enemy of `bash`. I look for the use of certain features to be an indicator that it's
+  time to consider a rewrite. (note that "rewrite" can mean moving certain parts of the logic into another language
+  while still doing orchestration in `bash`). These "warning signs are" listed in order of more to less serious:
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - If you ever need to type the characters `IFS=`, rewrite immediately.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - If data is being stored in `bash` arrays, either refactor so the data can be streamed through pipelines or use a
+    different language. As with `IFS`, this introduces the complexity of dealing with the shell's string splitting
+    rules.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - If you find yourself using braced parameter expansion syntax, `${my_var}`, and anything is between those braces
+    besides the name of your variable, it's a bad sign. For one, it means you might be using an array, and that's not
+    good. If you're not using an array, it means you're using the shell's string manipulation capabilities. There are
+    cases where this might be allowable (determining the `basename` of a file, for example), but the syntax for that
+    kind of thing is very strange, and so many other languages supply better string manipulating tools. If you're doing
+    batch file renaming, Python's `pathlib` library provides a much saner interface.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - Dealing with process output in a loop is not a great idea. If you HAVE to do it, the only right way is with
+    `while IFS= read -r line`. Always try to refactor this case as a one-liner with `awk` or Perl, or write a script in
+    another language to process the data and call it from `bash`. If you have a loop like this, and you are starting
+    any processes inside the loop, you will have major performance problems. This will eventually lead to refactoring
+    with `bash` built-ins.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - `bash` functions, while occasionally useful, can be a sign of trouble. All the variables are global by default. It
+    also means there is enough complexity that you can't do it with a completely linear control flow. That's also not a
+    good sign for `bash`. A few `bash` functions might be alright, but it's a warning sign.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+  - Conditional logic, while it can definitely be useful, is also a sign of increasing complexity. As with functions,
+    using it doesn't mean you have to rewrite, but every time you write one, you should ask yourself the question as to
+    whether the task you're doing isn't better suited to another language.
+    [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
+
+- Whenever you use a $ in `bash` (parameter expansion), you must use quotation marks. Always only ever use quotation
+  marks. Never forget. Never be lazy. This is a security hazard. As previously mentioned, `bash` is an injection
+  honeypot. There are a few cases where you don't need the quotation marks. They are the exceptions. Do not learn
+  them. Just use quotes all the time. It is always correct.
+  [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
 ## 3.2. Databases
 
