@@ -60,7 +60,7 @@ function remove_nvidia_drivers() {
     sudo ubuntu-drivers autoinstall --yes
 }
 
-function perform_graphics_driver_configuration() {
+function configure_graphics_drivers() {
     remove_nvidia_drivers
 }
 
@@ -204,7 +204,7 @@ function test_helm_installation() {
     helm delete odoo
 }
 
-function perform_deployment_tool_installation_configuration() {
+function install_configure_deployment_tools() {
     install_docker
     start_docker
     test_docker_installation
@@ -252,7 +252,7 @@ function install_dot_net_runtime() {
     dotnet --info
 }
 
-function perform_dot_net_development_prerequisite_installation() {
+function install_dot_net_development_prerequisites() {
     install_dot_net_sdk
     install_dot_net_runtime
 }
@@ -296,7 +296,7 @@ function install_nodejs_runtime() {
     sudo apt show nodejs
 }
 
-function perform_javascript_development_prerequisite_installation() {
+function install_javascript_development_prerequisites() {
     install_nodejs_runtime
 }
 
@@ -324,7 +324,7 @@ function install_python3_pip() {
     sudo apt show python3-pip
 }
 
-function perform_python_development_prerequisite_installation() {
+function install_python_development_prerequisites() {
     install_python3
     install_python3_pip
 }
@@ -368,7 +368,7 @@ function generate_github_ssh_key() {
     cat ~/.ssh/id_ed25519.pub
 }
 
-function perform_version_control_installation_configuration() {
+function install_configure_version_control_tool() {
     install_git
 
     configure_git_global_parameters
@@ -394,7 +394,7 @@ function configure_bashrc() {
     source "${HOME}/.bashrc"
 }
 
-function perform_linux_system_override_configuration() {
+function configure_linux_system_overrides() {
     configure_bashrc
 }
 
@@ -560,7 +560,7 @@ function install_sublime_text() {
     sudo apt show sublime-text
 }
 
-function perform_text_editor_installation_configuration() {
+function install_configure_text_editors() {
     local -r vimrc_file_path="${HOME}/.bashrc"
     local -r dot_vim_directory_path="${HOME}/.vim"
     install_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
@@ -600,7 +600,7 @@ function install_pycharm() {
     sudo snap install pycharm-community --classic
 }
 
-function perform_ide_installation() {
+function install_integrated_development_environments() {
     install_intellij
 
     install_pycharm
@@ -620,7 +620,7 @@ function install_chrome() {
     flatpak install flathub com.google.Chrome --yes
 }
 
-function perform_browser_installation() {
+function install_browsers() {
     install_chrome
 }
 
@@ -638,7 +638,7 @@ function install_discord() {
     flatpak install flathub com.discordapp.Discord --yes
 }
 
-function perform_social_platform_installation() {
+function install_social_platforms() {
     install_discord
 }
 
@@ -657,7 +657,7 @@ function install_gnome_tweaks() {
     sudo apt show gnome-tweaks
 }
 
-function perform_ui_configuration_tool_installation() {
+function install_ui_configuration_tools() {
     install_gnome_tweaks
 }
 
@@ -675,7 +675,7 @@ function install_vlc() {
     flatpak install flathub org.videolan.VLC --yes
 }
 
-function perform_media_player_installation() {
+function install_media_players() {
     install_vlc
 }
 
@@ -704,7 +704,7 @@ function configure_guake() {
     guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
 }
 
-function perform_terminal_installation_configuration() {
+function install_configure_terminals() {
     install_guake
     configure_guake
 }
@@ -723,7 +723,7 @@ function autoremove_unused_dependencies() {
     sudo apt autoremove --yes
 }
 
-function perform_unused_dependency_removal() {
+function remove_unused_dependencies() {
     autoremove_unused_dependencies
 }
 
@@ -733,36 +733,36 @@ function perform_unused_dependency_removal() {
 ########################################### Execute Other Functions ###################################################
 #######################################################################################################################
 
-function perform_ubuntu_configuration() {
-    perform_graphics_driver_configuration
+function configure_ubuntu() {
+    configure_graphics_drivers
 
-    perform_deployment_tool_installation_configuration
+    install_configure_deployment_tools
 
-    perform_dot_net_development_prerequisite_installation
+    install_dot_net_development_prerequisites
 
-    perform_javascript_development_prerequisite_installation
+    install_javascript_development_prerequisites
 
-    perform_python_development_prerequisite_installation
+    install_python_development_prerequisites
 
-    perform_version_control_installation_configuration
+    install_configure_version_control_tool
 
-    perform_linux_system_override_configuration
+    configure_linux_system_overrides
 
-    perform_text_editor_installation_configuration
+    install_configure_text_editors
 
-    perform_ide_installation
+    install_integrated_development_environments
 
-    perform_browser_installation
+    install_browsers
 
-    perform_social_platform_installation
+    install_social_platforms
 
-    perform_ui_configuration_tool_installation
+    install_ui_configuration_tools
 
-    perform_media_player_installation
+    install_media_players
 
-    perform_terminal_installation_configuration
+    install_configure_terminals
 
-    perform_unused_dependency_removal
+    remove_unused_dependencies
 }
 
-perform_ubuntu_configuration
+configure_ubuntu
