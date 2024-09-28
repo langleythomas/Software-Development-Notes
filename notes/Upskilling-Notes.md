@@ -2067,6 +2067,26 @@ TODO: Order in which to do this testing.
       - [3.1.1.2. Choose the Right Tool for the Job](#3112-choose-the-right-tool-for-the-job)
         - [3.1.1.2.1. When to Use `bash`](#31121-when-to-use-bash)
         - [3.1.1.2.2. Warning Signs](#31122-warning-signs)
+    - [Python for Automation: Streamlining Tasks with Scripting](#python-for-automation-streamlining-tasks-with-scripting)
+      - [Introduction to Python for Automation](#introduction-to-python-for-automation)
+      - [Key Features \& Benefits of Python for Automation](#key-features--benefits-of-python-for-automation)
+        - [Simple Syntax](#simple-syntax)
+        - [Extensive Libraries](#extensive-libraries)
+        - [Cross-Platform Compatibility](#cross-platform-compatibility)
+        - [Integration Capabilities](#integration-capabilities)
+      - [Practical Applications of Python for Automation](#practical-applications-of-python-for-automation)
+        - [File Management](#file-management)
+        - [Web Scraping](#web-scraping)
+        - [Data Processing \& Analysis](#data-processing--analysis)
+        - [System Administration](#system-administration)
+        - [Task Scheduling](#task-scheduling)
+        - [GUI Automation](#gui-automation)
+      - [Best Practices for Python Automation](#best-practices-for-python-automation)
+        - [Modularisation](#modularisation)
+        - [Error Handling](#error-handling)
+        - [Logging \& Monitoring](#logging--monitoring)
+        - [Documentation](#documentation)
+        - [Testing](#testing)
   - [3.2. Databases](#32-databases)
     - [3.2.1. Database Management](#321-database-management)
       - [3.2.1.1. Sharding](#3211-sharding)
@@ -2204,6 +2224,25 @@ TODO: Order in which to do this testing.
         - [3.5.1.11.1. Diagnosing Errors](#351111-diagnosing-errors)
         - [3.5.1.11.2. Obtaining a Thread Dump](#351112-obtaining-a-thread-dump)
       - [3.5.1.12. Glossary (Jenkins)](#35112-glossary-jenkins)
+  - [Python Development](#python-development)
+    - [Python Anti-Patterns](#python-anti-patterns)
+      - [Correctness](#correctness)
+      - [Maintainability](#maintainability)
+      - [Readability](#readability)
+      - [Security](#security)
+      - [Performance](#performance)
+      - [Django](#django)
+    - [Python Security Cheat Sheet](#python-security-cheat-sheet)
+      - [Always Sanitise External Data](#always-sanitise-external-data)
+      - [Scan Your Code](#scan-your-code)
+      - [Be Careful When Downloading Packages](#be-careful-when-downloading-packages)
+      - [Review Your Dependency Licences](#review-your-dependency-licences)
+      - [Do Not Use Pre-Installed Python Version](#do-not-use-pre-installed-python-version)
+      - [Use Python's Capability for Visual Environments](#use-pythons-capability-for-visual-environments)
+      - [Set `DEBUG = False` in Production](#set-debug--false-in-production)
+      - [Be Careful With String FOrmatting](#be-careful-with-string-formatting)
+      - [(De)serialise Very Cautiously](#deserialise-very-cautiously)
+      - [Use Python Type Annotations](#use-python-type-annotations)
   - [3.6. Telecommunications](#36-telecommunications)
     - [3.6.1. Network Slicing](#361-network-slicing)
       - [3.6.1.1. What is Network Slicing?](#3611-what-is-network-slicing)
@@ -23778,1836 +23817,1836 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 ### 1.6.1. Practical Process Automation Introduction
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.1. Process Automation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.2. Wild West Integrations
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.3. Workflow Engines & Executable Process Models
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.4. A Business Scenario
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.5. Long-Running Processes
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.6. Business Processes, Integration Process, & Workflows
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.7. Business-IT Collaboration
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.8. Business Drivers & The Value of Process Automation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.1.9. Not Your Parents' Process Automation Tools
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.1.9.1. A Brief History of Process Automation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.1.9.2. The Story of Camunda
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ### 1.6.2. Part I: Fundamentals
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.2.1. Workflow Engines & Process Solutions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.1.1. The Workflow Engine
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.1.1. Core Capabilities
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.1.2. Additional Features of Workflow Patterns
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.1.3. Architecture
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.1.2. A Process Solution
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.1.3. An Executable Example
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.1.4. Application, Processes, & Workflow Engines
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.1.5. Typical Workflow Tools in a Project's Life Cycle
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.5.1. Graphical Process Modeller
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.5.2. Collaboration Tools
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.5.3. Operations Tooling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.5.4. Tasklist Applications
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.1.5.5. Business Monitoring & Reporting
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.2.2. Developing Process Solutions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.2.1. Business Process Model & Notation (BPMN)
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.1. Start & End Events
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.2. The Token Concepts: Implementing Control Flow
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.3. Sequence Flows: Controlling the Flow of Execution
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.4. Tasks: Units of Work
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.5. Gateways: Steering Flow
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.6. Events@ Waiting for Something to Happen
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.1.7. Message Events: Waiting for a Trigger from the Outside
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.2.2. Combining Process Models & Programming Code
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.2.1. Publish/Subscribe to a Process
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.2.2. Referencing Code in Process Models
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.2.3. Using Prebuilt Connectors
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.2.2.4. Model or Code?
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.2.3. Testing Processes
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.2.4. Versioning of Process Solutions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.2.5. Running Versions in Parallel
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.2.3. Orchestrate Anything
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.3.1. Orchestrate Software
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.1.1. Service-Oriented Architecture (SOA) Services
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.1.2. Microservices
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.1.3. Serverless Functions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.1.4. Modular Functions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.1.5. Deconstructing the Monolith
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.3.2. Orchestrate Decisions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.2.1. Decision Model & Notation (DMN)
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.2.2. Decisions in a Process Model
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.3.3. Orchestrate Humans
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.3.1. Task Assignment
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.3.2. Additional Tool Support
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.3.3.3. The User Interface of User Tasks
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.3.4. Orchestrate RPA Bots
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.3.5. Orchestrate Physical Devices & Things
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.2.4. Championing Workflow Engines & BPMN
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.4.1. Limitation of Other Implementation Options
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.1.1. Hardcoded Processes
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.1.2. Batch Processing
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.1.3. Data Pipelines & Streaming
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.1.4. The Actor Model
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.1.5. Stateful Functions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.4.2. Process Modelling Languages
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.2.1. Workflow Patterns
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.2.2. Benefits of Graphical Process Visualisations
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.2.3. Textual Process Modelling Approaches
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.2.4. Typical Concerns of Graphical Modelling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.2.4.2.5. Graphical vs Textual Approaches
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.2.4.3. Process Automation with Blockchain?
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ### 1.6.3. Part II: Process Automation in the Enterprise
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.1. Solution Architecture
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.1.1. When to Use a Workflow Engine
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.1.2. Architecture Trade-Offs
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.1. Running the Workflow Engine
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.2. Decentralised Engines
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.3. Sharing Engines
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.4. Ownership of Process Models
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.5. Using the Workflow Engine as a Communication Channel
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.6. In-House Workflow Patterns
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.7. Performance & Scalability
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.1.2.8. Developer Experience & Continuous Delivery
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.1.3. Evaluating Workflow Engines
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.2. Autonomy, Boundaries, & Isolation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.2.1. Strong Cohesion & Low Coupling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.2.2. Domain-Driven Design, Bounded Context, & Services
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.2.3. Boundaries & Business Processes
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.2.3.1. Respect Process & Avoid Process Monoliths
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.2.3.2. Foster Your Understanding of Responsibilities
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.2.3.3. Long-Running Behaviour Help You Defend Boundaries
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.2.4. How Processes Communicate Across Boundaries
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.2.4.1. Call Activities: Handy Shortcuts Only Within the Boundary
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.2.4.2. Crossing Boundaries as an API Call
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.2.5. Decentralised Workflow Tooling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.3. Balancing Orchestration & Choreography
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.3.1. Event-Driven Systems
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.1.1. Emergent Behaviour
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.1.2. Event Chains
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.1.3. The Risk of Distributed Monoliths
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.3.2. Contrasting Orchestration & Choreography
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.2.1. Introducing Commands
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.2.2. Messages, Events & Commands
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.2.3. Terminology & Definitions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.2.4. Avoid Event Chains by Using Commands
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.2.5. The Direction of Dependency
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.3.3. Finding the Right Balance
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.3.1. Deciding Whether to Use Commands or Events
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.3.2. Mixing Commands & Events
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.3.3. Designing Responsibilities
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.3.4. Evaluating Change Scenarios to Validate Decisions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.3.4. Debunking Common Myths
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.4.1. Commands Do Not Require Synchronous Communication
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.4.2. Orchestration Does Not Need to be Central
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.3.4.3. Choreography Does Not Automatically Lead to More Decoupling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.3.5. The Role of Workflow Engines
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.4. Workflow Engines & Integration Challenges
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.4.1. Communication Patterns for Service Invocation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.1. Synchronous Request/Response
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.2. Asynchronous Request/Response
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.3. BPMN & Being Ready to Receive
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.4. Aggregating & Dead Messages
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.5. Poisoned & Dead Messages
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.1.6. Synchronous Facades Hiding Asynchronous Communication
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.4.2. Transactions & Consistency
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.2.1. Eventual Consistency
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.2.2. Business Strategies to Handle Inconsistency
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.2.3. The Saga Pattern & Compensation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.4.2.4. Chaining Resources by Using the Outbox Pattern
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.4.3. Eventual Consistency Applies to Every Form of Remote Communication
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.4.4. The Importance of Idempotency
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.5. Business-IT Collaboration
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.5.1. A Typical Project
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.1.1. The Moral of the Story
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.5.2. Including All the People: BizDevOps
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.2.1. Development
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.2.2. Business
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.2.3. Operations
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.5.3. The Power of One Joined Model
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.3.1. From a Process Pyramid to a House
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.5.4. Who Does the Modelling?
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.5.5. Creating Better Business Models
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.5.1. Extracting (Integration) Logic into Subprocesses
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.5.2. Distinguishing Between Results, Exceptions, & Errors
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.5.5.3. Increasing Readability
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.3.6. Process Visibility
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.6.1. The Value of Process Visibility
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.6.2. Getting the Data
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.2.1. Leverage Audit Data from Your Workflow Engine
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.2.2. Model Events to Measure Key Performance Indicators
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.6.3. Status Inquiries
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.6.4. Understanding Process That Span Multiple Systems
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.1. Observability & Distributed Tracing Tools
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.2. Custom Centralised Monitoring
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.3. Data Warehouses, Data Lakes, & Business Intelligence Tools
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.4. Process Mining
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.5. Process Event Monitoring
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.4.6. Current Market Dynamics
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.3.6.5. Setting Up Process Reporting & Monitoring
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.5.1. Typical Metrics & Reports
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.3.6.5.2. Allowing for a Deeper Understanding
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ### 1.6.4. Part III: Get Going
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.4.1. The Journey to Introduce Process Automation
 
 - This chapter will answer questions like: how can you introduce process automation into your organisation? How can you
   make your first project successful? And how do you establish a company-wide practice to scale adoption?
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 - To achieve this, it:
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
   - Sketches two typical adoption journeys and derives a pattern from them.
-    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
   - Describes the first steps in this journey, which are the crucial ones (particularly in the first one to three
     process automation projects)
-    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
   - Dives into scaling adoption across the entire organisation, and all the challenges that come with that.
-    [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 - As a developer or software architect, you need be aware of certain challenges to be able to address them. Even if
   politics are beyond your direct control, you will be affected by them, and you need to take actions that will help
@@ -25616,238 +25655,238 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   architecture, but also to find the right balance between giving important guidance, defining necessary guardrails,
   and letting projects breathe. Instead of defining "the right architecture" for your company, you will much more
   likely end up as an internal consultant and facilitator. This chapter will equip you with the basics to achieve that.
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.1.1. Understanding the Adoption Journey
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.1. Failures You Want to Avoid
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.2. A Success Story
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.3. The Pattern of Successful Adoption Journeys
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.4. Different Journeys for Different Scenarios
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.1.2. Starting Your Journey
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.2. Proofs of Concepts
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.3. Presenting the Business Case
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.4. Don't Build Your Own Platform
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.5. Dos and Don'ts Around Reuse
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.1.3. From Project to Program: Scaling Adoption
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.1. Perception Management: What Is Process Automation?
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.2. Establishing a Centre of Excellence
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.3. Managing Architecture Decisions
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.4. Decentralised Workflow Tooling
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.5. Role & Skill Development
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.4.2. Parting Words
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.2.1. Current Architecture Trends Influence Process Automation
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.2.2. Rethinking Business Processes & The User Experience
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.2.3. Where To Go From Here
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation](oreilly-practical-process-automation)
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 </details>
 
@@ -33302,15 +33341,15 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   reliability across various industries. Python, with its simplicity, versatility, and extensive libraries, has emerged
   as a popular choice for automation tasks. From simple scripts to complex workflows, Python offers powerful tools and
   frameworks that enable developers and professionals to automate repetitive tasks, streamline processes, and focus on
-  higher-value activities. 
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  higher-value activities.
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 #### Introduction to Python for Automation
 
 - Python's popularity in the automation space stems from its readability, ease of use, and rich ecosystem of libraries
   and frameworks.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 #### Key Features & Benefits of Python for Automation
@@ -33319,7 +33358,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - Python's clean and intuitive syntax makes it easy to write and understand code, even for beginners. This simplicity
   accelerates the development of automation scripts and reduces the learning curve for new users.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Extensive Libraries
@@ -33327,15 +33366,15 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python boasts a vast ecosystem of libraries and modules tailored for automation tasks. Libraries like `os`, `shutil`,
   `requests`, `selenium`, `pandas`, and `openpyxl` provide robust functionality for file manipulation, web interaction,
   data processing, and more, enabling developers to accomplish complex automation tasks with minimal effort.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Cross-Platform Compatability
+##### Cross-Platform Compatibility
 
 - Python is inherently cross-platform, meaning automation scripts written in Python can run seamlessly on various
   operating systems, including Windows, macOS, and Linux. This flexibility simplifies deployment and ensures consistent
   behaviour across different environments.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Integration Capabilities  
@@ -33343,7 +33382,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python seamlessly integrates with other technologies and tools commonly used in automation workflows. Whether you're
   interacting with APIs, databases, web services, or third-party applications, Python offers libraries and frameworks
   that facilitate integration and interoperability.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
   
 #### Practical Applications of Python for Automation
@@ -33353,7 +33392,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python simplifies file management tasks such as renaming files, copying/moving files between directories, and batch
   processing files. With libraries like `os` and `shutil`, you can perform these operations efficiently and
   programmatically. The following is an example of renaming multiple files in a directory.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33380,7 +33419,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python's `requests` library and web scraping frameworks like `Beautiful Soup` and `Scrapy` enable developers to
   extract data from websites and web applications. Web scraping is commonly used for data collection, competitive
   analysis, market research, and content aggregation.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33409,7 +33448,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python's data processing libraries, including `pandas`, `NumPy`, and `SciPy`, facilitate data manipulation,
   transformation, and analysis. These libraries are can be used for tasks such as data cleansing, aggregation,
   statistical analysis, and machine learning.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33427,7 +33466,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python simplifies system administration tasks such as server provisioning, configuration management, and log
   analysis. Frameworks like `Fabric` and `Ansible` provide powerful tools for automating deployment, orchestration, and
   management of infrastructure.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33473,7 +33512,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Python allows you to schedule and automate recurring tasks using libraries like `schedule` and `cron`. Task
   scheduling is useful for performing routine maintenance, generating reports, and executing batch jobs at predefined
   intervals.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33496,7 +33535,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - Python libraries like `PyAutoGUI` enable you to automate tasks involving graphical user interfaces (GUIs), such as
   interacting with desktop applications or web browsers.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
   ```python
@@ -33515,28 +33554,28 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 - Break down automation scripts into modular components or functions to improve code organisation, reusability, and
   maintainability. Modularisation enhances readability and allows for easier debugging and testing.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Error Handling
 
 - Implement robust error handling mechanisms to gracefully handle exceptions and errors that may occur during script
   execution. Proper error handling prevents script failures and ensures the reliability of automation workflows.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Logging & Monitoring
 
 - Incorporate logging and monitoring functionality into automation scripts to track execution progress, record errors,
   and generate audit trails. Logging helps troubleshoot issues and provides visibility into script behaviour.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Documentation
 
 - Document automation scripts thoroughly, including descriptions of functionality, input parameters, output formats,
   and usage instructions. Well-documented scripts are easier to understand, maintain, and share with other team members.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ##### Testing
@@ -33544,7 +33583,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - Adopt a testing mindset and write automated tests to validate the behaviour and correctness of automation scripts.
   Unit tests, integration tests, and end-to-end tests help identify and prevent regressions and ensure the reliability
   of automated processes.
-  [Medium: Python for Automation: Streamling Tasks with Scripting][
+  [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
 ## 3.2. Databases
