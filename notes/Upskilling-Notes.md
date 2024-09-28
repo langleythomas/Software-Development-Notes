@@ -2067,26 +2067,26 @@ TODO: Order in which to do this testing.
       - [3.1.1.2. Choose the Right Tool for the Job](#3112-choose-the-right-tool-for-the-job)
         - [3.1.1.2.1. When to Use `bash`](#31121-when-to-use-bash)
         - [3.1.1.2.2. Warning Signs](#31122-warning-signs)
-    - [Python for Automation: Streamlining Tasks with Scripting](#python-for-automation-streamlining-tasks-with-scripting)
-      - [Introduction to Python for Automation](#introduction-to-python-for-automation)
-      - [Key Features \& Benefits of Python for Automation](#key-features--benefits-of-python-for-automation)
-        - [Simple Syntax](#simple-syntax)
-        - [Extensive Libraries](#extensive-libraries)
-        - [Cross-Platform Compatibility](#cross-platform-compatibility)
-        - [Integration Capabilities](#integration-capabilities)
-      - [Practical Applications of Python for Automation](#practical-applications-of-python-for-automation)
-        - [File Management](#file-management)
-        - [Web Scraping](#web-scraping)
-        - [Data Processing \& Analysis](#data-processing--analysis)
-        - [System Administration](#system-administration)
-        - [Task Scheduling](#task-scheduling)
-        - [GUI Automation](#gui-automation)
-      - [Best Practices for Python Automation](#best-practices-for-python-automation)
-        - [Modularisation](#modularisation)
-        - [Error Handling](#error-handling)
-        - [Logging \& Monitoring](#logging--monitoring)
-        - [Documentation](#documentation)
-        - [Testing](#testing)
+    - [3.1.2. Python for Automation: Streamlining Tasks with Scripting](#312-python-for-automation-streamlining-tasks-with-scripting)
+      - [3.1.2.1. Introduction to Python for Automation](#3121-introduction-to-python-for-automation)
+      - [3.1.2.2. Key Features \& Benefits of Python for Automation](#3122-key-features--benefits-of-python-for-automation)
+        - [3.1.2.2.1. Simple Syntax](#31221-simple-syntax)
+        - [3.1.2.2.2. Extensive Libraries](#31222-extensive-libraries)
+        - [3.1.2.2.3. Cross-Platform Compatibility](#31223-cross-platform-compatibility)
+        - [3.1.2.2.4. Integration Capabilities](#31224-integration-capabilities)
+      - [3.1.2.3. Practical Applications of Python for Automation](#3123-practical-applications-of-python-for-automation)
+        - [3.1.2.3.1. File Management](#31231-file-management)
+        - [3.1.2.3.2. Web Scraping](#31232-web-scraping)
+        - [3.1.2.3.3. Data Processing \& Analysis](#31233-data-processing--analysis)
+        - [3.1.2.3.4. System Administration](#31234-system-administration)
+        - [3.1.2.3.5. Task Scheduling](#31235-task-scheduling)
+        - [3.1.2.3.6. GUI Automation](#31236-gui-automation)
+      - [3.1.2.4. Best Practices for Python Automation](#3124-best-practices-for-python-automation)
+        - [3.1.2.4.1. Modularisation](#31241-modularisation)
+        - [3.1.2.4.2. Error Handling](#31242-error-handling)
+        - [3.1.2.4.3. Logging \& Monitoring](#31243-logging--monitoring)
+        - [3.1.2.4.4. Documentation](#31244-documentation)
+        - [3.1.2.4.5. Testing](#31245-testing)
   - [3.2. Databases](#32-databases)
     - [3.2.1. Database Management](#321-database-management)
       - [3.2.1.1. Sharding](#3211-sharding)
@@ -2224,31 +2224,76 @@ TODO: Order in which to do this testing.
         - [3.5.1.11.1. Diagnosing Errors](#351111-diagnosing-errors)
         - [3.5.1.11.2. Obtaining a Thread Dump](#351112-obtaining-a-thread-dump)
       - [3.5.1.12. Glossary (Jenkins)](#35112-glossary-jenkins)
-  - [Python Development](#python-development)
-    - [Python Anti-Patterns](#python-anti-patterns)
-      - [Correctness](#correctness)
-      - [Maintainability](#maintainability)
-      - [Readability](#readability)
-      - [Security](#security)
-      - [Performance](#performance)
-      - [Django](#django)
-    - [Python Security Cheat Sheet](#python-security-cheat-sheet)
-      - [Always Sanitise External Data](#always-sanitise-external-data)
-      - [Scan Your Code](#scan-your-code)
-      - [Be Careful When Downloading Packages](#be-careful-when-downloading-packages)
-      - [Review Your Dependency Licences](#review-your-dependency-licences)
-      - [Do Not Use Pre-Installed Python Version](#do-not-use-pre-installed-python-version)
-      - [Use Python's Capability for Visual Environments](#use-pythons-capability-for-visual-environments)
-      - [Set `DEBUG = False` in Production](#set-debug--false-in-production)
-      - [Be Careful With String FOrmatting](#be-careful-with-string-formatting)
-      - [(De)serialise Very Cautiously](#deserialise-very-cautiously)
-      - [Use Python Type Annotations](#use-python-type-annotations)
-  - [3.6. Telecommunications](#36-telecommunications)
-    - [3.6.1. Network Slicing](#361-network-slicing)
-      - [3.6.1.1. What is Network Slicing?](#3611-what-is-network-slicing)
-      - [3.6.1.2. Benefits of Network Slicing](#3612-benefits-of-network-slicing)
-      - [3.6.1.3. How 5G Network Slicing Works](#3613-how-5g-network-slicing-works)
-      - [3.6.1.4. Network Slicing Use Cases](#3614-network-slicing-use-cases)
+  - [3.6. Python Development](#36-python-development)
+    - [3.6.1. Python Anti-Patterns](#361-python-anti-patterns)
+      - [3.6.1.1. Correctness](#3611-correctness)
+        - [3.6.1.1.1. Accessing a Protected Member From Outside a Class](#36111-accessing-a-protected-member-from-outside-a-class)
+        - [3.6.1.1.2. Assigning a `lambda` Expression to Variable](#36112-assigning-a-lambda-expression-to-variable)
+        - [3.6.1.1.3. Assigning to Built-In Function](#36113-assigning-to-built-in-function)
+        - [3.6.1.1.4. Bad `except` Clauses Order](#36114-bad-except-clauses-order)
+        - [3.6.1.1.5. Bad First Argument Given to `super()`](#36115-bad-first-argument-given-to-super)
+        - [3.6.1.1.6. `else` Clause on Loop Without a `break` Statement](#36116-else-clause-on-loop-without-a-break-statement)
+        - [3.6.1.1.7. `___exit___` Must Accept 3 Arguments: `type`, `value`, `traceback`](#36117-___exit___-must-accept-3-arguments-type-value-traceback)
+        - [3.6.1.1.8. Explicit Returning in `___init___`](#36118-explicit-returning-in-___init___)
+        - [3.6.1.1.9. `___future___` Import Is Not the First Non-Docstring Statement](#36119-___future___-import-is-not-the-first-non-docstring-statement)
+        - [3.6.1.1.10. Implementing Java-style Getters \& Setters](#361110-implementing-java-style-getters--setters)
+        - [3.6.1.1.11. Indentation Contains Mixed Spaces \& Tabs](#361111-indentation-contains-mixed-spaces--tabs)
+        - [3.6.1.1.12. Indentation Contains Tabs](#361112-indentation-contains-tabs)
+        - [3.6.1.1.13. Method Could Be a Function](#361113-method-could-be-a-function)
+        - [3.6.1.1.14. Method Has No Argument](#361114-method-has-no-argument)
+        - [3.6.1.1.15. Missing Argument to `super()`](#361115-missing-argument-to-super)
+        - [3.6.1.1.16. Using a Mutable Default Value as an Argument](#361116-using-a-mutable-default-value-as-an-argument)
+        - [3.6.1.1.17. No Exception Type(s) Specified](#361117-no-exception-types-specified)
+        - [3.6.1.1.18. Not Using `defaultdict()`](#361118-not-using-defaultdict)
+        - [3.6.1.1.19. Not Using `else` Where Appropriate in a Loop](#361119-not-using-else-where-appropriate-in-a-loop)
+        - [3.6.1.1.20. Not Using Explicit Unpacking](#361120-not-using-explicit-unpacking)
+        - [3.6.1.1.21. Not Using `get()` to Return a Default Value From a Dict](#361121-not-using-get-to-return-a-default-value-from-a-dict)
+        - [3.6.1.1.22. Not Using `setdefault()` to Initialise a Dictionary](#361122-not-using-setdefault-to-initialise-a-dictionary)
+      - [3.6.1.2. Maintainability](#3612-maintainability)
+        - [3.6.1.2.1. Using Wildcard Imports (`from ... import *`)](#36121-using-wildcard-imports-from--import-)
+        - [3.6.1.2.2. Not Using `with` to Open Files](#36122-not-using-with-to-open-files)
+        - [3.6.1.2.3. Returning More Than One Variable Type From Function Call](#36123-returning-more-than-one-variable-type-from-function-call)
+        - [3.6.1.2.4. Using the `global` Statement](#36124-using-the-global-statement)
+        - [3.6.1.2.5. Using a Single Letter to Name Your Variables](#36125-using-a-single-letter-to-name-your-variables)
+        - [3.6.1.2.6. Dynamically Creating Variable/Method/Function Names](#36126-dynamically-creating-variablemethodfunction-names)
+      - [3.6.1.3. Readability](#3613-readability)
+        - [3.6.1.3.1. Asking For Permission Instead of Forgiveness](#36131-asking-for-permission-instead-of-forgiveness)
+        - [3.6.1.3.2. Comparing Things to `None` the Wrong Way](#36132-comparing-things-to-none-the-wrong-way)
+        - [3.6.1.3.3. Comparing Things to `True` the Wrong Way](#36133-comparing-things-to-true-the-wrong-way)
+        - [3.6.1.3.4. Using `type()` to Compare Types](#36134-using-type-to-compare-types)
+        - [3.6.1.3.5. Not Using Dict Comprehensions](#36135-not-using-dict-comprehensions)
+        - [3.6.1.3.6. Not Using Dict Keys When Formatting Strings](#36136-not-using-dict-keys-when-formatting-strings)
+        - [3.6.1.3.7. Not Using `items()` to Iterate Over a Dictionary](#36137-not-using-items-to-iterate-over-a-dictionary)
+        - [3.6.1.3.8. Not Using Names Tuples When Returning More Than One Value From a Function](#36138-not-using-names-tuples-when-returning-more-than-one-value-from-a-function)
+        - [3.6.1.3.9. Not Using Unpacking For Updating Multiple Values at Once](#36139-not-using-unpacking-for-updating-multiple-values-at-once)
+        - [3.6.1.3.10. Not Using `zip()` to Iterate Over a Pair of Lists](#361310-not-using-zip-to-iterate-over-a-pair-of-lists)
+        - [3.6.1.3.11. Putting Type Information in a Variable Name](#361311-putting-type-information-in-a-variable-name)
+        - [3.6.1.3.12. Testing for Object Identity Should be `is`](#361312-testing-for-object-identity-should-be-is)
+        - [3.6.1.3.13. Using an Unpythonic Loop](#361313-using-an-unpythonic-loop)
+        - [3.6.1.3.14. Using `map()` or `filter` Where List Comprehension is Possible](#361314-using-map-or-filter-where-list-comprehension-is-possible)
+        - [3.6.1.3.15. Using Camel Case in Function Names](#361315-using-camel-case-in-function-names)
+      - [3.6.1.4. Security](#3614-security)
+        - [3.6.1.4.1. Use of `exec`](#36141-use-of-exec)
+      - [3.6.1.5. Performance](#3615-performance)
+        - [3.6.1.5.1. Using `key in list` to Check if Key if Contained in List](#36151-using-key-in-list-to-check-if-key-if-contained-in-list)
+        - [3.6.1.5.2. Not Using `iteritems()` to Iterate Over a Large Dictionary](#36152-not-using-iteritems-to-iterate-over-a-large-dictionary)
+    - [3.6.2. Python Security Cheat Sheet](#362-python-security-cheat-sheet)
+      - [3.6.2.1. Always Sanitise External Data](#3621-always-sanitise-external-data)
+      - [3.6.2.2. Scan Your Code](#3622-scan-your-code)
+      - [3.6.2.3. Be Careful When Downloading Packages](#3623-be-careful-when-downloading-packages)
+      - [3.6.2.4. Review Your Dependency Licences](#3624-review-your-dependency-licences)
+      - [3.6.2.5. Do Not Use Pre-Installed Python Version](#3625-do-not-use-pre-installed-python-version)
+      - [3.6.2.6. Use Python's Capability for Visual Environments](#3626-use-pythons-capability-for-visual-environments)
+      - [3.6.2.7. Set `DEBUG = False` in Production](#3627-set-debug--false-in-production)
+      - [3.6.2.8. Be Careful With String Formatting](#3628-be-careful-with-string-formatting)
+      - [3.6.2.9. (De)serialise Very Cautiously](#3629-deserialise-very-cautiously)
+      - [3.6.2.10. Use Python Type Annotations](#36210-use-python-type-annotations)
+  - [3.7. Telecommunications](#37-telecommunications)
+    - [3.7.1. Network Slicing](#371-network-slicing)
+      - [3.7.1.1. What is Network Slicing?](#3711-what-is-network-slicing)
+      - [3.7.1.2. Benefits of Network Slicing](#3712-benefits-of-network-slicing)
+      - [3.7.1.3. How 5G Network Slicing Works](#3713-how-5g-network-slicing-works)
+      - [3.7.1.4. Network Slicing Use Cases](#3714-network-slicing-use-cases)
 - [4. Tutorial Notes](#4-tutorial-notes)
   - [4.1. Neovim Tutorial](#41-neovim-tutorial)
     - [4.1.1. Lesson 0](#411-lesson-0)
@@ -33335,7 +33380,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   them. Just use quotes all the time. It is always correct.
   [GitHub: Replacing `bash` Scripting with Python][github-replacing-bash-scripting-with-python]
 
-### Python for Automation: Streamlining Tasks with Scripting
+### 3.1.2. Python for Automation: Streamlining Tasks with Scripting
 
 - In today's fast-paced digital world, automation plays a vital role in improving efficiency, productivity, and
   reliability across various industries. Python, with its simplicity, versatility, and extensive libraries, has emerged
@@ -33345,23 +33390,23 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-#### Introduction to Python for Automation
+#### 3.1.2.1. Introduction to Python for Automation
 
 - Python's popularity in the automation space stems from its readability, ease of use, and rich ecosystem of libraries
   and frameworks.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-#### Key Features & Benefits of Python for Automation
+#### 3.1.2.2. Key Features & Benefits of Python for Automation
 
-##### Simple Syntax
+##### 3.1.2.2.1. Simple Syntax
 
 - Python's clean and intuitive syntax makes it easy to write and understand code, even for beginners. This simplicity
   accelerates the development of automation scripts and reduces the learning curve for new users.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Extensive Libraries
+##### 3.1.2.2.2. Extensive Libraries
 
 - Python boasts a vast ecosystem of libraries and modules tailored for automation tasks. Libraries like `os`, `shutil`,
   `requests`, `selenium`, `pandas`, and `openpyxl` provide robust functionality for file manipulation, web interaction,
@@ -33369,7 +33414,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Cross-Platform Compatibility
+##### 3.1.2.2.3. Cross-Platform Compatibility
 
 - Python is inherently cross-platform, meaning automation scripts written in Python can run seamlessly on various
   operating systems, including Windows, macOS, and Linux. This flexibility simplifies deployment and ensures consistent
@@ -33377,7 +33422,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Integration Capabilities  
+##### 3.1.2.2.4. Integration Capabilities  
 
 - Python seamlessly integrates with other technologies and tools commonly used in automation workflows. Whether you're
   interacting with APIs, databases, web services, or third-party applications, Python offers libraries and frameworks
@@ -33385,9 +33430,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
   
-#### Practical Applications of Python for Automation
+#### 3.1.2.3. Practical Applications of Python for Automation
 
-##### File Management
+##### 3.1.2.3.1. File Management
 
 - Python simplifies file management tasks such as renaming files, copying/moving files between directories, and batch
   processing files. With libraries like `os` and `shutil`, you can perform these operations efficiently and
@@ -33414,7 +33459,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       os.rename(existing_file_path, new_file_path)
   ```
 
-##### Web Scraping
+##### 3.1.2.3.2. Web Scraping
 
 - Python's `requests` library and web scraping frameworks like `Beautiful Soup` and `Scrapy` enable developers to
   extract data from websites and web applications. Web scraping is commonly used for data collection, competitive
@@ -33443,7 +33488,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       print(title.text)
   ```
 
-##### Data Processing & Analysis
+##### 3.1.2.3.3. Data Processing & Analysis
 
 - Python's data processing libraries, including `pandas`, `NumPy`, and `SciPy`, facilitate data manipulation,
   transformation, and analysis. These libraries are can be used for tasks such as data cleansing, aggregation,
@@ -33461,7 +33506,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   print(result.stdout)
   ```
 
-##### System Administration
+##### 3.1.2.3.4. System Administration
 
 - Python simplifies system administration tasks such as server provisioning, configuration management, and log
   analysis. Frameworks like `Fabric` and `Ansible` provide powerful tools for automating deployment, orchestration, and
@@ -33507,7 +33552,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       print("Executing custom task...")
   ```
 
-##### Task Scheduling
+##### 3.1.2.3.5. Task Scheduling
 
 - Python allows you to schedule and automate recurring tasks using libraries like `schedule` and `cron`. Task
   scheduling is useful for performing routine maintenance, generating reports, and executing batch jobs at predefined
@@ -33531,7 +33576,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       time.sleep(1)
   ```
 
-##### GUI Automation
+##### 3.1.2.3.6. GUI Automation
 
 - Python libraries like `PyAutoGUI` enable you to automate tasks involving graphical user interfaces (GUIs), such as
   interacting with desktop applications or web browsers.
@@ -33548,37 +33593,37 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   pyautogui.click()
   ```
 
-#### Best Practices for Python Automation
+#### 3.1.2.4. Best Practices for Python Automation
 
-##### Modularisation
+##### 3.1.2.4.1. Modularisation
 
 - Break down automation scripts into modular components or functions to improve code organisation, reusability, and
   maintainability. Modularisation enhances readability and allows for easier debugging and testing.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Error Handling
+##### 3.1.2.4.2. Error Handling
 
 - Implement robust error handling mechanisms to gracefully handle exceptions and errors that may occur during script
   execution. Proper error handling prevents script failures and ensures the reliability of automation workflows.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Logging & Monitoring
+##### 3.1.2.4.3. Logging & Monitoring
 
 - Incorporate logging and monitoring functionality into automation scripts to track execution progress, record errors,
   and generate audit trails. Logging helps troubleshoot issues and provides visibility into script behaviour.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Documentation
+##### 3.1.2.4.4. Documentation
 
 - Document automation scripts thoroughly, including descriptions of functionality, input parameters, output formats,
   and usage instructions. Well-documented scripts are easier to understand, maintain, and share with other team members.
   [Medium: Python for Automation: Streamlining Tasks with Scripting][
     medium-python-for-automation-streamlining tasks-with-scripting]
 
-##### Testing
+##### 3.1.2.4.5. Testing
 
 - Adopt a testing mindset and write automated tests to validate the behaviour and correctness of automation scripts.
   Unit tests, integration tests, and end-to-end tests help identify and prevent regressions and ensure the reliability
@@ -35364,11 +35409,724 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## Python Development
+## 3.6. Python Development
 
-### Python Anti-Patterns
+### 3.6.1. Python Anti-Patterns
+
+- There is an overwhelming amount of Python books that show you how to do things by focusing on best practices and
+  examples of good code. There are only very few books out there that show you how not to do things.There is an
+  overwhelming amount of Python books that show you how to do things by focusing on best practices and examples of good
+  code. There are only very few books out there that show you how not to do things. This section shows you things you
+  should never do in practice.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+#### 3.6.1.1. Correctness
+
+- Avoid the following anti-patterns, that are likely to literally break your code or make it do the wrong things.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+##### 3.6.1.1.1. Accessing a Protected Member From Outside a Class
 
 -
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.2. Assigning a `lambda` Expression to Variable
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.3. Assigning to Built-In Function
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.4. Bad `except` Clauses Order
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.5. Bad First Argument Given to `super()`
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.6. `else` Clause on Loop Without a `break` Statement
+
+- The `else` clause of a loop is executed when the loop sequence is empty. When a loop specifies no `break` statement,
+  the `else` clause will always execute, because the loop sequence will eventually always become empty. Sometimes this
+  is the intended behaviour, in which case you can ignore this error. However, most times this is not the intended
+  behaviour, and you should therefore review the code in question.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+- The code below demonstrates some potential unintended behaviour that can result when a loop contains an `else`
+  statement yet never specifies a `break` statement. `contains_magic_number()` iterates through a list of numbers and
+  compares each number to the magic number. If the magic number is found then the function prints `"The list contains
+  the magic number."` If it doesn't then the function prints `"This list does NOT contain the magic number."` When the
+  code calls the function with a `list` of `range(10)` and a magic number of `5`, you would expect the code to only
+  print `"The list contains the magic number."` However, the code also prints `"This list does NOT contain the magic
+  number."` This is because the `range(10)` `list` eventually becomes empty, which prompts Python to execute the `else`
+  clause.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  def contains_magic_number(list, magic_number):
+      for i in list:
+          if i == magic_number:
+              print("This list contains the magic number")
+      else:
+          print("This list does NOT contain the magic number")
+
+  contains_magic_number(range(10), 5)
+  # This list contains the magic number.
+  # This list does NOT contain the magic number.
+  ```
+
+- If the `else` clause should not always execute at the end of a loop clause, then the code should add a `break`
+  statement within the loop block.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  def contains_magic_number(list, magic_number):
+      for i in list:
+          if i == magic_number:
+              print("This list contains the magic number.")
+              # added break statement here
+              break
+      else:
+          print("This list does NOT contain the magic number.")
+
+  contains_magic_number(range(10), 5)
+  # This list contains the magic number.
+  ```
+
+##### 3.6.1.1.7. `___exit___` Must Accept 3 Arguments: `type`, `value`, `traceback`
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+````
+
+##### 3.6.1.1.8. Explicit Returning in `___init___`
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.9. `___future___` Import Is Not the First Non-Docstring Statement
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.10. Implementing Java-style Getters & Setters
+
+- Python is not Java. If you need to set or get the members of a class or object, just expose the member publicly and
+  access it directly. If you need to perform some computations before getting or setting the member, then use Python's
+  built-in `property` decorator.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+- The programmer below comes to Python from a long career as a Java programmer. For every class member that they want
+  to expose publicly, they define a `get` and `set` method for that member. This is common practice in Java, but is
+  frowned upon in Python as a waste of time and a cause of unnecessary code.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Square(object):
+      def __init__(self, length):
+          self._length = length
+      # Java-style
+      def get_length(self):
+          return self._length
+      # Java-style
+      def set_length(self, length):
+          self._length = length
+
+  r = Square(5)
+  r.get_length()
+  r.set_length(6)
+  ```
+
+- In Python, it is acceptable to simply access class or object members directly. The modified code below exposes the
+  length member as a public member. This is signified by the fact that there is no underscore character at the
+  beginning of the member name. The `get_length()` and `set_length()` methods are no longer necessary so they have
+  been deleted.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Square(object):
+      def __init__(self, length):
+          self.length = length
+
+  r = Square(5)
+  r.length
+  r.length = 6
+  ```
+
+- When a member needs to be slightly protected and cannot be simply exposed as a public member, use Python's `property`
+  decorator to accomplish the functionality of getters and setters.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Square(object):
+      def __init__(self, length):
+          self._length = length
+
+      @property
+      def length(self):
+          return self._length
+
+      @length.setter
+      def length(self, value):
+          self._length = value
+
+      @length.deleter
+      def length(self):
+          del self._length
+
+  r = Square(5)
+  r.length  # automatically calls getter
+  r.length = 6  # automatically calls setter
+  ```
+
+##### 3.6.1.1.11. Indentation Contains Mixed Spaces & Tabs
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.12. Indentation Contains Tabs
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.13. Method Could Be a Function
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.14. Method Has No Argument
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.15. Missing Argument to `super()`
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.16. Using a Mutable Default Value as an Argument
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.17. No Exception Type(s) Specified
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.18. Not Using `defaultdict()`
+
+- When a `dict` is created using `defaultdict()`, the value for each key in the `dict` will default to the value
+  provided as the first argument of `defaultdict()`. This is more concise and less error-prone than manually setting
+  the value of each key.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+- The code below defines an empty `dict` and then manually initialises the keys of the `dict`. Although there is
+  nothing wrong with this code, there is a more concise and less error-prone way to achieve the same idea, as explained
+  in the solution below.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  d = {}
+
+  if "k" not in d:
+      d["k"] = 6
+
+  d["k"] += 1
+
+  print(d["k"])  # 7
+  ```
+
+- The modified code below uses `defaultdict` to initialise the `dict`. Whenever a new key is created, the default value
+  for that key is `6`. This code is functionally equivalent to the previous code, but this one is more concise and less
+  error-prone, because every key automatically initializes to `6` with no work on the part of the programmer.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  from collections import defaultdict
+
+  d = defaultdict(lambda : 6)
+  d["k"] += 1
+
+  print(d["k"])  # 7
+  ```
+
+##### 3.6.1.1.19. Not Using `else` Where Appropriate in a Loop
+
+- The Python language provides a built-in else clause for for loops. If a for loop completes without being prematurely
+  interrupted by a break or return statement, then the else clause of the loop is executed.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+- The code below searches a list for a magic number. If the magic number is found in the list, then the code prints
+  `"Magic number found"`. If the magic number is not found, then the code prints `"Magic number not found"`. The code
+  uses a flag variable called `found` to keep track of whether or not the magic number was found in the list. The logic
+  in this code is valid; it will accomplish its task, but the Python language has built-in language constructs for
+  handling this exact scenario and which can express the same idea much more concisely and without the need for flag
+  variables that track the state of the code.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  l = [1, 2, 3]
+  magic_number = 4
+  found = False
+
+  for n in l:
+      if n == magic_number:
+          found = True
+          print("Magic number found")
+          break
+
+  if not found:
+      print("Magic number not found")
+  ```
+
+- In Python, you can declare an `else` loop in conjunction with a `for` loop. If the `for` loop iterates to completion
+  without being prematurely interrupted by a `break` or `return` statement, then Python executes the `else` clause of
+  the loop. In the modified code below, the `for` loop will iterate through all three items in the list. Because the
+  magic number is not contained in the list, the `if` statement always evaluates to `False`, and therefore the `break`
+  statement is never encountered. As Python never encounters a `break` statement while iterating over the loop, it
+  executes the `else` clause. The modified code below is functionally equivalent to the original code above, but this
+  modified code is more concise than the original code and does not require any flag variables for monitoring the state
+  of the code.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  l = [1, 2, 3]
+  magic_number = 4
+
+  for n in l:
+      if n == magic_number:
+          print("Magic number found")
+          break
+  else:
+      print("Magic number not found")
+  ```
+
+##### 3.6.1.1.20. Not Using Explicit Unpacking
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.21. Not Using `get()` to Return a Default Value From a Dict
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.1.22. Not Using `setdefault()` to Initialise a Dictionary
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+#### 3.6.1.2. Maintainability
+
+- A program is maintainable if it is easy to understand and modify the code, even for someone that is unfamiliar with
+  the code base. Avoid the following anti-patterns to increase maintainability and avoid creating spaghetti code.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+##### 3.6.1.2.1. Using Wildcard Imports (`from ... import *`)
+
+- When an import statement in the pattern of `from MODULE import *` is used it may become difficult for a Python
+  validator to detect undefined names in the program that imported the module. Furthermore, as a general best practice,
+  `import` statements should be as specific as possible and should only import what they need.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+- The following code imports everything from the `math` built-in Python module.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  # wildcard import = bad
+  from math import *
+  ```
+
+- The `import` statement should be refactored to be more specific about what functions or variables it is using from
+  the `math` module. The modified code below specifies exactly which module member it is using, which happens to be
+  `ceil` in this example.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  from math import ceil
+  ```
+
+- There are some cases where making the `import` statement specific is not a good solution. In those cases, use the
+  solution as illustrated in the following code block:
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  - It may be unpractical or cumbersome to create or maintain the list of objects to be imported from a module
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  - A direct `import` would bind to the same name as that of another object (e.g. `from asyncio import TimeoutError`)
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  - The module that the object is imported from would provide valuable contextual information if it is right next to
+    the object when it's used.
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  import math
+  x = math.ceil(y)
+
+  # or
+
+  import multiprocessing as mp
+  pool = mp.pool(8)
+  ```
+
+##### 3.6.1.2.2. Not Using `with` to Open Files
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.2.3. Returning More Than One Variable Type From Function Call
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.2.4. Using the `global` Statement
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.2.5. Using a Single Letter to Name Your Variables
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.2.6. Dynamically Creating Variable/Method/Function Names
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+#### 3.6.1.3. Readability
+
+- A program is readable if it is easy to understand, even for someone that is unfamiliar with the code base. Avoid the
+  following anti-patterns to increase readability.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 -
@@ -35377,9 +36135,295 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-#### Correctness
+##### 3.6.1.3.1. Asking For Permission Instead of Forgiveness
 
 -
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.2. Comparing Things to `None` the Wrong Way
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.3. Comparing Things to `True` the Wrong Way
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.4. Using `type()` to Compare Types
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.5. Not Using Dict Comprehensions
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.6. Not Using Dict Keys When Formatting Strings
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.7. Not Using `items()` to Iterate Over a Dictionary
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.8. Not Using Names Tuples When Returning More Than One Value From a Function
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.9. Not Using Unpacking For Updating Multiple Values at Once
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.10. Not Using `zip()` to Iterate Over a Pair of Lists
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.11. Putting Type Information in a Variable Name
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.12. Testing for Object Identity Should be `is`
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.13. Using an Unpythonic Loop
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.14. Using `map()` or `filter` Where List Comprehension is Possible
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+##### 3.6.1.3.15. Using Camel Case in Function Names
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+-
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+```python
+
+```
+
+#### 3.6.1.4. Security
+
+- Python is a highly dynamic language that gives the programmer many ways to change the runtime behaviour of his code
+  and even dynamically execute new code. This is powerful but can be a security risk as well.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 -
@@ -35388,187 +36432,308 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-#### Maintainability
+##### 3.6.1.4.1. Use of `exec`
 
--
+- The `exec` statement enables you to dynamically execute arbitrary Python code which is stored in literal strings.
+  Building a complex string of Python code and then passing that code to `exec` results in code that is hard to read
+  and hard to test. Anytime the `Use of exec` error is encountered, you should go back to the code and check if there
+  is a clearer, more direct way to accomplish the task.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The sample code below composes a literal string containing Python code and then passes that string to `exec` for
+  execution. This is an indirect and confusing way to program in Python.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  s = "print(\"Hello, World!\")"
+  exec s
+  ```
+
+- In most scenarios, you can easily refactor the code to avoid the use of `exec`. In the example below, the use of
+  `exec` has been removed and replaced by a function.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-#### Readability
+  ```python
+  def print_hello_world():
+      print("Hello, World!")
 
--
+  print_hello_world()
+  ```
+
+#### 3.6.1.5. Performance
+
+- In Python, large performance gains can be obtained by using appropriate functions and directives. Avoid the following
+  anti-patterns to reduce overhead and make your code more performant.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+##### 3.6.1.5.1. Using `key in list` to Check if Key if Contained in List
+
+- Using `key in list` to iterate through a list can potentially take `n `iterations to complete, where `n` is the
+  number of items in the list. If possible, you should change the `list `to a `set` or `dict` instead, because Python
+  can search for items in a `set` or `dict` by attempting to directly accessing them without iterations, which is much
+  more efficient.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below defines a list `l` and then executes `if 3 in l` to check if the number `3` exists in the `list`. This
+  is inefficient. Behind the scenes, Python iterates through the `list` until it finds the number or reaches the end of
+  the `list`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-#### Security
+  ```python
+  l = [1, 2, 3, 4]
 
--
+  # iterates over three elements in the list
+  if 3 in l:
+      print("The number 3 is in the list.")
+  else:
+      print("The number 3 is NOT in the list.")
+  ```
+
+- In the modified code below, the `list` has been changed to a `set`. This is much more efficient behind the scenes, as
+  Python can attempt to directly access the target number in the `set`, rather than iterate through every item in the
+  `list` and compare every item to the target number.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  s = set([1, 2, 3, 4])
+
+  if 3 in s:
+      print("The number 3 is in the list.")
+  else:
+      print("The number 3 is NOT in the list.")
+  ```
+
+##### 3.6.1.5.2. Not Using `iteritems()` to Iterate Over a Large Dictionary
+
+- There is a significant impact on performance of `dict` iteration.. This anti-pattern only applies to Python versions
+  2.x. In Python 3.x `items()` returns an iterator (consequently, this anti-pattern is no longer relevant to Python
+  versions 3.x as `iteritems()` has been removed from Python 3.x).
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below defines one large `dict` (created with `dict` comprehension) that generates large amounts of data.
+  When using the `items()` method, the iteration needs to be completed and stored in-memory before the `for` loop can
+  begin iterating. This uses ~1.6GB of memory.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-#### Performance
+  ```python
+  d = {i: i * 2 for i in xrange(10000000)}
 
--
+  # Slow and memory hungry.
+  for key, value in d.items():
+      print("{0} = {1}".format(key, value))
+  ```
+
+- The updated code below uses `iteritems()`` instead of `items()`` method. Note how the code is exactly the same, but
+  memory usage is 50% less (~800MB) memory than the `items()` solution.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+  ```python
+  d = {i: i * 2 for i in xrange(10000000)}
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+  # Memory efficient.
+  for key, value in d.iteritems():
+      print("{0} = {1}".format(key, value))
+  ```
 
-#### Django
+### 3.6.2. Python Security Cheat Sheet
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+- Using Snyk's learnings as a developer security company - as well as Python-specific best practices - they compiled
+  this updated cheat sheet to make sure you keep your Python code secure. It's important to note that Snyk's data about
+  the Python ecosystem, as well as academic research, shows that Python is no more (or less) secure than other widely
+  used languages.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+#### 3.6.2.1. Always Sanitise External Data
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+- One vector of attack for any application is external data, which can be used for injection, XSS, or denial of service
+  (DOS) attacks. A general rule for maintaining Python security is to always sanitise data (remove sensitive
+  information) from external sources whether the data originates from a user input form, scraping a website, or a
+  database request. Also, sanitise as soon as the data enters the application to prevent insecure handling. This
+  reduces the risk that unsanitised sensitive data will be handled by your application accidentally.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
-### Python Security Cheat Sheet
+- Starting with sanitisation, it always makes more sense to check for what the input should be than to try to handle
+  the exceptions. We also recommend using well-maintained libraries for sanitisation. Here are two:
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+  - `schema`: A library for validating Python data structures, such as those obtained from config-files, forms,
+    external services or command-line parsing, converted from JSON/YAML (or something else) to Python data-types.
+    [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+  - `bleach`: An allowed-list-based HTML sanitising library that escapes or strips markup and attributes.
+    [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+#### 3.6.2.2. Scan Your Code
+
+- Developers have a wide array of static code analysis tools at their disposal for maintaining Python security.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- At the linter level, PEP8 has been serving for decades now as a style guide for Python. Various tools are available
+  (and built into IDEs) to check against this style guide, like `pep8`, `pylint`, `flake8`, and more.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- Tools like `bandit` transform code into an abstract syntax tree (AST) and perform queries on it to find typical
+  security issues. This is a level above what typical linters do, which work on a syntactical level. Still, `bandit` is
+  limited by its intermediate representation and performance. For example, bandit cannot detect data flow related
+  issues (known as taint-analysis) and these result in devastating flaws (injections like SQL injection or XSS as an
+  example).
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- Static Application Security Testing (SAST) tools like Snyk Code run a semantic analysis, taking even complex
+  interfile issues into account. Unlike other tools on this level, Snyk Code is developer-friendly by scanning fast and
+  integrating into the IDE (or your command line directly). Snyk Code explains its highly accurate findings and
+  provides help, including examples how to fix your Python security problems.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+#### 3.6.2.3. Be Careful When Downloading Packages
+
+- It is easy to install packages, but they're also an easy way to introduce Python security vulnerabilities. Typically,
+  developers use the standard package installer for Python (`pip`) which uses the Python Pack Index (PyPI).
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- PyPI has a procedure for reporting security concerns. If someone reports a malicious package, or a problem within
+  PyPI, it is addressed, but packages added to PyPI do not undergo review - this would be an unrealistic expectation of
+  the volunteers who maintain PyPI.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- Therefore, it is wise to assume that there are malicious packages within PyPI and you should act accordingly.
+  Reasonable steps include doing a bit of research on the package you want to install and ensuring that you carefully
+  spell out the package name (a package named for a common misspelling of a popular package could execute malicious
+  code).
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+#### 3.6.2.4. Review Your Dependency Licences
+
+- When considering using an open source project, it is important to understand how these projects are licensed. Open
+  source projects are free and available to use, but there may still be terms and conditions applied. These terms
+  usually involve how the software is used, whether you need to make any changes you make to the software publicly
+  available, and other similar requirements. You should become familiar with the open source licenses necessary for the
+  projects you use, so you are sure that you are not compromising yourself legally.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- If the project adopts a more restrictive license than you anticipated (GPL, SSPL, etc.), you can end up cornering
+  yourself, leaving you to either comply with the terms of the license or cease using the project. Additionally, if you
+  need to make changes to a project that does not have a license, you might run afoul with copyright law.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- To ensure that your project is sustainable and you do not expose yourself to unnecessary Python security and legal
+  risks, scan and fix license and vulnerability issues in your project's dependencies.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+#### 3.6.2.5. Do Not Use Pre-Installed Python Version
+
+- Most POSIX systems come preloaded with a version of Python. The problem with most built-in Python distributions is
+  that they aren't current.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- So, make sure to use the latest version of Python available for your system as well as the official containers
+  designed to run Python and keep it updated.
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+#### 3.6.2.6. Use Python's Capability for Visual Environments
+
+- Python is equipped to separate application development into virtual environments. A virtual environment isolates the
+  Python interpreter, libraries, and scripts installed into it. This means that instead of using a global Python
+  version and global Python dependencies for all your projects, you can have project-specific virtual environments that
+  can use their own Python (and Python dependency) versions
+  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+
+- Virtual environments make developing, packaging, and shipping secure Python applications easier. Using them is highly
+  recommended.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
 -
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+#### 3.6.2.7. Set `DEBUG = False` in Production
+
+- In a development environment, it makes sense to have verbose error messages. In production though, you want to
+  prevent any leaks of information that might help an attacker to learn more about your environment, libraries, or
+  code.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
-#### Always Sanitise External Data
-
--
+- By default, most frameworks have debugging switched on. For example, Django has it enabled in the `settings.py`. Make
+  sure to switch debugging to `False` in production to prevent leaking sensitive application information to attackers.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+#### 3.6.2.8. Be Careful With String Formatting
+
+- Despite Python's idea of having one - and only one - way to do things, it actually has four different ways to format
+  strings (three methods for versions prior to Python 3.6). String formatting has gotten progressively more flexible
+  and powerful (`f`-strings are particularly interesting), but as flexibility increases, so does the potential for
+  exploits. For this reason, Python users should carefully consider how they format strings with user-supplied input.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+- Python has a built-in module named `string`. This module includes the `Template` class, which is used to create
+  template strings. For the following code using the `Template` class, the variable `greeting` is evaluated as:
+  `"Hello World, my name is Hayley."`
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
-#### Scan Your Code
+  ```python
+  from string import Template
+  greeting_template = Template(“Hello World, my name is $name.”)
+  greeting = greeting_template.substitute(name=”Hayley”)
+  ```
 
--
+- The `string` format method is a bit cumbersome because it requires an `import` statement and is less flexible with
+  types. It also doesn't evaluate Python statements the way `f`-strings do. These constraints make template strings an
+  excellent choice when dealing with user input.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+#### 3.6.2.9. (De)serialise Very Cautiously
+
+- Python provides a built-in mechanism to serialise and deserialise Python objects called "pickling" using the `pickle`
+  module. This is known to be insecure and it is advisable to use it very cautiously and only on trusted data sources.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+- The new de facto standard for serialisation/deserialisation is YAML. The `PyYAMLpackage` provides a mechanism to
+  serialise custom data types to YAML and back again. A simple but effective way to secure the usage of PyYAML is using
+  `yaml.SafeLoader()` instead of `yaml.Loader()` as a loader. This prevents loading of custom classes but supports
+  standard types like hashes and arrays.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
-#### Be Careful When Downloading Packages
-
--
+- Another typical use case is XML. Standard libraries are often used but are vulnerable to typical attacks - namely DOS
+  attacks or external entity expansion (an external source is references). A good first line of defence is a package
+  called `defusedxml`. It has safeguards against these typical XML security issues.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+#### 3.6.2.10. Use Python Type Annotations
+
+- With Python version 3.5, type hints were introduced. While the Python runtime does not enforce type annotations,
+  tools such as type checkers, IDEs, linters, SASTs, and others can benefit from the developer being more explicit. The
+  following is an example to highlight the idea.  As it is not enforced by the runtime, the security usage of type
+  hints is limited.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
--
+  ```python
+  def open_helper(file: str, mode: str) -> str:
+
+  # Some other code
+
+  open_helper('/some/path', 'r')  # Passes type check
+  open_helper('/other/path', 'typo')  # No error in type checker
+  ```
+
+- `Literal[...]` was introduced with Python version 3.8 and is not enforced by the runtime (you can pass whatever
+  string you want in our example) but type checkers can now discover that the parameter is outside the allowed set and
+  warn you. This is a great piece of functionality, and not just for Python security.
   [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
 
-#### Review Your Dependency Licences
+  ```python
+  MODE = Literal['r', 'rb', 'w', 'wb']
+  def open_helper(file: str, mode: MODE) -> str:
 
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+  # Some other code
 
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+  open_helper('/some/path', 'r')  # Passes type check
+  open_helper('/other/path', 'typo')  # Error in type checker
+  ```
 
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
+## 3.7. Telecommunications
 
-#### Do Not Use Pre-Installed Python Version
+### 3.7.1. Network Slicing
 
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-#### Use Python's Capability for Visual Environments
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-#### Set `DEBUG = False` in Production
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-#### Be Careful With String FOrmatting
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-#### (De)serialise Very Cautiously
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-#### Use Python Type Annotations
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
--
-  [Snyk: Python Security Best Practices Cheat Sheet][snyk-python-security-best-practices-cheat-sheet]
-
-## 3.6. Telecommunications
-
-### 3.6.1. Network Slicing
-
-#### 3.6.1.1. What is Network Slicing?
+#### 3.7.1.1. What is Network Slicing?
 
 - An operators' best answer on how to build and manage a network, that meets and exceeds the emerging requirements from
   a wide range of users.
@@ -35607,7 +36772,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the additional details on network slicing.</summary>
 
-#### 3.6.1.2. Benefits of Network Slicing
+#### 3.7.1.2. Benefits of Network Slicing
 
 - End-to-end network slicing enables new business model innovation and use cases across all verticals, and creates new
   revenue opportunities for communication service providers. It provides service flexibility and ability to deliver
@@ -35628,11 +36793,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Ericsson: Navigate the Network Slicing Transformation Journey][
     ericsson-navigate-the-network-slicing-transformation-journey]
 
-#### 3.6.1.3. How 5G Network Slicing Works
+#### 3.7.1.3. How 5G Network Slicing Works
 
 ![How 5G Network Slicing Works](https://cdn.ttgtmedia.com/rms/onlineimages/networking-slicing_diagram.png)
 
-#### 3.6.1.4. Network Slicing Use Cases
+#### 3.7.1.4. Network Slicing Use Cases
 
 - Network slicing supports use cases that focus on performance, capacity and security. Many use cases involve the
   business models based on the Internet of Things. Some network slicing use cases involve the following:
