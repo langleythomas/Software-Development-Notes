@@ -37143,9 +37143,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   | **Short Option** | **Long Option** |                  **Description**                  |
   | :--------------: | :-------------: | :-----------------------------------------------: |
-  |        ic        |   ignorecase    | Ignore upper/lower case when searching/replacing. |
-  |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
-  |       hls        |    hslearch     |          Highlight all matching phrases.          |
+  |       `ic`       |  `ignorecase`   | Ignore upper/lower case when searching/replacing. |
+  |       `is`       |   `incsearch`   | Show partial matches for a search/replace phrase. |
+  |      `hls`       |   `hslearch`    |          Highlight all matching phrases.          |
 
 ### 4.1.31. Lesson 7.1: Getting Help
 
