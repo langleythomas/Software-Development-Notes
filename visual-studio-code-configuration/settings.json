@@ -1160,7 +1160,7 @@
     "explorer.compactFolders": false,
 
     // Linux-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Linux distribution)
-    "files.dialog.defaultPath": "/home/thomas/Repos",
+    // "files.dialog.defaultPath": "/home/thomas/Repos",
     // Windows-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Windows release)
     // "files.dialog.defaultPath": "C:\\Repos",
     "files.eol": "\n",
