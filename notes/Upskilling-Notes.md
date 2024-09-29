@@ -13,10 +13,11 @@
 # Online
 ## Automation
 ## Python
-### Python Testing
+### Python Programming
 - Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
 - Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
 - Python Practice Problems: Parsing CSV Files: https://realpython.com/python-interview-problem-parsing-csv-files/
+- PEP 8 - Style Guide for Python: https://peps.python.org/pep-0008/
 
 # Books
 ## Automation
@@ -30,7 +31,7 @@
   - Pattern Matching with Regular Expressions
   - Input Validation
   - Reading and Writing Files
-  - Organizing Files
+  - Organising Files
   - Debugging
   - Web Scraping
   - Working with Excel Spreadsheets
@@ -411,6 +412,7 @@ TODO: Order in which to do this testing.
 [oreilly-the-art-of-readable-code]: <https://www.oreilly.com/library/view/the-art-of/9781449318482/>
 [oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]: <https://www.oreilly.com/library/view/clean-architecture-a/9780134494272/>
 [oreilly-vi--vim-editors-pocket-reference-2nd-edition]: <https://www.oreilly.com/library/view/vi-and-vim/9781449303082/>
+[python-enhancement-proposals-pep-8-style-guide]: <https://peps.python.org/pep-0008/>
 [quantified-code-the-little-book-of-python-anti-patterns]: <https://docs.quantifiedcode.com/python-anti-patterns/>
 [snyk-python-security-best-practices-cheat-sheet]: <https://snyk.io/blog/python-security-best-practices-cheat-sheet/>
 [stack-exchange-what-do-the-numbers-in-a-man-page-mean]: <https://unix.stackexchange.com/a/138643>
@@ -2234,7 +2236,7 @@ TODO: Order in which to do this testing.
         - [3.6.1.1.5. Bad First Argument Given to `super()`](#36115-bad-first-argument-given-to-super)
         - [3.6.1.1.6. `else` Clause on Loop Without a `break` Statement](#36116-else-clause-on-loop-without-a-break-statement)
         - [3.6.1.1.7. `___exit___` Must Accept 3 Arguments: `type`, `value`, `traceback`](#36117-___exit___-must-accept-3-arguments-type-value-traceback)
-        - [3.6.1.1.8. Explicit Returning in `___init___`](#36118-explicit-returning-in-___init___)
+        - [3.6.1.1.8. Explicit Return in `___init___`](#36118-explicit-return-in-___init___)
         - [3.6.1.1.9. `___future___` Import Is Not the First Non-Docstring Statement](#36119-___future___-import-is-not-the-first-non-docstring-statement)
         - [3.6.1.1.10. Implementing Java-style Getters \& Setters](#361110-implementing-java-style-getters--setters)
         - [3.6.1.1.11. Indentation Contains Mixed Spaces \& Tabs](#361111-indentation-contains-mixed-spaces--tabs)
@@ -2261,8 +2263,8 @@ TODO: Order in which to do this testing.
         - [3.6.1.3.2. Comparing Things to `None` the Wrong Way](#36132-comparing-things-to-none-the-wrong-way)
         - [3.6.1.3.3. Comparing Things to `True` the Wrong Way](#36133-comparing-things-to-true-the-wrong-way)
         - [3.6.1.3.4. Using `type()` to Compare Types](#36134-using-type-to-compare-types)
-        - [3.6.1.3.5. Not Using Dict Comprehensions](#36135-not-using-dict-comprehensions)
-        - [3.6.1.3.6. Not Using Dict Keys When Formatting Strings](#36136-not-using-dict-keys-when-formatting-strings)
+        - [3.6.1.3.5. Not Using `dict` Comprehensions](#36135-not-using-dict-comprehensions)
+        - [3.6.1.3.6. Not Using `dict` Keys When Formatting Strings](#36136-not-using-dict-keys-when-formatting-strings)
         - [3.6.1.3.7. Not Using `items()` to Iterate Over a Dictionary](#36137-not-using-items-to-iterate-over-a-dictionary)
         - [3.6.1.3.8. Not Using Names Tuples When Returning More Than One Value From a Function](#36138-not-using-names-tuples-when-returning-more-than-one-value-from-a-function)
         - [3.6.1.3.9. Not Using Unpacking For Updating Multiple Values at Once](#36139-not-using-unpacking-for-updating-multiple-values-at-once)
@@ -16417,7 +16419,7 @@ file called donors that looked like this:
   4 limerick oyster
   5 corpulent porpoise
 
-  $ ./pluralize < input.file
+  $ ./pluralise < input.file
   1 hen
   2 ducks
   3 squawking gooses
@@ -21099,7 +21101,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       shift
     fi
 
-    # Are we using the special syntax? Make sure $1 isn't empty, then
+    # Are we using the special syntax? Ensure $1 isn't empty, then
     # match the first 3 characters of $1 to see if they are '...', then
     # make sure there isn't a slash by trying a substitution; if it fails,
     # there's no slash.
@@ -22262,7 +22264,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   1 2 3 4 5
   ```
 
-- Make sure you fully test both the argument returned and what you intend to do with it. For example, if you are
+- Ensure you fully test both the argument returned and what you intend to do with it. For example, if you are
   deleting old data, use `echo` to test the command that would be performed before doing it live. Also test that you
   have a value at all, or else you could end up doing `rm -rf` and getting an error. Never do something like
   `rm -rf /$variable`, because if `$variable` is ever null you will start deleting the root directory, which is
@@ -29714,7 +29716,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 1.11.3.8.4. Choose Your Moment
 
-- As part of understanding what your audience needs to hear, you need to work out what their priorities are. Make sure
+- As part of understanding what your audience needs to hear, you need to work out what their priorities are. Ensure
   what you're saying is relevant in time, as well as in content. Sometime, all it takes is a simple question "Is this a
   good time to talk about...?"
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -35427,98 +35429,217 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.1. Accessing a Protected Member From Outside a Class
 
--
+- Accessing a protected member (a member prefixed with `_`) of a class from outside that class usually calls for
+  trouble, since the creator of that class did not intend this member to be exposed.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self._width = width
+          self._height = height
+
+  r = Rectangle(5, 6)
+  # direct access of protected member
+  print("Width: {:d}".format(r._width))
+  ```
+
+- If you are absolutely sure that you need to access the protected member from the outside, do the following:
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  - Ensure that accessing the member from outside the class does not cause any inadvertent side effects.
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```
-
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
-```python
-
-```
+  - Refactor it such that it becomes part of the public interface of the class.
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 ##### 3.6.1.1.2. Assigning a `lambda` Expression to Variable
 
--
+- The sole advantage that a `lambda` expression has over a `def` is that the `lambda` can be anonymously embedded
+  within a larger expression. If you are going to assign a name to a `lambda`, you are better off just defining it as a
+  `def`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide] The first
+  form means that the name of the resulting function object is specifically `f` instead of the generic `lambda`. This
+  is more useful for tracebacks and string representations in general. The use of the assignment statement eliminates
+  the sole benefit a `lambda` expression can offer over an explicit `def` statement (i.e. that it can be embedded
+  inside a larger expression).
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # Good
+  def f(x): return 2*x
 
-```
+  # Bad
+  f = lambda x: 2*x
+  ```
 
--
+- The following code assigns a `lambda` function which returns the double of its input to a variable. This is
+  functionally identical to creating a `def`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  f = lambda x: 2 * x
+  ```
 
-```
+- Refactor the `lambda` expression into a named `def` expression.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  def f(x): return 2 * x
+  ```
 
 ##### 3.6.1.1.3. Assigning to Built-In Function
 
--
+- Python has a number of built-in functions that are always accessible in the interpreter. Unless you have a special
+  reason, you should neither overwrite these functions nor assign a value to a variable that has the same name as a
+  built-in function. Overwriting a built-in might have undesired side effects or can cause runtime errors. Python
+  developers usually use built-ins ‘as-is'. If their behaviour is changed, it can be very tricky to trace back the
+  actual error.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- In the code below, the `list` built-in is overwritten. This makes it impossible, to use `list` to define a variable
+  as a `list`. As this is a very concise example, it is easy to spot what the problem is. However, if there are
+  hundreds of lines between the assignment to `list` and the assignment to `cars`, it might become difficult to
+  identify the problem.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # Overwriting built-in 'list' by assigning values to a variable called 'list'
+  list = [1, 2, 3]
 
-```
+  # Defining a list 'cars', will now raise an error
+  cars = list()
 
--
+  # Error: TypeError: 'list' object is not callable
+  ```
+
+- Unless you have a very specific reason to use variable names that have the same name as built-in functions, it is
+  recommended to use a variable name that does not interfere with built-in function names.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # Numbers used as variable name instead of 'list'
+  numbers = [1, 2, 3]
 
-```
+  # Defining 'cars' as list, will work just fine
+  cars = list()
+  ```
 
 ##### 3.6.1.1.4. Bad `except` Clauses Order
 
--
+- When an exception occurs, Python will search for the first exception clause which matches the exception type that
+  occurred. It doesn't need to be an exact match. If the exception clause represents a base class of the raised
+  exception, then Python considers that exception clause to be a match. E.g. if a `ZeroDivisionError` exception is
+  raised and the first exception clause is `Exception`, then the `Exception` clause will execute because
+  `ZeroDivisionError` is a sub class of `Exception`. Therefore, more specific exception clauses of sub classes should
+  always be placed before the exception clauses of their base classes to ensure that exception handling is as specific
+  and as helpful as possible.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below performs a division operation that results in a `ZeroDivisionError`. The code contains an except
+  clause for this type of error, which would be really useful because it pinpoints the exact cause of the problem.
+  However, the `ZeroDivisionError` exception clause is unreachable because there is a `Exception` exception clause
+  placed before it. When Python experiences an exception, it will linearly test each exception clause and execute the
+  first clause that matches the raised exception. The match does not need to be identical. So long as the raised
+  exception is a sub class of the exception listed in the exception clause, then Python will execute that clause and
+  will skip all other clauses. This defeats the purpose of exception clauses, which is to identify and handle
+  exceptions with as much precision as possible.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  try:
+      5 / 0
+  except Exception as e:
+      print("Exception")
+  # unreachable code!
+  except ZeroDivisionError as e:
+      print("ZeroDivisionError")
+  ```
 
-```
-
--
+- The modified code below places the `ZeroDivisionError` exception clause in front of the `Exception` exception clause.
+  Now when the exception is triggered the `ZeroDivisionError` exception clause will execute, which is much more optimal
+  because it is more specific.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
+  ```python
+  try:
+      5 / 0
+  except ZeroDivisionError as e:
+      print("ZeroDivisionError")
+  except Exception as e:
+      print("Exception")
+  ```
 
 ##### 3.6.1.1.5. Bad First Argument Given to `super()`
 
--
+- `super()` enables you to access the methods and members of a parent class without referring to the parent class by
+  name. For a single inheritance situation the first argument to `super()` should be the name of the current child
+  class calling `super()`, and the second argument should be `self` (that is, a reference to the current object
+  calling `super()`). This anti-pattern only applies to Python versions 2.x.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- Python raises a `TypeError` when it attempts to execute the call to `super() `below. The first argument should be the
+  name of the child class that is calling `super()`. The author of the code mistakenly provided `self` as the first
+  argument.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
 
-```
+  class Square(Rectangle):
+      def __init__(self, length):
+          # bad first argument to super()
+          super(self, Square).__init__(length, length)
 
--
+  s = Square(5)
+  print(s.area)  # does not execute
+  ```
+
+- In the modified code below the author has fixed the call to super() so that the name of the child class which is
+  calling `super()` (`Square` in this case) is the first argument to the method.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
 
-```
+  class Square(Rectangle):
+      def __init__(self, length):
+          # super() executes fine now
+          super(Square, self).__init__(length, length)
+
+  s = Square(5)
+  print(s.area)  # 25
+  ```
+
+- Python 3 adds a new simpler `super()`, which requires no arguments. The correct way to call `super()` in Python 3
+  code is as follows.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+
+  class Square(Rectangle):
+      def __init__(self, length):
+          # This is equivalent to super(Square, self).__init__(length, length)
+          super().__init__(length, length)
+
+  s = Square(5)
+  print(s.area)  # 25
+  ```
 
 ##### 3.6.1.1.6. `else` Clause on Loop Without a `break` Statement
 
@@ -35588,24 +35709,57 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ````
 
-##### 3.6.1.1.8. Explicit Returning in `___init___`
+##### 3.6.1.1.8. Explicit Return in `___init___`
 
--
+- `__init__` is a special Python method that is automatically called when memory is allocated for a new object. The
+  sole purpose of `__init__` is to initialise the values of instance members for the new object. Using `__init__` to
+  return a value implies that a program is using `__init__` to do something other than initialise the object. This
+  logic should be moved to another instance method and called by the program later, after initialisation.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The `__init__` method of the `Rectangle` class below attempts to return the area of the rectangle within the
+  `__init__` method. This violates the rule of only using `__init__` to initialise instance members.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+          # causes "Explicit return in __init__" error
+          return self.area
+  ```
 
-```
-
--
+- Remove the return statement in the `__init__` method that is returning a value.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+          # return statement removed from here
+  ```
 
-```
+- There is no reason why the `Rectangle` class MUST return the area immediately upon initialisation. This program logic
+  should be moved to a separate method of the `Rectangle` class. The program can call the method later, after the
+  object has successfully initialised.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self._area = width * height
+
+      @property
+      # moved the logic for returning area to a separate method
+      def area(self):
+          return self._area
+  ```
 
 ##### 3.6.1.1.9. `___future___` Import Is Not the First Non-Docstring Statement
 
@@ -35698,41 +35852,67 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.11. Indentation Contains Mixed Spaces & Tabs
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide], all Python
+  code should be consistently indented with 4 spaces, never tabs.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The following code mixes spaces and tabs for indentation. The `print("Hello, World!")` statement is indented with a
+  tab. The `print("Goodbye, World!")` statement is indented with 4 spaces.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def print_hello_world():
+  # indented with tab
+      print("Hello, World!")
 
-```
+  def print_goodbye_world():
+      # indented with 4 spaces
+      print("Goodbye, World!")
+  ```
 
--
+- All Python code should be consistently indented with 4 spaces.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def print_hello_world():
+      print("Hello, World!")  # indented with 4 spaces
 
-```
+  def print_goodbye_world():
+      print("Goodbye, World!")  # indented with 4 spaces
+  ```
 
 ##### 3.6.1.1.12. Indentation Contains Tabs
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide], all Python
+  code should be consistently indented with 4 spaces for each level of indentation, not tabs.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The following code uses tabs for indentation. Python code should be indented with four spaces for each level of
+  indentation.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def print_hello_world():
+      # indented with tab
+      print("Hello, World!")
 
-```
+  def print_goodbye_world():
+      # indented with tab
+      print("Goodbye, World!")
+  ```
 
--
+- All Python code should be consistently indented with 4 spaces.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def print_hello_world():
+      # indented with 4 spaces
+      print("Hello, World!")
 
-```
+  def print_goodbye_world():
+      # indented with 4 spaces
+      print("Goodbye, World!")
+  ```
 
 ##### 3.6.1.1.13. Method Could Be a Function
 
@@ -35812,22 +35992,76 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.17. No Exception Type(s) Specified
 
--
+- The function `divide` simply divides `a` by `b`. To avoid invalid calculations (e.g., a division by zero), a
+  `try`-`except` block is added. This is valid and ensures that the function always returns a result. However, by
+  securing your code with the try clause, you might hide actual programming errors, e.g., that you pass a string or an
+  object as `b`, instead of a number. By not specifying an exception type, you not only hide this error but you also
+  lose information about the error itself.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  def divide(a, b):
+
+      try:
+          result = a / b
+      except:
+          result = None
+
+      return result
+  ```
+
+- Handle exceptions with Python's built-in exception types. With this pattern, you are able to handle exceptions based
+  on their actual exception-type. The first exception type that matches the current error is handled first. Thus, it is
+  recommended to handle specific exception types first (e.g., `ZeroDivisionError`) and generic error types (e.g.,
+  `Exception`) towards the end of the `try`-`except` block.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def divide(a, b):
 
-```
+      result = None
 
--
+      try:
+          result = a / b
+      except ZeroDivisionError:
+          print("Type error: division by 0.")
+      except TypeError:
+          # E.g., if b is a string
+          print("Type error: division by '{0}'.".format(b))
+      except Exception as e:
+          # handle any other exception
+          print("Error '{0}' occurred. Arguments {1}.".format(e.message, e.args))
+      else:
+          # Executes if no exception occurred
+          print("No errors")
+      finally:
+          # Executes always
+          if result is None:
+              result = 0
+
+      return result
+  ```
+
+- In addition to Python's standard exceptions, you can implement your own exception classes.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class DivisorTooSmallError(StandardError):
+      def __init__(self, arg):
+          self.args = arg
 
-```
+
+  def divide(a, b):
+      if b < 1:
+          raise DivisorTooSmallError
+      return a / b
+
+
+  try:
+      divide(10, 0)
+  except DivisorTooSmallError:
+      print("Unable to divide these numbers!")
+  ```
 
 ##### 3.6.1.1.18. Not Using `defaultdict()`
 
@@ -35919,60 +36153,106 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.20. Not Using Explicit Unpacking
 
--
+- When you see multiple variables being defined followed by an assignment to a `list` (e.g.,
+  `elem0, elem1, elem2 = elems`, where `elem0`, `elem1`, and `elem2` are variables and `elems` is a `list`), Python
+  will automatically iterate through the `list` and assign `elems[0]` to `elem0`, `elems[1]` to `elem1`, etc.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below manually creates multiple variables to access the items in a `list`. This code is error-prone and
+  unnecessarily verbose, as well as tedious to write.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  elems = [4, 7, 18]
 
-```
+  elem0 = elems[0]
+  elem1 = elems[1]
+  elem2 = elems[2]
+  ```
 
--
+- The modified code below is functionally equivalent to the original code, but this code is more concise and less prone
+  to error.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  elems = [4, 7, 18]
 
-```
+  elem0, elem1, elem2 = elems
+  ```
 
 ##### 3.6.1.1.21. Not Using `get()` to Return a Default Value From a Dict
 
--
+- Frequently you will see code create a variable, assign a default value to the variable, and then check a `dict` for a
+  certain key. If the key exists, then the value of the key is copied into the value for the variable. While there is
+  nothing wrong this, it is more concise to use the built-in method `dict.get(key[, default])` from the Python Standard
+  Library. If the key exists in the `dict`, then the value for that key is returned. If it does not exist, then the
+  default value specified as the second argument to `get()` is returned. Note that the default value defaults to `None`
+  if a second argument is not provided.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below initialises a variable called `data` to an empty string. Then it checks if a certain key called
+  `message` exists in a `dict` called `dictionary`. If the key exists, then the value of that key is copied into the
+  `data` variable. Although there is nothing functionally wrong with this code, it is verbose and inefficient because
+  it queries the contents of `dictionary` twice. The next solution demonstrates how to express the same idea in a more
+  concise manner by using `dict.get(key[, default])`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  dictionary = {"message": "Hello, World!"}
 
-```
+  data = ""
 
--
+  if "message" in dictionary:
+      data = dictionary["message"]
+
+  print(data)  # Hello, World!
+  ```
+
+- The code below is functionally equivalent to the original code above, but this solution is more concise. When `get()`
+  is called, Python checks if the specified key exists in the `dict`. If it does, then `get()` returns the value of
+  that key. If the key does not exist, then `get()` returns the value specified in the second argument to `get()`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  dictionary = {"message": "Hello, World!"}
 
-```
+  data = dictionary.get("message", "")
+
+  print(data)  # Hello, World!
+  ```
 
 ##### 3.6.1.1.22. Not Using `setdefault()` to Initialise a Dictionary
 
--
+- When initialising a `dict`, it is common to see a code check for the existence of a key and then create the key if it
+  does not exist. Although there is nothing wrong with this, the exact same idea can be accomplished more concisely by
+  using the built-in `dict` method `setdefault()`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below checks if a key named list exists in a `dict` called `dictionary`. If it does not exist, then the code
+  creates the key and then sets its value to an empty `list`. The code then proceeds to append a value to the `list`.
+  Although there is nothing functionally wrong with this code, it is unnecessarily verbose. Later you will see how you
+  can use `setdefault()` to accomplish the same idea more concisely.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  dictionary = {}
 
-```
+  if "list" not in dictionary:
+      dictionary["list"] = []
 
--
+  dictionary["list"].append("list_item")
+  ```
+
+- The modified code below uses `setdefault()` to initialise the dictionary. When `setdefault()` is called, it will
+  check if the key already exists. If it does exist, then `setdefault()` does nothing. If the key does not exist, then
+  `setdefault()` creates it and sets it to the value specified in the second argument.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  dictionary = {}
 
-```
+  dictionary.setdefault("list", []).append("list_item")
+  ```
 
 #### 3.6.1.2. Maintainability
 
@@ -36030,98 +36310,237 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.2.2. Not Using `with` to Open Files
 
--
+- In Python 2.5, the `file` class was equipped with special methods that are automatically called whenever a file is
+  opened via a `with` statement (e.g. `with open("file.txt", "r") as file`). These special methods ensure that the file
+  is properly and safely opened and closed.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below does not use `with` to open a file. This code depends on the programmer remembering to manually close
+  the file via `close()` when finished. Even if the programmer remembers to call `close()` the code is still dangerous,
+  because if an exception occurs before the call to `close()`, then `close()` will not be called and the memory issues
+  can occur, or the file can be corrupted.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  f = open("file.txt", "r")
+  content = f.read()
+  1 / 0  # ZeroDivisionError
+  # never executes, possible memory issues or file corruption
+  f.close()
+  ```
 
-```
-
--
+- The modified code below is the safest way to open a file. The `file` class has some special built-in methods called
+  `__enter__()` and `__exit__()` which are automatically called when the file is opened and closed, respectively.
+  Python guarantees that these special methods are always called, even if an exception occurs.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
+  ```python
+  with open("file.txt", "r") as f:
+      content = f.read()
+      # Python still executes f.close() even though an exception occurs
+      1 / 0
+  ```
 
 ##### 3.6.1.2.3. Returning More Than One Variable Type From Function Call
 
--
+- If a function that is supposed to return a given type (e.g. `list`, `tuple`, `dict`) suddenly returns something else
+  (e.g. `None`), the caller of that function will always need to check the type of the return value before proceeding.
+  This makes for confusing and complex code. If the function is unable to produce the supposed return value it is
+  better to raise an exception that can be caught by the caller instead.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- In the code below, the function `get_secret_code()` returns a secret code when the code calling the function provides
+  the correct password. If the password is incorrect, the function returns `None`. This leads to hard-to-maintain code,
+  because the caller will have to check the type of the return value before proceeding.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def get_secret_code(password):
+      if password != "bicycle":
+          return None
+      else:
+          return "42"
 
-```
+  secret_code = get_secret_code("unicycle")
 
--
+  if secret_code is None:
+      print("Wrong password.")
+  else:
+      print("The secret code is {}".format(secret_code))
+  ```
+
+- When invalid data is provided to a function, a precondition to a function is not satisfied, or an error occurs during
+  the execution of a function, the function should not return any data. Instead, the function should raise an
+  exception. In the modified version of `get_secret_code()` shown below, `ValueError` is raised when an incorrect value
+  is given for the `password` argument.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def get_secret_code(password):
+      if password != "bicycle":
+          raise ValueError
+      else:
+          return "42"
 
-```
+  try:
+      secret_code = get_secret_code("unicycle")
+      print("The secret code is {}".format(secret_code))
+  except ValueError:
+      print("Wrong password.")
+  ```
 
 ##### 3.6.1.2.4. Using the `global` Statement
 
--
+- Global variables are dangerous because they can be simultaneously accessed from multiple sections of a program. This
+  frequently results in bugs. Most bugs involving global variables arise from one function reading and acting on the
+  value of a global variable before another function has the chance to set it to an appropriate value. Global variables
+  also make code difficult to read, because they force you to search through multiple functions or even modules just to
+  understand all the different locations where the global variable is used and modified.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below uses global variables and a function to compute the area and perimeter of a rectangle. As you can see,
+  even with two functions it becomes difficult to keep track of how the global variables are used and modified.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  WIDTH = 0 # global variable
+  HEIGHT = 0 # global variable
 
-```
+  def area(w, h):
+      global WIDTH # global statement
+      global HEIGHT # global statement
+      WIDTH = w
+      HEIGHT = h
+      return WIDTH * HEIGHT
 
--
+  def perimeter(w, h):
+      global WIDTH # global statement
+      global HEIGHT # global statement
+      WIDTH = w
+      HEIGHT = h
+      return ((WIDTH * 2) + (HEIGHT * 2))
+
+  print("WIDTH:" , WIDTH) # "WIDTH: 0"
+  print("HEIGHT:" , HEIGHT) # "HEIGHT: 0"
+
+  print("area():" , area(3, 4)) # "area(): 12"
+
+  print("WIDTH:" , WIDTH) # "WIDTH: 3"
+  print("HEIGHT:" , HEIGHT) # "HEIGHT: 4"
+  ```
+
+- One common solution for avoiding global variables is to create a class and store related global variables as members
+  of an instantiated object of that class. This results in more compact and safer code. In the modified code below, the
+  author eliminates the need for the global variables `WIDTH` and `HEIGHT` by encapsulating this data into a class
+  called `Rectangle`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+      def area(self):
+          return self.width * self.height
+      def circumference(self):
+          return ((self.width * 2) + (self.height * 2))
 
-```
+  r = Rectangle(3, 4)
+  print("area():" , r.area())
+  ```
 
 ##### 3.6.1.2.5. Using a Single Letter to Name Your Variables
 
--
+- Sometimes you see programmers trying to shorten the amount of text needed to write a piece of code, but when this
+  goes to extremes, it will result in extremely ugly and unreadable code.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  d = {'data': [{'a': 'b'}, {'b': 'c'}, {'c': 'd'}], 'texts': ['a', 'b', 'c']}
+
+  for k, v in d.iteritems():
+      if k == 'data':
+          for i in v:
+              # Do you know what are you iterating now?
+              for k2, v2 in i.iteritems():
+                  print(k2, v2)
+  ```
+
+- It is much better to write more text and to be much more precise about what each variable means.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  data_dict = {
+      'data': [{'a': 'b'}, {'b': 'c'}, {'c': 'd'}],
+      'texts': ['a', 'b', 'c']
+  }
 
-```
-
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
-```python
-
-```
+  for key, value in data_dict.iteritems():
+      if key == 'data':
+          for data_item in value:
+              # Do you know what are you iterating now?
+              for data_key, data_value in data_item.iteritems():
+                  print(data_key, data_value)
+  ```
 
 ##### 3.6.1.2.6. Dynamically Creating Variable/Method/Function Names
 
--
+- Sometimes a programmer gets an idea to make their work easier by creating magically working code that uses
+  `setattr()` and `getattr()` functions to set some variable. While this may look like a good idea, because there is no
+  need to write all the methods by hand, you are asking for trouble down the road.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- Consider the following code. You have some data and want to update the class with all of the data. Of course you
+  don't want to do this by hand, especially if there are tons of items in `data_dict`. However, when refactoring this
+  kind of code after several years, and you'd like to know where some variable is added to this class, you'd usually
+  use `grep` or `ack_grep` to find it. But when setting variables/methods/functions like this, you're screwed.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  data_dict = {'var1': 'Data1', 'var2': 'Data2'}
 
-```
 
--
+  class MyAwesomeClass:
+
+      def __init__(self, data_dict):
+          for key, value in data_dict.iteritems():
+              setattr(self, key, value)
+  ```
+
+- While previous example may look easy to find and debug, consider the following example. Now the class contains also
+  `unknownX` variables indexed by their count:
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  data_list = ['dat1', 'dat2', 'dat3']
+  data_dict = {'dat1': [1, 2, 3],
+               'dat2': [4, 5, 6],
+               'dat3': [7, 8, 9],
+               'dat4': [0, 4, 6]}
 
-```
+  class MyAwesomeClass:
+
+      def __init__(self, data_list, data_dict):
+          counter = 0
+
+          for key, value in data_dict.iteritems():
+              if key in data_list:
+                  setattr(self, key, value)
+              else:
+                  setattr(self, 'unknown' + str(counter), value)
+                  counter += 1
+  ```
+
+- While the approach in the examples above may be the easiest to write, it is the worst to maintain later. You should
+  always try to find another way to solve your problem. Typical examples include, and can vary depending on the task at
+  hand:
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  - Use a function to parse incoming data
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  - Use the data `dict`/`list` itself without class
+    [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 #### 3.6.1.3. Readability
 
@@ -36129,125 +36548,280 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   following anti-patterns to increase readability.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
 ##### 3.6.1.3.1. Asking For Permission Instead of Forgiveness
 
--
+- The Python community uses an EAFP (easier to ask for forgiveness than permission) coding style. This coding style
+  assumes that needed variables, files, etc. exist. Any problems are caught as exceptions. This results in a generally
+  clean and concise style containing a lot of `try` and `except` statements.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below uses an `if` statement to check if a file exists before attempting to use the file. This is not the
+  preferred coding style in the Python community. The community prefers to assume that a file exists and you have
+  access to it, and to catch any problems as exceptions.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  import os
 
-```
+  # violates EAFP coding style
+  if os.path.exists("file.txt"):
+      os.unlink("file.txt")
+  ```
 
--
+- The updated code below is a demonstration of the EAFP coding style, which is the preferred style in the Python
+  community. Unlike the original code, the modified code below simply assumes that the needed file exists, and catches
+  any problems as exceptions. For example, if the file does not exist, the problem will be caught as an `OSError`
+  exception.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  import os
 
-```
+  try:
+      os.unlink("file.txt")
+  # raised when file does not exist
+  except OSError:
+      pass
+  ```
 
 ##### 3.6.1.3.2. Comparing Things to `None` the Wrong Way
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide], the
+  preferred way to compare something to `None` is the pattern `if condition is None`. This is only a guideline. It can
+  be ignored if needed, but the purpose of the PEP 8 style guidelines is to improve the readability of code.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+-The statement below uses the equality operator to compare a variable to `None`. This is not the PEP 8 preferred
+  approach to comparing values to `None`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  number = None
 
-```
+  if number == None:
+      print("This works, but is not the preferred PEP 8 pattern")
+  ```
 
--
+- The code below uses the PEP 8 preferred pattern of `if condition is None`. Here the identity operator is is used. It
+  will check whether `number` is identical to `None`. is will return to `True` only if the two variables point to the
+  same object.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  number = None
 
-```
+  if number is None:
+      print("PEP 8 Style Guide prefers this pattern")
+  ```
 
 ##### 3.6.1.3.3. Comparing Things to `True` the Wrong Way
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide], the
+  preferred ways to compare something to `True` are the patterns `if condition is True:` or `if condition:`. This is
+  only a guideline. It can be ignored if needed. But the purpose of the PEP 8 Style Guide is to improve the readability
+  of code.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The statement below uses the equality operator to compare a boolean variable to `True`. This is not the PEP 8
+  preferred approach to comparing values to `True`. For sure, it is an anti-pattern not only in Python but in almost
+  every programming language.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  flag = True
 
-```
+  # Not PEP 8's preferred pattern
+  if flag == True:
+      print("This works, but is not the preferred PEP 8 pattern")
+  ```
 
--
+- The code below uses the PEP 8 preferred pattern of `if condition:`. If the type of the `condition` is Boolean, it is
+  obvious that comparing to `True` is redundant.  In the context of Boolean operations, and also when expressions are
+  used by control flow statements, the following values are interpreted as false: `False`, `None`, numeric zero of all
+  types, and empty strings and containers (including `string`, `tuple`, `list`, `dict`, `set` and `frozenset`). All
+  other values are interpreted as true.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  flag = True
 
-```
+  if flag:
+      print("PEP 8 Style Guide prefers this pattern")
+  ```
+
+- The code below uses the pattern described in PEP 8 as "worse", by comparing values to `True` using the pattern
+  `if condition is True:`. This pattern is useful, when you make actual distinction between `True` value and every
+  other that could be treated as true. The same applies to `if condition is False`. This expression is true only if
+  `condition` has actual value of `False` - not empty list, empty tuple, empty set, zero, etc.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  flag = True
+
+  if flag is True:
+      print("PEP 8 Style Guide abhors this pattern")
+  ```
 
 ##### 3.6.1.3.4. Using `type()` to Compare Types
 
--
+- The function `isinstance` is the best-equipped to handle type checking because it supports inheritance (e.g. an
+  instance of a derived class is an instance of a base class, too). Therefore `isinstance` should be used whenever type
+  comparison is required.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The `if` statement below uses the pattern `if type(OBJECT) is types.TYPE` to compare a `Rectangle` object to a
+  built-in type (`ListType` in this example). This is not the preferred pattern for comparing types. Note that the
+  following situation will not raise the error, although it should.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  import types
 
-```
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
 
--
+  class Circle(object):
+      def __init__(self, radius):
+          self.radius = radius
+
+  c = Circle(2)
+  r = Rectangle(3, 4)
+
+  # bad
+  if type(r) is not type(c):
+      print("object types do not match")
+  ```
+
+- The preferred pattern for comparing types is the built-in function `isinstance`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  import types
 
-```
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
 
-##### 3.6.1.3.5. Not Using Dict Comprehensions
+  r = Rectangle(3, 4)
 
--
+  # good
+  if isinstance(r, types.ListType):
+      print("object r is a list")
+  ```
+
+##### 3.6.1.3.5. Not Using `dict` Comprehensions
+
+- You may encounter the old style of initialising a `dict` (passing an iterable of key-value pairs) in older Python
+  code written before version 2.7. The new `dict` comprehension style is functionally equivalent and is much more
+  readable. Consider refactoring the old-style code to use the new style (but only if you are using Python 2.7 or
+  higher).
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below demonstrates the old syntax of dict initialization. Although there is nothing syntactically wrong with
+  this code, it is somewhat hard to read.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  numbers = [1,2,3]
 
-```
+  # hard to read
+  my_dict = dict([(number,number*2) for number in numbers])
 
--
+  print(my_dict)  # {1: 2, 2: 4, 3: 6}
+  ```
+
+- The modified code below uses the new dict comprehension syntax which was introduced in Python 2.7.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  numbers = [1, 2, 3]
 
-```
+  my_dict = {number: number * 2 for number in numbers}
 
-##### 3.6.1.3.6. Not Using Dict Keys When Formatting Strings
+  print(my_dict)  # {1: 2, 2: 4, 3: 6}
+  ```
 
--
+##### 3.6.1.3.6. Not Using `dict` Keys When Formatting Strings
+
+- When formatting a string with values from a `dict`, you can use the `dict` keys instead of explicitly defining all of
+  the format parameters. Consider this `dict` that stores the name and age of a person.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- Here is an example of formatting the string with values from the person. This is bad. If we added another key-value
+  pair to the person dictionary, we would have to change the string and the format arguments
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  person = {
+      'first': 'Tobin',
+      'age':20
+  }
 
-```
+  print('{0} is {1} years old'.format(
+      person['first'],
+      person['age'])
+  )
+  # Output: Tobin is 20 years old
 
--
+  person = {
+      'first': 'Tobin',
+      'last': 'Brown',
+      'age':20
+  }
+
+  # Bad: we have to change the replacement fields within
+  # our string, once we add new values
+  print('{0} {1} is {2} years old'.format(
+      person['first'],
+      person['last'],
+      person['age'])
+  )  # bad
+  # Output: Tobin Brown is 20 years old
+  ```
+
+- By using the dictionary keys in the string we are formatting, the code is much more readable and explicit.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  person = {
+      'first': 'Tobin',
+      'age':20
+  }
 
-```
+  print('{first} is {age} years old'.format(**person))
+  # Output: Tobin is 20 years old
+
+  person = {
+      'first':'Tobin',
+      'last': 'Brown',
+      'age':20
+  }
+  print('{first} {last} is {age} years old'.format(**person))
+  # Output: Tobin Brown is 20 years old
+  ```
+
+- Going even further, the same result can be achieved with your own objects by using `obj.__dict__`.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Person(object):
+
+      def __init__(self, first, last, age):
+          self.first = first
+          self.last = last
+          self.age = age
+
+      def __str__(self):
+          return '{first} {last} is {age} years old'.format(**self.__dict__)
+
+
+  person = Person('Tobin', 'Brown', 20)
+  print(person)
+  # Output: Tobin Brown is 20 years old
+  ```
 
 ##### 3.6.1.3.7. Not Using `items()` to Iterate Over a Dictionary
 
@@ -36346,90 +36920,115 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.3.12. Testing for Object Identity Should be `is`
 
--
+- Testing the identity of two objects can be achieved in python with a special operator called `is`. Most prominently
+  it is used to check whether an variable points to `None`. But the operator can examine any kind of identity. This
+  often leads to confusion because equality of two different objects will return `False`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- This code snippet will print `False` even though `a` and `b` have equal values. This can occur because `a` and `b`
+  are references that point to different objects which happen to have the same value. To verify the equality of two
+  variables the `==` operator should be used.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  a = range(10)
+  b = range(10)
 
-```
+  print((a is b))
+  ```
 
--
+- Only use the `is` operator if you want to check the exact identity of two references.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  some_list = None
 
-```
+  if some_list is None:
+      do_something_with_the_list()
+  ```
 
 ##### 3.6.1.3.13. Using an Unpythonic Loop
 
--
+- Creating a loop that uses an incrementing index to access each element of a list within the loop construct is not the
+  preferred style for accessing each element in a list. The preferred style is to use `enumerate()` to simultaneously
+  retrieve the index and list element.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below uses an index variable `i` in a `for` loop to iterate through the elements of a list. This is not the
+  preferred style for iterating through a list in Python.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  l = [1,2,3]
 
-```
+  # creating index variable
+  for i in range(0,len(l)):
+      # using index to access list
+      le = l[i]
+      print(i,le)
+  ```
 
--
+- The updated code below demonstrates the Pythonic style for iterating through a list. When you define two variables in
+  a `for` loop in conjunction with a call to `enumerate()` on a list, Python automatically assigns the first variable
+  as an index variable, and the second variable as the corresponding list element value for that index location in the
+  list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
+  ```python
+  for i, le in enumerate(l):
+      print(i, le)
+  ```
 
 ##### 3.6.1.3.14. Using `map()` or `filter` Where List Comprehension is Possible
 
--
+- For simple transformations that can be expressed as a list comprehension, use list comprehensions over `map()` or
+  `filter()`. Use `map()` or `filter()` for expressions that are too long or complicated to express with a list
+  comprehension. Although a `map()` or `filter()` expression may be functionally equivalent to a list comprehension,
+  the list comprehension is generally more concise and easier to read.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below defines a list, and then uses `map()` to create a second list which is just the doubles of each value
+  from the first list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  values = [1, 2, 3]
+  doubles = map(lambda x: x * 2, values)
+  ```
 
-```
-
--
+- In the modified code below, the code uses a list comprehension to generate the second list containing the doubled
+  values from the first list. Although this is functionally equivalent to the first code, the list comprehension is
+  generally agreed to be more concise and easier to read.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
+  ```python
+  values = [1, 2, 3]
+  doubles = [x * 2 for x in values]
+  ```
 
 ##### 3.6.1.3.15. Using Camel Case in Function Names
 
--
+- Per the [Python Enhancement Proposals: PEP 8 Style Guide][python-enhancement-proposals-pep-8-style-guide], function
+  names should be lowercase, with words separated by underscores.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  def someFunction():
+      print("Is not the preferred PEP 8 pattern for function names")
+  ```
+
+- The code below uses the PEP 8 preferred pattern of function names.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
-
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
-```python
-
-```
+  ```python
+  def some_function():
+      print("PEP 8 Style Guide prefers this pattern")
+  ```
 
 #### 3.6.1.4. Security
 
 - Python is a highly dynamic language that gives the programmer many ways to change the runtime behaviour of his code
   and even dynamically execute new code. This is powerful but can be a security risk as well.
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
--
-  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
-
--
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 ##### 3.6.1.4.1. Use of `exec`
@@ -37143,9 +37742,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   | **Short Option** | **Long Option** |                  **Description**                  |
   | :--------------: | :-------------: | :-----------------------------------------------: |
-  |       `ic`       |  `ignorecase`   | Ignore upper/lower case when searching/replacing. |
-  |       `is`       |   `incsearch`   | Show partial matches for a search/replace phrase. |
-  |      `hls`       |   `hslearch`    |          Highlight all matching phrases.          |
+  |        ic        |   ignorecase    | Ignore upper/lower case when searching/replacing. |
+  |        is        |    incsearch    | Show partial matches for a search/replace phrase. |
+  |       hls        |    hslearch     |          Highlight all matching phrases.          |
 
 ### 4.1.31. Lesson 7.1: Getting Help
 
