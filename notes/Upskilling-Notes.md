@@ -3,23 +3,10 @@
 
 <!--
 # Books
-## Command Line
-### `bash`
-- bash Cookbook (Humble Bundle)
-### Automation
-- Practical Process Automation (Humble Bundle), the following section:
-  - The Journey to Introduce Process Automation
-
-# Online
-## Automation
-## Python
-### Python Programming
-- Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
-- Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
-- Python Practice Problems: Parsing CSV Files: https://realpython.com/python-interview-problem-parsing-csv-files/
-- PEP 8 - Style Guide for Python: https://peps.python.org/pep-0008/
-
-# Books
+## Security
+- 97 Things Every Application Security Professional Should Know (Humble Bundle)
+- Cybersecurity Ops with bash (Humble Bundle)
+- Software Supply Chain Security (Humble Bundle)
 ## Automation
 - Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
   - Python Basics
@@ -52,6 +39,46 @@
   - Working with Network APIs
   - Continuous Integration
   - Network Automation Architecture
+## Command Line
+### `bash`
+- bash Cookbook (Humble Bundle)
+
+# Online
+## Python
+### Python Programming
+- Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
+- Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
+- Python Practice Problems: Parsing CSV Files: https://realpython.com/python-interview-problem-parsing-csv-files/
+- PEP 8 - Style Guide for Python: https://peps.python.org/pep-0008/
+## Deployment
+### Kubernetes
+#### Objects in Kubernetes
+- Kubernetes Namespaces: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
+- Kubernetes Labels & Selectors: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+- Kubernetes Finalizers: https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/
+#### Workloads
+- Kubernetes Pods: https://kubernetes.io/docs/concepts/workloads/pods/
+- Kubernetes Sidecar Containers: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
+- Kubernetes Ephemeral Containers: https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/
+- Kubernetes Pod Quality of Service Classes: https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/
+#### Configuration
+- Kubernetes ConfigMaps: https://kubernetes.io/docs/concepts/configuration/configmap/
+- Kubernetes Liveness, Readiness, & Startup Probes: https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/
+- Kubernetes Secrets: https://kubernetes.io/docs/concepts/configuration/secret/
+#### Cluster Architecture
+- Kubernetes Nodes: https://kubernetes.io/docs/concepts/architecture/nodes/
+#### Services, Load Balancing & Networking
+- Kubernetes Services: https://kubernetes.io/docs/concepts/services-networking/service/
+- Kubernetes Ingresses: https://kubernetes.io/docs/concepts/services-networking/ingress/
+- Kubernetes Ingress Controllers: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
+- Kubernetes Network Policies: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+#### Workload Management
+- Kubernetes Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
+- Kubernetes ReplicaSets: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+- Kubernetes StatefulSets: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
+- Kubernetes DaemonSets: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+- Kubernetes Jobs: https://kubernetes.io/docs/concepts/workloads/controllers/job/
+- Kubernetes CronJobs: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 
 # Online
 ## Pipelines
@@ -64,330 +91,6 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 # Books
 ## Professional Programmer Advice
 - The Pragmatic Programmer (Physical)
-
-# Online
-## Command Line
-### `bash`
-#### Variable Declaration and Differences
-- Local Variables: https://tldp.org/LDP/abs/html/localvar.html
-- Special Variable Types: https://tldp.org/LDP/abs/html/othertypesv.html
-- Declare/Typeset Options: https://tldp.org/LDP/abs/html/declareref.html
-- declare -r vs readonly in `bash`: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
-#### Best Practices
-- https://mywiki.wooledge.org/BashGuide/Practices
-- https://bertvv.github.io/cheat-sheets/Bash.html
-
-# Tutorials
-## Microservice Development
-- Learn to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
-
-# Books
-## Professional Programmer Advice
-- The Pragmatic Programmer (Physical)
-## Text Editors
-### Vi, Vim
-- `vi` and `vim` Editors (Physical)
-
-# Online
-## Command Line
-### `bash`
-- Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
-
-# Books
-## Command Line
-- Efficient Linux at the Command Line (Humble Bundle)
-## Security
-- Fundamentals of Information System Security, 4th Edition (To Be Bought)
-- Software Security: Building Security In (To Be Bought)
-- Practical UNIX and Internet Security, 3rd Edition (https://www.oreilly.com/library/view/practical-unix-and/0596003234/)
-- SSH: The Secure Shell: The Definitive Guide, 4th Edition
-- Linux Security Cookbook
-## DevOps
-- Python for DevOps (Humble Bundle)
-## Deployment
-- Docker Cookbook (Humble Bundle)
-- Docker: Up & Running, 3rd Edition (Humble Bundle)
-- Kubernetes: Up and Running, 3rd Edition (Humble Bundle)
-## Pipelines
-- Data Pipeline Pocket Reference (Humble Bundle)
-- Cost-Effective Data Pipelines (Humble Bundle)
-## Version Control:
-- Learning Git (Humble Bundle)
-- Learning GitHub Actions (Humble Bundle)
-
-# Tutorials
-## Deployment
-- AWS course
-
-# Online Notes
-## Energy Efficient Software
-- How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
-- Tutorial Starting Page: https://learn.greensoftware.foundation/
-- Software Carbon Intensity: https://sci.greensoftware.foundation/
-- Optimise your microservice architecture for sustainability: https://foxutech.medium.com/how-to-optimize-your-microservice-architecture-for-sustainability-e7218cef4749
-- Guide to developing eco-friendly architectures: https://www.linkedin.com/pulse/building-sustainable-microservices-guide-developing-rohit-asthana
-- Revisiting energy and performance in microservice applications: https://www.sciencedirect.com/science/article/abs/pii/S0167819121001010
-- Energy Consumption in Microservices Architecture: https://www.researchgate.net/publication/371754881_Energy_Consumption_in_Microservices_Architectures_A_Systematic_Literature_Review
-- Code optimisation tactics: https://medium.com/@maxmeinhardt/software-energy-efficiency-code-optimization-tactics-b95be4ffcaf7
-- Energy Efficient Programming Languages, Tools and Practices in Coding: https://curiosum.com/blog/green-coding-software-development-energy-efficient-programming-languages
-- How to build and design sustainable software: https://www.freecodecamp.org/news/design-and-build-sustainable-software/
-## Reading Documentation
-- How to Read Your Way to Becoming a Better Developer (Medium, https://medium.com/free-code-camp/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c)
-- Mastering the Art of Learning from Documentation: Pro Tips for Developers & Technical Professionals (Medium, https://medium.com/@aarafat27/mastering-the-art-of-learning-from-documentation-pro-tips-for-developers-and-technical-cd9ae1d34ecd)
-- Layman Explained: Reading Documentation (Medium, https://medium.com/@laymanExplained/layman-explained-reading-documentation-36c450e77e6b)
-## Text Editor
-- Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
-## Command Line
-- `bash` Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
-- `bash` Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
-- `bash` Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
-## Java Refresher
-- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
-
-Nice Notes to Look At:
-# Books:
-## Professional Programmer Advice
-- Apprenticeship Patterns (Humble Bundle)
-## Automation
-### Shell
-- Wicked Cool Shell Scripts (Humble Bundle)
-### PowerShell
-- PowerShell Cookbook (Humble Bundle)
-## Algorithms
-- Learning Algorithms (Humble Bundle)
-- Algorithms in a Nutshell (Humble Bundle)
-- Advanced Algorithms & Data Structures (Humble Bundle)
-## Professional Programmer Advice
-### Agile
-- The Art of Agile Development (Humble Bundle)
-- Head First Agile (Humble Bundle)
-### Better Programmer
-- Becoming a Better Programmer (Humble Bundle)
-- Apprenticeship Patterns (Humble Bundle)
-### Software Design & Development
-- Code Complete (Microsoft Press)
-- Skills of a Successful Software Engineer (Humble Bundle)
-### Making Decisions
-- Software Mistakes and Trade-offs: How to Make Good Programming Decisions (Humble Bundle)
-## Agile
-## Clean Code
-### Readable Code
-- The Art of Readable Code (Humble Bundle)
-- The Clean Coder (Physical)
-- Street Coder: The Rules to Break and How to Break Them (Humble Bundle)
-- Good Code, Bad Code (Humble Bundle)
-### Design Patterns
-- Head First Design Patterns (Humble Bundle)
-### Refactoring
-- Refactoring (Physical)
-- Five Lines of Code: How and When to Refactor (Humble Bundle)
-### Legacy Code
-- Working Effectively with Legacy Code (To Be Bought)
-## Architecture
-### Clean Architecture
-- Clean Architecture (Physical)
-### Designing Software
-- Software Architecture: The Hard Parts (Physical)
-## C Development
-- Head First C (Humble Bundle)
-## C++ Development
-- Something C++-related
-## Python Development
-- Python Cookbook (Humble Bundle)
-## Go Development
-- 100 Go Mistakes and How to Avoid Them (Humble Bundle)
-## Function Programming Language Development
-- Something related to Clojure, Lisp, or Haskell
-## Rust Development
-- Rust in Action (Humble Bundle)
-## Front-End Development
-- React Cookbook (Humble Bundle)
-- React Native in Action (Humble Bundle)
-## HTML
-- HTML & XHTML (Physical)
-## CSS
-- CSS: The Definitive Guide (Physical)
-## PHP
-- Learning PHP & MySQL (Physical)
-## Deployment
-- Docker Cookbook (Humble Bundle)
-## Pipelines
-- Data Pipeline Pocket Reference (Humble Bundle)
-
-Unordered List of Topics:
-- Design Patterns
-- Code Reviews
-- Microservice Architecture
-- Code Smells
-- Static Analysis
-- Code Coverage
-- Testing
-- HA
-- GA
-- BUR
-- Java Version Features
-- RAN
-- Software Role - DevOps vs Software Engineer
-- Documentation
-- Agile Ceremonies
-- Scrum
-- Agile
-- Waterfall
-- MTLS
-- Telecommunications
-- vi
-- nano
-- vim
-
-# Online
-## Application Architecture
-### Monolith
-### Microservice
-
-## Communication Protocols
-### TCP
-### UDP
-
-## Pipelines
-### Jenkins
-### Spinnaker
-
-## Programming
-### Programming Frameworks
-#### .NET
-#### React
-### Programming Languages
-#### C\#
-#### Erlang
-#### Golang
-#### JavaScript (Programming)
-#### Python (Programming)
-#### Rust
-#### TypeScript
-
-## Scripting
-### Scripting Languages
-#### `bash`
-#### JavaScript (Scripting)
-#### Python (Scripting)
-
-## Testing
-TODO: Order in which to do this testing.
-### Compatibility Testing
-### Device Testing
-#### Backwards Compatibility Testing
-#### Forwards Compatibility Testing
-#### Software Testing
-### Functional Testing
-<https://www.browserstack.com/guide/functional-testing>
-#### Integration Testing
-<https://www.browserstack.com/guide/integration-testing>
-#### Regression Testing
-<https://www.browserstack.com/guide/regression-testing>
-### Sanity Testing
-<https://www.browserstack.com/guide/sanity-testing>
-### Performance Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Endurance Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Load Testing
-<https://www.browserstack.com/guide/performance-testing>
-- SSH: The Secure Shell: The Definitive Guide, 4th Edition
-- Linux Security Cookbook
-#### Stress Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Spike Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Volume Testing
-<https://www.browserstack.com/guide/performance-testing>
-### Smoke Testing
-<https://www.browserstack.com/guide/smoke-testing>
-#### Unit Testing
-<https://www.browserstack.com/guide/unit-testing-a-detailed-guide>
-#### Usability Testing
-<https://www.browserstack.com/guide/website-usability-testing>
-### User Interface Testing
-<https://www.browserstack.com/guide/ui-testing-guide>
-#### Exploratory Testing
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
-#### User Experience Testing
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
-
-## Version Control
-### Code Collaboration Platforms
-#### Gerrit
-#### GitHub
-##### GitHub Automation
-###### Dependabot
-###### GitHub Actions
-#### GitLab
-### Repository
-#### Centralised
-##### CVS
-##### Perforce
-##### Subversion
-#### Distributed
-##### Mercurial
-##### Git
-
-## Design/Development Methodologies
-### Behaviour-Driven Design/Development
-### Domain-Driven Design/Development
-### Test-Driven Design/Development
-
-## Containerisation
-### Docker
-### LXC
-### Podman
-
-## Delivery Paradigms
-### DevOps
-### GitOps
-
-## Deployment
-### Container Orchestration Systems
-#### Kubernetes
-### Declarative Continuous Delivery Tools
-#### Argo CD
-#### Helmfile
-### Package Managers
-#### Helm
-#### Kustomize
-
-## Hyperscalers
-### AWS
-### Azure
-### Google Cloud
-
-## File Formats
-### .json (JSON)
-### .md (Markdown)
-### .tar (Tar Archive/Tarball)
-### .tgz (GZip Compressed TAR Archive)
-### .txt (Plain Text)
-### .xml (XML)
-### .yaml (YAML)
-### .yml (YML)
-### .zip (Zip)
-
-## Communication Paradigms
-### HTTP
-#### API Design (HTTP)
-### Data Streaming
-#### API Design (Data Streaming)
-
-## Data Streaming Platforms
-### Kafka
-### RabbitMQ
-
-## HTTP Protocols
-### REST
-### SOAP
-
-## Template
-### Overview ()
-### Tool Comparison ()
-### Detailed Overview ()
 -->
 
 <!-- Link Definitions -->
@@ -405,6 +108,7 @@ TODO: Order in which to do this testing.
 [neovim-pi_tutor]: <https://neovim.io/doc/user/pi_tutor.html>
 [nginx-what-is-a-service-mesh]: <https://www.nginx.com/blog/what-is-a-service-mesh/>
 [oreilly-97-things-every-programmer-should-know]: <https://www.oreilly.com/library/view/97-things-every/9780596809515/>
+[oreilly-97-things-every-application-security-professional-should-know]: <https://www.oreilly.com/library/view/97-things-every/9781098152161/>
 [oreilly-bash-cookbook-2nd-edition]: <https://www.oreilly.com/library/view/bash-cookbook-2nd/9781491975329/>
 [oreilly-introducing-github]: <https://www.oreilly.com/library/view/introducing-github/9781491949801/>
 [oreilly-practical-process-automation]: <https://www.oreilly.com/library/view/practical-process-automation/9781492061441/>
@@ -523,400 +227,9 @@ TODO: Order in which to do this testing.
     - [1.1.94. Write Tests for People](#1194-write-tests-for-people)
     - [1.1.95. You Gotta Care About the Code](#1195-you-gotta-care-about-the-code)
     - [1.1.96. Your Customers Do Not Mean What They Say](#1196-your-customers-do-not-mean-what-they-say)
+  - [97 Things Every Application Security Professional Should Know](#97-things-every-application-security-professional-should-know)
+    - [Secure Code for Tomorrow's Technology](#secure-code-for-tomorrows-technology)
   - [1.2. Automate the Boring Stuff with Python: Practical Programming for Total Beginners](#12-automate-the-boring-stuff-with-python-practical-programming-for-total-beginners)
-    - [1.2.1. Python Programming Basics](#121-python-programming-basics)
-      - [1.2.1.1. Python Basics](#1211-python-basics)
-        - [1.2.1.1.1. Entering Expressions into the Interactive Shell](#12111-entering-expressions-into-the-interactive-shell)
-        - [1.2.1.1.2. The Integer, Floating-Point \& String Data Types](#12112-the-integer-floating-point--string-data-types)
-        - [1.2.1.1.3. Storing Values in Variables](#12113-storing-values-in-variables)
-          - [1.2.1.1.3.1. Assignment Statements](#121131-assignment-statements)
-          - [1.2.1.1.3.2. Variable Names](#121132-variable-names)
-        - [1.2.1.1.4. Your First Program](#12114-your-first-program)
-        - [1.2.1.1.5. Dissecting Your Program](#12115-dissecting-your-program)
-          - [1.2.1.1.5.1. Comments](#121151-comments)
-          - [1.2.1.1.5.2. The `print()` Function](#121152-the-print-function)
-          - [1.2.1.1.5.3. The `input()` Function](#121153-the-input-function)
-          - [1.2.1.1.5.4. Printing the User's Name](#121154-printing-the-users-name)
-          - [1.2.1.1.5.5. The `len()` Function](#121155-the-len-function)
-          - [1.2.1.1.5.6. The `str()`, `int()`, \& `float()` Functions](#121156-the-str-int--float-functions)
-      - [1.2.1.2. Chapter 2: Flow Control](#1212-chapter-2-flow-control)
-        - [1.2.1.2.1. Boolean Values](#12121-boolean-values)
-        - [1.2.1.2.2. Comparison Operators](#12122-comparison-operators)
-        - [1.2.1.2.3. Boolean Operators](#12123-boolean-operators)
-          - [1.2.1.2.3.1. Binary Boolean Operators](#121231-binary-boolean-operators)
-          - [1.2.1.2.3.2. The `not` Operator](#121232-the-not-operator)
-        - [1.2.1.2.4. Mixing Boolean \& Comparison Operators](#12124-mixing-boolean--comparison-operators)
-        - [1.2.1.2.5. Elements of Flow Control](#12125-elements-of-flow-control)
-          - [1.2.1.2.5.1. Conditions](#121251-conditions)
-          - [1.2.1.2.5.2. Block of Code](#121252-block-of-code)
-        - [1.2.1.2.6. Program Execution](#12126-program-execution)
-        - [1.2.1.2.7. Flow Control Statements](#12127-flow-control-statements)
-          - [1.2.1.2.7.1. `if` Statements](#121271-if-statements)
-          - [1.2.1.2.7.2. `else` Statements](#121272-else-statements)
-          - [1.2.1.2.7.3. `elif` Statements](#121273-elif-statements)
-          - [1.2.1.2.7.4. `while` Loop Statements](#121274-while-loop-statements)
-          - [1.2.1.2.7.5. `break` Statements](#121275-break-statements)
-          - [1.2.1.2.7.6. `continue` Statements](#121276-continue-statements)
-          - [1.2.1.2.7.7. `for` Loops \& The `range()` Function](#121277-for-loops--the-range-function)
-        - [1.2.1.2.8. Importing Modules](#12128-importing-modules)
-          - [1.2.1.2.8.1. `from` Import Statements](#121281-from-import-statements)
-        - [1.2.1.2.9. Ending a Program Early with the `sys.exit()` Function](#12129-ending-a-program-early-with-the-sysexit-function)
-        - [1.2.1.2.10. A Short Program: Guess the Number](#121210-a-short-program-guess-the-number)
-        - [1.2.1.2.11. A Short Program: Rock, Paper, Scissors](#121211-a-short-program-rock-paper-scissors)
-      - [1.2.1.3. Functions](#1213-functions)
-        - [1.2.1.3.1. `def` Statements with Parameters](#12131-def-statements-with-parameters)
-        - [1.2.1.3.2. Return Values \& `return` Statements](#12132-return-values--return-statements)
-        - [1.2.1.3.3. The `None` Value](#12133-the-none-value)
-        - [1.2.1.3.4. Keyword Arguments \& The `print()` Function](#12134-keyword-arguments--the-print-function)
-        - [1.2.1.3.5. The Call Stack](#12135-the-call-stack)
-          - [1.2.1.3.5.1. Local Variables Cannot Be Used in the Global Scope](#121351-local-variables-cannot-be-used-in-the-global-scope)
-          - [1.2.1.3.5.2. Local Scopes Cannot Use Variables in Other Scopes](#121352-local-scopes-cannot-use-variables-in-other-scopes)
-          - [1.2.1.3.5.3. Global Variables Can Be Read from a Local Scope](#121353-global-variables-can-be-read-from-a-local-scope)
-          - [1.2.1.3.5.4. Local \& Global Variables with the Same Name](#121354-local--global-variables-with-the-same-name)
-        - [1.2.1.3.6. The `global` Statement](#12136-the-global-statement)
-        - [1.2.1.3.7. Exception Handling](#12137-exception-handling)
-        - [1.2.1.3.8. A Short Program: Zigzag](#12138-a-short-program-zigzag)
-      - [1.2.1.4. Lists](#1214-lists)
-        - [1.2.1.4.1. The List Data Type](#12141-the-list-data-type)
-          - [1.2.1.4.1.1. Getting Individual Values in a List with Indexes](#121411-getting-individual-values-in-a-list-with-indexes)
-          - [1.2.1.4.1.2. Negative Indexes](#121412-negative-indexes)
-          - [1.2.1.4.1.3. Getting a List from Another List with Slices](#121413-getting-a-list-from-another-list-with-slices)
-          - [1.2.1.4.1.4. Getting a List's Length with the `len()` Function](#121414-getting-a-lists-length-with-the-len-function)
-          - [1.2.1.4.1.5. Changing Values in a List with Indexes](#121415-changing-values-in-a-list-with-indexes)
-          - [1.2.1.4.1.6. List Concatenation \& List Replication](#121416-list-concatenation--list-replication)
-          - [1.2.1.4.1.7. Removing Values from Lists with `del` Statements](#121417-removing-values-from-lists-with-del-statements)
-        - [1.2.1.4.2. Working with Lists](#12142-working-with-lists)
-          - [1.2.1.4.2.1. Using `for` Loop with Lists](#121421-using-for-loop-with-lists)
-          - [1.2.1.4.2.2. The `in` \& `not` in Operators](#121422-the-in--not-in-operators)
-          - [1.2.1.4.2.3. The Multiple Assignment Trick](#121423-the-multiple-assignment-trick)
-          - [1.2.1.4.2.4. Using the `random.choice()` and `random.shuffle()` Functions with Lists](#121424-using-the-randomchoice-and-randomshuffle-functions-with-lists)
-        - [1.2.1.4.3. Augmented Assignment Operators](#12143-augmented-assignment-operators)
-        - [1.2.1.4.4. Methods](#12144-methods)
-          - [1.2.1.4.4.1. Finding a Value in a List with the `index()` Method](#121441-finding-a-value-in-a-list-with-the-index-method)
-          - [1.2.1.4.4.2. Adding Values to Lists with the `append()` and `insert()` Methods](#121442-adding-values-to-lists-with-the-append-and-insert-methods)
-          - [1.2.1.4.4.3. Removing Values from Lists with the `remove()` Method](#121443-removing-values-from-lists-with-the-remove-method)
-          - [1.2.1.4.4.4. Sorting the Values in a List with the `sort()` Method](#121444-sorting-the-values-in-a-list-with-the-sort-method)
-          - [1.2.1.4.4.5. Reversing the Values in a List with the `reverse()` Method](#121445-reversing-the-values-in-a-list-with-the-reverse-method)
-        - [1.2.1.4.5. Example Program: Magic 8 Ball with a List](#12145-example-program-magic-8-ball-with-a-list)
-        - [1.2.1.4.6. Sequence Data Types](#12146-sequence-data-types)
-          - [1.2.1.4.6.1. Mutable \& Immutable Data Types](#121461-mutable--immutable-data-types)
-          - [1.2.1.4.6.2. The Tuple Data Type](#121462-the-tuple-data-type)
-          - [1.2.1.4.6.3. Converting Types with the `list()` \& `tuple()` Functions](#121463-converting-types-with-the-list--tuple-functions)
-        - [1.2.1.4.7. References](#12147-references)
-          - [1.2.1.4.7.1. Identity \& the `id()` Function](#121471-identity--the-id-function)
-          - [1.2.1.4.7.2. Passing References](#121472-passing-references)
-          - [1.2.1.4.7.3. The `copy` Module's `copy()` \& `deepcopy()` Functions](#121473-the-copy-modules-copy--deepcopy-functions)
-          - [1.2.1.4.7.4. A Short Program: Conway's Game of Life](#121474-a-short-program-conways-game-of-life)
-      - [1.2.1.5. Dictionaries \& Structuring Data](#1215-dictionaries--structuring-data)
-        - [1.2.1.5.1. The Dictionary Data Type](#12151-the-dictionary-data-type)
-          - [1.2.1.5.1.1. Dictionaries vs Lists](#121511-dictionaries-vs-lists)
-          - [1.2.1.5.1.2. The `keys()`, `values()`, \& `items()` Methods](#121512-the-keys-values--items-methods)
-          - [1.2.1.5.1.3. Checking Whether a Key or Value Exists in a Dictionary](#121513-checking-whether-a-key-or-value-exists-in-a-dictionary)
-          - [1.2.1.5.1.4. The `get()` Method](#121514-the-get-method)
-          - [1.2.1.5.1.5. The `setdefault()` Method](#121515-the-setdefault-method)
-        - [1.2.1.5.2. Pretty Printing](#12152-pretty-printing)
-        - [1.2.1.5.3. Using Data Structures to Model Real-World Things](#12153-using-data-structures-to-model-real-world-things)
-          - [1.2.1.5.3.1. A Tic-Tac-Toe Board](#121531-a-tic-tac-toe-board)
-          - [1.2.1.5.3.2. Nested Dictionaries \& Lists](#121532-nested-dictionaries--lists)
-      - [1.2.1.6. Manipulating Strings](#1216-manipulating-strings)
-        - [1.2.1.6.1. Working with Strings](#12161-working-with-strings)
-          - [1.2.1.6.1.1. String Literals](#121611-string-literals)
-          - [1.2.1.6.1.2. Indexing \& Slicing Strings](#121612-indexing--slicing-strings)
-          - [1.2.1.6.1.3. The `in` \& `not in` Operators with Strings](#121613-the-in--not-in-operators-with-strings)
-        - [1.2.1.6.2. Putting Strings Inside Other Strings](#12162-putting-strings-inside-other-strings)
-        - [1.2.1.6.3. Useful String Methods](#12163-useful-string-methods)
-          - [1.2.1.6.3.1. The `upper()`, `lower()`, `isupper()`, \& `islower()` Methods](#121631-the-upper-lower-isupper--islower-methods)
-          - [1.2.1.6.3.2. The `isX()` Methods](#121632-the-isx-methods)
-          - [1.2.1.6.3.3. The `startsWith()` \& `endswith()` Methods](#121633-the-startswith--endswith-methods)
-          - [1.2.1.6.3.4. The `join` \& `split()` Methods](#121634-the-join--split-methods)
-          - [1.2.1.6.3.5. Splitting Strings with the `partition` Methods](#121635-splitting-strings-with-the-partition-methods)
-          - [1.2.1.6.3.6. Justifying Text With the `rjust()`, `ljust()`, \& `center()` Methods](#121636-justifying-text-with-the-rjust-ljust--center-methods)
-          - [1.2.1.6.3.7. Removing Whitespace with the `strip()`, `rstrip()`, \& `lstrip()` Methods](#121637-removing-whitespace-with-the-strip-rstrip--lstrip-methods)
-        - [1.2.1.6.4. Numeric Values of Characters With the `ord()` \& `chr()` Functions](#12164-numeric-values-of-characters-with-the-ord--chr-functions)
-        - [1.2.1.6.5. Copying \& Pasting String with the `pyperclip` Module](#12165-copying--pasting-string-with-the-pyperclip-module)
-        - [1.2.1.6.6. Project; Multi-Clipboard Automatic Messages](#12166-project-multi-clipboard-automatic-messages)
-        - [1.2.1.6.7. Project: Adding Bullet to Wiki Markup](#12167-project-adding-bullet-to-wiki-markup)
-        - [1.2.1.6.8. A Short Program: Pig Latin](#12168-a-short-program-pig-latin)
-    - [1.2.2. Automating Tasks](#122-automating-tasks)
-      - [1.2.2.1. Pattern Matching with Regular Expressions](#1221-pattern-matching-with-regular-expressions)
-        - [1.2.2.1.1. Finding Patterns of Text without Regular Expressions](#12211-finding-patterns-of-text-without-regular-expressions)
-        - [1.2.2.1.2. Finding Patterns of Text with Regular Expressions](#12212-finding-patterns-of-text-with-regular-expressions)
-          - [1.2.2.1.2.1. Creating Regex Objects](#122121-creating-regex-objects)
-          - [1.2.2.1.2.2. Matching Regex Objects](#122122-matching-regex-objects)
-          - [1.2.2.1.2.3. Review of Regular Expression Matching](#122123-review-of-regular-expression-matching)
-        - [1.2.2.1.3. More Pattern Matching with Regular Expressions](#12213-more-pattern-matching-with-regular-expressions)
-          - [1.2.2.1.3.1. Grouping with Parentheses](#122131-grouping-with-parentheses)
-          - [1.2.2.1.3.2. Matching Multiple Groups with the Pipe](#122132-matching-multiple-groups-with-the-pipe)
-          - [1.2.2.1.3.3. Optional Matching with the Question Mark](#122133-optional-matching-with-the-question-mark)
-          - [1.2.2.1.3.4. Matching Zero or More with the `*`](#122134-matching-zero-or-more-with-the-)
-          - [1.2.2.1.3.5. Matching One or More with the `+`](#122135-matching-one-or-more-with-the-)
-          - [1.2.2.1.3.6. Matching Specific Repetitions with Braces](#122136-matching-specific-repetitions-with-braces)
-        - [1.2.2.1.4. Greedy \& Non-Greedy Matching](#12214-greedy--non-greedy-matching)
-        - [1.2.2.1.5. The `findall()` Method](#12215-the-findall-method)
-        - [1.2.2.1.6. Character Classes](#12216-character-classes)
-        - [1.2.2.1.7. Making Your Own Character Classes](#12217-making-your-own-character-classes)
-        - [1.2.2.1.8. The `^` \& `$` Characters](#12218-the----characters)
-        - [1.2.2.1.9. The Wildcard Character](#12219-the-wildcard-character)
-          - [1.2.2.1.9.1. Matching Everything with `.*`](#122191-matching-everything-with-)
-          - [1.2.2.1.9.2. Matching Newlines with the `.` Character](#122192-matching-newlines-with-the--character)
-        - [1.2.2.1.10. Review of Regex Symbols](#122110-review-of-regex-symbols)
-        - [1.2.2.1.11. Case-Insensitive Symbols](#122111-case-insensitive-symbols)
-        - [1.2.2.1.12. Substituting String with the `sub()` Method](#122112-substituting-string-with-the-sub-method)
-        - [1.2.2.1.13. Managing Complex Regexes](#122113-managing-complex-regexes)
-        - [1.2.2.1.14. Combining `re.IGNORECASE`, `re.DOTALL`, \& `re.VERBOSE`](#122114-combining-reignorecase-redotall--reverbose)
-        - [1.2.2.1.15. Project: Phone Number \& Email Address Extractor](#122115-project-phone-number--email-address-extractor)
-      - [1.2.2.2. Input Validation](#1222-input-validation)
-        - [1.2.2.2.1. The `PyInputPlus` Module](#12221-the-pyinputplus-module)
-          - [1.2.2.2.1.1. The `min`, `max`, `greaterThan`, and `lessThan` Keyword Arguments](#122211-the-min-max-greaterthan-and-lessthan-keyword-arguments)
-          - [1.2.2.2.1.2. The `blank` Keyword Argument](#122212-the-blank-keyword-argument)
-          - [1.2.2.2.1.3. The `limit`, `timeout`, \& `default` Keyword Arguments](#122213-the-limit-timeout--default-keyword-arguments)
-          - [1.2.2.2.1.4. The `allowRegexes` \& `blockRegexes` Keyword Arguments](#122214-the-allowregexes--blockregexes-keyword-arguments)
-        - [1.2.2.2.2. Project: How to Keep an Idiot Busy for Hours](#12222-project-how-to-keep-an-idiot-busy-for-hours)
-        - [1.2.2.2.3. Project: Multiplication Quiz](#12223-project-multiplication-quiz)
-      - [1.2.2.3. Reading \& Writing Files](#1223-reading--writing-files)
-        - [1.2.2.3.1. Files \& File Paths](#12231-files--file-paths)
-          - [1.2.2.3.1.1. `\` on Windows \& `/` on MacOS \& Linux](#122311--on-windows---on-macos--linux)
-          - [1.2.2.3.1.2. Using the `/` Operator to Join Paths](#122312-using-the--operator-to-join-paths)
-          - [1.2.2.3.1.3. The Current Working Directory](#122313-the-current-working-directory)
-          - [1.2.2.3.1.4. The Home Directory](#122314-the-home-directory)
-          - [1.2.2.3.1.5. Absolute vs Relative Paths](#122315-absolute-vs-relative-paths)
-          - [1.2.2.3.1.6. Creating New Folders Using the `os.makedirs()` Function](#122316-creating-new-folders-using-the-osmakedirs-function)
-          - [1.2.2.3.1.7. Handling Absolute \& Relative Paths](#122317-handling-absolute--relative-paths)
-          - [1.2.2.3.1.8. Finding File Sizes \& Folder Contents](#122318-finding-file-sizes--folder-contents)
-          - [1.2.2.3.1.9. Modifying a List of Files Using Glob Patterns](#122319-modifying-a-list-of-files-using-glob-patterns)
-          - [1.2.2.3.1.10. Checking Path Validity](#1223110-checking-path-validity)
-        - [1.2.2.3.2. The File Reading/Writing Process](#12232-the-file-readingwriting-process)
-          - [1.2.2.3.2.1. Opening Files with the `open()` Function](#122321-opening-files-with-the-open-function)
-          - [1.2.2.3.2.2. Reading the Contents of Files](#122322-reading-the-contents-of-files)
-          - [1.2.2.3.2.3. Writing to Files](#122323-writing-to-files)
-        - [1.2.2.3.3. Saving Variables with the `shelve` Modules](#12233-saving-variables-with-the-shelve-modules)
-        - [1.2.2.3.4. Saving Variables with the `pprint.pformat()` Function](#12234-saving-variables-with-the-pprintpformat-function)
-        - [1.2.2.3.5. Project: Generating Random Quiz Files](#12235-project-generating-random-quiz-files)
-        - [1.2.2.3.6. Project: Updatable Multi-Clipboard](#12236-project-updatable-multi-clipboard)
-      - [1.2.2.4. Organising Files](#1224-organising-files)
-        - [1.2.2.4.1. The `shutil` Module](#12241-the-shutil-module)
-          - [1.2.2.4.1.1. Copying Files \& Folders](#122411-copying-files--folders)
-          - [1.2.2.4.1.2. Moving \& Renaming Files \& Folders](#122412-moving--renaming-files--folders)
-          - [1.2.2.4.1.3. Permanently Deleting Files \& Folders](#122413-permanently-deleting-files--folders)
-          - [1.2.2.4.1.4. Safe Deletes with the `send2trash` Module](#122414-safe-deletes-with-the-send2trash-module)
-        - [1.2.2.4.2. Walking a Directory Tree](#12242-walking-a-directory-tree)
-        - [1.2.2.4.3. Compressing Files with `zipfile` Module](#12243-compressing-files-with-zipfile-module)
-          - [1.2.2.4.3.1. Reading ZIP Files](#122431-reading-zip-files)
-          - [1.2.2.4.3.2. Extracting from ZIP Files](#122432-extracting-from-zip-files)
-          - [1.2.2.4.3.3. Creating \& Adding to ZIP Files](#122433-creating--adding-to-zip-files)
-        - [1.2.2.4.4. Project: Renaming Files with American-Style Dates to European-Style Data](#12244-project-renaming-files-with-american-style-dates-to-european-style-data)
-        - [1.2.2.4.5. Project: Backing Up a Folder into a ZIP File](#12245-project-backing-up-a-folder-into-a-zip-file)
-      - [1.2.2.5. Debugging](#1225-debugging)
-        - [1.2.2.5.1. Raising Exceptions](#12251-raising-exceptions)
-        - [1.2.2.5.2. Getting the Traceback as a String](#12252-getting-the-traceback-as-a-string)
-        - [1.2.2.5.3. Assertions](#12253-assertions)
-          - [1.2.2.5.3.1. Using an Assertion in a Traffic Light Simulation](#122531-using-an-assertion-in-a-traffic-light-simulation)
-        - [1.2.2.5.4. Logging](#12254-logging)
-          - [1.2.2.5.4.1. Using the `logging` Module](#122541-using-the-logging-module)
-          - [1.2.2.5.4.2. Don't Debug with the `print()` Function](#122542-dont-debug-with-the-print-function)
-          - [1.2.2.5.4.3. Logging Levels](#122543-logging-levels)
-          - [1.2.2.5.4.4. Disabling Logging](#122544-disabling-logging)
-          - [1.2.2.5.4.5. Logging to a File](#122545-logging-to-a-file)
-        - [1.2.2.5.5. Mu's Debugger](#12255-mus-debugger)
-          - [1.2.2.5.5.1. Continue](#122551-continue)
-          - [1.2.2.5.5.2. Step In](#122552-step-in)
-          - [1.2.2.5.5.3. Step Over](#122553-step-over)
-          - [1.2.2.5.5.4. Step Out](#122554-step-out)
-          - [1.2.2.5.5.5. Stop](#122555-stop)
-          - [1.2.2.5.5.6. Debugging a Number Adding Program](#122556-debugging-a-number-adding-program)
-          - [1.2.2.5.5.7. Breakpoints](#122557-breakpoints)
-      - [1.2.2.6. Web Scraping](#1226-web-scraping)
-        - [1.2.2.6.1. Project: `maplt.py` with the `webbrowser` Module](#12261-project-mapltpy-with-the-webbrowser-module)
-        - [1.2.2.6.2. Downloading Files from the Web with the `requests` Module](#12262-downloading-files-from-the-web-with-the-requests-module)
-          - [1.2.2.6.2.1. Downloading a Web Page with the `requests.get()` Function](#122621-downloading-a-web-page-with-the-requestsget-function)
-          - [1.2.2.6.2.2. Checking for Errors](#122622-checking-for-errors)
-        - [1.2.2.6.3. Saving Downloaded Files to the Hard Drive](#12263-saving-downloaded-files-to-the-hard-drive)
-        - [1.2.2.6.4. HTML](#12264-html)
-          - [1.2.2.6.4.1. Resources for Learning HTMl](#122641-resources-for-learning-html)
-          - [1.2.2.6.4.2. A Quick Refresher](#122642-a-quick-refresher)
-          - [1.2.2.6.4.3. Viewing the Source HTML of a Web Page](#122643-viewing-the-source-html-of-a-web-page)
-          - [1.2.2.6.4.4. Opening Your Browser's Developer Tools](#122644-opening-your-browsers-developer-tools)
-          - [1.2.2.6.4.5. Using the Developer Tools to Find HTML Elements](#122645-using-the-developer-tools-to-find-html-elements)
-        - [1.2.2.6.5. Parsing HTML with the `bs4` Module](#12265-parsing-html-with-the-bs4-module)
-          - [1.2.2.6.5.1. Creating `BeautifulSoup` Object from HTML](#122651-creating-beautifulsoup-object-from-html)
-          - [1.2.2.6.5.2. Finding an Element with the `select()` Method](#122652-finding-an-element-with-the-select-method)
-          - [1.2.2.6.5.3. Getting Data from an Element's Attributes](#122653-getting-data-from-an-elements-attributes)
-        - [1.2.2.6.6. Project: Opening All Search Results](#12266-project-opening-all-search-results)
-        - [1.2.2.6.7. Project: Downloading All XKCD Comics](#12267-project-downloading-all-xkcd-comics)
-        - [1.2.2.6.8. Controlling the Browser with the `selenium` Module](#12268-controlling-the-browser-with-the-selenium-module)
-          - [1.2.2.6.8.1. Starting a `selenium`-Controlled Browser](#122681-starting-a-selenium-controlled-browser)
-          - [1.2.2.6.8.2. Finding Elements on the Page](#122682-finding-elements-on-the-page)
-          - [1.2.2.6.8.3. Clicking the Page](#122683-clicking-the-page)
-          - [1.2.2.6.8.4. Filling Out \& Submitting Forms](#122684-filling-out--submitting-forms)
-          - [1.2.2.6.8.5. Sending Special Keys](#122685-sending-special-keys)
-          - [1.2.2.6.8.6. Clicking Browser Buttons](#122686-clicking-browser-buttons)
-          - [1.2.2.6.8.7. More Information on Selenium](#122687-more-information-on-selenium)
-      - [1.2.2.7. Working with Excel Spreadsheets](#1227-working-with-excel-spreadsheets)
-        - [1.2.2.7.1. Excel Documents](#12271-excel-documents)
-        - [1.2.2.7.2. Installing the `openpyxl` Module](#12272-installing-the-openpyxl-module)
-        - [1.2.2.7.3. Reading Excel Documents](#12273-reading-excel-documents)
-          - [1.2.2.7.3.1. Opening Excel Documents with `openpyxl`](#122731-opening-excel-documents-with-openpyxl)
-          - [1.2.2.7.3.2. Getting Sheets from the Workbook](#122732-getting-sheets-from-the-workbook)
-          - [1.2.2.7.3.3. Getting Cells from the Sheets](#122733-getting-cells-from-the-sheets)
-          - [1.2.2.7.3.4. Converting Between Column Letters \& Numbers](#122734-converting-between-column-letters--numbers)
-          - [1.2.2.7.3.5. Getting Rows \& Columns from the Sheets](#122735-getting-rows--columns-from-the-sheets)
-          - [1.2.2.7.3.6. Workbooks, Sheets, Cells](#122736-workbooks-sheets-cells)
-        - [1.2.2.7.4. Project: Reading Data from a Spreadsheet](#12274-project-reading-data-from-a-spreadsheet)
-        - [1.2.2.7.5. Writing Excel Documents](#12275-writing-excel-documents)
-          - [1.2.2.7.5.1. Creating \& Saving Excel Documents](#122751-creating--saving-excel-documents)
-          - [1.2.2.7.5.2. Creating \& Removing Values](#122752-creating--removing-values)
-          - [1.2.2.7.5.3. Writing Values to Cells](#122753-writing-values-to-cells)
-        - [1.2.2.7.6. Project: Updating a Spreadsheet](#12276-project-updating-a-spreadsheet)
-        - [1.2.2.7.7. Setting the Font Style of Cells](#12277-setting-the-font-style-of-cells)
-        - [1.2.2.7.8. Font Objects](#12278-font-objects)
-        - [1.2.2.7.9. Formulas](#12279-formulas)
-        - [1.2.2.7.10. Adjusting Rows \& Columns](#122710-adjusting-rows--columns)
-          - [1.2.2.7.10.1. Setting Row Height \& Column Width](#1227101-setting-row-height--column-width)
-          - [1.2.2.7.10.2. Merging \& Unmerging Cells](#1227102-merging--unmerging-cells)
-          - [1.2.2.7.10.3. Freezing Panes](#1227103-freezing-panes)
-      - [1.2.2.8. Working with Google Sheets](#1228-working-with-google-sheets)
-        - [1.2.2.8.1. Installing \& Setting Up `EZSheets`](#12281-installing--setting-up-ezsheets)
-          - [1.2.2.8.1.1. Obtaining Credentials \& Token Files](#122811-obtaining-credentials--token-files)
-          - [1.2.2.8.1.2. Revoking the Credentials File](#122812-revoking-the-credentials-file)
-        - [1.2.2.8.2. Spreadsheet Objects](#12282-spreadsheet-objects)
-          - [1.2.2.8.2.1. Creating, Uploading, \& Listing Spreadsheets](#122821-creating-uploading--listing-spreadsheets)
-          - [1.2.2.8.2.2. Revoking the Credentials File](#122822-revoking-the-credentials-file)
-        - [1.2.2.8.3. Spreadsheet Objects](#12283-spreadsheet-objects)
-          - [1.2.2.8.3.1. Creating, Uploading, \& Listing Spreadsheets](#122831-creating-uploading--listing-spreadsheets)
-          - [1.2.2.8.3.2. Downloading \& Uploading Spreadsheets](#122832-downloading--uploading-spreadsheets)
-        - [1.2.2.8.4. Sheet Objects](#12284-sheet-objects)
-          - [1.2.2.8.4.1. Reading \& Writing Data](#122841-reading--writing-data)
-          - [1.2.2.8.4.2. Creating \& Deleting Sheets](#122842-creating--deleting-sheets)
-          - [1.2.2.8.4.3. Copying Sheets](#122843-copying-sheets)
-        - [1.2.2.8.5. Working with Google Sheets Quotas](#12285-working-with-google-sheets-quotas)
-      - [1.2.2.9. Working with PDF \& Word Documents](#1229-working-with-pdf--word-documents)
-        - [1.2.2.9.1. PDF Documents](#12291-pdf-documents)
-          - [1.2.2.9.1.1. Extracting Text from PDFs](#122911-extracting-text-from-pdfs)
-          - [1.2.2.9.1.2. Decrypting PDFs](#122912-decrypting-pdfs)
-          - [1.2.2.9.1.3. Creating PDFs](#122913-creating-pdfs)
-          - [1.2.2.9.1.4. Project: Combining Select Pages from Many PDFs](#122914-project-combining-select-pages-from-many-pdfs)
-        - [1.2.2.9.2. Word Documents](#12292-word-documents)
-          - [1.2.2.9.2.1. Reading Word Documents](#122921-reading-word-documents)
-          - [1.2.2.9.2.2. Getting the Full Text from a `.docx` File](#122922-getting-the-full-text-from-a-docx-file)
-          - [1.2.2.9.2.3. Styling Paragraph \& Run Objects](#122923-styling-paragraph--run-objects)
-          - [1.2.2.9.2.4. Creating Word Documents with Non-Default Styles](#122924-creating-word-documents-with-non-default-styles)
-          - [1.2.2.9.2.5. Run Attributes](#122925-run-attributes)
-          - [1.2.2.9.2.6. Writing Word Documents](#122926-writing-word-documents)
-          - [1.2.2.9.2.7. Adding Headings](#122927-adding-headings)
-          - [1.2.2.9.2.8. Adding Line \& Page Breaks](#122928-adding-line--page-breaks)
-          - [1.2.2.9.2.9. Adding Pictures](#122929-adding-pictures)
-        - [1.2.2.9.3. Creating PDFs from Word Documents](#12293-creating-pdfs-from-word-documents)
-      - [1.2.2.10. Working with CSV Files \& JSON Data](#12210-working-with-csv-files--json-data)
-        - [1.2.2.10.1. The `csv` Module](#122101-the-csv-module)
-          - [1.2.2.10.1.1. `reader` Objects](#1221011-reader-objects)
-          - [1.2.2.10.1.2. Reading Objects from `reader` Objects in a `for` Loop](#1221012-reading-objects-from-reader-objects-in-a-for-loop)
-          - [1.2.2.10.1.3. `writer` Objects](#1221013-writer-objects)
-          - [1.2.2.10.1.4. The `delimiter` \& `lineterminator` Keyword Arguments](#1221014-the-delimiter--lineterminator-keyword-arguments)
-          - [1.2.2.10.1.5. `DictReader` \& `DictWriter` CSV Objects](#1221015-dictreader--dictwriter-csv-objects)
-        - [1.2.2.10.2. Project: Removing the Header from CSV Files](#122102-project-removing-the-header-from-csv-files)
-        - [1.2.2.10.3. JSON \& APIs](#122103-json--apis)
-        - [1.2.2.10.4. The `json` Module](#122104-the-json-module)
-          - [1.2.2.10.4.1. Reading JSON with the `loads()` Function](#1221041-reading-json-with-the-loads-function)
-          - [1.2.2.10.4.2. Writing JSON with the `dumps()` Function](#1221042-writing-json-with-the-dumps-function)
-        - [1.2.2.10.5. Project: Fetching Current Weather Data](#122105-project-fetching-current-weather-data)
-      - [1.2.2.11. Keeping Time, Scheduling Tasks, \& Launching Programs](#12211-keeping-time-scheduling-tasks--launching-programs)
-        - [1.2.2.11.1. The `time` Module](#122111-the-time-module)
-          - [1.2.2.11.1.1. The `time.time()` Function](#1221111-the-timetime-function)
-          - [1.2.2.11.1.2. The `time.sleep()` Function](#1221112-the-timesleep-function)
-        - [1.2.2.11.2. Rounding Numbers](#122112-rounding-numbers)
-        - [1.2.2.11.3. Project: Super Stopwatch](#122113-project-super-stopwatch)
-        - [1.2.2.11.4. The `datetime` Module](#122114-the-datetime-module)
-          - [1.2.2.11.4.1. The `timedelta` Data Type](#1221141-the-timedelta-data-type)
-          - [1.2.2.11.4.2. Pausing Until a Specific Date](#1221142-pausing-until-a-specific-date)
-          - [1.2.2.11.4.3. Converting `datetime` Objects into Strings](#1221143-converting-datetime-objects-into-strings)
-          - [1.2.2.11.4.4. Converting Strings into `datetime` Objects](#1221144-converting-strings-into-datetime-objects)
-        - [1.2.2.11.5. Review of Python's Time Functions](#122115-review-of-pythons-time-functions)
-        - [1.2.2.11.6. Multithreading](#122116-multithreading)
-          - [1.2.2.11.6.1. Passing Arguments to the Thread's Target Function](#1221161-passing-arguments-to-the-threads-target-function)
-          - [1.2.2.11.6.2. Concurrency Issues](#1221162-concurrency-issues)
-        - [1.2.2.11.7. Project: Multithreaded XKCD Downloader](#122117-project-multithreaded-xkcd-downloader)
-        - [1.2.2.11.8. Launching Other Programs from Python](#122118-launching-other-programs-from-python)
-          - [1.2.2.11.8.1. Passing Command Line Arguments to the `Popen()` Function](#1221181-passing-command-line-arguments-to-the-popen-function)
-          - [1.2.2.11.8.2. Task Scheduler, `launchd`, and `cron`](#1221182-task-scheduler-launchd-and-cron)
-          - [1.2.2.11.8.3. Opening Websites \& Python](#1221183-opening-websites--python)
-          - [1.2.2.11.8.4. Running Other Python Scripts](#1221184-running-other-python-scripts)
-          - [1.2.2.11.8.5. Opening Files with Default Applications](#1221185-opening-files-with-default-applications)
-        - [1.2.2.11.9. Project: Simple Countdown Program](#122119-project-simple-countdown-program)
-      - [1.2.2.12. Sending Email \& Text Messages](#12212-sending-email--text-messages)
-        - [1.2.2.12.1. Sending \& Receiving Email with the Gmail API](#122121-sending--receiving-email-with-the-gmail-api)
-          - [1.2.2.12.1.1. Enabling the Gmail API](#1221211-enabling-the-gmail-api)
-          - [1.2.2.12.1.2. Sending Mail from a Gmail Account](#1221212-sending-mail-from-a-gmail-account)
-          - [1.2.2.12.1.3. Reading Mail from a Gmail Account](#1221213-reading-mail-from-a-gmail-account)
-          - [1.2.2.12.1.4. Searching Mail from a Gmail Account](#1221214-searching-mail-from-a-gmail-account)
-          - [1.2.2.12.1.5. Downloading Attachments from a Gmail Account](#1221215-downloading-attachments-from-a-gmail-account)
-        - [1.2.2.12.2. SMTP](#122122-smtp)
-        - [1.2.2.12.3. Sending Email](#122123-sending-email)
-          - [1.2.2.12.3.1. Connecting to an SMTP Server](#1221231-connecting-to-an-smtp-server)
-          - [1.2.2.12.3.2. Sending the SMTP "Hello" Message](#1221232-sending-the-smtp-hello-message)
-          - [1.2.2.12.3.3. Starting TLS Encryption](#1221233-starting-tls-encryption)
-          - [1.2.2.12.3.4. Logging In to the SMTP Server](#1221234-logging-in-to-the-smtp-server)
-          - [1.2.2.12.3.5. Sending an Email](#1221235-sending-an-email)
-          - [1.2.2.12.3.6. Disconnecting from the SMTP Server](#1221236-disconnecting-from-the-smtp-server)
-        - [1.2.2.12.4. IMAP](#122124-imap)
-        - [1.2.2.12.5. Retrieving \& Deleting Emails with IMAP](#122125-retrieving--deleting-emails-with-imap)
-          - [1.2.2.12.5.1. Connecting to an IMAP Server](#1221251-connecting-to-an-imap-server)
-          - [1.2.2.12.5.2. Logging In to the IMAP Server](#1221252-logging-in-to-the-imap-server)
-          - [1.2.2.12.5.3. Searching for Email](#1221253-searching-for-email)
-          - [1.2.2.12.5.4. Fetching an Email \& Marking It as Read](#1221254-fetching-an-email--marking-it-as-read)
-          - [1.2.2.12.5.5. Getting Email Addresses from a Raw Message](#1221255-getting-email-addresses-from-a-raw-message)
-          - [1.2.2.12.5.6. Deleting Emails](#1221256-deleting-emails)
-          - [1.2.2.12.5.7. Disconnecting from the IMAP Server](#1221257-disconnecting-from-the-imap-server)
-        - [1.2.2.12.6. Project: Sending Member Dues Reminder Emails](#122126-project-sending-member-dues-reminder-emails)
-        - [1.2.2.12.7. Sending Text Messages with SMS Email Gateways](#122127-sending-text-messages-with-sms-email-gateways)
-        - [1.2.2.12.8. Sending Text Messages with Twilio](#122128-sending-text-messages-with-twilio)
-          - [1.2.2.12.8.1. Signing Up for a Twilio Account](#1221281-signing-up-for-a-twilio-account)
-          - [1.2.2.12.8.2. Sending Text Messages](#1221282-sending-text-messages)
-        - [1.2.2.12.9. Project: "Just Text Me" Module](#122129-project-just-text-me-module)
-      - [1.2.2.13. Manipulating Images](#12213-manipulating-images)
-        - [1.2.2.13.1. Computer Image Fundamentals](#122131-computer-image-fundamentals)
-          - [1.2.2.13.1.1. Colours \& RGBA Values](#1221311-colours--rgba-values)
-        - [1.2.2.13.2. Coordinate \& Box Tuples](#122132-coordinate--box-tuples)
-        - [1.2.2.13.3. Manipulate Images with `Pillow`](#122133-manipulate-images-with-pillow)
-          - [1.2.2.13.3.1. Working with the Image Data Type](#1221331-working-with-the-image-data-type)
-          - [1.2.2.13.3.2. Cropping Images](#1221332-cropping-images)
-          - [1.2.2.13.3.3. Copying \& Pasting Images onto Other Images](#1221333-copying--pasting-images-onto-other-images)
-          - [1.2.2.13.3.4. Resizing an Image](#1221334-resizing-an-image)
-          - [1.2.2.13.3.5. Rotating \& Flipping Images](#1221335-rotating--flipping-images)
-          - [1.2.2.13.3.6. Project: Adding a Logo](#1221336-project-adding-a-logo)
-        - [1.2.2.13.4. Drawing on Images](#122134-drawing-on-images)
-          - [1.2.2.13.4.1. Drawing Shapes](#1221341-drawing-shapes)
-        - [1.2.2.13.5. Drawing Text](#122135-drawing-text)
-      - [1.2.2.14. Controlling the Keyboard \& Mouse with GUI Automation](#12214-controlling-the-keyboard--mouse-with-gui-automation)
-        - [1.2.2.14.1. Installing the `pyautogui` Module](#122141-installing-the-pyautogui-module)
-        - [1.2.2.14.2. Setting Up Accessibility Apps on MacOS](#122142-setting-up-accessibility-apps-on-macos)
-        - [1.2.2.14.3. Staying on Track](#122143-staying-on-track)
-          - [1.2.2.14.3.1. Pauses \& Fail-Safes](#1221431-pauses--fail-safes)
-          - [1.2.2.14.3.2. Shutting Down Everything by Logging Out](#1221432-shutting-down-everything-by-logging-out)
-        - [1.2.2.14.4. Controlling Mouse Movement](#122144-controlling-mouse-movement)
-          - [1.2.2.14.4.1. Moving the Mouse](#1221441-moving-the-mouse)
-          - [1.2.2.14.4.2. Getting the Mouse Position](#1221442-getting-the-mouse-position)
-        - [1.2.2.14.5. Controlling Mouse Interaction](#122145-controlling-mouse-interaction)
-          - [1.2.2.14.5.1. Clicking the Mouse](#1221451-clicking-the-mouse)
-          - [1.2.2.14.5.2. Dragging the Mouse](#1221452-dragging-the-mouse)
-          - [1.2.2.14.5.3. Scrolling the Mouse](#1221453-scrolling-the-mouse)
-        - [1.2.2.14.6. Planning Your Mouse Movements](#122146-planning-your-mouse-movements)
-          - [1.2.2.14.6.1. Working with the Screen](#1221461-working-with-the-screen)
-          - [1.2.2.14.6.2. Getting a Screenshot](#1221462-getting-a-screenshot)
-          - [1.2.2.14.6.3. Analysing the Screenshot](#1221463-analysing-the-screenshot)
-        - [1.2.2.14.7. Image Recognition](#122147-image-recognition)
-        - [1.2.2.14.8. Getting Window Information](#122148-getting-window-information)
-          - [1.2.2.14.8.1. Obtaining the Active Window](#1221481-obtaining-the-active-window)
-          - [1.2.2.14.8.2. Other Ways of Obtaining Windows](#1221482-other-ways-of-obtaining-windows)
-          - [1.2.2.14.8.3. Manipulating Windows](#1221483-manipulating-windows)
-        - [1.2.2.14.9. Controlling the Keyboard](#122149-controlling-the-keyboard)
-          - [1.2.2.14.9.1. Sending a String from the Keyboard](#1221491-sending-a-string-from-the-keyboard)
-          - [1.2.2.14.9.2. Key Names](#1221492-key-names)
-          - [1.2.2.14.9.3. Pressing \& Releasing the Keyboard](#1221493-pressing--releasing-the-keyboard)
-          - [1.2.2.14.9.4. Hotkey Combinations](#1221494-hotkey-combinations)
-        - [1.2.2.14.10. Setting Up Your GUI Animation Scripts](#1221410-setting-up-your-gui-animation-scripts)
-        - [1.2.2.14.11. Review of the `PyAutoGUI` Functions](#1221411-review-of-the-pyautogui-functions)
-        - [1.2.2.14.12. Project: Automatic Form Filler](#1221412-project-automatic-form-filler)
-        - [1.2.2.14.13. Displaying Message Boxes](#1221413-displaying-message-boxes)
   - [1.3. `bash` Cookbook](#13-bash-cookbook)
     - [1.3.1. Preface](#131-preface)
       - [1.3.1.1. Who Should Read This Book](#1311-who-should-read-this-book)
@@ -1184,8 +497,6 @@ TODO: Order in which to do this testing.
       - [1.3.19.15. Using `sudo` on a Group of Commands](#131915-using-sudo-on-a-group-of-commands)
       - [1.3.19.16. Finding Lines That Appear in One File but Not in Another](#131916-finding-lines-that-appear-in-one-file-but-not-in-another)
       - [1.3.19.17. Keeping the Most Recent `N` Objects](#131917-keeping-the-most-recent-n-objects)
-      - [1.3.19.18. Writing to a Circular Log](#131918-writing-to-a-circular-log)
-      - [1.3.19.19. Circular Backups](#131919-circular-backups)
       - [1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself](#131920-grepping-ps-output-without-also-getting-the-grep-process-itself)
       - [1.3.19.21. Finding Out Whether a Process Is Running](#131921-finding-out-whether-a-process-is-running)
       - [1.3.19.22. Adding a Prefix or Suffix to Output](#131922-adding-a-prefix-or-suffix-to-output)
@@ -1196,269 +507,17 @@ TODO: Order in which to do this testing.
     - [1.3.20. Working Faster by Typing Less](#1320-working-faster-by-typing-less)
       - [1.3.20.1. Moving Quickly Among Arbitrary Directories](#13201-moving-quickly-among-arbitrary-directories)
       - [1.3.20.2. Repeating the Last Command](#13202-repeating-the-last-command)
-      - [1.3.20.3. Quick Substitution](#13203-quick-substitution)
-      - [1.3.20.4. Reusing Arguments](#13204-reusing-arguments)
-      - [1.3.20.5. Finishing Names for You](#13205-finishing-names-for-you)
-      - [1.3.20.6. Playing It Safe](#13206-playing-it-safe)
-      - [1.3.20.7. Big Changes, More Lines](#13207-big-changes-more-lines)
     - [1.3.21. Tips \& Traps: Common Goofs for Novices](#1321-tips--traps-common-goofs-for-novices)
       - [1.3.21.1. Forgetting to Set Execute Permissions](#13211-forgetting-to-set-execute-permissions)
       - [1.3.21.2. Fixing `"No such file or directory"` Errors](#13212-fixing-no-such-file-or-directory-errors)
       - [1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`](#13213-forgetting-that-the-current-directory-is-not-in-the-path)
-      - [1.3.21.4. Naming Your Script `"test"`](#13214-naming-your-script-test)
-      - [1.3.21.5. Expecting to Change Exported Variables](#13215-expecting-to-change-exported-variables)
-      - [1.3.21.6. Forgetting Quotes Leads to `"command not found"` on Assignments](#13216-forgetting-quotes-leads-to-command-not-found-on-assignments)
-      - [1.3.21.7. Forgetting that Pattern Matching Alphabetises](#13217-forgetting-that-pattern-matching-alphabetises)
-      - [1.3.21.8. Forgetting that Pipelines Make Subshells](#13218-forgetting-that-pipelines-make-subshells)
-      - [1.3.21.9. Making Your Terminal Sane Again](#13219-making-your-terminal-sane-again)
-      - [1.3.21.10. Deleting Files Using an Empty Variable](#132110-deleting-files-using-an-empty-variable)
-      - [1.3.21.11. Seeing Odd Behaviour from `printf`](#132111-seeing-odd-behaviour-from-printf)
       - [1.3.21.12. Testing `bash` Script Syntax](#132112-testing-bash-script-syntax)
       - [1.3.21.13. Debugging Scripts](#132113-debugging-scripts)
       - [1.3.21.14. Avoid `"command not found"` When Using Functions](#132114-avoid-command-not-found-when-using-functions)
       - [1.3.21.15. Confusing Shell Wildcards \& Regular Expressions](#132115-confusing-shell-wildcards--regular-expressions)
   - [1.4. Clean Architecture](#14-clean-architecture)
   - [1.5. Introducing GitHub](#15-introducing-github)
-    - [1.5.1. Introducing GitHub Introduction](#151-introducing-github-introduction)
-      - [1.5.1.1. What is Git?](#1511-what-is-git)
-      - [1.5.1.2. What is Github?](#1512-what-is-github)
-      - [1.5.1.3. Why Use Git?](#1513-why-use-git)
-      - [1.5.1.4. Why Use GitHub?](#1514-why-use-github)
-      - [1.5.1.5. Key Concepts](#1515-key-concepts)
-    - [1.5.2. Viewing](#152-viewing)
-      - [1.5.2.1. Introducing the Product Page](#1521-introducing-the-product-page)
-      - [1.5.2.2. Viewing the `README.md` File](#1522-viewing-the-readmemd-file)
-      - [1.5.2.3. Viewing the Commit History](#1523-viewing-the-commit-history)
-      - [1.5.2.4. Viewing Pull Requests](#1524-viewing-pull-requests)
-      - [1.5.2.5. Viewing Issues](#1525-viewing-issues)
-      - [1.5.2.6. Viewing the Pulse](#1526-viewing-the-pulse)
-      - [1.5.2.7. Viewing GitHub Graphs](#1527-viewing-github-graphs)
-        - [1.5.2.7.1. The Contributors Graph](#15271-the-contributors-graph)
-        - [1.5.2.7.2. The Commits Graph](#15272-the-commits-graph)
-        - [1.5.2.7.3. The Code Frequency Graph](#15273-the-code-frequency-graph)
-        - [1.5.2.7.4. The Punch Card Graph](#15274-the-punch-card-graph)
-        - [1.5.2.7.5. The Network Graph](#15275-the-network-graph)
-        - [1.5.2.7.6. The Members List](#15276-the-members-list)
-        - [1.5.2.7.7. The Traffic Graph](#15277-the-traffic-graph)
-    - [1.5.3. Editing](#153-editing)
-      - [1.5.3.1. Contributing via a Fork](#1531-contributing-via-a-fork)
-      - [1.5.3.2. Adding a File](#1532-adding-a-file)
-      - [1.5.3.3. Creating a Pull Request](#1533-creating-a-pull-request)
-      - [1.5.3.4. Editing a File](#1534-editing-a-file)
-      - [1.5.3.5. Renaming or Moving a File](#1535-renaming-or-moving-a-file)
-      - [1.5.3.6. Working with Folders](#1536-working-with-folders)
-        - [1.5.3.6.1. Creating a Folder](#15361-creating-a-folder)
-        - [1.5.3.6.2. Renaming a Folder](#15362-renaming-a-folder)
-      - [1.5.3.7. The Limits of Editing on GitHub](#1537-the-limits-of-editing-on-github)
-    - [1.5.4. Collaboration](#154-collaboration)
-      - [1.5.4.1. Committing to a Branch](#1541-committing-to-a-branch)
-      - [1.5.4.2. Creating a Pull Request from a Branch](#1542-creating-a-pull-request-from-a-branch)
-      - [1.5.4.3. Collaborating on Pull Requests](#1543-collaborating-on-pull-requests)
-        - [1.5.4.3.1. Involving People with Pull Requests](#15431-involving-people-with-pull-requests)
-        - [1.5.4.3.2. Reviewing Pull Requests](#15432-reviewing-pull-requests)
-        - [1.5.4.3.3. Commenting on Pull Requests](#15433-commenting-on-pull-requests)
-        - [1.5.4.3.4. Adding Colour to Comments](#15434-adding-colour-to-comments)
-        - [1.5.4.3.5. Contributing to Pull Requests](#15435-contributing-to-pull-requests)
-        - [1.5.4.3.6. Testing a Pull Request](#15436-testing-a-pull-request)
-        - [1.5.4.3.7. Merging a Pull Request](#15437-merging-a-pull-request)
-        - [1.5.4.3.8. Who Should Merge a Pull Request?](#15438-who-should-merge-a-pull-request)
-        - [1.5.4.3.9. Pull Request Notifications](#15439-pull-request-notifications)
-        - [1.5.4.3.10. Best Practices for Pull Requests](#154310-best-practices-for-pull-requests)
-      - [1.5.4.4. Issues](#1544-issues)
-        - [1.5.4.4.1. Creating a New Issue](#15441-creating-a-new-issue)
-        - [1.5.4.4.2. Managing Milestones for Issues](#15442-managing-milestones-for-issues)
-        - [1.5.4.4.3. Managing Labels for Issues](#15443-managing-labels-for-issues)
-        - [1.5.4.4.4. Commenting on Issues](#15444-commenting-on-issues)
-        - [1.5.4.4.5. Referencing Issues in a Commit](#15445-referencing-issues-in-a-commit)
-        - [1.5.4.4.6. Best Practices for Issues](#15446-best-practices-for-issues)
-      - [1.5.4.5. Wikis](#1545-wikis)
-        - [1.5.4.5.1. Getting Started with a Wiki](#15451-getting-started-with-a-wiki)
-        - [1.5.4.5.2. Adding \& Linking to a Page on Your Wiki](#15452-adding--linking-to-a-page-on-your-wiki)
-      - [1.5.4.6. GitHub Pages](#1546-github-pages)
-        - [1.5.4.6.1. Creating a Website for Your Project](#15461-creating-a-website-for-your-project)
-        - [1.5.4.6.2. Creating a Website for Yourself or Your Organisation](#15462-creating-a-website-for-yourself-or-your-organisation)
-    - [1.5.5. Creating \& Configuring](#155-creating--configuring)
-      - [1.5.5.1. Creating a Repository](#1551-creating-a-repository)
-      - [1.5.5.2. Adding Collaborators](#1552-adding-collaborators)
-      - [1.5.5.3. Configuring a Repository](#1553-configuring-a-repository)
-      - [1.5.5.4. Integrating with Other Systems](#1554-integrating-with-other-systems)
-      - [1.5.5.5. Personal Versus Organisational](#1555-personal-versus-organisational)
-      - [1.5.5.6. Creating an Organisation](#1556-creating-an-organisation)
-      - [1.5.5.7. Managing Teams](#1557-managing-teams)
-    - [1.5.6. Downloading](#156-downloading)
-      - [1.5.6.1. Why Clone a Repository?](#1561-why-clone-a-repository)
-      - [1.5.6.2. GitHub for Mac](#1562-github-for-mac)
-        - [1.5.6.2.1. Making a Commit Using GitHub for Mac](#15621-making-a-commit-using-github-for-mac)
-      - [1.5.6.3. Viewing Changes in GitHub for Mac](#1563-viewing-changes-in-github-for-mac)
-      - [1.5.6.4. GitHub for Windows](#1564-github-for-windows)
-        - [1.5.6.4.1. Making a Commit Using GitHub for Windows](#15641-making-a-commit-using-github-for-windows)
-        - [1.5.6.4.2. Configuring Command Line Tools in GitHub for Windows](#15642-configuring-command-line-tools-in-github-for-windows)
-    - [1.5.7. Next Steps](#157-next-steps)
   - [1.6. Practical Process Automation](#16-practical-process-automation)
-    - [1.6.1. Practical Process Automation Introduction](#161-practical-process-automation-introduction)
-      - [1.6.1.1. Process Automation](#1611-process-automation)
-      - [1.6.1.2. Wild West Integrations](#1612-wild-west-integrations)
-      - [1.6.1.3. Workflow Engines \& Executable Process Models](#1613-workflow-engines--executable-process-models)
-      - [1.6.1.4. A Business Scenario](#1614-a-business-scenario)
-      - [1.6.1.5. Long-Running Processes](#1615-long-running-processes)
-      - [1.6.1.6. Business Processes, Integration Process, \& Workflows](#1616-business-processes-integration-process--workflows)
-      - [1.6.1.7. Business-IT Collaboration](#1617-business-it-collaboration)
-      - [1.6.1.8. Business Drivers \& The Value of Process Automation](#1618-business-drivers--the-value-of-process-automation)
-      - [1.6.1.9. Not Your Parents' Process Automation Tools](#1619-not-your-parents-process-automation-tools)
-        - [1.6.1.9.1. A Brief History of Process Automation](#16191-a-brief-history-of-process-automation)
-        - [1.6.1.9.2. The Story of Camunda](#16192-the-story-of-camunda)
-    - [1.6.2. Part I: Fundamentals](#162-part-i-fundamentals)
-      - [1.6.2.1. Workflow Engines \& Process Solutions](#1621-workflow-engines--process-solutions)
-        - [1.6.2.1.1. The Workflow Engine](#16211-the-workflow-engine)
-          - [1.6.2.1.1.1. Core Capabilities](#162111-core-capabilities)
-          - [1.6.2.1.1.2. Additional Features of Workflow Patterns](#162112-additional-features-of-workflow-patterns)
-          - [1.6.2.1.1.3. Architecture](#162113-architecture)
-        - [1.6.2.1.2. A Process Solution](#16212-a-process-solution)
-        - [1.6.2.1.3. An Executable Example](#16213-an-executable-example)
-        - [1.6.2.1.4. Application, Processes, \& Workflow Engines](#16214-application-processes--workflow-engines)
-        - [1.6.2.1.5. Typical Workflow Tools in a Project's Life Cycle](#16215-typical-workflow-tools-in-a-projects-life-cycle)
-          - [1.6.2.1.5.1. Graphical Process Modeller](#162151-graphical-process-modeller)
-          - [1.6.2.1.5.2. Collaboration Tools](#162152-collaboration-tools)
-          - [1.6.2.1.5.3. Operations Tooling](#162153-operations-tooling)
-          - [1.6.2.1.5.4. Tasklist Applications](#162154-tasklist-applications)
-          - [1.6.2.1.5.5. Business Monitoring \& Reporting](#162155-business-monitoring--reporting)
-      - [1.6.2.2. Developing Process Solutions](#1622-developing-process-solutions)
-        - [1.6.2.2.1. Business Process Model \& Notation (BPMN)](#16221-business-process-model--notation-bpmn)
-          - [1.6.2.2.1.1. Start \& End Events](#162211-start--end-events)
-          - [1.6.2.2.1.2. The Token Concepts: Implementing Control Flow](#162212-the-token-concepts-implementing-control-flow)
-          - [1.6.2.2.1.3. Sequence Flows: Controlling the Flow of Execution](#162213-sequence-flows-controlling-the-flow-of-execution)
-          - [1.6.2.2.1.4. Tasks: Units of Work](#162214-tasks-units-of-work)
-          - [1.6.2.2.1.5. Gateways: Steering Flow](#162215-gateways-steering-flow)
-          - [1.6.2.2.1.6. Events@ Waiting for Something to Happen](#162216-events-waiting-for-something-to-happen)
-          - [1.6.2.2.1.7. Message Events: Waiting for a Trigger from the Outside](#162217-message-events-waiting-for-a-trigger-from-the-outside)
-        - [1.6.2.2.2. Combining Process Models \& Programming Code](#16222-combining-process-models--programming-code)
-          - [1.6.2.2.2.1. Publish/Subscribe to a Process](#162221-publishsubscribe-to-a-process)
-          - [1.6.2.2.2.2. Referencing Code in Process Models](#162222-referencing-code-in-process-models)
-          - [1.6.2.2.2.3. Using Prebuilt Connectors](#162223-using-prebuilt-connectors)
-          - [1.6.2.2.2.4. Model or Code?](#162224-model-or-code)
-        - [1.6.2.2.3. Testing Processes](#16223-testing-processes)
-        - [1.6.2.2.4. Versioning of Process Solutions](#16224-versioning-of-process-solutions)
-        - [1.6.2.2.5. Running Versions in Parallel](#16225-running-versions-in-parallel)
-      - [1.6.2.3. Orchestrate Anything](#1623-orchestrate-anything)
-        - [1.6.2.3.1. Orchestrate Software](#16231-orchestrate-software)
-          - [1.6.2.3.1.1. Service-Oriented Architecture (SOA) Services](#162311-service-oriented-architecture-soa-services)
-          - [1.6.2.3.1.2. Microservices](#162312-microservices)
-          - [1.6.2.3.1.3. Serverless Functions](#162313-serverless-functions)
-          - [1.6.2.3.1.4. Modular Functions](#162314-modular-functions)
-          - [1.6.2.3.1.5. Deconstructing the Monolith](#162315-deconstructing-the-monolith)
-        - [1.6.2.3.2. Orchestrate Decisions](#16232-orchestrate-decisions)
-          - [1.6.2.3.2.1. Decision Model \& Notation (DMN)](#162321-decision-model--notation-dmn)
-          - [1.6.2.3.2.2. Decisions in a Process Model](#162322-decisions-in-a-process-model)
-        - [1.6.2.3.3. Orchestrate Humans](#16233-orchestrate-humans)
-          - [1.6.2.3.3.1. Task Assignment](#162331-task-assignment)
-          - [1.6.2.3.3.2. Additional Tool Support](#162332-additional-tool-support)
-          - [1.6.2.3.3.3. The User Interface of User Tasks](#162333-the-user-interface-of-user-tasks)
-        - [1.6.2.3.4. Orchestrate RPA Bots](#16234-orchestrate-rpa-bots)
-        - [1.6.2.3.5. Orchestrate Physical Devices \& Things](#16235-orchestrate-physical-devices--things)
-      - [1.6.2.4. Championing Workflow Engines \& BPMN](#1624-championing-workflow-engines--bpmn)
-        - [1.6.2.4.1. Limitation of Other Implementation Options](#16241-limitation-of-other-implementation-options)
-          - [1.6.2.4.1.1. Hardcoded Processes](#162411-hardcoded-processes)
-          - [1.6.2.4.1.2. Batch Processing](#162412-batch-processing)
-          - [1.6.2.4.1.3. Data Pipelines \& Streaming](#162413-data-pipelines--streaming)
-          - [1.6.2.4.1.4. The Actor Model](#162414-the-actor-model)
-          - [1.6.2.4.1.5. Stateful Functions](#162415-stateful-functions)
-        - [1.6.2.4.2. Process Modelling Languages](#16242-process-modelling-languages)
-          - [1.6.2.4.2.1. Workflow Patterns](#162421-workflow-patterns)
-          - [1.6.2.4.2.2. Benefits of Graphical Process Visualisations](#162422-benefits-of-graphical-process-visualisations)
-          - [1.6.2.4.2.3. Textual Process Modelling Approaches](#162423-textual-process-modelling-approaches)
-          - [1.6.2.4.2.4. Typical Concerns of Graphical Modelling](#162424-typical-concerns-of-graphical-modelling)
-          - [1.6.2.4.2.5. Graphical vs Textual Approaches](#162425-graphical-vs-textual-approaches)
-        - [1.6.2.4.3. Process Automation with Blockchain?](#16243-process-automation-with-blockchain)
-    - [1.6.3. Part II: Process Automation in the Enterprise](#163-part-ii-process-automation-in-the-enterprise)
-      - [1.6.3.1. Solution Architecture](#1631-solution-architecture)
-        - [1.6.3.1.1. When to Use a Workflow Engine](#16311-when-to-use-a-workflow-engine)
-        - [1.6.3.1.2. Architecture Trade-Offs](#16312-architecture-trade-offs)
-          - [1.6.3.1.2.1. Running the Workflow Engine](#163121-running-the-workflow-engine)
-          - [1.6.3.1.2.2. Decentralised Engines](#163122-decentralised-engines)
-          - [1.6.3.1.2.3. Sharing Engines](#163123-sharing-engines)
-          - [1.6.3.1.2.4. Ownership of Process Models](#163124-ownership-of-process-models)
-          - [1.6.3.1.2.5. Using the Workflow Engine as a Communication Channel](#163125-using-the-workflow-engine-as-a-communication-channel)
-          - [1.6.3.1.2.6. In-House Workflow Patterns](#163126-in-house-workflow-patterns)
-          - [1.6.3.1.2.7. Performance \& Scalability](#163127-performance--scalability)
-          - [1.6.3.1.2.8. Developer Experience \& Continuous Delivery](#163128-developer-experience--continuous-delivery)
-        - [1.6.3.1.3. Evaluating Workflow Engines](#16313-evaluating-workflow-engines)
-      - [1.6.3.2. Autonomy, Boundaries, \& Isolation](#1632-autonomy-boundaries--isolation)
-        - [1.6.3.2.1. Strong Cohesion \& Low Coupling](#16321-strong-cohesion--low-coupling)
-        - [1.6.3.2.2. Domain-Driven Design, Bounded Context, \& Services](#16322-domain-driven-design-bounded-context--services)
-        - [1.6.3.2.3. Boundaries \& Business Processes](#16323-boundaries--business-processes)
-          - [1.6.3.2.3.1. Respect Process \& Avoid Process Monoliths](#163231-respect-process--avoid-process-monoliths)
-          - [1.6.3.2.3.2. Foster Your Understanding of Responsibilities](#163232-foster-your-understanding-of-responsibilities)
-          - [1.6.3.2.3.3. Long-Running Behaviour Help You Defend Boundaries](#163233-long-running-behaviour-help-you-defend-boundaries)
-        - [1.6.3.2.4. How Processes Communicate Across Boundaries](#16324-how-processes-communicate-across-boundaries)
-          - [1.6.3.2.4.1. Call Activities: Handy Shortcuts Only Within the Boundary](#163241-call-activities-handy-shortcuts-only-within-the-boundary)
-          - [1.6.3.2.4.2. Crossing Boundaries as an API Call](#163242-crossing-boundaries-as-an-api-call)
-        - [1.6.3.2.5. Decentralised Workflow Tooling](#16325-decentralised-workflow-tooling)
-      - [1.6.3.3. Balancing Orchestration \& Choreography](#1633-balancing-orchestration--choreography)
-        - [1.6.3.3.1. Event-Driven Systems](#16331-event-driven-systems)
-          - [1.6.3.3.1.1. Emergent Behaviour](#163311-emergent-behaviour)
-          - [1.6.3.3.1.2. Event Chains](#163312-event-chains)
-          - [1.6.3.3.1.3. The Risk of Distributed Monoliths](#163313-the-risk-of-distributed-monoliths)
-        - [1.6.3.3.2. Contrasting Orchestration \& Choreography](#16332-contrasting-orchestration--choreography)
-          - [1.6.3.3.2.1. Introducing Commands](#163321-introducing-commands)
-          - [1.6.3.3.2.2. Messages, Events \& Commands](#163322-messages-events--commands)
-          - [1.6.3.3.2.3. Terminology \& Definitions](#163323-terminology--definitions)
-          - [1.6.3.3.2.4. Avoid Event Chains by Using Commands](#163324-avoid-event-chains-by-using-commands)
-          - [1.6.3.3.2.5. The Direction of Dependency](#163325-the-direction-of-dependency)
-        - [1.6.3.3.3. Finding the Right Balance](#16333-finding-the-right-balance)
-          - [1.6.3.3.3.1. Deciding Whether to Use Commands or Events](#163331-deciding-whether-to-use-commands-or-events)
-          - [1.6.3.3.3.2. Mixing Commands \& Events](#163332-mixing-commands--events)
-          - [1.6.3.3.3.3. Designing Responsibilities](#163333-designing-responsibilities)
-          - [1.6.3.3.3.4. Evaluating Change Scenarios to Validate Decisions](#163334-evaluating-change-scenarios-to-validate-decisions)
-        - [1.6.3.3.4. Debunking Common Myths](#16334-debunking-common-myths)
-          - [1.6.3.3.4.1. Commands Do Not Require Synchronous Communication](#163341-commands-do-not-require-synchronous-communication)
-          - [1.6.3.3.4.2. Orchestration Does Not Need to be Central](#163342-orchestration-does-not-need-to-be-central)
-          - [1.6.3.3.4.3. Choreography Does Not Automatically Lead to More Decoupling](#163343-choreography-does-not-automatically-lead-to-more-decoupling)
-        - [1.6.3.3.5. The Role of Workflow Engines](#16335-the-role-of-workflow-engines)
-      - [1.6.3.4. Workflow Engines \& Integration Challenges](#1634-workflow-engines--integration-challenges)
-        - [1.6.3.4.1. Communication Patterns for Service Invocation](#16341-communication-patterns-for-service-invocation)
-          - [1.6.3.4.1.1. Synchronous Request/Response](#163411-synchronous-requestresponse)
-          - [1.6.3.4.1.2. Asynchronous Request/Response](#163412-asynchronous-requestresponse)
-          - [1.6.3.4.1.3. BPMN \& Being Ready to Receive](#163413-bpmn--being-ready-to-receive)
-          - [1.6.3.4.1.4. Aggregating \& Dead Messages](#163414-aggregating--dead-messages)
-          - [1.6.3.4.1.5. Poisoned \& Dead Messages](#163415-poisoned--dead-messages)
-          - [1.6.3.4.1.6. Synchronous Facades Hiding Asynchronous Communication](#163416-synchronous-facades-hiding-asynchronous-communication)
-        - [1.6.3.4.2. Transactions \& Consistency](#16342-transactions--consistency)
-          - [1.6.3.4.2.1. Eventual Consistency](#163421-eventual-consistency)
-          - [1.6.3.4.2.2. Business Strategies to Handle Inconsistency](#163422-business-strategies-to-handle-inconsistency)
-          - [1.6.3.4.2.3. The Saga Pattern \& Compensation](#163423-the-saga-pattern--compensation)
-          - [1.6.3.4.2.4. Chaining Resources by Using the Outbox Pattern](#163424-chaining-resources-by-using-the-outbox-pattern)
-        - [1.6.3.4.3. Eventual Consistency Applies to Every Form of Remote Communication](#16343-eventual-consistency-applies-to-every-form-of-remote-communication)
-        - [1.6.3.4.4. The Importance of Idempotency](#16344-the-importance-of-idempotency)
-      - [1.6.3.5. Business-IT Collaboration](#1635-business-it-collaboration)
-        - [1.6.3.5.1. A Typical Project](#16351-a-typical-project)
-          - [1.6.3.5.1.1. The Moral of the Story](#163511-the-moral-of-the-story)
-        - [1.6.3.5.2. Including All the People: BizDevOps](#16352-including-all-the-people-bizdevops)
-          - [1.6.3.5.2.1. Development](#163521-development)
-          - [1.6.3.5.2.2. Business](#163522-business)
-          - [1.6.3.5.2.3. Operations](#163523-operations)
-        - [1.6.3.5.3. The Power of One Joined Model](#16353-the-power-of-one-joined-model)
-          - [1.6.3.5.3.1. From a Process Pyramid to a House](#163531-from-a-process-pyramid-to-a-house)
-        - [1.6.3.5.4. Who Does the Modelling?](#16354-who-does-the-modelling)
-        - [1.6.3.5.5. Creating Better Business Models](#16355-creating-better-business-models)
-          - [1.6.3.5.5.1. Extracting (Integration) Logic into Subprocesses](#163551-extracting-integration-logic-into-subprocesses)
-          - [1.6.3.5.5.2. Distinguishing Between Results, Exceptions, \& Errors](#163552-distinguishing-between-results-exceptions--errors)
-          - [1.6.3.5.5.3. Increasing Readability](#163553-increasing-readability)
-      - [1.6.3.6. Process Visibility](#1636-process-visibility)
-        - [1.6.3.6.1. The Value of Process Visibility](#16361-the-value-of-process-visibility)
-        - [1.6.3.6.2. Getting the Data](#16362-getting-the-data)
-          - [1.6.3.6.2.1. Leverage Audit Data from Your Workflow Engine](#163621-leverage-audit-data-from-your-workflow-engine)
-          - [1.6.3.6.2.2. Model Events to Measure Key Performance Indicators](#163622-model-events-to-measure-key-performance-indicators)
-        - [1.6.3.6.3. Status Inquiries](#16363-status-inquiries)
-        - [1.6.3.6.4. Understanding Process That Span Multiple Systems](#16364-understanding-process-that-span-multiple-systems)
-          - [1.6.3.6.4.1. Observability \& Distributed Tracing Tools](#163641-observability--distributed-tracing-tools)
-          - [1.6.3.6.4.2. Custom Centralised Monitoring](#163642-custom-centralised-monitoring)
-          - [1.6.3.6.4.3. Data Warehouses, Data Lakes, \& Business Intelligence Tools](#163643-data-warehouses-data-lakes--business-intelligence-tools)
-          - [1.6.3.6.4.4. Process Mining](#163644-process-mining)
-          - [1.6.3.6.4.5. Process Event Monitoring](#163645-process-event-monitoring)
-          - [1.6.3.6.4.6. Current Market Dynamics](#163646-current-market-dynamics)
-        - [1.6.3.6.5. Setting Up Process Reporting \& Monitoring](#16365-setting-up-process-reporting--monitoring)
-          - [1.6.3.6.5.1. Typical Metrics \& Reports](#163651-typical-metrics--reports)
-          - [1.6.3.6.5.2. Allowing for a Deeper Understanding](#163652-allowing-for-a-deeper-understanding)
     - [1.6.4. Part III: Get Going](#164-part-iii-get-going)
       - [1.6.4.1. The Journey to Introduce Process Automation](#1641-the-journey-to-introduce-process-automation)
         - [1.6.4.1.1. Understanding the Adoption Journey](#16411-understanding-the-adoption-journey)
@@ -1480,268 +539,10 @@ TODO: Order in which to do this testing.
           - [1.6.4.1.3.5. Role \& Skill Development](#164135-role--skill-development)
       - [1.6.4.2. Parting Words](#1642-parting-words)
         - [1.6.4.2.1. Current Architecture Trends Influence Process Automation](#16421-current-architecture-trends-influence-process-automation)
-        - [1.6.4.2.2. Rethinking Business Processes \& The User Experience](#16422-rethinking-business-processes--the-user-experience)
-        - [1.6.4.2.3. Where To Go From Here](#16423-where-to-go-from-here)
   - [1.7. Refactoring](#17-refactoring)
   - [1.8. Software Architecture: The Hard Parts](#18-software-architecture-the-hard-parts)
-    - [1.8.1. Preface](#181-preface)
-      - [1.8.1.1. What Happens When There Are No "Best Practices"?](#1811-what-happens-when-there-are-no-best-practices)
-      - [1.8.1.2. Giving Timeless Advice About Software Architecture](#1812-giving-timeless-advice-about-software-architecture)
-      - [1.8.1.3. The Importance of Data in Architecture](#1813-the-importance-of-data-in-architecture)
-      - [1.8.1.4. Architectural Decision Records](#1814-architectural-decision-records)
-      - [1.8.1.5. Architectural Fitness Functions](#1815-architectural-fitness-functions)
-        - [1.8.1.5.1. Using Fitness Functions](#18151-using-fitness-functions)
-      - [1.8.1.6. Architecture versus Design: Keeping Definitions Simple](#1816-architecture-versus-design-keeping-definitions-simple)
-      - [1.8.1.7. Introducing the Sysops Squad Saga](#1817-introducing-the-sysops-squad-saga)
-        - [1.8.1.7.1. Non-Ticketing Workflow](#18171-non-ticketing-workflow)
-        - [1.8.1.7.2. A Bad Scenario](#18172-a-bad-scenario)
-        - [1.8.1.7.3. Sysops Squad Architectural Components](#18173-sysops-squad-architectural-components)
-        - [1.8.1.7.4. Sysops Squad Data Model](#18174-sysops-squad-data-model)
-    - [1.8.2. Pulling Things Apart](#182-pulling-things-apart)
-      - [1.8.2.1. Discerning Coupling in Software Architecture](#1821-discerning-coupling-in-software-architecture)
-        - [1.8.2.1.1. Architecture (Quantum | Quanta)](#18211-architecture-quantum--quanta)
-          - [1.8.2.1.1.1. Independently Deployable](#182111-independently-deployable)
-          - [1.8.2.1.1.2. High Functional Cohesion](#182112-high-functional-cohesion)
-          - [1.8.2.1.1.3. High Static Coupling](#182113-high-static-coupling)
-          - [1.8.2.1.1.4. Dynamic Quantum Coupling](#182114-dynamic-quantum-coupling)
-        - [1.8.2.1.2. Sysops Squad Saga: Understanding Quanta](#18212-sysops-squad-saga-understanding-quanta)
-      - [1.8.2.2. Architectural Decomposition](#1822-architectural-decomposition)
-        - [1.8.2.2.1. Is the Codebase Decomposable?](#18221-is-the-codebase-decomposable)
-          - [1.8.2.2.1.1. Afferent \& Efferent Coupling](#182211-afferent--efferent-coupling)
-          - [1.8.2.2.1.2. Abstractness \& Instability](#182212-abstractness--instability)
-          - [1.8.2.2.1.3. Distance From the Main Sequence](#182213-distance-from-the-main-sequence)
-        - [1.8.2.2.2. Component-Based Decomposition](#18222-component-based-decomposition)
-        - [1.8.2.2.3. Tactical Forking](#18223-tactical-forking)
-          - [1.8.2.2.3.1. Trade-Offs](#182231-trade-offs)
-        - [1.8.2.2.4. Sysops Squad Saga: Choosing a Decomposition Approach](#18224-sysops-squad-saga-choosing-a-decomposition-approach)
-      - [1.8.2.3. Component-Based Decomposition Patterns](#1823-component-based-decomposition-patterns)
-        - [1.8.2.3.1. Identify \& Size Components Pattern](#18231-identify--size-components-pattern)
-          - [1.8.2.3.1.1. Pattern Description (Identify \& Size Components Pattern)](#182311-pattern-description-identify--size-components-pattern)
-          - [1.8.2.3.1.2. Fitness Functions for Governance (Identify \& Size Components Pattern)](#182312-fitness-functions-for-governance-identify--size-components-pattern)
-          - [1.8.2.3.1.3. Sysops Squad Saga: Sizing Components](#182313-sysops-squad-saga-sizing-components)
-        - [1.8.2.3.2. Gather Common Domain Components Pattern](#18232-gather-common-domain-components-pattern)
-          - [1.8.2.3.2.1. Pattern Description (Gather Common Domain Components Pattern)](#182321-pattern-description-gather-common-domain-components-pattern)
-          - [1.8.2.3.2.2. Fitness Functions for Governance (Gather Common Domain Components Pattern)](#182322-fitness-functions-for-governance-gather-common-domain-components-pattern)
-          - [1.8.2.3.2.3. Sysops Squad Saga: Gathering Common Components](#182323-sysops-squad-saga-gathering-common-components)
-        - [1.8.2.3.3. Flatten Components](#18233-flatten-components)
-          - [1.8.2.3.3.1. Pattern Description (Flatten Components)](#182331-pattern-description-flatten-components)
-          - [1.8.2.3.3.2. Fitness Functions for Governance (Flatten Components)](#182332-fitness-functions-for-governance-flatten-components)
-          - [1.8.2.3.3.3. Sysops Squad Saga: Flattening Components](#182333-sysops-squad-saga-flattening-components)
-        - [1.8.2.3.4. Determine Component Dependencies Pattern](#18234-determine-component-dependencies-pattern)
-          - [1.8.2.3.4.1. Pattern Description (Determine Component Dependencies Pattern)](#182341-pattern-description-determine-component-dependencies-pattern)
-          - [1.8.2.3.4.2. Fitness Functions for Governance (Determine Component Dependencies Pattern)](#182342-fitness-functions-for-governance-determine-component-dependencies-pattern)
-          - [1.8.2.3.4.3. Sysops Squad Saga: Creating Component Domains](#182343-sysops-squad-saga-creating-component-domains)
-        - [1.8.2.3.5. Create Domain Services Pattern](#18235-create-domain-services-pattern)
-          - [1.8.2.3.5.1. Pattern Description (Create Domain Services Pattern)](#182351-pattern-description-create-domain-services-pattern)
-          - [1.8.2.3.5.2. Fitness Functions for Governance (Create Domain Services Pattern)](#182352-fitness-functions-for-governance-create-domain-services-pattern)
-          - [1.8.2.3.5.3. Sysops Squad Saga: Creating Domain Services](#182353-sysops-squad-saga-creating-domain-services)
-      - [1.8.2.4. Pulling Apart Operational Data](#1824-pulling-apart-operational-data)
-        - [1.8.2.4.1. Data Decomposition Pattern](#18241-data-decomposition-pattern)
-          - [1.8.2.4.1.1. Data Disintegration](#182411-data-disintegration)
-          - [1.8.2.4.1.2. Data Integrators](#182412-data-integrators)
-          - [1.8.2.4.1.3. Sysops Squad Saga: Justifying Database Decomposition](#182413-sysops-squad-saga-justifying-database-decomposition)
-        - [1.8.2.4.2. Decomposing Monolithic Data](#18242-decomposing-monolithic-data)
-          - [1.8.2.4.2.1. Step 1: Analyse Database \& Create Data Domain](#182421-step-1-analyse-database--create-data-domain)
-          - [1.8.2.4.2.2. Step 2: Assign Tables to Data Domains](#182422-step-2-assign-tables-to-data-domains)
-          - [1.8.2.4.2.3. Step 3: Separate Database Connections to Data Domains](#182423-step-3-separate-database-connections-to-data-domains)
-          - [1.8.2.4.2.4. Step 4: Move Schemas to Separate Database Servers](#182424-step-4-move-schemas-to-separate-database-servers)
-          - [1.8.2.4.2.5. Switch Over to Independent Database Servers](#182425-switch-over-to-independent-database-servers)
-        - [1.8.2.4.3. Selecting a Database Type](#18243-selecting-a-database-type)
-          - [1.8.2.4.3.1. Relational Databases](#182431-relational-databases)
-          - [1.8.2.4.3.2. Key-Value Databases](#182432-key-value-databases)
-          - [1.8.2.4.3.3. Document Databases](#182433-document-databases)
-          - [1.8.2.4.3.4. Column Family Databases](#182434-column-family-databases)
-          - [1.8.2.4.3.5. Graph Databases](#182435-graph-databases)
-          - [1.8.2.4.3.6. NewSQL Databases](#182436-newsql-databases)
-          - [1.8.2.4.3.7. Cloud Native Databases](#182437-cloud-native-databases)
-          - [1.8.2.4.3.8. Time-Series Databases](#182438-time-series-databases)
-          - [1.8.2.4.3.9. Sysops Squad Saga: Polyglot Databases](#182439-sysops-squad-saga-polyglot-databases)
-      - [1.8.2.5. Service Granularity](#1825-service-granularity)
-        - [1.8.2.5.1. Granularity Disintegrators](#18251-granularity-disintegrators)
-          - [1.8.2.5.1.1. Service Scope \& Function](#182511-service-scope--function)
-          - [1.8.2.5.1.2. Code Volatility](#182512-code-volatility)
-          - [1.8.2.5.1.3. Scalability \& Throughput](#182513-scalability--throughput)
-          - [1.8.2.5.1.4. Fault Tolerance (Service Granularity)](#182514-fault-tolerance-service-granularity)
-          - [1.8.2.5.1.5. Security](#182515-security)
-          - [1.8.2.5.1.6. Extensibility](#182516-extensibility)
-        - [1.8.2.5.2. Granularity Integrators](#18252-granularity-integrators)
-          - [1.8.2.5.2.1. Database Transactions](#182521-database-transactions)
-          - [1.8.2.5.2.2. Workflow \& Choreography](#182522-workflow--choreography)
-          - [1.8.2.5.2.3. Shared Code](#182523-shared-code)
-          - [1.8.2.5.2.4. Data Relationships](#182524-data-relationships)
-        - [1.8.2.5.3. Finding the Right Balance](#18253-finding-the-right-balance)
-        - [1.8.2.5.4. Sysops Squad Saga: Ticket Assignment Granularity](#18254-sysops-squad-saga-ticket-assignment-granularity)
-        - [1.8.2.5.5. Sysops Squad Saga: Customer Registration Granularity](#18255-sysops-squad-saga-customer-registration-granularity)
-    - [1.8.3. Putting Things Back Together](#183-putting-things-back-together)
-      - [1.8.3.1. Reuse Patterns](#1831-reuse-patterns)
-        - [1.8.3.1.1. Code Replication](#18311-code-replication)
-          - [1.8.3.1.1.1. When to Use Code Replication](#183111-when-to-use-code-replication)
-        - [1.8.3.1.2. Shared Library](#18312-shared-library)
-          - [1.8.3.1.2.1. Dependency Management \& Change Control](#183121-dependency-management--change-control)
-          - [1.8.3.1.2.2. Versioning Strategies](#183122-versioning-strategies)
-          - [1.8.3.1.2.3. When To Use Shared Library](#183123-when-to-use-shared-library)
-        - [1.8.3.1.3. Shared Service](#18313-shared-service)
-          - [1.8.3.1.3.1. Change Risk](#183131-change-risk)
-          - [1.8.3.1.3.2. Performance](#183132-performance)
-          - [1.8.3.1.3.3. Scalability](#183133-scalability)
-          - [1.8.3.1.3.4. Fault Tolerance (Reuse Patterns)](#183134-fault-tolerance-reuse-patterns)
-          - [1.8.3.1.3.5. When to Use Shared Service](#183135-when-to-use-shared-service)
-        - [1.8.3.1.4. Sidecars \& Service Mesh](#18314-sidecars--service-mesh)
-          - [1.8.3.1.4.1. When to Use Sidecars \& Service Mesh](#183141-when-to-use-sidecars--service-mesh)
-          - [1.8.3.1.4.2. Sysops Squad Saga: Common Infrastructure Logic](#183142-sysops-squad-saga-common-infrastructure-logic)
-        - [1.8.3.1.5. Code Reuse: When Does It Add Value?](#18315-code-reuse-when-does-it-add-value)
-          - [1.8.3.1.5.1. Reuse via Platforms](#183151-reuse-via-platforms)
-          - [1.8.3.1.5.2. Sysops Squad Saga: Shared Domain Functionality](#183152-sysops-squad-saga-shared-domain-functionality)
-      - [1.8.3.2. Data Ownership \& Distributed Transactions](#1832-data-ownership--distributed-transactions)
-        - [1.8.3.2.1. Assigning Data Ownership](#18321-assigning-data-ownership)
-        - [1.8.3.2.2. Single Ownership Scenario](#18322-single-ownership-scenario)
-        - [1.8.3.2.3. Common Ownership Scenario](#18323-common-ownership-scenario)
-        - [1.8.3.2.4. Joint Ownership Scenario](#18324-joint-ownership-scenario)
-          - [1.8.3.2.4.1. Table Split Technique](#183241-table-split-technique)
-          - [1.8.3.2.4.2. Data Domain Technique](#183242-data-domain-technique)
-          - [1.8.3.2.4.3. Delegate Technique](#183243-delegate-technique)
-        - [1.8.3.2.5. Service Consolidation Technique](#18325-service-consolidation-technique)
-        - [1.8.3.2.6. Data Ownership Summary](#18326-data-ownership-summary)
-        - [1.8.3.2.7. Distributed Transactions](#18327-distributed-transactions)
-        - [1.8.3.2.8. Eventual Consistency Patterns](#18328-eventual-consistency-patterns)
-          - [1.8.3.2.8.1. Background Synchronisation Pattern](#183281-background-synchronisation-pattern)
-          - [1.8.3.2.8.2. Orchestrated Request-Based Pattern](#183282-orchestrated-request-based-pattern)
-          - [1.8.3.2.8.3. Event-Based Pattern](#183283-event-based-pattern)
-        - [1.8.3.2.9. Sysops Squad Saga: Data Ownership for Ticket Processing](#18329-sysops-squad-saga-data-ownership-for-ticket-processing)
-      - [1.8.3.3. Distributed Data Access](#1833-distributed-data-access)
-        - [1.8.3.3.1. Inter-Service Communication Pattern](#18331-inter-service-communication-pattern)
-        - [1.8.3.3.2. Column Schema Replication Pattern](#18332-column-schema-replication-pattern)
-        - [1.8.3.3.3. Replicated Caching Pattern](#18333-replicated-caching-pattern)
-        - [1.8.3.3.4. Data Domain Pattern](#18334-data-domain-pattern)
-        - [1.8.3.3.5. Sysops Squad Saga: Data Access for Ticket Assignment](#18335-sysops-squad-saga-data-access-for-ticket-assignment)
-      - [1.8.3.4. Managing Distributed Workflows](#1834-managing-distributed-workflows)
-        - [1.8.3.4.1. Orchestration Communication Style](#18341-orchestration-communication-style)
-        - [1.8.3.4.2. Choreography Communication Style](#18342-choreography-communication-style)
-          - [1.8.3.4.2.1. Workflow State Management](#183421-workflow-state-management)
-        - [1.8.3.4.3. Trade-Off Between Orchestration and Choreography](#18343-trade-off-between-orchestration-and-choreography)
-          - [1.8.3.4.3.1. State Owner \& Coupling](#183431-state-owner--coupling)
-        - [1.8.3.4.4. Sysops Squad Saga: Managing Workflows](#18344-sysops-squad-saga-managing-workflows)
-      - [1.8.3.5. Transactional Sagas](#1835-transactional-sagas)
-        - [1.8.3.5.1. Transactional Saga Patterns](#18351-transactional-saga-patterns)
-          - [1.8.3.5.1.1. Epic Saga Pattern](#183511-epic-saga-pattern)
-          - [1.8.3.5.1.2. Phone Tag Pattern](#183512-phone-tag-pattern)
-          - [1.8.3.5.1.3. Fairy Tale Saga Pattern](#183513-fairy-tale-saga-pattern)
-          - [1.8.3.5.1.4. Time Travel Saga Pattern](#183514-time-travel-saga-pattern)
-          - [1.8.3.5.1.5. Fantasy Fiction Saga Pattern](#183515-fantasy-fiction-saga-pattern)
-          - [1.8.3.5.1.6. Horror Story Pattern](#183516-horror-story-pattern)
-          - [1.8.3.5.1.7. Parallel Saga Pattern](#183517-parallel-saga-pattern)
-          - [1.8.3.5.1.8. Anthology Saga Pattern](#183518-anthology-saga-pattern)
-        - [1.8.3.5.2. State Management \& Eventual Consistency](#18352-state-management--eventual-consistency)
-          - [1.8.3.5.2.1. Saga State Machines](#183521-saga-state-machines)
-        - [1.8.3.5.3. Techniques for Managing Sagas](#18353-techniques-for-managing-sagas)
-        - [1.8.3.5.4. Sysops Squad Saga: Atomic Transactions \& Compensating Updates](#18354-sysops-squad-saga-atomic-transactions--compensating-updates)
-      - [1.8.3.6. Contracts](#1836-contracts)
-        - [1.8.3.6.1. Contracts Versus Loose Contracts](#18361-contracts-versus-loose-contracts)
-          - [1.8.3.6.1.1. Trade-Offs Between Strict \& Loose Contracts](#183611-trade-offs-between-strict--loose-contracts)
-          - [1.8.3.6.1.2. Contracts in Microservices](#183612-contracts-in-microservices)
-        - [1.8.3.6.2. Stamp Coupling](#18362-stamp-coupling)
-          - [1.8.3.6.2.1. Over-Coupling via Stamp Coupling](#183621-over-coupling-via-stamp-coupling)
-          - [1.8.3.6.2.2. Bandwidth](#183622-bandwidth)
-          - [1.8.3.6.2.3. Stamp Coupling for Workflow Management](#183623-stamp-coupling-for-workflow-management)
-        - [1.8.3.6.3. Sysops Squad Saga: Managing Ticketing Contracts](#18363-sysops-squad-saga-managing-ticketing-contracts)
-      - [1.8.3.7. Managing Analytical Data](#1837-managing-analytical-data)
-        - [1.8.3.7.1. Previous Approaches](#18371-previous-approaches)
-          - [1.8.3.7.1.1. The Data Warehouse](#183711-the-data-warehouse)
-          - [1.8.3.7.1.2. The Data Lake](#183712-the-data-lake)
-        - [1.8.3.7.2. The Data Mesh](#18372-the-data-mesh)
-          - [1.8.3.7.2.1. Definition of Data Mesh](#183721-definition-of-data-mesh)
-          - [1.8.3.7.2.2. Data Product Quantum](#183722-data-product-quantum)
-          - [1.8.3.7.2.3. Data Mesh, Coupling, \& Architecture Quantum](#183723-data-mesh-coupling--architecture-quantum)
-          - [1.8.3.7.2.4. When to Use Data Mesh](#183724-when-to-use-data-mesh)
-        - [1.8.3.7.3. Sysops Squad Saga: Data Mesh](#18373-sysops-squad-saga-data-mesh)
-      - [1.8.3.8. Build Your Own Trade-Off Analysis](#1838-build-your-own-trade-off-analysis)
-        - [1.8.3.8.1. Finding Entangled Dimensions](#18381-finding-entangled-dimensions)
-          - [1.8.3.8.1.1. Coupling](#183811-coupling)
-          - [1.8.3.8.1.2. Analyse Coupling Points](#183812-analyse-coupling-points)
-          - [1.8.3.8.1.3. Assess Trade-Offs](#183813-assess-trade-offs)
-        - [1.8.3.8.2. Trade-Off Techniques](#18382-trade-off-techniques)
-          - [1.8.3.8.2.1. Qualitative Versus Quantitative Analysis](#183821-qualitative-versus-quantitative-analysis)
-          - [1.8.3.8.2.2. MECE Lists](#183822-mece-lists)
-          - [1.8.3.8.2.3. The "Out-Of-Context" Trap](#183823-the-out-of-context-trap)
-          - [1.8.3.8.2.4. Model-Relevant Domain Cases](#183824-model-relevant-domain-cases)
-          - [1.8.3.8.2.5. Prefer Bottom Line over Overwhelming Evidence](#183825-prefer-bottom-line-over-overwhelming-evidence)
-          - [1.8.3.8.2.6. Avoiding Snake Oil \& Evangelism](#183826-avoiding-snake-oil--evangelism)
-        - [1.8.3.8.3. Sysops Squad Saga: Epilogue](#18383-sysops-squad-saga-epilogue)
   - [1.9. The Art of Readable Code](#19-the-art-of-readable-code)
   - [1.10. The Clean Coder](#110-the-clean-coder)
-    - [1.10.1. The Clean Coder Introduction](#1101-the-clean-coder-introduction)
-    - [1.10.2. Professionalism](#1102-professionalism)
-      - [1.10.2.1. Be Careful What You Ask For](#11021-be-careful-what-you-ask-for)
-      - [1.10.2.2. Taking Responsibility](#11022-taking-responsibility)
-      - [1.10.2.3. First, Do No Harm](#11023-first-do-no-harm)
-      - [1.10.2.4. Work Ethic](#11024-work-ethic)
-      - [1.10.2.5. Bibliography](#11025-bibliography)
-    - [1.10.3. Saying No](#1103-saying-no)
-      - [1.10.3.1. Adversarial Roles](#11031-adversarial-roles)
-      - [1.10.3.2. High Stakes](#11032-high-stakes)
-      - [1.10.3.3. Being a "Team Player"](#11033-being-a-team-player)
-      - [1.10.3.4. The Cost of Saying Yes](#11034-the-cost-of-saying-yes)
-      - [1.10.3.5. Code Impossible](#11035-code-impossible)
-    - [1.10.4. Saying Yes](#1104-saying-yes)
-      - [1.10.4.1. A Language of Commitment](#11041-a-language-of-commitment)
-      - [1.10.4.2. Learning How to Say "Yes"](#11042-learning-how-to-say-yes)
-    - [1.10.5. Coding](#1105-coding)
-      - [1.10.5.1. Preparedness](#11051-preparedness)
-      - [1.10.5.2. The Flow Zone](#11052-the-flow-zone)
-      - [1.10.5.3. Writer's Block](#11053-writers-block)
-      - [1.10.5.4. Debugging](#11054-debugging)
-      - [1.10.5.5. Being Yourself](#11055-being-yourself)
-      - [1.10.5.6. Being Late](#11056-being-late)
-      - [1.10.5.7. Help](#11057-help)
-    - [1.10.6. Test-Driven Development](#1106-test-driven-development)
-      - [1.10.6.1. The Jury Is In](#11061-the-jury-is-in)
-      - [1.10.6.2. The Three Laws of TDD](#11062-the-three-laws-of-tdd)
-      - [1.10.6.3. What TDD Is Not](#11063-what-tdd-is-not)
-    - [1.10.7. Practising](#1107-practising)
-      - [1.10.7.1. Some Background on Practising](#11071-some-background-on-practising)
-      - [1.10.7.2. The Coding Dojo](#11072-the-coding-dojo)
-      - [1.10.7.3. Broadening Your Experience](#11073-broadening-your-experience)
-    - [1.10.8. Acceptance Testing](#1108-acceptance-testing)
-      - [1.10.8.1. Communicating Requirements](#11081-communicating-requirements)
-      - [1.10.8.2. Acceptance Tests](#11082-acceptance-tests)
-    - [1.10.9. Testing Strategies](#1109-testing-strategies)
-      - [1.10.9.1. QA Should Find Nothing](#11091-qa-should-find-nothing)
-      - [1.10.9.2. The Test Automation Pyramid](#11092-the-test-automation-pyramid)
-    - [1.10.10. Time Management](#11010-time-management)
-      - [1.10.10.1. Meetings](#110101-meetings)
-      - [1.10.10.2. Focus-Manna](#110102-focus-manna)
-      - [1.10.10.3. Time Boxing \& Tomatoes](#110103-time-boxing--tomatoes)
-      - [1.10.10.4. Avoidance](#110104-avoidance)
-      - [1.10.10.5. Blind Alleys](#110105-blind-alleys)
-      - [1.10.10.6. Marshes, Bogs, Swaps, \& Other Messes](#110106-marshes-bogs-swaps--other-messes)
-    - [1.10.11. Estimation](#11011-estimation)
-      - [1.10.11.1. What Is an Estimate?](#110111-what-is-an-estimate)
-      - [1.10.11.2. PERT](#110112-pert)
-      - [1.10.11.3. Estimating Tasks](#110113-estimating-tasks)
-      - [1.10.11.4. The Law of Large Numbers](#110114-the-law-of-large-numbers)
-    - [1.10.12. Pressure](#11012-pressure)
-      - [1.10.12.1. Avoiding Pressure](#110121-avoiding-pressure)
-      - [1.10.12.2. Handling Pressure](#110122-handling-pressure)
-    - [1.10.13. Collaboration](#11013-collaboration)
-      - [1.10.13.1. Programmers versus People](#110131-programmers-versus-people)
-      - [1.10.13.2. Cerebellums](#110132-cerebellums)
-    - [1.10.14. Teams \& Projects](#11014-teams--projects)
-      - [1.10.14.1. Does It Blend?](#110141-does-it-blend)
-    - [1.10.15. Mentoring, Apprenticeship, \& Craftsmanship](#11015-mentoring-apprenticeship--craftsmanship)
-      - [1.10.15.1. Degrees of Failure](#110151-degrees-of-failure)
-      - [1.10.15.2. Mentoring](#110152-mentoring)
-      - [1.10.15.3. Apprenticeship](#110153-apprenticeship)
-      - [1.10.15.4. Craftsmanship](#110154-craftsmanship)
-    - [1.10.16. Tooling](#11016-tooling)
-      - [1.10.16.1. Tools](#110161-tools)
-      - [1.10.16.2. Source Code Control](#110162-source-code-control)
-      - [1.10.16.3. IDE/Editor](#110163-ideeditor)
-      - [1.10.16.4. Issue Tracking](#110164-issue-tracking)
-      - [1.10.16.5. Continuous Building](#110165-continuous-building)
-      - [1.10.16.6. Unit Testing Tools](#110166-unit-testing-tools)
-      - [1.10.16.7. Component Testing Tools](#110167-component-testing-tools)
-      - [1.10.16.8. Integration Testing Tools](#110168-integration-testing-tools)
-      - [1.10.16.9. UML/MDA](#110169-umlmda)
   - [1.11. The Pragmatic Programmer](#111-the-pragmatic-programmer)
     - [1.11.1. Preface to the Second Edition](#1111-preface-to-the-second-edition)
       - [1.11.1.1. How the Book is Organised](#11111-how-the-book-is-organised)
@@ -1833,187 +634,8 @@ TODO: Order in which to do this testing.
         - [1.11.4.4.1. Tip 18: There Are No Final Decisions](#111441-tip-18-there-are-no-final-decisions)
         - [1.11.4.4.2. Tip 19: Forego Following Fads](#111442-tip-19-forego-following-fads)
         - [1.11.4.4.3. Challenges (Reversibility)](#111443-challenges-reversibility)
-      - [1.11.4.5. Tracer Bullets](#11145-tracer-bullets)
-      - [1.11.4.6. Prototypes \& Post-It Notes](#11146-prototypes--post-it-notes)
-      - [1.11.4.7. Domain Languages](#11147-domain-languages)
-      - [1.11.4.8. Estimating](#11148-estimating)
-    - [1.11.5. The Basic Tools](#1115-the-basic-tools)
-      - [1.11.5.1. The Power of Plain Text](#11151-the-power-of-plain-text)
-      - [1.11.5.2. Shell Games](#11152-shell-games)
-      - [1.11.5.3. Power Editing](#11153-power-editing)
-      - [1.11.5.4. Version Control](#11154-version-control)
-      - [1.11.5.5. Debugging](#11155-debugging)
-      - [1.11.5.6. Text Manipulation](#11156-text-manipulation)
-      - [1.11.5.7. Engineering Daybooks](#11157-engineering-daybooks)
-    - [1.11.6. Pragmatic Paranoia](#1116-pragmatic-paranoia)
-      - [1.11.6.1. Design by Contract](#11161-design-by-contract)
-      - [1.11.6.2. Dead Programs Tell No Tales](#11162-dead-programs-tell-no-tales)
-      - [1.11.6.3. Assertive Programming](#11163-assertive-programming)
-      - [1.11.6.4. How to Balance Resources](#11164-how-to-balance-resources)
-      - [1.11.6.5. Don't Outrun Your Headlights](#11165-dont-outrun-your-headlights)
-    - [1.11.7. Bend, or Break](#1117-bend-or-break)
-      - [1.11.7.1. Decoupling](#11171-decoupling)
-      - [1.11.7.2. Juggling the Real World](#11172-juggling-the-real-world)
-      - [1.11.7.3. Transforming Programming](#11173-transforming-programming)
-      - [1.11.7.4. Inheritance Task](#11174-inheritance-task)
-      - [1.11.7.5. Configuration](#11175-configuration)
-    - [1.11.8. Concurrency](#1118-concurrency)
-      - [1.11.8.1. Breaking Temporal Coupling](#11181-breaking-temporal-coupling)
-      - [1.11.8.2. Shared State is Incorrect State](#11182-shared-state-is-incorrect-state)
-      - [1.11.8.3. Actors \& Processes](#11183-actors--processes)
-      - [1.11.8.4. Blackboards](#11184-blackboards)
-    - [1.11.9. While You Are Coding](#1119-while-you-are-coding)
-      - [1.11.9.1. Listen to Your Lizard Brain](#11191-listen-to-your-lizard-brain)
-      - [1.11.9.2. Programming by Coincidence](#11192-programming-by-coincidence)
-      - [1.11.9.3. Algorithm Speed](#11193-algorithm-speed)
-      - [1.11.9.4. Refactoring](#11194-refactoring)
-      - [1.11.9.5. Test to Code](#11195-test-to-code)
-      - [1.11.9.6. Property-Based Testing](#11196-property-based-testing)
-      - [1.11.9.7. Stay Safe Out There](#11197-stay-safe-out-there)
-      - [1.11.9.8. Naming Things](#11198-naming-things)
-    - [1.11.10. Before the Project](#11110-before-the-project)
-      - [1.11.10.1. The Requirements Pit](#111101-the-requirements-pit)
-      - [1.11.10.2. Solving Impossible Puzzles](#111102-solving-impossible-puzzles)
-      - [1.11.10.3. Working Together](#111103-working-together)
-      - [1.11.10.4. The Essence of Agility](#111104-the-essence-of-agility)
-    - [1.11.11. Pragmatic Projects](#11111-pragmatic-projects)
-      - [1.11.11.1. Pragmatic Teams](#111111-pragmatic-teams)
-      - [1.11.11.2. Coconuts Don't Cut It](#111112-coconuts-dont-cut-it)
-      - [1.11.11.3. Pragmatic Starter Kit](#111113-pragmatic-starter-kit)
-      - [1.11.11.4. Delight Your Users](#111114-delight-your-users)
-      - [1.11.11.5. Pride \& Prejudice](#111115-pride--prejudice)
   - [1.12. The Art of Readable Code](#112-the-art-of-readable-code)
-    - [1.12.1. Preface](#1121-preface)
-      - [1.12.1.1. Code Should Be Easy to Understand](#11211-code-should-be-easy-to-understand)
-        - [1.12.1.1.1. What Makes Code "Better"?](#112111-what-makes-code-better)
-        - [1.12.1.1.2. The Fundamental Theorem of Readability](#112112-the-fundamental-theorem-of-readability)
-        - [1.12.1.1.3. Is Smaller Always Better?](#112113-is-smaller-always-better)
-        - [1.12.1.1.4. Does Time-Till-Understanding Conflict with Other Goals?](#112114-does-time-till-understanding-conflict-with-other-goals)
-        - [1.12.1.1.5. The Hart Part](#112115-the-hart-part)
-    - [1.12.2. Surface-Level Improvements](#1122-surface-level-improvements)
-      - [1.12.2.1. Packing Information Into Names](#11221-packing-information-into-names)
-        - [1.12.2.1.1. Choose Specific Words](#112211-choose-specific-words)
-        - [1.12.2.1.2. Avoid Generic Names Like `tmp` and `ret_val`](#112212-avoid-generic-names-like-tmp-and-ret_val)
-        - [1.12.2.1.3. Prefer Concrete Names Over Abstract Names](#112213-prefer-concrete-names-over-abstract-names)
-        - [1.12.2.1.4. Attaching Extra Information to a Name](#112214-attaching-extra-information-to-a-name)
-        - [1.12.2.1.5. How Long Should a Name Be?](#112215-how-long-should-a-name-be)
-        - [1.12.2.1.6. Use Name Formatting to Convey Meaning](#112216-use-name-formatting-to-convey-meaning)
-      - [1.12.2.2. Names That Can't be Misconstrued](#11222-names-that-cant-be-misconstrued)
-        - [1.12.2.2.1. Example: `Filter()`](#112221-example-filter)
-        - [1.12.2.2.2. Example: `Clip(text, length)`](#112222-example-cliptext-length)
-        - [1.12.2.2.3. Prefer Min and Max for (Inclusive) Limits](#112223-prefer-min-and-max-for-inclusive-limits)
-        - [1.12.2.2.4. Prefer First and Last for (Inclusive) Ranges](#112224-prefer-first-and-last-for-inclusive-ranges)
-        - [1.12.2.2.5. Prefer Begin and End for Inclusive/Exclusive Ranges](#112225-prefer-begin-and-end-for-inclusiveexclusive-ranges)
-        - [1.12.2.2.6. Naming Booleans](#112226-naming-booleans)
-        - [1.12.2.2.7. Matching Expectations of Users](#112227-matching-expectations-of-users)
-        - [1.12.2.2.8. Example: Evaluating Multiple Name Candidates](#112228-example-evaluating-multiple-name-candidates)
-      - [1.12.2.3. Aesthetics](#11223-aesthetics)
-        - [1.12.2.3.1. Why Do Aesthetics Matter?](#112231-why-do-aesthetics-matter)
-        - [1.12.2.3.2. Rearrange Line Breaks to be Consistent and Compact](#112232-rearrange-line-breaks-to-be-consistent-and-compact)
-        - [1.12.2.3.3. Line Methods to Clean Up Irregularity](#112233-line-methods-to-clean-up-irregularity)
-        - [1.12.2.3.4. Use Column Adjustment When Helpful](#112234-use-column-adjustment-when-helpful)
-        - [1.12.2.3.5. Pick a Meaningful Order, and Use it Consistently](#112235-pick-a-meaningful-order-and-use-it-consistently)
-        - [1.12.2.3.6. Organise Declarations Into Blocks](#112236-organise-declarations-into-blocks)
-        - [1.12.2.3.7. Break Code Into "Paragraphs"](#112237-break-code-into-paragraphs)
-        - [1.12.2.3.8. Personal Style versus Consistency](#112238-personal-style-versus-consistency)
-      - [1.12.2.4. Knowing What to Comment](#11224-knowing-what-to-comment)
-        - [1.12.2.4.1. What NOT to Comment](#112241-what-not-to-comment)
-        - [1.12.2.4.2. Recording Your Thoughts](#112242-recording-your-thoughts)
-        - [1.12.2.4.3. Put Yourself in the Reader's Shoes](#112243-put-yourself-in-the-readers-shoes)
-        - [1.12.2.4.4. Final Thought - Getting Over the Writer's Block](#112244-final-thought---getting-over-the-writers-block)
-      - [1.12.2.5. Making Comments Precise \& Compact](#11225-making-comments-precise--compact)
-        - [1.12.2.5.1. Keep Components Compact](#112251-keep-components-compact)
-        - [1.12.2.5.2. Avoid Ambiguous Pronouns](#112252-avoid-ambiguous-pronouns)
-        - [1.12.2.5.3. Polish Sloppy Sentences](#112253-polish-sloppy-sentences)
-        - [1.12.2.5.4. Describe Function Behaviour Precisely](#112254-describe-function-behaviour-precisely)
-        - [1.12.2.5.5. Use Input/Output Examples That Illustrate Corner Cases](#112255-use-inputoutput-examples-that-illustrate-corner-cases)
-        - [1.12.2.5.6. Share the Intent of Your Code](#112256-share-the-intent-of-your-code)
-        - [1.12.2.5.7. "Named Function Parameter" Comments](#112257-named-function-parameter-comments)
-        - [1.12.2.5.8. Use Information-Dense Words](#112258-use-information-dense-words)
-    - [1.12.3. Simplifying Loops \& Logic](#1123-simplifying-loops--logic)
-      - [1.12.3.1. Making Control Flow Easy to Read](#11231-making-control-flow-easy-to-read)
-        - [1.12.3.1.1. The Order of Arguments in Conditionals](#112311-the-order-of-arguments-in-conditionals)
-        - [1.12.3.1.2. The Order of `if`/`else` Blocks](#112312-the-order-of-ifelse-blocks)
-        - [1.12.3.1.3. The `?:` Conditional Expression (a.k.a "Ternary Operator")](#112313-the--conditional-expression-aka-ternary-operator)
-        - [1.12.3.1.4. Avoid `do`/`while` Loops](#112314-avoid-dowhile-loops)
-        - [1.12.3.1.5. Returning Early From a Function](#112315-returning-early-from-a-function)
-        - [1.12.3.1.6. The Infamous `goto`](#112316-the-infamous-goto)
-        - [1.12.3.1.7. Minimise Nesting](#112317-minimise-nesting)
-        - [1.12.3.1.8. Can You Follow the Flow of Execution?](#112318-can-you-follow-the-flow-of-execution)
-      - [1.12.3.2. Breaking Down Giant Expressions](#11232-breaking-down-giant-expressions)
-        - [1.12.3.2.1. Explaining Variables](#112321-explaining-variables)
-        - [1.12.3.2.2. Summary Variables](#112322-summary-variables)
-        - [1.12.3.2.3. Using De Morgan's Law](#112323-using-de-morgans-law)
-        - [1.12.3.2.4. Abusing Short-Circuit Logic](#112324-abusing-short-circuit-logic)
-        - [1.12.3.2.5. Example: Wrestling with Complicated Logic](#112325-example-wrestling-with-complicated-logic)
-        - [1.12.3.2.6. Breaking Down Giant Statements](#112326-breaking-down-giant-statements)
-        - [1.12.3.2.7. Another Creative Way to Simplify Expressions](#112327-another-creative-way-to-simplify-expressions)
-      - [1.12.3.3. Variables \& Readability](#11233-variables--readability)
-        - [1.12.3.3.1. Eliminating Variables](#112331-eliminating-variables)
-        - [1.12.3.3.2. Shrink the Scope of Your Variables](#112332-shrink-the-scope-of-your-variables)
-        - [1.12.3.3.3. Prefer Write-Once Variables](#112333-prefer-write-once-variables)
-        - [1.12.3.3.4. A Final Example](#112334-a-final-example)
-    - [1.12.4. Reorganising Your Code](#1124-reorganising-your-code)
-      - [1.12.4.1. Extracting Unrelated Subproblems](#11241-extracting-unrelated-subproblems)
-        - [1.12.4.1.1. Introducing Example: `findClosestLocation()`](#112411-introducing-example-findclosestlocation)
-        - [1.12.4.1.2. Pure Utility Code](#112412-pure-utility-code)
-        - [1.12.4.1.3. Other General-Purpose Code](#112413-other-general-purpose-code)
-        - [1.12.4.1.4. Create a Lot of General-Purpose Code](#112414-create-a-lot-of-general-purpose-code)
-        - [1.12.4.1.5. Project-Specific Functionality](#112415-project-specific-functionality)
-        - [1.12.4.1.6. Simplifying an Existing Interface](#112416-simplifying-an-existing-interface)
-        - [1.12.4.1.7. Reshaping Interface to Your Needs](#112417-reshaping-interface-to-your-needs)
-        - [1.12.4.1.8. Taking Things Too Far](#112418-taking-things-too-far)
-      - [1.12.4.2. One Task at a Time](#11242-one-task-at-a-time)
-        - [1.12.4.2.1. Tasks Can Be Small](#112421-tasks-can-be-small)
-        - [1.12.4.2.2. Extracting Values from an Object](#112422-extracting-values-from-an-object)
-        - [1.12.4.2.3. A Larger Example](#112423-a-larger-example)
-      - [1.12.4.3. Turning Thoughts Into Code](#11243-turning-thoughts-into-code)
-        - [1.12.4.3.1. Describing Logic Clearly](#112431-describing-logic-clearly)
-        - [1.12.4.3.2. Knowing Your Libraries Helps](#112432-knowing-your-libraries-helps)
-        - [1.12.4.3.3. Applying This Method to Larger Problems](#112433-applying-this-method-to-larger-problems)
-      - [1.12.4.4. Writing Less Code](#11244-writing-less-code)
-        - [1.12.4.4.1. Don't Bother Implementing That Feature - You Won't Need It](#112441-dont-bother-implementing-that-feature---you-wont-need-it)
-        - [1.12.4.4.2. Question \& Break Down Your Requirements](#112442-question--break-down-your-requirements)
-        - [1.12.4.4.3. Keeping Your Codebase Small](#112443-keeping-your-codebase-small)
-        - [1.12.4.4.4. Be Familiar with the Libraries Around You](#112444-be-familiar-with-the-libraries-around-you)
-        - [1.12.4.4.5. Example: Using Unix Tools Instead of Coding](#112445-example-using-unix-tools-instead-of-coding)
-    - [1.12.5. Selected Topics](#1125-selected-topics)
-      - [1.12.5.1. Testing \& Readability](#11251-testing--readability)
-        - [1.12.5.1.1. Make Tests Easy to Read \& Maintain](#112511-make-tests-easy-to-read--maintain)
-        - [1.12.5.1.2. What's Wrong With This Unit Test?](#112512-whats-wrong-with-this-unit-test)
-        - [1.12.5.1.3. Making This Test More Readable](#112513-making-this-test-more-readable)
-        - [1.12.5.1.4. Choosing Good Test Inputs](#112514-choosing-good-test-inputs)
-        - [1.12.5.1.5. Naming Test Functions](#112515-naming-test-functions)
-        - [1.12.5.1.6. What Was Wrong With That Test?](#112516-what-was-wrong-with-that-test)
-        - [1.12.5.1.7. Test-Friendly Development](#112517-test-friendly-development)
-        - [1.12.5.1.8. Going Too Far](#112518-going-too-far)
-      - [1.12.5.2. Designing \& Implementing a "Minute/Hour" Counter](#11252-designing--implementing-a-minutehour-counter)
-        - [1.12.5.2.1. The Problem](#112521-the-problem)
-        - [1.12.5.2.2. Defining the Class Interface](#112522-defining-the-class-interface)
-        - [1.12.5.2.3. Attempt 1: A Naïve Solution](#112523-attempt-1-a-naïve-solution)
-        - [1.12.5.2.4. Attempt 2: Conveyor Belt Design](#112524-attempt-2-conveyor-belt-design)
-        - [1.12.5.2.5. Attempt 3: A Time-Bucketed Design](#112525-attempt-3-a-time-bucketed-design)
-        - [1.12.5.2.6. Comparing the Three Solutions](#112526-comparing-the-three-solutions)
   - [1.13. `vi` and `vim` Editors](#113-vi-and-vim-editors)
-    - [1.13.1. `vi` \& `vim` Introduction](#1131-vi--vim-introduction)
-    - [1.13.2. Conventions](#1132-conventions)
-    - [1.13.3. Acknowledgements](#1133-acknowledgements)
-    - [1.13.4. Command Line Options](#1134-command-line-options)
-    - [1.13.5. `vi` Commands](#1135-vi-commands)
-    - [1.13.6. Input Mode Shortcuts](#1136-input-mode-shortcuts)
-    - [1.13.7. Substitution \& Regular Expressions](#1137-substitution--regular-expressions)
-    - [1.13.8. `ex` Commands](#1138-ex-commands)
-    - [1.13.9. Initialisation](#1139-initialisation)
-    - [1.13.10. Recovery](#11310-recovery)
-    - [1.13.11. `vi set` Options](#11311-vi-set-options)
-    - [1.13.12. Nothing Like the Original](#11312-nothing-like-the-original)
-    - [1.13.13. Enhanced Tags \& Tag Stacks](#11313-enhanced-tags--tag-stacks)
-    - [1.13.14. `vim` - `vi` Improved](#11314-vim---vi-improved)
-    - [1.13.15. `nvi` - New `vi`](#11315-nvi---new-vi)
-    - [1.13.16. `elvis`](#11316-elvis)
-    - [1.13.17. `vile` - `vi` like Emacs](#11317-vile---vi-like-emacs)
-    - [1.13.18. Internet Resources for `vi`](#11318-internet-resources-for-vi)
-    - [1.13.19. Program Source and Contact Information](#11319-program-source-and-contact-information)
 - [2. Cheat Sheets](#2-cheat-sheets)
   - [2.1. Command Line Tools Overview](#21-command-line-tools-overview)
   - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
@@ -2122,110 +744,6 @@ TODO: Order in which to do this testing.
       - [3.4.1.1. Sections of the Manual Pages](#3411-sections-of-the-manual-pages)
   - [3.5. Pipelines](#35-pipelines)
     - [3.5.1. Jenkins Handbook](#351-jenkins-handbook)
-      - [3.5.1.1. User Handbook Overview](#3511-user-handbook-overview)
-      - [3.5.1.2. Installing Jenkins](#3512-installing-jenkins)
-        - [3.5.1.2.1. Docker (Installing Jenkins)](#35121-docker-installing-jenkins)
-        - [3.5.1.2.2. Kubernetes (Installing Jenkins)](#35122-kubernetes-installing-jenkins)
-        - [3.5.1.2.3. MacOS (Installing Jenkins)](#35123-macos-installing-jenkins)
-        - [3.5.1.2.4. Windows (Installing Jenkins)](#35124-windows-installing-jenkins)
-        - [3.5.1.2.5. Other Systems (Installing Jenkins)](#35125-other-systems-installing-jenkins)
-        - [3.5.1.2.6. WAR File (Installing Jenkins)](#35126-war-file-installing-jenkins)
-        - [3.5.1.2.7. Other Servlet Containers (Installing Jenkins)](#35127-other-servlet-containers-installing-jenkins)
-        - [3.5.1.2.8. Offline Installations (Installing Jenkins)](#35128-offline-installations-installing-jenkins)
-        - [3.5.1.2.9. Initial Settings (Installing Jenkins)](#35129-initial-settings-installing-jenkins)
-      - [3.5.1.3. Platform Information](#3513-platform-information)
-        - [3.5.1.3.1. Java Support Policy](#35131-java-support-policy)
-        - [3.5.1.3.2. Linux Support Policy](#35132-linux-support-policy)
-        - [3.5.1.3.3. Windows Support Policy](#35133-windows-support-policy)
-        - [3.5.1.3.4. Browser Compatibility](#35134-browser-compatibility)
-        - [3.5.1.3.5. Servlet Container Support Policy](#35135-servlet-container-support-policy)
-        - [3.5.1.3.6. Upgrading to Java 11](#35136-upgrading-to-java-11)
-        - [3.5.1.3.7. Upgrading to Java 17](#35137-upgrading-to-java-17)
-      - [3.5.1.4. Using Jenkins](#3514-using-jenkins)
-        - [3.5.1.4.1. Best Practices (Jenkins)](#35141-best-practices-jenkins)
-        - [3.5.1.4.2. Working with Projects](#35142-working-with-projects)
-        - [3.5.1.4.3. Using Credentials](#35143-using-credentials)
-        - [3.5.1.4.4. Search Box](#35144-search-box)
-        - [3.5.1.4.5. Referencing Another Project by Name](#35145-referencing-another-project-by-name)
-        - [3.5.1.4.6. Aborting a Build](#35146-aborting-a-build)
-        - [3.5.1.4.7. Fingerprints](#35147-fingerprints)
-        - [3.5.1.4.8. Using Local Language](#35148-using-local-language)
-        - [3.5.1.4.9. Change Time Zone](#35149-change-time-zone)
-        - [3.5.1.4.10. Remote Access API](#351410-remote-access-api)
-        - [3.5.1.4.11. Executor Starvation](#351411-executor-starvation)
-        - [3.5.1.4.12. Using Jenkins Agents](#351412-using-jenkins-agents)
-        - [3.5.1.4.13. Using JMeter with Jenkins](#351413-using-jmeter-with-jenkins)
-        - [3.5.1.4.14. Pluggable Storage](#351414-pluggable-storage)
-      - [3.5.1.5. Pipeline](#3515-pipeline)
-        - [3.5.1.5.1. Getting Started with Pipeline](#35151-getting-started-with-pipeline)
-        - [3.5.1.5.2. Using a `Jenkinsfile`](#35152-using-a-jenkinsfile)
-        - [3.5.1.5.3. Branches \& Pull Requests](#35153-branches--pull-requests)
-        - [3.5.1.5.4. Using Docker with Pipeline](#35154-using-docker-with-pipeline)
-        - [3.5.1.5.5. Extending with Shared Libraries](#35155-extending-with-shared-libraries)
-        - [3.5.1.5.6. Pipeline Development Tools](#35156-pipeline-development-tools)
-        - [3.5.1.5.7. Pipeline Syntax](#35157-pipeline-syntax)
-        - [3.5.1.5.8. Pipeline as Code](#35158-pipeline-as-code)
-        - [3.5.1.5.9. Scaling Pipelines](#35159-scaling-pipelines)
-        - [3.5.1.5.10. Pipeline CPS Method Mismatches](#351510-pipeline-cps-method-mismatches)
-      - [3.5.1.6. Blue Ocean](#3516-blue-ocean)
-        - [3.5.1.6.1. Getting Started with Blue Ocean](#35161-getting-started-with-blue-ocean)
-        - [3.5.1.6.2. Creating a Pipeline](#35162-creating-a-pipeline)
-        - [3.5.1.6.3. Dashboard](#35163-dashboard)
-        - [3.5.1.6.4. Activity View](#35164-activity-view)
-        - [3.5.1.6.5. Pipeline Run Details View](#35165-pipeline-run-details-view)
-        - [3.5.1.6.6. Pipeline Editor](#35166-pipeline-editor)
-      - [3.5.1.7. Managing Jenkins](#3517-managing-jenkins)
-        - [3.5.1.7.1. Configuring the System](#35171-configuring-the-system)
-        - [3.5.1.7.2. Configuration as Code](#35172-configuration-as-code)
-        - [3.5.1.7.3. Managing Tools](#35173-managing-tools)
-        - [3.5.1.7.4. Managing Plugins](#35174-managing-plugins)
-        - [3.5.1.7.5. About Jenkins](#35175-about-jenkins)
-        - [3.5.1.7.6. System Information](#35176-system-information)
-        - [3.5.1.7.7. Jenkins Controlled with System Properties](#35177-jenkins-controlled-with-system-properties)
-        - [3.5.1.7.8. Change System Time Zone](#35178-change-system-time-zone)
-        - [3.5.1.7.9. Jenkins CLI](#35179-jenkins-cli)
-        - [3.5.1.7.10. Script Console](#351710-script-console)
-        - [3.5.1.7.11. Groovy Hook Scripts](#351711-groovy-hook-scripts)
-        - [3.5.1.7.12. In-Process Script Approval](#351712-in-process-script-approval)
-        - [3.5.1.7.13. Users](#351713-users)
-        - [3.5.1.7.14. Themes for User Interface](#351714-themes-for-user-interface)
-        - [3.5.1.7.15. User Content](#351715-user-content)
-        - [3.5.1.7.16. Spawning Processes From Build](#351716-spawning-processes-from-build)
-      - [3.5.1.8. Securing Jenkins](#3518-securing-jenkins)
-        - [3.5.1.8.1. Access Control](#35181-access-control)
-        - [3.5.1.8.2. Securing Jenkins](#35182-securing-jenkins)
-        - [3.5.1.8.3. Managing Security](#35183-managing-security)
-        - [3.5.1.8.4. Controller Isolation](#35184-controller-isolation)
-        - [3.5.1.8.5. Securing Builds](#35185-securing-builds)
-        - [3.5.1.8.6. CSRF Protection](#35186-csrf-protection)
-        - [3.5.1.8.7. Rendering User Content](#35187-rendering-user-content)
-        - [3.5.1.8.8. Access Control for Builds](#35188-access-control-for-builds)
-        - [3.5.1.8.9. Handling Environment Variables](#35189-handling-environment-variables)
-        - [3.5.1.8.10. Markup Formatters](#351810-markup-formatters)
-        - [3.5.1.8.11. Exposed Services \& Ports](#351811-exposed-services--ports)
-        - [3.5.1.8.12. Credentials](#351812-credentials)
-      - [3.5.1.9. System Administration](#3519-system-administration)
-        - [3.5.1.9.1. Backing-Up/Restoring Jenkins](#35191-backing-uprestoring-jenkins)
-        - [3.5.1.9.2. Monitoring Jenkins](#35192-monitoring-jenkins)
-        - [3.5.1.9.3. Administrating Jenkins on Kubernetes](#35193-administrating-jenkins-on-kubernetes)
-        - [3.5.1.9.4. Managing Jenkins with Chef](#35194-managing-jenkins-with-chef)
-        - [3.5.1.9.5. Managing Jenkins with Puppet](#35195-managing-jenkins-with-puppet)
-        - [3.5.1.9.6. Viewing Logs](#35196-viewing-logs)
-        - [3.5.1.9.7. Authenticating Scripted Clients](#35197-authenticating-scripted-clients)
-        - [3.5.1.9.8. Reverse Proxy Configuration](#35198-reverse-proxy-configuration)
-        - [3.5.1.9.9. Reverse Proxy - Issues](#35199-reverse-proxy---issues)
-        - [3.5.1.9.10. Managing `systemd` Services](#351910-managing-systemd-services)
-        - [3.5.1.9.11. FIPS-140](#351911-fips-140)
-        - [3.5.1.9.12. Reset the Jenkins Administrator Password](#351912-reset-the-jenkins-administrator-password)
-      - [3.5.1.10. Scaling Jenkins](#35110-scaling-jenkins)
-        - [3.5.1.10.1. Architecting for Scale](#351101-architecting-for-scale)
-        - [3.5.1.10.2. Hardware Recommendations](#351102-hardware-recommendations)
-        - [3.5.1.10.3. Architecting for Manageability](#351103-architecting-for-manageability)
-        - [3.5.1.10.4. Scaling Jenkins on Kubernetes](#351104-scaling-jenkins-on-kubernetes)
-      - [3.5.1.11. Troubleshooting Jenkins](#35111-troubleshooting-jenkins)
-        - [3.5.1.11.1. Diagnosing Errors](#351111-diagnosing-errors)
-        - [3.5.1.11.2. Obtaining a Thread Dump](#351112-obtaining-a-thread-dump)
-      - [3.5.1.12. Glossary (Jenkins)](#35112-glossary-jenkins)
   - [3.6. Python Development](#36-python-development)
     - [3.6.1. Python Anti-Patterns](#361-python-anti-patterns)
       - [3.6.1.1. Correctness](#3611-correctness)
@@ -2342,6 +860,19 @@ TODO: Order in which to do this testing.
 # 1. Book Notes
 
 ## 1.1. 97 Things Every Programmer Should Know
+
+- Programmers have a lot on their minds. Programming languages, programming techniques, development environments,
+  coding style, tools, development process, deadlines, meetings, software architecture, design patterns, team dynamics,
+  code, requirements, bugs, code quality. And more. A lot. There is an art, craft, and science to programming that
+  extends far beyond the program. The act of programming marries the discrete world of computers with the fluid world
+  of human affairs. Programmers mediate between the negotiated and uncertain truths of business and the crisp,
+  uncompromising domain of bits and bytes and higher constructed types. With so much to know, so much to do, and so
+  many ways of doing so, no single person or single source can lay claim to "the one true way." Instead, *97 Things
+  Every Programmer Should Know* draws on the wisdom of crowds and the voices of experience to offer not so much a
+  coordinated big picture as a crowdsourced mosaic of what every programmer should know. This ranges from code-focused
+  advice to culture, from algorithm usage to agile thinking, from implementation know-how to professionalism, from
+  style to substance.
+  [O'Reilly: 97 Things Every Programmer Should Know][oreilly-97-things-every-programmer-should-know]
 
 - Bugs & Fixes:
 
@@ -4851,13 +3382,1772 @@ TODO: Order in which to do this testing.
 
 </details>
 
+## 97 Things Every Application Security Professional Should Know
+
+- Cybersecurity, or information security, has always been a very broad and comprehensive field and has been a
+  fast-evolving area for the past 10–20 years. Within, there are many domains, such as risk management, security
+  operations, network and infrastructure security, identity access management, and others. This book focuses on one
+  particular domain called application security (AppSec). That's because, in today's modern world, software development
+  has become the core of any product or service. As such, ensuring the security of any product or application
+  development is critical to the success of your business. This book is a collection of wisdom from 77 security experts
+  in application security across various industries. Organized into 12 topics, the book covers web applications, mobile
+  applications, APIs, and the Internet of Things (IoT) (embedded systems). It also expands the safeguards to both
+  on-premises and in cloud development. More importantly, it explains all angles of AppSec such as secure software
+  development life cycle (SDLC) practice, threat modelling, code scanning and testing, vulnerability management, and
+  how to run a successful application security program. The book also provides insight into two emerging topics:
+  software supply chain security and AI security. It is a treasure trove of those security practitioners' practical
+  advice, distilled into bite-sized essays for both beginners and seasoned professionals in application security and
+  cybersecurity.
+
+<!-- - Program & Practice:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Secure Software Development Life-Cycle (SDLC):
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Data Security & Privacy:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Code Scanning & Testing:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Vulnerability Management:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Software Supply Chain:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Threat Modelling:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Threat Intelligence & Incident Response:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- Mobile Security:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- API Security:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- AI Security & Automation
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+- IoT & Embedded System Security:
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - 
+
+  - -->
+
+<details open>
+
+<summary>Click to expand/minimise the full contents of this book.</summary>
+
+### Secure Code for Tomorrow's Technology
+
+- The software we build today has the potential to power critical systems for years to come. To ensure the longevity
+  and security of tomorrow's technology, developers must adopt a security-focused mindset and consider security as
+  part of the quality of the code. Writing secure code requires meticulous attention to detail.
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+- The following is a checklist of fundamental principles and important items to keep in mind:
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Start by Learning Secure Coding Standards**:
+
+    - Many common vulnerabilities result from a lack of awareness. Familiarise yourself with leading authorities such
+      as the Open Web Application Security Project (OWASP)
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Study guidelines for your specific language and frameworks.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Understand basic security principles like least privilege, defence in depth, and security by default.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Reference these standards early when designing applications to build in security from the start.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Adopt a Secure Development Life Cycle**:
+
+    - Integrate security practices into all phases of development, from conception to deployment.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Conduct threat modelling to identify risks.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Define abuse cases.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Perform static analysis security testing to catch issues in code.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Run dynamic analysis to test for vulnerabilities in running applications.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Automate processes such as policy compliance checks, dependency upgrades, and credential rotation to reduce
+      mistakes.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Use Frameworks Carefully**:
+
+    - While frameworks boost productivity, they also introduce risks.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Keep frameworks up to date to avoid known vulnerabilities.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Properly configure frameworks and disable unnecessary features.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Extend frameworks securely rather than overwriting insecure defaults.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Continuously monitor for vulnerabilities in all dependencies.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Lock down functionality to what your application actually requires
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Never Trust Inputs**:
+
+    - Validate and sanitise all data entering your application, including from files, databases, third-party APIs, and
+      internal services.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Practice zero trust by assuming all inputs are malicious until validated otherwise.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Limit exposure through compartmentalisation and minimisation.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Escape outputs properly to prevent injection attacks.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Sign and encrypt sensitive data end to end and at rest.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Promote a Culture of Security**:
+
+    - Advocate for secure coding as a team effort, not just the developer's job.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Instil a sense of shared accountability through training, mentoring, incentives, and leading by example.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Make security reviews a regular part of the development process.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Empower all team members to call out potential issues.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Automate policy enforcement where possible.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Foster Developer Empathy**:
+
+    - Understand that developers are often under-trained in security and over-burdened with competing priorities under
+      tight deadlines.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Help them succeed by providing useful security libraries, user-friendly tools, and clear guidance baked into the
+      software development lifecycle.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Prioritise Appropriately**:
+
+    - Focus first on security issues that pose the most significant risks based on your threat model and business
+      context.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Eliminate entire classes of vulnerabilities where possible.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Build basic security capabilities before adding advanced features.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Take a Long View**:
+
+    - Consider how software architecture and design decisions today could impact security far into the future.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Seek designs that are adaptable, resilient, and sustainable as both technologies and threats evolve.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Stay Current**:
+
+    - Monitor emerging threats, revisit past assumptions, and keep your skills sharp through ongoing education.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Contribute to open source security projects.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Learn from peers.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Teach Other What You Know**:
+
+    - Share your security knowledge with teammates through mentoring, code reviews, and organisational training.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - Write for publications and speak at events.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- Writing secure code requires knowledge, skill, and vigilance. By embracing these disciplines now, you can safeguard
+  against tomorrow's breaches.
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Pragmatic Advice for Building an Application Security Program
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Application Security Must Lead
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-->
+
+<!-- ### Solving Problems for Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Securing Your Enterprise Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Developers as Partners in Application Security Strategy
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Be an Awesome Sidekick
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Understanding the True Boundaries of Modern Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Common Best Practices in Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### App Security is a People Problem - Not a Technical One
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Empowering Application Security Professionals Through Cybersecurity Education
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Why You Need a Practical Security Champions Program
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### The Human Firewall: Combat Enemies by Improving Your Security-Oriented Culture
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Shifting Everywhere in Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Beyond Barriers: Navigating the Path to a Successful Application Security Program
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Building an Application Security Preparation Mindset
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### How to Assess Security Mindset in Application Design
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Getting Your Application Read for the Enterprise
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Reductio Ad Applicationem Securitatis
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Automating the Risk Calculation of Modern Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### A Coordinated Approach to a Successful DevSevOps Program
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### What makes Someone a Developer?
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Total AppSec
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### You're More Than Your Job
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### TAP Into the Potential of a Great SSDLC Program with Automation
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Vulnerability Researcher to Software Developer: The Other Side of the Coin
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Strategies for Adding Security Rituals to an Existing SDLC
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Challenges & Considerations for Securing Serverless Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Using Offensive Security to Defend Your Application
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Beyond "No": The Modern Paradigm of Developer-Centric Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Security Paved Roads
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Application Security in the Cloud Era
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Code Provenance for DevSevOps
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Will Passwordless Authentication Save Your Application?
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Securing Your Databases: The Importance of Proper Access Controls & Audits
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### DataSecOps: Security in Data Products
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Data Security Code & Tests
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Data Security Starts with Good Governance
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Protect Sensitive Data in Modern Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Leverage Data-Flow Analysis in Your Security Practices
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Embracing a Practical Privacy Paradigm Shift in Application Development
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Quantum-Safe Encryption Algorithms
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Application Integration Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### WAF & RASP
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Zero Trust Software Architecture
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Modern WAF Deployment & Management Paradigms
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Do You Need Manual Penetration Testing>?
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Bash Your Head
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Exploring Application Security Through Static Analysis
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Introduction to CI/CD Pipelines & Associated Risks
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Demystifying Bug Bounty Programs
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### EPSS: A Modern Approach to Vulnerability Management
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Navigating the Waters of Vulnerability Management
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Unveiling Paths to Account Takeover: Web Cache to XSS Exploitation
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Sometimes the Smallest Risks Can Cause the Greatest Destruction
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Effective Vulnerability Remediation Using EPSS
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Bug Bounty - Shift Everywhere
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Integrating Security into Open Source Dependencies
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Supplier Relationship Management to Reduce Software Supply Chain Security Risk
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### SBOM: Transparent, Sustainable Compliance
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Secure the Software Supply Chain Through Transparency
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Unlock the Secrets to Open Source Software Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Leverage SBOMs to Enhance Your SSDLC
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Learn to Threat Model
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Understanding OWASP Insecure Design & Unmaking Toxic Combinations
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### The Right Way to Threat Model
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Attack Models in SSDLC
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### In Denial of Your Services
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Mobile Security: Domain & Best Practices
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Mobile Application Security Using Containerisation
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### API Security: JWE Encryption for Native Data Protection
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### APIs are Windows to the Soul
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### API Security: The Bedrock of Modern Applications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### API Security Primer: Visibility
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### API Security Primer: Risk Assessment, Monitoring, & Detection
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### API Security Primer: Control & Management
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### LLMs Revolutionising Application Security: Unleashing the Power of AI
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Mitigating Bias & Unfairness in AI-Based Application
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Secure Development with Generative AI
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Managing the Risks of ChatGPT Integration
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Automation, Automation, & Automation for Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Understand the Risks of Using AI in Application Security
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Secure Code for Embedded Systems
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Platform Security for Embedded Systems
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Application Identity for Embedded Systems
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Top Five Hacking Methods for IoT Devices
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Securing IoT APplications
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+### Application Security in Cyber-Physical Systems
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+
+-
+ [O'Reilly: 97 Things Every Application Security Professional Should Know][
+  oreilly-97-things-every-application-security-professional-should-know]
+-->
+
+</details>
+
 ## 1.2. Automate the Boring Stuff with Python: Practical Programming for Total Beginners
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.2.1. Python Programming Basics
+<!-- ### 1.2.1. Python Programming Basics
 
 -
   [Automate the Boring Stuff with Python: Practical Programming for Total Beginners, 2nd Edition][
@@ -10358,7 +10648,7 @@ TODO: Order in which to do this testing.
 -
   [Automate the Boring Stuff with Python: Practical Programming for Total Beginners, 2nd Edition][
     automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2nd-edition]
-
+ -->
 </details>
 
 ## 1.3. `bash` Cookbook
@@ -20764,7 +21054,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     fi
   done
 
-  # Apply interactive subshell customizations to login shells too.
+  # Apply interactive subshell customisations to login shells too.
   # The system profile file in /etc probably already does this.
   # If not, it's probably better to do it manually in wherever you:
   # source "$SETTINGS/bash_profile"
@@ -22271,7 +22561,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   particularly bad if you are running as `root`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.18. Writing to a Circular Log
+<!-- #### 1.3.19.18. Writing to a Circular Log
 
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22291,7 +22581,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 -
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
 #### 1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself
 
@@ -22656,7 +22946,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   that command will be executed (again).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.20.3. Quick Substitution
+<!-- #### 1.3.20.3. Quick Substitution
 
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22709,7 +22999,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 -
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
 ### 1.3.21. Tips & Traps: Common Goofs for Novices
 
@@ -22818,7 +23108,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $
   ```
 
-#### 1.3.21.4. Naming Your Script `"test"`
+<!-- #### 1.3.21.4. Naming Your Script `"test"`
 
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22904,7 +23194,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 -
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
 #### 1.3.21.12. Testing `bash` Script Syntax
 
@@ -23082,7 +23372,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.5.1. Introducing GitHub Introduction
+<!-- ### 1.5.1. Introducing GitHub Introduction
 
 -
   [O'Reilly: Introducing GitHub][oreilly-introducing-github]
@@ -23853,6 +24143,15 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 1.5.7. Next Steps
 
+-
+  [O'Reilly: Introducing GitHub][oreilly-introducing-github]
+
+-
+  [O'Reilly: Introducing GitHub][oreilly-introducing-github]
+
+-
+  [O'Reilly: Introducing GitHub][oreilly-introducing-github] -->
+
 </details>
 
 ## 1.6. Practical Process Automation
@@ -23861,7 +24160,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.6.1. Practical Process Automation Introduction
+<!-- ### 1.6.1. Practical Process Automation Introduction
 
 -
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
@@ -25663,17 +25962,11 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 -
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation] -->
 
 ### 1.6.4. Part III: Get Going
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- This last part of the book will focus your attention on introducing process automation successfully in your company.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.4.1. The Journey to Introduce Process Automation
@@ -25706,233 +25999,558 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 1.6.4.1.1. Understanding the Adoption Journey
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- Let's understand the typical journey to adopt process automation. It can be most helpful to learn from examples, so
+  two stories will be illustrated in this section. One is a made-up failure story that contains many elements from real
+  life. It will help you understand failures you definitely want to avoid. The second is a real-life story from a
+  customers that has been observed in the past. This story will emphasise the elements that led to their success.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.1. Failures You Want to Avoid
 
--
+- You can following are insights that you would need to avoid to avoid failure when introducing process automation:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Don't start with big strategic endeavours too early in your journey. Start with a project, not a program.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Avoid a top-down adoption motion; create an environment that allows bottom-up growth instead. A great balance is to
+    have an environment where grass-roots initiatives can start, and then support the most promising ones to drive
+    adoption. Scaling adoption should always come as a second step.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Resist the temptation to create your own platform.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Pick the right processes to be automated first. The most important core process in its entirety might be a bit too
+    big, too risky, and too complicated to attempt as a first step.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Don't start too many projects as once.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Concentrate on delivering business value. Your process solution needs to solve a real business pain.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Don't start with process architecture or process landscape initiatives. You cannot expect to derive
+    ready-to-be-used process models for your process automation projects up front. You'll be better able to sketch
+    process architectures later, when you know how process automation really works.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Let your own learnings influence your target picture, which includes embracing a culture where failures are openly
+    discussed to learn from them. Vendors' or consulting companies' best practices (or books) can serve as a good
+    starting point, but can't replace finding your own way.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Make sure to let project teams breathe and make their own decisions.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.2. A Success Story
 
--
+- You can following are insights that you may need to follow to have greater success when introducing process
+  automation:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Go step-by-step until you are ready to scale.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Get buy-in from the decision makers, which requires your process solution to solve some real business pain.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Make sure to give experienced people the opportunity to help in follow-on projects.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Capture best practices and ensure knowledge sharing.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Provide reusable components if they increase productivity, but as libraries that teams want to adopt.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Establish an internal consulting approach, perhaps organized as a centre of excellence. At least identify and
+    nurture one well-known champion in the enterprise that can drive the topic.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Define learning paths for new people or teams.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.3. The Pattern of Successful Adoption Journeys
 
--
+- If you have a proposal for an approach to automation that could be adopted, you need to setup a proof of concept
+  (POC) project. The goal of this project is to define and validate the architecture and stack, the exact code is most
+  often thrown away.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Right after this POC, start with a pilot project. It is essential to go live with the pilot to really learn about all
+  aspects of the process solution throughout the full software development life cycle. You should choose a scenario
+  where you can show at least some of the benefits of process automation (e.g., increased efficiency, effectiveness,
+  compliance), as many people, including decision makers, will be interested in quantifiable results.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Favour Agile development approaches to develop process solutions iteratively and incrementally. This allows you to
+  learn fast and let these learnings correct your course. This is a very positive and motivating spiral that often
+  works very effectively. It's especially important for projects using new tools or architectures.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- While this is the case in some organisations, the pilot project might not be centrally planned as "the process
+  automation starting point." Very often these projects simply start as projects intending to solve a business pain,
+  and adopt process automation technology along the way. This is totally fine and might even make it easier for the
+  project to avoid too much politics in the beginning.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- After running a successful pilot, start a lighthouse project. This is either a deliberate step in your journey to
+  introduce process automation, or it naturally follows a successful grassroots pilot initiative where you recognised
+  the potential of process automation. A lighthouse project has a broader, more realistic scope and can be leveraged to
+  show off architecture, tooling, and the value of process automation to other people and teams within your
+  organisation. It acts as a lighthouse to guide other peers in the company toward the value of process automation.
+  Make sure that you select a relevant use case.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Ideally, the team that did the pilot also works on the lighthouse, as this allows all of their learnings to be taken
+  into account. This is important as the lighthouse might serve as a template for later projects. This is why you
+  should also plan some time to review the lighthouse project after it has been completed and gone live. Keep in mind
+  that it is far better to invest in that overhaul than to try to make things perfect in the first run.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Make sure that the lighthouse gets visibility within the company. Follow a "show and tell" approach, giving internal
+  presentations, sharing the source code (including documentation), and inviting people to discussions. Typically you
+  should prefer live demos over slide presentations and concrete company projects over generic vendor showcases. Only
+  then should you take the next step, which is to scale process automation across your enterprise. You should enter
+  this phase slowly. Make sure not to go too broad before you have gathered enough relevant experience from a handful
+  of projects. Ideally, this scaling works in a "pull" manner, meaning that project teams hear of the advantages of
+  process automation and decide they want to apply it in their own projects.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.1.4. Different Journeys for Different Scenarios
 
--
+- Some specifics about the adoption journey will vary depending on your status quo at your organisation and your main
+  driver for introducing process automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+- **Replacing existing workflow products**:
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - One scenario that may occur in terms with automation is where companies that already have some workflow product in
+    place and want to replace it. This might be a tool that's been discontinued by its vendor, an open source framework
+    that has proved too low-level for the company's needs, or simply a tool that did not deliver on its promise. As
+    part of digital transformation or an IT modernisation programs, companies might also deliberately decide to replace
+    an "old-school business process management software (BPMS)" or internally-developed workflow engines that will not
+    be maintained any longer. This is a special situation, as the organisation is already aware of what process
+    automation means and what a workflow engine is. Teams already have experience with process modelling and know what
+    it means to execute such a model. Even if they need to adjust in terms of architecture and stack, a lot of the
+    basics concepts are familiar, which can make the whole journey much easier.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - An additional challenge might be that you need to justify why you want to introduce a new tool. companies that
+    required sophisticated studies to justify replacing an old tool, even if everybody hated it and nobody was
+    productive with it. This can be an important consideration, as it might shift the focus of a pilot or lighthouse
+    project. You might not need to make a case for process automation, but you might need to justify the migration to a
+    new tool.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - You might need to investigate the root of the problems with the old tool. Sometimes the issue is not so much the
+    tool itself, but mistakes in how it was used; e.g., applying it to the wrong problems or setting up weird
+    architectural patterns. In this case, you need to avoid the same mess occurring with the new tool, so people might
+    need to unlearn some of their practices or be made aware of and admit mistakes made in the past.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- **Introducing process automation in SOA (service-oriented architecture) environments**:
+
+  - If you work for a company that has adopted SOA, the strategy for introducing process automation will depend on the
+    internal viewpoint on this architecture. There are plenty of companies that are basically happy with SOA and want
+    to keep going with it. That's fine; you don't have to switch to a microservices approach to apply process
+    automation. But you should be careful about introducing a process automation approach that is too centralized, even
+    if that can also work out if it fits into your organisation and culture.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- **Strategic initiatives driving process automation**:
+
+  - If your company has started a strategic program that drives the adoption of process automation. At the time of
+    writing, these are typically digital transformation programs. These programs own budget. This gives you a great
+    opportunity to introduce process automation and solve some real business problems - but it is super important to
+    follow the advice to start small and with a concrete project fulfilling a business need. Strategic programs end up
+    in the situation sketched with DontDoItAtHome, preventing developers from having the initiative to implement or
+    propose their own form of automation. In that context, many successful process automation projects deliberately
+    flying under the radar of these programs, to avoid them getting in the way. Flying under the radar can make sense
+    until something can be successfully showcased to the strategic program.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Every situation is a bit different. Try to become aware of the status quo, the history, and of course the goal of
+    your process automation endeavour and adjust accordingly.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.1.2. Starting Your Journey
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- The recommendation is to start creating POCs as soon as possible. Modern tools allow you to automate your first
+  process within hours. The hands-on experience of doing POCs will greatly help you shape your direction.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption
 
--
+- There are two typical motions that are in play in bigger enterprises when it comes to the adoption of methods and
+  tools: bottom up and top down.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+- **Bottom-Up Adoption**:
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Adoption can start at the bottom and work its way up. This often happens with open source components. Developers
+    might learn about a tool somewhere and start to play around with it. Once they understand the possibilities, they
+    become enthusiastic about it; they might apply the tool right away to solve a problem at hand, or even push it into
+    production.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - At this point, a proper evaluation of the tool has not been done; basically the company jumped into a POC right
+    away. If it is successful, this project gets noticed and serves as a lighthouse, and other projects start adopting
+    the tooling.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - If the project scope or visibility grows bigger, at some point in time a business, legal, or compliance department
+    might kick in and ask for guarantees. Or someone might request support, or the company might find that it really
+    needs features that are only available in a paid version of the tool. In this case, the company basically starts
+    the procurement process at a stage where the tool is already settled and an evaluation does not make much sense.
+    This isn't necessarily a bad thing, as the tool has proven its value.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- **Top-Down Adoption**:
+
+  - The tooling is decided on at the top and handed over to development projects. In an extreme form, an enterprise
+    decides on a company-wide process automation tool stack that every project has to use. This is the adoption motion
+    that was typically in play with SOA projects. Looking at the history of SOA, you can see that developers still
+    played a decisive role, though - in this case usually by either just not using these tools or failing to use them
+    successfully.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Even if the top-down motion is an advantage to a company, great care should be taken with it. You can define
+    company-wide recommendations, but you should still leave the projects enough room to decide on their own. This will
+    increase the changes of tools being embraced, rather than rejected.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.2. Proofs of Concepts
 
--
+- With a POC, you typically create a prototype application within no more than three to five days. The result is
+  intended to be thrown away, which is very important to keep in mind. Its sole purpose is to try to show that your
+  project will fly, including all aspects relevant for your specific situation. Questions to consider might be:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+  - Is it possible to use the workflow tooling in your own architecture and stack?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Does the development approach fit into your organisation?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Can you model the specific business domain problem?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - What kinds of know-how are needed for the different roles?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - How much effort will be needed for these kinds of projects?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - What is the impact of process automation for operations?
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Often it makes sense to implement a POC together with the workflow vendor or a specialised consultant, in order to
+  get quick results and focused feedback with respect to your specific challenges. However, you should always at least
+  co-develop in order to really understand what is going on.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Before planning a POC, you need to consciously clarify the specific goals you want to achieve. This will have a great
+  influence on the POC, so make up your mind about what really matters.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Typical goals for a POC include:
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Verification the approach or the tool works under specific circumstances.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Showing a case that convinces internal stakeholders that the approach makes sense.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Working through a complete example and getting specific questions sorted out.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Learning more about the tool(s) and understanding how it/they work(s).
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Make sure to present the results of the POC internally. Select a speaker who is comfortable with presenting, prepare
+  a set of focused slides illustrating your progress and the lessons learned, and test your solution and presentation
+  at least once.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.3. Presenting the Business Case
 
--
+- A proper presentation should also talk about the business case as well as detailing and showcasing the automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Value propositions of workflow automation:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+  |               **Value Proposition**               |   **Type**   | **Measurability** |                                                                                                                                                                                                                                                                                                                                            **Example**                                                                                                                                                                                                                                                                                                                                            |
+  | :-----------------------------------------------: | :----------: | :---------------: | :-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+  | Reducing development effort around state handling | Quantitative |  Hard to measure  |                                                                                                                                                            Implementing and maintaining bespoke state handling was estimated to account for roughly 10 person years over the lifetime of the software, which corresponds to around $1,000,000. A workflow engine is used now out of the box. License, training, and ramp-up costs summed up to roughly $100,000. As a bonus, your best developers can focus on more important things.                                                                                                                                                             |
+  |              Automating manual tasks              | Quantitative |  Easy to measure  |                                                                                                                                  A new onboarding workflow is going live that does a first validation automatically. This saves four hours of work in sales on every business day. Additionally, the tracking of the onboarding workflow is automated, and customers can see their current status in a self-service portal online. This sums up to saved effort equivalent to one person. You save roughly $100,000 and improve quality for everybody involved.                                                                                                                                   |
+  |             Building the right thing              | Qualitative  |  Hard to measure  | Process visibility allows a variety of people to understand the process design in early phases. So, while implementing a process to provision new mobile phone contracts, a developer from another team is able to spot a fundamental flaw in the process model: a particular service cannot be used "that way," as they know from previous projects where they learned this the hard way. The problem is discussed and the model updated right away, taking about a person day of effort. That problem could have stayed hidden until the rollout, when it would have cost many days of effort to discuss the required change, plan it, implement it, retest everything, and so on and so forth. |
+  |         Avoiding stuck process instances          | Qualitative  |  Hard to measure  |                                                                                                                                                                                                   Whenever there is some failure in processing, an order does not simply get stuck and wait for the customer to ask for their goods. Instead, operations gets notified of any incidents and can easily look into the problems and fix the instances before the customers even notice the delay.                                                                                                                                                                                                   |
+  |         Understanding the current status          | Qualitative  |  Hard to measure  |                                                                                                                                                                                           Getting set up with cable internet can be a time-consuming process. Gaining visibility into the exact current status is important to keep customers and support agents happy. The alternative is frustrating, when customers call the company and they can't give a good answer about the status of an order.                                                                                                                                                                                           |
+  |   Saving effort by using prebuilt functionality   | Quantitative |  Easy to measure  |                                                                                                                                                                       Workflow tools come with ready-to-use components like GUIs for operations and for human task management. The latter can actually be a huge gain, as they involves task life cycle support, extensive APIs, and prebuilt user interfaces. You can save the cost of a team of full-time developers, quickly summing up to $500,000 or more every year.                                                                                                                                                                        |
+  |                 Scaling processes                 | Qualitative  |  Hard to measure  |                                                                                                                                                                                                         Your latest commercial went viral, and people are storming your service. You couldn't keep the lights on without process automation, as you would simply be overwhelmed by manual work. A workflow engine makes sure you stay in control when incidents occur on a bigger scale.                                                                                                                                                                                                          |
+
+- Process automation technology is an enabler for certain architecture paradigms that would not be possible without it.
+  When organisations want to apply these paradigms for strategic reasons - say, moving toward a microservices
+  architecture in order to handle organisational scale and allow for business agility - this can be sufficient
+  motivation to introduce a tool, even if there is not a concrete business case in the first project.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.4. Don't Build Your Own Platform
 
--
+- The exact opposite of providing immediate business value is building a company-wide process automation platform on
+  top of a vendor's tool. Some companies even assemble a whole SOA or integration stack with components from different
+  vendors.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- The reason to build such a platform is typically twofold: companies don't want to be dependent on the vendor, and
+  they need some integration into company specifies that all projects can leverage.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- However, building such a platform is a risky endeavour, for multiple reasons. It is quite hard to set up a process
+  automation platform, and attempting it will distract you from delivering business value. It makes it hard to include
+  learnings gleaned from later projects, as you settle on certain architecture primitives very early in your journey.
+  Also, it is complicated and time-consuming to keep this platform up-to-date or to fix bugs - or simply to make all
+  the features of the underlying products available, or to include new features introduced in new versions. Finally,
+  users can't do internet searches for help with problems in the bespoke platform, which they can do for well-known
+  open source products.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Of course, you might still do some work in the initial projects to make operations or enterprise architects happy.
+  For example, you might integrate with your authentication and authorisation infrastructure, or make sure the workflow
+  tooling adds its logs into your central logging facility. This kind of code may be valuable for upcoming projects,
+  and you might want to reuse it.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.2.5. Dos and Don'ts Around Reuse
 
--
+- Reuse can make a lot of sense, as it means you can save effort and costs. If all of your process solutions need to
+  communicate with your messaging infrastructure or your mainframe, you don't want to reinvent that wheel in every
+  project.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Instead of building a bespoke platform, another pattern usually turns out to be more successful. Think of reusable
+  components or libraries as internal open source projects. You offer them to your company and provide some resources
+  and help. If a library is helpful, most people will happily apply it. But nobody has to. These libraries can develop
+  and evolve in the very first projects. If later projects need some additional feature, then they are not locked out
+  from extending the library themselves - as they can always provide pull requests - or fork the project. This kind of
+  reuse scales very well and helps your developers. At the same time, it does not block anybody from being productive.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- Always focus on providing helpful guidelines instead of putting constraints in place.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Many process automation initiatives also take up the idea of extracting process fragments that can be reused in
+  different business processes. There is not much of an issue if the scope is limited to one project team, but those
+  fragments should not be shared across teams. In this case, you will get more benefit from extracting this logic its
+  own service with properly-defined capabilities and APIs that can be used in different contexts.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ##### 1.6.4.1.3. From Project to Program: Scaling Adoption
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- After the first five or six successful projects, including the pilot and lighthouse, it starts to make sense to think
+  about a more structured approach to scaling adoption within your organization. Make sure not to start scaling
+  earlier, as you will miss important learnings and risk making the same mistakes in parallel projects, possibly even
+  leading to friction between these projects. This section discusses some challenges and proven practices around scale.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.1. Perception Management: What Is Process Automation?
 
--
+- Customers use workflow engines for very different use cases. A common theme that may be seen when building solutions
+  that are essentially applications (written in any programming language) that contains an executable process.
+  Internally, these applications are seen as "Camunda projects", even if the process part of the application is very
+  small.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- While this is not a problem, it comes with a risk. If customers build huge bespoke applications, it can take a lot of
+  time before they are actually put it into production. This kind of project tends to get very expensive, or might even
+  be cancelled due to too many problems in the implementation. These factors are not at all related to the workflow
+  engine, but because the projects are "Camunda projects," this ends up damaging the reputation of process automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- With that in mind, be careful about what you connect to the topic of "process automation".
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.2. Establishing a Centre of Excellence
 
--
+- If you have one team doing the pilot and probably also the lighthouse project, they will not only become very
+  familiar with the technology and architecture, but also learn a lot of valuable lessons. Make sure these learnings
+  can be leveraged in the projects that follow.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- One option is for these people to simply continue building process solutions as a team. This is definitely efficient,
+  but does not scale. You could also split up the team and send the individual people to work on different projects.
+  This can work well, but you do need to have some flexibility in team assignments. A third possibility is to
+  transform the project team into a centre of excellence (COE), as visualised in the following diagram, note that
+  people might switch between projects and the COE.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+  ```mermaid
+  erDiagram
+      "Centre of Excellence" ||--|{ "Best Practices" : "Maintains"
+      "Centre of Excellence" ||--|{ "Community" : "Fosters"
+      "Centre of Excellence" ||--|{ "Project A" : "Consults"
+      "Centre of Excellence" ||--|{ "Project B" : "Consults"
+      "Centre of Excellence" ||--|{ "Project C" : "Consults"
+      "Centre of Excellence" ||--|{ "Project D" : "Consults"
+  ```
+
+- This can be set up as dedicated tool-specific COE, but more often it is a general process automation COE charged with
+  evaluating process automation technology and helping decide what is the right tool for the job at hand. Typically,
+  these COEs also manage technologies around robotic process automation (RPA) or skill-based routing for human tasks.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- The COE creates and maintains internal best practices, often leaning on vendor documentation and best practices as a
+  basis. You should also document decisions, constraints, or additions that apply to your company. For example, you
+  might want projects to always use a specific distribution of a tool.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- The COE can also foster a community, simply by being available to talk to. They might provide a forum or a Slack
+  channel, or run regular face-to-face or web meetings. The right approach depends heavily on your company's culture.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- It is also worth investing in internal marketing, as it is important that other projects know about the COE. You
+  might even want to talk publicly about your use case, if possible.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.3. Managing Architecture Decisions
 
--
+- Project teams need some freedom to choose the right tools. In many situations it is even best if the team can, for
+  example, decide if it needs a workflow engine at all. Your COE and lighthouse projects might have generated enough
+  internal marketing for people to know the benefits of using one, so they should be able to decide for themselves.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- However, it is risky to let every team choose whatever they fancy in that moment, as those decisions may be swayed by
+  trends, hype, personal preferences, or simply people having a go with something they've "wanted to try for ages." It
+  is important for everybody to understand that certain technology decisions are a commitment for years, and sometimes
+  even decades. So these decisions and the resulting maintenance will affect more than just the current team.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- What works well is to combine the freedom of choice with the responsibility to operate and support the software
+  solution in production, which is known as "you build it, you run it." This important primitive makes teams aware that
+  they will be held accountable for their decisions.
+  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- Another common approach is to establish an architecture board that defines some guardrails. Ideally, this board does
+  not dictate arbitrary standards but maintains a list of approved tools and frameworks. Whenever a team wants to use
+  something that is not (yet) on the list, they have to discuss it with that board. Teams need to present the framework
+  and the reasons why they need exactly this tool. need exactly this tool. This can even lead to a fruitful sparring
+  around the tool choice. Teams might learn about alternatives that are better suited, or they might get questions
+  around maintenance they have not thought of. These boards should not block progress, so either they must decide very
+  fast or allow teams to go ahead without permission but understanding that if they do something outrageous, they might
+  be asked to rethink their approach.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.4. Decentralised Workflow Tooling
 
--
+- you should prefer an approach where every team runs its own workflow engine, especially in a microservices context.
+  The main advantage is to allow for scale by isolating teams. This also means that you deliberately accept the
+  potential of a wild mix of workflow platform installations.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- This raises questions. How can you get an overview of what is actually running? How can you make sure the
+  installations have all the important patches? Are all engines doing well? How do you collect metrics from various
+  engines to check if you are within your license limits? Typically, these questions are asked by the centre of
+  excellence, your workflow champion, or an enterprise architect with responsibility for process automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 ###### 1.6.4.1.3.5. Role & Skill Development
 
--
+- In order to scale you need to actively develop the right skills internally, some on the job, some in training. The
+  exact needs depend on the tool in use. As a rule of thumb, the more developer-friendly a tool is, the less
+  proprietary training you need.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
+- These are the typical learning paths for different personas in a project.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+- **Rockstar Developers**:
+
+  - The early adopters who can sometimes perform miracles.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - They are highly motivated and passionate.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - They will probably Google their way through issues and starting new projects.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - These folks are most likely best suited to the early projects and perhaps the COE.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - They come with the challenge that they always want the latest and greatest technology and sometimes tend to
+    over-engineer.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - They are not always good at coaching others.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - These people can be easily distracted.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+- **Professional Developers**:
+
+  - Trained software engineers.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - They are productive in their environment of choice with a very individual selection of tools.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - In order to be productive, they need to learn the basics of the process modelling language (e.g., BPMN) as well as
+    get a solid foundation in core workflow engine concepts and APIs.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - Having a training session with your tool vendor is recommended, maybe flanked by some ongoing consulting hours so
+    they can ask questions in case of any problems.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+
+  - These people often make good coaches as part of your COE.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 #### 1.6.4.2. Parting Words
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
 ##### 1.6.4.2.1. Current Architecture Trends Influence Process Automation
 
--
+- Currently there is a big trend toward using more fine-grained components that run in
+a distributed fashion. This is a key necessity to master the growing complexity and
+scale of modern systems. It has a few interesting implications:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Business logic is distributed, and many components need to interact to fulfil customer demands and to implement
+    end-to-end business processes.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Systems get more reactive and event-driven and thus need to balance choreography and orchestration.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-##### 1.6.4.2.2. Rethinking Business Processes & The User Experience
+  - Remote communication introduces new challenges, especially around consistency.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - In order to enable developing, operating, and maintaining a large number of components, companies need to improve
+    their practices around continuous delivery. Workflow engines need to be flexible enough to support this. Testing
+    procedures for executable processes are an important piece of that puzzle.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Components move to the cloud quickly, basically because it eases operations and deployment. A shift to a
+    microservices architecture often goes hand in hand with a shift to running things in a public (or private) cloud.
+    This means that workflow automation technology needs to be available in the cloud.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
+  - Developers have more freedom than ever to choose technology stacks for single components. This makes architectures
+    more polyglot, and good workflow engines should support writing glue code in different languages.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-##### 1.6.4.2.3. Where To Go From Here
+  - There is more automation happening in general. This means that workflow engines need to support the required scale,
+    as well as near real-time applications.
+    [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
-  [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
-
--
+- The need for workflow engines will certainly increase over the next years, and the tooling needs to be lightweight
+  and flexible. If and how workflow technology achieves non-functional requirements will differ between vendors and
+  products, but it is definitely possible to use workflow engines in modern architectures and at a huge scale.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
 </details>
@@ -25951,7 +26569,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.8.1. Preface
+<!-- ### 1.8.1. Software Architecture: The Hard Parts Preface
 
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
@@ -27963,7 +28581,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   
 -
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
-
+ -->
 </details>
 
 ## 1.9. The Art of Readable Code
@@ -27980,7 +28598,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.10.1. The Clean Coder Introduction
+<!-- ### 1.10.1. The Clean Coder Introduction
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
@@ -29000,7 +29618,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 -
   [O'Reilly: The Clean Coder: A Code of Conduct for Professional Programmers][
-    oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers]
+    oreilly-the-clean-coder-a-code-of-conduct-for-professional-programmers] -->
 
 </details>
 
@@ -30488,7 +31106,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.5. Tracer Bullets
+<!-- #### 1.11.4.5. Tracer Bullets
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31172,7 +31790,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
-    the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
+    the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition] -->
 
 </details>
 
@@ -31182,7 +31800,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
--
+<!-- -
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
 -
@@ -32410,7 +33028,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
 
 -
-  [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code]
+  [O'Reilly: The Art of Readable Code][oreilly-the-art-of-readable-code] -->
 
 </details>
 
@@ -32420,7 +33038,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
--
+<!-- -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
 
@@ -32697,7 +33315,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
     oreilly-vi--vim-editors-pocket-reference-2nd-edition]
-
+ -->
 </details>
 
 # 2. Cheat Sheets
@@ -32791,6 +33409,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 |           `gedit`           |                                           General-purpose text editor.                                            |                   <https://www.mankier.com/1/gedit>                    |             TBD.              |                                                                       |                                                                         |
 |          `getconf`          |                                             Get configuration values.                                             |                  <https://www.mankier.com/1p/getconf>                  |             TBD.              |                                                                       |                                                                         |
 |          `getdate`          |                                                                                                                   |                                                                        |             TBD.              |                                                                       |                                                                         |
+|          `getent`           |                                  Get entries from Name Service Switch libraries.                                  |                   <https://www.mankier.com/1/getent>                   |             TBD.              |         Pre-installed in Ubuntu systems and its derivatives.          |                                                                         |
 |          `getopt`           |                                              Parse command options.                                               |                   <https://www.mankier.com/1/getopt>                   |             TBD.              |                                                                       |                                                                         |
 |          `getopts`          |                                             Alias of `bash` builtins.                                             |                    <https://www.mankier.com/1/bash>                    |             TBD.              |                                                                       |                                                                         |
 |            `git`            |                                       Distributed revision control system.                                        |                    <https://www.mankier.com/1/git>                     |             TBD.              |                                                                       |                                                                         |
@@ -34261,7 +34880,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ### 3.5.1. Jenkins Handbook
 
-#### 3.5.1.1. User Handbook Overview
+<!-- #### 3.5.1.1. User Handbook Overview
 
 -
   [Jenkins: Jenkins Handbook][jenkins-jenkins-handbook]
@@ -35407,7 +36026,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   [Jenkins: Jenkins Handbook][jenkins-jenkins-handbook]
 
 -
-  [Jenkins: Jenkins Handbook][jenkins-jenkins-handbook]
+  [Jenkins: Jenkins Handbook][jenkins-jenkins-handbook] -->
 
 </details>
 
@@ -35692,22 +36311,108 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.7. `___exit___` Must Accept 3 Arguments: `type`, `value`, `traceback`
 
--
+- A `contextmanager` class is any class that implements the `__enter__` and `__exit__` methods according to the
+  [Python Language Reference's context management protocol](
+    https://docs.python.org/2/reference/datamodel.html#with-statement-context-managers). Implementing the context
+  management protocol enables you to use the with statement `with` instances of the class. The with statement is used
+  to ensure that setup and teardown operations are always executed before and after a given block of code. It is
+  functionally equivalent to `try...finally` blocks, except that `with` statements are more concise.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The examples in the following code block indicate that the `with` statement is equivalent to the use of `try` and
+  `finally` statements.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # Using with
+  with EXPRESSION:
+      BLOCK
 
-```
+  # Using try...finally
+  EXPRESSION.__enter__()
+  try:
+      BLOCK
+  finally:
+      EXPRESSION.__exit__(exception_type, exception_value, traceback)
+  ```
 
--
+- In order for `__exit__` to work properly it must have exactly three arguments: `exception_type`, `exception_value`,
+  and `traceback`. The formal argument names in the method definition do not need to correspond directly to these
+  names, but they must appear in this order. If any exceptions occur while attempting to execute the block of code
+  nested after the `with` statement, Python will pass information about the exception into the `__exit__` method. You
+  can then modify the definition of `__exit__` to gracefully handle each type of exception.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+- The `__exit__` method defined in the `Rectangle` class below does not conform to Python's context management
+  protocol. The method is supposed to take four arguments: `self`, exception type, exception value, and traceback.
+  Because the method signature does not match what Python expects, `__exit__` is never called even though it should
+  have been, because the method `divide_by_zero` creates a `ZeroDivisionError` exception.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-````
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+
+      def __enter__(self):
+          print("in __enter__")
+          return self
+
+      def __exit__(self):
+          # never called because
+          # argument signature is wrong
+          print("in __exit__")
+
+      def divide_by_zero(self):
+          # causes ZeroDivisionError exception
+          return self.width / 0
+
+  with Rectangle(3, 4) as r:
+      r.divide_by_zero()
+      # __exit__ should be called but isn't
+
+  # Output:
+  # "in __enter__"
+  # Traceback (most recent call last):
+  #   File "e0235.py", line 27, in <module>
+  #     r.divide_by_zero()
+  # TypeError: __exit__() takes exactly 1 argument (4 given)
+  ```
+
+- Modifying `__exit__` to accept four arguments ensures that `__exit__` is properly called when an exception is raised
+  in the indented block of code following the `with` statement. Note that the argument names do not have to exactly
+  match the names provided below. But they must occur in the order provided below.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+
+      def __enter__(self):
+          print("in __enter__")
+          return self
+
+      def __exit__(self, exception_type, exception_value, traceback):
+          print("in __exit__")
+
+      def divide_by_zero(self):
+          # causes ZeroDivisionError exception
+          return self.width / 0
+
+  with Rectangle(3, 4) as r:
+      # exception successfully pass to __exit__
+      r.divide_by_zero()
+
+  # Output:
+  # "in __enter__"
+  # "in __exit__"
+  # Traceback (most recent call last):
+  #   File "e0235.py", line 27, in <module>
+  #     r.divide_by_zero()
+  ```
 
 ##### 3.6.1.1.8. Explicit Return in `___init___`
 
@@ -35763,22 +36468,51 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.9. `___future___` Import Is Not the First Non-Docstring Statement
 
--
+- The `__future__` module enables a module to use functionality that is mandatory in future Python versions. If it was
+  possible to place the `__future__` module in the middle of a module, then that would mean that one half of the module
+  could use the old Python functionality for a given feature, and the other half (after the `__future__` import) could
+  use the new Python functionality of the feature. This could create many strange and hard-to-find bugs, so Python does
+  not allow it.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below attempts to place a `__future__` import statement in the middle of the module. When Python encounters
+  the from `__future__` import division statement it raises a `SyntaxError` and halts execution. However, if the code
+  were to execute, the first print statement would print out `1` (which is how the division operator behaves in Python
+  versions 2 and below), but the second print statement would print out a decimal value, which is how the division
+  operator functions in Python versions 3 and later. As you can see, this could create very strange behaviour, so
+  Python does not allow `__future__` import statements in the middle of a module. The module can use either version of
+  the division operator, but it can't use both.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  print(8 / 7)  # 1
 
-```
+  # SyntaxError
+  from __future__ import division
 
--
+  # 1.1428571428571428
+  print(8 / 7)
+  ```
+
+- In the modified code below, the author decides that the module needs to use the old functionality of the division
+operator. The only solution in this case is to remove the `__future__` import statement from the module.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # removed __future__ import statement
+  print(8 / 7)  # 1
+  ```
 
-```
+- In the modified code below, the author decides that the module needs the new functionality of the division operator.
+  The only solution then is to place the `__future__` import statement at the beginning of the module.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  from __future__ import division
+
+  # 1.1428571428571428
+  print(8 / 7)
+  ```
 
 ##### 3.6.1.1.10. Implementing Java-style Getters & Setters
 
@@ -35916,79 +36650,254 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.1.13. Method Could Be a Function
 
--
+- When a method is not preceded by the `@staticmethod` or `@classmethod` decorators and does not contain any references
+  to the class or instance (via keywords like `cls` or `self`), Python raises the `Method could be a function` error.
+  This is not a critical error, but you should check the code in question in order to determine if this section of code
+  really needs to be defined as a method of this class.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- In the `Rectangle` class below, the `area` method calculates the area of any rectangle given a `width` and a
+  `height`. `area` causes the `Method could be a function error` because it is ambiguous. It does not reference the
+  instance or class using the `self` or `cls` keywords and it is not preceded by the `@staticmethod` decorator.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+      # should be preceded by @staticmethod here
+      def area(width, height):
+          return width * height
+  ```
+
+- In the `Rectangle` class below, the `print_class_name` method prints the name of the class. Again, Python raises the
+  `Method could be a function` error because the method does not reference any class members or methods and is not
+  preceded by the `@classmethod` decorator. Furthermore, the first argument of a class method must be a reference to
+  the class itself.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+      # should be preceded by @classmethod here
+      # missing required first argument "cls"
+      def print_class_name():
+          print("class name: Rectangle")
+  ```
+
+- All static methods must be preceded by the `@staticmethod` decorator.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 ```python
-
+class Rectangle:
+    # clarifies that this is a static method and belongs here
+    @staticmethod
+    def area(width, height):
+        return width * height
 ```
 
--
+- All class methods must be preceded by the `@classmethod` decorator. Furthermore, the first argument of any class
+  method must be `cls`, which is a reference to the class itself.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
-
-```
+  ```python
+  class Rectangle:
+      @classmethod
+      def print_class_name(cls):
+          # "class name: Rectangle"
+          print("class name: {0}".format(cls))
+  ```
 
 ##### 3.6.1.1.14. Method Has No Argument
 
--
+- Unlike some programming languages, Python does not pass references to instance or class objects automatically behind
+  the scenes. So the program must explicitly pass them as arguments whenever it wants to access any members of the
+  instance or class within a method.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+W
+- In the `Rectangle` class below the `area` method attempts to return the value of the `area` instance variable.
+  However, `self.area` is undefined because a reference to the instance object has not been explicitly passed as an
+  argument to the method.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+  ```python
+  class Rectangle:
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
+      # missing first argument "self"
+      def area():
+          # self is undefined here
+          return self.area
+  ```
+
+- The method `print_class_name` attempts to print the name of the class. However, to programmatically access a class
+  name, a method needs to have a reference to the class object. This is accomplished by passing the keyword `cls` as
+  the first argument to the method. Because `print_class_name` does not do this, its reference to `cls` in the body of
+  the method is undefined.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      @classmethod
+      # missing first argument "cls"
+      def print_class_name():
+          # cls is undefined here
+          print("Hello, I am {0}!".format(cls))
+  ```
+
+- The method `area` computes the value of any rectangle. Currently this method is ambiguous. It is defined as a method
+  of the `Rectangle` class, yet it does not reference any instance or class members. The method needs to explicitly
+  state that it is a static method via the `@staticmethod `decorator.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 ```python
-
+class Rectangle:
+    # "@staticmethod" should be here
+    def area(width, height):
+        return width * height
 ```
 
--
+- To access the `area` member of a `Rectangle` instance the first argument of the area method needs to be a reference
+  to the instance object, signified by the keyword `self`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle:
+      @classmethod
+      # class members now accessible, thanks to "cls"
+      def print_class_name(cls):
+          print("Hello, I am {0}!".format(cls))
+  ```
 
-```
+- To access the name of the class the `print_class_name` method needs to explicitly pass an argument to the class
+  object. This is done by adding the keyword `cls` as the first argument of the method.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      # clarifies that the method does not need any instance members
+      @staticmethod
+      def area(width, height):
+          return width * height
+  ```
+
+- If the method is a static method that does not need access to any instance members, then the method should be
+  preceded by the `@staticmethod` decorator. This improves readability by helping clarify that the method should never
+  rely on any instance members.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  class Rectangle:
+      # clarifies that the method does not need any instance members
+      @staticmethod
+      def area(width, height):
+          return width * height
+  ```
 
 ##### 3.6.1.1.15. Missing Argument to `super()`
 
--
+- `super()` enables you to access the methods and members of a parent class without referring to the parent class by
+  name. For a single inheritance situation the first argument to `super()` should be the name of the current child
+    class calling `super()`, and the second argument should be self, that is, a reference to the current object calling
+    `super()`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The author of the code below provides no arguments for the child class' call to `super()`. Python raises a
+  `TypeError` at runtime because it expects at least 1 argument for `super()`.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
 
-```
+  class Square(Rectangle):
+      def __init__(self, length):
+          # no arguments provided to super()
+          super().__init__(length, length)
 
--
+  s = Square(5)
+  print(s.area)  # does not execute
+  ```
+
+- In the modified code below the author has fixed the call to `super()` so that the name of the child class which is
+  calling `super()` (`Square` in this case) is the first argument to the method, and a reference to the object calling
+  `super()` is the second argument.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  class Rectangle(object):
+      def __init__(self, width, height):
+          self.width = width
+          self.height = height
+          self.area = width * height
 
-```
+  class Square(Rectangle):
+      def __init__(self, length):
+          # super() executes fine now
+          super(Square, self).__init__(length, length)
+
+  s = Square(5)
+  print(s.area)  # 25
+  ```
 
 ##### 3.6.1.1.16. Using a Mutable Default Value as an Argument
 
--
+- Passing mutable lists or dictionaries as default arguments to a function can have unforeseen consequences. Usually
+  when a programmer uses a list or dictionary as the default argument to a function, the programmer wants the program
+  to create a new list or dictionary every time that the function is called. However, this is not what Python does. The
+  first time that the function is called, Python creates a persistent object for the list or dictionary. Every
+  subsequent time the function is called, Python uses that same persistent object that was created from the first call
+  to the function.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- A programmer wrote the `append` function below under the assumption that the `append` function would return a new
+  list every time that the function is called without the second argument. In reality this is not what happens. The
+  first time that the function is called, Python creates a persistent list. Every subsequent call to `append` appends
+  the value to that original list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def append(number, number_list=[]):
+      number_list.append(number)
+      print(number_list)
+      return number_list
 
-```
+  append(5) # expecting: [5], actual: [5]
+  append(7) # expecting: [7], actual: [5, 7]
+  append(2) # expecting: [2], actual: [5, 7, 2]
+  ```
 
--
+- If, like the programmer who implemented the `append` function above, you want the function to return a new, empty
+  list every time that the function is called, then you can use a [sentinel value](
+    https://en.wikipedia.org/wiki/Sentinel_value) (a special value in the context of an algorithm which uses its
+  presence as a condition of termination, ) to represent this use case, and then modify the body of the function to
+  support this scenario. When the function receives the sentinel value, it knows that it is supposed to return a new
+  list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  # the keyword None is the sentinel value representing empty list
+  def append(number, number_list=None):
+      if number_list is None:
+          number_list = []
+      number_list.append(number)
+      print(number_list)
+      return number_list
 
-```
+  append(5) # expecting: [5], actual: [5]
+  append(7) # expecting: [7], actual: [7]
+  append(2) # expecting: [2], actual: [2]
+  ```
 
 ##### 3.6.1.1.17. No Exception Type(s) Specified
 
@@ -36720,7 +37629,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   higher).
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-- The code below demonstrates the old syntax of dict initialization. Although there is nothing syntactically wrong with
+- The code below demonstrates the old syntax of dict initialisation. Although there is nothing syntactically wrong with
   this code, it is somewhat hard to read.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
@@ -36825,98 +37734,190 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 ##### 3.6.1.3.7. Not Using `items()` to Iterate Over a Dictionary
 
--
+- There should be one - and preferably only one - obvious way to do it. The preferred way to iterate over the key-value
+  pairs of a dictionary is to declare two variables in a `for` loop, and then call `dictionary.items()`, where
+  `dictionary` is the name of your variable representing a dictionary. For each loop iteration, Python will
+  automatically assign the first variable as the key and the second variable as the value for that key.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below defines a `for` loop that iterates over a dictionary named `d`. For each loop iteration Python
+  automatically assigns the value of `key` to the name of the next key in the dictionary. Inside of the `for` loop the
+  code uses `key` to access the value of each key of the dictionary. This is a common way for iterating over a
+  dictionary, but it is not the preferred way in Python.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  d = {"first_name": "Alfred", "last_name":"Hitchcock"}
 
-```
+  for key in d:
+      print("{} = {}".format(key, d[key]))
+  ```
 
--
+- The updated code below demonstrates the Pythonic style for iterating through a dictionary. When you define two
+  variables in a `for` loop in conjunction with a call to `items()` on a dictionary, Python automatically assigns the
+  first variable as the name of a key in that dictionary, and the second variable as the corresponding value for that
+  key.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  d = {"first_name": "Alfred", "last_name":"Hitchcock"}
 
-```
+  for key,val in d.items():
+      print("{} = {}".format(key, val))
+  ```
+
+- In python 2.x the above examples using `items` would return a `list` with tuples containing the copied key-value
+  pairs of the dictionary. In order to not copy and with that load the whole dictionary's keys and values inside a
+  list to the memory you should prefer the `iteritems` method which simply returns an iterator instead of a list. In
+  Python 3.x, the `iteritems` method is removed and the `items` method returns view objects. The benefit of these view
+  objects compared to the tuples containing copies is that every change made to the dictionary is reflected in the view
+  objects.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
 ##### 3.6.1.3.8. Not Using Names Tuples When Returning More Than One Value From a Function
 
--
+- Named tuples can be used anywhere where normal tuples are acceptable, but their values can be accessed through their
+  names in addition to their indexes. This makes the code more verbose and readable. The code below returns a first
+  name, middle name, and last name using a normal, unnamed tuple. After calling the tuple, each value can only be
+  returned via an index. This code is difficult to use: the caller of the function has to know that the first element
+  is the first name, the second is the middle name, and the third is the last name.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below returns a first name, middle name, and last name using a normal, unnamed tuple. After calling the
+  tuple, each value can only be returned via an index. This code is difficult to use: the caller of the function has to
+  know that the first element is the first name, the second is the middle name, and the third is the last name.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def get_name():
+      return "Richard", "Xavier", "Jones"
 
-```
+  name = get_name()
 
--
+  # no idea what these indexes map to!
+  print(name[0], name[1], name[2])
+  ```
+
+- The modified code below uses named tuples to return multiple values. This code is easier to use and easier to read,
+  as now the caller can access each piece of data via a straightforward name (like `name.first`).
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  from collections import namedtuple
 
-```
+  def get_name():
+      name = namedtuple("name", ["first", "middle", "last"])
+      return name("Richard", "Xavier", "Jones")
+
+  name = get_name()
+
+  # much easier to read
+  print(name.first, name.middle, name.last)
+  ```
 
 ##### 3.6.1.3.9. Not Using Unpacking For Updating Multiple Values at Once
 
--
+- In general, the Python programming community prefers concise code over verbose code. Using unpacking to update the
+  values of multiple variables simultaneously is more concise than using assignments to update each variable
+  individually.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The function below implements the classical Euclid algorithm for greatest common divisor. The updates of the
+  variables `a` and `b` are made using variable `temp` and three lines of code.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def gcd(a, b):
+      while b != 0:
+          temp = b
+          b = a % b
+          a = temp
+      return a
+  ```
 
-```
-
--
+- The modified code below is functionally equivalent to the original code above, but this code is more concise.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  def gcd(a, b):
+      while b != 0:
+          a, b = b, a % b
+      return a
+  ```
 
-```
+- The unpacking can be sometimes quite misleading. Figure out what is the outcome of the code below.
+  [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
+
+  ```python
+  b = "1984"
+  a = b, c = "AB"
+  print(a, b, c)
+  ```
 
 ##### 3.6.1.3.10. Not Using `zip()` to Iterate Over a Pair of Lists
 
--
+- There should be one - and preferably only one - obvious way to do it. The preferred way to iterate through a pair of
+  lists is to declare two variables in a loop expression, and then call `zip(list_one, list_two)`, where `list_one` and
+  `list_two` are the two lists you wish to iterate through. For each loop iteration, Python will automatically assign
+  the first variable as the next value in the first list, and the second variable as the next value in the second list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below defines a variable `index` which serves as an index variable for iterating through two lists. Within
+  the `for` loop the code accesses the corresponding value for each list by using the index variable. This is a common
+  way for iterating through two lists, but it is not the preferred way in Python.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  numbers = [1, 2, 3]
+  letters = ["A", "B", "C"]
 
-```
+  for index in range(len(numbers)):
+      print(numbers[index], letters[index])
+  ```
 
--
+- The updated code below demonstrates the Pythonic style for iterating through a pair of lists. When the code defines
+  two variables in its `for` loop in conjunction with a call to `zip(numbers, letters)` on the pair of lists, Python
+  automatically assigns the first variable as the next value in the first list, and the second variable as the next
+  value in the second list.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  numbers = [1, 2, 3]
+  letters = ["A", "B", "C"]
 
-```
+  for numbers_value, letters_value in zip(numbers, letters):
+      print(numbers_value, letters_value)
+  ```
 
 ##### 3.6.1.3.11. Putting Type Information in a Variable Name
 
--
+- Python is a duck-typed language. Just because a variable is described as an integer does not mean that it actually is
+  an integer. This can be very dangerous for any programmer who acts on the variable assuming that it is an integer.
+  Note that the practice of including type notation in variable names is also called Hungarian Notation.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
--
+- The code below demonstrates the dangers of variables whose names include type notation. Just because a variable is
+  called `n_int` does not mean that the variable is actually an integer.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  n_int = "Hello, World!"
 
-```
+  # mistakenly assuming that n_int is a number
+  4 / n_int
+  ```
 
--
+- Although the modified code below does not fix the underlying problem of attempting to divide a number by a string,
+  the code is generally less misleading, because there is no misleading description in the variable name `n` that `n`
+  is a number.
   [Quantified Code: The Little Book of Python Anti-Patterns][quantified-code-the-little-book-of-python-anti-patterns]
 
-```python
+  ```python
+  n = "Hello, World!"
 
-```
+  # still a problem, but less misleading now
+  4 / n
+  ```
 
 ##### 3.6.1.3.12. Testing for Object Identity Should be `is`
 
@@ -37270,8 +38271,8 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   ```python
   from string import Template
-  greeting_template = Template(“Hello World, my name is $name.”)
-  greeting = greeting_template.substitute(name=”Hayley”)
+  greeting_template = Template("Hello World, my name is $name.")
+  greeting = greeting_template.substitute(name="Hayley")
   ```
 
 - The `string` format method is a bit cumbersome because it requires an `import` statement and is less flexible with
@@ -37929,3 +38930,334 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
   - `:tab sball`: Open all buffers in tabs.
     [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
+
+<!-- markdownlint-capture -->
+<!-- markdownlint-disable -->
+
+<!--
+# Online
+## Command Line
+### `bash`
+#### Variable Declaration and Differences
+- Local Variables: https://tldp.org/LDP/abs/html/localvar.html
+- Special Variable Types: https://tldp.org/LDP/abs/html/othertypesv.html
+- Declare/Typeset Options: https://tldp.org/LDP/abs/html/declareref.html
+- declare -r vs readonly in `bash`: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
+#### Best Practices
+- https://mywiki.wooledge.org/BashGuide/Practices
+- https://bertvv.github.io/cheat-sheets/Bash.html
+
+# Tutorials
+## Microservice Development
+- Learn to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
+
+# Books
+## Professional Programmer Advice
+- The Pragmatic Programmer (Physical)
+## Text Editors
+### Vi, Vim
+- `vi` and `vim` Editors (Physical)
+
+# Online
+## Command Line
+### `bash`
+- Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
+
+# Books
+## Command Line
+- Efficient Linux at the Command Line (Humble Bundle)
+## Security
+- Fundamentals of Information System Security, 4th Edition (To Be Bought)
+- Software Security: Building Security In (To Be Bought)
+- Practical UNIX and Internet Security, 3rd Edition (https://www.oreilly.com/library/view/practical-unix-and/0596003234/)
+- SSH: The Secure Shell: The Definitive Guide, 4th Edition
+- Linux Security Cookbook
+## DevOps
+- Python for DevOps (Humble Bundle)
+## Deployment
+- Docker Cookbook (Humble Bundle)
+- Docker: Up & Running, 3rd Edition (Humble Bundle)
+- Kubernetes: Up and Running, 3rd Edition (Humble Bundle)
+## Pipelines
+- Data Pipeline Pocket Reference (Humble Bundle)
+- Cost-Effective Data Pipelines (Humble Bundle)
+## Version Control:
+- Learning Git (Humble Bundle)
+- Learning GitHub Actions (Humble Bundle)
+
+# Tutorials
+## Deployment
+- AWS course
+
+# Online Notes
+## Energy Efficient Software
+- How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
+- Tutorial Starting Page: https://learn.greensoftware.foundation/
+- Software Carbon Intensity: https://sci.greensoftware.foundation/
+- Optimise your microservice architecture for sustainability: https://foxutech.medium.com/how-to-optimize-your-microservice-architecture-for-sustainability-e7218cef4749
+- Guide to developing eco-friendly architectures: https://www.linkedin.com/pulse/building-sustainable-microservices-guide-developing-rohit-asthana
+- Revisiting energy and performance in microservice applications: https://www.sciencedirect.com/science/article/abs/pii/S0167819121001010
+- Energy Consumption in Microservices Architecture: https://www.researchgate.net/publication/371754881_Energy_Consumption_in_Microservices_Architectures_A_Systematic_Literature_Review
+- Code optimisation tactics: https://medium.com/@maxmeinhardt/software-energy-efficiency-code-optimization-tactics-b95be4ffcaf7
+- Energy Efficient Programming Languages, Tools and Practices in Coding: https://curiosum.com/blog/green-coding-software-development-energy-efficient-programming-languages
+- How to build and design sustainable software: https://www.freecodecamp.org/news/design-and-build-sustainable-software/
+## Reading Documentation
+- How to Read Your Way to Becoming a Better Developer (Medium, https://medium.com/free-code-camp/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c)
+- Mastering the Art of Learning from Documentation: Pro Tips for Developers & Technical Professionals (Medium, https://medium.com/@aarafat27/mastering-the-art-of-learning-from-documentation-pro-tips-for-developers-and-technical-cd9ae1d34ecd)
+- Layman Explained: Reading Documentation (Medium, https://medium.com/@laymanExplained/layman-explained-reading-documentation-36c450e77e6b)
+## Text Editor
+- Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
+## Command Line
+- `bash` Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
+- `bash` Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
+- `bash` Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
+## Java Refresher
+- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
+
+Nice Notes to Look At:
+# Books:
+## Professional Programmer Advice
+- Apprenticeship Patterns (Humble Bundle)
+## Automation
+### Shell
+- Wicked Cool Shell Scripts (Humble Bundle)
+### PowerShell
+- PowerShell Cookbook (Humble Bundle)
+## Algorithms
+- Learning Algorithms (Humble Bundle)
+- Algorithms in a Nutshell (Humble Bundle)
+- Advanced Algorithms & Data Structures (Humble Bundle)
+## Professional Programmer Advice
+### Agile
+- The Art of Agile Development (Humble Bundle)
+- Head First Agile (Humble Bundle)
+### Better Programmer
+- Becoming a Better Programmer (Humble Bundle)
+- Apprenticeship Patterns (Humble Bundle)
+### Software Design & Development
+- Code Complete (Microsoft Press)
+- Skills of a Successful Software Engineer (Humble Bundle)
+### Making Decisions
+- Software Mistakes and Trade-offs: How to Make Good Programming Decisions (Humble Bundle)
+## Agile
+## Clean Code
+### Readable Code
+- The Art of Readable Code (Humble Bundle)
+- The Clean Coder (Physical)
+- Street Coder: The Rules to Break and How to Break Them (Humble Bundle)
+- Good Code, Bad Code (Humble Bundle)
+### Design Patterns
+- Head First Design Patterns (Humble Bundle)
+### Refactoring
+- Refactoring (Physical)
+- Five Lines of Code: How and When to Refactor (Humble Bundle)
+### Legacy Code
+- Working Effectively with Legacy Code (To Be Bought)
+## Architecture
+### Clean Architecture
+- Clean Architecture (Physical)
+### Designing Software
+- Software Architecture: The Hard Parts (Physical)
+## C Development
+- Head First C (Humble Bundle)
+## C++ Development
+- Something C++-related
+## Python Development
+- Python Cookbook (Humble Bundle)
+## Go Development
+- 100 Go Mistakes and How to Avoid Them (Humble Bundle)
+## Function Programming Language Development
+- Something related to Clojure, Lisp, or Haskell
+## Rust Development
+- Rust in Action (Humble Bundle)
+## Front-End Development
+- React Cookbook (Humble Bundle)
+- React Native in Action (Humble Bundle)
+## HTML
+- HTML & XHTML (Physical)
+## CSS
+- CSS: The Definitive Guide (Physical)
+## PHP
+- Learning PHP & MySQL (Physical)
+## Deployment
+- Docker Cookbook (Humble Bundle)
+## Pipelines
+- Data Pipeline Pocket Reference (Humble Bundle)
+
+Unordered List of Topics:
+- Design Patterns
+- Code Reviews
+- Microservice Architecture
+- Code Smells
+- Static Analysis
+- Code Coverage
+- Testing
+- HA
+- GA
+- BUR
+- Java Version Features
+- RAN
+- Software Role - DevOps vs Software Engineer
+- Documentation
+- Agile Ceremonies
+- Scrum
+- Agile
+- Waterfall
+- MTLS
+- Telecommunications
+- vi
+- nano
+- vim
+
+# Online
+## Application Architecture
+### Monolith
+### Microservice
+
+## Communication Protocols
+### TCP
+### UDP
+
+## Pipelines
+### Jenkins
+### Spinnaker
+
+## Programming
+### Programming Frameworks
+#### .NET
+#### React
+### Programming Languages
+#### C\#
+#### Erlang
+#### Golang
+#### JavaScript (Programming)
+#### Python (Programming)
+#### Rust
+#### TypeScript
+
+## Scripting
+### Scripting Languages
+#### `bash`
+#### JavaScript (Scripting)
+#### Python (Scripting)
+
+## Testing
+TODO: Order in which to do this testing.
+### Compatibility Testing
+### Device Testing
+#### Backwards Compatibility Testing
+#### Forwards Compatibility Testing
+#### Software Testing
+### Functional Testing
+<https://www.browserstack.com/guide/functional-testing>
+#### Integration Testing
+<https://www.browserstack.com/guide/integration-testing>
+#### Regression Testing
+<https://www.browserstack.com/guide/regression-testing>
+### Sanity Testing
+<https://www.browserstack.com/guide/sanity-testing>
+### Performance Testing
+<https://www.browserstack.com/guide/performance-testing>
+#### Endurance Testing
+<https://www.browserstack.com/guide/performance-testing>
+#### Load Testing
+<https://www.browserstack.com/guide/performance-testing>
+- SSH: The Secure Shell: The Definitive Guide, 4th Edition
+- Linux Security Cookbook
+#### Stress Testing
+<https://www.browserstack.com/guide/performance-testing>
+#### Spike Testing
+<https://www.browserstack.com/guide/performance-testing>
+#### Volume Testing
+<https://www.browserstack.com/guide/performance-testing>
+### Smoke Testing
+<https://www.browserstack.com/guide/smoke-testing>
+#### Unit Testing
+<https://www.browserstack.com/guide/unit-testing-a-detailed-guide>
+#### Usability Testing
+<https://www.browserstack.com/guide/website-usability-testing>
+### User Interface Testing
+<https://www.browserstack.com/guide/ui-testing-guide>
+#### Exploratory Testing
+<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
+#### User Experience Testing
+<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
+
+## Version Control
+### Code Collaboration Platforms
+#### Gerrit
+#### GitHub
+##### GitHub Automation
+###### Dependabot
+###### GitHub Actions
+#### GitLab
+### Repository
+#### Centralised
+##### CVS
+##### Perforce
+##### Subversion
+#### Distributed
+##### Mercurial
+##### Git
+
+## Design/Development Methodologies
+### Behaviour-Driven Design/Development
+### Domain-Driven Design/Development
+### Test-Driven Design/Development
+
+## Containerisation
+### Docker
+### LXC
+### Podman
+
+## Delivery Paradigms
+### DevOps
+### GitOps
+
+## Deployment
+### Container Orchestration Systems
+#### Kubernetes
+### Declarative Continuous Delivery Tools
+#### Argo CD
+#### Helmfile
+### Package Managers
+#### Helm
+#### Kustomize
+
+## Hyperscalers
+### AWS
+### Azure
+### Google Cloud
+
+## File Formats
+### .json (JSON)
+### .md (Markdown)
+### .tar (Tar Archive/Tarball)
+### .tgz (GZip Compressed TAR Archive)
+### .txt (Plain Text)
+### .xml (XML)
+### .yaml (YAML)
+### .yml (YML)
+### .zip (Zip)
+
+## Communication Paradigms
+### HTTP
+#### API Design (HTTP)
+### Data Streaming
+#### API Design (Data Streaming)
+
+## Data Streaming Platforms
+### Kafka
+### RabbitMQ
+
+## HTTP Protocols
+### REST
+### SOAP
+
+## Template
+### Overview ()
+### Tool Comparison ()
+### Detailed Overview ()
+-->
+
+<!-- markdownlint-restore -->
