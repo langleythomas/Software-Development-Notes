@@ -2,6 +2,7 @@
 <!-- markdownlint-disable -->
 
 <!--
+
 # Books
 ## Security
 - 97 Things Every Application Security Professional Should Know (Humble Bundle)
@@ -91,10 +92,10 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 # Books
 ## Professional Programmer Advice
 - The Pragmatic Programmer (Physical)
+
 -->
 
 <!-- Link Definitions -->
-
 [automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2nd-edition]: <https://automatetheboringstuff.com/2e/>
 [ericsson-navigate-the-network-slicing-transformation-journey]: <https://www.ericsson.com/en/network-slicing>
 [github-replacing-bash-scripting-with-python]: <https://github.com/ninjaaron/replacing-bash-scripting-with-python>
@@ -227,415 +228,437 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     - [1.1.94. Write Tests for People](#1194-write-tests-for-people)
     - [1.1.95. You Gotta Care About the Code](#1195-you-gotta-care-about-the-code)
     - [1.1.96. Your Customers Do Not Mean What They Say](#1196-your-customers-do-not-mean-what-they-say)
-  - [97 Things Every Application Security Professional Should Know](#97-things-every-application-security-professional-should-know)
-    - [Secure Code for Tomorrow's Technology](#secure-code-for-tomorrows-technology)
-  - [1.2. Automate the Boring Stuff with Python: Practical Programming for Total Beginners](#12-automate-the-boring-stuff-with-python-practical-programming-for-total-beginners)
-  - [1.3. `bash` Cookbook](#13-bash-cookbook)
-    - [1.3.1. Preface](#131-preface)
-      - [1.3.1.1. Who Should Read This Book](#1311-who-should-read-this-book)
-      - [1.3.1.2. About This Book](#1312-about-this-book)
-        - [1.3.1.2.1. GNU Software](#13121-gnu-software)
-        - [1.3.1.2.2. A Note About Code Examples](#13122-a-note-about-code-examples)
-        - [1.3.1.2.3. Useless Use of `cat`](#13123-useless-use-of-cat)
-        - [1.3.1.2.4. A Note About Perl](#13124-a-note-about-perl)
-    - [1.3.2. Beginning `bash`](#132-beginning-bash)
-      - [1.3.2.1. Why `bash`?](#1321-why-bash)
-      - [1.3.2.2. The `bash` Shell](#1322-the-bash-shell)
-      - [1.3.2.3. Showing Where You Are](#1323-showing-where-you-are)
-      - [1.3.2.4. Finding \& Running Commands](#1324-finding--running-commands)
-      - [1.3.2.5. Getting Information About Files](#1325-getting-information-about-files)
-      - [1.3.2.6. Using Shell Quoting](#1326-using-shell-quoting)
-      - [1.3.2.7. Determining if You Are Running Interactively](#1327-determining-if-you-are-running-interactively)
-    - [1.3.3. Standard Output](#133-standard-output)
-      - [1.3.3.1. Writing Output to the Terminal/Window](#1331-writing-output-to-the-terminalwindow)
-      - [1.3.3.2. Writing Output but Preserving Space](#1332-writing-output-but-preserving-space)
-      - [1.3.3.3. Writing Output with More Formatting Control](#1333-writing-output-with-more-formatting-control)
-      - [1.3.3.4. Writing Output Without the New Line](#1334-writing-output-without-the-new-line)
-      - [1.3.3.5. Appending Rather than Clobbering Output](#1335-appending-rather-than-clobbering-output)
-      - [1.3.3.6. Using Just the Beginning of End of a File](#1336-using-just-the-beginning-of-end-of-a-file)
-      - [1.3.3.7. Throwing Output Away](#1337-throwing-output-away)
-      - [1.3.3.8. Saving or Grouping Output from Several Commands](#1338-saving-or-grouping-output-from-several-commands)
-      - [1.3.3.9. Connecting Two Programs by Using Output as Input](#1339-connecting-two-programs-by-using-output-as-input)
-      - [1.3.3.10. Saving a Copy of Output Even While Using It as Input](#13310-saving-a-copy-of-output-even-while-using-it-as-input)
-      - [1.3.3.11. Keeping Files Safe from Accidental Overwriting](#13311-keeping-files-safe-from-accidental-overwriting)
-      - [1.3.3.12. Clobbering a File on Purpose](#13312-clobbering-a-file-on-purpose)
-    - [1.3.4. Standard Input](#134-standard-input)
-      - [1.3.4.1. Getting Input from File](#1341-getting-input-from-file)
-      - [1.3.4.2. Keeping Your Data with Your Script](#1342-keeping-your-data-with-your-script)
-      - [1.3.4.3. Preventing Weird Behaviour in a Here-Document](#1343-preventing-weird-behaviour-in-a-here-document)
-      - [1.3.4.4. Indenting Here-Documents](#1344-indenting-here-documents)
-      - [1.3.4.5. Getting User Input](#1345-getting-user-input)
-      - [1.3.4.6. Getting a Yes or No Input](#1346-getting-a-yes-or-no-input)
-      - [1.3.4.7. Selecting from a List of Options](#1347-selecting-from-a-list-of-options)
-      - [1.3.4.8. Prompting for a Password](#1348-prompting-for-a-password)
-    - [1.3.5. Executing Commands](#135-executing-commands)
-      - [1.3.5.1. Running Any Executable](#1351-running-any-executable)
-      - [1.3.5.2. Running Several Commands in Sequence](#1352-running-several-commands-in-sequence)
-      - [1.3.5.3. Running Several Commands All at Once](#1353-running-several-commands-all-at-once)
-      - [1.3.5.4. Telling Whether a Command Succeeded or Not](#1354-telling-whether-a-command-succeeded-or-not)
-      - [1.3.5.5. Running a Command Only if Another Command Succeeded](#1355-running-a-command-only-if-another-command-succeeded)
-      - [1.3.5.6. Using Fewer `if` Statements](#1356-using-fewer-if-statements)
-      - [1.3.5.7. Running Long Jobs Unattended](#1357-running-long-jobs-unattended)
-      - [1.3.5.8. Displaying Error Messages When Failures Occur](#1358-displaying-error-messages-when-failures-occur)
-      - [1.3.5.9. Running Commands from a Variable](#1359-running-commands-from-a-variable)
-      - [1.3.5.10. Running All Scripts in a Directory](#13510-running-all-scripts-in-a-directory)
-    - [1.3.6. Basic Scripting: Shell Variables](#136-basic-scripting-shell-variables)
-      - [1.3.6.1. Embedding Documentation in Shell Scripts](#1361-embedding-documentation-in-shell-scripts)
-      - [1.3.6.2. Promoting Script Readability](#1362-promoting-script-readability)
-      - [1.3.6.3. Separating Variable Names from Surrounding Text](#1363-separating-variable-names-from-surrounding-text)
-      - [1.3.6.4. Exporting Variables](#1364-exporting-variables)
-      - [1.3.6.5. Seeing All Variable Values](#1365-seeing-all-variable-values)
-      - [1.3.6.6. Using Parameters in a Shell Script](#1366-using-parameters-in-a-shell-script)
-      - [1.3.6.7. Looping Over Arguments Passed to a Script](#1367-looping-over-arguments-passed-to-a-script)
-      - [1.3.6.8. Handling Parameters with Spaces](#1368-handling-parameters-with-spaces)
-      - [1.3.6.9. Handling Lists of Parameters with Spaces](#1369-handling-lists-of-parameters-with-spaces)
-      - [1.3.6.10. Counting Arguments](#13610-counting-arguments)
-      - [1.3.6.11. Consuming Arguments](#13611-consuming-arguments)
-      - [1.3.6.12. Getting Default Values](#13612-getting-default-values)
-      - [1.3.6.13. Setting Default Values](#13613-setting-default-values)
-      - [1.3.6.14. Using `null` as Valid Default Value](#13614-using-null-as-valid-default-value)
-      - [1.3.6.15. Using More than Just a Constant String for Default](#13615-using-more-than-just-a-constant-string-for-default)
-      - [1.3.6.16. Giving an Error Message for Unset Parameters](#13616-giving-an-error-message-for-unset-parameters)
-      - [1.3.6.17. Changing Pieces of a String](#13617-changing-pieces-of-a-string)
-      - [1.3.6.18. Getting the Absolute Value of a Number](#13618-getting-the-absolute-value-of-a-number)
-      - [1.3.6.19. Using `bash` for `basename`](#13619-using-bash-for-basename)
-      - [1.3.6.20. Using `bash` for `dirname`](#13620-using-bash-for-dirname)
-      - [1.3.6.21. Using Alternate Values for Comma-Separated Values](#13621-using-alternate-values-for-comma-separated-values)
-      - [1.3.6.22. Using Array Variables](#13622-using-array-variables)
-      - [1.3.6.23. Converting Between Upper- and Lower-case](#13623-converting-between-upper--and-lower-case)
-      - [1.3.6.24. Converting to Camel Case](#13624-converting-to-camel-case)
-    - [1.3.7. Shell Logic \& Arithmetic](#137-shell-logic--arithmetic)
-      - [1.3.7.1. Doing Arithmetic in Your Shell Script](#1371-doing-arithmetic-in-your-shell-script)
-      - [1.3.7.2. Branching on Conditions](#1372-branching-on-conditions)
-      - [1.3.7.3. Testing for File Characteristics](#1373-testing-for-file-characteristics)
-      - [1.3.7.4. Testing for More than One Thing](#1374-testing-for-more-than-one-thing)
-      - [1.3.7.5. Testing for String Characteristics](#1375-testing-for-string-characteristics)
-      - [1.3.7.6. Testing for Equality](#1376-testing-for-equality)
-    - [1.3.8. Testing with Pattern Matches](#138-testing-with-pattern-matches)
-      - [1.3.8.1. Testing with Regular Expressions](#1381-testing-with-regular-expressions)
-      - [1.3.8.2. Looping for a While](#1382-looping-for-a-while)
-      - [1.3.8.3. Looping with a `read`](#1383-looping-with-a-read)
-      - [1.3.8.4. Looping with a Count](#1384-looping-with-a-count)
-      - [1.3.8.5. Looping with Floating-Point Values](#1385-looping-with-floating-point-values)
-      - [1.3.8.6. Branching Many Ways](#1386-branching-many-ways)
-      - [1.3.8.7. Parsing Command-Line Arguments](#1387-parsing-command-line-arguments)
-      - [1.3.8.8. Creating Simple Menus](#1388-creating-simple-menus)
-      - [1.3.8.9. Changing the Prompt on Simple Menus](#1389-changing-the-prompt-on-simple-menus)
-    - [1.3.9. Intermediate Shell Tools I](#139-intermediate-shell-tools-i)
-      - [1.3.9.1. Sifting Through Files for a String](#1391-sifting-through-files-for-a-string)
-      - [1.3.9.2. Getting Just the Filename from a Search](#1392-getting-just-the-filename-from-a-search)
-      - [1.3.9.3. Getting a Simple True/False from a Search](#1393-getting-a-simple-truefalse-from-a-search)
-      - [1.3.9.4. Doing a Search in a Pipeline](#1394-doing-a-search-in-a-pipeline)
-      - [1.3.9.5. Grepping Compressed Files](#1395-grepping-compressed-files)
-      - [1.3.9.6. Keeping Some Output, Discarding the Rest](#1396-keeping-some-output-discarding-the-rest)
-      - [1.3.9.7. Keeping Only a Portion of a Line of Output](#1397-keeping-only-a-portion-of-a-line-of-output)
-      - [1.3.9.8. Reversing the Words on Each Line](#1398-reversing-the-words-on-each-line)
-      - [1.3.9.9. Summing a List of Numbers](#1399-summing-a-list-of-numbers)
-      - [1.3.9.10. Counting String Values with `awk`](#13910-counting-string-values-with-awk)
-      - [1.3.9.11. Counting String Values with `bash`](#13911-counting-string-values-with-bash)
-      - [1.3.9.12. Showing Data as a Quick and Easy Histogram](#13912-showing-data-as-a-quick-and-easy-histogram)
-      - [1.3.9.13. An Easy Histogram with `bash`](#13913-an-easy-histogram-with-bash)
-      - [1.3.9.14. Showing a Paragraph of Text After a Found Phrase](#13914-showing-a-paragraph-of-text-after-a-found-phrase)
-    - [1.3.10. Intermediate Shell Tools II](#1310-intermediate-shell-tools-ii)
-      - [1.3.10.1. Sorting Your Output](#13101-sorting-your-output)
-      - [1.3.10.2. Sorting Numbers](#13102-sorting-numbers)
-      - [1.3.10.3. Sorting IP Addresses](#13103-sorting-ip-addresses)
-      - [1.3.10.4. Cutting Out Parts of Your Output](#13104-cutting-out-parts-of-your-output)
-      - [1.3.10.5. Removing Duplicate Lines](#13105-removing-duplicate-lines)
-      - [1.3.10.6. Compressing Files](#13106-compressing-files)
-      - [1.3.10.7. Uncompressing Files](#13107-uncompressing-files)
-      - [1.3.10.8. Checking a `tar` Archive for Unique Directories](#13108-checking-a-tar-archive-for-unique-directories)
-      - [1.3.10.9. Translating Characters](#13109-translating-characters)
-      - [1.3.10.10. Converting Upper-case to Lower-case](#131010-converting-upper-case-to-lower-case)
-      - [1.3.10.11. Converting DOS Files to Linux Format](#131011-converting-dos-files-to-linux-format)
-      - [1.3.10.12. Removing Smart Quotes](#131012-removing-smart-quotes)
-      - [1.3.10.13. Counting Lines, Words, or Characters in a File](#131013-counting-lines-words-or-characters-in-a-file)
-      - [1.3.10.14. Rewrapping Paragraphs](#131014-rewrapping-paragraphs)
-      - [1.3.10.15. Doing More with `less`](#131015-doing-more-with-less)
-    - [1.3.11. Finding Files: `find`, `locate`, `slocate`](#1311-finding-files-find-locate-slocate)
-      - [1.3.11.1. Finding All Your MP3 Files](#13111-finding-all-your-mp3-files)
-      - [1.3.11.2. Handling Filenames Containing Odd Characters](#13112-handling-filenames-containing-odd-characters)
-      - [1.3.11.3. Finding Files Across Symbolic Links](#13113-finding-files-across-symbolic-links)
-      - [1.3.11.4. Finding Files Irrespective of Case](#13114-finding-files-irrespective-of-case)
-      - [1.3.11.5. Finding Files by Date](#13115-finding-files-by-date)
-      - [1.3.11.6. Finding Files by Type](#13116-finding-files-by-type)
-      - [1.3.11.7. Finding File by Size](#13117-finding-file-by-size)
-      - [1.3.11.8. Finding Files by Content](#13118-finding-files-by-content)
-      - [1.3.11.9. Finding Existing Files \& Content Fast](#13119-finding-existing-files--content-fast)
-      - [1.3.11.10. Finding a File Using a List of Possible Locations](#131110-finding-a-file-using-a-list-of-possible-locations)
-    - [1.3.12. Additional Features for Scripting](#1312-additional-features-for-scripting)
-      - [1.3.12.1. "Daemon-ising" Your Script](#13121-daemon-ising-your-script)
-      - [1.3.12.2. Reusing Code with Includes \& Sourcing](#13122-reusing-code-with-includes--sourcing)
-      - [1.3.12.3. Using Configuration Files in a Script](#13123-using-configuration-files-in-a-script)
-      - [1.3.12.4. Defining Functions](#13124-defining-functions)
-      - [1.3.12.5. Using Functions: Parameters \& Return Values](#13125-using-functions-parameters--return-values)
-      - [1.3.12.6. Trapping Interrupts](#13126-trapping-interrupts)
-      - [1.3.12.7. Redefining Commands with `alias`](#13127-redefining-commands-with-alias)
-      - [1.3.12.8. Avoiding Aliases \& Functions](#13128-avoiding-aliases--functions)
-      - [1.3.12.9. Counted Elapsed Time](#13129-counted-elapsed-time)
-      - [1.3.12.10. Writing Wrappers](#131210-writing-wrappers)
-    - [1.3.13. Working with Dates \& Times](#1313-working-with-dates--times)
-      - [1.3.13.1. Formatting Dates for Display](#13131-formatting-dates-for-display)
-      - [1.3.13.2. Supplying a Default Date](#13132-supplying-a-default-date)
-      - [1.3.13.3. Automating Date Ranges](#13133-automating-date-ranges)
-      - [1.3.13.4. Converting Dates \& Times to Epoch Seconds](#13134-converting-dates--times-to-epoch-seconds)
-      - [1.3.13.5. Converting Epoch Seconds to Dates \& Times](#13135-converting-epoch-seconds-to-dates--times)
-      - [1.3.13.6. Getting Yesterday or Tomorrow with Perl](#13136-getting-yesterday-or-tomorrow-with-perl)
-      - [1.3.13.7. Figuring Out Date \& Time Arithmetic](#13137-figuring-out-date--time-arithmetic)
-      - [1.3.13.8. Handling Time Zones, Daylight Saving Time, \& Leap Years](#13138-handling-time-zones-daylight-saving-time--leap-years)
-      - [1.3.13.9. Using `date` \& `cron` to Run a Script on the Nth Day](#13139-using-date--cron-to-run-a-script-on-the-nth-day)
-      - [1.3.13.10. Logging with Dates](#131310-logging-with-dates)
-    - [1.3.14. End-User Tasks as Shell Scripts](#1314-end-user-tasks-as-shell-scripts)
-      - [1.3.14.1. Starting Simple by Printing Dashes](#13141-starting-simple-by-printing-dashes)
-      - [1.3.14.2. Viewing Photos in an Album](#13142-viewing-photos-in-an-album)
-      - [1.3.14.3. Loading Your MP3 Player](#13143-loading-your-mp3-player)
-      - [1.3.14.4. Burning a CD](#13144-burning-a-cd)
-      - [1.3.14.5. Comparing Two Documents](#13145-comparing-two-documents)
-    - [1.3.15. Parsing \& Similar Tasks](#1315-parsing--similar-tasks)
-      - [1.3.15.1. Parsing Arguments for Your Shell Script](#13151-parsing-arguments-for-your-shell-script)
-      - [1.3.15.2. Parsing Arguments with Your Own Error Messages](#13152-parsing-arguments-with-your-own-error-messages)
-      - [1.3.15.3. Parsing Some HTML](#13153-parsing-some-html)
-      - [1.3.15.4. Parsing Output into an Array](#13154-parsing-output-into-an-array)
-      - [1.3.15.5. Parsing Output with a Function Call](#13155-parsing-output-with-a-function-call)
-      - [1.3.15.6. Parsing Text with a `read` Statement](#13156-parsing-text-with-a-read-statement)
-      - [1.3.15.7. Parsing with `read` into an Array](#13157-parsing-with-read-into-an-array)
-      - [1.3.15.8. Reading an Entire File](#13158-reading-an-entire-file)
-      - [1.3.15.9. Getting Your Plurals Right](#13159-getting-your-plurals-right)
-      - [1.3.15.10. Taking It One Character at a Time](#131510-taking-it-one-character-at-a-time)
-      - [1.3.15.11. Cleaning Up an SVN Source Tree](#131511-cleaning-up-an-svn-source-tree)
-      - [1.3.15.12. Setting Up a Database with MySQL](#131512-setting-up-a-database-with-mysql)
-      - [1.3.15.13. Isolating Specific Fields in Data](#131513-isolating-specific-fields-in-data)
-      - [1.3.15.14. Updating Specific Fields in Data Files](#131514-updating-specific-fields-in-data-files)
-      - [1.3.15.15. Trimming Whitespace](#131515-trimming-whitespace)
-      - [1.3.15.16. Compressing Whitespace](#131516-compressing-whitespace)
-      - [1.3.15.17. Processing Fixed-Length Records](#131517-processing-fixed-length-records)
-      - [1.3.15.18. Processing Files with No Line Breaks](#131518-processing-files-with-no-line-breaks)
-      - [1.3.15.19. Converting a Data File to CSV](#131519-converting-a-data-file-to-csv)
-      - [1.3.15.20. Parsing a CSV Data File](#131520-parsing-a-csv-data-file)
-    - [1.3.16. Writing Secure Shell Scripts](#1316-writing-secure-shell-scripts)
-      - [1.3.16.1. Avoiding Common Security Problems](#13161-avoiding-common-security-problems)
-      - [1.3.16.2. Avoiding Interpreter Spoofing](#13162-avoiding-interpreter-spoofing)
-      - [1.3.16.3. Setting a Secure `$PATH`](#13163-setting-a-secure-path)
-      - [1.3.16.4. Clearing All Aliases](#13164-clearing-all-aliases)
-      - [1.3.16.5. Clearing the Command Hash](#13165-clearing-the-command-hash)
-      - [1.3.16.6. Preventing Core Dumps](#13166-preventing-core-dumps)
-      - [1.3.16.7. Setting a Secure `$IFS`](#13167-setting-a-secure-ifs)
-      - [1.3.16.8. Setting a Secure `umask`](#13168-setting-a-secure-umask)
-      - [1.3.16.9. Finding World-Writeable Directories in Your `$PATH`](#13169-finding-world-writeable-directories-in-your-path)
-      - [1.3.16.10. Adding the Current Directory to the `$PATH`](#131610-adding-the-current-directory-to-the-path)
-      - [1.3.16.11. Using Secure Temporary Files](#131611-using-secure-temporary-files)
-      - [1.3.16.12. Validating Input](#131612-validating-input)
-      - [1.3.16.13. Setting Permissions](#131613-setting-permissions)
-      - [1.3.16.14. Leaking Passwords into the Process List](#131614-leaking-passwords-into-the-process-list)
-      - [1.3.16.15. Writing `setuid` or `setgid` Scripts](#131615-writing-setuid-or-setgid-scripts)
-      - [1.3.16.16. Restricting Guest Users](#131616-restricting-guest-users)
-      - [1.3.16.17. Using `chroot` Jails](#131617-using-chroot-jails)
-      - [1.3.16.18. Running as Non-root User](#131618-running-as-non-root-user)
-      - [1.3.16.19. Using `sudo` More Securely](#131619-using-sudo-more-securely)
-      - [1.3.16.20. Using Passwords in Scripts](#131620-using-passwords-in-scripts)
-      - [1.3.16.21. Using SSH Without a Password](#131621-using-ssh-without-a-password)
-      - [1.3.16.22. Restricting SSH Commands](#131622-restricting-ssh-commands)
-    - [1.3.17. Disconnecting Inactive Sessions](#1317-disconnecting-inactive-sessions)
-      - [1.3.17.1. Advanced Scripting](#13171-advanced-scripting)
-      - [1.3.17.2. Finding `bash` Portable for `#!`](#13172-finding-bash-portable-for-)
-      - [1.3.17.3. Setting a POSIX `$PATH`](#13173-setting-a-posix-path)
-      - [1.3.17.4. Developing Portable Shell Scripts](#13174-developing-portable-shell-scripts)
-      - [1.3.17.5. Testing Scripts Using Virtual Machines](#13175-testing-scripts-using-virtual-machines)
-      - [1.3.17.6. Using `for` Loops Portably](#13176-using-for-loops-portably)
-      - [1.3.17.7. Using `echo` Portably](#13177-using-echo-portably)
-      - [1.3.17.8. Splitting Output Only When Necessary](#13178-splitting-output-only-when-necessary)
-      - [1.3.17.9. Viewing Output in Hex](#13179-viewing-output-in-hex)
-      - [1.3.17.10. Using `bash` Net-Redirection](#131710-using-bash-net-redirection)
-      - [1.3.17.11. Finding My IP Address](#131711-finding-my-ip-address)
-      - [1.3.17.12. Getting Input from Another Machine](#131712-getting-input-from-another-machine)
-      - [1.3.17.13. Redirecting Output for the Life of a Script](#131713-redirecting-output-for-the-life-of-a-script)
-      - [1.3.17.14. Working Around `"Argument list too long"` Errors](#131714-working-around-argument-list-too-long-errors)
-      - [1.3.17.15. Logging to `syslog` from Your Script](#131715-logging-to-syslog-from-your-script)
-      - [1.3.17.16. Using `logger` Correctly](#131716-using-logger-correctly)
-      - [1.3.17.17. Sending Email from Your Script](#131717-sending-email-from-your-script)
-      - [1.3.17.18. Automating a Process Using Phases](#131718-automating-a-process-using-phases)
-      - [1.3.17.19. Doing Two Things at Once](#131719-doing-two-things-at-once)
-      - [1.3.17.20. Running an SSH Command on Multiple Hosts](#131720-running-an-ssh-command-on-multiple-hosts)
-    - [1.3.18. Configuring \& Customising `bash`](#1318-configuring--customising-bash)
-      - [1.3.18.1. `bash` Startup Options](#13181-bash-startup-options)
-      - [1.3.18.2. Customising Your Prompt](#13182-customising-your-prompt)
-      - [1.3.18.3. A Prompt Before Your Program Runs](#13183-a-prompt-before-your-program-runs)
-      - [1.3.18.4. Changing Your `$PATH` Permanently](#13184-changing-your-path-permanently)
-      - [1.3.18.5. Changing Your `$PATH` Temporarily](#13185-changing-your-path-temporarily)
-      - [1.3.18.6. Setting Your `$CDPATH`](#13186-setting-your-cdpath)
-      - [1.3.18.7. When Programs Are Not Found](#13187-when-programs-are-not-found)
-      - [1.3.18.8. Shortening or Changing Command Names](#13188-shortening-or-changing-command-names)
-      - [1.3.18.9. Adjusting Shell Behaviour \& Environment](#13189-adjusting-shell-behaviour--environment)
-      - [1.3.18.10. Adjusting `readline` Behaviour Using `.inputrc`](#131810-adjusting-readline-behaviour-using-inputrc)
-      - [1.3.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`](#131811-keeping-a-private-stash-of-utilities-by-adding-bin)
-      - [1.3.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`](#131812-using-secondary-prompts-ps2-ps3-ps4)
-      - [1.3.18.13. Synchronising Shell History Between Sessions](#131813-synchronising-shell-history-between-sessions)
-      - [1.3.18.14. Setting Shell History Options](#131814-setting-shell-history-options)
-      - [1.3.18.15. Creating a Better `cd` Command](#131815-creating-a-better-cd-command)
-      - [1.3.18.16. Creating \& Changing Into a New Directory in One Step](#131816-creating--changing-into-a-new-directory-in-one-step)
-      - [1.3.18.17. Getting to the Bottom of Things](#131817-getting-to-the-bottom-of-things)
-      - [1.3.18.18. Adding New Features to `bash` Using Loadable Built-ins](#131818-adding-new-features-to-bash-using-loadable-built-ins)
-      - [1.3.18.19. Improving Programmable Completion](#131819-improving-programmable-completion)
-      - [1.3.18.20. Using Initialisation Files Correctly](#131820-using-initialisation-files-correctly)
-      - [1.3.18.21. Creating Self-Contained, Portable `rc` Files](#131821-creating-self-contained-portable-rc-files)
-      - [1.3.18.22. Getting Started with a Custom Configuration](#131822-getting-started-with-a-custom-configuration)
-    - [1.3.19. Housekeeping \& Administrative Tasks](#1319-housekeeping--administrative-tasks)
-      - [1.3.19.1. Renaming Many Files](#13191-renaming-many-files)
-      - [1.3.19.2. Using GNU Texinfo \& `info` on Linux](#13192-using-gnu-texinfo--info-on-linux)
-      - [1.3.19.3. Unzipping Many ZIP Files](#13193-unzipping-many-zip-files)
-      - [1.3.19.4. Recovering Disconnected Sessions Using `screen`](#13194-recovering-disconnected-sessions-using-screen)
-      - [1.3.19.5. Sharing a Single `bash` Session](#13195-sharing-a-single-bash-session)
-      - [1.3.19.6. Logging an Entire Session or Batch Job](#13196-logging-an-entire-session-or-batch-job)
-      - [1.3.19.7. Clearing the Screen When You Log Out](#13197-clearing-the-screen-when-you-log-out)
-      - [1.3.19.8. Capturing File Metadata for Recovery](#13198-capturing-file-metadata-for-recovery)
-      - [1.3.19.9. Creating an Index of Many Files](#13199-creating-an-index-of-many-files)
-      - [1.3.19.10. Using `diff` \& `patch`](#131910-using-diff--patch)
-      - [1.3.19.11. Counting Differences in Files](#131911-counting-differences-in-files)
-      - [1.3.19.12. Removing or Renaming Files Named with Special Characters](#131912-removing-or-renaming-files-named-with-special-characters)
-      - [1.3.19.13. Prepending Data to a File](#131913-prepending-data-to-a-file)
-      - [1.3.19.14. Editing a File in Place](#131914-editing-a-file-in-place)
-      - [1.3.19.15. Using `sudo` on a Group of Commands](#131915-using-sudo-on-a-group-of-commands)
-      - [1.3.19.16. Finding Lines That Appear in One File but Not in Another](#131916-finding-lines-that-appear-in-one-file-but-not-in-another)
-      - [1.3.19.17. Keeping the Most Recent `N` Objects](#131917-keeping-the-most-recent-n-objects)
-      - [1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself](#131920-grepping-ps-output-without-also-getting-the-grep-process-itself)
-      - [1.3.19.21. Finding Out Whether a Process Is Running](#131921-finding-out-whether-a-process-is-running)
-      - [1.3.19.22. Adding a Prefix or Suffix to Output](#131922-adding-a-prefix-or-suffix-to-output)
-      - [1.3.19.23. Numbering Lines](#131923-numbering-lines)
-      - [1.3.19.24. Writing Sequences](#131924-writing-sequences)
-      - [1.3.19.25. Emulating the DOS Pause Command](#131925-emulating-the-dos-pause-command)
-      - [1.3.19.26. Commifying Numbers](#131926-commifying-numbers)
-    - [1.3.20. Working Faster by Typing Less](#1320-working-faster-by-typing-less)
-      - [1.3.20.1. Moving Quickly Among Arbitrary Directories](#13201-moving-quickly-among-arbitrary-directories)
-      - [1.3.20.2. Repeating the Last Command](#13202-repeating-the-last-command)
-    - [1.3.21. Tips \& Traps: Common Goofs for Novices](#1321-tips--traps-common-goofs-for-novices)
-      - [1.3.21.1. Forgetting to Set Execute Permissions](#13211-forgetting-to-set-execute-permissions)
-      - [1.3.21.2. Fixing `"No such file or directory"` Errors](#13212-fixing-no-such-file-or-directory-errors)
-      - [1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`](#13213-forgetting-that-the-current-directory-is-not-in-the-path)
-      - [1.3.21.12. Testing `bash` Script Syntax](#132112-testing-bash-script-syntax)
-      - [1.3.21.13. Debugging Scripts](#132113-debugging-scripts)
-      - [1.3.21.14. Avoid `"command not found"` When Using Functions](#132114-avoid-command-not-found-when-using-functions)
-      - [1.3.21.15. Confusing Shell Wildcards \& Regular Expressions](#132115-confusing-shell-wildcards--regular-expressions)
-  - [1.4. Clean Architecture](#14-clean-architecture)
-  - [1.5. Introducing GitHub](#15-introducing-github)
-  - [1.6. Practical Process Automation](#16-practical-process-automation)
-    - [1.6.4. Part III: Get Going](#164-part-iii-get-going)
-      - [1.6.4.1. The Journey to Introduce Process Automation](#1641-the-journey-to-introduce-process-automation)
-        - [1.6.4.1.1. Understanding the Adoption Journey](#16411-understanding-the-adoption-journey)
-          - [1.6.4.1.1.1. Failures You Want to Avoid](#164111-failures-you-want-to-avoid)
-          - [1.6.4.1.1.2. A Success Story](#164112-a-success-story)
-          - [1.6.4.1.1.3. The Pattern of Successful Adoption Journeys](#164113-the-pattern-of-successful-adoption-journeys)
-          - [1.6.4.1.1.4. Different Journeys for Different Scenarios](#164114-different-journeys-for-different-scenarios)
-        - [1.6.4.1.2. Starting Your Journey](#16412-starting-your-journey)
-          - [1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption](#164121-bottom-up-vs-top-down-adoption)
-          - [1.6.4.1.2.2. Proofs of Concepts](#164122-proofs-of-concepts)
-          - [1.6.4.1.2.3. Presenting the Business Case](#164123-presenting-the-business-case)
-          - [1.6.4.1.2.4. Don't Build Your Own Platform](#164124-dont-build-your-own-platform)
-          - [1.6.4.1.2.5. Dos and Don'ts Around Reuse](#164125-dos-and-donts-around-reuse)
-        - [1.6.4.1.3. From Project to Program: Scaling Adoption](#16413-from-project-to-program-scaling-adoption)
-          - [1.6.4.1.3.1. Perception Management: What Is Process Automation?](#164131-perception-management-what-is-process-automation)
-          - [1.6.4.1.3.2. Establishing a Centre of Excellence](#164132-establishing-a-centre-of-excellence)
-          - [1.6.4.1.3.3. Managing Architecture Decisions](#164133-managing-architecture-decisions)
-          - [1.6.4.1.3.4. Decentralised Workflow Tooling](#164134-decentralised-workflow-tooling)
-          - [1.6.4.1.3.5. Role \& Skill Development](#164135-role--skill-development)
-      - [1.6.4.2. Parting Words](#1642-parting-words)
-        - [1.6.4.2.1. Current Architecture Trends Influence Process Automation](#16421-current-architecture-trends-influence-process-automation)
-  - [1.7. Refactoring](#17-refactoring)
-  - [1.8. Software Architecture: The Hard Parts](#18-software-architecture-the-hard-parts)
-  - [1.9. The Art of Readable Code](#19-the-art-of-readable-code)
-  - [1.10. The Clean Coder](#110-the-clean-coder)
-  - [1.11. The Pragmatic Programmer](#111-the-pragmatic-programmer)
-    - [1.11.1. Preface to the Second Edition](#1111-preface-to-the-second-edition)
-      - [1.11.1.1. How the Book is Organised](#11111-how-the-book-is-organised)
-      - [1.11.1.2. What's In a Name?](#11112-whats-in-a-name)
-    - [1.11.2. From the Preface to the First Edition](#1112-from-the-preface-to-the-first-edition)
-      - [1.11.2.1. Who Should Read This Book?](#11121-who-should-read-this-book)
-      - [1.11.2.2. What Makes a Pragmatic Programmer?](#11122-what-makes-a-pragmatic-programmer)
-        - [1.11.2.2.1. Tip 1: Care About Your Craft](#111221-tip-1-care-about-your-craft)
-        - [1.11.2.2.2. Tip 2: Think! About Your Work](#111222-tip-2-think-about-your-work)
-      - [1.11.2.3. Individual Pragmatists, Large Teams](#11123-individual-pragmatists-large-teams)
-      - [1.11.2.4. It's a Continuous Process](#11124-its-a-continuous-process)
-    - [1.11.3. A Pragmatic Philosophy](#1113-a-pragmatic-philosophy)
-      - [1.11.3.1. It's Your Life](#11131-its-your-life)
-        - [1.11.3.1.1. Tip 3: You Have Agency](#111311-tip-3-you-have-agency)
-      - [1.11.3.2. The Cat Ate My Source Code](#11132-the-cat-ate-my-source-code)
-        - [1.11.3.2.1. Team Trust](#111321-team-trust)
-        - [1.11.3.2.2. Take Responsibility](#111322-take-responsibility)
-        - [1.11.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses](#111323-tip-4-provide-options-dont-make-lame-excuses)
-        - [1.11.3.2.4. Challenges (Take Responsibility)](#111324-challenges-take-responsibility)
-      - [1.11.3.3. Software Entropy](#11133-software-entropy)
-        - [1.11.3.3.1. Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
-        - [1.11.3.3.2. First, Do No Harm](#111332-first-do-no-harm)
-        - [1.11.3.3.3. Challenges (Software Entropy)](#111333-challenges-software-entropy)
-      - [1.11.3.4. Stone Soup \& Boiled Frogs](#11134-stone-soup--boiled-frogs)
-        - [1.11.3.4.1. Tip 6 Be a Catalyst for Change](#111341-tip-6-be-a-catalyst-for-change)
-      - [1.11.3.5. The Villager's Side](#11135-the-villagers-side)
-        - [1.11.3.5.1. Tip 7: Remember the Big Picture](#111351-tip-7-remember-the-big-picture)
-        - [1.11.3.5.2. Challenges (The Villager's Side)](#111352-challenges-the-villagers-side)
-      - [1.11.3.6. Good Enough Software](#11136-good-enough-software)
-        - [1.11.3.6.1. Involve Your Users in the Trade Off](#111361-involve-your-users-in-the-trade-off)
-        - [1.11.3.6.2. Tip 8: Make Quality a Requirements Issue](#111362-tip-8-make-quality-a-requirements-issue)
-        - [1.11.3.6.3. Know When to Stop](#111363-know-when-to-stop)
-        - [1.11.3.6.4. Challenges (Good Enough Software)](#111364-challenges-good-enough-software)
-      - [1.11.3.7. Your Knowledge Portfolio](#11137-your-knowledge-portfolio)
-        - [1.11.3.7.1. Building Your Portfolio](#111371-building-your-portfolio)
-        - [1.11.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio](#111372-tip-9-invest-regularly-in-your-knowledge-portfolio)
-        - [1.11.3.7.3. Opportunities for Learning](#111373-opportunities-for-learning)
-        - [1.11.3.7.4. Critical Thinking](#111374-critical-thinking)
-        - [1.11.3.7.5. Tip 10: Critically Analyse What You Read \& Hear](#111375-tip-10-critically-analyse-what-you-read--hear)
-        - [1.11.3.7.6. Challenges (Your Knowledge Portfolio)](#111376-challenges-your-knowledge-portfolio)
-      - [1.11.3.8. Communicate](#11138-communicate)
-        - [1.11.3.8.1. Tip 11: English is Just Another Language](#111381-tip-11-english-is-just-another-language)
-        - [1.11.3.8.2. Know Your Audience](#111382-know-your-audience)
-        - [1.11.3.8.3. Know What You Want to Say](#111383-know-what-you-want-to-say)
-        - [1.11.3.8.4. Choose Your Moment](#111384-choose-your-moment)
-        - [1.11.3.8.5. Choose a Style](#111385-choose-a-style)
-        - [1.11.3.8.6. Make it Look Good](#111386-make-it-look-good)
-        - [1.11.3.8.7. Involve Your Audience](#111387-involve-your-audience)
-        - [1.11.3.8.8. Be a Listener](#111388-be-a-listener)
-        - [1.11.3.8.9. Get Back to People](#111389-get-back-to-people)
-        - [1.11.3.8.10. Tip 12: It's Both What You Say and the Way You Say It](#1113810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
-        - [1.11.3.8.11. Communication Through Documentation](#1113811-communication-through-documentation)
-        - [1.11.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On](#1113812-tip-13-build-documentation-in-dont-bolt-it-on)
-        - [1.11.3.8.13. Challenges (Communicate)](#1113813-challenges-communicate)
-    - [1.11.4. A Pragmatic Approach](#1114-a-pragmatic-approach)
-      - [1.11.4.1. The Essence of Good Design](#11141-the-essence-of-good-design)
-        - [1.11.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design](#111411-tip-14-good-design-is-easier-to-change-than-bad-design)
-        - [1.11.4.1.2. ETC is a Value, Not a Rule](#111412-etc-is-a-value-not-a-rule)
-        - [1.11.4.1.3. Challenges (The Essence of Good Design)](#111413-challenges-the-essence-of-good-design)
-      - [1.11.4.2. DRY - The Evils of Duplication](#11142-dry---the-evils-of-duplication)
-        - [1.11.4.2.1. Tip 15: DRY - Don't Repeat Yourself](#111421-tip-15-dry---dont-repeat-yourself)
-        - [1.11.4.2.2. DRY is More Than Code](#111422-dry-is-more-than-code)
-        - [1.11.4.2.3. Duplication in Code](#111423-duplication-in-code)
-          - [1.11.4.2.3.1. Not All Code Duplication is Knowledge Duplication](#1114231-not-all-code-duplication-is-knowledge-duplication)
-        - [1.11.4.2.4. Duplication in Documentation](#111424-duplication-in-documentation)
-          - [1.11.4.2.4.1. DRY Violations in Data](#1114241-dry-violations-in-data)
-        - [1.11.4.2.5. Representational Duplication](#111425-representational-duplication)
-          - [1.11.4.2.5.1. Duplication Across Internal APIs](#1114251-duplication-across-internal-apis)
-          - [1.11.4.2.5.2. Duplication Across External APIs](#1114252-duplication-across-external-apis)
-          - [1.11.4.2.5.3. Duplication within Data Sources](#1114253-duplication-within-data-sources)
-        - [1.11.4.2.6. Interdeveloper Duplication](#111426-interdeveloper-duplication)
-        - [1.11.4.2.7. Tip 16: Make It Easy to Rescue](#111427-tip-16-make-it-easy-to-rescue)
-      - [1.11.4.3. Orthogonality](#11143-orthogonality)
-        - [1.11.4.3.1. What is Orthogonality?](#111431-what-is-orthogonality)
-        - [1.11.4.3.2. Benefits of Orthogonality](#111432-benefits-of-orthogonality)
-        - [1.11.4.3.3. Tip 17: Eliminate Effects Between Things](#111433-tip-17-eliminate-effects-between-things)
-          - [1.11.4.3.3.1. Gain Productivity](#1114331-gain-productivity)
-          - [1.11.4.3.3.2. Reduce Risk](#1114332-reduce-risk)
-        - [1.11.4.3.4. Design](#111434-design)
-        - [1.11.4.3.5. Toolkits \& Libraries](#111435-toolkits--libraries)
-        - [1.11.4.3.6. Coding](#111436-coding)
-        - [1.11.4.3.7. Testing](#111437-testing)
-        - [1.11.4.3.8. Orthogonality Through Documentation](#111438-orthogonality-through-documentation)
-        - [1.11.4.3.9. Living with Orthogonality](#111439-living-with-orthogonality)
-          - [1.11.4.3.9.1. Challenges (Living with Orthogonality)](#1114391-challenges-living-with-orthogonality)
-          - [1.11.4.3.9.2. Exercises (Living with Orthogonality)](#1114392-exercises-living-with-orthogonality)
-          - [1.11.4.3.9.3. Exercise 1](#1114393-exercise-1)
-      - [1.11.4.4. Reversibility](#11144-reversibility)
-        - [1.11.4.4.1. Tip 18: There Are No Final Decisions](#111441-tip-18-there-are-no-final-decisions)
-        - [1.11.4.4.2. Tip 19: Forego Following Fads](#111442-tip-19-forego-following-fads)
-        - [1.11.4.4.3. Challenges (Reversibility)](#111443-challenges-reversibility)
-  - [1.12. The Art of Readable Code](#112-the-art-of-readable-code)
-  - [1.13. `vi` and `vim` Editors](#113-vi-and-vim-editors)
+  - [1.2. 97 Things Every Application Security Professional Should Know](#12-97-things-every-application-security-professional-should-know)
+    - [1.2.1. Secure Code for Tomorrow's Technology](#121-secure-code-for-tomorrows-technology)
+    - [1.2.2. Pragmatic Advice for Building an Application Security Program](#122-pragmatic-advice-for-building-an-application-security-program)
+    - [1.2.3. Application Security Must Lead](#123-application-security-must-lead)
+    - [1.2.4. Solving Problems for Application Security](#124-solving-problems-for-application-security)
+    - [1.2.5. Automating the Risk Calculation of Modern Applications](#125-automating-the-risk-calculation-of-modern-applications)
+    - [1.2.6. Strategies for Adding Security Rituals to an Existing SDLC](#126-strategies-for-adding-security-rituals-to-an-existing-sdlc)
+    - [1.2.7. Application Security in the Cloud Era](#127-application-security-in-the-cloud-era)
+    - [1.2.8. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future](#128-rethinking-ethics-in-application-security-toward-a-sustainable-digital-future)
+    - [1.2.9. Exploring Application Security Through Static Analysis](#129-exploring-application-security-through-static-analysis)
+    - [1.2.10. Introduction to CI/CD Pipelines \& Associated Risks](#1210-introduction-to-cicd-pipelines--associated-risks)
+    - [1.2.11. EPSS: A Modern Approach to Vulnerability Management](#1211-epss-a-modern-approach-to-vulnerability-management)
+    - [1.2.12. Navigating the Waters of Vulnerability Management](#1212-navigating-the-waters-of-vulnerability-management)
+    - [1.2.13. Effective Vulnerability Remediation Using EPSS](#1213-effective-vulnerability-remediation-using-epss)
+    - [1.2.14. Supplier Relationship Management to Reduce Software Supply Chain Security Risk](#1214-supplier-relationship-management-to-reduce-software-supply-chain-security-risk)
+    - [1.2.15. SBOM: Transparent, Sustainable Compliance](#1215-sbom-transparent-sustainable-compliance)
+    - [1.2.16. Secure the Software Supply Chain Through Transparency](#1216-secure-the-software-supply-chain-through-transparency)
+    - [1.2.17. Unlock the Secrets to Open Source Software Security](#1217-unlock-the-secrets-to-open-source-software-security)
+    - [1.2.18. Leverage SBOMs to Enhance Your SSDLC](#1218-leverage-sboms-to-enhance-your-ssdlc)
+    - [1.2.19. Learn to Threat Model](#1219-learn-to-threat-model)
+    - [1.2.20. Understanding OWASP Insecure Design \& Unmaking Toxic Combinations](#1220-understanding-owasp-insecure-design--unmaking-toxic-combinations)
+    - [1.2.21. The Right Way to Threat Model](#1221-the-right-way-to-threat-model)
+    - [1.2.22. Attack Models in SSDLC](#1222-attack-models-in-ssdlc)
+    - [1.2.23. Automation, Automation, \& Automation for Application Security](#1223-automation-automation--automation-for-application-security)
+  - [1.3. Automate the Boring Stuff with Python: Practical Programming for Total Beginners](#13-automate-the-boring-stuff-with-python-practical-programming-for-total-beginners)
+  - [1.4. `bash` Cookbook](#14-bash-cookbook)
+    - [1.4.1. Preface](#141-preface)
+      - [1.4.1.1. Who Should Read This Book](#1411-who-should-read-this-book)
+      - [1.4.1.2. About This Book](#1412-about-this-book)
+        - [1.4.1.2.1. GNU Software](#14121-gnu-software)
+        - [1.4.1.2.2. A Note About Code Examples](#14122-a-note-about-code-examples)
+        - [1.4.1.2.3. Useless Use of `cat`](#14123-useless-use-of-cat)
+        - [1.4.1.2.4. A Note About Perl](#14124-a-note-about-perl)
+    - [1.4.2. Beginning `bash`](#142-beginning-bash)
+      - [1.4.2.1. Why `bash`?](#1421-why-bash)
+      - [1.4.2.2. The `bash` Shell](#1422-the-bash-shell)
+      - [1.4.2.3. Showing Where You Are](#1423-showing-where-you-are)
+      - [1.4.2.4. Finding \& Running Commands](#1424-finding--running-commands)
+      - [1.4.2.5. Getting Information About Files](#1425-getting-information-about-files)
+      - [1.4.2.6. Using Shell Quoting](#1426-using-shell-quoting)
+      - [1.4.2.7. Determining if You Are Running Interactively](#1427-determining-if-you-are-running-interactively)
+    - [1.4.3. Standard Output](#143-standard-output)
+      - [1.4.3.1. Writing Output to the Terminal/Window](#1431-writing-output-to-the-terminalwindow)
+      - [1.4.3.2. Writing Output but Preserving Space](#1432-writing-output-but-preserving-space)
+      - [1.4.3.3. Writing Output with More Formatting Control](#1433-writing-output-with-more-formatting-control)
+      - [1.4.3.4. Writing Output Without the New Line](#1434-writing-output-without-the-new-line)
+      - [1.4.3.5. Appending Rather than Clobbering Output](#1435-appending-rather-than-clobbering-output)
+      - [1.4.3.6. Using Just the Beginning of End of a File](#1436-using-just-the-beginning-of-end-of-a-file)
+      - [1.4.3.7. Throwing Output Away](#1437-throwing-output-away)
+      - [1.4.3.8. Saving or Grouping Output from Several Commands](#1438-saving-or-grouping-output-from-several-commands)
+      - [1.4.3.9. Connecting Two Programs by Using Output as Input](#1439-connecting-two-programs-by-using-output-as-input)
+      - [1.4.3.10. Saving a Copy of Output Even While Using It as Input](#14310-saving-a-copy-of-output-even-while-using-it-as-input)
+      - [1.4.3.11. Keeping Files Safe from Accidental Overwriting](#14311-keeping-files-safe-from-accidental-overwriting)
+      - [1.4.3.12. Clobbering a File on Purpose](#14312-clobbering-a-file-on-purpose)
+    - [1.4.4. Standard Input](#144-standard-input)
+      - [1.4.4.1. Getting Input from File](#1441-getting-input-from-file)
+      - [1.4.4.2. Keeping Your Data with Your Script](#1442-keeping-your-data-with-your-script)
+      - [1.4.4.3. Preventing Weird Behaviour in a Here-Document](#1443-preventing-weird-behaviour-in-a-here-document)
+      - [1.4.4.4. Indenting Here-Documents](#1444-indenting-here-documents)
+      - [1.4.4.5. Getting User Input](#1445-getting-user-input)
+      - [1.4.4.6. Getting a Yes or No Input](#1446-getting-a-yes-or-no-input)
+      - [1.4.4.7. Selecting from a List of Options](#1447-selecting-from-a-list-of-options)
+      - [1.4.4.8. Prompting for a Password](#1448-prompting-for-a-password)
+    - [1.4.5. Executing Commands](#145-executing-commands)
+      - [1.4.5.1. Running Any Executable](#1451-running-any-executable)
+      - [1.4.5.2. Running Several Commands in Sequence](#1452-running-several-commands-in-sequence)
+      - [1.4.5.3. Running Several Commands All at Once](#1453-running-several-commands-all-at-once)
+      - [1.4.5.4. Telling Whether a Command Succeeded or Not](#1454-telling-whether-a-command-succeeded-or-not)
+      - [1.4.5.5. Running a Command Only if Another Command Succeeded](#1455-running-a-command-only-if-another-command-succeeded)
+      - [1.4.5.6. Using Fewer `if` Statements](#1456-using-fewer-if-statements)
+      - [1.4.5.7. Running Long Jobs Unattended](#1457-running-long-jobs-unattended)
+      - [1.4.5.8. Displaying Error Messages When Failures Occur](#1458-displaying-error-messages-when-failures-occur)
+      - [1.4.5.9. Running Commands from a Variable](#1459-running-commands-from-a-variable)
+      - [1.4.5.10. Running All Scripts in a Directory](#14510-running-all-scripts-in-a-directory)
+    - [1.4.6. Basic Scripting: Shell Variables](#146-basic-scripting-shell-variables)
+      - [1.4.6.1. Embedding Documentation in Shell Scripts](#1461-embedding-documentation-in-shell-scripts)
+      - [1.4.6.2. Promoting Script Readability](#1462-promoting-script-readability)
+      - [1.4.6.3. Separating Variable Names from Surrounding Text](#1463-separating-variable-names-from-surrounding-text)
+      - [1.4.6.4. Exporting Variables](#1464-exporting-variables)
+      - [1.4.6.5. Seeing All Variable Values](#1465-seeing-all-variable-values)
+      - [1.4.6.6. Using Parameters in a Shell Script](#1466-using-parameters-in-a-shell-script)
+      - [1.4.6.7. Looping Over Arguments Passed to a Script](#1467-looping-over-arguments-passed-to-a-script)
+      - [1.4.6.8. Handling Parameters with Spaces](#1468-handling-parameters-with-spaces)
+      - [1.4.6.9. Handling Lists of Parameters with Spaces](#1469-handling-lists-of-parameters-with-spaces)
+      - [1.4.6.10. Counting Arguments](#14610-counting-arguments)
+      - [1.4.6.11. Consuming Arguments](#14611-consuming-arguments)
+      - [1.4.6.12. Getting Default Values](#14612-getting-default-values)
+      - [1.4.6.13. Setting Default Values](#14613-setting-default-values)
+      - [1.4.6.14. Using `null` as Valid Default Value](#14614-using-null-as-valid-default-value)
+      - [1.4.6.15. Using More than Just a Constant String for Default](#14615-using-more-than-just-a-constant-string-for-default)
+      - [1.4.6.16. Giving an Error Message for Unset Parameters](#14616-giving-an-error-message-for-unset-parameters)
+      - [1.4.6.17. Changing Pieces of a String](#14617-changing-pieces-of-a-string)
+      - [1.4.6.18. Getting the Absolute Value of a Number](#14618-getting-the-absolute-value-of-a-number)
+      - [1.4.6.19. Using `bash` for `basename`](#14619-using-bash-for-basename)
+      - [1.4.6.20. Using `bash` for `dirname`](#14620-using-bash-for-dirname)
+      - [1.4.6.21. Using Alternate Values for Comma-Separated Values](#14621-using-alternate-values-for-comma-separated-values)
+      - [1.4.6.22. Using Array Variables](#14622-using-array-variables)
+      - [1.4.6.23. Converting Between Upper- and Lower-case](#14623-converting-between-upper--and-lower-case)
+      - [1.4.6.24. Converting to Camel Case](#14624-converting-to-camel-case)
+    - [1.4.7. Shell Logic \& Arithmetic](#147-shell-logic--arithmetic)
+      - [1.4.7.1. Doing Arithmetic in Your Shell Script](#1471-doing-arithmetic-in-your-shell-script)
+      - [1.4.7.2. Branching on Conditions](#1472-branching-on-conditions)
+      - [1.4.7.3. Testing for File Characteristics](#1473-testing-for-file-characteristics)
+      - [1.4.7.4. Testing for More than One Thing](#1474-testing-for-more-than-one-thing)
+      - [1.4.7.5. Testing for String Characteristics](#1475-testing-for-string-characteristics)
+      - [1.4.7.6. Testing for Equality](#1476-testing-for-equality)
+    - [1.4.8. Testing with Pattern Matches](#148-testing-with-pattern-matches)
+      - [1.4.8.1. Testing with Regular Expressions](#1481-testing-with-regular-expressions)
+      - [1.4.8.2. Looping for a While](#1482-looping-for-a-while)
+      - [1.4.8.3. Looping with a `read`](#1483-looping-with-a-read)
+      - [1.4.8.4. Looping with a Count](#1484-looping-with-a-count)
+      - [1.4.8.5. Looping with Floating-Point Values](#1485-looping-with-floating-point-values)
+      - [1.4.8.6. Branching Many Ways](#1486-branching-many-ways)
+      - [1.4.8.7. Parsing Command-Line Arguments](#1487-parsing-command-line-arguments)
+      - [1.4.8.8. Creating Simple Menus](#1488-creating-simple-menus)
+      - [1.4.8.9. Changing the Prompt on Simple Menus](#1489-changing-the-prompt-on-simple-menus)
+    - [1.4.9. Intermediate Shell Tools I](#149-intermediate-shell-tools-i)
+      - [1.4.9.1. Sifting Through Files for a String](#1491-sifting-through-files-for-a-string)
+      - [1.4.9.2. Getting Just the Filename from a Search](#1492-getting-just-the-filename-from-a-search)
+      - [1.4.9.3. Getting a Simple True/False from a Search](#1493-getting-a-simple-truefalse-from-a-search)
+      - [1.4.9.4. Doing a Search in a Pipeline](#1494-doing-a-search-in-a-pipeline)
+      - [1.4.9.5. Grepping Compressed Files](#1495-grepping-compressed-files)
+      - [1.4.9.6. Keeping Some Output, Discarding the Rest](#1496-keeping-some-output-discarding-the-rest)
+      - [1.4.9.7. Keeping Only a Portion of a Line of Output](#1497-keeping-only-a-portion-of-a-line-of-output)
+      - [1.4.9.8. Reversing the Words on Each Line](#1498-reversing-the-words-on-each-line)
+      - [1.4.9.9. Summing a List of Numbers](#1499-summing-a-list-of-numbers)
+      - [1.4.9.10. Counting String Values with `awk`](#14910-counting-string-values-with-awk)
+      - [1.4.9.11. Counting String Values with `bash`](#14911-counting-string-values-with-bash)
+      - [1.4.9.12. Showing Data as a Quick and Easy Histogram](#14912-showing-data-as-a-quick-and-easy-histogram)
+      - [1.4.9.13. An Easy Histogram with `bash`](#14913-an-easy-histogram-with-bash)
+      - [1.4.9.14. Showing a Paragraph of Text After a Found Phrase](#14914-showing-a-paragraph-of-text-after-a-found-phrase)
+    - [1.4.10. Intermediate Shell Tools II](#1410-intermediate-shell-tools-ii)
+      - [1.4.10.1. Sorting Your Output](#14101-sorting-your-output)
+      - [1.4.10.2. Sorting Numbers](#14102-sorting-numbers)
+      - [1.4.10.3. Sorting IP Addresses](#14103-sorting-ip-addresses)
+      - [1.4.10.4. Cutting Out Parts of Your Output](#14104-cutting-out-parts-of-your-output)
+      - [1.4.10.5. Removing Duplicate Lines](#14105-removing-duplicate-lines)
+      - [1.4.10.6. Compressing Files](#14106-compressing-files)
+      - [1.4.10.7. Uncompressing Files](#14107-uncompressing-files)
+      - [1.4.10.8. Checking a `tar` Archive for Unique Directories](#14108-checking-a-tar-archive-for-unique-directories)
+      - [1.4.10.9. Translating Characters](#14109-translating-characters)
+      - [1.4.10.10. Converting Upper-case to Lower-case](#141010-converting-upper-case-to-lower-case)
+      - [1.4.10.11. Converting DOS Files to Linux Format](#141011-converting-dos-files-to-linux-format)
+      - [1.4.10.12. Removing Smart Quotes](#141012-removing-smart-quotes)
+      - [1.4.10.13. Counting Lines, Words, or Characters in a File](#141013-counting-lines-words-or-characters-in-a-file)
+      - [1.4.10.14. Rewrapping Paragraphs](#141014-rewrapping-paragraphs)
+      - [1.4.10.15. Doing More with `less`](#141015-doing-more-with-less)
+    - [1.4.11. Finding Files: `find`, `locate`, `slocate`](#1411-finding-files-find-locate-slocate)
+      - [1.4.11.1. Finding All Your MP3 Files](#14111-finding-all-your-mp3-files)
+      - [1.4.11.2. Handling Filenames Containing Odd Characters](#14112-handling-filenames-containing-odd-characters)
+      - [1.4.11.3. Finding Files Across Symbolic Links](#14113-finding-files-across-symbolic-links)
+      - [1.4.11.4. Finding Files Irrespective of Case](#14114-finding-files-irrespective-of-case)
+      - [1.4.11.5. Finding Files by Date](#14115-finding-files-by-date)
+      - [1.4.11.6. Finding Files by Type](#14116-finding-files-by-type)
+      - [1.4.11.7. Finding File by Size](#14117-finding-file-by-size)
+      - [1.4.11.8. Finding Files by Content](#14118-finding-files-by-content)
+      - [1.4.11.9. Finding Existing Files \& Content Fast](#14119-finding-existing-files--content-fast)
+      - [1.4.11.10. Finding a File Using a List of Possible Locations](#141110-finding-a-file-using-a-list-of-possible-locations)
+    - [1.4.12. Additional Features for Scripting](#1412-additional-features-for-scripting)
+      - [1.4.12.1. "Daemon-ising" Your Script](#14121-daemon-ising-your-script)
+      - [1.4.12.2. Reusing Code with Includes \& Sourcing](#14122-reusing-code-with-includes--sourcing)
+      - [1.4.12.3. Using Configuration Files in a Script](#14123-using-configuration-files-in-a-script)
+      - [1.4.12.4. Defining Functions](#14124-defining-functions)
+      - [1.4.12.5. Using Functions: Parameters \& Return Values](#14125-using-functions-parameters--return-values)
+      - [1.4.12.6. Trapping Interrupts](#14126-trapping-interrupts)
+      - [1.4.12.7. Redefining Commands with `alias`](#14127-redefining-commands-with-alias)
+      - [1.4.12.8. Avoiding Aliases \& Functions](#14128-avoiding-aliases--functions)
+      - [1.4.12.9. Counted Elapsed Time](#14129-counted-elapsed-time)
+      - [1.4.12.10. Writing Wrappers](#141210-writing-wrappers)
+    - [1.4.13. Working with Dates \& Times](#1413-working-with-dates--times)
+      - [1.4.13.1. Formatting Dates for Display](#14131-formatting-dates-for-display)
+      - [1.4.13.2. Supplying a Default Date](#14132-supplying-a-default-date)
+      - [1.4.13.3. Automating Date Ranges](#14133-automating-date-ranges)
+      - [1.4.13.4. Converting Dates \& Times to Epoch Seconds](#14134-converting-dates--times-to-epoch-seconds)
+      - [1.4.13.5. Converting Epoch Seconds to Dates \& Times](#14135-converting-epoch-seconds-to-dates--times)
+      - [1.4.13.6. Getting Yesterday or Tomorrow with Perl](#14136-getting-yesterday-or-tomorrow-with-perl)
+      - [1.4.13.7. Figuring Out Date \& Time Arithmetic](#14137-figuring-out-date--time-arithmetic)
+      - [1.4.13.8. Handling Time Zones, Daylight Saving Time, \& Leap Years](#14138-handling-time-zones-daylight-saving-time--leap-years)
+      - [1.4.13.9. Using `date` \& `cron` to Run a Script on the Nth Day](#14139-using-date--cron-to-run-a-script-on-the-nth-day)
+      - [1.4.13.10. Logging with Dates](#141310-logging-with-dates)
+    - [1.4.14. End-User Tasks as Shell Scripts](#1414-end-user-tasks-as-shell-scripts)
+      - [1.4.14.1. Starting Simple by Printing Dashes](#14141-starting-simple-by-printing-dashes)
+      - [1.4.14.2. Viewing Photos in an Album](#14142-viewing-photos-in-an-album)
+      - [1.4.14.3. Loading Your MP3 Player](#14143-loading-your-mp3-player)
+      - [1.4.14.4. Burning a CD](#14144-burning-a-cd)
+      - [1.4.14.5. Comparing Two Documents](#14145-comparing-two-documents)
+    - [1.4.15. Parsing \& Similar Tasks](#1415-parsing--similar-tasks)
+      - [1.4.15.1. Parsing Arguments for Your Shell Script](#14151-parsing-arguments-for-your-shell-script)
+      - [1.4.15.2. Parsing Arguments with Your Own Error Messages](#14152-parsing-arguments-with-your-own-error-messages)
+      - [1.4.15.3. Parsing Some HTML](#14153-parsing-some-html)
+      - [1.4.15.4. Parsing Output into an Array](#14154-parsing-output-into-an-array)
+      - [1.4.15.5. Parsing Output with a Function Call](#14155-parsing-output-with-a-function-call)
+      - [1.4.15.6. Parsing Text with a `read` Statement](#14156-parsing-text-with-a-read-statement)
+      - [1.4.15.7. Parsing with `read` into an Array](#14157-parsing-with-read-into-an-array)
+      - [1.4.15.8. Reading an Entire File](#14158-reading-an-entire-file)
+      - [1.4.15.9. Getting Your Plurals Right](#14159-getting-your-plurals-right)
+      - [1.4.15.10. Taking It One Character at a Time](#141510-taking-it-one-character-at-a-time)
+      - [1.4.15.11. Cleaning Up an SVN Source Tree](#141511-cleaning-up-an-svn-source-tree)
+      - [1.4.15.12. Setting Up a Database with MySQL](#141512-setting-up-a-database-with-mysql)
+      - [1.4.15.13. Isolating Specific Fields in Data](#141513-isolating-specific-fields-in-data)
+      - [1.4.15.14. Updating Specific Fields in Data Files](#141514-updating-specific-fields-in-data-files)
+      - [1.4.15.15. Trimming Whitespace](#141515-trimming-whitespace)
+      - [1.4.15.16. Compressing Whitespace](#141516-compressing-whitespace)
+      - [1.4.15.17. Processing Fixed-Length Records](#141517-processing-fixed-length-records)
+      - [1.4.15.18. Processing Files with No Line Breaks](#141518-processing-files-with-no-line-breaks)
+      - [1.4.15.19. Converting a Data File to CSV](#141519-converting-a-data-file-to-csv)
+      - [1.4.15.20. Parsing a CSV Data File](#141520-parsing-a-csv-data-file)
+    - [1.4.16. Writing Secure Shell Scripts](#1416-writing-secure-shell-scripts)
+      - [1.4.16.1. Avoiding Common Security Problems](#14161-avoiding-common-security-problems)
+      - [1.4.16.2. Avoiding Interpreter Spoofing](#14162-avoiding-interpreter-spoofing)
+      - [1.4.16.3. Setting a Secure `$PATH`](#14163-setting-a-secure-path)
+      - [1.4.16.4. Clearing All Aliases](#14164-clearing-all-aliases)
+      - [1.4.16.5. Clearing the Command Hash](#14165-clearing-the-command-hash)
+      - [1.4.16.6. Preventing Core Dumps](#14166-preventing-core-dumps)
+      - [1.4.16.7. Setting a Secure `$IFS`](#14167-setting-a-secure-ifs)
+      - [1.4.16.8. Setting a Secure `umask`](#14168-setting-a-secure-umask)
+      - [1.4.16.9. Finding World-Writeable Directories in Your `$PATH`](#14169-finding-world-writeable-directories-in-your-path)
+      - [1.4.16.10. Adding the Current Directory to the `$PATH`](#141610-adding-the-current-directory-to-the-path)
+      - [1.4.16.11. Using Secure Temporary Files](#141611-using-secure-temporary-files)
+      - [1.4.16.12. Validating Input](#141612-validating-input)
+      - [1.4.16.13. Setting Permissions](#141613-setting-permissions)
+      - [1.4.16.14. Leaking Passwords into the Process List](#141614-leaking-passwords-into-the-process-list)
+      - [1.4.16.15. Writing `setuid` or `setgid` Scripts](#141615-writing-setuid-or-setgid-scripts)
+      - [1.4.16.16. Restricting Guest Users](#141616-restricting-guest-users)
+      - [1.4.16.17. Using `chroot` Jails](#141617-using-chroot-jails)
+      - [1.4.16.18. Running as Non-root User](#141618-running-as-non-root-user)
+      - [1.4.16.19. Using `sudo` More Securely](#141619-using-sudo-more-securely)
+      - [1.4.16.20. Using Passwords in Scripts](#141620-using-passwords-in-scripts)
+      - [1.4.16.21. Using SSH Without a Password](#141621-using-ssh-without-a-password)
+      - [1.4.16.22. Restricting SSH Commands](#141622-restricting-ssh-commands)
+    - [1.4.17. Disconnecting Inactive Sessions](#1417-disconnecting-inactive-sessions)
+      - [1.4.17.1. Advanced Scripting](#14171-advanced-scripting)
+      - [1.4.17.2. Finding `bash` Portable for `#!`](#14172-finding-bash-portable-for-)
+      - [1.4.17.3. Setting a POSIX `$PATH`](#14173-setting-a-posix-path)
+      - [1.4.17.4. Developing Portable Shell Scripts](#14174-developing-portable-shell-scripts)
+      - [1.4.17.5. Testing Scripts Using Virtual Machines](#14175-testing-scripts-using-virtual-machines)
+      - [1.4.17.6. Using `for` Loops Portably](#14176-using-for-loops-portably)
+      - [1.4.17.7. Using `echo` Portably](#14177-using-echo-portably)
+      - [1.4.17.8. Splitting Output Only When Necessary](#14178-splitting-output-only-when-necessary)
+      - [1.4.17.9. Viewing Output in Hex](#14179-viewing-output-in-hex)
+      - [1.4.17.10. Using `bash` Net-Redirection](#141710-using-bash-net-redirection)
+      - [1.4.17.11. Finding My IP Address](#141711-finding-my-ip-address)
+      - [1.4.17.12. Getting Input from Another Machine](#141712-getting-input-from-another-machine)
+      - [1.4.17.13. Redirecting Output for the Life of a Script](#141713-redirecting-output-for-the-life-of-a-script)
+      - [1.4.17.14. Working Around `"Argument list too long"` Errors](#141714-working-around-argument-list-too-long-errors)
+      - [1.4.17.15. Logging to `syslog` from Your Script](#141715-logging-to-syslog-from-your-script)
+      - [1.4.17.16. Using `logger` Correctly](#141716-using-logger-correctly)
+      - [1.4.17.17. Sending Email from Your Script](#141717-sending-email-from-your-script)
+      - [1.4.17.18. Automating a Process Using Phases](#141718-automating-a-process-using-phases)
+      - [1.4.17.19. Doing Two Things at Once](#141719-doing-two-things-at-once)
+      - [1.4.17.20. Running an SSH Command on Multiple Hosts](#141720-running-an-ssh-command-on-multiple-hosts)
+    - [1.4.18. Configuring \& Customising `bash`](#1418-configuring--customising-bash)
+      - [1.4.18.1. `bash` Startup Options](#14181-bash-startup-options)
+      - [1.4.18.2. Customising Your Prompt](#14182-customising-your-prompt)
+      - [1.4.18.3. A Prompt Before Your Program Runs](#14183-a-prompt-before-your-program-runs)
+      - [1.4.18.4. Changing Your `$PATH` Permanently](#14184-changing-your-path-permanently)
+      - [1.4.18.5. Changing Your `$PATH` Temporarily](#14185-changing-your-path-temporarily)
+      - [1.4.18.6. Setting Your `$CDPATH`](#14186-setting-your-cdpath)
+      - [1.4.18.7. When Programs Are Not Found](#14187-when-programs-are-not-found)
+      - [1.4.18.8. Shortening or Changing Command Names](#14188-shortening-or-changing-command-names)
+      - [1.4.18.9. Adjusting Shell Behaviour \& Environment](#14189-adjusting-shell-behaviour--environment)
+      - [1.4.18.10. Adjusting `readline` Behaviour Using `.inputrc`](#141810-adjusting-readline-behaviour-using-inputrc)
+      - [1.4.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`](#141811-keeping-a-private-stash-of-utilities-by-adding-bin)
+      - [1.4.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`](#141812-using-secondary-prompts-ps2-ps3-ps4)
+      - [1.4.18.13. Synchronising Shell History Between Sessions](#141813-synchronising-shell-history-between-sessions)
+      - [1.4.18.14. Setting Shell History Options](#141814-setting-shell-history-options)
+      - [1.4.18.15. Creating a Better `cd` Command](#141815-creating-a-better-cd-command)
+      - [1.4.18.16. Creating \& Changing Into a New Directory in One Step](#141816-creating--changing-into-a-new-directory-in-one-step)
+      - [1.4.18.17. Getting to the Bottom of Things](#141817-getting-to-the-bottom-of-things)
+      - [1.4.18.18. Adding New Features to `bash` Using Loadable Built-ins](#141818-adding-new-features-to-bash-using-loadable-built-ins)
+      - [1.4.18.19. Improving Programmable Completion](#141819-improving-programmable-completion)
+      - [1.4.18.20. Using Initialisation Files Correctly](#141820-using-initialisation-files-correctly)
+      - [1.4.18.21. Creating Self-Contained, Portable `rc` Files](#141821-creating-self-contained-portable-rc-files)
+      - [1.4.18.22. Getting Started with a Custom Configuration](#141822-getting-started-with-a-custom-configuration)
+    - [1.4.19. Housekeeping \& Administrative Tasks](#1419-housekeeping--administrative-tasks)
+      - [1.4.19.1. Renaming Many Files](#14191-renaming-many-files)
+      - [1.4.19.2. Using GNU Texinfo \& `info` on Linux](#14192-using-gnu-texinfo--info-on-linux)
+      - [1.4.19.3. Unzipping Many ZIP Files](#14193-unzipping-many-zip-files)
+      - [1.4.19.4. Recovering Disconnected Sessions Using `screen`](#14194-recovering-disconnected-sessions-using-screen)
+      - [1.4.19.5. Sharing a Single `bash` Session](#14195-sharing-a-single-bash-session)
+      - [1.4.19.6. Logging an Entire Session or Batch Job](#14196-logging-an-entire-session-or-batch-job)
+      - [1.4.19.7. Clearing the Screen When You Log Out](#14197-clearing-the-screen-when-you-log-out)
+      - [1.4.19.8. Capturing File Metadata for Recovery](#14198-capturing-file-metadata-for-recovery)
+      - [1.4.19.9. Creating an Index of Many Files](#14199-creating-an-index-of-many-files)
+      - [1.4.19.10. Using `diff` \& `patch`](#141910-using-diff--patch)
+      - [1.4.19.11. Counting Differences in Files](#141911-counting-differences-in-files)
+      - [1.4.19.12. Removing or Renaming Files Named with Special Characters](#141912-removing-or-renaming-files-named-with-special-characters)
+      - [1.4.19.13. Prepending Data to a File](#141913-prepending-data-to-a-file)
+      - [1.4.19.14. Editing a File in Place](#141914-editing-a-file-in-place)
+      - [1.4.19.15. Using `sudo` on a Group of Commands](#141915-using-sudo-on-a-group-of-commands)
+      - [1.4.19.16. Finding Lines That Appear in One File but Not in Another](#141916-finding-lines-that-appear-in-one-file-but-not-in-another)
+      - [1.4.19.17. Keeping the Most Recent `N` Objects](#141917-keeping-the-most-recent-n-objects)
+      - [1.4.19.18. Grepping `ps` Output Without Also Getting the `grep` Process Itself](#141918-grepping-ps-output-without-also-getting-the-grep-process-itself)
+      - [1.4.19.19. Finding Out Whether a Process Is Running](#141919-finding-out-whether-a-process-is-running)
+      - [1.4.19.20. Adding a Prefix or Suffix to Output](#141920-adding-a-prefix-or-suffix-to-output)
+      - [1.4.19.21. Numbering Lines](#141921-numbering-lines)
+      - [1.4.19.22. Writing Sequences](#141922-writing-sequences)
+      - [1.4.19.23. Emulating the DOS Pause Command](#141923-emulating-the-dos-pause-command)
+      - [1.4.19.24. Commifying Numbers](#141924-commifying-numbers)
+    - [1.4.20. Working Faster by Typing Less](#1420-working-faster-by-typing-less)
+      - [1.4.20.1. Moving Quickly Among Arbitrary Directories](#14201-moving-quickly-among-arbitrary-directories)
+      - [1.4.20.2. Repeating the Last Command](#14202-repeating-the-last-command)
+    - [1.4.21. Tips \& Traps: Common Goofs for Novices](#1421-tips--traps-common-goofs-for-novices)
+      - [1.4.21.1. Forgetting to Set Execute Permissions](#14211-forgetting-to-set-execute-permissions)
+      - [1.4.21.2. Fixing `"No such file or directory"` Errors](#14212-fixing-no-such-file-or-directory-errors)
+      - [1.4.21.3. Forgetting That the Current Directory Is Not In The `$PATH`](#14213-forgetting-that-the-current-directory-is-not-in-the-path)
+      - [1.4.21.4. Testing `bash` Script Syntax](#14214-testing-bash-script-syntax)
+      - [1.4.21.5. Debugging Scripts](#14215-debugging-scripts)
+      - [1.4.21.6. Avoid `"command not found"` When Using Functions](#14216-avoid-command-not-found-when-using-functions)
+      - [1.4.21.7. Confusing Shell Wildcards \& Regular Expressions](#14217-confusing-shell-wildcards--regular-expressions)
+  - [1.5. Clean Architecture](#15-clean-architecture)
+  - [1.6. Introducing GitHub](#16-introducing-github)
+  - [1.7. Practical Process Automation](#17-practical-process-automation)
+    - [1.7.1. Part III: Get Going](#171-part-iii-get-going)
+      - [1.7.1.1. The Journey to Introduce Process Automation](#1711-the-journey-to-introduce-process-automation)
+        - [1.7.1.1.1. Understanding the Adoption Journey](#17111-understanding-the-adoption-journey)
+          - [1.7.1.1.1.1. Failures You Want to Avoid](#171111-failures-you-want-to-avoid)
+          - [1.7.1.1.1.2. A Success Story](#171112-a-success-story)
+          - [1.7.1.1.1.3. The Pattern of Successful Adoption Journeys](#171113-the-pattern-of-successful-adoption-journeys)
+          - [1.7.1.1.1.4. Different Journeys for Different Scenarios](#171114-different-journeys-for-different-scenarios)
+        - [1.7.1.1.2. Starting Your Journey](#17112-starting-your-journey)
+          - [1.7.1.1.2.1. Bottom-Up vs Top-Down Adoption](#171121-bottom-up-vs-top-down-adoption)
+          - [1.7.1.1.2.2. Proofs of Concepts](#171122-proofs-of-concepts)
+          - [1.7.1.1.2.3. Presenting the Business Case](#171123-presenting-the-business-case)
+          - [1.7.1.1.2.4. Don't Build Your Own Platform](#171124-dont-build-your-own-platform)
+          - [1.7.1.1.2.5. Dos and Don'ts Around Reuse](#171125-dos-and-donts-around-reuse)
+        - [1.7.1.1.3. From Project to Program: Scaling Adoption](#17113-from-project-to-program-scaling-adoption)
+          - [1.7.1.1.3.1. Perception Management: What Is Process Automation?](#171131-perception-management-what-is-process-automation)
+          - [1.7.1.1.3.2. Establishing a Centre of Excellence](#171132-establishing-a-centre-of-excellence)
+          - [1.7.1.1.3.3. Managing Architecture Decisions](#171133-managing-architecture-decisions)
+          - [1.7.1.1.3.4. Decentralised Workflow Tooling](#171134-decentralised-workflow-tooling)
+          - [1.7.1.1.3.5. Role \& Skill Development](#171135-role--skill-development)
+      - [1.7.1.2. Parting Words](#1712-parting-words)
+        - [1.7.1.2.1. Current Architecture Trends Influence Process Automation](#17121-current-architecture-trends-influence-process-automation)
+  - [1.8. Refactoring](#18-refactoring)
+  - [1.9. Software Architecture: The Hard Parts](#19-software-architecture-the-hard-parts)
+  - [1.10. The Art of Readable Code](#110-the-art-of-readable-code)
+  - [1.11. The Clean Coder](#111-the-clean-coder)
+  - [1.12. The Pragmatic Programmer](#112-the-pragmatic-programmer)
+    - [1.12.1. Preface to the Second Edition](#1121-preface-to-the-second-edition)
+      - [1.12.1.1. How the Book is Organised](#11211-how-the-book-is-organised)
+      - [1.12.1.2. What's In a Name?](#11212-whats-in-a-name)
+    - [1.12.2. From the Preface to the First Edition](#1122-from-the-preface-to-the-first-edition)
+      - [1.12.2.1. Who Should Read This Book?](#11221-who-should-read-this-book)
+      - [1.12.2.2. What Makes a Pragmatic Programmer?](#11222-what-makes-a-pragmatic-programmer)
+        - [1.12.2.2.1. Tip 1: Care About Your Craft](#112221-tip-1-care-about-your-craft)
+        - [1.12.2.2.2. Tip 2: Think! About Your Work](#112222-tip-2-think-about-your-work)
+      - [1.12.2.3. Individual Pragmatists, Large Teams](#11223-individual-pragmatists-large-teams)
+      - [1.12.2.4. It's a Continuous Process](#11224-its-a-continuous-process)
+    - [1.12.3. A Pragmatic Philosophy](#1123-a-pragmatic-philosophy)
+      - [1.12.3.1. It's Your Life](#11231-its-your-life)
+        - [1.12.3.1.1. Tip 3: You Have Agency](#112311-tip-3-you-have-agency)
+      - [1.12.3.2. The Cat Ate My Source Code](#11232-the-cat-ate-my-source-code)
+        - [1.12.3.2.1. Team Trust](#112321-team-trust)
+        - [1.12.3.2.2. Take Responsibility](#112322-take-responsibility)
+        - [1.12.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses](#112323-tip-4-provide-options-dont-make-lame-excuses)
+        - [1.12.3.2.4. Challenges (Take Responsibility)](#112324-challenges-take-responsibility)
+      - [1.12.3.3. Software Entropy](#11233-software-entropy)
+        - [1.12.3.3.1. Tip 5: Don't Live with Broken Windows](#112331-tip-5-dont-live-with-broken-windows)
+        - [1.12.3.3.2. First, Do No Harm](#112332-first-do-no-harm)
+        - [1.12.3.3.3. Challenges (Software Entropy)](#112333-challenges-software-entropy)
+      - [1.12.3.4. Stone Soup \& Boiled Frogs](#11234-stone-soup--boiled-frogs)
+        - [1.12.3.4.1. Tip 6 Be a Catalyst for Change](#112341-tip-6-be-a-catalyst-for-change)
+      - [1.12.3.5. The Villager's Side](#11235-the-villagers-side)
+        - [1.12.3.5.1. Tip 7: Remember the Big Picture](#112351-tip-7-remember-the-big-picture)
+        - [1.12.3.5.2. Challenges (The Villager's Side)](#112352-challenges-the-villagers-side)
+      - [1.12.3.6. Good Enough Software](#11236-good-enough-software)
+        - [1.12.3.6.1. Involve Your Users in the Trade Off](#112361-involve-your-users-in-the-trade-off)
+        - [1.12.3.6.2. Tip 8: Make Quality a Requirements Issue](#112362-tip-8-make-quality-a-requirements-issue)
+        - [1.12.3.6.3. Know When to Stop](#112363-know-when-to-stop)
+        - [1.12.3.6.4. Challenges (Good Enough Software)](#112364-challenges-good-enough-software)
+      - [1.12.3.7. Your Knowledge Portfolio](#11237-your-knowledge-portfolio)
+        - [1.12.3.7.1. Building Your Portfolio](#112371-building-your-portfolio)
+        - [1.12.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio](#112372-tip-9-invest-regularly-in-your-knowledge-portfolio)
+        - [1.12.3.7.3. Opportunities for Learning](#112373-opportunities-for-learning)
+        - [1.12.3.7.4. Critical Thinking](#112374-critical-thinking)
+        - [1.12.3.7.5. Tip 10: Critically Analyse What You Read \& Hear](#112375-tip-10-critically-analyse-what-you-read--hear)
+        - [1.12.3.7.6. Challenges (Your Knowledge Portfolio)](#112376-challenges-your-knowledge-portfolio)
+      - [1.12.3.8. Communicate](#11238-communicate)
+        - [1.12.3.8.1. Tip 11: English is Just Another Language](#112381-tip-11-english-is-just-another-language)
+        - [1.12.3.8.2. Know Your Audience](#112382-know-your-audience)
+        - [1.12.3.8.3. Know What You Want to Say](#112383-know-what-you-want-to-say)
+        - [1.12.3.8.4. Choose Your Moment](#112384-choose-your-moment)
+        - [1.12.3.8.5. Choose a Style](#112385-choose-a-style)
+        - [1.12.3.8.6. Make it Look Good](#112386-make-it-look-good)
+        - [1.12.3.8.7. Involve Your Audience](#112387-involve-your-audience)
+        - [1.12.3.8.8. Be a Listener](#112388-be-a-listener)
+        - [1.12.3.8.9. Get Back to People](#112389-get-back-to-people)
+        - [1.12.3.8.10. Tip 12: It's Both What You Say and the Way You Say It](#1123810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
+        - [1.12.3.8.11. Communication Through Documentation](#1123811-communication-through-documentation)
+        - [1.12.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On](#1123812-tip-13-build-documentation-in-dont-bolt-it-on)
+        - [1.12.3.8.13. Challenges (Communicate)](#1123813-challenges-communicate)
+    - [1.12.4. A Pragmatic Approach](#1124-a-pragmatic-approach)
+      - [1.12.4.1. The Essence of Good Design](#11241-the-essence-of-good-design)
+        - [1.12.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design](#112411-tip-14-good-design-is-easier-to-change-than-bad-design)
+        - [1.12.4.1.2. ETC is a Value, Not a Rule](#112412-etc-is-a-value-not-a-rule)
+        - [1.12.4.1.3. Challenges (The Essence of Good Design)](#112413-challenges-the-essence-of-good-design)
+      - [1.12.4.2. DRY - The Evils of Duplication](#11242-dry---the-evils-of-duplication)
+        - [1.12.4.2.1. Tip 15: DRY - Don't Repeat Yourself](#112421-tip-15-dry---dont-repeat-yourself)
+        - [1.12.4.2.2. DRY is More Than Code](#112422-dry-is-more-than-code)
+        - [1.12.4.2.3. Duplication in Code](#112423-duplication-in-code)
+          - [1.12.4.2.3.1. Not All Code Duplication is Knowledge Duplication](#1124231-not-all-code-duplication-is-knowledge-duplication)
+        - [1.12.4.2.4. Duplication in Documentation](#112424-duplication-in-documentation)
+          - [1.12.4.2.4.1. DRY Violations in Data](#1124241-dry-violations-in-data)
+        - [1.12.4.2.5. Representational Duplication](#112425-representational-duplication)
+          - [1.12.4.2.5.1. Duplication Across Internal APIs](#1124251-duplication-across-internal-apis)
+          - [1.12.4.2.5.2. Duplication Across External APIs](#1124252-duplication-across-external-apis)
+          - [1.12.4.2.5.3. Duplication within Data Sources](#1124253-duplication-within-data-sources)
+        - [1.12.4.2.6. Interdeveloper Duplication](#112426-interdeveloper-duplication)
+        - [1.12.4.2.7. Tip 16: Make It Easy to Rescue](#112427-tip-16-make-it-easy-to-rescue)
+      - [1.12.4.3. Orthogonality](#11243-orthogonality)
+        - [1.12.4.3.1. What is Orthogonality?](#112431-what-is-orthogonality)
+        - [1.12.4.3.2. Benefits of Orthogonality](#112432-benefits-of-orthogonality)
+        - [1.12.4.3.3. Tip 17: Eliminate Effects Between Things](#112433-tip-17-eliminate-effects-between-things)
+          - [1.12.4.3.3.1. Gain Productivity](#1124331-gain-productivity)
+          - [1.12.4.3.3.2. Reduce Risk](#1124332-reduce-risk)
+        - [1.12.4.3.4. Design](#112434-design)
+        - [1.12.4.3.5. Toolkits \& Libraries](#112435-toolkits--libraries)
+        - [1.12.4.3.6. Coding](#112436-coding)
+        - [1.12.4.3.7. Testing](#112437-testing)
+        - [1.12.4.3.8. Orthogonality Through Documentation](#112438-orthogonality-through-documentation)
+        - [1.12.4.3.9. Living with Orthogonality](#112439-living-with-orthogonality)
+          - [1.12.4.3.9.1. Challenges (Living with Orthogonality)](#1124391-challenges-living-with-orthogonality)
+          - [1.12.4.3.9.2. Exercises (Living with Orthogonality)](#1124392-exercises-living-with-orthogonality)
+          - [1.12.4.3.9.3. Exercise 1](#1124393-exercise-1)
+      - [1.12.4.4. Reversibility](#11244-reversibility)
+        - [1.12.4.4.1. Tip 18: There Are No Final Decisions](#112441-tip-18-there-are-no-final-decisions)
+        - [1.12.4.4.2. Tip 19: Forego Following Fads](#112442-tip-19-forego-following-fads)
+        - [1.12.4.4.3. Challenges (Reversibility)](#112443-challenges-reversibility)
+  - [1.13. The Art of Readable Code](#113-the-art-of-readable-code)
+  - [1.14. `vi` and `vim` Editors](#114-vi-and-vim-editors)
 - [2. Cheat Sheets](#2-cheat-sheets)
   - [2.1. Command Line Tools Overview](#21-command-line-tools-overview)
   - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
@@ -3382,7 +3405,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 </details>
 
-## 97 Things Every Application Security Professional Should Know
+## 1.2. 97 Things Every Application Security Professional Should Know
 
 - Cybersecurity, or information security, has always been a very broad and comprehensive field and has been a
   fast-evolving area for the past 10–20 years. Within, there are many domains, such as risk management, security
@@ -3667,1481 +3690,1609 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### Secure Code for Tomorrow's Technology
+### 1.2.1. Secure Code for Tomorrow's Technology
 
 - The software we build today has the potential to power critical systems for years to come. To ensure the longevity
   and security of tomorrow's technology, developers must adopt a security-focused mindset and consider security as
   part of the quality of the code. Writing secure code requires meticulous attention to detail.
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 - The following is a checklist of fundamental principles and important items to keep in mind:
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
   - **Start by Learning Secure Coding Standards**:
 
     - Many common vulnerabilities result from a lack of awareness. Familiarise yourself with leading authorities such
       as the Open Web Application Security Project (OWASP)
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Study guidelines for your specific language and frameworks.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Understand basic security principles like least privilege, defence in depth, and security by default.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Reference these standards early when designing applications to build in security from the start.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Adopt a Secure Development Life Cycle**:
 
     - Integrate security practices into all phases of development, from conception to deployment.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Conduct threat modelling to identify risks.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Define abuse cases.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Perform static analysis security testing to catch issues in code.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Run dynamic analysis to test for vulnerabilities in running applications.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Automate processes such as policy compliance checks, dependency upgrades, and credential rotation to reduce
       mistakes.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Use Frameworks Carefully**:
 
     - While frameworks boost productivity, they also introduce risks.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Keep frameworks up to date to avoid known vulnerabilities.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Properly configure frameworks and disable unnecessary features.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Extend frameworks securely rather than overwriting insecure defaults.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Continuously monitor for vulnerabilities in all dependencies.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Lock down functionality to what your application actually requires
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Never Trust Inputs**:
 
     - Validate and sanitise all data entering your application, including from files, databases, third-party APIs, and
       internal services.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Practice zero trust by assuming all inputs are malicious until validated otherwise.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Limit exposure through compartmentalisation and minimisation.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Escape outputs properly to prevent injection attacks.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Sign and encrypt sensitive data end to end and at rest.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Promote a Culture of Security**:
 
     - Advocate for secure coding as a team effort, not just the developer's job.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Instil a sense of shared accountability through training, mentoring, incentives, and leading by example.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Make security reviews a regular part of the development process.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Empower all team members to call out potential issues.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Automate policy enforcement where possible.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Foster Developer Empathy**:
 
     - Understand that developers are often under-trained in security and over-burdened with competing priorities under
       tight deadlines.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Help them succeed by providing useful security libraries, user-friendly tools, and clear guidance baked into the
       software development lifecycle.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Prioritise Appropriately**:
 
     - Focus first on security issues that pose the most significant risks based on your threat model and business
       context.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Eliminate entire classes of vulnerabilities where possible.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Build basic security capabilities before adding advanced features.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Take a Long View**:
 
     - Consider how software architecture and design decisions today could impact security far into the future.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Seek designs that are adaptable, resilient, and sustainable as both technologies and threats evolve.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
   - **Stay Current**:
 
     - Monitor emerging threats, revisit past assumptions, and keep your skills sharp through ongoing education.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Contribute to open source security projects.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Learn from peers.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
-  - **Teach Other What You Know**:
+  - **Teach Others What You Know**:
 
     - Share your security knowledge with teammates through mentoring, code reviews, and organisational training.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
     - Write for publications and speak at events.
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+        oreilly-97-things-every-application-security-professional-should-know]
 
 - Writing secure code requires knowledge, skill, and vigilance. By embracing these disciplines now, you can safeguard
   against tomorrow's breaches.
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Pragmatic Advice for Building an Application Security Program
+### 1.2.2. Pragmatic Advice for Building an Application Security Program
+
+- The goal of application security is to positively influence the relevant software engineering culture and
+  stakeholders to willingly participate. A shift left approach, for instance, should become a mutually desired business
+  enabler.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- The first step of a successful application security program is to set up common goals and gain alignment from the
+  engineering side. Getting the buy-in among all stakeholders in the development process on how the security team is
+  trying to achieve the common goals while enabling them to produce software becomes the key.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Focus on solving problems and building solutions, not implementing products. The goal is to positively impact an
+  entire ecosystem from the left and right. On the left, there is the secure software development life-cycle (SSDLC).
+  On the right, there are architectural components and other initiatives that range from systems thinking to active
+  protection.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Take every opportunity to show how some security initiatives can be seamless.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Security leaders set strategies and create programs, but more importantly, but more importantly, advice the
+  organisations on risks and risk mitigation.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.3. Application Security Must Lead
+
+- Someone has to lead and take responsibility and accountability, especially for application security. Leaders are
+  those who take responsibility and put themselves forward as accountable for the impacts and consequences, not just of
+  their own action but the results of collective effort. Leadership may not be about holding decision-making power.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Leadership is manifested by never sweeping security problems under the rug. By fostering a drive to find security
+  problems and then seek solutions, even in the face of resistance. Leadership is shown by helping others that struggle
+  with challenges and by sharing what we know so that security skills radiate throughout a development organisation.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- A security leader can't expect others to take security seriously unless the leader unceasingly drives toward
+  improving security, knowledge, and standards. Leaders demonstrate their care through what they do and what they
+  prioritise.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.4. Solving Problems for Application Security
+
+- Fundamentally, application security is about designing, building and maintaining secure software. Good software helps
+  organisations, and bad software hurts organisations. The following are the four main categories of application
+  security:
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Governance**:
+
+    - There are several high-level factors to consider when developing an application security program, such as
+      compliance and regulatory requirements, contractual relationships with other organisations, and a solid
+      understanding of what you're supposed to be securing in the first place.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - It's also important to define metrics up front so the program's success can be measured and demonstrated over
+      time.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Finding Security Problems**:
+
+    - There are many ways to find security problems at different points in any software development life cycle, whether
+      an organisation follows waterfall, Agile, or DevOps methodology.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - Security testing types include threat modelling, code review, and penetration testing. A combination of manual
+      and automated security testing is likely to result in the most efficient and effective identification of true
+      positive security vulnerabilities in software applications.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Fixing Security Problems**:
+
+    - Fixing security issues is not just a technical problem; people and processes are also required to get it done.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - Once security testing has been performed in order to find as many true positive issues as possible, the next step
+      is to engage with the teams that can actually fix the issues.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - Fixing security issues requires effective communication, coordination, and integration with development teams and
+      processes.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - Security teams must recognise that develops are focused on building new features and meeting deadlines and have
+      limited bandwidth to remediate security issues. It is certainly not possible to fix all the security issues at
+      once. They must be prioritised in the context of business values and goals and addressed over time. Security
+      teams should get involved in the development process and look for areas of common interest. They should ask
+      questions about how development teams work and how much time they have to realistically spend on fixing security
+      issues.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Preventing Security Problems**:
+
+    - The people who build software must understand why vulnerable code is insecure.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - The way in which development and operations teams interact are changing and security must keep pace. Security
+      teams working effectively with DevOps teams, processes, and tools are absolutely critical to getting application
+      security done right. Security teams sometimes place heavy emphasis on finding issues, without enough focus on
+      engaging with the development teams and building the cross-functional relationships that are actually required to
+      get security issues fixes.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Securing Your Enterprise Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Application Security Must Lead
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--->
-
-<!-- ### Solving Problems for Application Security
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Securing Your Enterprise Applications
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Developers as Partners in Application Security Strategy
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Be an Awesome Sidekick
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Understanding the True Boundaries of Modern Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Common Best Practices in Application Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### App Security is a People Problem - Not a Technical One
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Empowering Application Security Professionals Through Cybersecurity Education
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Why You Need a Practical Security Champions Program
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### The Human Firewall: Combat Enemies by Improving Your Security-Oriented Culture
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Shifting Everywhere in Application Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Beyond Barriers: Navigating the Path to a Successful Application Security Program
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Building an Application Security Preparation Mindset
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### How to Assess Security Mindset in Application Design
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Getting Your Application Read for the Enterprise
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Reductio Ad Applicationem Securitatis
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] !-->
 
-### Automating the Risk Calculation of Modern Applications
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.5. Automating the Risk Calculation of Modern Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### A Coordinated Approach to a Successful DevSevOps Program
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- **Design & Business Context**:
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Technology Implementation & Operations**:
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Maturity of Team & Process**:
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  -
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### A Coordinated Approach to a Successful DevSevOps Program
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### What makes Someone a Developer?
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Total AppSec
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### You're More Than Your Job
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### TAP Into the Potential of a Great SSDLC Program with Automation
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Vulnerability Researcher to Software Developer: The Other Side of the Coin
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Strategies for Adding Security Rituals to an Existing SDLC
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.6. Strategies for Adding Security Rituals to an Existing SDLC
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Challenges & Considerations for Securing Serverless Applications
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Challenges & Considerations for Securing Serverless Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Using Offensive Security to Defend Your Application
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Beyond "No": The Modern Paradigm of Developer-Centric Application Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Security Paved Roads
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Application Security in the Cloud Era
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.7. Application Security in the Cloud Era
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Code Provenance for DevSevOps
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Code Provenance for DevSevOps
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Will Passwordless Authentication Save Your Application?
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Securing Your Databases: The Importance of Proper Access Controls & Audits
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### DataSecOps: Security in Data Products
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Data Security Code & Tests
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Data Security Starts with Good Governance
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Protect Sensitive Data in Modern Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Leverage Data-Flow Analysis in Your Security Practices
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Embracing a Practical Privacy Paradigm Shift in Application Development
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Quantum-Safe Encryption Algorithms
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Application Integration Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### WAF & RASP
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Zero Trust Software Architecture
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.8. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Modern WAF Deployment & Management Paradigms
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Modern WAF Deployment & Management Paradigms
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Do You Need Manual Penetration Testing>?
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### Do You Need Manual Penetration Testing?
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Bash Your Head
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Exploring Application Security Through Static Analysis
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.9. Exploring Application Security Through Static Analysis
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Introduction to CI/CD Pipelines & Associated Risks
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.10. Introduction to CI/CD Pipelines & Associated Risks
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Demystifying Bug Bounty Programs
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Demystifying Bug Bounty Programs
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### EPSS: A Modern Approach to Vulnerability Management
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
+
+### 1.2.11. EPSS: A Modern Approach to Vulnerability Management
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Navigating the Waters of Vulnerability Management
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.12. Navigating the Waters of Vulnerability Management
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Unveiling Paths to Account Takeover: Web Cache to XSS Exploitation
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Sometimes the Smallest Risks Can Cause the Greatest Destruction
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Effective Vulnerability Remediation Using EPSS
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.13. Effective Vulnerability Remediation Using EPSS
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Bug Bounty - Shift Everywhere
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Bug Bounty - Shift Everywhere
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Integrating Security into Open Source Dependencies
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Supplier Relationship Management to Reduce Software Supply Chain Security Risk
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.14. Supplier Relationship Management to Reduce Software Supply Chain Security Risk
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### SBOM: Transparent, Sustainable Compliance
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
+
+### 1.2.15. SBOM: Transparent, Sustainable Compliance
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Secure the Software Supply Chain Through Transparency
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.16. Secure the Software Supply Chain Through Transparency
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Unlock the Secrets to Open Source Software Security
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.17. Unlock the Secrets to Open Source Software Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Leverage SBOMs to Enhance Your SSDLC
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.18. Leverage SBOMs to Enhance Your SSDLC
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Learn to Threat Model
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.19. Learn to Threat Model
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Understanding OWASP Insecure Design & Unmaking Toxic Combinations
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.20. Understanding OWASP Insecure Design & Unmaking Toxic Combinations
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### The Right Way to Threat Model
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.21. The Right Way to Threat Model
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Attack Models in SSDLC
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.22. Attack Models in SSDLC
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### In Denial of Your Services
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### In Denial of Your Services
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Mobile Security: Domain & Best Practices
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Mobile Application Security Using Containerisation
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security: JWE Encryption for Native Data Protection
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### APIs are Windows to the Soul
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security: The Bedrock of Modern Applications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security Primer: Visibility
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security Primer: Risk Assessment, Monitoring, & Detection
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security Primer: Control & Management
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### LLMs Revolutionising Application Security: Unleashing the Power of AI
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Mitigating Bias & Unfairness in AI-Based Application
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Secure Development with Generative AI
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Managing the Risks of ChatGPT Integration
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
-### Automation, Automation, & Automation for Application Security
-
--
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+### 1.2.23. Automation, Automation, & Automation for Application Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
-
-### Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Understand the Risks of Using AI in Application Security
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Secure Code for Embedded Systems
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Platform Security for Embedded Systems
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Application Identity for Embedded Systems
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Top Five Hacking Methods for IoT Devices
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Securing IoT APplications
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 ### Application Security in Cyber-Physical Systems
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
 
 -
- [O'Reilly: 97 Things Every Application Security Professional Should Know][
-  oreilly-97-things-every-application-security-professional-should-know]
--->
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
 </details>
 
-## 1.2. Automate the Boring Stuff with Python: Practical Programming for Total Beginners
+## 1.3. Automate the Boring Stuff with Python: Practical Programming for Total Beginners
 
 <details open>
 
@@ -10647,17 +10798,17 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 -
   [Automate the Boring Stuff with Python: Practical Programming for Total Beginners, 2nd Edition][
-    automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2nd-edition]
- -->
+    automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2nd-edition] -->
+
 </details>
 
-## 1.3. `bash` Cookbook
+## 1.4. `bash` Cookbook
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.3.1. Preface
+### 1.4.1. Preface
 
 - Every modern operating system has at least one shell, and some have many. Some shells are command line–oriented, such
   as the shell discussed in this book. Others are graphical, like Windows Explorer or the Macintosh Finder.
@@ -10671,7 +10822,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   only smart choice.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.1.1. Who Should Read This Book
+#### 1.4.1.1. Who Should Read This Book
 
 - This book is for anyone who uses a Unix or Linux system, as well as system administrators who may use several systems
   on any given day. With it, you will be able to create scripts that allow you to accomplish more, in less time, more
@@ -10701,7 +10852,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   particularly dealing with installing bash, where root access will be needed.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.1.2. About This Book
+#### 1.4.1.2. About This Book
 
 - This book covers `bash`, the GNU Bourne Again Shell, which is a member of the family of shells that includes the
   original Bourne shell, `sh`, the Korn shell, ksh, and the public domain Korn shell, pdksh. While these and other
@@ -10715,14 +10866,14 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   context of the shell script as the glue that holds the pieces together to achieve the goal.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-##### 1.3.1.2.1. GNU Software
+##### 1.4.1.2.1. GNU Software
 
 - `bash` and many of the other tools discussed in this book are part of the GNU Project. GNU is a recursive acronym for
   "GNU's Not Unix," and the project dates back to 1984. Its goal is to develop a free (as in freedom) Unix-like
   operating system.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-##### 1.3.1.2.2. A Note About Code Examples
+##### 1.4.1.2.2. A Note About Code Examples
 
 - Examples with a dollar symbol at the start of a line indicates it is a `bash` shell prompt. Each line is a user
   input. The prompt is printed by the shell; you type the remainder of the line. Similarly, the last line in such an
@@ -10733,7 +10884,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 - The hash sign is used as a comment as well as indicating being logged in as root.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-##### 1.3.1.2.3. Useless Use of `cat`
+##### 1.4.1.2.3. Useless Use of `cat`
 
 - The following is a useless use of `cat`:
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -10759,7 +10910,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   it doesn't add any additional code bloat or complexity to scripts.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-##### 1.3.1.2.4. A Note About Perl
+##### 1.4.1.2.4. A Note About Perl
 
 - Perl is seldom used in the book, although there a few cases where it makes sense for code examples.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -10776,7 +10927,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   always get the work done; the choice of tools is secondary.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.2. Beginning `bash`
+### 1.4.2. Beginning `bash`
 
 - The Unix operating system popularised the notion of separating the shell (the part of the system that lets you type
   commands) from everything else: the input/output system, the scheduler, memory management, and all of the other
@@ -10800,7 +10951,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   you're using) is a great place to start.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.1. Why `bash`?
+#### 1.4.2.1. Why `bash`?
 
 - `bash` is everywhere. It may not be the newest, and it's arguably not the fanciest or the most powerful (though if
   not, it comes close), nor is it the only shell that's distributed as open source software - but it is ubiquitous.
@@ -10821,13 +10972,13 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   `bash`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.2. The `bash` Shell
+#### 1.4.2.2. The `bash` Shell
 
 - `bash` is a shell: a command interpreter. The main purpose of `bash` (or of any shell) is to allow you to interact
   with the computer's operating system so that you can accomplish whatever you need to do.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.3. Showing Where You Are
+#### 1.4.2.3. Showing Where You Are
 
 - `pwd` stands for print working directory and takes two options. `--logical` displays your logical path and is the
   default. `--physical` displays your physical location, which may differ from your logical path if you have followed a
@@ -10845,7 +10996,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   /tmp/dir1
   ```
 
-#### 1.3.2.4. Finding & Running Commands
+#### 1.4.2.4. Finding & Running Commands
 
 - Try the `type`, `which`, `apropos`, `locate`, `slocate`, `find`, and `ls` commands when you need to find and run a
   particular command under `bash`.
@@ -10898,13 +11049,13 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   current working directory is usually not in your $PATH for security reasons.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.5. Getting Information About Files
+#### 1.4.2.5. Getting Information About Files
 
 - Use the `ls`, `stat`, `file`, or `find` commands to get more information about a file, such as what it is, who owns
   it, if it's executable, how many hard links it has, or when it was last accessed or changed.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.6. Using Shell Quoting
+#### 1.4.2.6. Using Shell Quoting
 
 - Enclose a string in single quotes unless it contains elements that you want the shell to interpolate. Unquoted text
   and even text enclosed in double quotes is subject to shell expansion and substitution.
@@ -10915,7 +11066,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   by escaping a single quote outside of surrounding single quotes.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.2.7. Determining if You Are Running Interactively
+#### 1.4.2.7. Determining if You Are Running Interactively
 
 - Use the `case` statement if you have some code you want to run only if you are (or are not) running interactively.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -10943,7 +11094,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   fi
   ```
 
-### 1.3.3. Standard Output
+### 1.4.3. Standard Output
 
 - No software is worth anything if there is no output of some sort, but I/O has long been one of the nastier areas of
   computing.
@@ -10967,7 +11118,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   do_something < input_file > output_file
   ```
 
-#### 1.3.3.1. Writing Output to the Terminal/Window
+#### 1.4.3.1. Writing Output to the Terminal/Window
 
 - The `echo` command parses all the arguments on the `echo` command line. The shell is parsing the arguments on the
   `echo` command line (like it does for every other command line). This means that it does all its substitutions,
@@ -10983,7 +11134,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 - Normally the fact that the shell is very forgiving about whitespace between arguments is a helpful feature.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.2. Writing Output but Preserving Space
+#### 1.4.3.2. Writing Output but Preserving Space
 
 - Enclosing the string in quotes as a parameter for the `echo` command will help preserve spacing.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11003,7 +11154,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   none in the example, the shell has nothing to change. When in doubt, use the single quotes.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.3. Writing Output with More Formatting Control
+#### 1.4.3.3. Writing Output with More Formatting Control
 
 - Use the `printf` builtin command when you want more control over the formatting and placement of output.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11037,7 +11188,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     Gigahertz = 1.93
   ```
 
-#### 1.3.3.4. Writing Output Without the New Line
+#### 1.4.3.4. Writing Output Without the New Line
 
 - Exclude the `\n` when using `printf` to produce an output without the default new line:
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11060,7 +11211,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   `printf` will be used for many examples throughout this book.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.5. Appending Rather than Clobbering Output
+#### 1.4.3.5. Appending Rather than Clobbering Output
 
 - The double greater-than sign (`>>`) is a `bash` redirector that means append the output:
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11084,13 +11235,13 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   (`>>`) to indicate appending to, rather than replacing the contents of, the output file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.6. Using Just the Beginning of End of a File
+#### 1.4.3.6. Using Just the Beginning of End of a File
 
 - Use the `head` or `tail` command when you need to display just the beginning or end of a file. By default, `head`
   will output the first 10 lines and `tail` will output the last 10 lines of the given file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.7. Throwing Output Away
+#### 1.4.3.7. Throwing Output Away
 
 - Sometimes you don't want to save the output into a file; in fact, sometimes you don't even want to see it at all.
   Unix and Linux systems have a special device that isn't real hardware at all, just a bit bucket where we can dump
@@ -11104,7 +11255,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   example_command > /dev/null 2>&1
   ```
 
-#### 1.3.3.8. Saving or Grouping Output from Several Commands
+#### 1.4.3.8. Saving or Grouping Output from Several Commands
 
 - You want to capture the output with a redirect, but you're typing several commands on one line. The final redirect
   applies only to the last command, the last ls on that line. All the other output appears on the screen (i.e., does
@@ -11145,7 +11296,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   both approaches result in the same output, they leave you in very different places.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.9. Connecting Two Programs by Using Output as Input
+#### 1.4.3.9. Connecting Two Programs by Using Output as Input
 
 - Using the pipe symbol means we don't have to invent a temporary filename, remember it, and remember to delete it.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11154,7 +11305,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   a few times when the implications of this are important.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.10. Saving a Copy of Output Even While Using It as Input
+#### 1.4.3.10. Saving a Copy of Output Even While Using It as Input
 
 - Using the `tee` command to split the output into two identical streams, one that is written to a file and the other
   that is written to standard output.
@@ -11173,7 +11324,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   find / -name '*.c' -print 2>&1 | tee /tmp/all.my.sources
   ```
 
-#### 1.3.3.11. Keeping Files Safe from Accidental Overwriting
+#### 1.4.3.11. Keeping Files Safe from Accidental Overwriting
 
 - The `noclobber` option tells bash not to overwrite any existing files when you redirect output. If the file to which
   you redirect output doesn't (yet) exist, everything works as normal, with bash creating the file as it opens it for
@@ -11205,7 +11356,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   other file manipulating actions of other programs from clobbering files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.3.12. Clobbering a File on Purpose
+#### 1.4.3.12. Clobbering a File on Purpose
 
 - Use `>|` to redirect your output. Even if noclobber is set, bash ignores its setting and overwrites the file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11229,13 +11380,13 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   bash: my.file: cannot overwrite existing file
   ```
 
-### 1.3.4. Standard Input
+### 1.4.4. Standard Input
 
 - Whether it is data for a program to crunch, or simple commands to direct the behaviour of a script, input is as
   fundamental as output.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.4.1. Getting Input from File
+#### 1.4.4.1. Getting Input from File
 
 - Use input redirection, indicated by the `<` character, to read data from a file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11244,7 +11395,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   wc < my.file
   ```
 
-#### 1.3.4.2. Keeping Your Data with Your Script
+#### 1.4.4.2. Keeping Your Data with Your Script
 
 - In the case of needing input to your script, but don't want a separate file, use a here-document with the `<<`
   characters, redirecting the text from the command line than from a file.
@@ -11277,7 +11428,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   $
   ```
 
-#### 1.3.4.3. Preventing Weird Behaviour in a Here-Document
+#### 1.4.4.3. Preventing Weird Behaviour in a Here-Document
 
 - Your here-document is behaving weirdly. You wanted to maintain a simple list of
 donors using the method described previously for phone numbers, so you created a
@@ -11353,7 +11504,7 @@ file called donors that looked like this:
   `EOF`. Be sure there are no extra characters (especially spaces or tabs) after the `EOF`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.4.4. Indenting Here-Documents
+#### 1.4.4.4. Indenting Here-Documents
 
 - Use `<<-`, and then you can use tab characters (only tab characters) at the beginning of lines to indent this portion
   of your shell script.
@@ -11383,7 +11534,7 @@ file called donors that looked like this:
   spaces.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.4.5. Getting User Input
+#### 1.4.4.5. Getting User Input
 
 - Use the read statement to get input from the user.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11407,7 +11558,7 @@ file called donors that looked like this:
   list.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.4.6. Getting a Yes or No Input
+#### 1.4.4.6. Getting a Yes or No Input
 
 - You need to get a simple yes or no input from the user, and you want to be as user-friendly as possible. In
   particular, you do not want to be case-sensitive, and you want to provide a useful default if the user presses the
@@ -11493,7 +11644,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.4.7. Selecting from a List of Options
+#### 1.4.4.7. Selecting from a List of Options
 
 - You need to provide the user with a list of options to choose from and you don't want to make them type any more than
   necessary. Use `bash`'s builtin `select` construct to generate a menu, then have the user choose by typing the number
@@ -11533,7 +11684,7 @@ file called donors that looked like this:
   specified in the `select` construct.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.4.8. Prompting for a Password
+#### 1.4.4.8. Prompting for a Password
 
 - Use the `read` command to read the user's input, but with a special option to turn off echoing.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -11554,14 +11705,14 @@ file called donors that looked like this:
   handle the situation accordingly.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.5. Executing Commands
+### 1.4.5. Executing Commands
 
 - The main purpose of `bash` (or of any shell) is to allow you to interact with the computer's operating system so that
   you can accomplish whatever you need to do. Usually that involves launching programs, so the shell takes the commands
   you type, determines from that input what programs need to be run, and launches them for you.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.1. Running Any Executable
+#### 1.4.5.1. Running Any Executable
 
 - Use `bash` and type the name of the command at the user input prompt when you need to run a command on a Linux or
   Unix system. This is simple on a surface level, but there are a lot of steps going on behind the scenes. The basic
@@ -11611,7 +11762,7 @@ file called donors that looked like this:
   have your own customised favourites without the security risk of running commands from strangers.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.2. Running Several Commands in Sequence
+#### 1.4.5.2. Running Several Commands in Sequence
 
 - There are two solutions to running several commands before manually inputting the next command after a successful
   execution of the previous command.
@@ -11648,7 +11799,7 @@ file called donors that looked like this:
     long && medium && short
     ```
 
-#### 1.3.5.3. Running Several Commands All at Once
+#### 1.4.5.3. Running Several Commands All at Once
 
 - You can run a command in the background by putting an ampersand at the end of the command line. Thus, you could
   fire off three commands in rapid succession.
@@ -11689,7 +11840,7 @@ file called donors that looked like this:
   the background. This is essentially adding a trailing `&` after the fact.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.4. Telling Whether a Command Succeeded or Not
+#### 1.4.5.4. Telling Whether a Command Succeeded or Not
 
 - The shell variable `$?` is set with a non-zero value if the command fails - provided the programmer who wrote that
   command or shell script followed the established convention.
@@ -11778,7 +11929,7 @@ file called donors that looked like this:
   56
   ```
 
-#### 1.3.5.5. Running a Command Only if Another Command Succeeded
+#### 1.4.5.5. Running a Command Only if Another Command Succeeded
 
 - You need to run some commands, but you only want to run certain commands if certain other ones succeed. You can use
   the exit status (`$?`) of the first command in combination with an `if` statement to do the subsequent command only
@@ -11795,7 +11946,7 @@ file called donors that looked like this:
   want as your result.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.6. Using Fewer `if` Statements
+#### 1.4.5.6. Using Fewer `if` Statements
 
 - If you want to be thorough about your error checking, but don't want `if` statements all over the place in a script,
   you can have `bash` exit any time it encounters a failure (i.e., a non‐zero exit status) from every command in your
@@ -11814,7 +11965,7 @@ file called donors that looked like this:
   interactive shell, however, because when the shell exits it will make your shell window go away.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.7. Running Long Jobs Unattended
+#### 1.4.5.7. Running Long Jobs Unattended
 
 - If you want to run a job in the background and expect to exit the shell before the job
   completes, then you need to `nohup` the job.
@@ -11828,9 +11979,9 @@ file called donors that looked like this:
   ```
 
 - When you put a job in the background (via the &, as described in
-  [1.3.5.3. Running Several Command All at Once](#1353-running-several-commands-all-at-once)), it is still a child
-  process of the `bash` shell. When you exit an instance of the shell, bash sends a hangup (`hup`) signal to all of its
-  child processes.
+  [Running Several Command All at Once](#1453-running-several-commands-all-at-once)), it is still a child process of
+  the `bash` shell. When you exit an instance of the shell, bash sends a hangup (`hup`) signal to all of its child
+  processes.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - The `nohup` command simply sets up the child process to ignore hangup signals. You can still kill the job with the
@@ -11843,7 +11994,7 @@ file called donors that looked like this:
   `nohup` is smart enough to detect that this has happened and not use `nohup.out` for your output.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.8. Displaying Error Messages When Failures Occur
+#### 1.4.5.8. Displaying Error Messages When Failures Occur
 
 - A common idiom among some shell programmers is to use the `||` with commands to spit out debug or error messages,
   saving the necessity to write too many `if` statements.
@@ -11853,11 +12004,11 @@ file called donors that looked like this:
   cmd || printf "%b" "cmd failed. You're on your own\n"
   ```
 
-- Similar to how the `&&` in [1.3.5.6. Using Fewer `if` Statements](#1356-using-fewer-if-statements) tells `bash` not
-  to bother to evaluate the second expression if the first one is false, the `||` tells the shell not to bother to
-  evaluate the second expression if the first one is true (i.e., succeeds). Only if the first expression returns a
-  non-zero value (i.e., if the exit value of the command indicates failure) must it evaluate the second part, and thus
-  run the other command.
+- Similar to how the `&&` in [Using Fewer `if` Statements](#1456-using-fewer-if-statements) tells `bash` not to bother
+  to evaluate the second expression if the first one is false, the `||` tells the shell not to bother to evaluate the
+  second expression if the first one is true (i.e., succeeds). Only if the first expression returns a non-zero value
+  (i.e., if the exit value of the command indicates failure) must it evaluate the second part, and thus run the other
+  command.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - The exit will be executed in either case in the following example.
@@ -11875,7 +12026,7 @@ file called donors that looked like this:
   cmd || { printf "%b" "FAILED.\n" ; exit 1 ; }
   ```
 
-#### 1.3.5.9. Running Commands from a Variable
+#### 1.4.5.9. Running Commands from a Variable
 
 - You want to run different commands in your script depending on circumstances, you can assign the program name to a
   variable (`$PROG` in the following example) , and then when the variable is referred to where a command name would be
@@ -11899,7 +12050,7 @@ file called donors that looked like this:
 - Be careful about the variable names you use, ensuring the variable names are not used by other programs.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.5.10. Running All Scripts in a Directory
+#### 1.4.5.10. Running All Scripts in a Directory
 
 - If you want to run a series of scripts, but the list keeps changing; you're always adding new scripts, but you don't
   want to continuously modify a master list, put the scripts you want to run in a directory, and let `bash` run
@@ -11921,7 +12072,7 @@ file called donors that looked like this:
   your personal needs, but wouldn't be considered robust; some might consider it downright dangerous.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.6. Basic Scripting: Shell Variables
+### 1.4.6. Basic Scripting: Shell Variables
 
 - `bash` shell programming is a lot like any kind of programming, and that includes having variables - containers that
   hold strings and numbers, which can be changed, compared, and passed around. `bash` variables have some very special
@@ -11943,7 +12094,7 @@ file called donors that looked like this:
 - Since everything in `bash` is a string, we need the dollar sign to indicate a variable reference.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.1. Embedding Documentation in Shell Scripts
+#### 1.4.6.1. Embedding Documentation in Shell Scripts
 
 - Embed documentation in the script using the "do nothing" builtin (a colon) and a here-document, when you want a
   simple way to provide formatted end-user documentation (e.g., manpages or HTML pages) for your script.
@@ -12011,14 +12162,14 @@ file called donors that looked like this:
   LaTeX, manpage, text, and usage files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.2. Promoting Script Readability
+#### 1.4.6.2. Promoting Script Readability
 
 - Follow these best practices when you would like to make your script as readable as possible for the ease of
   understanding and future maintenance.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-  - Document your script as noted in [1.3.6.1. Embedding Documentation in Shell Scripts](
-    #1361-embedding-documentation-in-shell-scripts). Document your intent, not the trivial details of the code. If you
+  - Document your script as noted in [Embedding Documentation in Shell Scripts](
+    #1461-embedding-documentation-in-shell-scripts). Document your intent, not the trivial details of the code. If you
     follow the rest of the points, the code should be pretty clear. Write reminders, provide sample data layouts or
     headers, and make a note of all the details that are in your head now, as you write the code. Document the code
     itself too if it is subtle or obscure.
@@ -12068,7 +12219,7 @@ file called donors that looked like this:
   echo 'Got an empty result, something is wrong'
   ```
 
-#### 1.3.6.3. Separating Variable Names from Surrounding Text
+#### 1.4.6.3. Separating Variable Names from Surrounding Text
 
 - Use the full syntax for a variable reference, which includes not just the dollar sign, but also braces around the
   variable name when you need to print a variable along with other text and need to distinguish the end of the variable
@@ -12103,7 +12254,7 @@ file called donors that looked like this:
   reach, and think they can make the code look very busy or noisy. Ultimately, it's a matter of personal preference.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.4. Exporting Variables
+#### 1.4.6.4. Exporting Variables
 
 - Export variables that you want to pass on to other scripts.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12162,7 +12313,7 @@ file called donors that looked like this:
   script does not change that variable's value back in the calling script.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.5. Seeing All Variable Values
+#### 1.4.6.5. Seeing All Variable Values
 
 - Use the `set` command to see the values of all variables and function definitions in the current shell.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12192,7 +12343,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.6.6. Using Parameters in a Shell Script
+#### 1.4.6.6. Using Parameters in a Shell Script
 
 - Use command line parameters when you want users to be able to invoke your script with a parameter. It is a more
   straightforward solution than requiring users to set a shell variable, or pass data with another script.
@@ -12213,7 +12364,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.6.7. Looping Over Arguments Passed to a Script
+#### 1.4.6.7. Looping Over Arguments Passed to a Script
 
 - You may want to use the shell pattern matching to build a list of filenames that match the `*.txt` pattern. This
   means that any number of arguments could be passed to the script to which you are passing the arguments.
@@ -12240,7 +12391,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.6.8. Handling Parameters with Spaces
+#### 1.4.6.8. Handling Parameters with Spaces
 
 - If we don't put quotes around the filename when we invoke the script, `bash` sees three arguments and substitutes the
   first argument (`Oh`) for `$1`. The `ls` command runs with `Oh` as its only argument and can't find that file.
@@ -12288,7 +12439,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.6.9. Handling Lists of Parameters with Spaces
+#### 1.4.6.9. Handling Lists of Parameters with Spaces
 
 - The `"$*"` in the following script used in the `for` loop fails does not provided the expected behaviour when
   processing a file with a space in its name.
@@ -12323,7 +12474,7 @@ file called donors that looked like this:
   was more familiar to the authors.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.10. Counting Arguments
+#### 1.4.6.10. Counting Arguments
 
 - Use the shell builtin variable `$#` to determine how many parameters a script was invoked with.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12366,7 +12517,7 @@ file called donors that looked like this:
   variable `VAR` and the third does a certain kind of substitution.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.11. Consuming Arguments
+#### 1.4.6.11. Consuming Arguments
 
 - Use `shift` to remove an argument after you've handled it.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12396,7 +12547,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.6.12. Getting Default Values
+#### 1.4.6.12. Getting Default Values
 
 - Use the `${:-}` syntax when referring to a parameter that you would like to have a default value, and use it to
   supply a default value. The `:-` operator says that if the specified parameter (here, `$1`) is not set or is `null`,
@@ -12409,7 +12560,7 @@ file called donors that looked like this:
   FILE_DIR=${1:-/tmp}
   ```
 
-#### 1.3.6.13. Setting Default Values
+#### 1.4.6.13. Setting Default Values
 
 - Your script relies on certain environment variables, either widely used ones (e.g., `$USER`) or ones specific to your
   own business. If you want to build a robust shell script, you should make sure that these variables each have a
@@ -12453,7 +12604,7 @@ file called donors that looked like this:
   only half of an equals sign (i.e., one horizontal bar, not two).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.14. Using `null` as Valid Default Value
+#### 1.4.6.14. Using `null` as Valid Default Value
 
 - The `${:=}` operator has two cases where the new value will be used: first, when the value of the shell variable has
   previously not been set (or has been explicitly unset); and second, where the value has been set but is empty, as in
@@ -12492,7 +12643,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.6.15. Using More than Just a Constant String for Default
+#### 1.4.6.15. Using More than Just a Constant String for Default
 
 - You can use quite a bit more on the right-hand side of these shell variable references. The value that will be
   substituted doesn't have to be just a `string` constant. Rather, it can be the result of a more complex shell
@@ -12534,7 +12685,7 @@ file called donors that looked like this:
     - For example: `echo ${BASE:=/home/uid$((ID+1))}`
       [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.16. Giving an Error Message for Unset Parameters
+#### 1.4.6.16. Giving an Error Message for Unset Parameters
 
 - sometimes you need to force the users to give you a value; otherwise, you don't want to proceed. Instead of several
   `if` statements to check each of the several parameters, use the `${:?}` syntax when referring to the parameters.
@@ -12573,7 +12724,7 @@ file called donors that looked like this:
   conversion
   ```
 
-#### 1.3.6.17. Changing Pieces of a String
+#### 1.4.6.17. Changing Pieces of a String
 
 - Use a `bash` parameter expansion feature that will remove text that matches a pattern. The `for` loop will iterate
   over a list of filenames in the current directory that all end in `.bad`. The variable `$FN` will take the value of
@@ -12602,7 +12753,7 @@ file called donors that looked like this:
   mv "${FN}" "${NEW_NAME}"
   ```
 
-#### 1.3.6.18. Getting the Absolute Value of a Number
+#### 1.4.6.18. Getting the Absolute Value of a Number
 
 - Use string manipulation when you have a numeric value in a variable and want to determine its magnitude - its
   absolute value.
@@ -12617,7 +12768,7 @@ file called donors that looked like this:
   ${MY_VAR#-}
   ```
 
-#### 1.3.6.19. Using `bash` for `basename`
+#### 1.4.6.19. Using `bash` for `basename`
 
 - `bash` can strip the directory path from a shell variable string and leave just the last part of the path (the
   filename), providing the same output as `basename`.
@@ -12648,7 +12799,7 @@ file called donors that looked like this:
   would need to do it in a separate step.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.20. Using `bash` for `dirname`
+#### 1.4.6.20. Using `bash` for `dirname`
 
 - Use a string manipulation operator to remove the filename - the last part of a path in a string - leaving as much of
   the directory path to that filename as was in the string, producing the same output as the `dirname` command.
@@ -12672,7 +12823,7 @@ file called donors that looked like this:
   the edge cases of any path that ends with a slash.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.21. Using Alternate Values for Comma-Separated Values
+#### 1.4.6.21. Using Alternate Values for Comma-Separated Values
 
 - If you write `LIST="$\{LIST\},$\{NEW_VAL\}"` inside a loop to build up the list, then the first time (when `LIST`
   is `null`) you'll end up with a leading comma. You could special-case the initialisation of `LIST` so that it gets
@@ -12701,7 +12852,7 @@ file called donors that looked like this:
   echo $LIST
   ```
 
-#### 1.3.6.22. Using Array Variables
+#### 1.4.6.22. Using Array Variables
 
 - `bash` has an array syntax for single-dimension arrays. Arrays are easy to initialise if you know the values as you
   write the script. The format is simple. Each element of the array is a separate word in the list, enclosed in
@@ -12717,7 +12868,7 @@ file called donors that looked like this:
   `${MYRA[0]}`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.6.23. Converting Between Upper- and Lower-case
+#### 1.4.6.23. Converting Between Upper- and Lower-case
 
 - As of `bash` 4.0, there are a few operators to do case conversion when referencing a variable name.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12739,7 +12890,7 @@ file called donors that looked like this:
   declare -c <variable_name> # Only the first character upper-case.
   ```
 
-#### 1.3.6.24. Converting to Camel Case
+#### 1.4.6.24. Converting to Camel Case
 
 - Use a combination of an array and case conversion substitution if you want each word to begin with a capital letter,
   not just the first letter of the string.
@@ -12758,7 +12909,7 @@ file called donors that looked like this:
   done
   ```
 
-### 1.3.7. Shell Logic & Arithmetic
+### 1.4.7. Shell Logic & Arithmetic
 
 - One of the big improvements in modern versions of `bash` compared with the original Bourne shell is in the area of
   arithmetic. Early versions of the shell had no builtin arithmetic; it had to be done by invoking a separate
@@ -12771,7 +12922,7 @@ file called donors that looked like this:
   `select`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.7.1. Doing Arithmetic in Your Shell Script
+#### 1.4.7.1. Doing Arithmetic in Your Shell Script
 
 - Use `$(( ))` or `let` for integer arithmetic expressions.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12798,7 +12949,7 @@ file called donors that looked like this:
   MAX=$((2**8))
   ```
 
-#### 1.3.7.2. Branching on Conditions
+#### 1.4.7.2. Branching on Conditions
 
 - Thee general form for an `if` statement, from the manpage for `bash` is, where contents in `[]` are optional parts of
   the statements:
@@ -12821,7 +12972,7 @@ file called donors that looked like this:
   escaped when using square brackets).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.7.3. Testing for File Characteristics
+#### 1.4.7.3. Testing for File Characteristics
 
 - There are several characteristics for which you can test a file. Three of them are tested using binary operators,
   each taking two filenames.
@@ -12863,7 +13014,7 @@ file called donors that looked like this:
   |    `-w`    |                      File is writeable                      |
   |    `-x`    |                     File is executable                      |
 
-#### 1.3.7.4. Testing for More than One Thing
+#### 1.4.7.4. Testing for More than One Thing
 
 - Use the logical AND (`-a`) and OR (`-o`) to combine more than one test in an expression.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12893,7 +13044,7 @@ file called donors that looked like this:
   statement into two nested `if` statements, or use `&&` and `||`
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.7.5. Testing for String Characteristics
+#### 1.4.7.5. Testing for String Characteristics
 
 - There are some simple tests that you can do with the builtin `test` command, using the single-bracket `if`
   statements.
@@ -12929,7 +13080,7 @@ file called donors that looked like this:
 - It is important to put quotes around an expression when checking a string, to avoid any unexpected substitution.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.7.6. Testing for Equality
+#### 1.4.7.6. Testing for Equality
 
 - Use the `-eq` operator for numeric comparisons and the equality primary `=` (or `==`) for string comparisons.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -12989,7 +13140,7 @@ file called donors that looked like this:
   with the double-square-brackets syntax. Then you can always use the math-style symbols for comparison.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.8. Testing with Pattern Matches
+### 1.4.8. Testing with Pattern Matches
 
 - You can use a single of double equals sign, as in the following example.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13034,12 +13185,12 @@ file called donors that looked like this:
   `[[` commands.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.1. Testing with Regular Expressions
+#### 1.4.8.1. Testing with Regular Expressions
 
 - The `=~` operator requires `bash` version 3.0 or newer - older versions don't have the operator.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.2. Looping for a While
+#### 1.4.8.2. Looping for a While
 
 - Use the `while` looping construct for arithmetic conditions. The double parentheses delimit an arithmetic expression,
   very much like the `$(())` expression for shell variable assignment. The variable names inside the parentheses are
@@ -13079,7 +13230,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.8.3. Looping with a `read`
+#### 1.4.8.3. Looping with a `read`
 
 - A common use of a `while` loop is to read files and the output of previous commands.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13112,7 +13263,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.8.4. Looping with a Count
+#### 1.4.8.4. Looping with a Count
 
 - Use the `for` syntax when you need to loop a fixed number of times. The syntax is quite similar to C's, but with
   double parentheses.
@@ -13136,7 +13287,7 @@ file called donors that looked like this:
   construct when referring to variables inside the double parentheses. The expressions are integer arithmetic.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.5. Looping with Floating-Point Values
+#### 1.4.8.5. Looping with Floating-Point Values
 
 - The `seq` command is used to generate floating-point values in a `for` loop, as `for` loops with arithmetic
   expressions only does integer arithmetic.
@@ -13167,7 +13318,7 @@ file called donors that looked like this:
   the command line for the `for` statement.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.6. Branching Many Ways
+#### 1.4.8.6. Branching Many Ways
 
 - Use the `case` statement for a multi-way branch. The `case` statement will expand the word (including parameter
   substitution) between the `case` and `in` keywords. It will then try to match the word with the patterns listed in
@@ -13243,7 +13394,7 @@ file called donors that looked like this:
 - Matches are case-sensitive, but you can use `shopt -s nocasematch` to make the `case` statement ignore case.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.7. Parsing Command-Line Arguments
+#### 1.4.8.7. Parsing Command-Line Arguments
 
 - When using `printf` for error message, using single quotes around the string if you don't want the shell to try to
   interpret any of the string. End the line with `>$2` to tell the shell to redirect the output to standard error.
@@ -13255,7 +13406,7 @@ file called donors that looked like this:
   determine the amount of times to execute a `while` loop.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.8. Creating Simple Menus
+#### 1.4.8.8. Creating Simple Menus
 
 - You can write a shell script to choose from a list of names to create simple character-based screen menus. In the
   following example, the `select` statement displays a list of words, each preceded by a number. The user will then be
@@ -13296,7 +13447,7 @@ file called donors that looked like this:
   reaches the end of the file, which means when the user types `<Ctrl> + d`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.8.9. Changing the Prompt on Simple Menus
+#### 1.4.8.9. Changing the Prompt on Simple Menus
 
 - The `bash` environment variable `$PS3` is the prompt used by `select`. If you don't like the prompt in the `select`
   menu, set the `$PS3` environment variable to a new value and you'll get a new prompt.
@@ -13334,7 +13485,7 @@ file called donors that looked like this:
     even modify `$PS3` as the loop progresses.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.9. Intermediate Shell Tools I
+### 1.4.9. Intermediate Shell Tools I
 
 - One of the overarching philosophies of Unix (and therefore Linux) is that of small program pieces that can be
   combined to produce powerful results. These program pieces are limited in scope. Instead of a single program to
@@ -13343,17 +13494,17 @@ file called donors that looked like this:
   operation.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.1. Sifting Through Files for a String
+#### 1.4.9.1. Sifting Through Files for a String
 
 - The `grep` command searches through files looking for the expression you supply as an argument.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.2. Getting Just the Filename from a Search
+#### 1.4.9.2. Getting Just the Filename from a Search
 
 - Use the `--files-with-matches` (or `-l` for short)  option of `grep` to get just the file names.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.3. Getting a Simple True/False from a Search
+#### 1.4.9.3. Getting a Simple True/False from a Search
 
 - Use the `quiet` option for `grep` when you want to know whether a certain string is in a particular file, and you
   just want a yes or no answer. You can then use the output of the `grep` command to determine whether to print `yes`
@@ -13384,7 +13535,7 @@ file called donors that looked like this:
   flavours of `grep` available on Unix and Linux systems, if one does not support the `--quiet` option.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.4. Doing a Search in a Pipeline
+#### 1.4.9.4. Doing a Search in a Pipeline
 
 - When no file name is supplied to `grep`, it reads from standard input.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13401,7 +13552,7 @@ file called donors that looked like this:
   gcc big_bad_code.c 2>&1 | grep -i error
   ```
 
-#### 1.3.9.5. Grepping Compressed Files
+#### 1.4.9.5. Grepping Compressed Files
 
 - Use `zgrep`, `zcat`, `gzcat` when you need to `grep` some compressed files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13423,7 +13574,7 @@ file called donors that looked like this:
 - The `less` utility can also be configured to transparently display various compressed files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.6. Keeping Some Output, Discarding the Rest
+#### 1.4.9.6. Keeping Some Output, Discarding the Rest
 
 - Use the `awk` utility to retain some of our output and discard the rest.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13436,7 +13587,7 @@ file called donors that looked like this:
   `$0` represents the entire line of input.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.7. Keeping Only a Portion of a Line of Output
+#### 1.4.9.7. Keeping Only a Portion of a Line of Output
 
 - If you want to keep only a portion of a line of output, such as just the first and last words, e.g., listing the file
   names and permissions from an `ls -l` output, without all the other information.
@@ -13467,7 +13618,7 @@ file called donors that looked like this:
   "the last field on the current line."
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.8. Reversing the Words on Each Line
+#### 1.4.9.8. Reversing the Words on Each Line
 
 - Enclosing an `awk` program in single quotes allows the `bash` shell to allow multiple lines. Both `awk` commands in
   the following code block are equivalent.
@@ -13494,7 +13645,7 @@ file called donors that looked like this:
   a number - the `i`th field.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.9. Summing a List of Numbers
+#### 1.4.9.9. Summing a List of Numbers
 
 - Use `awk` both to isolate the fields to be summed and to do the summing. The following example sums up the numbers
   that are the file sizes from the output of an `ls -l` command. We enclose the two bodies of our `awk` program in
@@ -13538,7 +13689,7 @@ file called donors that looked like this:
 - In `awk` programming, the order of the blocks of code matters.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.10. Counting String Values with `awk`
+#### 1.4.9.10. Counting String Values with `awk`
 
 - Use `awk`'s associative arrays (also known as "hashes" or "dictionaries" in other languages) if you need to count all
   the occurrences of several different strings, including some strings whose values you don't know beforehand.
@@ -13583,7 +13734,7 @@ file called donors that looked like this:
   associate each string with a numerical value.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.9.11. Counting String Values with `bash`
+#### 1.4.9.11. Counting String Values with `bash`
 
 - Like in the previous section, use `bash`'s associative arrays (also known as "hashes" or "dictionaries" in other
   languages) if you need to count all the occurrences of several different strings, including some strings whose values
@@ -13633,7 +13784,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.9.12. Showing Data as a Quick and Easy Histogram
+#### 1.4.9.12. Showing Data as a Quick and Easy Histogram
 
 - You can use the associative arrays of `awk` to compute and draw a histogram. The string format `%-10.10s` will
   left-justify and pad to 10 characters but also truncate at 10 characters. The integer format `%8d` will ensure the
@@ -13697,7 +13848,7 @@ file called donors that looked like this:
   $
   ```
 
-#### 1.3.9.13. An Easy Histogram with `bash`
+#### 1.4.9.13. An Easy Histogram with `bash`
 
 - You can use the associative arrays native to `bash` (in all versions from 4.0 onward) to compute and draw your
   histogram.
@@ -13739,7 +13890,7 @@ file called donors that looked like this:
   done
   ```
 
-#### 1.3.9.14. Showing a Paragraph of Text After a Found Phrase
+#### 1.4.9.14. Showing a Paragraph of Text After a Found Phrase
 
 - Assuming a simple text file, where *paragraph* means all the text between blank lines, so the occurrence of a blank
   line implies a paragraph break. The following example is an `awk` program that can be used for when you are
@@ -13769,7 +13920,7 @@ file called donors that looked like this:
     the beginning and end of the line.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.10. Intermediate Shell Tools II
+### 1.4.10. Intermediate Shell Tools II
 
 - This chapter introduces some more useful utilities that are not part of the *bash* shell, but are used in many shell
   scripts.
@@ -13779,7 +13930,7 @@ file called donors that looked like this:
   commands.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.1. Sorting Your Output
+#### 1.4.10.1. Sorting Your Output
 
 - Use the `sort` utility when you would like output in a sorted order.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13799,7 +13950,7 @@ file called donors that looked like this:
   some_commands | sort
   ```
 
-#### 1.3.10.2. Sorting Numbers
+#### 1.4.10.2. Sorting Numbers
 
 - When sorting numeric data, you will see the order doesn't seem right.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13832,7 +13983,7 @@ file called donors that looked like this:
   1 comes after 0 in an alphabetic sort).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.3. Sorting IP Addresses
+#### 1.4.10.3. Sorting IP Addresses
 
 - Sorting IP addresses by the last octet only (the old syntax), via the last portion of the number.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13884,7 +14035,7 @@ file called donors that looked like this:
   location to check.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.4. Cutting Out Parts of Your Output
+#### 1.4.10.4. Cutting Out Parts of Your Output
 
 - Use the `cut` command with the `--commands` to take particular columns when you are reading fixed-width or
   column-based data, and you'd like to take a subset of it, based on the column position.
@@ -13908,7 +14059,7 @@ file called donors that looked like this:
   deal with fixed-width, columnar data (via the `--characters` option).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.5. Removing Duplicate Lines
+#### 1.4.10.5. Removing Duplicate Lines
 
 - You can get rid of the duplicates from an output, so you can see just the unique values.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -13930,7 +14081,7 @@ file called donors that looked like this:
   without warning.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.6. Compressing Files
+#### 1.4.10.6. Compressing Files
 
 - In traditional Unix, archiving and compressing files are two different operations performed with two different tools,
   while in DOS and Windows it's typically one operation with one tool.
@@ -13951,7 +14102,7 @@ file called donors that looked like this:
   clutter whatever directory the user is in when they extract the files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.7. Uncompressing Files
+#### 1.4.10.7. Uncompressing Files
 
 - You must determine the type of archive to use before extracting a file. Different archive file types use different
   tools to extract their contents.
@@ -13974,7 +14125,7 @@ file called donors that looked like this:
   what_is_this.2: gzip compressed data, from Unix
   ```
 
-#### 1.3.10.8. Checking a `tar` Archive for Unique Directories
+#### 1.4.10.8. Checking a `tar` Archive for Unique Directories
 
 - Use an `awk` script to parse off the directory name from the `tar` archive's table of contents, then use
   `sort --unique` to output just the directory names when you want to untar an archive, but you want to know
@@ -13990,7 +14141,7 @@ file called donors that looked like this:
   between fields. Thus, the `print $1` will print the first directory name in the path name.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.9. Translating Characters
+#### 1.4.10.9. Translating Characters
 
 - Use the `tr` command to translate one character to another when you need to convert one character to another in all
   of your text.
@@ -14021,7 +14172,7 @@ file called donors that looked like this:
   characters that can be useful.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.10. Converting Upper-case to Lower-case
+#### 1.4.10.10. Converting Upper-case to Lower-case
 
 - You can translate all upper-case characters (*A-Z*) to lower-case (*a-z*) using the `tr` command and specifying and
   range of characters.
@@ -14049,7 +14200,7 @@ file called donors that looked like this:
   to match the length of the first.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.11. Converting DOS Files to Linux Format
+#### 1.4.10.11. Converting DOS Files to Linux Format
 
 - In DOS, each line ends with a pair of characters - the return and the new line. In Linux, each line ends with a single
   new line.
@@ -14068,7 +14219,7 @@ file called donors that looked like this:
   and `unix2dos` commands, respectively.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.12. Removing Smart Quotes
+#### 1.4.10.12. Removing Smart Quotes
 
 - If you copy ASCII text out of a document written in Microsoft Word and see some odd characters when you save the
   text, you can translate the odd characters back to simple ASCII like in the following example.
@@ -14090,12 +14241,12 @@ file called donors that looked like this:
   tr '\221\222\223\224\226\227' '\047\047""--' <odd.txt >plain.txt
   ```
 
-#### 1.3.10.13. Counting Lines, Words, or Characters in a File
+#### 1.4.10.13. Counting Lines, Words, or Characters in a File
 
 - Use the `wc` (word count) command to determine how many lines, words, or characters are in a given file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.14. Rewrapping Paragraphs
+#### 1.4.10.14. Rewrapping Paragraphs
 
 - Use the `fmt` command to rewrap lines of text that are too long or too short.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14105,7 +14256,7 @@ file called donors that looked like this:
   paragraph - so you will be outputted one giant paragraph, with the correct lengths.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.10.15. Doing More with `less`
+#### 1.4.10.15. Doing More with `less`
 
 - `less` takes options from the `$LESS` variable, so instead of creating an alias with your favourite options, assign
   them to that variable. It takes both long and short options, and any command line options will override options in
@@ -14120,13 +14271,13 @@ file called donors that looked like this:
   display. This is handled by setting the `$LESSOPEN` and `$LESSCLOSE` environment variables appropriately.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.11. Finding Files: `find`, `locate`, `slocate`
+### 1.4.11. Finding Files: `find`, `locate`, `slocate`
 
 - `bash` provides some very powerful search capabilities that enable you to search by file name, dates of
   creation/modification, even content.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.11.1. Finding All Your MP3 Files
+#### 1.4.11.1. Finding All Your MP3 Files
 
 - The `find` utility can locate all the file you are searching for and then execute a command to move them where you
   want.
@@ -14167,7 +14318,7 @@ file called donors that looked like this:
   find <directory_name(s)> -name <file_pattern> -print -exec <command to execute>
   ```
 
-#### 1.3.11.2. Handling Filenames Containing Odd Characters
+#### 1.4.11.2. Handling Filenames Containing Odd Characters
 
 - In Unix, "odd" means anything "not a lower-case letter, or maybe a number." Thus, upper-case letters, spaces,
   punctuation, and character accents are all odd.
@@ -14188,14 +14339,14 @@ file called donors that looked like this:
   possible, rather than each time a path name is found.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-- Rewriting the example from [1.3.11.1. Finding All Your MP3 Files](#13111-finding-all-your-mp3-files).
+- Rewriting the example from [Finding All Your MP3 Files](#14111-finding-all-your-mp3-files).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
   ```bash
   find . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
   ```
 
-#### 1.3.11.3. Finding Files Across Symbolic Links
+#### 1.4.11.3. Finding Files Across Symbolic Links
 
 - Use the `-follow` predicate when you wish to find files that are mounted via symbolic link. The default for `find` is
   to not follow a symbolic links. If you want to do so, then use the `-L` option on your `find` command, immediately
@@ -14206,7 +14357,7 @@ file called donors that looked like this:
   find -L . -name '*.mp3' -print0 | xargs -i -0 mv '{}' ~/songs
   ```
 
-#### 1.3.11.4. Finding Files Irrespective of Case
+#### 1.4.11.4. Finding Files Irrespective of Case
 
 - Use the `-iname` predicate to run a case-insensitive search, rather than just `-name`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14224,7 +14375,7 @@ file called donors that looked like this:
   find . -name '*.[Jj][Pp][Gg]' -print
   ```
 
-#### 1.3.11.5. Finding Files by Date
+#### 1.4.11.5. Finding Files by Date
 
 - Use the `-mtime` predicate to check the date of last modification of a file.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14261,7 +14412,7 @@ file called donors that looked like this:
   its own word.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.11.6. Finding Files by Type
+#### 1.4.11.6. Finding Files by Type
 
 - Use the `-type` predicate to to specify the type of a file to discover using the `find` command. It must be passed
   first, after the name of the directory in which to discover files.
@@ -14282,7 +14433,7 @@ file called donors that looked like this:
   |   `p`   |    Pipe (or "fifo")    |
   |   `f`   |       Plain file       |
 
-#### 1.3.11.7. Finding File by Size
+#### 1.4.11.7. Finding File by Size
 
 - Use the `-size` predicate in the `find` command to select files above, below, or of exactly a certain size.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14299,7 +14450,7 @@ file called donors that looked like this:
   but don't put any unit, that indicates a size in blocks.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.11.8. Finding Files by Content
+#### 1.4.11.8. Finding Files by Content
 
 - Use the `-exec` predicate on `find`so that if the predicates are true up to that point, it will execute a command
   for each file it finds. Invoke the `grep` utility in the `-exec` predicate to find a file with some known content.
@@ -14309,7 +14460,7 @@ file called donors that looked like this:
   find . -name '*.txt' -exec grep --with-filename --ignore-case portend '{}' \;
   ```
 
-#### 1.3.11.9. Finding Existing Files & Content Fast
+#### 1.4.11.9. Finding Existing Files & Content Fast
 
 - Using `locate` or `slocate` will help search for files without having to wait for a long `find` command to complete,
   as well as search for a file with specific content.
@@ -14331,7 +14482,7 @@ file called donors that looked like this:
   contain file names and locations.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.11.10. Finding a File Using a List of Possible Locations
+#### 1.4.11.10. Finding a File Using a List of Possible Locations
 
 - `source` a file located somewhere on the `$PATH`. `bash`'s builtin `source` command will search the `$PATH` if the
   `sourcepath` shell option is set, which it is by default.
@@ -14386,7 +14537,7 @@ file called donors that looked like this:
   on Debian or FreeBSD does not).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.12. Additional Features for Scripting
+### 1.4.12. Additional Features for Scripting
 
 - Many scripts are written as simple one-off scripts that are only used by their author, consisting of only a few
   lines - perhaps only a single loop, if that.
@@ -14396,7 +14547,7 @@ file called donors that looked like this:
   advantage of features that allow for better sharing and reuse of code.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.1. "Daemon-ising" Your Script
+#### 1.4.12.1. "Daemon-ising" Your Script
 
 - Sometimes you want a script to run as a *daemon*, in the background and never-ending. To do this properly, you need
   to be able to detach your script from the terminal session used to start the daemon. Simply putting an ampersand on
@@ -14421,7 +14572,7 @@ file called donors that looked like this:
 - We use the `nohup` command so the script is run without being interrupted by a hangup signal when we log off.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.2. Reusing Code with Includes & Sourcing
+#### 1.4.12.2. Reusing Code with Includes & Sourcing
 
 - Use the `bash` shell's `source` command or POSIX's single period (`.`) to read in the contents of a configuration
   file when you wish to use a set of common shell variable assignments across a set of scripts.
@@ -14480,7 +14631,7 @@ file called donors that looked like this:
   as a common library of functions among all the scripts that source the script of function definitions.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.3. Using Configuration Files in a Script
+#### 1.4.12.3. Using Configuration Files in a Script
 
 - If you want to use multiple external configuration files for one or more scripts, you could write a lot of code to
   parse some configuration file format.
@@ -14525,7 +14676,7 @@ file called donors that looked like this:
   ssh ${SSH_USER:+${SSH_USER}@}${REMOTE_HOST} [...]
   ```
 
-#### 1.3.12.4. Defining Functions
+#### 1.4.12.4. Defining Functions
 
 - Functions in `bash` may be defined in several ways.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14553,7 +14704,7 @@ file called donors that looked like this:
   defined, you will get a "command not found" error.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.5. Using Functions: Parameters & Return Values
+#### 1.4.12.5. Using Functions: Parameters & Return Values
 
 - You don''t put parentheses around the arguments of a function like you might expect from some programming languages.
   Instead, put any parameters for a `bash` function right after the function's name, separated by whitespace, just as
@@ -14645,7 +14796,7 @@ file called donors that looked like this:
   result of the function.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.6. Trapping Interrupts
+#### 1.4.12.6. Trapping Interrupts
 
 - Use the `trap` utility to set signal handlers. They trap signals and respond to them accordingly.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -14764,7 +14915,7 @@ file called donors that looked like this:
   - The `ERR` signal is triggered after a simple command fails..
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.7. Redefining Commands with `alias`
+#### 1.4.12.7. Redefining Commands with `alias`
 
 - Use the `alias` feature of `bash` for interactive shells (only). It can be used to slightly alter the definition of a
   command, perhaps so that you always use a particular option on the command.
@@ -14824,7 +14975,7 @@ file called donors that looked like this:
 - Aliases do not allow arguments do be passed at runtime.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.8. Avoiding Aliases & Functions
+#### 1.4.12.8. Avoiding Aliases & Functions
 
 - In the case where you've written an alias or function to override a real function a real command, use the `bash`
   shell's `builtin` command to ignore functions and aliases and run an actual builtin command.
@@ -14897,7 +15048,7 @@ file called donors that looked like this:
   your `$PATH` has some unexpected values, adding `command` will not help in that situation.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.12.9. Counted Elapsed Time
+#### 1.4.12.9. Counted Elapsed Time
 
 - Use the `time` builtin or the `bash` variable `$SECONDS` to display how long a script, or an operation in a script,
   takes.
@@ -14941,7 +15092,7 @@ file called donors that looked like this:
   sys 0m0.000s
   ```
 
-#### 1.3.12.10. Writing Wrappers
+#### 1.4.12.10. Writing Wrappers
 
 - If you have a series of related commands or tools that you often need to use in an ad hoc manner, and you want to
   collect them in once place to make them easier to use and remember, write a shell script "wrapper" using `case..esac`
@@ -15157,7 +15308,7 @@ file called donors that looked like this:
   - Automate `grep` commands to search various specific file types and locations for notes and archived documentation.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.13. Working with Dates & Times
+### 1.4.13. Working with Dates & Times
 
 - Regardless of whether you're writing a shell script or a much larger program, timekeeping is full of complexities:
   different formats for displaying the time and date, Daylight Saving Time, leap years, leap seconds, etc.
@@ -15176,7 +15327,7 @@ file called donors that looked like this:
   much easier to use than the `gawk`, but keep `gawk` in mind if you are using a system that has `gawk` but not `date`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.13.1. Formatting Dates for Display
+#### 1.4.13.1. Formatting Dates for Display
 
 - Use the `date` command with a `strftime` format specification when you need to format dates or times for output.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -15243,7 +15394,7 @@ file called donors that looked like this:
 - Use 24-hour time when possible to avoid even more ambiguity and parsing problems.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.13.2. Supplying a Default Date
+#### 1.4.13.2. Supplying a Default Date
 
 - If you want your script to provide a useful default date, and perhaps prompt the user to verify it, use the GNU
   `date` command, assign the most likely date to a variable, then then allow the user to change it.
@@ -15294,7 +15445,7 @@ file called donors that looked like this:
   time and creates an SQL query for a specific date range to generate a report.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.13.3. Automating Date Ranges
+#### 1.4.13.3. Automating Date Ranges
 
 - If you have one date, you can generate another automatically.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -15552,7 +15703,7 @@ file called donors that looked like this:
     20050815
     ```
 
-#### 1.3.13.4. Converting Dates & Times to Epoch Seconds
+#### 1.4.13.4. Converting Dates & Times to Epoch Seconds
 
 - Epoch seconds are the number of seconds since the epoch: *midnight, 1st of January, 1970*, also known as
   *970-01-01T00:00:00*.
@@ -15574,7 +15725,7 @@ file called donors that looked like this:
   1131192000
   ```
 
-#### 1.3.13.5. Converting Epoch Seconds to Dates & Times
+#### 1.4.13.5. Converting Epoch Seconds to Dates & Times
 
 - Use the GNU `date` command with your desired format to convert epoch seconds to a human-readable date and time.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -15588,7 +15739,7 @@ file called donors that looked like this:
   2005-11-05 06:59:49 +0000
   ```
 
-#### 1.3.13.6. Getting Yesterday or Tomorrow with Perl
+#### 1.4.13.6. Getting Yesterday or Tomorrow with Perl
 
 - You may need to get yesterday or tomorrow's date, and you have Perl but not GNU `date` on your system, you can use
   Perl-one-lines, adjusting the number of seconds added to or subtracted from `time`.
@@ -15606,11 +15757,11 @@ file called donors that looked like this:
   2005-11-06
   ```
 
-#### 1.3.13.7. Figuring Out Date & Time Arithmetic
+#### 1.4.13.7. Figuring Out Date & Time Arithmetic
 
 - If you can't get the answer for some kind of arithmetic with dates and times using the `date` command, convert your
   existing dates and times to epoch seconds using
-  [1.3.13.4. Converting Dates \& Times to Epoch Seconds](#13134-converting-dates--times-to-epoch-seconds).
+  [Converting Dates \& Times to Epoch Seconds](#14134-converting-dates--times-to-epoch-seconds).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
 - For example, if you have a machine that is two days out of sync. That should not happen as every machine should
@@ -15670,14 +15821,14 @@ file called donors that looked like this:
   |  2,592,000  |   43,200    |    720    |    30    |    N/A    |
   | 31,536,000  |   525,600   |   8,760   |   365    |     1     |
 
-#### 1.3.13.8. Handling Time Zones, Daylight Saving Time, & Leap Years
+#### 1.4.13.8. Handling Time Zones, Daylight Saving Time, & Leap Years
 
 - Instead of wanting to account for time zones, Daylight Saving Time, and leap years or seconds, don't actually do
   that. Use a tool instead of having to find and resolve the many intricacies of multiple time zones, Daylight Saving
   Time, and leap years or seconds.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.13.9. Using `date` & `cron` to Run a Script on the Nth Day
+#### 1.4.13.9. Using `date` & `cron` to Run a Script on the Nth Day
 
 - Most `cron`s will not allow running a script on the Nth weekday of the month, e.g., the second Wednesday.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -15730,7 +15881,7 @@ file called donors that looked like this:
   |  Fourth  |     22-27     |
   |  Fifth   |     28-31     |
 
-#### 1.3.13.10. Logging with Dates
+#### 1.4.13.10. Logging with Dates
 
 - When you want to output logs or other lines with dates, but you want to avoid the overhead of shelling out to the
   `date` command, you can use `printf` for dates and times.
@@ -15779,13 +15930,13 @@ file called donors that looked like this:
   similarities between the two, the latter is what you want.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.14. End-User Tasks as Shell Scripts
+### 1.4.14. End-User Tasks as Shell Scripts
 
 - The scripts in this section are intended to give useful, real-world examples of actual uses of shell scripts beyond
   just system administration tasks.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.14.1. Starting Simple by Printing Dashes
+#### 1.4.14.1. Starting Simple by Printing Dashes
 
 - The following code block is a simple script that prints a line of dashes, by building a string of the required number
   of dashes (or an alternate character) and then printing that string to standard output (STDOUT). The default values
@@ -15855,7 +16006,7 @@ file called donors that looked like this:
   and care and effort should be considered when writing your script to fail without issue.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.14.2. Viewing Photos in an Album
+#### 1.4.14.2. Viewing Photos in an Album
 
 - If you have a directory full of images, and you want a quick and easy way to view them all, you can write a shell
   script that will generate a set of HTML pages so that you can view your photos with a browser. The example in this
@@ -16012,7 +16163,7 @@ file called donors that looked like this:
   ln -s "${FIRST%.*}.html" ./index.html
   ```
 
-#### 1.3.14.3. Loading Your MP3 Player
+#### 1.4.14.3. Loading Your MP3 Player
 
 - If you have a collection of MP3 files that you would like to add to your MP3 plater, but you have more music than can
   fit in its storage, you can use a shell script to keep track of the available space as it copies files onto the MP3
@@ -16121,7 +16272,7 @@ file called donors that looked like this:
   load_mp3
   ```
 
-#### 1.3.14.4. Burning a CD
+#### 1.4.14.4. Burning a CD
 
 - If you have a directory full of files on your Linux system that you would like to burn to a CD, you can do that with
   two open source programs called `mkisofs` and `cdrecord`, and a `bash` script to organise the options.
@@ -16206,7 +16357,7 @@ file called donors that looked like this:
   echo "Done."
   ```
 
-#### 1.3.14.5. Comparing Two Documents
+#### 1.4.14.5. Comparing Two Documents
 
 - If you have two files in the OpenDocument Format (ODF), then you use can use a shell script to compare just the
   contents of both files, in the case where you need to determine what changes (if any) there are between the two
@@ -16294,7 +16445,7 @@ file called donors that looked like this:
   </g' content.xml > contentwnl.xml
   ```
 
-### 1.3.15. Parsing & Similar Tasks
+### 1.4.15. Parsing & Similar Tasks
 
 - Some of the recipes in this chapter include the parsing of command line arguments.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -16304,7 +16455,7 @@ file called donors that looked like this:
   `getopt` command.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.1. Parsing Arguments for Your Shell Script
+#### 1.4.15.1. Parsing Arguments for Your Shell Script
 
 - If you want to have some options to execute your shell script using some flags that users that users can use to
   alter its behaviour, you could do the parsing directory. You could use `${}` to tell you how many arguments have
@@ -16392,7 +16543,7 @@ file called donors that looked like this:
   `getopts` uses to keep track of where it parses.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.2. Parsing Arguments with Your Own Error Messages
+#### 1.4.15.2. Parsing Arguments with Your Own Error Messages
 
 - You can use `getopts` to write your own error handling in the case where you don't like the error messages outputted
   when `getopts` encounters bad input.
@@ -16466,7 +16617,7 @@ file called donors that looked like this:
   printf "Remaining arguments are: %s\n" "$*"
   ```
 
-#### 1.3.15.3. Parsing Some HTML
+#### 1.4.15.3. Parsing Some HTML
 
 - For a quick and easy shell parse of HTML, provided it doesn't have to be foolproof, you might want to try something
   like the following.
@@ -16535,7 +16686,7 @@ file called donors that looked like this:
     /g' | grep '<a' | while IFS='"' read a b c ; do echo $b; done
     ```
 
-#### 1.3.15.4. Parsing Output into an Array
+#### 1.4.15.4. Parsing Output into an Array
 
 - The following code block illustrates how to use an array to store the output of a program or script as words.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -16575,7 +16726,7 @@ file called donors that looked like this:
   `${#MYRA[@]}`, either of which is a lot of special characters to type.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.5. Parsing Output with a Function Call
+#### 1.4.15.5. Parsing Output with a Function Call
 
 - If you want to parse the output of some program into various variables to be used elsewhere in your program, arrays
   are great when you are looping through the values, but not very readable if you want to refer to each separately,
@@ -16625,7 +16776,7 @@ file called donors that looked like this:
   variable. If the variables are not declared locally, then they also available inside the function.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.6. Parsing Text with a `read` Statement
+#### 1.4.15.6. Parsing Text with a `read` Statement
 
 - Use the `read` command if you don't want to use a function.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -16653,7 +16804,7 @@ file called donors that looked like this:
   }
   ```
 
-#### 1.3.15.7. Parsing with `read` into an Array
+#### 1.4.15.7. Parsing with `read` into an Array
 
 - Using the `-a`- option on the `read` command means each word will be read into an array variable. `read` will parse
   the input into words, putting into word in its own array element. The variable does not need to be declared as an
@@ -16661,14 +16812,14 @@ file called donors that looked like this:
   `bash` array syntax. The number of words will determine the size of the array.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.8. Reading an Entire File
+#### 1.4.15.8. Reading an Entire File
 
 - Use the `mapfile` or `readarray` commands in `bash` to read in a whole file and parse it. They are identical commands
   that take the same arguments and let you read an entire file into an array, one entry for each line of the file with
   one statement.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.9. Getting Your Plurals Right
+#### 1.4.15.9. Getting Your Plurals Right
 
 - If you want to use a plural noun when you have more than one of an object, but you don't want to scatter `if`
   statements throughout your code, you can use a function similar to the following script.
@@ -16721,7 +16872,7 @@ file called donors that looked like this:
   `if` statement is the older form, and is more common across the various versions of `bash`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.10. Taking It One Character at a Time
+#### 1.4.15.10. Taking It One Character at a Time
 
 - If you have a string and you need to parse a string one character at a time, a substring function can be used to
   split a string into characters, and tells you the length of a string.
@@ -16757,7 +16908,7 @@ file called donors that looked like this:
     `$ALINE`, that begins at the `i`th position.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.11. Cleaning Up an SVN Source Tree
+#### 1.4.15.11. Cleaning Up an SVN Source Tree
 
 - Subversion's `svn status` command shows all the files that have been modified, but if there are any auto-generated
   files in the source tree, `svn` will also list those files.
@@ -16785,7 +16936,7 @@ file called donors that looked like this:
   and such are squelched by the `-f` option; it removes the to the level of privilege allowed by your permissions.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.12. Setting Up a Database with MySQL
+#### 1.4.15.12. Setting Up a Database with MySQL
 
 - If you want to create and initialise several databases using MySQL, they should be initialised using the same SQL
   commands. Each database needs its own name, but each database will have the same contents, at least at
@@ -16839,7 +16990,7 @@ file called donors that looked like this:
   succeed, `DB` could be unset, thereby bypassing the initialisation.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.13. Isolating Specific Fields in Data
+#### 1.4.15.13. Isolating Specific Fields in Data
 
 - When you need to extract one or more fields from each line of output, use `cut` if there are delimiters you can
   easily pick out, even if they different for the beginning and end of the file you need.
@@ -16949,7 +17100,7 @@ file called donors that looked like this:
   10.10.10.13
   ```
 
-#### 1.3.15.14. Updating Specific Fields in Data Files
+#### 1.4.15.14. Updating Specific Fields in Data Files
 
 - There are multiple options for extracting cert parts (fields) of a line (record) and updating them.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -17004,7 +17155,7 @@ file called donors that looked like this:
 - There are many possibilities for how to update specific fields in data.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.15. Trimming Whitespace
+#### 1.4.15.15. Trimming Whitespace
 
 - There are a few possibilities for how to trim leading and/or trailing whitespace from lines for fields of data.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -17203,7 +17354,7 @@ file called donors that looked like this:
   done < whitespace
   ```
 
-#### 1.3.15.16. Compressing Whitespace
+#### 1.4.15.16. Compressing Whitespace
 
 - If you sections of whitespace in a file (perhaps it is fixed-length, space-padded) and you need to compress the
   spaces down to a single character or delimiter, use `tr` or `awk` as appropriate.
@@ -17287,7 +17438,7 @@ file called donors that looked like this:
   awk '{ $1 = $1; print }' white_space
   ```
 
-#### 1.3.15.17. Processing Fixed-Length Records
+#### 1.4.15.17. Processing Fixed-Length Records
 
 - If you need to read and process data that is in a fixed-length (also called fixed-width) form, use Perl or `gawk`
   2.13 or greater.
@@ -17378,7 +17529,7 @@ file called donors that looked like this:
   but they will occasionally appear in large applications.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.18. Processing Files with No Line Breaks
+#### 1.4.15.18. Processing Files with No Line Breaks
 
 - If you have a large file with no line breaks, and you need to process it, pre-process the file and add line breaks in
   appropriate places.
@@ -17453,7 +17604,7 @@ file called donors that looked like this:
   Line_12_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaZZZ
   ```
 
-#### 1.3.15.19. Converting a Data File to CSV
+#### 1.4.15.19. Converting a Data File to CSV
 
 - If you have a data file that you need to confer to a Comma-Separate Values (CSV) file, use `awk` or Perl to convert
   the data into a CSV format.
@@ -17495,13 +17646,13 @@ file called donors that looked like this:
   have implemented various versions.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.15.20. Parsing a CSV Data File
+#### 1.4.15.20. Parsing a CSV Data File
 
 - If you have a comma-separated values (CSV) data file that you need to parse, unfortunately there is no easy way to do
   this, since it's tricky to define exactly what CST really means.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.16. Writing Secure Shell Scripts
+### 1.4.16. Writing Secure Shell Scripts
 
 - Any system that depends on concealing implementation details is attempting to use security by obscurity, and that is
   no security at all.
@@ -17519,7 +17670,7 @@ file called donors that looked like this:
   documentation so that the intention of each line in unambiguous.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.1. Avoiding Common Security Problems
+#### 1.4.16.1. Avoiding Common Security Problems
 
 - When you want to avoid common security problems in your scripting:
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -17553,7 +17704,7 @@ file called donors that looked like this:
   many tools to help you assure system integrity, such as FCheck, Tripwire, and AIDE.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.2. Avoiding Interpreter Spoofing
+#### 1.4.16.2. Avoiding Interpreter Spoofing
 
 - Pass a single trailing `-` dash to the shell when you want to avoid certain kinds of `setuid root` spoofing attacks.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -17568,7 +17719,7 @@ file called donors that looked like this:
   hard-coding the path to `bash` may present a portability issue.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.3. Setting a Secure `$PATH`
+#### 1.4.16.3. Setting a Secure `$PATH`
 
 - Set `$PATH` to a known good state at the beginning of every script to ensure you are using a secure path.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -17624,7 +17775,7 @@ file called donors that looked like this:
   and `$UNZIP` to pass settings to the program itself.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.4. Clearing All Aliases
+#### 1.4.16.4. Clearing All Aliases
 
 - Use the `\unalias -a` command to unalias any existing aliases to ensure there are no malicious alias in your
   environment.
@@ -17656,7 +17807,7 @@ file called donors that looked like this:
   function lookup, or just `unset` every function you might be interested in using.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.5. Clearing the Command Hash
+#### 1.4.16.5. Clearing the Command Hash
 
 - If you need to ensure your command hash has not been subverted, use the `hash -r` command to clear entries from the
   command hash.
@@ -17672,7 +17823,7 @@ file called donors that looked like this:
   program.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.6. Preventing Core Dumps
+#### 1.4.16.6. Preventing Core Dumps
 
 - If you want to program your script from dumping core in the case of an unrecoverable error, since core dumps may
   contain sensitive data from memory (such as passwords), use the `bash` builtin `ulimit` to set the core size limit to
@@ -17691,7 +17842,7 @@ file called donors that looked like this:
   you don't want them to be able to change it.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.7. Setting a Secure `$IFS`
+#### 1.4.16.7. Setting a Secure `$IFS`
 
 - If you want to ensure your internal field separator environment variable is clean, set it to a known good state at
   the beginning of every script using the following syntax. Note that it is not POSIX-compliant.
@@ -17725,7 +17876,7 @@ file called donors that looked like this:
   • → '
   ```
 
-#### 1.3.16.8. Setting a Secure `umask`
+#### 1.4.16.8. Setting a Secure `umask`
 
 - If you want to ensure you are using a secure `umask`, use the `bash` builtin `umask` to set a known good state at the
   beginning of every script.
@@ -17763,7 +17914,7 @@ file called donors that looked like this:
   and *666* for files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.9. Finding World-Writeable Directories in Your `$PATH`
+#### 1.4.16.9. Finding World-Writeable Directories in Your `$PATH`
 
 - If you want to ensure there are no world-writeable directories in `root`'s `$PATH`, use the following script to check
   your `$PATH`. Use it in conjunction with `su` or `sudo` to check paths for other users.
@@ -17884,7 +18035,7 @@ file called donors that looked like this:
   #
   ```
 
-#### 1.3.16.10. Adding the Current Directory to the `$PATH`
+#### 1.4.16.10. Adding the Current Directory to the `$PATH`
 
 - If you are find typing `./<script>` is tedious, and you'd rather just add `.` (or an empty directory, meaning a
   leading or trailing `:` or a `::` in the middle) to your `$PATH`, it is strongly recommended against doing that for
@@ -17903,7 +18054,7 @@ file called donors that looked like this:
 - The easiest solution to this is to not `.` anywhere in the `$PATH`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.11. Using Secure Temporary Files
+#### 1.4.16.11. Using Secure Temporary Files
 
 - If you need to create a temporary file or directory, but are aware of the security implications of using a
   predictable name, try using `echo "~$TMPDIR~"` to see if your system provides a secure temporary directory. "~" is
@@ -17977,7 +18128,7 @@ file called donors that looked like this:
   features will not work.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.12. Validating Input
+#### 1.4.16.12. Validating Input
 
 - When you've asked for input (e.g., from a user or a program), and to ensure security or data integrity, you need to
   ensure the correct data has been provided.
@@ -18010,7 +18161,7 @@ file called donors that looked like this:
 - Use a regular expression when pattern matching isn't specific enough and you have `bash` version 3.0+.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.13. Setting Permissions
+#### 1.4.16.13. Setting Permissions
 
 - If you need to set exact permissions for security reasons (or sure you are that you don't care what is already there,
   and you just need to change it), use `chmod` with four-digit octal modes.
@@ -18060,7 +18211,7 @@ file called donors that looked like this:
   up the permissions and owners of the files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.14. Leaking Passwords into the Process List
+#### 1.4.16.14. Leaking Passwords into the Process List
 
 - `ps` may show passwords entered in plain-text on the command line.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -18078,7 +18229,7 @@ file called donors that looked like this:
   ./bad_app < ~/.hidden/bad_apps_password
   ```
 
-#### 1.3.16.15. Writing `setuid` or `setgid` Scripts
+#### 1.4.16.15. Writing `setuid` or `setgid` Scripts
 
 - You may have a problem that you think you can solve by using the `setuid` or `setgid` bit on a shell script.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -18140,7 +18291,7 @@ file called donors that looked like this:
   Nope, not sgid
   ```
 
-#### 1.3.16.16. Restricting Guest Users
+#### 1.4.16.16. Restricting Guest Users
 
 - If you need to allow some guest users on your system and need to restrict what they can do, ensure to avoid using
   shared accounts where possible, since you lose accountability and create logistical headaches when users leaves and
@@ -18221,7 +18372,7 @@ file called donors that looked like this:
   mostly replaced by `ssh`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.17. Using `chroot` Jails
+#### 1.4.16.17. Using `chroot` Jails
 
 - If you have to use a script or application that you don't trust, consider placing it in a so-called *chroot jail*.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -18239,7 +18390,7 @@ file called donors that looked like this:
   complicated the application, the more difficult it is to run in a jail.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.18. Running as Non-root User
+#### 1.4.16.18. Running as Non-root User
 
 - If you'd l;ike to run your scripts as a non-root user, but are afraid you won't be able to do the things you need to
   do, run your scripts under your non-root user IDs (either as you or as dedicated users), and run interactively as
@@ -18247,7 +18398,7 @@ file called donors that looked like this:
   script as easily as it may be used interactively.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.19. Using `sudo` More Securely
+#### 1.4.16.19. Using `sudo` More Securely
 
 - It is good to be cautious about granting too many people too many privileges, especially with the use of `sudo`.
   While using `sudo` is much more secure than not using it, the default settings may be greatly improved.
@@ -18298,7 +18449,7 @@ file called donors that looked like this:
   meaning you don't accidentally lock yourself out of your system.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.20. Using Passwords in Scripts
+#### 1.4.16.20. Using Passwords in Scripts
 
 - It is a bad idea to hard-code a password in a script and so it should be avoided whenever possible. Unfortunately, it
   isn't possible to avoid it.
@@ -18316,7 +18467,7 @@ file called donors that looked like this:
   control.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.21. Using SSH Without a Password
+#### 1.4.16.21. Using SSH Without a Password
 
 - There are two ways to use SSH without a password: the wrong way and the right way.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -18349,7 +18500,7 @@ file called donors that looked like this:
   somewhere else rerunning `ssh-agent` and getting things out of sync.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.16.22. Restricting SSH Commands
+#### 1.4.16.22. Restricting SSH Commands
 
 - If you'd like to restrict what an incoming SSH user or script can do, edit the `~/.ssh/authorized_keys` file, use SSH
   forced commands, and optionally disable unnecessary SSH features.
@@ -18358,9 +18509,9 @@ file called donors that looked like this:
 - First, you need to determine exactly what command is being run on the remote side.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-  - Create a key (as outlined in [1.3.16.21. Using SSH Without a Password](#131621-using-ssh-without-a-password)) and
-  add a forced command. Edit the `~/.ssh/authorized_keys` file and add the following before the key.
-  [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
+  - Create a key (as outlined in [Using SSH Without a Password](#141621-using-ssh-without-a-password)) and add a forced
+    command. Edit the `~/.ssh/authorized_keys` file and add the following before the key.
+    [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
     ```bash
     command="/bin/echo Command was: $SSH_ORIGINAL_COMMAND"
@@ -18491,7 +18642,7 @@ file called donors that looked like this:
   SSH-restricted command.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-### 1.3.17. Disconnecting Inactive Sessions
+### 1.4.17. Disconnecting Inactive Sessions
 
 - Set the `$TMOUT` environment variable in `/etc/bashrc` or `~/.bashrc` to the number of seconds of inactivity before
   ending a session when you'd like to be able to automatically log out inactive users, especially `root`. In
@@ -18512,7 +18663,7 @@ file called donors that looked like this:
   readonly TMOUT=3600
   ```
 
-#### 1.3.17.1. Advanced Scripting
+#### 1.4.17.1. Advanced Scripting
 
 - One of the biggest problems for advanced scripts is writing scripts that are portable, i.e., that can work on any
   machine that has `bash` installed.
@@ -18528,7 +18679,7 @@ file called donors that looked like this:
   and redirecting output.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.2. Finding `bash` Portable for `#!`
+#### 1.4.17.2. Finding `bash` Portable for `#!`
 
 - If you need to run a `bash` script on several machines, but `bash` is not always in the same place, use the
   `/usr/bin/env` command in the shebang line. If your system doesn't have `env` in `/usr/bin`, ask your system
@@ -18560,7 +18711,7 @@ file called donors that looked like this:
   using `env` for portability, and to hard-code the interpreter and trailing, when security is critical.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.3. Setting a POSIX `$PATH`
+#### 1.4.17.3. Setting a POSIX `$PATH`
 
 - If you are on a machine that provides older or proprietary tools (e.g., Solaris) and you need to set your path so
   that you get POSIX-compliant tools.
@@ -18608,7 +18759,7 @@ file called donors that looked like this:
   /usr/bin:/bin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/local/bin
   ```
 
-#### 1.3.17.4. Developing Portable Shell Scripts
+#### 1.4.17.4. Developing Portable Shell Scripts
 
 - When you are writing a shell script that will need to run on multiple versions of multiple Unix or POSIX operating
   systems, try using the `command` builtin with its `-p` option to find the POSIX version of `program`.
@@ -18652,7 +18803,7 @@ file called donors that looked like this:
 - If you don't have a non-Linux system, then the issues described in this section are irrelevant.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.5. Testing Scripts Using Virtual Machines
+#### 1.4.17.5. Testing Scripts Using Virtual Machines
 
 - If you need to develop cross-platform scripts but do not have the appropriate systems or hardware, and if the target
   platforms runs on x86 architecture, you can use of the many free and commercial virtualisation solutions and build
@@ -18667,7 +18818,7 @@ file called donors that looked like this:
   and data, and then SSH to the test system.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.6. Using `for` Loops Portably
+#### 1.4.17.6. Using `for` Loops Portably
 
 - There are multiple options of implementing a `for` loop but want it to work on older versions of `bash`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -18724,7 +18875,7 @@ file called donors that looked like this:
   10
   ```
 
-#### 1.3.17.7. Using `echo` Portably
+#### 1.4.17.7. Using `echo` Portably
 
 - If you are writing a script that will run on multiple versions of Unix and Linux and you need `echo` to behave
   consistently even if it is not running on `bash`, use `printf "$b" whatever`, or test for the system and set
@@ -18859,7 +19010,7 @@ file called donors that looked like this:
     three
     ```
 
-#### 1.3.17.8. Splitting Output Only When Necessary
+#### 1.4.17.8. Splitting Output Only When Necessary
 
 - If you want to only split an output if the input exceeds your limit, but the `split` command always creates at least
   one new file, you can use the following example to break up the input into fixed sizes, only if the input exceeds the
@@ -18917,7 +19068,7 @@ file called donors that looked like this:
   } # end of function Split
   ```
 
-#### 1.3.17.9. Viewing Output in Hex
+#### 1.4.17.9. Viewing Output in Hex
 
 - If you need to see an output in hex mode to verify that a certain whitespace or unprintable character is as expected,
   pipe the output through `hexdump` using the `-C` option for a canonical output.
@@ -19039,7 +19190,7 @@ file called donors that looked like this:
   0010 : 69 6E 65 20 34 0A 4C 69 6E 65 20 35 0A 0A ine 4.Line 5..
   ```
 
-#### 1.3.17.10. Using `bash` Net-Redirection
+#### 1.4.17.10. Using `bash` Net-Redirection
 
 - If you need to send or receive very simple network traffic, but you do not have a tool such as Netcat installed, and
   if you have `bash` version 2.04+ compiled with `--enable-net-redirections` (the default), you can use `bash` itself,
@@ -19103,7 +19254,7 @@ file called donors that looked like this:
   - `$$` is the process ID of the current program. This will be `-bash` for a login shell.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.11. Finding My IP Address
+#### 1.4.17.11. Finding My IP Address
 
 - If you need to know the IP address of the machine you are running on, there is no good way to do this that will work
   on all systems in all situations, so there are several possible solutions.
@@ -19208,7 +19359,7 @@ file called donors that looked like this:
     $
     ```
 
-#### 1.3.17.12. Getting Input from Another Machine
+#### 1.4.17.12. Getting Input from Another Machine
 
 - If your script needs to get input from another machine, perhaps to check if a file exists or a process is running,
   use SSH with public keys and command substitution. To do this, set up SSH so that you do not need a password. Next,
@@ -19239,7 +19390,7 @@ file called donors that looked like this:
   fi
   ```
 
-#### 1.3.17.13. Redirecting Output for the Life of a Script
+#### 1.4.17.13. Redirecting Output for the Life of a Script
 
 - If you'd like to redirect output for an entire script, and you'd rather not have to every `echo` or `printf`
   statement, you can use a little-known feature of the `exec` command to redirect `STDOUT` or `STDERR`.
@@ -19263,7 +19414,7 @@ file called donors that looked like this:
   redirecting `STDOUT` or `STDERR`, but they are the most common targets for redirection in this case.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.14. Working Around `"Argument list too long"` Errors
+#### 1.4.17.14. Working Around `"Argument list too long"` Errors
 
 - If you get an "argument list too long" error while trying to do an operation involving shell wildcard expansion, use
   the `xargs` command, possibly in conjunction with `find`, to break up your argument list.
@@ -19332,7 +19483,7 @@ file called donors that looked like this:
   `getconf LINE_MAX`).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.15. Logging to `syslog` from Your Script
+#### 1.4.17.15. Logging to `syslog` from Your Script
 
 - If you'd like your script to be able to log to `syslog`, use `logger`, Netcat, or `bash`'s builtin network
   redirection features.
@@ -19362,7 +19513,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   echo "<133>${0##*/}[$$]: Test syslog message from Netcat" | nc -w1 -u loghost 514
   ```
 
-#### 1.3.17.16. Using `logger` Correctly
+#### 1.4.17.16. Using `logger` Correctly
 
 - If you want to use the `logger` tool so your script can send `syslog` messages, but the defaults do not provide
   enough useful information, use `logger` as follows.
@@ -19393,7 +19544,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $
   ```
 
-#### 1.3.17.17. Sending Email from Your Script
+#### 1.4.17.17. Sending Email from Your Script
 
 - If you'd like your script to be able to send email (optionally with attachments), you must have a compatible mailer
   installed on your system, such as `mail`, `mailto`, or `mailto`, a message transfer agent (MTA) being installed and
@@ -19507,7 +19658,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   Thunderbird. If that's the case, command line MUAs and email from `cron` won't work either.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.18. Automating a Process Using Phases
+#### 1.4.17.18. Automating a Process Using Phases
 
 - Use a `case` statement to break your script into sections or *phases* if you have a long job or process you need to
   automate, but it may require manual intervention and you need to be able to restart at various points in the
@@ -19596,7 +19747,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   done
   ```
 
-#### 1.3.17.19. Doing Two Things at Once
+#### 1.4.17.19. Doing Two Things at Once
 
 - As of `bash` version 4, the `coproc` command can allow to processes to converse with each other, each reading as its
   input the output of the other command.
@@ -19661,7 +19812,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   for the timeout value. Older versions only allowed integers.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.17.20. Running an SSH Command on Multiple Hosts
+#### 1.4.17.20. Running an SSH Command on Multiple Hosts
 
 - If you need to run a command over SSH on multiple hosts, wrap your SSH command in a `for` loop.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -19717,7 +19868,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       $
       ```
 
-### 1.3.18. Configuring & Customising `bash`
+### 1.4.18. Configuring & Customising `bash`
 
 - `bash` gives you a very powerful and flexible environment. Part of that flexibility is the extent to which it can be
   customised.
@@ -19730,7 +19881,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   the difference between upper- and lower-case.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.1. `bash` Startup Options
+#### 1.4.18.1. `bash` Startup Options
 
 - If you'd like to understand the various options you can use when starting `bash`, but `bash --help` is not helping
   you, you can try `bash -c "help set"` and `bash -c help`, or `help set` and `help` if you are already running in a
@@ -19741,7 +19892,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   startup, then later turn off the same option interactively.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.2. Customising Your Prompt
+#### 1.4.18.2. Customising Your Prompt
 
 - Customise the `$PS1` and `$PS2` variables as you desire to add more useful information to the default `bash` prompt,
   which is usually something uninformative that ends in with `$` and doesn't tell you much.
@@ -19975,7 +20126,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   assign it to `$PS1`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.3. A Prompt Before Your Program Runs
+#### 1.4.18.3. A Prompt Before Your Program Runs
 
 - If you want to prompt print before the program runs (not just after it completes), and you are using using `bash` 4.4
   or newer, you can you use the `$PS0` prompt introduced in `bash` 4.4. If set, the prompt string will be evaluated and
@@ -20014,7 +20165,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   run.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.4. Changing Your `$PATH` Permanently
+#### 1.4.18.4. Changing Your `$PATH` Permanently
 
 - If you need to permanently change your path, you need to first discover where the path is set and then update it. For
   your local account, it's probably set in `~/.profile` or `~/.bash_profile`. Find the file with
@@ -20049,7 +20200,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - Put user or application directories last in the `$PATH`, and then only for privileged users.
     [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.5. Changing Your `$PATH` Temporarily
+#### 1.4.18.5. Changing Your `$PATH` Temporarily
 
 - If you want to add one or more directories to your `$PATH` (or remove one or more) for only the current session in a
   terminal, there are several solutions to handle that that problem.
@@ -20252,7 +20403,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   /home/jp/bin:/bin:/usr/bin:/usr/local/bin:/usr/bin/X11:/usr/X11R6/bin
   ```
 
-#### 1.3.18.6. Setting Your `$CDPATH`
+#### 1.4.18.6. Setting Your `$CDPATH`
 
 - If you want to make it easier to switch between several directories in various locations, set your `$CDPATH`
   appropriately. Your commonly used directories will likely be unique.
@@ -20320,7 +20471,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   export CDPATH='.:~/:..:../..:~/.dirlinks'
   ```
 
-#### 1.3.18.7. When Programs Are Not Found
+#### 1.4.18.7. When Programs Are Not Found
 
 - If you want better control over what happens when a command is not found, perhaps to give a better message, you can
   add something like the following to the top of your script or `rc` file.
@@ -20343,7 +20494,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   succeed. Other parts of your script, or other callers of your script, may be depending on that information.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.8. Shortening or Changing Command Names
+#### 1.4.18.8. Shortening or Changing Command Names
 
 - If you'd like to shorten a long or complex command you use often, or if you'd like to rename a command, do not
   manually rename or move executable files, as many aspects of Unix and Linux depend on certain commands existing in
@@ -20389,7 +20540,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   define them is in your global `/etc/bashrc` or your local `~/.bashrc`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.9. Adjusting Shell Behaviour & Environment
+#### 1.4.18.9. Adjusting Shell Behaviour & Environment
 
 - If you'd like to adjust your shell environment to account for the way you work, your physical location, your
   language, etc, there are three ways to adjust various aspects of your environment. set is standardised in POSIX and
@@ -20397,7 +20548,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   use for historical reasons, as well as for compatibility with many third-party applications.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.10. Adjusting `readline` Behaviour Using `.inputrc`
+#### 1.4.18.10. Adjusting `readline` Behaviour Using `.inputrc`
 
 - Edit or create a `~/.inputrc` or `/etc/inputrc` file if you'd like to adjust the way `bash` handles input, especially
   command completion. To have `readline` use your file when it initialises, set `$INPUTRC` (e.g.,
@@ -20451,7 +20602,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $endif
   ```
 
-#### 1.3.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`
+#### 1.4.18.11. Keeping a Private Stash of Utilities by Adding `~/bin`
 
 - You have a stash of personal utilities you like to use, but you are not root on the system and can't place them into
   the normal locations like `/bin` or `/usr/local/bin`, or there is some other reason to separate them, you can create
@@ -20476,7 +20627,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   maliciously.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`
+#### 1.4.18.12. Using Secondary Prompts: `$PS2`, `$PS3`, `$PS4`
 
 - `$PS2` is called the secondary prompt string. It is used to interactively enter a command that you have not completed
   yet. It is usually set `>`, but you can redefine it.
@@ -20571,7 +20722,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   line 12
   ```
 
-#### 1.3.18.13. Synchronising Shell History Between Sessions
+#### 1.4.18.13. Synchronising Shell History Between Sessions
 
 - If you run more than one `bash` session at a time and you would like to have a shared history between them, and you'd
   also like to prevent the last session closed from clobbering the history from any other sessions, you can use the
@@ -20599,7 +20750,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   if you have a large history.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.14. Setting Shell History Options
+#### 1.4.18.14. Setting Shell History Options
 
 - If you'd like more control over your command line history, use the `$HIST*` variables and shell options as desired.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -20644,7 +20795,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   set, multi-line commands are saved with embedded newlines.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.15. Creating a Better `cd` Command
+#### 1.4.18.15. Creating a Better `cd` Command
 
 - If you `cd` into a lot of nested directory and would be able to type `cd ...` instead of `cd ../../../..` to navigate
   up four levels, as an example, you can use the following function to enable that behaviour.
@@ -20694,7 +20845,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   directory structure. Either way, they must be taken into account if you want to redefine how `cd` works.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.16. Creating & Changing Into a New Directory in One Step
+#### 1.4.18.16. Creating & Changing Into a New Directory in One Step
 
 - If you find that you often create new directories and immediately navigate to them to perform some operation, then
   all that typing can get tedious, add the following function to an appropriate configuration file (such as your
@@ -20774,7 +20925,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   }
   ```
 
-#### 1.3.18.17. Getting to the Bottom of Things
+#### 1.4.18.17. Getting to the Bottom of Things
 
 - If you work in a lot of narrow but deep directory structures (where all of the content is as the bottom), and you
   find it tedious to manually `cd` through so many levels, you can use the following `alias` to get to the "bottom" of
@@ -20812,7 +20963,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   alias bot='cd $(dirname $(find . | sort -r | tail -n 5 | head -1))'
   ```
 
-#### 1.3.18.18. Adding New Features to `bash` Using Loadable Built-ins
+#### 1.4.18.18. Adding New Features to `bash` Using Loadable Built-ins
 
 - If you have something that you'd like `bash` to do, but there's no built-in command for it, or, for efficient
   reasons, use the dynamically loadable built-ins introduced in `bash` version 2.0.
@@ -20827,7 +20978,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   load them at any time from within the shell with the `enable` built-in.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.19. Improving Programmable Completion
+#### 1.4.18.19. Improving Programmable Completion
 
 - If you wish that `bash`'s programmable completion was more aware of context, then you can find and install additional
   programmable completion libraries, or write your own.
@@ -20843,7 +20994,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   a command or anything else that you want textual completion to work with.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.20. Using Initialisation Files Correctly
+#### 1.4.18.20. Using Initialisation Files Correctly
 
 - The following is a cheat sheet for all the initialisation, or `rc`, files. Some or all of these files may be missing
   from your system, depending on how it is set up. Systems that use `bash` by default to have a complete set, while
@@ -20896,7 +21047,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   not executed or sourced but read in via `readline` and `$INPUTRC`, and `$include` (or `bind -f`).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.21. Creating Self-Contained, Portable `rc` Files
+#### 1.4.18.21. Creating Self-Contained, Portable `rc` Files
 
 - If you want to replicate a consistent `bash` environment while still allowing custom settings by operating system,
   machines, or other (e.g., work, home, etc.) criteria, store all of your customisations in files in a `settings`
@@ -20951,7 +21102,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   changes from the previous environment may allow things to work temporarily, until you log back in to the session.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.18.22. Getting Started with a Custom Configuration
+#### 1.4.18.22. Getting Started with a Custom Configuration
 
 - If you'd like to tweak your environment, but aren't sure where to start, follow the following suggestions to keep
   customisations for easy backups and portability between systems.
@@ -21633,12 +21784,12 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   TERM environment variable not set.
   ```
 
-### 1.3.19. Housekeeping & Administrative Tasks
+### 1.4.19. Housekeeping & Administrative Tasks
 
 - The recipes in this chapter cover tasks that occur in the course of using or administrating computers.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.1. Renaming Many Files
+#### 1.4.19.1. Renaming Many Files
 
 - If you want to rename many files, but `mv *.foo *.bar` doesn't work, or if you want to rename a group of files in
   arbitrary ways, you can use the following script to rename a number of files using a `for` loop.
@@ -21701,7 +21852,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   certainly many others.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.2. Using GNU Texinfo & `info` on Linux
+#### 1.4.19.2. Using GNU Texinfo & `info` on Linux
 
 - If you are having trouble accessing documentation because much of the documentation for GNU tools on Linux is in
   Texinfo documents, the traditional manpages are just stubs, and the default info program is user-hostile (and you
@@ -21724,7 +21875,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   converters, such as `pinfo`, `info2www`, `tkman`, and even `info2man`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.3. Unzipping Many ZIP Files
+#### 1.4.19.3. Unzipping Many ZIP Files
 
 - If you want to unzip many ZIP files in a directory, but `unzip *.zip` doesn't work, put the pattern in single quotes,
   because (unlike most other Unix commands) `unzip` handles file globbing patterns itself.
@@ -21750,7 +21901,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   `unzip` command for each ZIP file found when the shell expands the wildcards.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.4. Recovering Disconnected Sessions Using `screen`
+#### 1.4.19.4. Recovering Disconnected Sessions Using `screen`
 
 - If you run long processes over SSH, perhaps over the WAN, and when you get disconnected you lose a lot of work. You
   could run your process using `nohup`, but then you won't be able to reattach to it when your connection recovers.
@@ -21812,7 +21963,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   shell -$SHELL
   ```
 
-#### 1.3.19.5. Sharing a Single `bash` Session
+#### 1.4.19.5. Sharing a Single `bash` Session
 
 - If you need to share a single `bash` session for any reason, you can use GNU `screen` in multi-user mode.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -21845,7 +21996,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - For multi-user mode, `/tmp/screens` must exist and be world-readable and executable.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.6. Logging an Entire Session or Batch Job
+#### 1.4.19.6. Logging an Entire Session or Batch Job
 
 - If you need to capture all the output from an entire session or a long batch job, there are many ways to solve this
   problem, depending on your needs and environment.
@@ -21894,7 +22045,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   screen -X log off
   ```
 
-#### 1.3.19.7. Clearing the Screen When You Log Out
+#### 1.4.19.7. Clearing the Screen When You Log Out
 
 - If you use or administers that do not clear the screen you log out, and you'd prefer to hide your work for any
   reason, add the `clear` command in your `~/.bash_logout` file.
@@ -21923,7 +22074,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   effect on your shell's command history.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.8. Capturing File Metadata for Recovery
+#### 1.4.19.8. Capturing File Metadata for Recovery
 
 - If you want to create a list of files and their details for archival purposes, e.g., to verify backups, recreate
   directories, a backup plan for a large `chmod -R`, you can use GNU `find` with some `printf` formats to capture
@@ -21940,7 +22091,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     -o -printf '%m\t%u\t%g\t%s\t%t\t%p\n' >> archive_file
   ```
 
-#### 1.3.19.9. Creating an Index of Many Files
+#### 1.4.19.9. Creating an Index of Many Files
 
 - If you have a large number of files for which you'd like to create an index, use the `find` command in conjunction
   with `head`, `grep`, or other commands that parse out comments or summary information from each file.
@@ -21963,7 +22114,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   for dir in $(find . -type d); do head -15 $dir/*; done
   ```
 
-#### 1.3.19.10. Using `diff` & `patch`
+#### 1.4.19.10. Using `diff` & `patch`
 
 - If you can never remember how to use `diff` to create patches that may later be applied using `patch`, use the
   following code examples.
@@ -22124,7 +22275,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $
   ```
 
-#### 1.3.19.11. Counting Differences in Files
+#### 1.4.19.11. Counting Differences in Files
 
 - If you have two files and need to know about the number of differences that exist between them, count the *hunks*
   in the output from `diff`.
@@ -22204,7 +22355,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   > But this 1 is different.
   ```
 
-#### 1.3.19.12. Removing or Renaming Files Named with Special Characters
+#### 1.4.19.12. Removing or Renaming Files Named with Special Characters
 
 - If you need to remove or rename a file that was created with a special character that causes `rm` or `mv` to behave
   in unexpected ways. The canonical example of this is any file starting with a `-`, such as `-f` or `--help`, which
@@ -22236,7 +22387,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   my_help this_is_a_better_name
   ```
 
-#### 1.3.19.13. Prepending Data to a File
+#### 1.4.19.13. Prepending Data to a File
 
 - If you want to prepend date to an existing file, e.g., to add a header after sorting, use `cat` in a subshell.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22293,7 +22444,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - The `cat` solution is faster and simpler, while the `sed` solution is arguably more flexible.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.14. Editing a File in Place
+#### 1.4.19.14. Editing a File in Place
 
 - If you want to edit an existing file without affecting the inode or permissions,
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22332,7 +22483,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   to do. Note that `ex` is a symbolic link to `vi` or a variant on many systems, while `ed` is just `ed`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.15. Using `sudo` on a Group of Commands
+#### 1.4.19.15. Using `sudo` on a Group of Commands
 
 - If you are running as a regular user and need to `sudo` several commands at once, or you need to use redirection that
   applies to the commands and not to `sudo`, use `sudo` to run a subshell in which you may groups your commands and use
@@ -22348,7 +22499,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   that, you will just end up running a new interactive `root` shell, which is probably not your desired outcome.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.16. Finding Lines That Appear in One File but Not in Another
+#### 1.4.19.16. Finding Lines That Appear in One File but Not in Another
 
 - If you have two date files and you need to compare them and find lines that exist in one file but not in the other,
   sort the files and isolate the date of interest using `cut` or `awk` if necessary, and then use `comm`, `diff`,
@@ -22474,7 +22625,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   `awk` into temporary files and work from those if you can't disrupt the original files.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.19.17. Keeping the Most Recent `N` Objects
+#### 1.4.19.17. Keeping the Most Recent `N` Objects
 
 - If you need to retain the most recent `N` duplicates of a given file or directory, and purge the remainder -- no
   matter how many there are -- create an ordered list of the objects, pass them as arguments to a function, shift the
@@ -22583,7 +22734,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
-#### 1.3.19.20. Grepping `ps` Output Without Also Getting the `grep` Process Itself
+#### 1.4.19.18. Grepping `ps` Output Without Also Getting the `grep` Process Itself
 
 - If you want to `grep` output from the `ps` command without also getting the `grep` process itself, change the pattern
   you are looking for so that it is a valid regular expression that will not match the literal text that `ps` will
@@ -22610,7 +22761,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   ps aux | grep 'ssh' | grep -v grep
   ```
 
-#### 1.3.19.21. Finding Out Whether a Process Is Running
+#### 1.4.19.19. Finding Out Whether a Process Is Running
 
 - If you need to determine whether a process is running, and you might not already have a process ID (PID), `grep` the
   output of the `ps` command to see if the program you are looking for is running, however, the issue with this
@@ -22676,7 +22827,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   1278 /usr/sbin/sshd -D
   ```
 
-#### 1.3.19.22. Adding a Prefix or Suffix to Output
+#### 1.4.19.20. Adding a Prefix or Suffix to Output
 
 - If you'd like to add a prefix or a suffix to each line to output from a given command for some reason, pipe the
   appropriate data into a `while read` loop and `printf` as needed.
@@ -22701,7 +22852,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
       > last_$HOSTNAME.log
   ```
 
-#### 1.3.19.23. Numbering Lines
+#### 1.4.19.21. Numbering Lines
 
 - If you need to number the lines of a text file for reference or for use as an example, there are a few options.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -22738,7 +22889,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   4 Line 5
   ```
 
-#### 1.3.19.24. Writing Sequences
+#### 1.4.19.22. Writing Sequences
 
 - If you need to generate a sequence of numbers, possibly with other text, for testing or some other purpose, use `awk`
   because it should work on any system. On some systems, notably Solaris, `awk` will hang waiting for a file unless you
@@ -22766,7 +22917,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   5
   ```
 
-#### 1.3.19.25. Emulating the DOS Pause Command
+#### 1.4.19.23. Emulating the DOS Pause Command
 
 - If you are migrating from DOS/Windows batch files and want to emulate the DOS `pause` command, use the `read -n1 -p`
   command in a function.
@@ -22779,7 +22930,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   }
   ```
 
-#### 1.3.19.26. Commifying Numbers
+#### 1.4.19.24. Commifying Numbers
 
 - If you'd like to add a thousands-place separator to long number, depending on your system and configuration, you may
   be able to use `printf`'s format flag with a suitable locale. The following is the easiest solution to this problem.
@@ -22822,13 +22973,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   }
   ```
 
-### 1.3.20. Working Faster by Typing Less
+### 1.4.20. Working Faster by Typing Less
 
 - Despite all the improvements in processor speed, transmissions rates, network speed, and I/O capabilities, there is
   still a limiting factor in many uses of `bash` - the typing speed of the user.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.20.1. Moving Quickly Among Arbitrary Directories
+#### 1.4.20.1. Moving Quickly Among Arbitrary Directories
 
 - If you find yourself moving frequently between multiple directories, use the `pushd` and `popd` builtin commands to
   manage a stack of directory locations, and to switch between them easily.
@@ -22924,7 +23075,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   $
   ```
 
-#### 1.3.20.2. Repeating the Last Command
+#### 1.4.20.2. Repeating the Last Command
 
 - Typing `!!` at the command line prompt, `bash` will `echo` and repeat the previous command.
   [5.12.[oreilly-bash-cookbook-2nd-edition]
@@ -23001,12 +23152,12 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
-### 1.3.21. Tips & Traps: Common Goofs for Novices
+### 1.4.21. Tips & Traps: Common Goofs for Novices
 
 - Certain mistakes seem common, almost predictable, among beginners.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.21.1. Forgetting to Set Execute Permissions
+#### 1.4.21.1. Forgetting to Set Execute Permissions
 
 - You have two options if you try to execute a script and get the following error message: the first is you could
   invoke `bash` and give it the name of the script as a parameter; the second (lor better still) is you could set
@@ -23041,7 +23192,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   open/carefree folk (giving read and execute permissions to all others).
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.21.2. Fixing `"No such file or directory"` Errors
+#### 1.4.21.2. Fixing `"No such file or directory"` Errors
 
 - If you've set execute permission as previous in the previous heading of this section, but when you run the script,
   you get a "No such file or directory" error, try running the script using `bash` explicitly.
@@ -23093,7 +23244,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   : No such file or directory
   ```
 
-#### 1.3.21.3. Forgetting That the Current Directory Is Not In The `$PATH`
+#### 1.4.21.3. Forgetting That the Current Directory Is Not In The `$PATH`
 
 - If you've written a script and want to test it and you see the following error message, even if you remembered to add
   execute permissions to the script, either add the current directory to the `$PATH` variable -- which is not
@@ -23196,7 +23347,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition] -->
 
-#### 1.3.21.12. Testing `bash` Script Syntax
+#### 1.4.21.4. Testing `bash` Script Syntax
 
 - If you are editing a `bash` script and want to ensure your syntax is correct, use the `-n` argument in the `bash`
   command on the script you wish to test the syntax.
@@ -23223,7 +23374,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - As with all syntax checker, `-n` will not catch logic errors or syntax errors in other commands called by the script.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.21.13. Debugging Scripts
+#### 1.4.21.5. Debugging Scripts
 
 - If you can't identify why your script is not operating as you expect, you can add `set -x` to the top of the script
   when you run to turn on `xtrace` for the entire file, or use `set -x` before a troublesome section of your script to
@@ -23289,7 +23440,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   `extdebug` shell option, a new `bash` variable like `$LINENO` and the array variable `$FUNCNAME`.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.21.14. Avoid `"command not found"` When Using Functions
+#### 1.4.21.6. Avoid `"command not found"` When Using Functions
 
 - Some programming languages allow you to call a function in a section of your code that comes before the actual
   function definition.
@@ -23303,7 +23454,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   read into memory and then executed line by line, so you can't use a function before you define it.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
 
-#### 1.3.21.15. Confusing Shell Wildcards & Regular Expressions
+#### 1.4.21.7. Confusing Shell Wildcards & Regular Expressions
 
 - You may see `.*`, or `*`, and sometime `[a-z]*`, but they each have their own special meaning.
   [O'Reilly: `bash` Cookbook, 2nd Edition][oreilly-bash-cookbook-2nd-edition]
@@ -23358,7 +23509,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.4. Clean Architecture
+## 1.5. Clean Architecture
 
 <details open>
 
@@ -23366,7 +23517,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.5. Introducing GitHub
+## 1.6. Introducing GitHub
 
 <details open>
 
@@ -24154,7 +24305,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 
 </details>
 
-## 1.6. Practical Process Automation
+## 1.7. Practical Process Automation
 
 <details open>
 
@@ -25964,12 +26115,12 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 -
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation] -->
 
-### 1.6.4. Part III: Get Going
+### 1.7.1. Part III: Get Going
 
 - This last part of the book will focus your attention on introducing process automation successfully in your company.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-#### 1.6.4.1. The Journey to Introduce Process Automation
+#### 1.7.1.1. The Journey to Introduce Process Automation
 
 - This chapter will answer questions like: how can you introduce process automation into your organisation? How can you
   make your first project successful? And how do you establish a company-wide practice to scale adoption?
@@ -25997,7 +26148,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   likely end up as an internal consultant and facilitator. This chapter will equip you with the basics to achieve that.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-##### 1.6.4.1.1. Understanding the Adoption Journey
+##### 1.7.1.1.1. Understanding the Adoption Journey
 
 - Let's understand the typical journey to adopt process automation. It can be most helpful to learn from examples, so
   two stories will be illustrated in this section. One is a made-up failure story that contains many elements from real
@@ -26005,7 +26156,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   customers that has been observed in the past. This story will emphasise the elements that led to their success.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.1.1. Failures You Want to Avoid
+###### 1.7.1.1.1.1. Failures You Want to Avoid
 
 - You can following are insights that you would need to avoid to avoid failure when introducing process automation:
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
@@ -26044,7 +26195,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - Make sure to let project teams breathe and make their own decisions.
     [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.1.2. A Success Story
+###### 1.7.1.1.1.2. A Success Story
 
 - You can following are insights that you may need to follow to have greater success when introducing process
   automation:
@@ -26072,7 +26223,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - Define learning paths for new people or teams.
     [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.1.3. The Pattern of Successful Adoption Journeys
+###### 1.7.1.1.1.3. The Pattern of Successful Adoption Journeys
 
 - If you have a proposal for an approach to automation that could be adopted, you need to setup a proof of concept
   (POC) project. The goal of this project is to define and validate the architecture and stack, the exact code is most
@@ -26119,7 +26270,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   process automation and decide they want to apply it in their own projects.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.1.4. Different Journeys for Different Scenarios
+###### 1.7.1.1.1.4. Different Journeys for Different Scenarios
 
 - Some specifics about the adoption journey will vary depending on your status quo at your organisation and your main
   driver for introducing process automation.
@@ -26176,13 +26327,13 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     your process automation endeavour and adjust accordingly.
     [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-##### 1.6.4.1.2. Starting Your Journey
+##### 1.7.1.1.2. Starting Your Journey
 
 - The recommendation is to start creating POCs as soon as possible. Modern tools allow you to automate your first
   process within hours. The hands-on experience of doing POCs will greatly help you shape your direction.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.2.1. Bottom-Up vs Top-Down Adoption
+###### 1.7.1.1.2.1. Bottom-Up vs Top-Down Adoption
 
 - There are two typical motions that are in play in bigger enterprises when it comes to the adoption of methods and
   tools: bottom up and top down.
@@ -26222,7 +26373,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
     increase the changes of tools being embraced, rather than rejected.
     [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.2.2. Proofs of Concepts
+###### 1.7.1.1.2.2. Proofs of Concepts
 
 - With a POC, you typically create a prototype application within no more than three to five days. The result is
   intended to be thrown away, which is very important to keep in mind. Its sole purpose is to try to show that your
@@ -26276,7 +26427,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   at least once.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.2.3. Presenting the Business Case
+###### 1.7.1.1.2.3. Presenting the Business Case
 
 - A proper presentation should also talk about the business case as well as detailing and showcasing the automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
@@ -26300,7 +26451,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   motivation to introduce a tool, even if there is not a concrete business case in the first project.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.2.4. Don't Build Your Own Platform
+###### 1.7.1.1.2.4. Don't Build Your Own Platform
 
 - The exact opposite of providing immediate business value is building a company-wide process automation platform on
   top of a vendor's tool. Some companies even assemble a whole SOA or integration stack with components from different
@@ -26326,7 +26477,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   and you might want to reuse it.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.2.5. Dos and Don'ts Around Reuse
+###### 1.7.1.1.2.5. Dos and Don'ts Around Reuse
 
 - Reuse can make a lot of sense, as it means you can save effort and costs. If all of your process solutions need to
   communicate with your messaging infrastructure or your mainframe, you don't want to reinvent that wheel in every
@@ -26350,7 +26501,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   own service with properly-defined capabilities and APIs that can be used in different contexts.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-##### 1.6.4.1.3. From Project to Program: Scaling Adoption
+##### 1.7.1.1.3. From Project to Program: Scaling Adoption
 
 - After the first five or six successful projects, including the pilot and lighthouse, it starts to make sense to think
   about a more structured approach to scaling adoption within your organization. Make sure not to start scaling
@@ -26358,7 +26509,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   leading to friction between these projects. This section discusses some challenges and proven practices around scale.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.3.1. Perception Management: What Is Process Automation?
+###### 1.7.1.1.3.1. Perception Management: What Is Process Automation?
 
 - Customers use workflow engines for very different use cases. A common theme that may be seen when building solutions
   that are essentially applications (written in any programming language) that contains an executable process.
@@ -26375,7 +26526,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 - With that in mind, be careful about what you connect to the topic of "process automation".
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.3.2. Establishing a Centre of Excellence
+###### 1.7.1.1.3.2. Establishing a Centre of Excellence
 
 - If you have one team doing the pilot and probably also the lighthouse project, they will not only become very
   familiar with the technology and architecture, but also learn a lot of valuable lessons. Make sure these learnings
@@ -26417,7 +26568,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   might even want to talk publicly about your use case, if possible.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.3.3. Managing Architecture Decisions
+###### 1.7.1.1.3.3. Managing Architecture Decisions
 
 - Project teams need some freedom to choose the right tools. In many situations it is even best if the team can, for
   example, decide if it needs a workflow engine at all. Your COE and lighthouse projects might have generated enough
@@ -26445,7 +26596,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   be asked to rethink their approach.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.3.4. Decentralised Workflow Tooling
+###### 1.7.1.1.3.4. Decentralised Workflow Tooling
 
 - you should prefer an approach where every team runs its own workflow engine, especially in a microservices context.
   The main advantage is to allow for scale by isolating teams. This also means that you deliberately accept the
@@ -26458,7 +26609,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   excellence, your workflow champion, or an enterprise architect with responsibility for process automation.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-###### 1.6.4.1.3.5. Role & Skill Development
+###### 1.7.1.1.3.5. Role & Skill Development
 
 - In order to scale you need to actively develop the right skills internally, some on the job, some in training. The
   exact needs depend on the tool in use. As a rule of thumb, the more developer-friendly a tool is, the less
@@ -26511,9 +26662,9 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
   - These people often make good coaches as part of your COE.
     [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
 
-#### 1.6.4.2. Parting Words
+#### 1.7.1.2. Parting Words
 
-##### 1.6.4.2.1. Current Architecture Trends Influence Process Automation
+##### 1.7.1.2.1. Current Architecture Trends Influence Process Automation
 
 - Currently there is a big trend toward using more fine-grained components that run in
 a distributed fashion. This is a key necessity to master the growing complexity and
@@ -26555,7 +26706,7 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.7. Refactoring
+## 1.8. Refactoring
 
 <details open>
 
@@ -26563,7 +26714,7 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.8. Software Architecture: The Hard Parts
+## 1.9. Software Architecture: The Hard Parts
 
 <details open>
 
@@ -28580,11 +28731,11 @@ scale of modern systems. It has a few interesting implications:
   [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
   
 -
-  [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts]
- -->
+  [O'Reilly: Software Architecture: The Hard Parts][oreilly-software-architecture-the-hard-parts] -->
+
 </details>
 
-## 1.9. The Art of Readable Code
+## 1.10. The Art of Readable Code
 
 <details open>
 
@@ -28592,7 +28743,7 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.10. The Clean Coder
+## 1.11. The Clean Coder
 
 <details open>
 
@@ -29622,15 +29773,15 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.11. The Pragmatic Programmer
+## 1.12. The Pragmatic Programmer
 
 <details open>
 
 <summary>Click to expand/minimise the full contents of this book.</summary>
 
-### 1.11.1. Preface to the Second Edition
+### 1.12.1. Preface to the Second Edition
 
-#### 1.11.1.1. How the Book is Organised
+#### 1.12.1.1. How the Book is Organised
 
 - The book is written as a collection of short topics. Each topic is self-contained and addresses a particular theme.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -29641,52 +29792,52 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-  - [Tip 1: Care About Your Craft](#111221-tip-1-care-about-your-craft)
+  - [Tip 1: Care About Your Craft](#112221-tip-1-care-about-your-craft)
 
-  - [Tip 2: Think! About Your Work](#111222-tip-2-think-about-your-work)
+  - [Tip 2: Think! About Your Work](#112222-tip-2-think-about-your-work)
 
-  - [Tip 3: You Have Agency](#111311-tip-3-you-have-agency)
+  - [Tip 3: You Have Agency](#112311-tip-3-you-have-agency)
 
-  - [Tip 4: Provide Options, Don't Make Lame Excuses](#111323-tip-4-provide-options-dont-make-lame-excuses)
+  - [Tip 4: Provide Options, Don't Make Lame Excuses](#112323-tip-4-provide-options-dont-make-lame-excuses)
 
-  - [Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
+  - [Tip 5: Don't Live with Broken Windows](#112331-tip-5-dont-live-with-broken-windows)
 
-  - [Tip 5: Don't Live with Broken Windows](#111331-tip-5-dont-live-with-broken-windows)
+  - [Tip 5: Don't Live with Broken Windows](#112331-tip-5-dont-live-with-broken-windows)
 
-  - [Tip 7: Remember the Big Picture](#111351-tip-7-remember-the-big-picture)
+  - [Tip 7: Remember the Big Picture](#112351-tip-7-remember-the-big-picture)
 
-  - [Tip 8: Make Quality a Requirements Issue](#111362-tip-8-make-quality-a-requirements-issue)
+  - [Tip 8: Make Quality a Requirements Issue](#112362-tip-8-make-quality-a-requirements-issue)
 
-  - [Tip 9: Invest Regularly in Your Knowledge Portfolio](#111372-tip-9-invest-regularly-in-your-knowledge-portfolio)
+  - [Tip 9: Invest Regularly in Your Knowledge Portfolio](#112372-tip-9-invest-regularly-in-your-knowledge-portfolio)
 
-  - [Tip 10: Critically Analyse What You Read \& Hear](#111375-tip-10-critically-analyse-what-you-read--hear)
+  - [Tip 10: Critically Analyse What You Read \& Hear](#112375-tip-10-critically-analyse-what-you-read--hear)
 
-  - [Tip 11: English is Just Another Language](#111381-tip-11-english-is-just-another-language)
+  - [Tip 11: English is Just Another Language](#112381-tip-11-english-is-just-another-language)
 
   - [Tip 12: It's Both What You Say and the Way You Say It](
-      #1113810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
+      #1123810-tip-12-its-both-what-you-say-and-the-way-you-say-it)
 
-  - [Tip 13: Build Documentation In, Don't Bolt It On](#1113812-tip-13-build-documentation-in-dont-bolt-it-on)
+  - [Tip 13: Build Documentation In, Don't Bolt It On](#1123812-tip-13-build-documentation-in-dont-bolt-it-on)
 
   - [Tip 14: Good Design is Easier to Change Than Bad Design](
-      #111411-tip-14-good-design-is-easier-to-change-than-bad-design)
+      #112411-tip-14-good-design-is-easier-to-change-than-bad-design)
 
-  - [Tip 15: DRY - Don't Repeat Yourself](#111421-tip-15-dry---dont-repeat-yourself)
+  - [Tip 15: DRY - Don't Repeat Yourself](#112421-tip-15-dry---dont-repeat-yourself)
 
-  - [Tip 16: Make It Easy to Rescue](#111427-tip-16-make-it-easy-to-rescue)
+  - [Tip 16: Make It Easy to Rescue](#112427-tip-16-make-it-easy-to-rescue)
 
-  - [Tip 17: Eliminate Effects Between Things](#111433-tip-17-eliminate-effects-between-things)
+  - [Tip 17: Eliminate Effects Between Things](#112433-tip-17-eliminate-effects-between-things)
 
-  - [Tip 18: There Are No Final Decisions](#111441-tip-18-there-are-no-final-decisions)
+  - [Tip 18: There Are No Final Decisions](#112441-tip-18-there-are-no-final-decisions)
 
-  - [Tip 19: Forego Following Fads](#111442-tip-19-forego-following-fads)
+  - [Tip 19: Forego Following Fads](#112442-tip-19-forego-following-fads)
 
 - Exercises and challenges have been added where appropriate. Exercises normally have straightforward answers, while
   the challenges are more open-ended.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.1.2. What's In a Name?
+#### 1.12.1.2. What's In a Name?
 
 - The first time jargon is used in the book, it is usually defined, or at least a hint is given to its meaning.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -29697,7 +29848,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.2. From the Preface to the First Edition
+### 1.12.2. From the Preface to the First Edition
 
 - Programming is a craft. At its simplest, it comes down to getting a computer to do what you want it to do (or what
   the user wants it to do). As a programmer, you are part listener, part adviser, part interpreter, and part dictator
@@ -29726,7 +29877,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.2.1. Who Should Read This Book?
+#### 1.12.2.1. Who Should Read This Book?
 
 - The book is aimed at people who want to become more effective and more productive programmers. Perhaps you feel
   frustrated you don't seem to be achieving your potential. Perhaps you look at colleagues who seem to be using tools
@@ -29735,7 +29886,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.2.2. What Makes a Pragmatic Programmer?
+#### 1.12.2.2. What Makes a Pragmatic Programmer?
 
 - Each developer is unique, with individual strengths and weaknesses, preferences and dislikes. Over time, each will
   craft their own personal environment, reflecting the developer's individuality.
@@ -29781,13 +29932,13 @@ scale of modern systems. It has a few interesting implications:
       [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
         the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.2.2.1. Tip 1: Care About Your Craft
+##### 1.12.2.2.1. Tip 1: Care About Your Craft
 
 - There is no point in developing software unless you care about doing it well.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.2.2.2. Tip 2: Think! About Your Work
+##### 1.12.2.2.2. Tip 2: Think! About Your Work
 
 - Think about what you're doing while you're doing it. An ongoing critical appraisal of every decision you make, every
   day, and on every project is required to truly make a difference to you and your organisation. Never run on
@@ -29795,22 +29946,22 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.2.3. Individual Pragmatists, Large Teams
+#### 1.12.2.3. Individual Pragmatists, Large Teams
 
 - Within the overall structure of a project, there is always room for individuality and craftsmanship. This is
   particularly true given the state of software engineering.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.2.4. It's a Continuous Process
+#### 1.12.2.4. It's a Continuous Process
 
 - Every day, work to refine the skills you have and to add new tools to your repertoire.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.3. A Pragmatic Philosophy
+### 1.12.3. A Pragmatic Philosophy
 
-#### 1.11.3.1. It's Your Life
+#### 1.12.3.1. It's Your Life
 
 - Software development must appear close to the top of any list of carers where you have control. Our skills are in
   demand, our knowledge crosses geographic boundaries, we can work remotely. We're paid well. We really can do just
@@ -29823,7 +29974,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.1.1. Tip 3: You Have Agency
+##### 1.12.3.1.1. Tip 3: You Have Agency
 
 - If technology seems to be passing you by, make time (in your own time) to study new material that looks interesting.
   You're investing in yourself, so doing it while you're off the clock is only reasonable.
@@ -29834,7 +29985,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.2. The Cat Ate My Source Code
+#### 1.12.3.2. The Cat Ate My Source Code
 
 - Pragmatic Programmers take charge of their own career, and aren't afraid to admit ignorance or error. These things
   happen, and we try to deal with them as professionally as we can. This means being honest and direct. We can be proud
@@ -29842,7 +29993,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.2.1. Team Trust
+##### 1.12.3.2.1. Team Trust
 
 - Above all, your team needs to be able to trust and rely on you - and you need to be comfortable relying on each of
   them as well.
@@ -29854,7 +30005,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.2.2. Take Responsibility
+##### 1.12.3.2.2. Take Responsibility
 
 - Responsibility is something you actively agree to. You make a commitment to ensure everything is done right, but you
   don't necessarily have direct control over every aspect of it.
@@ -29877,7 +30028,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses
+##### 1.12.3.2.3. Tip 4: Provide Options, Don't Make Lame Excuses
 
 - Before you approach anyone to tell them why something can't be done, is late, or is broken, stop and listen to
   yourself. Instead of excuses, provide options. Don't say it can't be done: explain what can be done to salvage the
@@ -29890,7 +30041,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.2.4. Challenges (Take Responsibility)
+##### 1.12.3.2.4. Challenges (Take Responsibility)
 
 - How do you react when someone comes to you with a lame excuse? What do you think of them and their organisation as a
   result?
@@ -29902,7 +30053,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.3. Software Entropy
+#### 1.12.3.3. Software Entropy
 
 - Entropy is a term from physics that refers to the amount of "disorder" in a system.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -29917,7 +30068,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.3.1. Tip 5: Don't Live with Broken Windows
+##### 1.12.3.3.1. Tip 5: Don't Live with Broken Windows
 
 - Don't leave "broken windows" - bad designs, wrong decisions, or poor code - unrepaired. Fix each one as soon as it is
   discovered. If there is an insufficient time to fix it properly, then provide a temporary fix. Take some action to
@@ -29934,7 +30085,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.3.2. First, Do No Harm
+##### 1.12.3.3.2. First, Do No Harm
 
 - One "broken window" - a badly designed piece of code, a poor management decision that the team must live with for the
   duration of the project - is all it takes to start the decline.
@@ -29952,7 +30103,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.3.3. Challenges (Software Entropy)
+##### 1.12.3.3.3. Challenges (Software Entropy)
 
 - Help strengthen your team be surveying your project "neighbourhood". Choose two or three "broken windows" and discuss
   the problems - and their possible solution - with your colleagues.
@@ -29964,7 +30115,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.4. Stone Soup & Boiled Frogs
+#### 1.12.3.4. Stone Soup & Boiled Frogs
 
 - You may be in a situation where you know exactly what needs doing and how to do it. Ask permission to tackle the
   whole thing and you'll be met with delays and blank stares. People will form committees, budgets will need approval,
@@ -29978,13 +30129,13 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.4.1. Tip 6 Be a Catalyst for Change
+##### 1.12.3.4.1. Tip 6 Be a Catalyst for Change
 
 - You can't force change on people. Instead, show them how the future might be and help them participate in creating it.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.5. The Villager's Side
+#### 1.12.3.5. The Villager's Side
 
 - Projects slowly and inexorably get totally out of hand. Most software disasters start out too small to notice, and
   most project overruns happen a day at a time. It's often the accumulation of small things that breaks morale and
@@ -29992,19 +30143,19 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.5.1. Tip 7: Remember the Big Picture
+##### 1.12.3.5.1. Tip 7: Remember the Big Picture
 
 - Don't get so engrossed on the details that you forget to check what's happening around you. Keep an eye on the big
   picture. Constantly review what's happening around you, not just what you personally are doing.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.5.2. Challenges (The Villager's Side)
+##### 1.12.3.5.2. Challenges (The Villager's Side)
 
 - By progressively deceiving your organisation (as outlined in the
-  [1.10.3.4. Stone Soup & Boiled Frogs](#11134-stone-soup--boiled-frogs) section), you're doing it harm. Can you
-  determine whether you're making the necessary changes for the right reasons or causing unnecessary scope creep? Is
-  the decision subjective or objective?
+  [Stone Soup & Boiled Frogs](#11234-stone-soup--boiled-frogs) section), you're doing it harm. Can you determine
+  whether you're making the necessary changes for the right reasons or causing unnecessary scope creep? Is the decision
+  subjective or objective?
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
@@ -30013,7 +30164,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.6. Good Enough Software
+#### 1.12.3.6. Good Enough Software
 
 - The phrase "good enough" does not imply sloppy or poorly produced code. All systems must meet their users'
   requirements to be successful, and meet basic performance, privacy, and security standards. Users should be given the
@@ -30021,7 +30172,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.6.1. Involve Your Users in the Trade Off
+##### 1.12.3.6.1. Involve Your Users in the Trade Off
 
 - Normally software is written for other people. What is required is often asked, but how good it is wanted is rarely
   considered. Sometime there will be no choice.
@@ -30032,7 +30183,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.6.2. Tip 8: Make Quality a Requirements Issue
+##### 1.12.3.6.2. Tip 8: Make Quality a Requirements Issue
 
 - Many customers would rather use software with some rough edges today than wait a year for a pristine version,
   especially considering their requirements are likely to change during that year. If you give your users something to
@@ -30040,14 +30191,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.6.3. Know When to Stop
+##### 1.12.3.6.3. Know When to Stop
 
 - Don't spoil a perfectly good program by over-embellishment and over-refinement. Move on, and let your code stand in
   its own right for a while. It may not be perfect, but don't worry, it could never be perfect.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.6.4. Challenges (Good Enough Software)
+##### 1.12.3.6.4. Challenges (Good Enough Software)
 
 - Look at the software tools and operating systems that you use regularly. Can you find any evidence that these
   organisations and/or developers are comfortable shipping software they know is not perfect?
@@ -30066,7 +30217,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.7. Your Knowledge Portfolio
+#### 1.12.3.7. Your Knowledge Portfolio
 
 - Your knowledge and experience are your most important day-to-day professional assets. Unfortunately, they're expiring
   assets. Your knowledge becomes out of date as new techniques, and environments are developed. As the value of your
@@ -30105,7 +30256,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.1. Building Your Portfolio
+##### 1.12.3.7.1. Building Your Portfolio
 
 - **Invest Regularly**:
 
@@ -30142,7 +30293,7 @@ scale of modern systems. It has a few interesting implications:
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio
+##### 1.12.3.7.2. Tip 9: Invest Regularly in Your Knowledge Portfolio
 
 - Aspire to the following goals:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30201,7 +30352,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.3. Opportunities for Learning
+##### 1.12.3.7.3. Opportunities for Learning
 
 - If someone asks you a question that you can't answer, take it as a personal challenge to find the answer.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30212,7 +30363,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.4. Critical Thinking
+##### 1.12.3.7.4. Critical Thinking
 
 - You need to ensure the knowledge in your portfolio is accurate and unswayed by either vendor or media hype. Beware of
   the zealots who insist their dogma provides the only answer - it may or may not applicable to you and your project.
@@ -30224,7 +30375,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.5. Tip 10: Critically Analyse What You Read & Hear
+##### 1.12.3.7.5. Tip 10: Critically Analyse What You Read & Hear
 
 - Critical thinking is an entire discipline unto itself. Read and study all you can about it. The following are a few
   questions to ask and think about every time you work on something in future:
@@ -30271,7 +30422,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.7.6. Challenges (Your Knowledge Portfolio)
+##### 1.12.3.7.6. Challenges (Your Knowledge Portfolio)
 
 - Start learning a new language this week.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30287,7 +30438,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.3.8. Communicate
+#### 1.12.3.8. Communicate
 
 - A good idea is an orphan without effective communication.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30298,14 +30449,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.1. Tip 11: English is Just Another Language
+##### 1.12.3.8.1. Tip 11: English is Just Another Language
 
 - Treat your native tongue as just another programming language. Write natural language as you would code: honour the
   DRY (Don't Repeat Yourself) principle, the ETC (Easier to Change) principle, automation, etc.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.2. Know Your Audience
+##### 1.12.3.8.2. Know Your Audience
 
 - You're communicating only if you're conveying what you mean to convey - just talking isn't enough. To do that, you
   need to understand the needs, interests, and capabilities of your audience.
@@ -30320,7 +30471,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.3. Know What You Want to Say
+##### 1.12.3.8.3. Know What You Want to Say
 
 - Plan what you want to say. Write an outline. Then ask yourself. "Does this communicate what I want to express to my
   audience in a way that works for them?" If not, refine it until it does.
@@ -30332,7 +30483,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.4. Choose Your Moment
+##### 1.12.3.8.4. Choose Your Moment
 
 - As part of understanding what your audience needs to hear, you need to work out what their priorities are. Ensure
   what you're saying is relevant in time, as well as in content. Sometime, all it takes is a simple question "Is this a
@@ -30340,7 +30491,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.5. Choose a Style
+##### 1.12.3.8.5. Choose a Style
 
 - Adjust the style of your delivery to suit your audience. Determine the style of your delivery based on what they are
   likely to expect or appreciate, or what they've explicitly said they want.
@@ -30352,7 +30503,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.6. Make it Look Good
+##### 1.12.3.8.6. Make it Look Good
 
 - Your ideas are important. They ought to look good to convey them to your audience.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30364,7 +30515,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.7. Involve Your Audience
+##### 1.12.3.8.7. Involve Your Audience
 
 - The documents we produce can often end up being less important than the process we go through to produce them. If
   possible, provide readers with early drafts of your document. Get their feedback, and pick their brains. You'll
@@ -30372,7 +30523,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.8. Be a Listener
+##### 1.12.3.8.8. Be a Listener
 
 - Listen to people if you want people to listen to you.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30383,21 +30534,21 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.9. Get Back to People
+##### 1.12.3.8.9. Get Back to People
 
 - Always respond to people, even if the response is simple "I'll get back to you later." Keeping people informed makes
   them far more forgiving of the occasional slip, and them feel like you haven't forgotten them.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.10. Tip 12: It's Both What You Say and the Way You Say It
+##### 1.12.3.8.10. Tip 12: It's Both What You Say and the Way You Say It
 
 - Unless you work in a vacuum, you need to be able to communicate. The more effective that communication, the more
   influential you become.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.11. Communication Through Documentation
+##### 1.12.3.8.11. Communication Through Documentation
 
 - Typically, developers don't give much though to documentation. At best, it is an unfortunate necessity. At work, it
   is treated as a low-priority task that will hopefully be forgotten.
@@ -30409,7 +30560,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On
+##### 1.12.3.8.12. Tip 13: Build Documentation In, Don't Bolt It On
 
 - It's easy to produce good-looking documentation from the comment in source code. Restrict non-API commenting to
   discussing why something is done, it's purpose and goal. The code already shows how it is done, so commenting on this
@@ -30417,7 +30568,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.3.8.13. Challenges (Communicate)
+##### 1.12.3.8.13. Challenges (Communicate)
 
 - Make a point to read some of the many good books on communications between teams.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30428,7 +30579,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.4. A Pragmatic Approach
+### 1.12.4. A Pragmatic Approach
 
 - There are certain tips and tricks that apply at all levels of software development, processes that are virtually
   universal, and ideas that are almost axiomatic. However, these approaches are rarely documented; you'll mostly find
@@ -30436,14 +30587,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.1. The Essence of Good Design
+#### 1.12.4.1. The Essence of Good Design
 
 - The world is full of gurus and pundits, all eager to share their hard-earned wisdom when it comes to How to Design
   Software.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design
+##### 1.12.4.1.1. Tip 14: Good Design is Easier to Change Than Bad Design
 
 - A thing is well-designed if it adapts to the people who use it. For code, that means it must adapt by changing.
   Therefore, that means the ETC (Easier to Change) principle is required.
@@ -30455,7 +30606,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.1.2. ETC is a Value, Not a Rule
+##### 1.12.4.1.2. ETC is a Value, Not a Rule
 
 - Values are things that help you make decisions. When it comes to software, ETC is a guide, helping you choose between
   paths.
@@ -30482,7 +30633,7 @@ scale of modern systems. It has a few interesting implications:
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.1.3. Challenges (The Essence of Good Design)
+##### 1.12.4.1.3. Challenges (The Essence of Good Design)
 
 - Consider if a design principle you use regularly makes things easy to change.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30502,7 +30653,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.2. DRY - The Evils of Duplication
+#### 1.12.4.2. DRY - The Evils of Duplication
 
 - As programmers, we collect, organise, maintain, and harness knowledge. We document knowledge in specifications, we
   make it come alive in running code, and we use it to provide the checks needed during testing.
@@ -30532,21 +30683,21 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.1. Tip 15: DRY - Don't Repeat Yourself
+##### 1.12.4.2.1. Tip 15: DRY - Don't Repeat Yourself
 
 - If the same thing is expressed in multiple places, and you have to make an update, it isn't a question of whether
   you'll remember to remember every instance, it's a question of when you'll forget.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.2. DRY is More Than Code
+##### 1.12.4.2.2. DRY is More Than Code
 
 - DRY is about the duplication of knowledge, or intent. It's about expressing the same thing in two difference places,
   possibly in two totally different ways.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.3. Duplication in Code
+##### 1.12.4.2.3. Duplication in Code
 
 - Here's an example of code duplication:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30572,7 +30723,7 @@ scale of modern systems. It has a few interesting implications:
     end
   ```
 
-###### 1.11.4.2.3.1. Not All Code Duplication is Knowledge Duplication
+###### 1.12.4.2.3.1. Not All Code Duplication is Knowledge Duplication
 
 - The following is not an example of a duplication, as although the code is the same, the knowledge they represent is
   different. The two functions in the example validate two separate things, but just happen to have the same rules.
@@ -30590,14 +30741,14 @@ scale of modern systems. It has a few interesting implications:
     validate_min_integer(value, 0)
   ```
 
-##### 1.11.4.2.4. Duplication in Documentation
+##### 1.12.4.2.4. Duplication in Documentation
 
 - A comment that explains the functionality in source code is unnecessary duplication. It is almost certain that the
   comment and the code will be inconsistent with each other.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.2.4.1. DRY Violations in Data
+###### 1.12.4.2.4.1. DRY Violations in Data
 
 - The following data structure represents knowledge, but it can fall afoul of the DRY principle:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30688,7 +30839,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.5. Representational Duplication
+##### 1.12.4.2.5. Representational Duplication
 
 - Your code interfaces to the outside world. Each time the code externally, you introduce some kind of DRY violation:
   your code has to have knowledge that is also present in that external client. It needs to know the API, or the
@@ -30697,14 +30848,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.2.5.1. Duplication Across Internal APIs
+###### 1.12.4.2.5.1. Duplication Across Internal APIs
 
 - Look for tools that let you specify the API in some kind of neutral format. These tools will typically generate
   documentation, mock APIs, functional tests, and API clients.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.2.5.2. Duplication Across External APIs
+###### 1.12.4.2.5.2. Duplication Across External APIs
 
 - Public APIs are typically documented formally using something like OpenAPI. This allows you to import the API
   specification into your local API tools and integrate more reliably with the service. Consider creating and
@@ -30712,14 +30863,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.2.5.3. Duplication within Data Sources
+###### 1.12.4.2.5.3. Duplication within Data Sources
 
 - Rather than manually creating the code to contain stored data, you can generate the contains from the schema. Many
   persistence frameworks will do the heavy lifting for you.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.6. Interdeveloper Duplication
+##### 1.12.4.2.6. Interdeveloper Duplication
 
 - This is perhaps the hardest type of duplication to detect, handle, and mitigate.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -30745,14 +30896,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.2.7. Tip 16: Make It Easy to Rescue
+##### 1.12.4.2.7. Tip 16: Make It Easy to Rescue
 
 - You are aiming to foster an environment where it's easier to find and reuse existing stuff than to write it yourself.
   If it isn't easy, people won't do it. If you fail to reuse, you risk duplicating knowledge.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.3. Orthogonality
+#### 1.12.4.3. Orthogonality
 
 - Orthogonality is a critical concept if you want to produce systems that are easy to design, test, and extend.
   Unfortunately, the concept of orthogonality is rarely taught directly, it is often a an implicit feature of various
@@ -30760,7 +30911,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.1. What is Orthogonality?
+##### 1.12.4.3.1. What is Orthogonality?
 
 - "Orthogonality" is a term borrowed from geometry. Two lines are orthogonal if they meet at right angles. As one line
   moves along the `x` axis, it doesn't change its `y` position. As the other line moves along the `y` axis, it doesn't
@@ -30774,14 +30925,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.2. Benefits of Orthogonality
+##### 1.12.4.3.2. Benefits of Orthogonality
 
 - Non-orthogonal systems are inherently more complex to change and control. When components of a system are highly
   interdependent, there is no such thing as a local or a small fix.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.3. Tip 17: Eliminate Effects Between Things
+##### 1.12.4.3.3. Tip 17: Eliminate Effects Between Things
 
 - When components are isolated from one another, you know you can one without having to worry about the rest. As long
   as you don't change that component's external interfaces, you can be confident that you won't have any impacts that
@@ -30789,7 +30940,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.3.3.1. Gain Productivity
+###### 1.12.4.3.3.1. Gain Productivity
 
 - **Localised Changes**:
 
@@ -30813,7 +30964,7 @@ scale of modern systems. It has a few interesting implications:
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.3.3.2. Reduce Risk
+###### 1.12.4.3.3.2. Reduce Risk
 
 - **Isolated Code**:
 
@@ -30843,7 +30994,7 @@ scale of modern systems. It has a few interesting implications:
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.4. Design
+##### 1.12.4.3.4. Design
 
 - Most developers are already familiar with the need to design orthogonal systems, although they may use terms such as
   modular, component-based, and layered to describe the project structure and the process to create software.
@@ -30864,7 +31015,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.5. Toolkits & Libraries
+##### 1.12.4.3.5. Toolkits & Libraries
 
 - Be careful to preserve the orthogonality of your system as you introduce third-party toolkits and libraries. Choose
   your technologies wisely. When you bring in a toolkit or library, ask yourself whether it imposes changes on your
@@ -30874,7 +31025,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.6. Coding
+##### 1.12.4.3.6. Coding
 
 - You run the risk of reducing the orthogonality of your application every time you write code. You need to constantly
   monitor the larger context of the application to ensure you do not inadvertently reduce the application's
@@ -30924,7 +31075,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.7. Testing
+##### 1.12.4.3.7. Testing
 
 - An orthogonally designed and implemented system is easier to test. More of the testing can be performed at the
   individual module level, as the interactions between the system's components are formalised and limited.
@@ -30942,7 +31093,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.8. Orthogonality Through Documentation
+##### 1.12.4.3.8. Orthogonality Through Documentation
 
 - Orthogonality also applies to documentation. Content and presentation are the focus areas. With truly orthogonal
   documentation, you should be able to change the appearance dramatically without changing the content. Word processors
@@ -30950,14 +31101,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.3.9. Living with Orthogonality
+##### 1.12.4.3.9. Living with Orthogonality
 
 - Orthogonality is closely related to the DRY principle. With DRY, you're looking to minimise duplication within a
   system, whereas with orthogonality you reduce the interdependency among the system's components.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.3.9.1. Challenges (Living with Orthogonality)
+###### 1.12.4.3.9.1. Challenges (Living with Orthogonality)
 
 - Consider the difference between tools which gave a GUI and small but combinable command line utilities used at shell
   prompts. Which set is more orthogonal, and why? Why set is easier to combine with other tools to meet new challenges?
@@ -30970,9 +31121,9 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-###### 1.11.4.3.9.2. Exercises (Living with Orthogonality)
+###### 1.12.4.3.9.2. Exercises (Living with Orthogonality)
 
-###### 1.11.4.3.9.3. Exercise 1
+###### 1.12.4.3.9.3. Exercise 1
 
 - **Exercise 1**:
 
@@ -31044,7 +31195,7 @@ scale of modern systems. It has a few interesting implications:
     [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
       the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.4. Reversibility
+#### 1.12.4.4. Reversibility
 
 - Engineers prefer simple, singular solutions to problems.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31074,7 +31225,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.4.1. Tip 18: There Are No Final Decisions
+##### 1.12.4.4.1. Tip 18: There Are No Final Decisions
 
 - While many people try to keep their code flexible, you also need to think about maintaining flexibility in areas of
   architecture, deployment, and vendor integration.
@@ -31087,14 +31238,14 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.4.2. Tip 19: Forego Following Fads
+##### 1.12.4.4.2. Tip 19: Forego Following Fads
 
 - No one knows what the future may hold, especially not us. Enable your code to rock-n-roll: to "rock on" when it can,
   and to "roll with the punches" when it must.
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-##### 1.11.4.4.3. Challenges (Reversibility)
+##### 1.12.4.4.3. Challenges (Reversibility)
 
 - Suppose you have a cat in a closed box, along with a radioactive particle. The particle has exactly a 50% change of
   fissioning into two. If it does, the cat will be killed. If it doesn't, the cat will be okay. According to
@@ -31794,7 +31945,7 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.12. The Art of Readable Code
+## 1.13. The Art of Readable Code
 
 <details open>
 
@@ -33032,7 +33183,7 @@ scale of modern systems. It has a few interesting implications:
 
 </details>
 
-## 1.13. `vi` and `vim` Editors
+## 1.14. `vi` and `vim` Editors
 
 <details open>
 
@@ -33314,8 +33465,8 @@ scale of modern systems. It has a few interesting implications:
 
 -
   [O'Reilly: `vi` \& `vim` Editors Pocket Reference, 2nd Edition][
-    oreilly-vi--vim-editors-pocket-reference-2nd-edition]
- -->
+    oreilly-vi--vim-editors-pocket-reference-2nd-edition] -->
+
 </details>
 
 # 2. Cheat Sheets
@@ -38935,6 +39086,7 @@ class Rectangle:
 <!-- markdownlint-disable -->
 
 <!--
+
 # Online
 ## Command Line
 ### `bash`
@@ -39258,6 +39410,7 @@ TODO: Order in which to do this testing.
 ### Overview ()
 ### Tool Comparison ()
 ### Detailed Overview ()
+
 -->
 
 <!-- markdownlint-restore -->
