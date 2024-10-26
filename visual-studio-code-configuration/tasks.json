@@ -3,6 +3,11 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "Add/Update Section Numbers",
+            "command": "${command:markdown.extension.toc.addSecNumbers} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
+            "problemMatcher": []
+        },
+        {
             "label": "Update Markdown Table of Contents",
             "command": "${command:markdown.extension.toc.update} +when:editorLangId =~ /^markdown$|^rmd$|^quarto$/",
             "problemMatcher": []
@@ -20,6 +25,7 @@
         {
             "label": "Compound Markdown Tasks",
             "dependsOn": [
+                "Add/Update Section Numbers",
                 "Update Markdown Table of Contents",
                 "Format Document",
                 "Save All File Changes"
