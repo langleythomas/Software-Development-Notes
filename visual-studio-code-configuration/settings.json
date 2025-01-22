@@ -24,53 +24,15 @@
         "editor.autoIndent": "advanced",
         "diffEditor.ignoreTrimWhitespace": false
     },
+
     "accessibility.dimUnfocused.enabled": true,
+
     "breadcrumbs.enabled": true,
+
     "csharpextensions.privateMemberPrefix": "_",
+
     "cSpell.caseSensitive": true,
     "cSpell.checkLimit": 1000000,
-    "cSpell.enabledLanguageIds": [
-        "asciidoc",
-        "c",
-        "cpp",
-        "csharp",
-        "css",
-        "elixir",
-        "erlang",
-        "git-commit",
-        "go",
-        "graphql",
-        "handlebars",
-        "haskell",
-        "html",
-        "jade",
-        "java",
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "jupyter",
-        "latex",
-        "less",
-        "markdown",
-        "php",
-        "plaintext",
-        "python",
-        "pug",
-        "restructuredtext",
-        "rust",
-        "scala",
-        "scss",
-        "scminput",
-        "shellscript",
-        "swift",
-        "text",
-        "typescript",
-        "typescriptreact",
-        "vue",
-        "yaml",
-        "yml"
-    ],
     "cSpell.language": "en-GB",
     "cSpell.userWords": [
         "Aarakocra",
@@ -1137,6 +1099,7 @@
         "Zura",
         "zypper"
     ],
+
     "editor.bracketPairColorization.enabled": true,
     "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
     "editor.cursorBlinking": "phase",
@@ -1159,18 +1122,23 @@
     "editor.showFoldingControls": "always",
     "editor.stickyScroll.enabled": true,
     "editor.tabSize": 4,
+
     "extensions.experimental.affinity": {
         "yzhang.markdown-all-in-one": 1
     },
+
     "explorer.compactFolders": false,
     // Linux-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Linux distribution)
     // "files.dialog.defaultPath": "/home/thomas/Repos",
     // Windows-specific Settings (Uncomment to use these settings on an instance of Visual Studio Code installed on a Windows release)
     // "files.dialog.defaultPath": "C:\\Repos",
+
     "files.eol": "\n",
     "files.insertFinalNewline": true,
+
     "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
     "markdown.extension.toc.updateOnSave": false,
+
     "markdownlint.run": "onSave",
     "markdownlint.config": {
         "MD007": {
@@ -1190,8 +1158,11 @@
             "style": "fenced"
         }
     },
+
     "shellcheck.run": "onType",
+
     "telemetry.telemetryLevel": "off",
+
     "terminal.integrated.allowChords": false,
     "terminal.integrated.cursorBlinking": true,
     "terminal.integrated.cursorStyle": "line",
@@ -1280,7 +1251,9 @@
     },
     "terminal.integrated.stickyScroll.enabled": true,
     "terminal.integrated.tabs.title": "${process} > ${sequence}",
+
     "window.autoDetectColorScheme": true,
+
     "workbench.activityBar.location": "top",
     "workbench.colorTheme": "Dracula Pro Edition",
     "workbench.editor.showTabs": "multiple",
