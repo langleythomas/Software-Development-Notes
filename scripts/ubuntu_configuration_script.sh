@@ -1,6 +1,12 @@
 #!/usr/bin/env bash
 
 #######################################################################################################################
+############################################## Determine Linux Distro Base ############################################
+#######################################################################################################################
+
+declare -r LINUX_DISTRO_BASE=$(cat "/proc/version")
+
+#######################################################################################################################
 ################################################ Script Output Function ###############################################
 #######################################################################################################################
 
@@ -22,7 +28,7 @@ function log_output() {
 ##########################################  Packaging Tool Refresh Functions ##########################################
 #######################################################################################################################
 
-function update_and_upgrade_apt() {
+function update_upgrade_apt() {
     log_output "Updating and updating releases in apt.\n"
 
     sudo apt update
@@ -33,6 +39,12 @@ function update_flatpak() {
     log_output "Updating releases in Flatpak.\n"
 
     flatpak update
+}
+
+function update_upgrade_pacman() {
+    log_output "Refreshing the package repositories and updating their contents for the Pacman package manager."
+
+    sudo pacman --sync --refresh --sysupgrade
 }
 
 function update_snap() {
@@ -52,7 +64,7 @@ function remove_nvidia_drivers() {
     # driver issues. The commands in this function can resolve this issue. These commands can only be effective in a
     # fresh OS installation.
 
-    update_and_upgrade_apt
+    update_upgrade_apt
 
     log_output "Removing Nvidia drivers.\n"
 
@@ -71,63 +83,75 @@ function configure_graphics_drivers() {
 #######################################################################################################################
 
 function install_docker() {
-    update_and_upgrade_apt
-
     log_output "Installing Docker.\n"
 
-    # Add Docker's official GPG key:
-    sudo apt install ca-certificates --yes
-    sudo apt show ca-certificates
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    sudo apt install curl --yes
-    sudo apt show curl
+        sudo pacman --sync docker --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
 
-    sudo install \
-        --mode=0755 \
-        --directory="/etc/apt/keyrings"
+        # Add Docker's official GPG key:
+        sudo apt install ca-certificates --yes
+        sudo apt show ca-certificates
 
-    sudo curl \
-        --fail \
-        --silent \
-        --show-error \
-        --location "https://download.docker.com/linux/ubuntu/gpg" \
-        --output "/etc/apt/keyrings/docker.asc"
+        sudo apt install curl --yes
+        sudo apt show curl
 
-    sudo chmod a+r /etc/apt/keyrings/docker.asc
+        sudo install \
+            --mode=0755 \
+            --directory="/etc/apt/keyrings"
 
-    # Add the repository to Apt sources:
-    # shellcheck disable=SC1091
-    echo \
-        "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
-        https://download.docker.com/linux/ubuntu \
-        $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
-        sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+        sudo curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location "https://download.docker.com/linux/ubuntu/gpg" \
+            --output "/etc/apt/keyrings/docker.asc"
 
-    # Install Docker Engine.
-    sudo apt install docker-ce --yes
-    sudo apt show docker-ce
+        sudo chmod a+r /etc/apt/keyrings/docker.asc
 
-    sudo apt install docker-ce-cli --yes
-    sudo apt show docker-ce-cli
+        # Add the repository to Apt sources:
+        # shellcheck disable=SC1091
+        echo \
+            "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] \
+            https://download.docker.com/linux/ubuntu \
+            $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |
+            sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-    sudo apt install containerd.io --yes
-    sudo apt show containerd.io
+        # Install Docker Engine.
+        sudo apt install docker-ce --yes
+        sudo apt show docker-ce
 
-    sudo apt install docker-buildx-plugin --yes
-    sudo apt show docker-buildx-plugin
+        sudo apt install docker-ce-cli --yes
+        sudo apt show docker-ce-cli
 
-    sudo apt install docker-compose-plugin --yes
-    sudo apt show docker-compose-plugin
+        sudo apt install containerd.io --yes
+        sudo apt show containerd.io
+
+        sudo apt install docker-buildx-plugin --yes
+        sudo apt show docker-buildx-plugin
+
+        sudo apt install docker-compose-plugin --yes
+        sudo apt show docker-compose-plugin
+    fi
 
     # Add user to Docker group
     sudo usermod --append --groups "docker" "${USER}"
     newgrp "docker"
 }
 
-function start_docker() {
+function configure_docker_startup() {
     log_output "Starting Docker.\n"
 
-    sudo service docker start
+    # Start Docker
+    sudo systemctl start docker.service
+
+    # Configure Docker to start up on initial system boot,
+    sudo systemctl enable docker.service
+
+    # Check status of the Docker dameon.
     systemctl status docker.service
 }
 
@@ -140,14 +164,20 @@ function test_docker_installation() {
 function install_minikube() {
     log_output "Installing Minikube.\n"
 
-    curl \
-        --location \
-        --output "minikube" \
-        "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    chmod +x "minikube"
+        sudo pacman --sync minikube --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        curl \
+            --location \
+            --output "minikube" \
+            "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
 
-    sudo mv --verbose "minikube" "/usr/local/bin/"
+        chmod +x "minikube"
+
+        sudo mv --verbose "minikube" "/usr/local/bin/"
+    fi
 }
 
 function start_minikube() {
@@ -156,40 +186,59 @@ function start_minikube() {
     minikube start
 }
 
+function test_minikube_installation() {
+    log_output "Testing Minikube Installation.\n"
+
+    systemctl status minikube.service
+}
+
 function install_kubernetes() {
     log_output "Installing Kubernetes.\n"
 
-    local -r latest_kubernetes_release="$(curl --silent \"https://storage.googleapis.com/kubernetes-release/release/stable.txt\")"
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    curl \
-        --location \
-        --output \
-        "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
+        sudo pacman --sync kubectl --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        local -r latest_kubernetes_release="$(curl --silent \"https://storage.googleapis.com/kubernetes-release/release/stable.txt\")"
 
-    chmod +x ./"kubectl"
+        curl \
+            --location \
+            --output \
+            "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
 
-    sudo mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
+        chmod +x ./"kubectl"
+
+        sudo mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
+    fi
 }
 
 function test_kubernetes_installation() {
     log_output "Testing Kubernetes Installation.\n"
 
     kubectl version
+
     kubectl cluster-info
 }
 
 function install_helm() {
     log_output "Installing Helm.\n"
 
-    local -r install_helm_file_name="get_helm.sh"
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "${install_helm_file_name}"
+        sudo pacman --sync helm --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        local -r install_helm_file_name="get_helm.sh"
 
-    chmod 700 "${install_helm_file_name}"
+        curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "${install_helm_file_name}"
 
-    ./"${install_helm_file_name}"
+        chmod 700 "${install_helm_file_name}"
 
-    rm --force --verbose "${install_helm_file_name}"
+        ./"${install_helm_file_name}"
+
+        rm --force --verbose "${install_helm_file_name}"
+    fi
 }
 
 function test_helm_installation() {
@@ -206,11 +255,12 @@ function test_helm_installation() {
 
 function install_configure_deployment_tools() {
     install_docker
-    start_docker
+    configure_docker_startup
     test_docker_installation
 
     install_minikube
     start_minikube
+    test_minikube_installation
 
     install_kubernetes
     test_kubernetes_installation
@@ -226,27 +276,52 @@ function install_configure_deployment_tools() {
 #######################################################################################################################
 
 function install_dot_net_sdk() {
-    update_and_upgrade_apt
-
     log_output "Installing the .NET SDK for C# development.\n"
 
-    sudo dpkg --purge packages-microsoft-prod
-    sudo dpkg --install packages-microsoft-prod.deb
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    sudo apt install dotnet-sdk-7.0 --yes
-    sudo apt show dotnet-sdk-7.0
+        sudo pacman --sync dotnet-sdk --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo dpkg --purge packages-microsoft-prod
+        sudo dpkg --install packages-microsoft-prod.deb
+
+        sudo apt install dotnet-sdk-7.0 --yes
+        sudo apt show dotnet-sdk-7.0
+    fi
 
     dotnet --list-sdks
     dotnet --info
 }
 
 function install_dot_net_runtime() {
-    update_and_upgrade_apt
+    log_output "Installing the .NET Runtime for C# development.\n"
 
-    log_output "Installing .NET Runtime.\n"
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    sudo apt install aspnetcore-runtime-7.0 --yes
-    sudo apt show aspnetcore-runtime-7.0
+        sudo pacman --sync dotnet-runtime --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install aspnetcore-runtime-7.0 --yes
+        sudo apt show aspnetcore-runtime-7.0
+    fi
+
+    dotnet --list-runtimes
+    dotnet --info
+}
+
+function install_asp_net_runtime() {
+    log_output "Installing the ASP .NET Runtime for C# development.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync aspnet-runtime --noconfirm
+    fi
 
     dotnet --list-runtimes
     dotnet --info
@@ -255,6 +330,7 @@ function install_dot_net_runtime() {
 function install_dot_net_development_prerequisites() {
     install_dot_net_sdk
     install_dot_net_runtime
+    install_asp_net_runtime
 }
 
 
@@ -264,64 +340,106 @@ function install_dot_net_development_prerequisites() {
 #######################################################################################################################
 
 function install_nodejs_runtime() {
-    update_and_upgrade_apt
-
     log_output "Installing the Node JS runtime for JavaScript development.\n"
 
-    sudo apt install ca-certificates --yes
-    sudo apt show ca-certificates
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    sudo apt install curl --yes
-    sudo apt show curl
+        sudo pacman --sync nodejs --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
 
-    sudo apt install gnupg --yes
-    sudo apt show gnupg
+        sudo apt install ca-certificates --yes
+        sudo apt show ca-certificates
 
-    sudo mkdir --parents "/etc/apt/keyrings"
+        sudo apt install curl --yes
+        sudo apt show curl
 
-    curl \
-        --fail \
-        --silent \
-        --show-error \
-        --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" |
-        sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
+        sudo apt install gnupg --yes
+        sudo apt show gnupg
 
-    local -r node_version=20
+        sudo mkdir --parents "/etc/apt/keyrings"
 
-    echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
-        https://deb.nodesource.com/node_$node_version.x nodistro main" |
-        sudo tee /etc/apt/sources.list.d/nodesource.list
+        curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location "https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key" |
+            sudo gpg --dearmor --output "/etc/apt/keyrings/nodesource.gpg"
 
-    sudo apt install nodejs --yes
-    sudo apt show nodejs
+        local -r node_version=20
+
+        echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] \
+            https://deb.nodesource.com/node_$node_version.x nodistro main" |
+            sudo tee /etc/apt/sources.list.d/nodesource.list
+
+        sudo apt install nodejs --yes
+        sudo apt show nodejs
+    fi
+
+    node --version
+}
+
+function install_nodejs_runtime() {
+    log_output "Installing the Node Package Manager for JavaScript development.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync npm --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install npm --yes
+        sudo apt show npm
+    fi
+
+    npm --version
 }
 
 function install_javascript_development_prerequisites() {
     install_nodejs_runtime
+    install_npm
 }
 
 
 
 #######################################################################################################################
-################################# JavaScript Development Prerequisite Installation ####################################
+################################### Python Development Prerequisite Installation ######################################
 #######################################################################################################################
 
 function install_python3() {
-    update_and_upgrade_apt
-
     log_output "Installing Python 3.\n"
 
-    sudo apt install python3 --yes
-    sudo apt show python3
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync python --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install python3 --yes
+        sudo apt show python3
+    fi
+
+    python --version
 }
 
 function install_python3_pip() {
-    update_and_upgrade_apt
-
     log_output "Installing Python 3 PIP.\n"
 
-    sudo apt install python3-pip --yes
-    sudo apt show python3-pip
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync python-pip --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install python3-pip --yes
+        sudo apt show python3-pip
+    fi
+
+    pip --version
 }
 
 function install_python_development_prerequisites() {
@@ -336,12 +454,19 @@ function install_python_development_prerequisites() {
 #######################################################################################################################
 
 function install_git() {
-    update_and_upgrade_apt
-
     log_output "Installing Git.\n"
 
-    sudo apt install git --yes
-    sudo apt show git
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync git --noconfirm
+        git --version
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install git --yes
+        sudo apt show git
+    fi
 
     git --version
 }
@@ -405,22 +530,23 @@ function configure_linux_system_overrides() {
 #######################################################################################################################
 
 function install_vim() {
-    update_and_upgrade_apt
-
     log_output "Installing vim.\n"
-    log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard\n."
-    log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
 
-    sudo apt install vim-gtk3 --yes
-    sudo apt show vim-gtk3
-}
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-function install_vundle() {
-    local -r dot_vim_directory_path="${1}"
+        sudo pacman --sync vim --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
 
-    log_output "Installing Vundle, the Vim package manager, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
+        log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard\n."
+        log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases.\n"
 
-    git clone "https://github.com/VundleVim/Vundle.vim.git" "${dot_vim_directory_path}/bundle/Vundle.vim"
+        sudo apt install vim-gtk3 --yes
+        sudo apt show vim-gtk3
+    fi
+
+    vim --version
 }
 
 function configure_vim() {
@@ -446,6 +572,14 @@ function configure_vim() {
     # executing the vim command in a terminal.
 }
 
+function install_vundle() {
+    local -r dot_vim_directory_path="${1}"
+
+    log_output "Installing Vundle, the Vim package manager, as documented in: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage\n"
+
+    git clone "https://github.com/VundleVim/Vundle.vim.git" "${dot_vim_directory_path}/bundle/Vundle.vim"
+}
+
 function install_vim_dracula_theme() {
     log_output "Installing the Dracula Vim theme, as documented in: https://draculatheme.com/vim\n"
 
@@ -463,15 +597,23 @@ function install_vim_markdown_preview() {
 function install_neovim() {
     log_output "Installing Neovim.\n"
 
-    log_output "Downloading Neovim AppImage.\n"
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
-    chmod u+x "nvim.appimage"
+        sudo pacman --sync neovim --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        log_output "Downloading Neovim AppImage.\n"
 
-    log_output "Moving Neovim Making it Globally Accessible.\n"
+        curl --location --remote-name "https://github.com/neovim/neovim/releases/latest/download/nvim.appimage"
+        chmod u+x "nvim.appimage"
 
-    sudo mkdir --parents "/opt/nvim"
-    sudo mv --verbose "nvim.appimage" "/opt/nvim/nvim"
+        log_output "Moving Neovim Making it Globally Accessible.\n"
+
+        sudo mkdir --parents "/opt/nvim"
+        sudo mv --verbose "nvim.appimage" "/opt/nvim/nvim"
+    fi
+
+    nvim --version
 }
 
 function configure_neovim() {
@@ -493,79 +635,71 @@ function configure_neovim() {
 }
 
 function install_neovim_system_clipboard_dependency() {
-    update_and_upgrade_apt
+    if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        log_output "Installing xclip, in order to enable neovim's use of the system clipboard.\n"
 
-    log_output "Installing xclip, in order to enable neovim's use of the system clipboard.\n"
+        update_upgrade_apt
 
-    sudo apt install xclip --yes
-    sudo apt show xclip
+        sudo apt install xclip --yes
+        sudo apt show xclip
+    fi
 }
 
 function install_visual_studio_code() {
     log_output "Installing Visual Studio Code.\n"
 
-    update_and_upgrade_apt
-    sudo apt install wget --yes
-    sudo apt show wget
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    update_and_upgrade_apt
-    sudo apt install gpg --yes
-    sudo apt show gpg
+        sudo pacman --sync code --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install wget --yes
+        sudo apt show wget
 
-    wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
-        | gpg --dearmor > "packages.microsoft.gpg"
+        update_upgrade_apt
+        sudo apt install gpg --yes
+        sudo apt show gpg
 
-    sudo install -D \
-        --owner=root \
-        --group=root \
-        --mode=644 \
-        "packages.microsoft.gpg" \
-        "/etc/apt/keyrings/packages.microsoft.gpg"
+        wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
+            | gpg --dearmor > "packages.microsoft.gpg"
 
-    echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] \
-        https://packages.microsoft.com/repos/code stable main" |
-        sudo tee /etc/apt/sources.list.d/vscode.list > "/dev/null"
+        sudo install -D \
+            --owner=root \
+            --group=root \
+            --mode=644 \
+            "packages.microsoft.gpg" \
+            "/etc/apt/keyrings/packages.microsoft.gpg"
 
-    rm \
-        --force \
-        --verbose \
-        "packages.microsoft.gpg"
+        echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] \
+            https://packages.microsoft.com/repos/code stable main" |
+            sudo tee /etc/apt/sources.list.d/vscode.list > "/dev/null"
 
-    update_and_upgrade_apt
-    sudo apt install apt-transport-https --yes
-    sudo apt show apt-transport-https
+        rm \
+            --force \
+            --verbose \
+            "packages.microsoft.gpg"
 
-    update_and_upgrade_apt
-    sudo apt install code --yes
-    sudo apt show code
+        update_upgrade_apt
+        sudo apt install apt-transport-https --yes
+        sudo apt show apt-transport-https
 
-    # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
-    # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
-    # rm -r ~/.config/Code/GPUCache
-}
+        update_upgrade_apt
+        sudo apt install code --yes
+        sudo apt show code
 
-function install_sublime_text() {
-    update_and_upgrade_apt
-
-    log_output "Installing Sublime Text.\n"
-
-    wget --quiet --output-document="-" "https://download.sublimetext.com/sublimehq-pub.gpg" \
-        | gpg --dearmor \
-        | sudo tee "/etc/apt/trusted.gpg.d/sublimehq-archive.gpg" > "/dev/null"
-
-    echo "deb https://download.sublimetext.com/ apt/stable/" \
-        | sudo tee "/etc/apt/sources.list.d/sublime-text.list"
-
-    sudo apt install sublime-text
-    sudo apt show sublime-text
+        # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
+        # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
+        # rm -r ~/.config/Code/GPUCache
+    fi
 }
 
 function install_configure_text_editors() {
-    local -r vimrc_file_path="${HOME}/.bashrc"
+    local -r vimrc_file_path="${HOME}/.vimrc"
     local -r dot_vim_directory_path="${HOME}/.vim"
     install_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
-    install_vundle "${dot_vim_directory_path}"
     configure_vim "${vimrc_file_path}" "${dot_vim_directory_path}"
+    install_vundle "${dot_vim_directory_path}"
     install_vim_dracula_theme
     install_vim_markdown_preview "${vimrc_file_path}"
 
@@ -574,8 +708,6 @@ function install_configure_text_editors() {
     install_neovim_system_clipboard_dependency
 
     install_visual_studio_code
-
-    install_sublime_text
 }
 
 
@@ -585,19 +717,31 @@ function install_configure_text_editors() {
 #######################################################################################################################
 
 function install_intellij() {
-    update_snap
-
     log_output "Installing IntelliJ IDEA Community Edition"
 
-    sudo snap install intellij-idea-community --classic
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync intellij-idea-community-edition --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_snap
+
+        sudo snap install intellij-idea-community --classic
+    fi
 }
 
 function install_pycharm() {
-    update_snap
+    log_output "Installing PyCharm Community Edition"
 
-    log_output "Installing PyCharm Community Edition."
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    sudo snap install pycharm-community --classic
+        sudo pacman --sync pycharm-community-edition --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_snap
+
+        sudo snap install intellij-idea-community --classic
+    fi
 }
 
 function install_integrated_development_environments() {
@@ -612,16 +756,14 @@ function install_integrated_development_environments() {
 ############################################# Browser Installation ####################################################
 #######################################################################################################################
 
-function install_chrome() {
-    update_flatpak
+function install_brave() {
+    log_output "Installing Brave\n"
 
-    log_output "Installing Chrome.\n"
-
-    flatpak install flathub com.google.Chrome --yes
+    curl --fail --silent --show-error "https://dl.brave.com/install.sh" | sh
 }
 
-function install_browsers() {
-    install_chrome
+function install_browser() {
+    install_brave
 }
 
 
@@ -631,11 +773,17 @@ function install_browsers() {
 #######################################################################################################################
 
 function install_discord() {
-    update_flatpak
-
     log_output "Installing Discord.\n"
 
-    flatpak install flathub com.discordapp.Discord --yes
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync discord --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install flathub com.discordapp.Discord --yes
+    fi
 }
 
 function install_social_platforms() {
@@ -649,12 +797,14 @@ function install_social_platforms() {
 #######################################################################################################################
 
 function install_gnome_tweaks() {
-    update_and_upgrade_apt
+    if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        log_output "Installing GNOME Tweaks.\n"
 
-    log_output "Installing GNOME Tweaks.\n"
+        update_upgrade_apt
 
-    sudo apt install gnome-tweaks
-    sudo apt show gnome-tweaks
+        sudo apt install gnome-tweaks
+        sudo apt show gnome-tweaks
+    fi
 }
 
 function install_ui_configuration_tools() {
@@ -668,11 +818,17 @@ function install_ui_configuration_tools() {
 #######################################################################################################################
 
 function install_vlc() {
-    update_flatpak
-
     log_output "Installing VLC.\n"
 
-    flatpak install flathub org.videolan.VLC --yes
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync vlc --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install flathub org.videolan.VLC --yes
+    fi
 }
 
 function install_media_players() {
@@ -686,12 +842,18 @@ function install_media_players() {
 #######################################################################################################################
 
 function install_guake() {
-    update_and_upgrade_apt
-
     log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key.\n"
 
-    sudo apt install guake --yes
-    sudo apt show guake
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync guake --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install guake --yes
+        sudo apt show guake
+    fi
 }
 
 function configure_guake() {
@@ -716,11 +878,14 @@ function install_configure_terminals() {
 #######################################################################################################################
 
 function autoremove_unused_dependencies() {
-    update_and_upgrade_apt
+    if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        log_output "Autoremoving Unused Dependencies.\n"
 
-    log_output "Autoremoving Unused Dependencies.\n"
+        update_and_upgrade_apt
 
-    sudo apt autoremove --yes
+        sudo apt autoremove --yes
+    fi
+
 }
 
 function remove_unused_dependencies() {
@@ -733,36 +898,32 @@ function remove_unused_dependencies() {
 ########################################### Execute Other Functions ###################################################
 #######################################################################################################################
 
-function configure_ubuntu() {
-    configure_graphics_drivers
+# configure_graphics_drivers
 
-    install_configure_deployment_tools
+# install_configure_deployment_tools
 
-    install_dot_net_development_prerequisites
+# install_dot_net_development_prerequisites
 
-    install_javascript_development_prerequisites
+# install_javascript_development_prerequisites
 
-    install_python_development_prerequisites
+# install_python_development_prerequisites
 
-    install_configure_version_control_tool
+# install_configure_version_control_tool
 
-    configure_linux_system_overrides
+# configure_linux_system_overrides
 
-    install_configure_text_editors
+# install_configure_text_editors
 
-    install_integrated_development_environments
+# install_integrated_development_environments
 
-    install_browsers
+# install_browser
 
-    install_social_platforms
+# install_social_platforms
 
-    install_ui_configuration_tools
+# install_ui_configuration_tools
 
-    install_media_players
+# install_media_players
 
-    install_configure_terminals
+# install_configure_terminals
 
-    remove_unused_dependencies
-}
-
-configure_ubuntu
+# remove_unused_dependencies
