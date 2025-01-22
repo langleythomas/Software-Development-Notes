@@ -29,28 +29,24 @@ function log_output() {
 #######################################################################################################################
 
 function update_upgrade_apt() {
-    log_output "Updating and updating releases in apt.\n"
-
     sudo apt update
     sudo apt upgrade --yes
 }
 
 function update_flatpak() {
-    log_output "Updating releases in Flatpak.\n"
-
     flatpak update
 }
 
 function update_upgrade_pacman() {
-    log_output "Refreshing the package repositories and updating their contents for the Pacman package manager."
-
     sudo pacman --sync --refresh --sysupgrade
 }
 
 function update_snap() {
-    log_output "Updating releases in Snap.\n"
-
     sudo snap refresh
+}
+
+function update_upgrade_aur() {
+    yay --sync --refresh --sysupgrade
 }
 
 
@@ -60,16 +56,22 @@ function update_snap() {
 #######################################################################################################################
 
 function remove_nvidia_drivers() {
-    # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by Nvidia
-    # driver issues. The commands in this function can resolve this issue. These commands can only be effective in a
-    # fresh OS installation.
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
 
-    update_upgrade_apt
+        sudo pacman --sync docker --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by
+        # Nvidia  driver issues. The commands in this function can resolve this issue. These commands can only be
+        # effective in a fresh OS installation.
 
-    log_output "Removing Nvidia drivers.\n"
+        log_output "Removing Nvidia drivers.\n"
 
-    sudo apt purge nvidia* --yes
-    sudo ubuntu-drivers autoinstall --yes
+        update_upgrade_apt
+
+        sudo apt purge nvidia* --yes
+        sudo ubuntu-drivers autoinstall --yes
+    fi
 }
 
 function configure_graphics_drivers() {
@@ -189,7 +191,7 @@ function start_minikube() {
 function test_minikube_installation() {
     log_output "Testing Minikube Installation.\n"
 
-    systemctl status minikube.service
+    minikube status
 }
 
 function install_kubernetes() {
@@ -450,6 +452,32 @@ function install_python_development_prerequisites() {
 
 
 #######################################################################################################################
+#################################### Ruby Development Prerequisite Installation #######################################
+#######################################################################################################################
+
+function install_ruby() {
+    log_output "Installing Ruby.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync ruby --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo apt install ruby-full --yes
+    fi
+
+    ruby --version
+}
+
+function install_ruby_development_prerequisites() {
+    install_ruby
+}
+
+
+
+#######################################################################################################################
 ###################################### Version Control Installation & Configuration ###################################
 #######################################################################################################################
 
@@ -649,9 +677,9 @@ function install_visual_studio_code() {
     log_output "Installing Visual Studio Code.\n"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
+        update_upgrade_aur
 
-        sudo pacman --sync code --noconfirm
+        yay --sync visual-studio-code-bin --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
         sudo apt install wget --yes
@@ -874,6 +902,67 @@ function install_configure_terminals() {
 
 
 #######################################################################################################################
+####################################### Terminal Installation & Configuration #########################################
+#######################################################################################################################
+
+function install_openrazer_daemon() {
+    log_output "Installing OpenRazer Daemon to work with Polychromatic.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync openrazer-daemon --noconfirm
+        sudo pacman --sync linux-headers --noconfirm
+        sudo gpasswd --add "${USER}" plugdev
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo add-apt-repository ppa:openrazer/stable
+        sudo add-apt-repository ppa:polychromatic/stable
+
+        update_upgrade_apt
+
+        sudo apt install polychromatic --yes
+    fi
+}
+
+function install_polychromatic() {
+    log_output "Installing Polychromatic.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync polychromatic --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo add-apt-repository ppa:openrazer/stable
+        sudo add-apt-repository ppa:polychromatic/stable
+
+        update_upgrade_apt
+
+        sudo apt install polychromatic --yes
+    fi
+}
+
+function configure_guake() {
+    log_output "Configuring Guake.\n"
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/guake-configuration/guake_configuration.conf" \
+        >> "${HOME}/Downloads/guake_configuration.conf"
+
+    guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
+}
+
+function install_peripheral_tools() {
+    install_openrazer_daemon
+    install_polychromatic
+}
+
+
+
+#######################################################################################################################
 ##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
 #######################################################################################################################
 
@@ -908,6 +997,8 @@ function remove_unused_dependencies() {
 
 # install_python_development_prerequisites
 
+# install_ruby_development_prerequisites
+
 # install_configure_version_control_tool
 
 # configure_linux_system_overrides
@@ -925,5 +1016,7 @@ function remove_unused_dependencies() {
 # install_media_players
 
 # install_configure_terminals
+
+# install_peripheral_tools # A restart is required after running these commands, in order for the changes to take effect.
 
 # remove_unused_dependencies
