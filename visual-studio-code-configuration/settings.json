@@ -1102,22 +1102,17 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorStyle": "line",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "'Jetbrains Mono NL Light', 'Consolas', 'Droid Sans Mono', 'monospace'",
   "editor.fontLigatures": false,
-  "editor.fontSize": 13,
   "editor.guides.indentation": true,
   "editor.indentSize": "tabSize",
   "editor.insertSpaces": true,
-  "editor.letterSpacing": 0.3,
   "editor.lightbulb.enabled": "on",
-  "editor.lineHeight": 1.7,
   "editor.minimap.showSlider": "always",
   "editor.occurrencesHighlight": "multiFile",
   "editor.rulers": [120],
   "editor.selectionClipboard": false,
   "editor.showFoldingControls": "always",
   "editor.stickyScroll.enabled": true,
-  "editor.tabSize": 4,
 
   "extensions.experimental.affinity": {
     "yzhang.markdown-all-in-one": 1
@@ -1168,8 +1163,6 @@
   "terminal.integrated.defaultProfile.windows": "Ubuntu (WSL)",
   "terminal.integrated.enableMultiLinePasteWarning": "always",
   "terminal.integrated.hideOnStartup": "always",
-  "terminal.integrated.letterSpacing": 0.3,
-  "terminal.integrated.lineHeight": 1.2,
   "terminal.integrated.middleClickBehavior": "paste",
   "terminal.integrated.mouseWheelZoom": true,
   "terminal.integrated.profiles.linux": {
