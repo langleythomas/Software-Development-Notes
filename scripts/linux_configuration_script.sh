@@ -4,7 +4,8 @@
 ############################################## Determine Linux Distro Base ############################################
 #######################################################################################################################
 
-declare -r LINUX_DISTRO_BASE=$(cat "/proc/version")
+LINUX_DISTRO_BASE=$(cat "/proc/version")
+declare -r LINUX_DISTRO_BASE
 
 #######################################################################################################################
 ################################################ Script Output Function ###############################################
@@ -153,7 +154,7 @@ function configure_docker_startup() {
     # Configure Docker to start up on initial system boot,
     sudo systemctl enable docker.service
 
-    # Check status of the Docker dameon.
+    # Check status of the Docker daemon.
     systemctl status docker.service
 }
 
@@ -382,7 +383,7 @@ function install_nodejs_runtime() {
     node --version
 }
 
-function install_nodejs_runtime() {
+function install_npm() {
     log_output "Installing the Node Package Manager for JavaScript development.\n"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
@@ -943,16 +944,6 @@ function install_polychromatic() {
 
         sudo apt install polychromatic --yes
     fi
-}
-
-function configure_guake() {
-    log_output "Configuring Guake.\n"
-
-    curl \
-        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/main/guake-configuration/guake_configuration.conf" \
-        >> "${HOME}/Downloads/guake_configuration.conf"
-
-    guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
 }
 
 function install_peripheral_tools() {
