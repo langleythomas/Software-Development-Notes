@@ -33559,7 +33559,7 @@ scale of modern systems. It has a few interesting implications:
 |          `glances`          |                                                              Eye on your system.                                                               |                   <https://www.mankier.com/1/glances>                   |            TBD.             |                                 TBD.                                  |                                  TBD.                                   |
 |          `gpasswd`          |                                                  Administer `/etc/group` and `/etc/gshadow`.                                                   |                   <https://www.mankier.com/1/gpasswd>                   |            TBD.             |                                 TBD.                                  |                                  TBD.                                   |
 |           `grep`            |                                                        Print lines that match patterns.                                                        |                    <https://www.mankier.com/1/grep>                     |            TBD.             |                                 TBD.                                  |                                  TBD.                                   |
-|           `grype`           |                                          Vulnerability scanner for container images and filesystems.                                           |                                                                         |            TBD.             |   <https://github.com/anchore/grype?tab=readme-ov-file#recommended>   |                                  TBD.                                   |
+|           `grype`           |                                          Vulnerability scanner for container images and filesystems.                                           |     <https://github.com/anchore/grype-db?tab=readme-ov-file#usage>      |            TBD.             |   <https://github.com/anchore/grype?tab=readme-ov-file#recommended>   |                                  TBD.                                   |
 |         `grype-db`          |                         Application to create a Grype vulnerability database from upstream vulnerability data sources.                         |     <https://github.com/anchore/grype-db?tab=readme-ov-file#usage>      |            TBD.             | <https://github.com/anchore/grype-db?tab=readme-ov-file#installation> |                                  TBD.                                   |
 |          `gunzip`           |                                                                Alias of `gzip`.                                                                |                    <https://www.mankier.com/1/gzip>                     |            TBD.             |                                 TBD.                                  |                                  TBD.                                   |
 |           `gzip`            |                                                           Compress or expand files.                                                            |                    <https://www.mankier.com/1/gzip>                     |            TBD.             |                                 TBD.                                  |                                  TBD.                                   |
@@ -33728,6 +33728,14 @@ scale of modern systems. It has a few interesting implications:
 ### 2.2.2. `du`
 
 ### 2.2.3. `git`
+
+#### 2.2.3.1. GitHub
+
+##### 2.2.3.1.1. Reset Local Changes & Update Main Branch
+
+```bash
+git checkout main && git reset --hard origin/main && git fetch && git pull
+```
 
 ### 2.2.4. `helm`
 
