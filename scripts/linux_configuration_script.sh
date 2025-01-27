@@ -954,6 +954,217 @@ function install_peripheral_tools() {
 
 
 #######################################################################################################################
+####################################### Gaming Software & Utility Installation ########################################
+#######################################################################################################################
+
+function install_steam() {
+    log_output "Installing Steam.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync melonds --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+        flatpak install flathub net.kuribo64.melonDS
+    fi
+}
+
+function install_gaming_software_utilities() {
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync steam --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+
+        sudo add-apt-repository "multiverse"
+
+        update_and_upgrade_apt
+
+        sudo apt install steam --yes
+    fi
+}
+
+
+
+#######################################################################################################################
+############################################ Gaming Emulator Installation #############################################
+#######################################################################################################################
+
+function install_gameboy_emulator() {
+    log_output "Installing the emulator, for GameBoy, GameBoy Color, and GameBoy Advance emulation.\n"
+
+    curl "https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-appimage-x64.appimage" \
+        --output "mGBA-appimage-x64.appimage"
+}
+
+function install_ds_emulator() {
+    log_output "Installing the melonDS, for Nintendo DS emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync melonds --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+        flatpak install flathub net.kuribo64.melonDS
+    fi
+}
+
+function install_gamecube_wii_emulator() {
+    log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        sudo pacman --sync cemu --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak remote-add --if-not-exists "flathub" "https://dl.flathub.org/repo/flathub.flatpakrepo"
+
+        flatpak install flathub org.DolphinEmu.dolphin-emu --yes
+    fi
+}
+
+function install_wii_u_emulator() {
+    log_output "Installing the Cemu emulator, for Wii U emulation. Setup guide: https://wiki.cemu.info/wiki/Installation_guide\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync cemu --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install flathub info.cemu.Cemu
+    fi
+}
+
+function install_switch_emulator() {
+    log_output "Installing the Suyu emulator. Setup guide: https://suyu-emu.com/how-to-setup/\n"
+
+    curl "https://git.suyu.dev/suyu/suyu/releases/download/latest/Suyu-Linux_x86_64.AppImage" \
+        --output "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
+}
+
+function install_xbox_emulator() {
+    log_output "Installing the Xemu emulator, for Xbox emulation. Setup guide: https://xemu.app/docs\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync xemu --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install app.xemu.xemu --yes
+    fi
+}
+
+# function install_xbox_360_emulator() {
+#     log_output "Installing the Xenia emulator, for Xbox 360 emulation. Setup guide: https://github.com/xenia-canary/xenia-canary/wiki/Quickstart\n"
+
+#     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+
+#     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+
+#     fi
+# }
+
+function install_psp_emulator() {
+    log_output "Installing the emulator, PlayStation Portable emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+
+        sudo pacman --sync ppsspp --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install flathub org.ppsspp.PPSSPP
+    fi
+}
+
+function install_playstation_emulator() {
+    log_output "Installing the DuckStation emulator, for PlayStation emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yarn --sync duckstation --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
+
+        flatpak install flathub org.duckstation.DuckStation
+    fi
+}
+
+function install_playstation2_emulator() {
+    log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yarn --sync pcxs2 --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install net.pcsx2.PCSX2
+    fi
+}
+
+function install_playstation_3_emulator() {
+    log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation.\n"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync rpcs3 --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+
+        flatpak install flathub net.rpcs3.RPCS3
+    fi
+}
+
+function install_emulators() {
+    # GameBoy Emulator
+    install_gameboy_emulator
+
+    # GameCube & Wii Emulator
+    install_gamecube_wii_emulator
+
+    # Wii U Emulator
+    install_wii_u_emulator
+
+    # Switch Emulator
+    install_switch_emulator
+
+    # Xbox Emulator
+    install_xbox_emulator
+
+    # # Xbox 360 Emulator
+    # install_xbox_360_emulator
+
+    # PlayStation Emulator
+    install_playstation_emulator
+
+    # PlayStation 2 Emulator
+    install_playstation_2_emulator
+
+    # PlayStation 3 Emulator
+    install_playstation_3_emulator
+}
+
+
+
+#######################################################################################################################
 ##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
 #######################################################################################################################
 
@@ -1008,6 +1219,11 @@ function remove_unused_dependencies() {
 
 # install_configure_terminals
 
-# install_peripheral_tools # A restart is required after running these commands, in order for the changes to take effect.
+# A restart is required after running these commands, in order for the changes to take effect.
+# install_peripheral_tools
+
+# install_gaming_software_utilities
+
+# install_emulators
 
 # remove_unused_dependencies
