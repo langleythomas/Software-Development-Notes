@@ -4,23 +4,14 @@
 ############################################## Linux Distros Tested & Used ############################################
 #######################################################################################################################
 
-# Alpine:
-# - TBD
-
 # Arch:
 # - EndeavourOS (KDE Plasme Desktop Environment)
 
-# CentOS:
-# - TBD
-
-# Fedora:
-# - TBD
-
-# OpenSUSE:
-# - TBD
-
 # Red Hat:
-# - TBD
+# - TBD, most likely Fedora Workstation (GNOME Desktop Environment)
+
+# SUSE Linux Enterprise:
+# - TBD, most likely OpenSUSE Tumbleweed (KDE Plasma Desktop Environment)
 
 # Ubuntu:
 # - Zorin OS (GNOME Desktop Environment)
@@ -107,23 +98,6 @@ function remove_nvidia_drivers() {
 
 function configure_graphics_drivers() {
     remove_nvidia_drivers
-}
-
-#######################################################################################################################
-###################################### Desktop Environment Configuration ##################################
-#######################################################################################################################
-
-function setup_alpine() {
-# https://wiki.alpinelinux.org/wiki/Installation#Base_configuration -> Run the setup-alpine function.
-}
-
-function setup_alpine_desktop() {
-# https://wiki.alpinelinux.org/wiki/Setup-desktop
-# TBD: If Alpine Linux, then install either KDE (https://wiki.alpinelinux.org/wiki/KDE) or XFCE (https://wiki.alpinelinux.org/wiki/Xfce)
-}
-
-function configure_alpine() {
-# Call other functions relating to Alpine.
 }
 
 
