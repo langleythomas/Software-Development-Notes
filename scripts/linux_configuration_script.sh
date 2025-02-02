@@ -5,7 +5,7 @@
 #######################################################################################################################
 
 # Arch:
-# - EndeavourOS (KDE Plasme Desktop Environment)
+# - EndeavourOS (KDE Plasma Desktop Environment)
 
 # Red Hat:
 # - TBD, most likely Fedora Workstation (GNOME Desktop Environment)
