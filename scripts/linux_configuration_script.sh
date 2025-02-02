@@ -1000,71 +1000,6 @@ function install_configure_terminals() {
 
 
 #######################################################################################################################
-####################################### Terminal Installation & Configuration #########################################
-#######################################################################################################################
-
-function install_openrazer_daemon() {
-    log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference documentation: https://openrazer.github.io/#download"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync openrazer-daemon --noconfirm
-
-        update_upgrade_pacman
-        sudo pacman --sync linux-headers --noconfirm
-
-        sudo gpasswd --add "${USER}" plugdev
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
-
-        update_dnf
-        sudo dnf install openrazer-meta --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo add-apt-repository ppa:openrazer/stable
-
-        update_upgrade_apt
-        sudo add-apt-repository ppa:polychromatic/stable
-
-        update_upgrade_apt
-        sudo apt install openrazer-meta --yes
-    fi
-}
-
-function install_polychromatic() {
-    log_output "Installing Polychromatic. Reference documentation: https://polychromatic.app/download/"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_aur
-
-        yay --sync polychromatic --noconfirm
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
-
-        update_dnf
-        sudo dnf install polychromatic --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-
-        sudo add-apt-repository ppa:openrazer/stable
-        sudo add-apt-repository ppa:polychromatic/stable
-
-        update_upgrade_apt
-
-        sudo apt install polychromatic --yes
-    fi
-}
-
-function install_peripheral_tools() {
-    install_openrazer_daemon
-    install_polychromatic
-}
-
-
-
-#######################################################################################################################
 ####################################### Gaming Software & Utility Installation ########################################
 #######################################################################################################################
 
@@ -1322,6 +1257,172 @@ function remove_unused_dependencies() {
 
 
 #######################################################################################################################
+######################################## Command Line Utility Installation  ###########################################
+#######################################################################################################################
+
+function install_btop() {
+    log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference documentation: https://github.com/aristocratos/btop"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync btop --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install btop --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install btop --yes
+    fi
+}
+
+function install_dust() {
+    log_output "Installing dust, providing an instant overview of which directories are using disk space without requiring sort or head. Reference documentation: https://github.com/bootandy/dust"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync dust --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install dust --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install dust --yes
+    fi
+}
+
+function install_eza() {
+    log_output "Installing eza, a modern alternative to the ls program that ships with Unix and Linux operating systems. Reference documentation: https://github.com/eza-community/eza/blob/main/INSTALL.md"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync eza --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install dust --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install eza --yes
+
+        sudo mkdir --parents "/etc/apt/keyrings"
+        wget --quiet --output "https://raw.githubusercontent.com/eza-community/eza/main/deb.asc" | sudo gpg --dearmor --output "/etc/apt/keyrings/gierens.gpg"
+        echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
+        sudo chmod 644 "/etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list"
+
+        update_and_upgrade_apt
+        sudo apt install eza --yes
+    fi
+}
+
+function install_fzf() {
+    log_output "Installing fzf, a general-purpose command-line fuzzy finder. Reference documentation: https://github.com/junegunn/fzf"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync fzf --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install fzf --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install fzf --yes
+    fi
+}
+
+function install_tldr() {
+    log_output "Installing tldr, a tool to output a collection of simpler, more-approachable complement to traditional man pages. Reference documentation: https://github.com/junegunn/fzf"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync tldr --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install tldr --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install tldr --yes
+    fi
+}
+
+function install_command_line_utilities() {
+    install_btop
+
+    install_dust
+
+    install_eza
+
+    install_fzf
+
+    install_tldr
+}
+
+
+
+#######################################################################################################################
+####################################### Terminal Installation & Configuration #########################################
+#######################################################################################################################
+
+function install_openrazer_daemon() {
+    log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference documentation: https://openrazer.github.io/#download"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync openrazer-daemon --noconfirm
+
+        update_upgrade_pacman
+        sudo pacman --sync linux-headers --noconfirm
+
+        sudo gpasswd --add "${USER}" plugdev
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
+
+        update_dnf
+        sudo dnf install openrazer-meta --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo add-apt-repository ppa:openrazer/stable
+
+        update_upgrade_apt
+        sudo add-apt-repository ppa:polychromatic/stable
+
+        update_upgrade_apt
+        sudo apt install openrazer-meta --yes
+    fi
+}
+
+function install_polychromatic() {
+    log_output "Installing Polychromatic. Reference documentation: https://polychromatic.app/download/"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+
+        yay --sync polychromatic --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
+
+        update_dnf
+        sudo dnf install polychromatic --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+
+        sudo add-apt-repository ppa:openrazer/stable
+        sudo add-apt-repository ppa:polychromatic/stable
+
+        update_upgrade_apt
+
+        sudo apt install polychromatic --yes
+    fi
+}
+
+function install_peripheral_tools() {
+    install_openrazer_daemon
+    install_polychromatic
+}
+
+
+
+#######################################################################################################################
 ########################################### Execute Other Functions ###################################################
 #######################################################################################################################
 
@@ -1355,11 +1456,13 @@ function remove_unused_dependencies() {
 
 # install_configure_terminals
 
-# A restart is required after running these commands, in order for the changes to take effect.
-# install_peripheral_tools
-
 # install_gaming_software_utilities
 
 # install_emulators
 
+# install_command_line_utilities
+
 # remove_unused_dependencies
+
+# A restart is required after running these commands, in order for the changes to take effect.
+# install_peripheral_tools
