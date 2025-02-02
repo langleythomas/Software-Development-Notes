@@ -107,7 +107,7 @@ function configure_graphics_drivers() {
 #######################################################################################################################
 
 function install_docker() {
-    log_output "Installing Docker. Reference documentation: https://docs.docker.com/engine/install/"
+    log_output "Installing Docker. Reference installation documentation: https://docs.docker.com/engine/install/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -185,6 +185,8 @@ function install_docker() {
     # Add user to Docker group
     sudo usermod --append --groups "docker" "${USER}"
     newgrp "docker"
+
+    docker --version
 }
 
 function configure_docker_startup() {
@@ -207,7 +209,7 @@ function test_docker_installation() {
 }
 
 function install_minikube() {
-    log_output "Installing Minikube. Reference documentation: https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download"
+    log_output "Installing Minikube. Reference installation documentation: https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -232,6 +234,8 @@ function install_minikube() {
 
         sudo mv --verbose "minikube" "/usr/local/bin/"
     fi
+
+    minikube version
 }
 
 function start_minikube() {
@@ -247,7 +251,7 @@ function test_minikube_installation() {
 }
 
 function install_kubernetes() {
-    log_output "Installing Kubernetes. Reference documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/"
+    log_output "Installing Kubernetes. Reference installation documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -267,17 +271,13 @@ function install_kubernetes() {
 
         sudo mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
     fi
-}
-
-function test_kubernetes_installation() {
-    log_output "Testing Kubernetes Installation."
 
     kubectl version
     kubectl cluster-info
 }
 
 function install_helm() {
-    log_output "Installing Helm. Reference documentation: https://helm.sh/docs/intro/install/"
+    log_output "Installing Helm. Reference installation documentation: https://helm.sh/docs/intro/install/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -296,6 +296,8 @@ function install_helm() {
 
         rm --force --verbose "${install_helm_file_name}"
     fi
+
+    helm version
 }
 
 function test_helm_installation() {
@@ -320,7 +322,6 @@ function install_configure_deployment_tools() {
     test_minikube_installation
 
     install_kubernetes
-    test_kubernetes_installation
 
     install_helm
     test_helm_installation
@@ -333,7 +334,7 @@ function install_configure_deployment_tools() {
 #######################################################################################################################
 
 function install_dot_net_sdk() {
-    log_output "Installing the .NET SDK for C# development. Reference documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
+    log_output "Installing the .NET SDK for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -358,7 +359,7 @@ function install_dot_net_sdk() {
 }
 
 function install_asp_net_runtime() {
-    log_output "Installing the ASP .NET Runtime for C# development. Reference documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
+    log_output "Installing the ASP .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -376,7 +377,7 @@ function install_asp_net_runtime() {
 }
 
 function install_dot_net_runtime() {
-    log_output "Installing the .NET Runtime for C# development. Reference documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
+    log_output "Installing the .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -406,7 +407,7 @@ function install_dot_net_development_prerequisites() {
 #######################################################################################################################
 
 function install_nodejs_runtime() {
-    log_output "Installing the Node JS runtime for JavaScript development. Reference documentation: https://nodejs.org/en/download/package-manager/all"
+    log_output "Installing the Node JS runtime for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -473,7 +474,7 @@ function install_javascript_development_prerequisites() {
 #######################################################################################################################
 
 function install_python3() {
-    log_output "Installing Python 3. Reference documentation: https://www.geeksforgeeks.org/how-to-install-python-on-linux/"
+    log_output "Installing Python 3. Reference installation documentation: https://www.geeksforgeeks.org/how-to-install-python-on-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -490,7 +491,7 @@ function install_python3() {
 }
 
 function install_python3_pip() {
-    log_output "Installing Python 3 PIP. Reference documentation: https://www.tecmint.com/install-pip-in-linux/"
+    log_output "Installing Python 3 PIP. Reference installation documentation: https://www.tecmint.com/install-pip-in-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -518,7 +519,7 @@ function install_python_development_prerequisites() {
 #######################################################################################################################
 
 function install_ruby() {
-    log_output "Installing Ruby. Reference documentation: https://www.ruby-lang.org/en/documentation/installation/"
+    log_output "Installing Ruby. Reference installation documentation: https://www.ruby-lang.org/en/documentation/installation/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -545,7 +546,7 @@ function install_ruby_development_prerequisites() {
 #######################################################################################################################
 
 function install_git() {
-    log_output "Installing Git. Reference documentation: https://git-scm.com/downloads/linux"
+    log_output "Installing Git. Reference installation documentation: https://git-scm.com/downloads/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -667,7 +668,7 @@ function configure_vim() {
 function install_vundle() {
     local -r dot_vim_directory_path="${1}"
 
-    log_output "Installing Vundle, the Vim package manager. Reference documentation: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage"
+    log_output "Installing Vundle, the Vim package manager. Reference installation documentation: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage"
 
     git clone "https://github.com/VundleVim/Vundle.vim.git" "${dot_vim_directory_path}/bundle/Vundle.vim"
 }
@@ -679,7 +680,7 @@ function install_vim_dracula_theme() {
 }
 
 function install_vim_markdown_preview() {
-    log_output "Installing Vim plugins using Vundle. Reference documentation: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage"
+    log_output "Installing Vim plugins using Vundle. Reference installation documentation: https://github.com/iamcco/markdown-preview.nvim?tab=readme-ov-file#installation--usage"
 
     vim "${vimrc_file_path}" --cmd "source %" +qall
     vim +PluginInstall +qall
@@ -687,7 +688,7 @@ function install_vim_markdown_preview() {
 }
 
 function install_neovim() {
-    log_output "Installing Neovim. Reference documentation: https://github.com/neovim/neovim/blob/master/INSTALL.md"
+    log_output "Installing Neovim. Reference installation documentation: https://github.com/neovim/neovim/blob/master/INSTALL.md"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -739,7 +740,7 @@ function install_neovim_system_clipboard_dependency() {
 }
 
 function install_visual_studio_code() {
-    log_output "Installing Visual Studio Code. Reference documentation: https://code.visualstudio.com/docs/setup/linux"
+    log_output "Installing Visual Studio Code. Reference installation documentation: https://code.visualstudio.com/docs/setup/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -808,7 +809,7 @@ function install_configure_text_editors() {
 #######################################################################################################################
 
 function install_intellij() {
-    log_output "Installing IntelliJ IDEA Community Edition. Reference documentation: https://www.jetbrains.com/help/idea/installation-guide.html"
+    log_output "Installing IntelliJ IDEA Community Edition. Reference installation documentation: https://www.jetbrains.com/help/idea/installation-guide.html"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -823,7 +824,7 @@ function install_intellij() {
 }
 
 function install_pycharm() {
-    log_output "Installing PyCharm Community Edition. Reference documentation: https://www.jetbrains.com/help/pycharm/installation-guide.html"
+    log_output "Installing PyCharm Community Edition. Reference installation documentation: https://www.jetbrains.com/help/pycharm/installation-guide.html"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -850,7 +851,7 @@ function install_integrated_development_environments() {
 #######################################################################################################################
 
 function install_brave() {
-    log_output "Installing Brave. Reference documentation: https://brave.com/linux/"
+    log_output "Installing Brave. Reference installation documentation: https://brave.com/linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -875,6 +876,8 @@ function install_brave() {
         update_and_upgrade_apt
         sudo apt install brave-browser --yes
     fi
+
+    brave --version
 }
 
 function install_browser() {
@@ -889,17 +892,17 @@ function install_browser() {
 
 function install_discord() {
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        log_output "Installing Discord. Reference documentation: https://wiki.archlinux.org/title/Discord"
+        log_output "Installing Discord. Reference installation documentation: https://wiki.archlinux.org/title/Discord"
 
         update_upgrade_pacman
         sudo pacman --sync discord --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        log_output "Installing Discord. Reference documentation: https://flathub.org/apps/com.discordapp.Discord"
+        log_output "Installing Discord. Reference installation documentation: https://flathub.org/apps/com.discordapp.Discord"
 
         update_flatpak
         flatpak install flathub com.discordapp.Discord --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        log_output "Installing Discord. Reference documentation: https://flathub.org/apps/com.discordapp.Discord"
+        log_output "Installing Discord. Reference installation documentation: https://flathub.org/apps/com.discordapp.Discord"
 
         update_flatpak
         flatpak install flathub com.discordapp.Discord --yes
@@ -920,7 +923,7 @@ function install_gnome_tweaks() {
     local -r desktop_environment="${XDG_CURRENT_DESKTOP}"
 
     if [[ "${desktop_environment}" == *"GNOME"* ]]; then
-        log_output "Installing GNOME Tweaks. Reference documentation: https://www.geeksforgeeks.org/install-gnome-tweaks-on-ubuntu/"
+        log_output "Installing GNOME Tweaks. Reference installation documentation: https://www.geeksforgeeks.org/install-gnome-tweaks-on-ubuntu/"
 
         if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
             update_and_upgrade_apt
@@ -943,7 +946,7 @@ function install_ui_configuration_tools() {
 #######################################################################################################################
 
 function install_vlc() {
-    log_output "Installing VLC. Reference documentation: https://www.videolan.org/vlc/"
+    log_output "Installing VLC. Reference installation documentation: https://www.videolan.org/vlc/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -955,6 +958,8 @@ function install_vlc() {
         update_flatpak
         flatpak install flathub org.videolan.VLC --yes
     fi
+
+    vlc --version
 }
 
 function install_media_players() {
@@ -968,7 +973,7 @@ function install_media_players() {
 #######################################################################################################################
 
 function install_guake() {
-    log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key. Reference documentation: https://guake.readthedocs.io/en/stable/user/installing.html"
+    log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key. Reference installation documentation: https://guake.readthedocs.io/en/stable/user/installing.html"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -980,6 +985,8 @@ function install_guake() {
         update_upgrade_apt
         sudo apt install guake --yes
     fi
+
+    guake --version
 }
 
 function configure_guake() {
@@ -1004,7 +1011,7 @@ function install_configure_terminals() {
 #######################################################################################################################
 
 function install_steam() {
-    log_output "Installing Steam. Reference documentation: https://www.howtogeek.com/753511/how-to-download-and-install-steam-on-linux/"
+    log_output "Installing Steam. Reference installation documentation: https://www.howtogeek.com/753511/how-to-download-and-install-steam-on-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1036,7 +1043,7 @@ function install_gaming_software_utilities() {
 #######################################################################################################################
 
 function install_gameboy_emulator() {
-    log_output "Installing the emulator, for GameBoy, GameBoy Color, and GameBoy Advance emulation. Reference documentation: https://mgba.io/downloads.html"
+    log_output "Installing the emulator, for GameBoy, GameBoy Color, and GameBoy Advance emulation. Reference installation documentation: https://mgba.io/downloads.html"
 
     curl "https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-appimage-x64.appimage" \
         --output "/home/${USER}/Downloads/mGBA-appimage-x64.appimage"
@@ -1045,7 +1052,7 @@ function install_gameboy_emulator() {
 }
 
 function install_ds_emulator() {
-    log_output "Installing the melonDS, for Nintendo DS emulation. Reference documentation: https://melonds.kuribo64.net/downloads.php"
+    log_output "Installing the melonDS, for Nintendo DS emulation. Reference installation documentation: https://melonds.kuribo64.net/downloads.php"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1066,7 +1073,7 @@ function install_ds_emulator() {
 }
 
 function install_gamecube_wii_emulator() {
-    log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation. Reference documentation: https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin"
+    log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation. Reference installation documentation: https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1088,7 +1095,7 @@ function install_gamecube_wii_emulator() {
 }
 
 function install_wii_u_emulator() {
-    log_output "Installing the Cemu emulator, for Wii U emulation. Reference documentation: https://wiki.cemu.info/wiki/Installation_guide"
+    log_output "Installing the Cemu emulator, for Wii U emulation. Reference installation documentation: https://wiki.cemu.info/wiki/Installation_guide"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1103,7 +1110,7 @@ function install_wii_u_emulator() {
 }
 
 function install_switch_emulator() {
-    log_output "Installing the Suyu emulator. Reference documentation: https://suyu-emu.com/how-to-setup/"
+    log_output "Installing the Suyu emulator. Reference installation documentation: https://suyu-emu.com/how-to-setup/"
 
     curl "https://git.suyu.dev/suyu/suyu/releases/download/latest/Suyu-Linux_x86_64.AppImage" \
         --output "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
@@ -1112,7 +1119,7 @@ function install_switch_emulator() {
 }
 
 function install_xbox_emulator() {
-    log_output "Installing the Xemu emulator, for Xbox emulation. Reference documentation: https://xemu.app/docs"
+    log_output "Installing the Xemu emulator, for Xbox emulation. Reference installation documentation: https://xemu.app/docs"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1139,7 +1146,7 @@ function install_xbox_emulator() {
 # }
 
 function install_psp_emulator() {
-    log_output "Installing the emulator, PlayStation Portable emulation. Reference documentation: https://www.ppsspp.org/download/"
+    log_output "Installing the emulator, PlayStation Portable emulation. Reference installation documentation: https://www.ppsspp.org/download/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1154,7 +1161,7 @@ function install_psp_emulator() {
 }
 
 function install_playstation_emulator() {
-    log_output "Installing the DuckStation emulator, for PlayStation emulation. Reference documentation: https://github.com/stenzek/duckstation?tab=readme-ov-file#linux"
+    log_output "Installing the DuckStation emulator, for PlayStation emulation. Reference installation documentation: https://github.com/stenzek/duckstation?tab=readme-ov-file#linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1176,7 +1183,7 @@ function install_playstation_emulator() {
 }
 
 function install_playstation2_emulator() {
-    log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation. Reference documentation: https://pcsx2.net/downloads"
+    log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation. Reference installation documentation: https://pcsx2.net/downloads"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1191,7 +1198,7 @@ function install_playstation2_emulator() {
 }
 
 function install_playstation_3_emulator() {
-    log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation. Reference documentation: https://rpcs3.net/download"
+    log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation. Reference installation documentation: https://rpcs3.net/download"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
@@ -1261,7 +1268,7 @@ function remove_unused_dependencies() {
 #######################################################################################################################
 
 function install_btop() {
-    log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference documentation: https://github.com/aristocratos/btop"
+    log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference installation documentation: https://github.com/aristocratos/btop"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1273,10 +1280,36 @@ function install_btop() {
         update_and_upgrade_apt
         sudo apt install btop --yes
     fi
+
+    btop --version
+}
+
+function install_diff_so_fancy() {
+    log_output "Installing diff-so-fancy, to identify human-readable differences between files. Reference installation documentation: https://github.com/so-fancy/diff-so-fancy?tab=readme-ov-file#install"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync diff-so-fancy --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install diff-so-fancy --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install diff-so-fancy --yes
+    fi
+
+    diff-so-fancy --help
+}
+
+function configure_diff_so_fancy_git_diff() {
+    log_output "Configuring Git to use diff-so-fancy to identify all diff output. Reference installation documentation: https://github.com/so-fancy/diff-so-fancy?tab=readme-ov-file#with-git"
+
+    git config --global core.pager "diff-so-fancy | less --tabs=4 -RF"
+    git config --global interactive.diffFilter "diff-so-fancy --patch"
 }
 
 function install_dust() {
-    log_output "Installing dust, providing an instant overview of which directories are using disk space without requiring sort or head. Reference documentation: https://github.com/bootandy/dust"
+    log_output "Installing dust, providing an instant overview of which directories are using disk space without requiring sort or head. Reference installation documentation: https://github.com/bootandy/dust"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1288,10 +1321,12 @@ function install_dust() {
         update_and_upgrade_apt
         sudo apt install dust --yes
     fi
+
+    dust --version
 }
 
 function install_eza() {
-    log_output "Installing eza, a modern alternative to the ls program that ships with Unix and Linux operating systems. Reference documentation: https://github.com/eza-community/eza/blob/main/INSTALL.md"
+    log_output "Installing eza, a modern alternative to the ls program that ships with Unix and Linux operating systems. Reference installation documentation: https://github.com/eza-community/eza/blob/main/INSTALL.md"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1311,10 +1346,31 @@ function install_eza() {
         update_and_upgrade_apt
         sudo apt install eza --yes
     fi
+
+    eza --version
+}
+
+function install_fastfetch() {
+    log_output "Installing fastfetch, a \"Bash Screen Information Tool\" that auto-detects the system's distribution and some valuable information to the right. Reference installation documentation: https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#linux"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync fastfetch --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install fastfetch --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install fastfetch --yes
+    fi
+
+    fastfetch --version
+
+    fastfetch
 }
 
 function install_fzf() {
-    log_output "Installing fzf, a general-purpose command-line fuzzy finder. Reference documentation: https://github.com/junegunn/fzf"
+    log_output "Installing fzf, a general-purpose command-line fuzzy finder. Reference installation documentation: https://github.com/junegunn/fzf?tab=readme-ov-file#installation"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1326,10 +1382,99 @@ function install_fzf() {
         update_and_upgrade_apt
         sudo apt install fzf --yes
     fi
+
+    fzf --version
+}
+
+function install_kdash() {
+    log_output "Installing kdash, a terminal dashboard for Kubernetes built with Rust. Reference installation documentation: https://github.com/kdash-rs/kdash?tab=readme-ov-file#installation"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+        yay --sync kdash --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install kdash --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install kdash --yes
+    fi
+
+    kdash --version
+}
+
+function install_procs() {
+    log_output "Installing procs, a replacement for ps written in Rust. Reference installation documentation: https://github.com/dalance/procs?tab=readme-ov-file#installation"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync procs --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install procs --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install procs --yes
+    fi
+
+    procs --version
+}
+
+function install_rip() {
+    log_output "Installing rip, a command-line deletion tool focused on safety, ergonomics, and performance. Reference installation documentation: https://github.com/nivekuil/rip?tab=readme-ov-file#-installation"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+        yay --sync rm-improved --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document ~/"Downloads/rip.tar.gz"
+        tar --extract --verbose --gzip --file ~/"Downloads/rip.tar.gz" --directory ~/"Downloads"
+        sudo mv ~/"Downloads/rip-0.13.1" /usr/local/bin
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document ~/"Downloads/rip.tar.gz"
+        tar --extract --verbose --gzip --file ~/"Downloads/rip.tar.gz" --directory ~/"Downloads"
+        sudo mv ~/"Downloads/rip-0.13.1" /usr/local/bin
+    fi
+
+    rip --version
+}
+
+function install_ripgrep() {
+    log_output "Installing ripgrep, a line-oriented search tool that recursively searches the current directory for a regex pattern. Reference installation documentation: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync ripgrep --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install ripgrep --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install ripgrep --yes
+    fi
+
+    rg --version
+}
+
+function install_sd() {
+    log_output "Installing sd, an intuitive find and replace CLI. Reference installation documentation: https://github.com/chmln/sd?tab=readme-ov-file#installation"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync sd --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install sd --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install sd --yes
+    fi
+
+    sd --version
 }
 
 function install_tldr() {
-    log_output "Installing tldr, a tool to output a collection of simpler, more-approachable complement to traditional man pages. Reference documentation: https://github.com/junegunn/fzf"
+    log_output "Installing tldr, a tool to output a collection of simpler, more-approachable complement to traditional man pages. Reference installation documentation: https://github.com/junegunn/fzf"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1341,16 +1486,33 @@ function install_tldr() {
         update_and_upgrade_apt
         sudo apt install tldr --yes
     fi
+
+    tldr --version
 }
 
 function install_command_line_utilities() {
     install_btop
 
+    install_diff_so_fancy
+    configure_diff_so_fancy_git_diff
+
     install_dust
 
     install_eza
 
+    install_fastfetch
+
     install_fzf
+
+    install_kdash
+
+    install_procs
+
+    install_rip
+
+    install_ripgrep
+
+    install_sd
 
     install_tldr
 }
@@ -1362,7 +1524,7 @@ function install_command_line_utilities() {
 #######################################################################################################################
 
 function install_openrazer_daemon() {
-    log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference documentation: https://openrazer.github.io/#download"
+    log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference installation documentation: https://openrazer.github.io/#download"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1391,7 +1553,7 @@ function install_openrazer_daemon() {
 }
 
 function install_polychromatic() {
-    log_output "Installing Polychromatic. Reference documentation: https://polychromatic.app/download/"
+    log_output "Installing Polychromatic. Reference installation documentation: https://polychromatic.app/download/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
