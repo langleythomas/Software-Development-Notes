@@ -1244,26 +1244,6 @@ function install_emulators() {
 
 
 #######################################################################################################################
-##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
-#######################################################################################################################
-
-function autoremove_unused_dependencies() {
-    if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        log_output "Automatically removing unused dependencies."
-
-        update_upgrade_apt
-        sudo apt autoremove --yes
-    fi
-
-}
-
-function remove_unused_dependencies() {
-    autoremove_unused_dependencies
-}
-
-
-
-#######################################################################################################################
 ######################################## Command Line Utility Installation  ###########################################
 #######################################################################################################################
 
@@ -1515,6 +1495,31 @@ function install_command_line_utilities() {
     install_sd
 
     install_tldr
+}
+
+
+
+#######################################################################################################################
+##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
+#######################################################################################################################
+
+function autoremove_unused_dependencies() {
+    log_output "Automatically removing unused dependencies."
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman -Rsn "$(pacman -Qdtq)"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf autoremove --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt autoremove --yes
+    fi
+}
+
+function remove_unused_dependencies() {
+    autoremove_unused_dependencies
 }
 
 
