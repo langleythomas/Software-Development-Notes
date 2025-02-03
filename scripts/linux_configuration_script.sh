@@ -4,6 +4,9 @@
 ############################################## Linux Distros Tested & Used ############################################
 #######################################################################################################################
 
+# Alpine:
+# - Alpine (XFCE Desktop Environment)
+
 # Arch:
 # - EndeavourOS (KDE Plasma Desktop Environment)
 
@@ -76,12 +79,13 @@ function update_upgrade_aur() {
 ############################################# Graphics Driver Configuration ###########################################
 #######################################################################################################################
 
-function remove_nvidia_drivers() {
-    # if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-
+function configure_nvidia_drivers() {
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        log_output "Installing Nvidia drivers."
+        update_upgrade_pacman
+        sudo pacman --sync nvidia --noconfirm
     # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by
         # Nvidia  driver issues. The commands in this function can resolve this issue. These commands can only be
         # effective in a fresh OS installation.
@@ -97,7 +101,7 @@ function remove_nvidia_drivers() {
 }
 
 function configure_graphics_drivers() {
-    remove_nvidia_drivers
+    configure_nvidia_drivers
 }
 
 
@@ -758,7 +762,7 @@ function install_visual_studio_code() {
         wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
             | gpg --dearmor > "packages.microsoft.gpg"
 
-        sudo install -D \
+        sudo install --directory \
             --owner=root \
             --group=root \
             --mode=644 \
@@ -782,8 +786,10 @@ function install_visual_studio_code() {
 
         # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
         # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
-        # rm -r ~/.config/Code/GPUCache
+        # rm --recursive ~/.config/Code/GPUCache
     fi
+
+    code --version
 }
 
 function install_configure_text_editors() {
@@ -869,9 +875,11 @@ function install_brave() {
         update_and_upgrade_apt
         sudo apt install curl --yes
 
-        sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
-
-        echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+        sudo curl --fail --silent --show-error --location --output \
+            "/usr/share/keyrings/brave-browser-archive-keyring.gpg" \
+            "https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg"
+        echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
+            | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
         update_and_upgrade_apt
         sudo apt install brave-browser --yes
@@ -1500,7 +1508,32 @@ function install_command_line_utilities() {
 
 
 #######################################################################################################################
-##################### Automatic Removal of Dependencies from Debian Advanced Packaging Tool (APT) #####################
+######################################### Installation of Hosted Hypervisors ##########################################
+#######################################################################################################################
+
+function install_virtualbox() {
+    log_output "Installing VirtualBox, a hypervisor to run systems on a host computer. Reference installation documentation: https://wiki.archlinux.org/title/VirtualBox"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync virtualbox --noconfirm
+        sudo modprobe --remove kvm_intel
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install virtualbox --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install virtualbox --yes
+    fi
+}
+
+function install_hosted_hypervisor() {
+    install_virtualbox
+}
+
+
+#######################################################################################################################
+###################################### Automatic Removal of Unused Dependencies #######################################
 #######################################################################################################################
 
 function autoremove_unused_dependencies() {
@@ -1628,6 +1661,8 @@ function install_peripheral_tools() {
 # install_emulators
 
 # install_command_line_utilities
+
+# install_hosted_hypervisor
 
 # remove_unused_dependencies
 
