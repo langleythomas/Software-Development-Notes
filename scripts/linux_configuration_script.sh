@@ -115,7 +115,6 @@ function install_docker() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-
         sudo pacman --sync docker --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
@@ -217,7 +216,6 @@ function install_minikube() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-
         sudo pacman --sync minikube --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         curl \
@@ -342,7 +340,6 @@ function install_dot_net_sdk() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-
         sudo pacman --sync dotnet-sdk --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
@@ -629,7 +626,6 @@ function install_vim() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-
         sudo pacman --sync vim --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
@@ -696,7 +692,6 @@ function install_neovim() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-
         sudo pacman --sync neovim --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
@@ -741,6 +736,23 @@ function install_neovim_system_clipboard_dependency() {
         update_upgrade_apt
         sudo apt install xclip --yes
     fi
+}
+
+function install_emacs() {
+    log_output "Installing Emacs. Reference installation documentation: https://www.gnu.org/software/emacs/download.html"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync emacs --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install emacs --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_and_upgrade_apt
+        sudo apt install emacs --yes
+    fi
+
+    nvim --version
 }
 
 function install_visual_studio_code() {
@@ -804,6 +816,8 @@ function install_configure_text_editors() {
     install_neovim
     configure_neovim
     install_neovim_system_clipboard_dependency
+
+    install_emacs
 
     install_visual_studio_code
 }
@@ -899,19 +913,15 @@ function install_browser() {
 #######################################################################################################################
 
 function install_discord() {
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        log_output "Installing Discord. Reference installation documentation: https://wiki.archlinux.org/title/Discord"
+    log_output "Installing Discord. Reference installation documentation: https://wiki.archlinux.org/title/Discord"
 
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync discord --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        log_output "Installing Discord. Reference installation documentation: https://flathub.org/apps/com.discordapp.Discord"
-
         update_flatpak
         flatpak install flathub com.discordapp.Discord --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        log_output "Installing Discord. Reference installation documentation: https://flathub.org/apps/com.discordapp.Discord"
-
         update_flatpak
         flatpak install flathub com.discordapp.Discord --yes
     fi
@@ -1255,6 +1265,33 @@ function install_emulators() {
 ######################################## Command Line Utility Installation  ###########################################
 #######################################################################################################################
 
+function install_okular() {
+    log_output "Installing okular, a universal document viewer. Reference installation documentation: https://okular.kde.org/download/"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync okular --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_flatpak
+        flatpak install flathub org.kde.okular --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+        flatpak install flathub org.kde.okular --yes
+    fi
+
+    okular --version
+}
+
+function install_document_viewer_utilities() {
+    install_okular
+}
+
+
+
+#######################################################################################################################
+######################################## Command Line Utility Installation  ###########################################
+#######################################################################################################################
+
 function install_btop() {
     log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference installation documentation: https://github.com/aristocratos/btop"
 
@@ -1511,6 +1548,48 @@ function install_command_line_utilities() {
 ######################################### Installation of Hosted Hypervisors ##########################################
 #######################################################################################################################
 
+function install_bash_language_server() {
+    log_output "Installing the bash language server. Reference installation documentation: https://github.com/bash-lsp/bash-language-server"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync bash-language-server --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        dnf install nodejs-bash-language-server --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_snap
+        sudo snap install bash-language-server --classic
+    fi
+}
+
+function install_marksman() {
+    log_output "Installing marksman, a Markdown LSP. Reference installation documentation: https://github.com/artempyanykh/marksman"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync marksman --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_snap
+        sudo snap install marksman --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_snap
+        sudo snap install marksman --yes
+    fi
+}
+
+function install_language_sever_protocols() {
+    install_bash_language_server
+
+    install_marksman
+}
+
+
+
+#######################################################################################################################
+######################################### Installation of Hosted Hypervisors ##########################################
+#######################################################################################################################
+
 function install_virtualbox() {
     log_output "Installing VirtualBox, a hypervisor to run systems on a host computer. Reference installation documentation: https://wiki.archlinux.org/title/VirtualBox"
 
@@ -1660,7 +1739,11 @@ function install_peripheral_tools() {
 
 # install_emulators
 
+# install_document_viewer_utilities
+
 # install_command_line_utilities
+
+# install_language_sever_protocols
 
 # install_hosted_hypervisor
 
