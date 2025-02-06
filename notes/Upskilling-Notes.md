@@ -6,6 +6,13 @@
 # Books
 ## Security
 - 97 Things Every Application Security Professional Should Know (Humble Bundle)
+
+# Online
+## Security
+- MITRE System of Trust: Supply Chain Security: https://sot.mitre.org/framework/system_of_trust.html
+
+# Books
+## Security
 - Cybersecurity Ops with bash (Humble Bundle)
 - Software Supply Chain Security (Humble Bundle)
 ## Automation
@@ -105,6 +112,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 [medium-vim-buffers-windows--tabs---an-overview]: <https://medium.com/@paulodiovani/vim-buffers-windows-and-tabs-an-overview-8e2a57c57afa>
 [medium-when-you-should-user-bash-over-python]: <https://dnastacio.medium.com/bash-over-python-39e0eba502f9>
 [microsoft-about-service-meshes]: <https://learn.microsoft.com/en-us/azure/aks/servicemesh-about>
+[mitre-system-of-trust-framework]: <https://sot.mitre.org/framework/system_of_trust.html>
 [mongodb-database-sharding]: <https://www.mongodb.com/features/database-sharding-explained>
 [neovim-pi_tutor]: <https://neovim.io/doc/user/pi_tutor.html>
 [nginx-what-is-a-service-mesh]: <https://www.nginx.com/blog/what-is-a-service-mesh/>
@@ -252,6 +260,8 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     - [1.2.21. The Right Way to Threat Model](#1221-the-right-way-to-threat-model)
     - [1.2.22. Attack Models in SSDLC](#1222-attack-models-in-ssdlc)
     - [1.2.23. Automation, Automation, \& Automation for Application Security](#1223-automation-automation--automation-for-application-security)
+    - [Will Generative \& LLM Solve a 20-Year-Old Problem in Application Security?](#will-generative--llm-solve-a-20-year-old-problem-in-application-security)
+    - [Understand the Risks of Using AI in Application Security](#understand-the-risks-of-using-ai-in-application-security)
   - [1.3. Automate the Boring Stuff with Python: Practical Programming for Total Beginners](#13-automate-the-boring-stuff-with-python-practical-programming-for-total-beginners)
   - [1.4. `bash` Cookbook](#14-bash-cookbook)
     - [1.4.1. Preface](#141-preface)
@@ -657,6 +667,24 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
         - [1.12.4.4.1. Tip 18: There Are No Final Decisions](#112441-tip-18-there-are-no-final-decisions)
         - [1.12.4.4.2. Tip 19: Forego Following Fads](#112442-tip-19-forego-following-fads)
         - [1.12.4.4.3. Challenges (Reversibility)](#112443-challenges-reversibility)
+      - [1.11.4.5. Tracer Bullets](#11145-tracer-bullets)
+      - [1.11.4.6. Prototypes \& Post-It Notes](#11146-prototypes--post-it-notes)
+      - [1.11.4.7. Domain Languages](#11147-domain-languages)
+      - [1.11.4.8. Estimating](#11148-estimating)
+    - [1.11.5. The Basic Tools](#1115-the-basic-tools)
+      - [1.11.5.1. The Power of Plain Text](#11151-the-power-of-plain-text)
+      - [1.11.5.2. Shell Games](#11152-shell-games)
+      - [1.11.5.3. Power Editing](#11153-power-editing)
+      - [1.11.5.4. Version Control](#11154-version-control)
+      - [1.11.5.5. Debugging](#11155-debugging)
+      - [1.11.5.6. Text Manipulation](#11156-text-manipulation)
+      - [1.11.5.7. Engineering Daybooks](#11157-engineering-daybooks)
+    - [1.11.6. Pragmatic Paranoia](#1116-pragmatic-paranoia)
+      - [1.11.6.1. Design by Contract](#11161-design-by-contract)
+      - [1.11.6.2. Dead Programs Tell No Tales](#11162-dead-programs-tell-no-tales)
+      - [1.11.6.3. Assertive Programming](#11163-assertive-programming)
+      - [1.11.6.4. How to Balance Resources](#11164-how-to-balance-resources)
+      - [1.11.6.5. Don't Outrun Your Headlights](#11165-dont-outrun-your-headlights)
   - [1.13. The Art of Readable Code](#113-the-art-of-readable-code)
   - [1.14. `vi` and `vim` Editors](#114-vi-and-vim-editors)
 - [2. Cheat Sheets](#2-cheat-sheets)
@@ -665,6 +693,8 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     - [2.2.1. `docker`](#221-docker)
     - [2.2.2. `du`](#222-du)
     - [2.2.3. `git`](#223-git)
+      - [2.2.3.1. GitHub](#2231-github)
+        - [2.2.3.1.1. Reset Local Changes \& Update Main Branch](#22311-reset-local-changes--update-main-branch)
     - [2.2.4. `helm`](#224-helm)
     - [2.2.5. `helmfile`](#225-helmfile)
     - [2.2.6. `java`](#226-java)
@@ -4220,67 +4250,66 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.5. Automating the Risk Calculation of Modern Applications
 
--
+- Relying solely on automated testing tools to assess the security risk of a software application can provide an
+  incomplete view.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- Security teams often employ tools such as static application security testing (SAST) dynamic application security
+  testing (DAST), and software composition analysis (SCA) scanners. This approach, however, fails to consider crucial
+  factors. Merely comparing the number of findings of the severity of those findings between application does not
+  necessarily indicate their relative security or risk. The context in which the application operates greatly
+  influences its risk profile.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- A holistic approach is necessary to achieve a comprehensive and accurate measurement of an application's security
+  risk, using the continuous application risk application (CARE) risk modelling process. The concept of CARE is to
+  continuously measure a software application's maturity and security on an ongoing basis and calculate a risk score
+  that provides a holistic measurement of multiple aspects that contributes to the overall risk of a software product.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+  - **Design & Business Context: What is the nature of the application?**
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+    - Considerations such as the application's intended purpose, the sensitivity of the data is handles, and its
+      overall architecture.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
-- **Design & Business Context**:
+    - The business context, such as compliance requirements or industry regulation must be taken into account to
+      evaluate the application's risk accurately. The more business value an application provides, the higher its
+      inherent risks are. Given the nature of the application, many of the risks are inherent and may not be
+      avoidable.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+  - **Technology Implementation & Operations: How is it built/maintained?**
 
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+    - The technical aspects of the application's architecture: development, deployment, and maintenance. It involves
+      assessing the robustness of the underlying technology stack, including programming languages, frameworks,
+      libraries, and third-party component. Vulnerabilities in these technologies can introduce security weaknesses
+      into the application.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+    - Operational protection and monitoring play an important factor here, e.g., the deployment and operation of web
+      application firewalls (WAFs), API protection, or other forms of runtime protection.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
-- **Technology Implementation & Operations**:
+  - **Maturity of Team & Process: Who is building and maintaining it?**
 
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+    - The proficiency and experience of the development team and the effectiveness of the SDLC process in place.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
-
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
-
-- **Maturity of Team & Process**:
-
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
-
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
-
-  -
-    [O'Reilly: 97 Things Every Application Security Professional Should Know][
-      oreilly-97-things-every-application-security-professional-should-know]
+    - An experienced and well-trained/well-informed team that follows secure coding practices can significantly reduce
+      the application's security risk. A mature DevOps process that incorporates security checkpoints at various
+      stages of the SDLC helps ensure that security is considered through the application's life cycle. Regularly
+      security assessments, pen testing, and incident response procedures are indicators of a mature security process.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
 
 <!-- ### A Coordinated Approach to a Successful DevSevOps Program
 
@@ -4368,17 +4397,73 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.6. Strategies for Adding Security Rituals to an Existing SDLC
 
--
+- We can sometimes encounter a new approach, ritual, process or tool that can potentially improve our software's
+  cybersecurity and can be embedded into our software development lifecycle (SDLC). The following are some lessons on
+  how to successfully implement new processes, tools, or rituals in an existing SDLC.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+- **You Can't Change What You Don't Understand**:
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+  - If you are hoping to influence or change something, it's a great idea to understand it first.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - This process is valuable, not only for you (as you prepare to weave cybersecurity through it), but also for you
+    relationships with your engineering team(s). Security is about collaboration, which starts with understanding and
+    empathy.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Start with Experiments, Not Solutions**:
+
+  - The rollout of a new process, tool, or ritual must start as an experiment, as you run the minimum viable product
+    (MVP). By doing this, it is best to fail fast and create room for the engineering room to provide feedback and
+    assess it from their perspective. It also gives a leader time to understand if this is the right approach.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - You need to start with a hypothesis and some criteria that you can measure. Additionally, you will need to
+    understand what success and failure would look like.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - In the best case, experiments include brand-new code, projects, and legacy systems to ensure the range of the
+    capability is understood.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Create a Rollout Plan with the Engineering Team**:
+
+  - If the experiment succeeds and you (and the team) are satisfied with the outcomes, it's time to roll out.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Rather than just turning things on and calling it a job well done, consider the following:
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Training**: Ensure you are able to provide clear explanations of the tool's purpose, outcomes, and impacts.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Support**: Have a plan for what happens if things changes, if there are issues, or if the team needs help.
+      If people find it is no longer working and you don't have a clear support system, the process or tool will be
+      removed or avoided.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Review**: Have a process for reviewing the effectiveness of the tools and processes you have in place.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+- **Collaboration is Key**:
+
+  - No matter how big or mature your team is, introducing new elements to an existing SDLC can take time and effort.
+    Remember that you can make these changes by collaborating with your engineering team and focusing on the purpose,
+    outcome, and impacts of the proposed changes.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
 
 <!-- ### Challenges & Considerations for Securing Serverless Applications
 
@@ -4437,6 +4522,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know] -->
 
 ### 1.2.7. Application Security in the Cloud Era
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4634,6 +4720,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.8. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4690,6 +4777,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.9. Exploring Application Security Through Static Analysis
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4703,6 +4791,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.10. Introduction to CI/CD Pipelines & Associated Risks
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4732,6 +4821,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.11. EPSS: A Modern Approach to Vulnerability Management
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4745,6 +4835,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.12. Navigating the Waters of Vulnerability Management
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4802,6 +4893,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.13. Effective Vulnerability Remediation Using EPSS
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4844,15 +4936,22 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.14. Supplier Relationship Management to Reduce Software Supply Chain Security Risk
 
--
+- Software suppliers introduce risk to application security, even if proper due diligence is performed before
+  selecting the commercial or open source supplier.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- A supplier relation can either be one-sided, e.g., for open source or a licence product, or mutual, where you have a
+  contract with the supplier. For the one-sided supplier relationship, you can monitor for patches, updates, and
+  vulnerabilities, but for mutual relationships, there is so much that can be done to reduce supply chain security
+  risk.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- Every supplier needs to be examined for all types of risk, because supply chains security risk is much more than a
+  cybersecurity or technical risk. The [MITRE Corporation's System of Trust][mitre-system-of-trust-framework] is a
+  supply chain security framework that can be help an organisation of any size identify risks in different categories,
+  including financial stability, ethics, quality, and service resilience.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
@@ -4872,6 +4971,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.15. SBOM: Transparent, Sustainable Compliance
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4885,6 +4985,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.16. Secure the Software Supply Chain Through Transparency
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4900,6 +5001,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.17. Unlock the Secrets to Open Source Software Security
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4913,6 +5015,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.18. Leverage SBOMs to Enhance Your SSDLC
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4928,6 +5031,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.19. Learn to Threat Model
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4941,6 +5045,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.20. Understanding OWASP Insecure Design & Unmaking Toxic Combinations
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4956,6 +5061,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.21. The Right Way to Threat Model
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -4969,6 +5075,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.22. Attack Models in SSDLC
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5036,9 +5143,10 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+    oreilly-97-things-every-application-security-professional-should-know] -->
 
 ### APIs are Windows to the Soul
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5054,6 +5162,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### API Security: The Bedrock of Modern Applications
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -5067,6 +5176,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### API Security Primer: Visibility
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5082,6 +5192,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### API Security Primer: Risk Assessment, Monitoring, & Detection
 
+
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
@@ -5096,9 +5207,6 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### API Security Primer: Control & Management
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5108,7 +5216,11 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### LLMs Revolutionising Application Security: Unleashing the Power of AI
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### LLMs Revolutionising Application Security: Unleashing the Power of AI
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5166,19 +5278,6 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
 
 ### 1.2.23. Automation, Automation, & Automation for Application Security
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-<!-- ### Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5192,7 +5291,8 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Understand the Risks of Using AI in Application Security
+### 1.2.24. Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5206,7 +5306,22 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Secure Code for Embedded Systems
+### 1.2.25. Understand the Risks of Using AI in Application Security
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+<!-- ### Secure Code for Embedded Systems
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5262,7 +5377,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Securing IoT APplications
+### Securing IoT Applications
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -31257,7 +31372,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-<!-- #### 1.11.4.5. Tracer Bullets
+#### 1.12.4.5. Tracer Bullets
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31271,7 +31387,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.6. Prototypes & Post-It Notes
+#### 1.12.4.6. Prototypes & Post-It Notes
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31285,7 +31402,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.7. Domain Languages
+#### 1.12.4.7. Domain Languages
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31299,7 +31417,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.4.8. Estimating
+#### 1.12.4.8. Estimating
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31313,7 +31432,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.5. The Basic Tools
+### 1.12.5. The Basic Tools
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31327,7 +31447,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.1. The Power of Plain Text
+#### 1.12.5.1. The Power of Plain Text
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31341,7 +31462,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.2. Shell Games
+#### 1.12.5.2. Shell Games
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31355,7 +31477,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.3. Power Editing
+#### 1.12.5.3. Power Editing
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31369,7 +31492,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.4. Version Control
+#### 1.12.5.4. Version Control
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31383,7 +31507,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.5. Debugging
+#### 1.12.5.5. Debugging
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31397,7 +31522,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.6. Text Manipulation
+#### 1.12.5.6. Text Manipulation
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31411,7 +31537,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.5.7. Engineering Daybooks
+#### 1.12.5.7. Engineering Daybooks
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31425,7 +31552,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.6. Pragmatic Paranoia
+### 1.12.6. Pragmatic Paranoia
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31439,7 +31567,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.6.1. Design by Contract
+#### 1.12.6.1. Design by Contract
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31453,7 +31582,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.6.2. Dead Programs Tell No Tales
+#### 1.12.6.2. Dead Programs Tell No Tales
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31467,7 +31597,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.6.3. Assertive Programming
+#### 1.12.6.3. Assertive Programming
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31481,7 +31612,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.6.4. How to Balance Resources
+#### 1.12.6.4. How to Balance Resources
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31495,7 +31627,8 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-#### 1.11.6.5. Don't Outrun Your Headlights
+#### 1.12.6.5. Don't Outrun Your Headlights
+
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -31509,7 +31642,7 @@ scale of modern systems. It has a few interesting implications:
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
     the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]
 
-### 1.11.7. Bend, or Break
+<!-- ### 1.11.7. Bend, or Break
 
 -
   [The Pragmatic Bookshelf: The Pragmatic Programmer, 20th Anniversary Edition][
@@ -38474,6 +38607,19 @@ class Rectangle:
   open_helper('/some/path', 'r')  # Passes type check
   open_helper('/other/path', 'typo')  # Error in type checker
   ```
+
+## Security
+
+### Supply Chain Security: System of Trust Framework
+
+-
+  [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
+
+-
+  [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
+
+-
+  [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
 
 ## 3.7. Telecommunications
 
