@@ -1,107 +1,6 @@
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
 
-<!--
-
-# Books
-## Security
-- 97 Things Every Application Security Professional Should Know (Humble Bundle)
-
-# Online
-## Security
-- MITRE System of Trust: Supply Chain Security: https://sot.mitre.org/framework/system_of_trust.html
-
-# Books
-## Security
-- Cybersecurity Ops with bash (Humble Bundle)
-- Software Supply Chain Security (Humble Bundle)
-## Automation
-- Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition (Humble Bundle)
-  - Python Basics
-  - Flow Control
-  - Functions
-  - Lists
-  - Dictionaries and Structuring Data
-  - Manipulating Strings
-  - Pattern Matching with Regular Expressions
-  - Input Validation
-  - Reading and Writing Files
-  - Organising Files
-  - Debugging
-  - Web Scraping
-  - Working with Excel Spreadsheets
-  - Working with Google Sheets
-  - Working with PDF and Word Documents
-  - Working with CSV Files and JSON Data
-  - Keeping Time, Scheduling Tasks, and Launching Programs
-  - Sending Email and Text Messages
-- Network Programmability and Automation (Humble Bundle), the following sections:
-  - Network Industry Trends
-  - Network Automation
-  - Linux
-  - Cloud
-  - Network Developer Environments
-  - Python
-  - Go
-  - Data Formats and Models
-  - Working with Network APIs
-  - Continuous Integration
-  - Network Automation Architecture
-## Command Line
-### `bash`
-- bash Cookbook (Humble Bundle)
-
-# Online
-## Python
-### Python Programming
-- Difference between Pytest and Unittest: https://www.geeksforgeeks.org/difference-between-pytest-and-unittest/
-- Modern Test-Driven Development (TDD) in Python: https://shashinherath.medium.com/modern-test-driven-development-tdd-in-python-4a7879b1fdb2
-- Python Practice Problems: Parsing CSV Files: https://realpython.com/python-interview-problem-parsing-csv-files/
-- PEP 8 - Style Guide for Python: https://peps.python.org/pep-0008/
-## Deployment
-### Kubernetes
-#### Objects in Kubernetes
-- Kubernetes Namespaces: https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/
-- Kubernetes Labels & Selectors: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
-- Kubernetes Finalizers: https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/
-#### Workloads
-- Kubernetes Pods: https://kubernetes.io/docs/concepts/workloads/pods/
-- Kubernetes Sidecar Containers: https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/
-- Kubernetes Ephemeral Containers: https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/
-- Kubernetes Pod Quality of Service Classes: https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/
-#### Configuration
-- Kubernetes ConfigMaps: https://kubernetes.io/docs/concepts/configuration/configmap/
-- Kubernetes Liveness, Readiness, & Startup Probes: https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/
-- Kubernetes Secrets: https://kubernetes.io/docs/concepts/configuration/secret/
-#### Cluster Architecture
-- Kubernetes Nodes: https://kubernetes.io/docs/concepts/architecture/nodes/
-#### Services, Load Balancing & Networking
-- Kubernetes Services: https://kubernetes.io/docs/concepts/services-networking/service/
-- Kubernetes Ingresses: https://kubernetes.io/docs/concepts/services-networking/ingress/
-- Kubernetes Ingress Controllers: https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/
-- Kubernetes Network Policies: https://kubernetes.io/docs/concepts/services-networking/network-policies/
-#### Workload Management
-- Kubernetes Deployments: https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
-- Kubernetes ReplicaSets: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
-- Kubernetes StatefulSets: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
-- Kubernetes DaemonSets: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
-- Kubernetes Jobs: https://kubernetes.io/docs/concepts/workloads/controllers/job/
-- Kubernetes CronJobs: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
-
-# Online
-## Pipelines
-### Pipelines
-- Jenkins Handbook: https://www.jenkins.io/doc/book/
-- Jenkins Guided Tour: https://www.jenkins.io/doc/pipeline/tour/getting-started/
-
-Organise notes by category, rather than source, e.g., Programming Languages, Command Line Automation, General Programming Advice
-
-# Books
-## Professional Programmer Advice
-- The Pragmatic Programmer (Physical)
-
--->
-
 <!-- Link Definitions -->
 [automate-the-boring-stuff-with-python-practical-programming-for-total-beginners-2nd-edition]: <https://automatetheboringstuff.com/2e/>
 [ericsson-navigate-the-network-slicing-transformation-journey]: <https://www.ericsson.com/en/network-slicing>
@@ -5145,7 +5044,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### APIs are Windows to the Soul
+### 1.2.23. APIs are Windows to the Soul
 
 
 -
@@ -5160,7 +5059,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### API Security: The Bedrock of Modern Applications
+### 1.2.24. API Security: The Bedrock of Modern Applications
 
 
 -
@@ -5175,7 +5074,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### API Security Primer: Visibility
+### 1.2.25. API Security Primer: Visibility
 
 
 -
@@ -5190,7 +5089,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### API Security Primer: Risk Assessment, Monitoring, & Detection
+### 1.2.26. API Security Primer: Risk Assessment, Monitoring, & Detection
 
 
 -
@@ -5205,7 +5104,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### API Security Primer: Control & Management
+### 1.2.27. API Security Primer: Control & Management
 
 
 -
@@ -5276,7 +5175,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.23. Automation, Automation, & Automation for Application Security
+### 1.2.28. Automation, Automation, & Automation for Application Security
 
 
 -
@@ -5291,7 +5190,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.24. Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
+### 1.2.29. Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
 
 
 -
@@ -5306,7 +5205,7 @@ Organise notes by category, rather than source, e.g., Programming Languages, Com
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.25. Understand the Risks of Using AI in Application Security
+### 1.2.30. Understand the Risks of Using AI in Application Security
 
 
 -
@@ -38608,12 +38507,9 @@ class Rectangle:
   open_helper('/other/path', 'typo')  # Error in type checker
   ```
 
-## Security
+## 3.7. Security
 
-### Supply Chain Security: System of Trust Framework
-
--
-  [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
+### 3.7.1. Supply Chain Security: System of Trust Framework
 
 -
   [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
@@ -38621,11 +38517,14 @@ class Rectangle:
 -
   [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
 
-## 3.7. Telecommunications
+-
+  [MITRE: System of Trust Framework][mitre-system-of-trust-framework]
 
-### 3.7.1. Network Slicing
+## 3.8. Telecommunications
 
-#### 3.7.1.1. What is Network Slicing?
+### 3.8.1. Network Slicing
+
+#### 3.8.1.1. What is Network Slicing?
 
 - An operators' best answer on how to build and manage a network, that meets and exceeds the emerging requirements from
   a wide range of users.
@@ -38664,7 +38563,7 @@ class Rectangle:
 
 <summary>Click to expand/minimise the additional details on network slicing.</summary>
 
-#### 3.7.1.2. Benefits of Network Slicing
+#### 3.8.1.2. Benefits of Network Slicing
 
 - End-to-end network slicing enables new business model innovation and use cases across all verticals, and creates new
   revenue opportunities for communication service providers. It provides service flexibility and ability to deliver
@@ -38685,11 +38584,11 @@ class Rectangle:
   [Ericsson: Navigate the Network Slicing Transformation Journey][
     ericsson-navigate-the-network-slicing-transformation-journey]
 
-#### 3.7.1.3. How 5G Network Slicing Works
+#### 3.8.1.3. How 5G Network Slicing Works
 
 ![How 5G Network Slicing Works](https://cdn.ttgtmedia.com/rms/onlineimages/networking-slicing_diagram.png)
 
-#### 3.7.1.4. Network Slicing Use Cases
+#### 3.8.1.4. Network Slicing Use Cases
 
 - Network slicing supports use cases that focus on performance, capacity and security. Many use cases involve the
   business models based on the Internet of Things. Some network slicing use cases involve the following:
@@ -39222,336 +39121,3 @@ class Rectangle:
 
   - `:tab sball`: Open all buffers in tabs.
     [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
-
-<!-- markdownlint-capture -->
-<!-- markdownlint-disable -->
-
-<!--
-
-# Online
-## Command Line
-### `bash`
-#### Variable Declaration and Differences
-- Local Variables: https://tldp.org/LDP/abs/html/localvar.html
-- Special Variable Types: https://tldp.org/LDP/abs/html/othertypesv.html
-- Declare/Typeset Options: https://tldp.org/LDP/abs/html/declareref.html
-- declare -r vs readonly in `bash`: https://stackoverflow.com/questions/30362831/what-is-difference-in-declare-r-and-readonly-in-bash/30362832#30362832
-#### Best Practices
-- https://mywiki.wooledge.org/BashGuide/Practices
-- https://bertvv.github.io/cheat-sheets/Bash.html
-
-# Tutorials
-## Microservice Development
-- Learn to Build an E-Commerce Store with .NET, React, & Redux (Udemy)
-
-# Books
-## Professional Programmer Advice
-- The Pragmatic Programmer (Physical)
-## Text Editors
-### Vi, Vim
-- `vi` and `vim` Editors (Physical)
-
-# Online
-## Command Line
-### `bash`
-- Linux Exit Codes: https://slg.ddnss.de/list-of-common-exit-codes-for-gnu-linux/
-
-# Books
-## Command Line
-- Efficient Linux at the Command Line (Humble Bundle)
-## Security
-- Fundamentals of Information System Security, 4th Edition (To Be Bought)
-- Software Security: Building Security In (To Be Bought)
-- Practical UNIX and Internet Security, 3rd Edition (https://www.oreilly.com/library/view/practical-unix-and/0596003234/)
-- SSH: The Secure Shell: The Definitive Guide, 4th Edition
-- Linux Security Cookbook
-## DevOps
-- Python for DevOps (Humble Bundle)
-## Deployment
-- Docker Cookbook (Humble Bundle)
-- Docker: Up & Running, 3rd Edition (Humble Bundle)
-- Kubernetes: Up and Running, 3rd Edition (Humble Bundle)
-## Pipelines
-- Data Pipeline Pocket Reference (Humble Bundle)
-- Cost-Effective Data Pipelines (Humble Bundle)
-## Version Control:
-- Learning Git (Humble Bundle)
-- Learning GitHub Actions (Humble Bundle)
-
-# Tutorials
-## Deployment
-- AWS course
-
-# Online Notes
-## Energy Efficient Software
-- How to measure energy efficiency of software: https://www.researchgate.net/publication/254040409_How_to_measure_energy-efficiency_of_software_Metrics_and_measurement_results
-- Tutorial Starting Page: https://learn.greensoftware.foundation/
-- Software Carbon Intensity: https://sci.greensoftware.foundation/
-- Optimise your microservice architecture for sustainability: https://foxutech.medium.com/how-to-optimize-your-microservice-architecture-for-sustainability-e7218cef4749
-- Guide to developing eco-friendly architectures: https://www.linkedin.com/pulse/building-sustainable-microservices-guide-developing-rohit-asthana
-- Revisiting energy and performance in microservice applications: https://www.sciencedirect.com/science/article/abs/pii/S0167819121001010
-- Energy Consumption in Microservices Architecture: https://www.researchgate.net/publication/371754881_Energy_Consumption_in_Microservices_Architectures_A_Systematic_Literature_Review
-- Code optimisation tactics: https://medium.com/@maxmeinhardt/software-energy-efficiency-code-optimization-tactics-b95be4ffcaf7
-- Energy Efficient Programming Languages, Tools and Practices in Coding: https://curiosum.com/blog/green-coding-software-development-energy-efficient-programming-languages
-- How to build and design sustainable software: https://www.freecodecamp.org/news/design-and-build-sustainable-software/
-## Reading Documentation
-- How to Read Your Way to Becoming a Better Developer (Medium, https://medium.com/free-code-camp/how-to-read-your-way-to-becoming-a-better-developer-b6432fa5bc0c)
-- Mastering the Art of Learning from Documentation: Pro Tips for Developers & Technical Professionals (Medium, https://medium.com/@aarafat27/mastering-the-art-of-learning-from-documentation-pro-tips-for-developers-and-technical-cd9ae1d34ecd)
-- Layman Explained: Reading Documentation (Medium, https://medium.com/@laymanExplained/layman-explained-reading-documentation-36c450e77e6b)
-## Text Editor
-- Vim Options (Vim Doc, https://vimdoc.sourceforge.net/htmldoc/options.html)
-## Command Line
-- `bash` Reference Manual (GNU, https://www.gnu.org/software/bash/manual/bash.html)
-- `bash` Scripting Tutorial (It's FOSS, https://itsfoss.com/bash-scripting-tutorial/)
-- `bash` Cheat Sheet (GitHub, https://github.com/RehanSaeed/Bash-Cheat-Shee)
-## Java Refresher
-- Java Quick Guide (Tutorialspoint, https://www.tutorialspoint.com/java/java_quick_guide.htm)
-
-Nice Notes to Look At:
-# Books:
-## Professional Programmer Advice
-- Apprenticeship Patterns (Humble Bundle)
-## Automation
-### Shell
-- Wicked Cool Shell Scripts (Humble Bundle)
-### PowerShell
-- PowerShell Cookbook (Humble Bundle)
-## Algorithms
-- Learning Algorithms (Humble Bundle)
-- Algorithms in a Nutshell (Humble Bundle)
-- Advanced Algorithms & Data Structures (Humble Bundle)
-## Professional Programmer Advice
-### Agile
-- The Art of Agile Development (Humble Bundle)
-- Head First Agile (Humble Bundle)
-### Better Programmer
-- Becoming a Better Programmer (Humble Bundle)
-- Apprenticeship Patterns (Humble Bundle)
-### Software Design & Development
-- Code Complete (Microsoft Press)
-- Skills of a Successful Software Engineer (Humble Bundle)
-### Making Decisions
-- Software Mistakes and Trade-offs: How to Make Good Programming Decisions (Humble Bundle)
-## Agile
-## Clean Code
-### Readable Code
-- The Art of Readable Code (Humble Bundle)
-- The Clean Coder (Physical)
-- Street Coder: The Rules to Break and How to Break Them (Humble Bundle)
-- Good Code, Bad Code (Humble Bundle)
-### Design Patterns
-- Head First Design Patterns (Humble Bundle)
-### Refactoring
-- Refactoring (Physical)
-- Five Lines of Code: How and When to Refactor (Humble Bundle)
-### Legacy Code
-- Working Effectively with Legacy Code (To Be Bought)
-## Architecture
-### Clean Architecture
-- Clean Architecture (Physical)
-### Designing Software
-- Software Architecture: The Hard Parts (Physical)
-## C Development
-- Head First C (Humble Bundle)
-## C++ Development
-- Something C++-related
-## Python Development
-- Python Cookbook (Humble Bundle)
-## Go Development
-- 100 Go Mistakes and How to Avoid Them (Humble Bundle)
-## Function Programming Language Development
-- Something related to Clojure, Lisp, or Haskell
-## Rust Development
-- Rust in Action (Humble Bundle)
-## Front-End Development
-- React Cookbook (Humble Bundle)
-- React Native in Action (Humble Bundle)
-## HTML
-- HTML & XHTML (Physical)
-## CSS
-- CSS: The Definitive Guide (Physical)
-## PHP
-- Learning PHP & MySQL (Physical)
-## Deployment
-- Docker Cookbook (Humble Bundle)
-## Pipelines
-- Data Pipeline Pocket Reference (Humble Bundle)
-
-Unordered List of Topics:
-- Design Patterns
-- Code Reviews
-- Microservice Architecture
-- Code Smells
-- Static Analysis
-- Code Coverage
-- Testing
-- HA
-- GA
-- BUR
-- Java Version Features
-- RAN
-- Software Role - DevOps vs Software Engineer
-- Documentation
-- Agile Ceremonies
-- Scrum
-- Agile
-- Waterfall
-- MTLS
-- Telecommunications
-- vi
-- nano
-- vim
-
-# Online
-## Application Architecture
-### Monolith
-### Microservice
-
-## Communication Protocols
-### TCP
-### UDP
-
-## Pipelines
-### Jenkins
-### Spinnaker
-
-## Programming
-### Programming Frameworks
-#### .NET
-#### React
-### Programming Languages
-#### C\#
-#### Erlang
-#### Golang
-#### JavaScript (Programming)
-#### Python (Programming)
-#### Rust
-#### TypeScript
-
-## Scripting
-### Scripting Languages
-#### `bash`
-#### JavaScript (Scripting)
-#### Python (Scripting)
-
-## Testing
-TODO: Order in which to do this testing.
-### Compatibility Testing
-### Device Testing
-#### Backwards Compatibility Testing
-#### Forwards Compatibility Testing
-#### Software Testing
-### Functional Testing
-<https://www.browserstack.com/guide/functional-testing>
-#### Integration Testing
-<https://www.browserstack.com/guide/integration-testing>
-#### Regression Testing
-<https://www.browserstack.com/guide/regression-testing>
-### Sanity Testing
-<https://www.browserstack.com/guide/sanity-testing>
-### Performance Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Endurance Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Load Testing
-<https://www.browserstack.com/guide/performance-testing>
-- SSH: The Secure Shell: The Definitive Guide, 4th Edition
-- Linux Security Cookbook
-#### Stress Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Spike Testing
-<https://www.browserstack.com/guide/performance-testing>
-#### Volume Testing
-<https://www.browserstack.com/guide/performance-testing>
-### Smoke Testing
-<https://www.browserstack.com/guide/smoke-testing>
-#### Unit Testing
-<https://www.browserstack.com/guide/unit-testing-a-detailed-guide>
-#### Usability Testing
-<https://www.browserstack.com/guide/website-usability-testing>
-### User Interface Testing
-<https://www.browserstack.com/guide/ui-testing-guide>
-#### Exploratory Testing
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
-#### User Experience Testing
-<https://www.browserstack.com/guide/ui-testing-tools-and-techniques>
-
-## Version Control
-### Code Collaboration Platforms
-#### Gerrit
-#### GitHub
-##### GitHub Automation
-###### Dependabot
-###### GitHub Actions
-#### GitLab
-### Repository
-#### Centralised
-##### CVS
-##### Perforce
-##### Subversion
-#### Distributed
-##### Mercurial
-##### Git
-
-## Design/Development Methodologies
-### Behaviour-Driven Design/Development
-### Domain-Driven Design/Development
-### Test-Driven Design/Development
-
-## Containerisation
-### Docker
-### LXC
-### Podman
-
-## Delivery Paradigms
-### DevOps
-### GitOps
-
-## Deployment
-### Container Orchestration Systems
-#### Kubernetes
-### Declarative Continuous Delivery Tools
-#### Argo CD
-#### Helmfile
-### Package Managers
-#### Helm
-#### Kustomize
-
-## Hyperscalers
-### AWS
-### Azure
-### Google Cloud
-
-## File Formats
-### .json (JSON)
-### .md (Markdown)
-### .tar (Tar Archive/Tarball)
-### .tgz (GZip Compressed TAR Archive)
-### .txt (Plain Text)
-### .xml (XML)
-### .yaml (YAML)
-### .yml (YML)
-### .zip (Zip)
-
-## Communication Paradigms
-### HTTP
-#### API Design (HTTP)
-### Data Streaming
-#### API Design (Data Streaming)
-
-## Data Streaming Platforms
-### Kafka
-### RabbitMQ
-
-## HTTP Protocols
-### REST
-### SOAP
-
-## Template
-### Overview ()
-### Tool Comparison ()
-### Detailed Overview ()
-
--->
-
-<!-- markdownlint-restore -->
