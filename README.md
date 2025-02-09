@@ -11,6 +11,7 @@
     - [`sublime-text-configuration`](#sublime-text-configuration)
     - [`vim-configuration`](#vim-configuration)
     - [`visual-studio-configuration`](#visual-studio-configuration)
+  - [To Do List](#to-do-list)
 
 ## Repository Overview
 
@@ -66,3 +67,191 @@ Contains the `.vimrc` file containing the overrides required to configure the Vi
 ### `visual-studio-configuration`
 
 Contains JSON files containing the overrides required to configure the Visual Studio Code text editor.
+
+## To Do List
+
+- Add notes for the following resources in the `notes` directory:
+
+  - Books:
+
+    - Security:
+
+      - [ ] 97 Things Every Application Security Professional Should Know (Humble Bundle)
+
+  - Online:
+
+    - Kubernetes:
+
+      - Objects in Kubernetes:
+
+        - [ ] Kubernetes Namespaces: <https://kubernetes.io/docs/concepts/overview/working-with-objects/namespaces/>
+
+        - [ ] Kubernetes Labels & Selectors:
+          <https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/>
+
+        - [ ] Kubernetes Finalizers: <https://kubernetes.io/docs/concepts/overview/working-with-objects/finalizers/>
+
+      - Workloads:
+
+        - [ ] Kubernetes Pods: <https://kubernetes.io/docs/concepts/workloads/pods/>
+
+        - [ ] Kubernetes Sidecar Containers: <https://kubernetes.io/docs/concepts/workloads/pods/sidecar-containers/>
+
+        - [ ] Kubernetes Ephemeral Containers:
+          <https://kubernetes.io/docs/concepts/workloads/pods/ephemeral-containers/>
+
+        - [ ] Kubernetes Pod Quality of Service Classes: <https://kubernetes.io/docs/concepts/workloads/pods/pod-qos/>
+
+      - Configuration:
+
+        - [ ] Kubernetes ConfigMaps: <https://kubernetes.io/docs/concepts/configuration/configmap/>
+
+        - [ ] Kubernetes Liveness, Readiness, & Startup Probes:
+          <https://kubernetes.io/docs/concepts/configuration/liveness-readiness-startup-probes/>
+
+        - [ ] Kubernetes Secrets: <https://kubernetes.io/docs/concepts/configuration/secret/>
+
+      - Cluster Architecture:
+
+        - [ ] Kubernetes Nodes: <https://kubernetes.io/docs/concepts/architecture/nodes/>
+
+      - Services, Load Balancing & Networking:
+
+        - [ ] Kubernetes Services: <https://kubernetes.io/docs/concepts/services-networking/service/>
+
+        - [ ] Kubernetes Ingresses: <https://kubernetes.io/docs/concepts/services-networking/ingress/>
+
+        - [ ] Kubernetes Ingress Controllers:
+          <https://kubernetes.io/docs/concepts/services-networking/ingress-controllers/>
+
+        - [ ] Kubernetes Network Policies: <https://kubernetes.io/docs/concepts/services-networking/network-policies/>
+
+      - Workload Management:
+
+        - [ ] Kubernetes Deployments: <https://kubernetes.io/docs/concepts/workloads/controllers/deployment/>
+
+        - [ ] Kubernetes ReplicaSets: <https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/>
+
+        - [ ] Kubernetes StatefulSets: <https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/>
+
+        - [ ] Kubernetes DaemonSets: <https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/>
+
+        - [ ] Kubernetes Jobs: <https://kubernetes.io/docs/concepts/workloads/controllers/job/>
+
+        - [ ] Kubernetes CronJobs: <https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/>
+
+- Follow the contents of the [Microservices with Node JS and React](
+  https://www.udemy.com/course/microservices-with-node-js-and-react/?couponCode=LETSLEARNNOW) course on Udemy.
+
+  - Save the changes and commits made to the script by creating a new Jira board and GitHub repository to contain and
+    track the changes.
+
+  - Document the notes from the course in the `notes` directory.
+
+  - Instead of blindly following the content of the course, try and add additional tests and validation and endpoints
+    to the code. Try and find alternative solutions to code, to learn more about the tools and technologies used to
+    develop the microservices.
+
+  - After the project has been implemented, add some variations of deploying the project, with different technologies,
+    e.g., different message bus technologies and tools.
+
+- Add notes for the following resources in the `notes` directory:
+
+  - Books:
+
+    - Security:
+
+      - [ ] Cybersecurity Ops with `bash` (Humble Bundle)
+
+      - [ ] Security Automation Detection Engineering (Humble Bundle)
+
+      - [ ] Artificial Intelligence for Cybersecurity (Humble Bundle)
+
+    - Automation:
+
+      - [ ] Automate the Boring Stuff with Python: Practical Programming for Total Beginners, Second Edition
+        (Humble Bundle)
+
+        - Python Basics
+
+        - Flow Control
+
+        - Functions
+
+        - Lists
+
+        - Dictionaries and Structuring Data
+
+        - Manipulating Strings
+
+        - Pattern Matching with Regular Expressions
+
+        - Input Validation
+
+        - Reading and Writing Files
+
+        - Organising Files
+
+        - Debugging
+
+        - Web Scraping
+
+        - Working with Excel Spreadsheets
+
+        - Working with Google Sheets
+
+        - Working with PDF and Word Documents
+
+        - Working with CSV Files and JSON Data
+
+        - Keeping Time, Scheduling Tasks, and Launching Programs
+
+        - Sending Email and Text Messages
+
+      - [ ] Network Programmability and Automation (Humble Bundle), the following sections:
+
+        - Network Industry Trends
+
+        - Network Automation
+
+        - Linux
+
+        - Cloud
+
+        - Network Developer Environments
+
+        - Python
+
+        - Go
+
+        - Data Formats and Models
+
+        - Working with Network APIs
+
+        - Continuous Integration
+
+        - Network Automation Architecture
+
+    - Command Line:
+
+      - `bash`
+
+        - [ ] bash Cookbook (Humble Bundle)
+
+      - PowerShell:
+
+        - [ ] PowerShell Cookbook (Humble Bundle)
+
+    - Professional Programmer Advice
+
+      - [ ] The Pragmatic Programmer (Physical)
+
+  - Online:
+
+    - Pipelines:
+
+      - Jenkins:
+
+        - [ ] Jenkins Handbook: <https://www.jenkins.io/doc/book/>
+
+        - [ ] Jenkins Guided Tour: <https://www.jenkins.io/doc/pipeline/tour/getting-started/>
