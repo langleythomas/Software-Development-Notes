@@ -596,43 +596,45 @@
   - [2.2. Command Line Tool Cheat Sheets](#22-command-line-tool-cheat-sheets)
     - [2.2.1. `docker`](#221-docker)
     - [2.2.2. `du`](#222-du)
-    - [2.2.3. `git`](#223-git)
-      - [2.2.3.1. GitHub](#2231-github)
-        - [2.2.3.1.1. Reset Local Changes \& Update Main Branch](#22311-reset-local-changes--update-main-branch)
-    - [2.2.4. `helm`](#224-helm)
-    - [2.2.5. `helmfile`](#225-helmfile)
-    - [2.2.6. `java`](#226-java)
-    - [2.2.7. `kubectl`](#227-kubectl)
-    - [2.2.8. `vi`/`vim`/`nvim`](#228-vivimnvim)
-      - [2.2.8.1. Cutting Text](#2281-cutting-text)
-      - [2.2.8.2. Indenting Text](#2282-indenting-text)
-      - [2.2.8.3. Replacing Text](#2283-replacing-text)
-        - [2.2.8.3.1. Replace One Occurrence](#22831-replace-one-occurrence)
-        - [2.2.8.3.2. Replace All Contents in a Line](#22832-replace-all-contents-in-a-line)
-    - [2.2.9. `yt-dlp`](#229-yt-dlp)
-      - [2.2.9.1. Install `yt-dlp`](#2291-install-yt-dlp)
-        - [2.2.9.1.1. Install `yt-dlp` \& Dependencies](#22911-install-yt-dlp--dependencies)
-        - [2.2.9.1.2. Install `ffmpeg`](#22912-install-ffmpeg)
-          - [2.2.9.1.2.1. Install `ffmpeg` in Linux](#229121-install-ffmpeg-in-linux)
-        - [2.2.9.1.3. Verify `yt-dlp` Installation](#22913-verify-yt-dlp-installation)
-      - [2.2.9.2. Download from YouTube](#2292-download-from-youtube)
-        - [2.2.9.2.1. Playlists](#22921-playlists)
-          - [2.2.9.2.1.1. Funhaus (Playlists)](#229211-funhaus-playlists)
-          - [2.2.9.2.1.2. Funhaus Members Playlist](#229212-funhaus-members-playlist)
-          - [2.2.9.2.1.3. Funhaus Live Playlist](#229213-funhaus-live-playlist)
-        - [2.2.9.2.2. Channels](#22922-channels)
-          - [2.2.9.2.2.1. Achievement Hunter](#229221-achievement-hunter)
-          - [2.2.9.2.2.2. Call Me Kevin](#229222-call-me-kevin)
-          - [2.2.9.2.2.3. Funhaus (Channel)](#229223-funhaus-channel)
-          - [2.2.9.2.2.4. Funhaus Too](#229224-funhaus-too)
-          - [2.2.9.2.2.5. Inside Gaming (Formerly "The Know")](#229225-inside-gaming-formerly-the-know)
-          - [2.2.9.2.2.6. IMSON1NJA](#229226-imson1nja)
-          - [2.2.9.2.2.7. Lets Play](#229227-lets-play)
-          - [2.2.9.2.2.8. Marlene Mizulo](#229228-marlene-mizulo)
-          - [2.2.9.2.2.9. Overly Sarcastic Productions](#229229-overly-sarcastic-productions)
-          - [2.2.9.2.2.10. Rooster Teeth](#2292210-rooster-teeth)
-          - [2.2.9.2.2.11. Rooster Teeth Podcasts](#2292211-rooster-teeth-podcasts)
-          - [2.2.9.2.2.12. The Escapist](#2292212-the-escapist)
+    - [2.2.3. `expac`](#223-expac)
+      - [2.2.3.1. Order Installed Arch Packages by Size](#2231-order-installed-arch-packages-by-size)
+    - [2.2.4. `git`](#224-git)
+      - [2.2.4.1. GitHub](#2241-github)
+        - [2.2.4.1.1. Reset Local Changes \& Update Main Branch](#22411-reset-local-changes--update-main-branch)
+    - [2.2.5. `helm`](#225-helm)
+    - [2.2.6. `helmfile`](#226-helmfile)
+    - [2.2.7. `java`](#227-java)
+    - [2.2.8. `kubectl`](#228-kubectl)
+    - [2.2.9. `vi`/`vim`/`nvim`](#229-vivimnvim)
+      - [2.2.9.1. Cutting Text](#2291-cutting-text)
+      - [2.2.9.2. Indenting Text](#2292-indenting-text)
+      - [2.2.9.3. Replacing Text](#2293-replacing-text)
+        - [2.2.9.3.1. Replace One Occurrence](#22931-replace-one-occurrence)
+        - [2.2.9.3.2. Replace All Contents in a Line](#22932-replace-all-contents-in-a-line)
+    - [2.2.10. `yt-dlp`](#2210-yt-dlp)
+      - [2.2.10.1. Install `yt-dlp`](#22101-install-yt-dlp)
+        - [2.2.10.1.1. Install `yt-dlp` \& Dependencies](#221011-install-yt-dlp--dependencies)
+        - [2.2.10.1.2. Install `ffmpeg`](#221012-install-ffmpeg)
+          - [2.2.10.1.2.1. Install `ffmpeg` in Linux](#2210121-install-ffmpeg-in-linux)
+        - [2.2.10.1.3. Verify `yt-dlp` Installation](#221013-verify-yt-dlp-installation)
+      - [2.2.10.2. Download from YouTube](#22102-download-from-youtube)
+        - [2.2.10.2.1. Playlists](#221021-playlists)
+          - [2.2.10.2.1.1. Funhaus (Playlists)](#2210211-funhaus-playlists)
+          - [2.2.10.2.1.2. Funhaus Members Playlist](#2210212-funhaus-members-playlist)
+          - [2.2.10.2.1.3. Funhaus Live Playlist](#2210213-funhaus-live-playlist)
+        - [2.2.10.2.2. Channels](#221022-channels)
+          - [2.2.10.2.2.1. Achievement Hunter](#2210221-achievement-hunter)
+          - [2.2.10.2.2.2. Call Me Kevin](#2210222-call-me-kevin)
+          - [2.2.10.2.2.3. Funhaus (Channel)](#2210223-funhaus-channel)
+          - [2.2.10.2.2.4. Funhaus Too](#2210224-funhaus-too)
+          - [2.2.10.2.2.5. Inside Gaming (Formerly "The Know")](#2210225-inside-gaming-formerly-the-know)
+          - [2.2.10.2.2.6. IMSON1NJA](#2210226-imson1nja)
+          - [2.2.10.2.2.7. Lets Play](#2210227-lets-play)
+          - [2.2.10.2.2.8. Marlene Mizulo](#2210228-marlene-mizulo)
+          - [2.2.10.2.2.9. Overly Sarcastic Productions](#2210229-overly-sarcastic-productions)
+          - [2.2.10.2.2.10. Rooster Teeth](#22102210-rooster-teeth)
+          - [2.2.10.2.2.11. Rooster Teeth Podcasts](#22102211-rooster-teeth-podcasts)
+          - [2.2.10.2.2.12. The Escapist](#22102212-the-escapist)
   - [2.3. Regex](#23-regex)
     - [2.3.1. Command Line Arguments](#231-command-line-arguments)
       - [2.3.1.1. Short-Hand Arguments](#2311-short-hand-arguments)
@@ -4429,18 +4431,80 @@
 
 ### 1.2.7. Application Security in the Cloud Era
 
-
--
+- The shift to cloud computing has been driven by its many benefits, including its many benefits, including
+  scalability, agility, cost savings, and global accessibility. This adoption has brought about significant changes in
+  application security.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- The move to cloud computing has pushed applications and their associated data outside the organisation's perimeter,
+  leading to new security challenges and considerations.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+- **Learn Shared Responsibility Model**:
+
+  - In traditional on-premises environments, organisations had full control over the security of their infrastructure
+    and applications. With cloud computing, the responsibility for security the underlying infrastructure shifts to
+    the cloud provider, while the organisation is responsible for securing applications and data through access]
+    controls, authentication, secure coding, and managing third-party risks.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - The exact division of responsibilities can vary depending on the cloud service model being used (e.g., IaaS, PaaS,
+    SaaS) and the specific offerings of cloud provider. Each model presents its unique security challenges.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Secure Configurations**:
+
+  - Cloud service providers typically provide a secure baseline configuration for their services, but it is up to the
+    organisation to customise and optimise those configurations to align with their specific security requirements.
+    This includes configuring access controls, network settings, storage configurations, encryption, logging and
+    monitor, and other security-relating settings.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Continuous Logging & Monitoring**:
+
+  - Implementing comprehensive logging mechanisms enables organizations to track user access, data transfers,
+    configuration changes, and security incidents within their cloud infrastructure. Real-time monitoring of logs
+    facilitates prompt detection and response to threats and suspicious activities, while the analysis of logged data
+    provides insights into system performance and vulnerabilities.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Data Protection in Multitenant Environments**:
+
+  -  To mitigate risks, organisations should focus on strategies such as data isolation, encryption, access control and
+    authentication, vulnerability management, security monitoring and logging, SLAs, contractual agreements, and
+    regular security assessments.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Ensuring the logical separation of data, implementing robust encryption, and adhering to strict access control
+    practices safeguard against unauthorised access to sensitive data.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Adopt Cloud Security Services**:
+
+  - Secure WAFs protect against common web vulnerabilities, while cloud access security brokers (CASBs) offer control
+    and visibility over cloud data and applications. CASBs enhance security with data encryption, access control, and
+    threat prevention. They tackle shadow IT, enforce data loss prevention (DLP) policies, and ensure compliance with
+    industry regulations.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Container security tools ensure the integrity of containerised applications, and identity and access management
+    (IAM) solutions manage user access to cloud resources. 
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Encryption and tokenisation tools protect sensitive data, while SIEM solutions collect and analyse security event
+    data.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
 
 <!-- ### Code Provenance for DevSevOps
 
@@ -33582,6 +33646,7 @@ scale of modern systems. It has a few interesting implications:
 |            `env`            |                                                    Run a program in a modified environment.                                                    |                        <https://www.mankier.com/1/env>                         |            TBD.             |                                  TBD.                                   |                                  TBD.                                   |
 |           `exec`            |                                          Execute commands and open, close, or copy file descriptors.                                           |                       <https://www.mankier.com/1p/exec>                        |            TBD.             |                                  TBD.                                   |                                  TBD.                                   |
 |           `exit`            |                                                            Cause the shell to exit.                                                            |                       <https://www.mankier.com/1p/exit>                        |            TBD.             |                                  TBD.                                   |                                  TBD.                                   |
+|           `expac`           |                                                    Data extraction tool for alpm databases.                                                    |                    <https://man.archlinux.org/man/expac.1>                     |      [`2.2.3. expac`](#223-expac)      |           Pre-installed on Arch systems and its derivatives.            |                                  TBD.                                   |
 |            `eza`            |                           A modern alternative to the `ls` program that ships with Unix and Linux operating systems.                           | <https://github.com/eza-community/eza?tab=readme-ov-file#command-line-options> |            TBD.             |       <https://github.com/eza-community/eza/blob/main/INSTALL.md>       |       <https://github.com/eza-community/eza/blob/main/INSTALL.md>       |
 |         `fastfetch`         |                           `neofetch`-like tool for fetching system information and displaying them in a pretty way.                            |                     <https://www.mankier.com/1/fastfetch>                      |            TBD.             |  <https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#linux>  | <https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#windows> |
 |          `fdupes`           |                                              Find duplicate files in a given set of directories.                                               |                       <https://www.mankier.com/1/fdupes>                       |            TBD.             |                                  TBD.                                   |                                  TBD.                                   |
@@ -33782,31 +33847,39 @@ scale of modern systems. It has a few interesting implications:
 
 ### 2.2.2. `du`
 
-### 2.2.3. `git`
+### 2.2.3. `expac`
 
-#### 2.2.3.1. GitHub
+#### 2.2.3.1. Order Installed Arch Packages by Size
 
-##### 2.2.3.1.1. Reset Local Changes & Update Main Branch
+```bash
+expac --humansize M '%m\t%n' | sort --human-numeric-sort | nl
+```
+
+### 2.2.4. `git`
+
+#### 2.2.4.1. GitHub
+
+##### 2.2.4.1.1. Reset Local Changes & Update Main Branch
 
 ```bash
 git checkout main && git reset --hard origin/main && git fetch && git pull
 ```
 
-### 2.2.4. `helm`
+### 2.2.5. `helm`
 
-### 2.2.5. `helmfile`
+### 2.2.6. `helmfile`
 
-### 2.2.6. `java`
+### 2.2.7. `java`
 
-### 2.2.7. `kubectl`
+### 2.2.8. `kubectl`
 
-### 2.2.8. `vi`/`vim`/`nvim`
+### 2.2.9. `vi`/`vim`/`nvim`
 
-#### 2.2.8.1. Cutting Text
+#### 2.2.9.1. Cutting Text
 
 - Highlight text, then press `d`.
 
-#### 2.2.8.2. Indenting Text
+#### 2.2.9.2. Indenting Text
 
 - To adjust the indent on multiple lines:
 
@@ -33816,9 +33889,9 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
 
   - Press `>` to indent (shift text one 'shiftwidth' to the right), or press `<` to shift left.
 
-#### 2.2.8.3. Replacing Text
+#### 2.2.9.3. Replacing Text
 
-##### 2.2.8.3.1. Replace One Occurrence
+##### 2.2.9.3.1. Replace One Occurrence
 
 - Replace a single occurrence of the `<search_term>` with the `<replacement_term>`.
 
@@ -33826,7 +33899,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   :s/search_term/replacement_term/
   ```
 
-##### 2.2.8.3.2. Replace All Contents in a Line
+##### 2.2.9.3.2. Replace All Contents in a Line
 
 - Replace all occurrences of the `<search_term>` with the `<replacement_term>`.
 
@@ -33834,17 +33907,17 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   :s/search_term/replacement_term/g
   ```
 
-### 2.2.9. `yt-dlp`
+### 2.2.10. `yt-dlp`
 
-#### 2.2.9.1. Install `yt-dlp`
+#### 2.2.10.1. Install `yt-dlp`
 
-##### 2.2.9.1.1. Install `yt-dlp` & Dependencies
+##### 2.2.10.1.1. Install `yt-dlp` & Dependencies
 
 - Download from [yt_dlp_x86.exe](https://github.com/yt-dlp/yt-dlp?tab=readme-ov-file#recommended).
 
-##### 2.2.9.1.2. Install `ffmpeg`
+##### 2.2.10.1.2. Install `ffmpeg`
 
-###### 2.2.9.1.2.1. Install `ffmpeg` in Linux
+###### 2.2.10.1.2.1. Install `ffmpeg` in Linux
 
 - Install `ffmpeg` using the link for your operating system of choice in the
   table in [2.1. Command Line Tools Overview](#21-command-line-tools-overview).
@@ -33852,7 +33925,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
 - Note: `ffmpeg` is required to download YouTube videos at 1080p. Installing and configuring `ffmpeg` also install
   `ffprobe`.
 
-##### 2.2.9.1.3. Verify `yt-dlp` Installation
+##### 2.2.10.1.3. Verify `yt-dlp` Installation
 
 - Run the `yt-dlp` commands in the directory containing the `yt-dlp` executable file.
 
@@ -33863,7 +33936,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   ./yt-dlp_x86.exe --help
   ```
 
-#### 2.2.9.2. Download from YouTube
+#### 2.2.10.2. Download from YouTube
 
 - Set the environment variables for each of the YouTube resources you wish to download before executing the following
   command. You must run each of the commands in this section in the same directory as which you have have downloaded
@@ -33873,11 +33946,11 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   ./yt-dlp_x86.exe --cookies-from-browser chrome "${YOUTUBE_URL}" --output "${OUTPUT_DIRECTORY}"
   ```
 
-##### 2.2.9.2.1. Playlists
+##### 2.2.10.2.1. Playlists
 
-###### 2.2.9.2.1.1. Funhaus (Playlists)
+###### 2.2.10.2.1.1. Funhaus (Playlists)
 
-###### 2.2.9.2.1.2. Funhaus Members Playlist
+###### 2.2.10.2.1.2. Funhaus Members Playlist
 
 - Set the following variables to download the videos in the Funhaus Member playlist:
 
@@ -33886,7 +33959,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Members/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.1.3. Funhaus Live Playlist
+###### 2.2.10.2.1.3. Funhaus Live Playlist
 
 - Set the following variables to download the videos in the Funhaus Live playlist:
 
@@ -33895,9 +33968,9 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/Live/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-##### 2.2.9.2.2. Channels
+##### 2.2.10.2.2. Channels
 
-###### 2.2.9.2.2.1. Achievement Hunter
+###### 2.2.10.2.2.1. Achievement Hunter
 
 - Set the following variables to download all the contents in the Achievement Hunter channel:
 
@@ -33906,7 +33979,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Achievement Hunter/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.2. Call Me Kevin
+###### 2.2.10.2.2.2. Call Me Kevin
 
 - Set the following variables to download all the contents in the Call Me Kevin channel:
 
@@ -33915,7 +33988,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Call Me Kevin/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.3. Funhaus (Channel)
+###### 2.2.10.2.2.3. Funhaus (Channel)
 
 - Set the following variables to download all the contents in the Funhaus channel:
 
@@ -33924,7 +33997,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.4. Funhaus Too
+###### 2.2.10.2.2.4. Funhaus Too
 
 - Set the following variables to download all the contents in the Funhaus Too channel:
 
@@ -33933,7 +34006,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus Too/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.5. Inside Gaming (Formerly "The Know")
+###### 2.2.10.2.2.5. Inside Gaming (Formerly "The Know")
 
 - Set the following variables to download all the contents in the Inside Gaming (Formerly "The Know") channel:
 
@@ -33942,7 +34015,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Inside Gaming (Formerly \"The Know\")/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.6. IMSON1NJA
+###### 2.2.10.2.2.6. IMSON1NJA
 
 - Set the following variables to download all the contents in the IMSON1NJA channel, to download the deleted Funhaus
   videos in that channel:
@@ -33952,7 +34025,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.7. Lets Play
+###### 2.2.10.2.2.7. Lets Play
 
 - Set the following variables to download all the contents in the Lets Play channel:
 
@@ -33961,7 +34034,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Lets Play/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.8. Marlene Mizulo
+###### 2.2.10.2.2.8. Marlene Mizulo
 
 - Set the following variables to download all the contents in the Marlene Mizulo channel, to download the deleted
   Funhaus videos in that channel:
@@ -33971,7 +34044,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Funhaus/2015-2024/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.9. Overly Sarcastic Productions
+###### 2.2.10.2.2.9. Overly Sarcastic Productions
 
 - Set the following variables to download all the contents in the Overly Sarcastic Productions channel:
 
@@ -33980,7 +34053,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Overly Sarcastic Productions/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.10. Rooster Teeth
+###### 2.2.10.2.2.10. Rooster Teeth
 
 - Set the following variables to download all the contents in the Rooster Teeth channel:
 
@@ -33989,7 +34062,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.11. Rooster Teeth Podcasts
+###### 2.2.10.2.2.11. Rooster Teeth Podcasts
 
 - Set the following variables to download all the contents in the Rooster Teeth Podcasts channel:
 
@@ -33998,7 +34071,7 @@ git checkout main && git reset --hard origin/main && git fetch && git pull
   export OUTPUT_DIRECTORY="/f/Downloaded Videos/Rooster Teeth Podcasts/%(upload_date>%Y)s/%(title)s.%(ext)s"
   ```
 
-###### 2.2.9.2.2.12. The Escapist
+###### 2.2.10.2.2.12. The Escapist
 
 - Set the following variables to download all the contents in the The Escapist channel:
 
