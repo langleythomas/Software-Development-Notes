@@ -5,7 +5,7 @@
 #######################################################################################################################
 
 # Alpine:
-# - Alpine (XFCE Desktop Environment)
+# - TBD, most likely Alpine (XFCE Desktop Environment)
 
 # Arch:
 # - EndeavourOS (KDE Plasma Desktop Environment)
@@ -387,7 +387,7 @@ function install_dot_net_runtime() {
         update_dnf
         sudo dnf install dotnet-runtime-9.0 --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install dotnet-runtime-9.0 --yes
     fi
 
@@ -661,7 +661,7 @@ function configure_vim() {
         "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/vim-configuration/.vimrc" \
         >> "${vimrc_file_path}"
 
-    # There is no need for a source command on the .vimrc, as the .vimrc is automatically read and validated when
+    # There is no need for a source command on the .vimrc file, as the .vimrc is automatically read and validated when
     # executing the vim command in a terminal.
 }
 
@@ -724,9 +724,6 @@ function configure_neovim() {
     curl \
         "https://raw.githubusercontent.com/langleythomas/software-development-notes/main/neovim-configuration/init.vim" \
         >> "${dot_config_neovim_directory_path}/init.vim"
-
-    # There is no need for a source command on the init.vim, as the init.vim is automatically read and validated when
-    # executing the vim command in a terminal.
 }
 
 function install_neovim_system_clipboard_dependency() {
@@ -748,11 +745,46 @@ function install_emacs() {
         update_dnf
         sudo dnf install emacs --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install emacs --yes
     fi
 
     nvim --version
+}
+
+function install_sublime_text() {
+    log_output "Installing Sublime Text Editor. Reference installation documentation: https://www.sublimetext.com/docs/linux_repositories.html"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        curl --remote-name "https://download.sublimetext.com/sublimehq-pub.gpg"
+        sudo pacman-key --add "sublimehq-pub.gpg"
+        sudo pacman-key --lsign-key 8A8F901A
+        rm -v "sublimehq-pub.gpg"
+
+        echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee --append "/etc/pacman.conf"
+
+        update_upgrade_pacman
+        sudo pacman -Syu sublime-text
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        sudo rpm --verbose --import "https://download.sublimetext.com/sublimehq-rpm-pub.gpg"
+
+        sudo dnf config-manager --add-repo "https://download.sublimetext.com/rpm/stable/x86_64/sublime-text.repo"
+
+        sudo dnf install sublime-text
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        wget --quiet -O - "https://download.sublimetext.com/sublimehq-pub.gpg" | gpg --dearmor | sudo tee "/etc/apt/trusted.gpg.d/sublimehq-archive.gpg" > /dev/null
+
+        update_upgrade_apt
+        sudo apt install "sublime-text"
+    fi
+}
+
+function configure_sublime_text() {
+    log_output "Creating Sublime Text configuration file."
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Preferences.sublime-settings" \
+        >> ~/".config/sublime-text/Packages/User/Preferences.sublime-settings"
 }
 
 function install_visual_studio_code() {
@@ -818,6 +850,9 @@ function install_configure_text_editors() {
     install_neovim_system_clipboard_dependency
 
     install_emacs
+
+    install_sublime_text
+    configure_sublime_text
 
     install_visual_studio_code
 }
@@ -886,7 +921,7 @@ function install_brave() {
         update_dnf
         sudo dnf install brave-browser --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install curl --yes
 
         sudo curl --fail --silent --show-error --location --output \
@@ -895,7 +930,7 @@ function install_brave() {
         echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
             | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install brave-browser --yes
     fi
 
@@ -944,7 +979,7 @@ function install_gnome_tweaks() {
         log_output "Installing GNOME Tweaks. Reference installation documentation: https://www.geeksforgeeks.org/install-gnome-tweaks-on-ubuntu/"
 
         if [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-            update_and_upgrade_apt
+            update_upgrade_apt
             sudo add-apt-repository universe
 
             update_upgrade_apt
@@ -1302,7 +1337,7 @@ function install_btop() {
         update_dnf
         sudo dnf install btop --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install btop --yes
     fi
 
@@ -1319,7 +1354,7 @@ function install_diff_so_fancy() {
         update_dnf
         sudo dnf install diff-so-fancy --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install diff-so-fancy --yes
     fi
 
@@ -1343,7 +1378,7 @@ function install_dust() {
         update_dnf
         sudo dnf install dust --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install dust --yes
     fi
 
@@ -1360,7 +1395,7 @@ function install_eza() {
         update_dnf
         sudo dnf install dust --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install eza --yes
 
         sudo mkdir --parents "/etc/apt/keyrings"
@@ -1368,7 +1403,7 @@ function install_eza() {
         echo "deb [signed-by=/etc/apt/keyrings/gierens.gpg] http://deb.gierens.de stable main" | sudo tee /etc/apt/sources.list.d/gierens.list
         sudo chmod 644 "/etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list"
 
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install eza --yes
     fi
 
@@ -1385,7 +1420,7 @@ function install_fastfetch() {
         update_dnf
         sudo dnf install fastfetch --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install fastfetch --yes
     fi
 
@@ -1404,7 +1439,7 @@ function install_fzf() {
         update_dnf
         sudo dnf install fzf --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install fzf --yes
     fi
 
@@ -1421,11 +1456,44 @@ function install_kdash() {
         update_dnf
         sudo dnf install kdash --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install kdash --yes
     fi
 
     kdash --version
+}
+
+function install_powershell() {
+    log_output "Installing PowerShell. Reference installation documentation: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+        sudo yay --sync powershell --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        sudo rpm --import "https://packages.microsoft.com/keys/microsoft.asc"
+        curl "https://packages.microsoft.com/config/rhel/7/prod.repo" | sudo tee "/etc/yum.repos.d/microsoft.repo"
+        sudo dnf makecache --yes
+        sudo dnf install powershell --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install wget --yes
+        sudo apt install apt-transport-https--yes
+        sudo apt install software-properties-common --yes
+
+        # shellcheck disable=SC1091
+        source "/etc/os-release"
+
+        wget --quiet "https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb"
+
+        sudo dpkg -i "packages-microsoft-prod.deb"
+
+        rm "packages-microsoft-prod.deb"
+
+        update_upgrade_apt
+        sudo apt install powershell --yes
+    fi
+
+    pwsh --version
 }
 
 function install_procs() {
@@ -1438,7 +1506,7 @@ function install_procs() {
         update_dnf
         sudo dnf install procs --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install procs --yes
     fi
 
@@ -1474,7 +1542,7 @@ function install_ripgrep() {
         update_dnf
         sudo dnf install ripgrep --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install ripgrep --yes
     fi
 
@@ -1491,7 +1559,7 @@ function install_sd() {
         update_dnf
         sudo dnf install sd --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install sd --yes
     fi
 
@@ -1508,7 +1576,7 @@ function install_tldr() {
         update_dnf
         sudo dnf install tldr --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install tldr --yes
     fi
 
@@ -1530,6 +1598,8 @@ function install_command_line_utilities() {
     install_fzf
 
     install_kdash
+
+    install_powershell
 
     install_procs
 
@@ -1601,7 +1671,7 @@ function install_virtualbox() {
         update_dnf
         sudo dnf install virtualbox --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_and_upgrade_apt
+        update_upgrade_apt
         sudo apt install virtualbox --yes
     fi
 }
