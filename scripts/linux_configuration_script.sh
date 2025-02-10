@@ -759,9 +759,10 @@ function install_sublime_text() {
         curl --remote-name "https://download.sublimetext.com/sublimehq-pub.gpg"
         sudo pacman-key --add "sublimehq-pub.gpg"
         sudo pacman-key --lsign-key 8A8F901A
-        rm -v "sublimehq-pub.gpg"
+        rm --verbose "sublimehq-pub.gpg"
 
-        echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" | sudo tee --append "/etc/pacman.conf"
+        echo -e "\n[sublime-text]\nServer = https://download.sublimetext.com/arch/stable/x86_64" \
+            | sudo tee --append "/etc/pacman.conf"
 
         update_upgrade_pacman
         sudo pacman -Syu sublime-text
@@ -1125,13 +1126,27 @@ function install_ds_emulator() {
     fi
 }
 
+function install_n64_emulator() {
+    log_output "Installing the simple64 emulator, for N64 emulation. Reference installation documentation: https://linux-packages.com/aur/package/simple64, https://github.com/simple64/simple64/releases"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_aur
+        yay --sync simple64 --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_flatpak
+        flatpak install flathub io.github.simple64.simple64 --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+        flatpak install flathub io.github.simple64.simple64 --yes
+    fi
+}
+
 function install_gamecube_wii_emulator() {
     log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation. Reference installation documentation: https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-
-        sudo pacman --sync cemu --noconfirm
+        yay --sync cemu --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists "flathub" "https://dl.flathub.org/repo/flathub.flatpakrepo"
@@ -1268,6 +1283,12 @@ function install_playstation_3_emulator() {
 function install_emulators() {
     # GameBoy Emulator
     install_gameboy_emulator
+
+    # DS Emulator
+    install_ds_emulator
+
+    # N64 Emulator
+    install_n64_emulator
 
     # GameCube & Wii Emulator
     install_gamecube_wii_emulator
@@ -1456,8 +1477,10 @@ function install_kdash() {
         update_dnf
         sudo dnf install kdash --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install kdash --yes
+        wget "https://github.com/kdash-rs/kdash/releases/download/v0.6.1/kdash-linux.tar.gz" \
+            --output-document ~/"Downloads/kdash-linux.tar.gz"
+
+        sudo tar --directory="/usr/local/bin" --extract --gzip --file ~/"Downloads/kdash-linux.tar.gz"
     fi
 
     kdash --version
@@ -1468,7 +1491,7 @@ function install_powershell() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        sudo yay --sync powershell --noconfirm
+        yay --sync powershell --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         sudo rpm --import "https://packages.microsoft.com/keys/microsoft.asc"
         curl "https://packages.microsoft.com/config/rhel/7/prod.repo" | sudo tee "/etc/yum.repos.d/microsoft.repo"
