@@ -111,7 +111,11 @@ set colorcolumn=120
 try
     colorscheme dracula
 catch /^Vim\%((\a\+)\)\=:E185/
-    colorscheme torte
+    try
+        colorscheme slate
+    catch /^Vim\%((\a\+)\)\=:E185/
+        colorscheme default
+    endtry
 endtry
 
 " -----------------------------------------------------------------------------
