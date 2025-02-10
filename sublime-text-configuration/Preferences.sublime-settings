@@ -8,9 +8,17 @@
 
   "font_size": 10,
 
+  "draw_minimap_border": true,
+  "always_show_minimap_viewport": true,
+  "show_encoding": true,
+
   "highlight_line": true,
 
   "index_files": true,
 
-  "rulers": [120]
+  "rulers": [120],
+
+  "spell_check": true,
+
+  "hardware_acceleation": "opengl"
 }
