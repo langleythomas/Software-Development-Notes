@@ -1,14 +1,18 @@
 {
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+    "editor.tabSize": 2,
     "editor.unicodeHighlight.invisibleCharacters": true
   },
+
   "[plaintext]": {
     "editor.unicodeHighlight.invisibleCharacters": true
   },
+
   "[typescriptreact]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+
   "[yaml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
@@ -41,6 +45,7 @@
     "aline",
     "Alkenstar",
     "alma",
+    "alpm",
     "alrt",
     "Ambrost",
     "Amphail",
@@ -224,6 +229,7 @@
     "discordapp",
     "djembes",
     "docbook",
+    "Dockerfiles",
     "Dockerising",
     "Donal",
     "Donathan",
@@ -294,6 +300,7 @@
     "Everbloom",
     "ewwo",
     "execve",
+    "expac",
     "expandtab",
     "extdebug",
     "extglob",
@@ -443,6 +450,7 @@
     "HSPACE",
     "HSQLDB",
     "httpdinfo",
+    "humansize",
     "Huzuz",
     "Hydroforge",
     "Hyperscalers",
@@ -564,6 +572,7 @@
     "Lookback",
     "Lorcan",
     "lshw",
+    "lsign",
     "lstrip",
     "lsusb",
     "Luba",
@@ -583,6 +592,7 @@
     "Magisters",
     "mailx",
     "Majarra",
+    "makecache",
     "makedirs",
     "Malbolge",
     "Mancha",
@@ -692,6 +702,7 @@
     "Ocho",
     "Oddstone",
     "odoo",
+    "okular",
     "Olomon",
     "Omideas",
     "oneword",
@@ -760,6 +771,7 @@
     "PRIV",
     "proc",
     "procs",
+    "productified",
     "promptvars",
     "propset",
     "psql",
@@ -876,6 +888,7 @@
     "shuf",
     "shutil",
     "Sibriex",
+    "SIEM",
     "Siltmaster",
     "Silverscale",
     "Silvertongue",
@@ -1060,6 +1073,7 @@
     "vimdoc",
     "vimrc",
     "vipw",
+    "virtualbox",
     "Vixie",
     "Vrock",
     "VSPACE",
@@ -1156,6 +1170,7 @@
   "files.insertFinalNewline": true,
 
   "markdown-pdf.headerTemplate": "<div style=\"font-size: 9px; margin-left: 1cm;\"></div>",
+
   "markdown.extension.toc.updateOnSave": false,
 
   "markdownlint.run": "onSave",
