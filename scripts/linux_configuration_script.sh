@@ -48,6 +48,12 @@ function log_output() {
 ##########################################  Packaging Tool Refresh Functions ##########################################
 #######################################################################################################################
 
+function update_apk() {
+    su
+    apk update
+    apk upgrade --yes
+}
+
 function update_dnf() {
     sudo dnf upgrade --yes
 }
@@ -80,6 +86,7 @@ function update_upgrade_aur() {
 #######################################################################################################################
 
 function configure_nvidia_drivers() {
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         log_output "Installing Nvidia drivers."
         update_upgrade_pacman
@@ -113,9 +120,23 @@ function configure_graphics_drivers() {
 function install_docker() {
     log_output "Installing Docker. Reference installation documentation: https://docs.docker.com/engine/install/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add docker --yes
+
+        update_apk
+        apk add docker-cli-compose --yes
+
+        # Add user to Docker group
+        su usermod --append --groups "docker" "${USER}"
+        newgrp "docker"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync docker --noconfirm
+
+        # Add user to Docker group
+        sudo usermod --append --groups "docker" "${USER}"
+        newgrp "docker"
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf install dnf-plugins-core --yes
@@ -137,6 +158,10 @@ function install_docker() {
 
         update_dnf
         sudo dnf install docker-compose-plugin
+
+        # Add user to Docker group
+        sudo usermod --append --groups "docker" "${USER}"
+        newgrp "docker"
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
 
@@ -183,38 +208,54 @@ function install_docker() {
 
         update_upgrade_apt
         sudo apt install docker-compose-plugin --yes
-    fi
 
-    # Add user to Docker group
-    sudo usermod --append --groups "docker" "${USER}"
-    newgrp "docker"
+        # Add user to Docker group
+        sudo usermod --append --groups "docker" "${USER}"
+        newgrp "docker"
+    fi
 
     docker --version
 }
 
 function configure_docker_startup() {
-    log_output "Starting Docker."
+    log_output "Configuring Docker to automatically start running at system startup."
 
-    # Start Docker
-    sudo systemctl start docker
-
-    # Configure Docker to start up on initial system boot,
-    sudo systemctl enable --now docker
-
-    # Check status of the Docker daemon.
-    systemctl status docker
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        rc-update add docker default
+        service docker start
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        sudo systemctl start docker
+        sudo systemctl enable --now docker
+        systemctl status docker
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        sudo systemctl start docker
+        sudo systemctl enable --now docker
+        systemctl status docker
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        sudo service docker start
+        systemctl status docker
+    fi
 }
 
 function test_docker_installation() {
-    log_output "Running a Test Docker Image."
+    log_output "Running a test Docker image."
 
-    sudo docker run hello-world
+    docker run hello-world
 }
 
 function install_minikube() {
-    log_output "Installing Minikube. Reference installation documentation: https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download"
+    log_output "Installing Minikube. Reference installation documentation: https://minikube.sigs.k8s.io/docs/start"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        curl \
+            --location \
+            --output "minikube" \
+            "https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64"
+
+        chmod +x "minikube"
+
+        su mv --verbose "minikube" "/usr/local/bin/"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync minikube --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -255,7 +296,18 @@ function test_minikube_installation() {
 function install_kubernetes() {
     log_output "Installing Kubernetes. Reference installation documentation: https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        local -r latest_kubernetes_release="$(curl --silent \"https://storage.googleapis.com/kubernetes-release/release/stable.txt\")"
+
+        curl \
+            --location \
+            --output \
+            "https://storage.googleapis.com/kubernetes-release/release/${latest_kubernetes_release}/bin/linux/amd64/kubectl"
+
+        chmod +x ./"kubectl"
+
+        su mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync kubectl --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -281,7 +333,17 @@ function install_kubernetes() {
 function install_helm() {
     log_output "Installing Helm. Reference installation documentation: https://helm.sh/docs/intro/install/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        local -r install_helm_file_name="get_helm.sh"
+
+        curl "https://raw.githubusercontent.com/kubernetes/helm/master/scripts/get-helm-3" > "${install_helm_file_name}"
+
+        chmod 700 "${install_helm_file_name}"
+
+        ./"${install_helm_file_name}"
+
+        rm --force --verbose "${install_helm_file_name}"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync helm --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -338,7 +400,10 @@ function install_configure_deployment_tools() {
 function install_dot_net_sdk() {
     log_output "Installing the .NET SDK for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add dotnet9-sdk --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync dotnet-sdk --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -362,7 +427,10 @@ function install_dot_net_sdk() {
 function install_asp_net_runtime() {
     log_output "Installing the ASP .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add aspnetcore9-runtime --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync aspnet-runtime --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -380,7 +448,10 @@ function install_asp_net_runtime() {
 function install_dot_net_runtime() {
     log_output "Installing the .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add dotnet9-runtime --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync dotnet-runtime --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -410,7 +481,10 @@ function install_dot_net_development_prerequisites() {
 function install_nodejs_runtime() {
     log_output "Installing the Node JS runtime for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add nodejs --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync nodejs --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -449,9 +523,12 @@ function install_nodejs_runtime() {
 }
 
 function install_npm() {
-    log_output "Installing the Node Package Manager for JavaScript development."
+    log_output "Installing the Node Package Manager for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add npm --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync npm --noconfirm
     # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then # Fedora doesn't need npm to be installed, as nodejs contains npm.
@@ -477,7 +554,10 @@ function install_javascript_development_prerequisites() {
 function install_python3() {
     log_output "Installing Python 3. Reference installation documentation: https://www.geeksforgeeks.org/how-to-install-python-on-linux/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add python3 --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync python --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -494,7 +574,10 @@ function install_python3() {
 function install_python3_pip() {
     log_output "Installing Python 3 PIP. Reference installation documentation: https://www.tecmint.com/install-pip-in-linux/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add py3-pip --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync python-pip --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -522,7 +605,10 @@ function install_python_development_prerequisites() {
 function install_ruby() {
     log_output "Installing Ruby. Reference installation documentation: https://www.ruby-lang.org/en/documentation/installation/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add ruby --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync ruby --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -549,7 +635,10 @@ function install_ruby_development_prerequisites() {
 function install_git() {
     log_output "Installing Git. Reference installation documentation: https://git-scm.com/downloads/linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add git --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync git --noconfirm
         git --version
@@ -622,9 +711,12 @@ function configure_linux_system_overrides() {
 #######################################################################################################################
 
 function install_vim() {
-    log_output "Installing Vim."
+    log_output "Installing Vim. Reference installation documentation: https://tecadmin.net/install-vim-linux/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add vim --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync vim --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -690,7 +782,10 @@ function install_vim_markdown_preview() {
 function install_neovim() {
     log_output "Installing Neovim. Reference installation documentation: https://github.com/neovim/neovim/blob/master/INSTALL.md"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add neovim --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync neovim --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -738,7 +833,16 @@ function install_neovim_system_clipboard_dependency() {
 function install_emacs() {
     log_output "Installing Emacs. Reference installation documentation: https://www.gnu.org/software/emacs/download.html"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add texinfo --yes
+
+        update_apk
+        apk add emacs-docs --yes
+
+        update_apk
+        apk add emacs --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync emacs --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -755,6 +859,7 @@ function install_emacs() {
 function install_sublime_text() {
     log_output "Installing Sublime Text Editor. Reference installation documentation: https://www.sublimetext.com/docs/linux_repositories.html"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         curl --remote-name "https://download.sublimetext.com/sublimehq-pub.gpg"
         sudo pacman-key --add "sublimehq-pub.gpg"
@@ -791,6 +896,7 @@ function configure_sublime_text() {
 function install_visual_studio_code() {
     log_output "Installing Visual Studio Code. Reference installation documentation: https://code.visualstudio.com/docs/setup/linux"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync visual-studio-code-bin --noconfirm
@@ -867,6 +973,7 @@ function install_configure_text_editors() {
 function install_intellij() {
     log_output "Installing IntelliJ IDEA Community Edition. Reference installation documentation: https://www.jetbrains.com/help/idea/installation-guide.html"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync intellij-idea-community-edition --noconfirm
@@ -882,6 +989,7 @@ function install_intellij() {
 function install_pycharm() {
     log_output "Installing PyCharm Community Edition. Reference installation documentation: https://www.jetbrains.com/help/pycharm/installation-guide.html"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync pycharm-community-edition --noconfirm
@@ -909,6 +1017,7 @@ function install_integrated_development_environments() {
 function install_brave() {
     log_output "Installing Brave. Reference installation documentation: https://brave.com/linux/"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync brave-browser --noconfirm
@@ -938,8 +1047,30 @@ function install_brave() {
     brave --version
 }
 
+function install_chromium() {
+    log_output "Installing Chromium. Reference installation documentation: https://www.fosslinux.com/111944/how-to-install-chromium-web-browser-on-linux.htm"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add chromium --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync chromium --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install chromium-browser --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install chromium-browser --yes
+    fi
+
+    chromium --version
+}
+
 function install_browser() {
     install_brave
+
+    install_chromium
 }
 
 
@@ -951,6 +1082,7 @@ function install_browser() {
 function install_discord() {
     log_output "Installing Discord. Reference installation documentation: https://wiki.archlinux.org/title/Discord"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync discord --noconfirm
@@ -1002,7 +1134,10 @@ function install_ui_configuration_tools() {
 function install_vlc() {
     log_output "Installing VLC. Reference installation documentation: https://www.videolan.org/vlc/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add vlc --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync vlc --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1029,7 +1164,10 @@ function install_media_players() {
 function install_guake() {
     log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key. Reference installation documentation: https://guake.readthedocs.io/en/stable/user/installing.html"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add guake --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync guake --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1067,6 +1205,7 @@ function install_configure_terminals() {
 function install_steam() {
     log_output "Installing Steam. Reference installation documentation: https://www.howtogeek.com/753511/how-to-download-and-install-steam-on-linux/"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
 
@@ -1108,6 +1247,7 @@ function install_gameboy_emulator() {
 function install_ds_emulator() {
     log_output "Installing the melonDS, for Nintendo DS emulation. Reference installation documentation: https://melonds.kuribo64.net/downloads.php"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync melonds --noconfirm
@@ -1129,6 +1269,7 @@ function install_ds_emulator() {
 function install_n64_emulator() {
     log_output "Installing the simple64 emulator, for N64 emulation. Reference installation documentation: https://linux-packages.com/aur/package/simple64, https://github.com/simple64/simple64/releases"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync simple64 --noconfirm
@@ -1144,7 +1285,10 @@ function install_n64_emulator() {
 function install_gamecube_wii_emulator() {
     log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation. Reference installation documentation: https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add dolphin --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync cemu --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1165,6 +1309,7 @@ function install_gamecube_wii_emulator() {
 function install_wii_u_emulator() {
     log_output "Installing the Cemu emulator, for Wii U emulation. Reference installation documentation: https://wiki.cemu.info/wiki/Installation_guide"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync cemu --noconfirm
@@ -1189,6 +1334,7 @@ function install_switch_emulator() {
 function install_xbox_emulator() {
     log_output "Installing the Xemu emulator, for Xbox emulation. Reference installation documentation: https://xemu.app/docs"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync xemu --noconfirm
@@ -1204,7 +1350,9 @@ function install_xbox_emulator() {
 # function install_xbox_360_emulator() {
 #     log_output "Installing the Xenia emulator, for Xbox 360 emulation. Setup guide: https://github.com/xenia-canary/xenia-canary/wiki/Quickstart"
 
-#     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+#     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+
+#     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
 
 #     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
 
@@ -1216,7 +1364,10 @@ function install_xbox_emulator() {
 function install_psp_emulator() {
     log_output "Installing the emulator, PlayStation Portable emulation. Reference installation documentation: https://www.ppsspp.org/download/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add ppsspp --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync ppsspp --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1231,6 +1382,7 @@ function install_psp_emulator() {
 function install_playstation_emulator() {
     log_output "Installing the DuckStation emulator, for PlayStation emulation. Reference installation documentation: https://github.com/stenzek/duckstation?tab=readme-ov-file#linux"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
 
@@ -1253,6 +1405,7 @@ function install_playstation_emulator() {
 function install_playstation2_emulator() {
     log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation. Reference installation documentation: https://pcsx2.net/downloads"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yarn --sync pcxs2 --noconfirm
@@ -1268,6 +1421,7 @@ function install_playstation2_emulator() {
 function install_playstation_3_emulator() {
     log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation. Reference installation documentation: https://rpcs3.net/download"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync rpcs3 --noconfirm
@@ -1324,7 +1478,10 @@ function install_emulators() {
 function install_okular() {
     log_output "Installing okular, a universal document viewer. Reference installation documentation: https://okular.kde.org/download/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add okular --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync okular --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1351,7 +1508,10 @@ function install_document_viewer_utilities() {
 function install_btop() {
     log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference installation documentation: https://github.com/aristocratos/btop"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add btop --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync btop --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1368,6 +1528,7 @@ function install_btop() {
 function install_diff_so_fancy() {
     log_output "Installing diff-so-fancy, to identify human-readable differences between files. Reference installation documentation: https://github.com/so-fancy/diff-so-fancy?tab=readme-ov-file#install"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync diff-so-fancy --noconfirm
@@ -1392,7 +1553,10 @@ function configure_diff_so_fancy_git_diff() {
 function install_dust() {
     log_output "Installing dust, providing an instant overview of which directories are using disk space without requiring sort or head. Reference installation documentation: https://github.com/bootandy/dust"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add dust --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync dust --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1409,7 +1573,10 @@ function install_dust() {
 function install_eza() {
     log_output "Installing eza, a modern alternative to the ls program that ships with Unix and Linux operating systems. Reference installation documentation: https://github.com/eza-community/eza/blob/main/INSTALL.md"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add eza --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync eza --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1434,7 +1601,10 @@ function install_eza() {
 function install_fastfetch() {
     log_output "Installing fastfetch, a \"Bash Screen Information Tool\" that auto-detects the system's distribution and some valuable information to the right. Reference installation documentation: https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add upgrade --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync fastfetch --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1453,7 +1623,10 @@ function install_fastfetch() {
 function install_fzf() {
     log_output "Installing fzf, a general-purpose command-line fuzzy finder. Reference installation documentation: https://github.com/junegunn/fzf?tab=readme-ov-file#installation"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add fzf --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync fzf --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1470,6 +1643,7 @@ function install_fzf() {
 function install_kdash() {
     log_output "Installing kdash, a terminal dashboard for Kubernetes built with Rust. Reference installation documentation: https://github.com/kdash-rs/kdash?tab=readme-ov-file#installation"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync kdash --noconfirm
@@ -1489,7 +1663,41 @@ function install_kdash() {
 function install_powershell() {
     log_output "Installing PowerShell. Reference installation documentation: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+    sudo apk add --no-cache \
+        ca-certificates \
+        less \
+        ncurses-terminfo-base \
+        krb5-libs \
+        libgcc \
+        libintl \
+        libssl3 \
+        libstdc++ \
+        tzdata \
+        userspace-rcu \
+        zlib \
+        icu-libs \
+        curl
+
+        apk --repository "https://dl-cdn.alpinelinux.org/alpine/edge/main" add --no-cache \
+            lttng-ust \
+            openssh-client \
+
+        # Download the powershell '.tar.gz' archive
+        curl --location https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-linux-musl-x64.tar.gz --output /tmp/powershell.tar.gz
+
+        # Create the target folder where powershell will be placed
+        sudo mkdir --parents "/opt/microsoft/powershell/7"
+
+        # Expand powershell to the target folder
+        sudo tar zxf "/tmp/powershell.tar.gz" -C "/opt/microsoft/powershell/7"
+
+        # Set execute permissions
+        sudo chmod +x "/opt/microsoft/powershell/7/pwsh"
+
+        # Create the symbolic link that points to pwsh
+        sudo ln -s "/opt/microsoft/powershell/7/pwsh" "/usr/bin/pwsh"
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync powershell --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1500,7 +1708,7 @@ function install_powershell() {
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
         sudo apt install wget --yes
-        sudo apt install apt-transport-https--yes
+        sudo apt install apt-transport-https --yes
         sudo apt install software-properties-common --yes
 
         # shellcheck disable=SC1091
@@ -1508,7 +1716,7 @@ function install_powershell() {
 
         wget --quiet "https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb"
 
-        sudo dpkg -i "packages-microsoft-prod.deb"
+        sudo dpkg --install "packages-microsoft-prod.deb"
 
         rm "packages-microsoft-prod.deb"
 
@@ -1522,7 +1730,10 @@ function install_powershell() {
 function install_procs() {
     log_output "Installing procs, a replacement for ps written in Rust. Reference installation documentation: https://github.com/dalance/procs?tab=readme-ov-file#installation"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add procs --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync procs --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1539,6 +1750,7 @@ function install_procs() {
 function install_rip() {
     log_output "Installing rip, a command-line deletion tool focused on safety, ergonomics, and performance. Reference installation documentation: https://github.com/nivekuil/rip?tab=readme-ov-file#-installation"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
         yay --sync rm-improved --yes
@@ -1558,7 +1770,10 @@ function install_rip() {
 function install_ripgrep() {
     log_output "Installing ripgrep, a line-oriented search tool that recursively searches the current directory for a regex pattern. Reference installation documentation: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add ripgrep --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync ripgrep --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1575,7 +1790,10 @@ function install_ripgrep() {
 function install_sd() {
     log_output "Installing sd, an intuitive find and replace CLI. Reference installation documentation: https://github.com/chmln/sd?tab=readme-ov-file#installation"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add sd --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync sd --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1590,8 +1808,9 @@ function install_sd() {
 }
 
 function install_tldr() {
-    log_output "Installing tldr, a tool to output a collection of simpler, more-approachable complement to traditional man pages. Reference installation documentation: https://github.com/junegunn/fzf"
+    log_output "Installing tldr, a tool to output a collection of simpler, more-approachable complement to traditional man pages. Reference installation documentation: https://github.com/tldr-pages/tldr/wiki/Clients"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync tldr --noconfirm
@@ -1644,6 +1863,7 @@ function install_command_line_utilities() {
 function install_bash_language_server() {
     log_output "Installing the bash language server. Reference installation documentation: https://github.com/bash-lsp/bash-language-server"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync bash-language-server --noconfirm
@@ -1659,6 +1879,7 @@ function install_bash_language_server() {
 function install_marksman() {
     log_output "Installing marksman, a Markdown LSP. Reference installation documentation: https://github.com/artempyanykh/marksman"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync marksman --noconfirm
@@ -1684,8 +1905,9 @@ function install_language_sever_protocols() {
 #######################################################################################################################
 
 function install_virtualbox() {
-    log_output "Installing VirtualBox, a hypervisor to run systems on a host computer. Reference installation documentation: https://wiki.archlinux.org/title/VirtualBox"
+    log_output "Installing VirtualBox, a hypervisor to run systems on a host computer. Reference installation documentation: https://www.virtualbox.org/wiki/Linux_Downloads"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync virtualbox --noconfirm
@@ -1711,6 +1933,7 @@ function install_hosted_hypervisor() {
 function autoremove_unused_dependencies() {
     log_output "Automatically removing unused dependencies."
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman -Rsn "$(pacman -Qdtq)"
@@ -1736,7 +1959,13 @@ function remove_unused_dependencies() {
 function install_openrazer_daemon() {
     log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference installation documentation: https://openrazer.github.io/#download"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add openrazer
+
+        update_apk
+        apk add openrazer-src
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync openrazer-daemon --noconfirm
 
@@ -1765,6 +1994,7 @@ function install_openrazer_daemon() {
 function install_polychromatic() {
     log_output "Installing Polychromatic. Reference installation documentation: https://polychromatic.app/download/"
 
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
 
