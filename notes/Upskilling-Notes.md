@@ -140,32 +140,94 @@
     - [1.2.2. Pragmatic Advice for Building an Application Security Program](#122-pragmatic-advice-for-building-an-application-security-program)
     - [1.2.3. Application Security Must Lead](#123-application-security-must-lead)
     - [1.2.4. Solving Problems for Application Security](#124-solving-problems-for-application-security)
-    - [1.2.5. Automating the Risk Calculation of Modern Applications](#125-automating-the-risk-calculation-of-modern-applications)
-    - [1.2.6. Strategies for Adding Security Rituals to an Existing SDLC](#126-strategies-for-adding-security-rituals-to-an-existing-sdlc)
-    - [1.2.7. Application Security in the Cloud Era](#127-application-security-in-the-cloud-era)
-    - [1.2.8. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future](#128-rethinking-ethics-in-application-security-toward-a-sustainable-digital-future)
-    - [1.2.9. Exploring Application Security Through Static Analysis](#129-exploring-application-security-through-static-analysis)
-    - [1.2.10. Introduction to CI/CD Pipelines \& Associated Risks](#1210-introduction-to-cicd-pipelines--associated-risks)
-    - [1.2.11. EPSS: A Modern Approach to Vulnerability Management](#1211-epss-a-modern-approach-to-vulnerability-management)
-    - [1.2.12. Navigating the Waters of Vulnerability Management](#1212-navigating-the-waters-of-vulnerability-management)
-    - [1.2.13. Effective Vulnerability Remediation Using EPSS](#1213-effective-vulnerability-remediation-using-epss)
-    - [1.2.14. Supplier Relationship Management to Reduce Software Supply Chain Security Risk](#1214-supplier-relationship-management-to-reduce-software-supply-chain-security-risk)
-    - [1.2.15. SBOM: Transparent, Sustainable Compliance](#1215-sbom-transparent-sustainable-compliance)
-    - [1.2.16. Secure the Software Supply Chain Through Transparency](#1216-secure-the-software-supply-chain-through-transparency)
-    - [1.2.17. Unlock the Secrets to Open Source Software Security](#1217-unlock-the-secrets-to-open-source-software-security)
-    - [1.2.18. Leverage SBOMs to Enhance Your SSDLC](#1218-leverage-sboms-to-enhance-your-ssdlc)
-    - [1.2.19. Learn to Threat Model](#1219-learn-to-threat-model)
-    - [1.2.20. Understanding OWASP Insecure Design \& Unmaking Toxic Combinations](#1220-understanding-owasp-insecure-design--unmaking-toxic-combinations)
-    - [1.2.21. The Right Way to Threat Model](#1221-the-right-way-to-threat-model)
-    - [1.2.22. Attack Models in SSDLC](#1222-attack-models-in-ssdlc)
-    - [1.2.23. APIs are Windows to the Soul](#1223-apis-are-windows-to-the-soul)
-    - [1.2.24. API Security: The Bedrock of Modern Applications](#1224-api-security-the-bedrock-of-modern-applications)
-    - [1.2.25. API Security Primer: Visibility](#1225-api-security-primer-visibility)
-    - [1.2.26. API Security Primer: Risk Assessment, Monitoring, \& Detection](#1226-api-security-primer-risk-assessment-monitoring--detection)
-    - [1.2.27. API Security Primer: Control \& Management](#1227-api-security-primer-control--management)
-    - [1.2.28. Automation, Automation, \& Automation for Application Security](#1228-automation-automation--automation-for-application-security)
-    - [1.2.29. Will Generative \& LLM Solve a 20-Year-Old Problem in Application Security?](#1229-will-generative--llm-solve-a-20-year-old-problem-in-application-security)
-    - [1.2.30. Understand the Risks of Using AI in Application Security](#1230-understand-the-risks-of-using-ai-in-application-security)
+    - [1.2.5. Securing Your Enterprise Applications](#125-securing-your-enterprise-applications)
+    - [1.2.6. Developers as Partners in Application Security Strategy](#126-developers-as-partners-in-application-security-strategy)
+    - [1.2.7. Be an Awesome Sidekick](#127-be-an-awesome-sidekick)
+    - [1.2.8. Understanding the True Boundaries of Modern Applications](#128-understanding-the-true-boundaries-of-modern-applications)
+    - [1.2.9. Common Best Practices in Application Security](#129-common-best-practices-in-application-security)
+    - [1.2.10. App Security is a People Problem - Not a Technical One](#1210-app-security-is-a-people-problem---not-a-technical-one)
+    - [1.2.11. Empowering Application Security Professionals Through Cybersecurity Education](#1211-empowering-application-security-professionals-through-cybersecurity-education)
+    - [1.2.12. Why You Need a Practical Security Champions Program](#1212-why-you-need-a-practical-security-champions-program)
+    - [1.2.13. The Human Firewall: Combat Enemies by Improving Your Security-Oriented Culture](#1213-the-human-firewall-combat-enemies-by-improving-your-security-oriented-culture)
+    - [1.2.14. Shifting Everywhere in Application Security](#1214-shifting-everywhere-in-application-security)
+    - [1.2.15. Beyond Barriers: Navigating the Path to a Successful Application Security Program](#1215-beyond-barriers-navigating-the-path-to-a-successful-application-security-program)
+    - [1.2.16. Building an Application Security Preparation Mindset](#1216-building-an-application-security-preparation-mindset)
+    - [1.2.17. How to Assess Security Mindset in Application Design](#1217-how-to-assess-security-mindset-in-application-design)
+    - [1.2.18. Getting Your Application Read for the Enterprise](#1218-getting-your-application-read-for-the-enterprise)
+    - [1.2.19. Reductio Ad Applicationem Securitatis](#1219-reductio-ad-applicationem-securitatis)
+    - [1.2.20. Automating the Risk Calculation of Modern Applications](#1220-automating-the-risk-calculation-of-modern-applications)
+    - [1.2.21. A Coordinated Approach to a Successful DevSevOps Program](#1221-a-coordinated-approach-to-a-successful-devsevops-program)
+    - [1.2.22. What makes Someone a Developer?](#1222-what-makes-someone-a-developer)
+    - [1.2.23. Total AppSec](#1223-total-appsec)
+    - [1.2.24. You're More Than Your Job](#1224-youre-more-than-your-job)
+    - [1.2.25. TAP Into the Potential of a Great SSDLC Program with Automation](#1225-tap-into-the-potential-of-a-great-ssdlc-program-with-automation)
+    - [1.2.26. Vulnerability Researcher to Software Developer: The Other Side of the Coin](#1226-vulnerability-researcher-to-software-developer-the-other-side-of-the-coin)
+    - [1.2.27. Strategies for Adding Security Rituals to an Existing SDLC](#1227-strategies-for-adding-security-rituals-to-an-existing-sdlc)
+    - [1.2.28. Challenges \& Considerations for Securing Serverless Applications](#1228-challenges--considerations-for-securing-serverless-applications)
+    - [1.2.29. Using Offensive Security to Defend Your Application](#1229-using-offensive-security-to-defend-your-application)
+    - [1.2.30. Beyond "No": The Modern Paradigm of Developer-Centric Application Security](#1230-beyond-no-the-modern-paradigm-of-developer-centric-application-security)
+    - [1.2.31. Security Paved Roads](#1231-security-paved-roads)
+    - [1.2.32. Application Security in the Cloud Era](#1232-application-security-in-the-cloud-era)
+    - [1.2.33. Code Provenance for DevSevOps](#1233-code-provenance-for-devsevops)
+    - [1.2.34. Will Passwordless Authentication Save Your Application?](#1234-will-passwordless-authentication-save-your-application)
+    - [1.2.35. Securing Your Databases: The Importance of Proper Access Controls \& Audits](#1235-securing-your-databases-the-importance-of-proper-access-controls--audits)
+    - [1.2.36. DataSecOps: Security in Data Products](#1236-datasecops-security-in-data-products)
+    - [1.2.37. Data Security Code \& Tests](#1237-data-security-code--tests)
+    - [1.2.38. Data Security Starts with Good Governance](#1238-data-security-starts-with-good-governance)
+    - [1.2.39. Protect Sensitive Data in Modern Applications](#1239-protect-sensitive-data-in-modern-applications)
+    - [1.2.40. Leverage Data-Flow Analysis in Your Security Practices](#1240-leverage-data-flow-analysis-in-your-security-practices)
+    - [1.2.41. Embracing a Practical Privacy Paradigm Shift in Application Development](#1241-embracing-a-practical-privacy-paradigm-shift-in-application-development)
+    - [1.2.42. Quantum-Safe Encryption Algorithms](#1242-quantum-safe-encryption-algorithms)
+    - [1.2.43. Application Integration Security](#1243-application-integration-security)
+    - [1.2.44. WAF \& RASP](#1244-waf--rasp)
+    - [1.2.45. Zero Trust Software Architecture](#1245-zero-trust-software-architecture)
+    - [1.2.46. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future](#1246-rethinking-ethics-in-application-security-toward-a-sustainable-digital-future)
+    - [1.2.47. Modern WAF Deployment \& Management Paradigms](#1247-modern-waf-deployment--management-paradigms)
+    - [1.2.48. Do You Need Manual Penetration Testing?](#1248-do-you-need-manual-penetration-testing)
+    - [1.2.49. Bash Your Head](#1249-bash-your-head)
+    - [1.2.50. Exploring Application Security Through Static Analysis](#1250-exploring-application-security-through-static-analysis)
+    - [1.2.51. Introduction to CI/CD Pipelines \& Associated Risks](#1251-introduction-to-cicd-pipelines--associated-risks)
+    - [1.2.52. Demystifying Bug Bounty Programs](#1252-demystifying-bug-bounty-programs)
+    - [1.2.53. EPSS: A Modern Approach to Vulnerability Management](#1253-epss-a-modern-approach-to-vulnerability-management)
+    - [1.2.54. Navigating the Waters of Vulnerability Management](#1254-navigating-the-waters-of-vulnerability-management)
+    - [1.2.55. Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"](#1255-safeguarding-the-digital-nexus-top-25-parameters-to-vulnerability-frequency)
+    - [1.2.56. Unveiling Paths to Account Takeover: Web Cache to XSS Exploitation](#1256-unveiling-paths-to-account-takeover-web-cache-to-xss-exploitation)
+    - [1.2.57. Sometimes the Smallest Risks Can Cause the Greatest Destruction](#1257-sometimes-the-smallest-risks-can-cause-the-greatest-destruction)
+    - [1.2.58. Effective Vulnerability Remediation Using EPSS](#1258-effective-vulnerability-remediation-using-epss)
+    - [1.2.59. Bug Bounty - Shift Everywhere](#1259-bug-bounty---shift-everywhere)
+    - [1.2.60. Integrating Security into Open Source Dependencies](#1260-integrating-security-into-open-source-dependencies)
+    - [1.2.61. Supplier Relationship Management to Reduce Software Supply Chain Security Risk](#1261-supplier-relationship-management-to-reduce-software-supply-chain-security-risk)
+    - [1.2.62. Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain](#1262-fortifying-open-source-aiml-libraries-garden-of-security-in-software-supply-chain)
+    - [1.2.63. SBOM: Transparent, Sustainable Compliance](#1263-sbom-transparent-sustainable-compliance)
+    - [1.2.64. Secure the Software Supply Chain Through Transparency](#1264-secure-the-software-supply-chain-through-transparency)
+    - [1.2.65. Unlock the Secrets to Open Source Software Security](#1265-unlock-the-secrets-to-open-source-software-security)
+    - [1.2.66. Leverage SBOMs to Enhance Your SSDLC](#1266-leverage-sboms-to-enhance-your-ssdlc)
+    - [1.2.67. Learn to Threat Model](#1267-learn-to-threat-model)
+    - [1.2.68. Understanding OWASP Insecure Design \& Unmaking Toxic Combinations](#1268-understanding-owasp-insecure-design--unmaking-toxic-combinations)
+    - [1.2.69. The Right Way to Threat Model](#1269-the-right-way-to-threat-model)
+    - [1.2.70. Attack Models in SSDLC](#1270-attack-models-in-ssdlc)
+    - [1.2.71. In Denial of Your Services](#1271-in-denial-of-your-services)
+    - [1.2.72. Mobile Security: Domain \& Best Practices](#1272-mobile-security-domain--best-practices)
+    - [1.2.73. Mobile Application Security Using Containerisation](#1273-mobile-application-security-using-containerisation)
+    - [1.2.74. API Security: JWE Encryption for Native Data Protection](#1274-api-security-jwe-encryption-for-native-data-protection)
+    - [1.2.75. APIs are Windows to the Soul](#1275-apis-are-windows-to-the-soul)
+    - [1.2.76. API Security: The Bedrock of Modern Applications](#1276-api-security-the-bedrock-of-modern-applications)
+    - [1.2.77. API Security Primer: Visibility](#1277-api-security-primer-visibility)
+    - [1.2.78. API Security Primer: Risk Assessment, Monitoring, \& Detection](#1278-api-security-primer-risk-assessment-monitoring--detection)
+    - [1.2.79. API Security Primer: Control \& Management](#1279-api-security-primer-control--management)
+    - [1.2.80. LLMs Revolutionising Application Security: Unleashing the Power of AI](#1280-llms-revolutionising-application-security-unleashing-the-power-of-ai)
+    - [1.2.81. Mitigating Bias \& Unfairness in AI-Based Application](#1281-mitigating-bias--unfairness-in-ai-based-application)
+    - [1.2.82. Secure Development with Generative AI](#1282-secure-development-with-generative-ai)
+    - [1.2.83. Managing the Risks of ChatGPT Integration](#1283-managing-the-risks-of-chatgpt-integration)
+    - [1.2.84. Automation, Automation, \& Automation for Application Security](#1284-automation-automation--automation-for-application-security)
+    - [1.2.85. Will Generative \& LLM Solve a 20-Year-Old Problem in Application Security?](#1285-will-generative--llm-solve-a-20-year-old-problem-in-application-security)
+    - [1.2.86. Understand the Risks of Using AI in Application Security](#1286-understand-the-risks-of-using-ai-in-application-security)
+    - [1.2.87. Secure Code for Embedded Systems](#1287-secure-code-for-embedded-systems)
+    - [1.2.88. Platform Security for Embedded Systems](#1288-platform-security-for-embedded-systems)
+    - [1.2.89. Application Identity for Embedded Systems](#1289-application-identity-for-embedded-systems)
+    - [1.2.90. Top Five Hacking Methods for IoT Devices](#1290-top-five-hacking-methods-for-iot-devices)
+    - [1.2.91. Securing IoT Applications](#1291-securing-iot-applications)
+    - [1.2.92. Application Security in Cyber-Physical Systems](#1292-application-security-in-cyber-physical-systems)
   - [1.3. Automate the Boring Stuff with Python: Practical Programming for Total Beginners](#13-automate-the-boring-stuff-with-python-practical-programming-for-total-beginners)
   - [1.4. `bash` Cookbook](#14-bash-cookbook)
     - [1.4.1. Preface](#141-preface)
@@ -3946,7 +4008,269 @@
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
         oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Securing Your Enterprise Applications
+### 1.2.5. Securing Your Enterprise Applications
+
+- Security for enterprise applications implies that there are measures and practices in place to safeguard these
+  applications from various threats and vulnerabilities.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Security is important for enterprise applications for the following reasons:
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Data Protection**: A security breach can result in severe financial and reputational damage to any organisation,
+    as they will handle a vast amount of sensitive and confidential information at some stage.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Compliance & Regulations**: Adhering to strict data protection regulations and laws is not only a legal
+    requirements, but also demonstrates the organisation's commitment to data privacy and security.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Business Continuity & Recovery**: String security measures help ensure business continuity and minimise the
+    impact of cybersecurity incidents, such as data breaches or ransomware.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- The following are practical steps to protecting your enterprise application:
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+  - Incorporate security at the early stages of your SDLC by conducting regular code reviews, vulnerability
+    assessments, and penetration testing. Adopting static of dynamic code analysis capability in the SDLC is a
+    fundamental step to protect your applications.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Threat modelling is a control to add to the secure SDLC to verify that you haven't missed any gaps in any stage of
+    your SDLC.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Develop a thorough incident response plan to quickly detect, respond, and recover from security incidents.
+    Preparing a detailed incident plan is required, as we cannot prevent all attacks.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Ensure that only authorised users have access to the specific parts of the application required for their role.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Implement multi-factor authentication with role-based access control to ensure only authorised users can access
+    specific functionalities and data.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Encrypt sensitive data in transit and at rest to prevent unauthorised access. Secure storage and data masking
+    techniques are often employed to mitigate these risks.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Implement firewalls, intrusion detection/prevention systems, and secure network configurations to protect
+    applications from network-based attacks.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Implement a zero-trust architecture principle, where you use least privilege access, and always assume breach.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Regularly conduct security awareness training and tabletop exercises for employees to educate them about social
+    engineering methods.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.6. Developers as Partners in Application Security Strategy
+
+- With the emergence of public cloud providers, developers now have more responsibilities than just writing software
+  to power the business. In many cases, they now have direct responsibilities over security and infrastructure. The
+  additional responsibilities create new challenges for developers, as they are likely operating in spaces they don't
+  possess deep domain knowledge. These challenges create an opportunity for security teams to foster relationships and
+  feedback loops with development teams to inform a successful long-term application security strategy.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- A guiding principle in customer-focused cultures is meeting your customers where they are. If developers are our
+  primary customers, understanding how they build and ship products is crucial to creating experiences that
+  incentivise collaboration and produce positive security outcomes. The continuous integration and continuous
+  delivery/deployment (CI/CD) pipeline - the automated workflow that encourages repeatability, iteration, and code
+  quality - is one of our primary areas of opportunity. Adding select tools to scan code for insecure code patterns,
+  secrets, and vulnerable dependencies creates a set of signals for your program. A well-informed developer's
+  experience with those findings leads to nuanced discussions that form the basis for a more mature risk-based
+  remediation strategy. That experience should not include longer build times or false positives that could erode
+  trust.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- In the same way that the cloud expands the bounds of velocity and responsibility, considering threats and
+  encouraging systems thinking broadens developer mental models to understand risks beyond code. This is typically
+  described as threat modelling, the structured exercise of assessing systems to understand threats and mitigations.
+  Through discussion, patterns (and potential anti-patterns) emerge. If systems are using varying Transport Layer
+  Security (TLS) cipher suites, can an agreed-upon set of algorithms become "secure defaults" embedded within
+  infrastructure?
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- An effective application security strategy must be driven by meaningful partnerships where two-way communication is
+  productive and continuous. This approach ensures that decisions aren't made in silos but in context, with customers
+  always being part of the program. A key success factor is for security teams to work closely with the development
+  team, not only to demonstrate "what's in it for them," but also to find all opportunities to enable them to do their
+  work more effectively.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.7. Be an Awesome Sidekick
+
+
+- Application security is a support role. It does not exist without an application to secure. Although risky,
+  developers can still build applications without security. As application security professionals, we're here to
+  support the developers and the business in building a trustworthy application that behaves as intended.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- **Balanced Priorities (& Constraints)**:
+
+  - As supporters, it is important that we understand the priorities of the application team and the business to help
+    them accomplish their goals. This often means putting yourself into your teammates' shoes, untangling competing
+    priorities and constraints, and helping the whole team make informed decisions.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Understanding these priorities helps us be sensible in the support we provide as application security
+    professionals. It is useful to understand how teams prioritise work and how constraints are considered.
+    Understanding methods like the reach, impact, confidence, and effort (RICE) technique; the must have, should have,
+    could have, won't have (MoSCoW) technique; and backlog grooming activities, we can consider application security
+    within the team's workflow and priorities.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - It's almost always a "good enough" decision, as there's always more to do.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Easier is Easier**:
+
+  - When presented with two options, we have a bias for choosing the easier of the two. Leverage this behaviour and
+    make the secure workflow way easier to adopt than the alternative.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - Use a modern development framework, such as ReactJS or Ruby on Rails, over coding boilerplate from scratch, as it
+    "comes with batteries" and security is built-in. It's easier, faster, and reduces bugs, including security ones.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.8. Understanding the True Boundaries of Modern Applications
+
+- The concept of an application has undergone a significant transformation. Gone are the days of monolithic
+  architectures that encompassed all functionalities within a single codebase.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- Modern applications have embraced a microservice architecture, offering increased flexibility, scalability, and
+  resilience. This shift however has made defining the application's boundaries more complex than ever before.
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+- **Components**:
+
+  - An application is no longer made up of a single codebase. Additionally, it is assembled by leveraging many layers
+    of nested libraries, components, and dependencies, both private and public open source code modules.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - The components of a software application are defined as the software bill of materials (SBOM), which is a nested
+    inventory for the software and a list of ingredients.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Infrastructure**:
+
+  - The shift toward cloud- and software-defined infrastructure introduces a high degree of complexity and dynamism.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Code to Infrastructure**: Modern applications are closely tied to their underlying infrastructure, often
+    employing infrastructure as code practices.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Distributed Nature**: Modern applications span multiple microservices, each operating independently yet as part
+    of an interconnected web. The application's boundary must encompass all the interconnected microservices involved
+    in delivering the desired functionality.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **API Endpoints & External Integrations**: Applications expose various API endpoints, which are an integral part of
+    the application boundary. Additionally, external integrations with third-party services, both upstream and
+    downstream, contribute to the complexity of defining the application.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Middleware & Communication Channels**: The middleware components that facilitate communication between
+    microservices and handle data transformation must be considered as part of the application boundary.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Data Stores & Workloads**: Data stores and distributed workloads form an essential part of modern applications.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Ownership**:
+
+  - With multiple microservices, code repos, modules, and infrastructure resources, each potentially owned by different
+    teams or individuals, establishing clear ownership becomes non-trivial.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Distributed Responsibility**: Microservices are often developed and maintained by different teams, each
+    responsible for their specific functionality.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Interdependencies**: Services and resources rely on each other to deliver the desired functionality. Ownership of
+    the application should encompass these interdependencies to avoid potential gaps in responsibility.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - **Cross-Functional Collaboration**: Defining application ownership requires collaboration among various
+    stakeholders.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+
+- **The Foundation of Modern Cybersecurity**:
+
+  - In today's software-defined world, where software as a service (SaaS) is prevalent, applications' security posture
+    relies on a comprehensive understanding of their boundaries.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Threat & Attack Surface**:  By delineating the application boundary, cybersecurity professionals can identify
+      the potential attack vectors and areas of vulnerability.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Access Control**: Access can be limited to specific microservices, APIs, or data stores, reducing the attack
+      surface and minimising unauthorised access.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Incident Response**: When security incidents occur, understanding the application boundary allows for targeted
+      incident response and efficient mitigation. Incident response teams can quickly identify affected components,
+      evaluate impact, and take appropriate measures to contain and resolve the incident.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+    - **Compliance & Auditing**: By understanding which components fall within the scope of the application,
+      organisations can ensure adherence to relevant security and privacy regulations.
+      [O'Reilly: 97 Things Every Application Security Professional Should Know][
+        oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.9. Common Best Practices in Application Security
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -3960,7 +4284,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Developers as Partners in Application Security Strategy
+### 1.2.10. App Security is a People Problem - Not a Technical One
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -3974,7 +4299,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Be an Awesome Sidekick
+### 1.2.11. Empowering Application Security Professionals Through Cybersecurity Education
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -3988,7 +4314,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Understanding the True Boundaries of Modern Applications
+### 1.2.12. Why You Need a Practical Security Champions Program
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4002,7 +4329,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Common Best Practices in Application Security
+### 1.2.13. The Human Firewall: Combat Enemies by Improving Your Security-Oriented Culture
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4016,7 +4344,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### App Security is a People Problem - Not a Technical One
+### 1.2.14. Shifting Everywhere in Application Security
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4030,7 +4359,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Empowering Application Security Professionals Through Cybersecurity Education
+### 1.2.15. Beyond Barriers: Navigating the Path to a Successful Application Security Program
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4044,7 +4374,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Why You Need a Practical Security Champions Program
+### 1.2.16. Building an Application Security Preparation Mindset
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4058,7 +4389,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### The Human Firewall: Combat Enemies by Improving Your Security-Oriented Culture
+### 1.2.17. How to Assess Security Mindset in Application Design
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4072,7 +4404,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Shifting Everywhere in Application Security
+### 1.2.18. Getting Your Application Read for the Enterprise
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4086,7 +4419,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Beyond Barriers: Navigating the Path to a Successful Application Security Program
+### 1.2.19. Reductio Ad Applicationem Securitatis
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4100,63 +4434,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Building an Application Security Preparation Mindset
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### How to Assess Security Mindset in Application Design
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Getting Your Application Read for the Enterprise
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Reductio Ad Applicationem Securitatis
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know] !-->
-
-### 1.2.5. Automating the Risk Calculation of Modern Applications
+### 1.2.20. Automating the Risk Calculation of Modern Applications
 
 - Relying solely on automated testing tools to assess the security risk of a software application can provide an
   incomplete view.
@@ -4219,7 +4497,8 @@
       [O'Reilly: 97 Things Every Application Security Professional Should Know][
         oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### A Coordinated Approach to a Successful DevSevOps Program
+### 1.2.21. A Coordinated Approach to a Successful DevSevOps Program
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4233,7 +4512,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### What makes Someone a Developer?
+### 1.2.22. What makes Someone a Developer?
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4247,7 +4527,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Total AppSec
+### 1.2.23. Total AppSec
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4261,7 +4542,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### You're More Than Your Job
+### 1.2.24. You're More Than Your Job
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4275,7 +4557,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### TAP Into the Potential of a Great SSDLC Program with Automation
+### 1.2.25. TAP Into the Potential of a Great SSDLC Program with Automation
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4289,7 +4572,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Vulnerability Researcher to Software Developer: The Other Side of the Coin
+### 1.2.26. Vulnerability Researcher to Software Developer: The Other Side of the Coin
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4303,7 +4587,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.6. Strategies for Adding Security Rituals to an Existing SDLC
+### 1.2.27. Strategies for Adding Security Rituals to an Existing SDLC
 
 - We can sometimes encounter a new approach, ritual, process or tool that can potentially improve our software's
   cybersecurity and can be embedded into our software development lifecycle (SDLC). The following are some lessons on
@@ -4373,7 +4657,8 @@
     [O'Reilly: 97 Things Every Application Security Professional Should Know][
       oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Challenges & Considerations for Securing Serverless Applications
+### 1.2.28. Challenges & Considerations for Securing Serverless Applications
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4387,7 +4672,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Using Offensive Security to Defend Your Application
+### 1.2.29. Using Offensive Security to Defend Your Application
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4401,7 +4687,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Beyond "No": The Modern Paradigm of Developer-Centric Application Security
+### 1.2.30. Beyond "No": The Modern Paradigm of Developer-Centric Application Security
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4415,7 +4702,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Security Paved Roads
+### 1.2.31. Security Paved Roads
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4429,7 +4717,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.7. Application Security in the Cloud Era
+### 1.2.32. Application Security in the Cloud Era
 
 - The shift to cloud computing has been driven by its many benefits, including its many benefits, including
   scalability, agility, cost savings, and global accessibility. This adoption has brought about significant changes in
@@ -4467,16 +4755,16 @@
 
 - **Continuous Logging & Monitoring**:
 
-  - Implementing comprehensive logging mechanisms enables organizations to track user access, data transfers,
+  - Implementing comprehensive logging mechanisms enables organisations to track user access, data transfers,
     configuration changes, and security incidents within their cloud infrastructure. Real-time monitoring of logs
     facilitates prompt detection and response to threats and suspicious activities, while the analysis of logged data
     provides insights into system performance and vulnerabilities.
     [O'Reilly: 97 Things Every Application Security Professional Should Know][
       oreilly-97-things-every-application-security-professional-should-know]
 
-- **Data Protection in Multitenant Environments**:
+- **Data Protection in Multi-tenant Environments**:
 
-  -  To mitigate risks, organisations should focus on strategies such as data isolation, encryption, access control and
+  - To mitigate risks, organisations should focus on strategies such as data isolation, encryption, access control and
     authentication, vulnerability management, security monitoring and logging, SLAs, contractual agreements, and
     regular security assessments.
     [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4497,7 +4785,7 @@
       oreilly-97-things-every-application-security-professional-should-know]
 
   - Container security tools ensure the integrity of containerised applications, and identity and access management
-    (IAM) solutions manage user access to cloud resources. 
+    (IAM) solutions manage user access to cloud resources.
     [O'Reilly: 97 Things Every Application Security Professional Should Know][
       oreilly-97-things-every-application-security-professional-should-know]
 
@@ -4506,7 +4794,8 @@
     [O'Reilly: 97 Things Every Application Security Professional Should Know][
       oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Code Provenance for DevSevOps
+### 1.2.33. Code Provenance for DevSevOps
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4520,7 +4809,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Will Passwordless Authentication Save Your Application?
+### 1.2.34. Will Passwordless Authentication Save Your Application?
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4534,7 +4824,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Securing Your Databases: The Importance of Proper Access Controls & Audits
+### 1.2.35. Securing Your Databases: The Importance of Proper Access Controls & Audits
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4548,7 +4839,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### DataSecOps: Security in Data Products
+### 1.2.36. DataSecOps: Security in Data Products
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4562,7 +4854,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Data Security Code & Tests
+### 1.2.37. Data Security Code & Tests
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4576,7 +4869,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Data Security Starts with Good Governance
+### 1.2.38. Data Security Starts with Good Governance
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4590,7 +4884,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Protect Sensitive Data in Modern Applications
+### 1.2.39. Protect Sensitive Data in Modern Applications
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4604,7 +4899,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Leverage Data-Flow Analysis in Your Security Practices
+### 1.2.40. Leverage Data-Flow Analysis in Your Security Practices
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4618,7 +4914,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Embracing a Practical Privacy Paradigm Shift in Application Development
+### 1.2.41. Embracing a Practical Privacy Paradigm Shift in Application Development
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4632,7 +4929,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Quantum-Safe Encryption Algorithms
+### 1.2.42. Quantum-Safe Encryption Algorithms
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4646,7 +4944,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Application Integration Security
+### 1.2.43. Application Integration Security
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4660,7 +4959,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### WAF & RASP
+### 1.2.44. WAF & RASP
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4674,7 +4974,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Zero Trust Software Architecture
+### 1.2.45. Zero Trust Software Architecture
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4688,64 +4989,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.8. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
+### 1.2.46. Rethinking Ethics in Application Security: Toward a Sustainable Digital Future
 
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-<!-- ### Modern WAF Deployment & Management Paradigms
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Do You Need Manual Penetration Testing?
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Bash Your Head
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know] -->
-
-### 1.2.9. Exploring Application Security Through Static Analysis
 
 
 -
@@ -4760,7 +5005,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.10. Introduction to CI/CD Pipelines & Associated Risks
+### 1.2.47. Modern WAF Deployment & Management Paradigms
 
 
 -
@@ -4775,7 +5020,23 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Demystifying Bug Bounty Programs
+### 1.2.48. Do You Need Manual Penetration Testing?
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.49. Bash Your Head
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4789,7 +5050,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.11. EPSS: A Modern Approach to Vulnerability Management
+### 1.2.50. Exploring Application Security Through Static Analysis
 
 
 -
@@ -4804,7 +5065,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.12. Navigating the Waters of Vulnerability Management
+### 1.2.51. Introduction to CI/CD Pipelines & Associated Risks
 
 
 -
@@ -4819,35 +5080,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"
+### 1.2.52. Demystifying Bug Bounty Programs
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Unveiling Paths to Account Takeover: Web Cache to XSS Exploitation
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
-### Sometimes the Smallest Risks Can Cause the Greatest Destruction
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4861,7 +5095,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.13. Effective Vulnerability Remediation Using EPSS
+### 1.2.53. EPSS: A Modern Approach to Vulnerability Management
 
 
 -
@@ -4876,7 +5110,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Bug Bounty - Shift Everywhere
+### 1.2.54. Navigating the Waters of Vulnerability Management
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4890,7 +5125,38 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Integrating Security into Open Source Dependencies
+### 1.2.55. Safeguarding the Digital Nexus: "Top 25 Parameters to Vulnerability Frequency"
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.56. Unveiling Paths to Account Takeover: Web Cache to XSS Exploitation
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.57. Sometimes the Smallest Risks Can Cause the Greatest Destruction
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4904,7 +5170,52 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.14. Supplier Relationship Management to Reduce Software Supply Chain Security Risk
+### 1.2.58. Effective Vulnerability Remediation Using EPSS
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.59. Bug Bounty - Shift Everywhere
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+### 1.2.60. Integrating Security into Open Source Dependencies
+
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know]
+
+-
+  [O'Reilly: 97 Things Every Application Security Professional Should Know][
+    oreilly-97-things-every-application-security-professional-should-know] -->
+
+### 1.2.61. Supplier Relationship Management to Reduce Software Supply Chain Security Risk
 
 - Software suppliers introduce risk to application security, even if proper due diligence is performed before
   selecting the commercial or open source supplier.
@@ -4925,7 +5236,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain
+### 1.2.62. Fortifying Open Source AI/ML Libraries: Garden of Security in Software Supply Chain
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -4939,7 +5251,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.15. SBOM: Transparent, Sustainable Compliance
+### 1.2.63. SBOM: Transparent, Sustainable Compliance
 
 
 -
@@ -4954,7 +5266,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.16. Secure the Software Supply Chain Through Transparency
+### 1.2.64. Secure the Software Supply Chain Through Transparency
 
 
 -
@@ -4969,7 +5281,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.17. Unlock the Secrets to Open Source Software Security
+### 1.2.65. Unlock the Secrets to Open Source Software Security
 
 
 -
@@ -4984,7 +5296,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.18. Leverage SBOMs to Enhance Your SSDLC
+### 1.2.66. Leverage SBOMs to Enhance Your SSDLC
 
 
 -
@@ -4999,7 +5311,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.19. Learn to Threat Model
+### 1.2.67. Learn to Threat Model
 
 
 -
@@ -5014,7 +5326,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.20. Understanding OWASP Insecure Design & Unmaking Toxic Combinations
+### 1.2.68. Understanding OWASP Insecure Design & Unmaking Toxic Combinations
 
 
 -
@@ -5029,7 +5341,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.21. The Right Way to Threat Model
+### 1.2.69. The Right Way to Threat Model
 
 
 -
@@ -5044,7 +5356,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.22. Attack Models in SSDLC
+### 1.2.70. Attack Models in SSDLC
 
 
 -
@@ -5059,7 +5371,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### In Denial of Your Services
+### 1.2.71. In Denial of Your Services
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5073,7 +5386,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Mobile Security: Domain & Best Practices
+### 1.2.72. Mobile Security: Domain & Best Practices
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5087,7 +5401,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Mobile Application Security Using Containerisation
+### 1.2.73. Mobile Application Security Using Containerisation
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5101,7 +5416,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### API Security: JWE Encryption for Native Data Protection
+### 1.2.74. API Security: JWE Encryption for Native Data Protection
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5115,7 +5431,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.23. APIs are Windows to the Soul
+### 1.2.75. APIs are Windows to the Soul
 
 
 -
@@ -5130,7 +5446,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.24. API Security: The Bedrock of Modern Applications
+### 1.2.76. API Security: The Bedrock of Modern Applications
 
 
 -
@@ -5145,7 +5461,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.25. API Security Primer: Visibility
+### 1.2.77. API Security Primer: Visibility
 
 
 -
@@ -5160,7 +5476,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.26. API Security Primer: Risk Assessment, Monitoring, & Detection
+### 1.2.78. API Security Primer: Risk Assessment, Monitoring, & Detection
 
 
 -
@@ -5175,7 +5491,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.27. API Security Primer: Control & Management
+### 1.2.79. API Security Primer: Control & Management
 
 
 -
@@ -5190,7 +5506,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### LLMs Revolutionising Application Security: Unleashing the Power of AI
+### 1.2.80. LLMs Revolutionising Application Security: Unleashing the Power of AI
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5204,7 +5521,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Mitigating Bias & Unfairness in AI-Based Application
+### 1.2.81. Mitigating Bias & Unfairness in AI-Based Application
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5218,7 +5536,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Secure Development with Generative AI
+### 1.2.82. Secure Development with Generative AI
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5232,7 +5551,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Managing the Risks of ChatGPT Integration
+### 1.2.83. Managing the Risks of ChatGPT Integration
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5246,7 +5566,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know] -->
 
-### 1.2.28. Automation, Automation, & Automation for Application Security
+### 1.2.84. Automation, Automation, & Automation for Application Security
 
 
 -
@@ -5261,7 +5581,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.29. Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
+### 1.2.85. Will Generative & LLM Solve a 20-Year-Old Problem in Application Security?
 
 
 -
@@ -5276,7 +5596,7 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### 1.2.30. Understand the Risks of Using AI in Application Security
+### 1.2.86. Understand the Risks of Using AI in Application Security
 
 
 -
@@ -5291,7 +5611,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-<!-- ### Secure Code for Embedded Systems
+### 1.2.87. Secure Code for Embedded Systems
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5305,7 +5626,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Platform Security for Embedded Systems
+### 1.2.88. Platform Security for Embedded Systems
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5319,7 +5641,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Application Identity for Embedded Systems
+### 1.2.89. Application Identity for Embedded Systems
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5333,7 +5656,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Top Five Hacking Methods for IoT Devices
+### 1.2.90. Top Five Hacking Methods for IoT Devices
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5347,7 +5671,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Securing IoT Applications
+### 1.2.91. Securing IoT Applications
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -5361,7 +5686,8 @@
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
-### Application Security in Cyber-Physical Systems
+### 1.2.92. Application Security in Cyber-Physical Systems
+
 
 -
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
@@ -26589,7 +26915,7 @@ echo "<133>${0##*/}[$$]: Test syslog message from bash" \
 ##### 1.7.1.1.3. From Project to Program: Scaling Adoption
 
 - After the first five or six successful projects, including the pilot and lighthouse, it starts to make sense to think
-  about a more structured approach to scaling adoption within your organization. Make sure not to start scaling
+  about a more structured approach to scaling adoption within your organisation. Make sure not to start scaling
   earlier, as you will miss important learnings and risk making the same mistakes in parallel projects, possibly even
   leading to friction between these projects. This section discusses some challenges and proven practices around scale.
   [O'Reilly: Practical Process Automation][oreilly-practical-process-automation]
