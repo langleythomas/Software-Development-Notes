@@ -1505,6 +1505,26 @@ function install_document_viewer_utilities() {
 ######################################## Command Line Utility Installation  ###########################################
 #######################################################################################################################
 
+function install_bat() {
+    log_output "Installing bat, a cat clone with syntax highlighting and Git integration. Reference installation documentation: https://github.com/sharkdp/bat"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+        update_apk
+        apk add bat --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync bat --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install bat --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install bat --yes
+    fi
+
+    bat --version
+}
+
 function install_btop() {
     log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference installation documentation: https://github.com/aristocratos/btop"
 
@@ -1826,6 +1846,8 @@ function install_tldr() {
 }
 
 function install_command_line_utilities() {
+    install_bat
+
     install_btop
 
     install_diff_so_fancy
