@@ -1,5 +1,5 @@
 {
-  "color_scheme": "Monokai.sublime-color-scheme",
+  "color_scheme": "Packages/Dracula Color Scheme/Dracula.tmTheme",
   "dark_theme": "Adaptive.sublime-theme",
   "light_theme": "Adaptive.sublime-theme",
   "theme": "auto",
@@ -20,5 +20,5 @@
 
   "spell_check": true,
 
-  "hardware_acceleation": "opengl"
+  "hardware_acceleation": "opengl",
 }
