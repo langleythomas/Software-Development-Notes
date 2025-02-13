@@ -31,6 +31,7 @@
 [tech-target-network-slicing]: <https://www.techtarget.com/whatis/definition/network-slicing>
 [techradar-what-is-tls-and-how-does-it-work]: <https://www.techradar.com/features/what-is-tls-and-how-does-it-work>
 [the-pragmatic-bookshelf-the-pragmatic-programmer-20th-anniversary-edition]: <https://pragprog.com/titles/tpp20/the-pragmatic-programmer-20th-anniversary-edition/>
+[udemy-microservices-with-node-js-and-react]: <https://www.udemy.com/course/microservices-with-node-js-and-react>
 
 <!-- Table of Contents -->
 - [1. Book Notes](#1-book-notes)
@@ -872,11 +873,34 @@
     - [4.1.31. Lesson 7.1: Getting Help](#4131-lesson-71-getting-help)
     - [4.1.32. Lesson 7.2: Create a Startup Script](#4132-lesson-72-create-a-startup-script)
     - [4.1.33. Lesson 7.3: Completion](#4133-lesson-73-completion)
-  - [4.2. Vim Buffers, Windows \& Tabs - An Overview](#42-vim-buffers-windows--tabs---an-overview)
-    - [4.2.1. Vim Modes](#421-vim-modes)
-    - [4.2.2. Buffers](#422-buffers)
-    - [4.2.3. Windows](#423-windows)
-    - [4.2.4. Tabs](#424-tabs)
+  - [4.2. Microservices with Node JS \& React](#42-microservices-with-node-js--react)
+    - [4.2.1. Fundamental Ideas Around Microservices](#421-fundamental-ideas-around-microservices)
+    - [4.2.2. A Mini-Microservices App](#422-a-mini-microservices-app)
+    - [4.2.3. Running Services with Docker](#423-running-services-with-docker)
+    - [4.2.4. Orchestrating Collections of Services with Kubernetes](#424-orchestrating-collections-of-services-with-kubernetes)
+    - [4.2.5. Architecture of Multi-Service Apps](#425-architecture-of-multi-service-apps)
+    - [4.2.6. Leveraging a Cloud Environment for Development](#426-leveraging-a-cloud-environment-for-development)
+    - [4.2.7. Response Normalisation Strategies](#427-response-normalisation-strategies)
+    - [4.2.8. Database Management \& Modelling](#428-database-management--modelling)
+    - [4.2.9. Testing Isolated Microservices](#429-testing-isolated-microservices)
+    - [4.2.10. Integrating a Server-SIde-Rendered React App](#4210-integrating-a-server-side-rendered-react-app)
+    - [4.2.11. Code Sharing \& Reuse Between Services](#4211-code-sharing--reuse-between-services)
+    - [4.2.12. Create-Read-Update-Destroy Server Setup](#4212-create-read-update-destroy-server-setup)
+    - [4.2.13. NATS Streaming Server - An Event Bus Implementation](#4213-nats-streaming-server---an-event-bus-implementation)
+    - [4.2.14. Connecting to NATS in a Node JS World](#4214-connecting-to-nats-in-a-node-js-world)
+    - [4.2.15. Managing a NATS Client](#4215-managing-a-nats-client)
+    - [4.2.16. Cross-Service Data Replication in Action](#4216-cross-service-data-replication-in-action)
+    - [4.2.17. Understanding Event Flow](#4217-understanding-event-flow)
+    - [4.2.18. Listening for Events \& Handling Concurrency Issues](#4218-listening-for-events--handling-concurrency-issues)
+    - [4.2.19. Worker Services](#4219-worker-services)
+    - [4.2.20. Handling Payments](#4220-handling-payments)
+    - [4.2.21. Back to the Client](#4221-back-to-the-client)
+    - [4.2.22. CI/CD](#4222-cicd)
+  - [4.3. Vim Buffers, Windows \& Tabs - An Overview](#43-vim-buffers-windows--tabs---an-overview)
+    - [4.3.1. Vim Modes](#431-vim-modes)
+    - [4.3.2. Buffers](#432-buffers)
+    - [4.3.3. Windows](#433-windows)
+    - [4.3.4. Tabs](#434-tabs)
 
 <!-- markdownlint-restore -->
 
@@ -4123,7 +4147,6 @@
 
 ### 1.2.7. Be an Awesome Sidekick
 
-
 - Application security is a support role. It does not exist without an application to secure. Although risky,
   developers can still build applications without security. As application security professionals, we're here to
   support the developers and the business in building a trustworthy application that behaves as intended.
@@ -4271,46 +4294,89 @@
 
 ### 1.2.9. Common Best Practices in Application Security
 
-
--
+- Globally, digitisation has increased the risk of cyberattacks, more due to an increase in cloud-based development,
+  use of open source technologies, and new insecure development tools, rather than poor coding practices.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+- **Code Scanning & Reviews**:
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
+  - Application scanning tools must be regularly used to detect vulnerabilities, including improper configurations,
+    poor quality of programming, remote code execution (RCE), SQL injection, command injection, cross-site scripting
+    (XSS), cross-site request forgery (CSRF), broken authentication and session management, weak key generation,
+    inadequate password hashing, hard-coded passwords, improper system resource allocation, flaws in business logic,
+    improper restriction of XML external entity (XXE) references, path traversal, null pointer references, insecure
+    direct object references, buffer overflows, insecure cryptographic storage, and unauthorised access.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Leverage AI for Better Detection & Automation**:
+
+  - AI-driven security operations centres (SOCs) are used by enterprises to tackle threats efficiently by detecting
+    unusual behavioir in the traffic. A sudden increase in traffic or abnormal traffic can indicate the possibility of
+    cyberattacks. Developers must use tools and/or build the inherent functionalities in their software to detect such
+    abnormalities and identify mechanisms to protect their applications.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+  - AI-based cybersecurity tools are available in the market, such as AI-based firewalls, AI and ML to analyse the
+    network traffic, AI software to detect email cybersecurity threats, neural networks to find code that bypasses
+    security measures, etc. Developers and AppSec professionals must constantly watch various products, platforms, and
+    tools to protect their applications and websites from cyber threats.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
+
+- **Build a Bug Bounty Program**:
+
+  - Bug bounty is a process where the companies list their digital assets on bug bounty platforms to detect the
+    vulnerabilities and then partner with skilled hackers enrolled on the platforms. Companies then pay the bounty (the
+    reward), for valid vulnerabilities reported. This makes the testing almost 24-7 and there is no upfront fixed cost
+    because you pay as per bug reported. It's a win-win situation for both the companies and hackers (who get paid for
+    their work). Bug bounty programs can be private or public. As the bug bounty industry matures, we will see
+    specialised bug bounty programs in application testing, the Internet of Things (IoT), cloud security, and
+    blockchain.
+    [O'Reilly: 97 Things Every Application Security Professional Should Know][
+      oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.10. App Security is a People Problem - Not a Technical One
 
-
--
+- It's people who are responsible for all aspects of software - from inception to design to development, testing, and
+  implementation. They're also responsible for software security - whether they realize it or not; no one other than
+  the person developing the software can effectively secure it. Ignoring this responsibility or ignoring the human
+  aspects of software development when introducing new security-focused tools in developer workflow quickly leads to
+  chaos, anger, missed deadlines, and bewildered management.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- People are the lubricant in all software development projects - without required training, support structures, and
+  commitment to its people, organisations have little chance at building (and operating) a useful and practical secure
+  development life cycle that naturally produces secure software.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
+- Software development management, not just the application security team, needs to own the responsibility to break old
+  bad habits, instil good new habits, and educate the workforce adequately to fill these gaps. To start the process,
+  awareness of software security as an institutional issue is needed to set the stage for everything that follows.
+  Awareness drives interest and curiosity and places people on the path to wanting to learn more. This awareness
+  greases the skids that enable smooth engagement in software security education and ongoing involvement in application
+  security-related activities that "keep the drumbeat alive" throughout the year. The security team should assist in
+  bringing up security awareness and training developers with the right knowledge and skill sets to take ownership of
+  developing secure code.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
 ### 1.2.11. Empowering Application Security Professionals Through Cybersecurity Education
 
-
--
+- The cyber threat landscape is in a constant state of flux, with adversaries developing sophisticated techniques to
+  exploit vulnerabilities in software applications. As technology advances, so do the methods used by malicious actors
+  to breach security defences.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
--
-  [O'Reilly: 97 Things Every Application Security Professional Should Know][
-    oreilly-97-things-every-application-security-professional-should-know]
-
--
+- Embrace and seek out continuous learning. Cybersecurity is an ever-evolving field and staying up-to-date with the
+  latest developments is essential for application security professionals, allowing them to remain relevant and adapt
+  to emerging threats effectively. Engaging in webinars, workshops, and conferences and reading industry publications
+  are some ways to expand their knowledge base.
   [O'Reilly: 97 Things Every Application Security Professional Should Know][
     oreilly-97-things-every-application-security-professional-should-know]
 
@@ -39378,12 +39444,256 @@ class Rectangle:
   respectively.
   [Neovim: Pi_tutor][neovim-pi_tutor]
 
-## 4.2. Vim Buffers, Windows & Tabs - An Overview
+## 4.2. Microservices with Node JS & React
+
+### 4.2.1. Fundamental Ideas Around Microservices
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.2. A Mini-Microservices App
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.3. Running Services with Docker
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.4. Orchestrating Collections of Services with Kubernetes
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.5. Architecture of Multi-Service Apps
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.6. Leveraging a Cloud Environment for Development
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.7. Response Normalisation Strategies
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.8. Database Management & Modelling
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.9. Testing Isolated Microservices
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.10. Integrating a Server-SIde-Rendered React App
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.11. Code Sharing & Reuse Between Services
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.12. Create-Read-Update-Destroy Server Setup
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.13. NATS Streaming Server - An Event Bus Implementation
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.14. Connecting to NATS in a Node JS World
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.15. Managing a NATS Client
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.16. Cross-Service Data Replication in Action
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.17. Understanding Event Flow
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.18. Listening for Events & Handling Concurrency Issues
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.19. Worker Services
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.20. Handling Payments
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.21. Back to the Client
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+### 4.2.22. CI/CD
+
+<!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
+
+## 4.3. Vim Buffers, Windows & Tabs - An Overview
 
 - When you need open several files in Vim, you need to know at least a minimum about Buffers, Windows, and Tabs.
   [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
 
-### 4.2.1. Vim Modes
+### 4.3.1. Vim Modes
 
 - Vim has several modes that act very differently, meaning they have different key mappings. They are:
   [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
@@ -39427,7 +39737,7 @@ class Rectangle:
 - The key mappings shown below to cycle through Buffers, Windows, and Tabs should be used in Normal Mode.
   [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
 
-### 4.2.2. Buffers
+### 4.3.2. Buffers
 
 - Vim can open and edit several files at once. If you provide multiple file names when executing the `vim` command, all
   the files will be opened in in vim, but you'll only be seeing the first. That is because vim opens files in buffers.
@@ -39460,7 +39770,7 @@ class Rectangle:
   - `<Ctrl> + ^`: Open the previous buffer.
     [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
 
-### 4.2.3. Windows
+### 4.3.3. Windows
 
 - A Vim window is what you see and can interact with.
   [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
@@ -39501,7 +39811,7 @@ class Rectangle:
   - `:qa`: Close all windows and exit the editor.
     [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
 
-### 4.2.4. Tabs
+### 4.3.4. Tabs
 
 - A tab can show one or more windows.
   [Medium: Vim Buffers, Windows \& Tabs - An Overview][medium-vim-buffers-windows--tabs---an-overview]
