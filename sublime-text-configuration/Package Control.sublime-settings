@@ -5,7 +5,9 @@
 	],
 	"installed_packages":
 	[
+		"BracketHighlighter",
 		"Dracula Color Scheme",
+		"MarkdownEditing",
 		"Package Control",
 	],
 }
