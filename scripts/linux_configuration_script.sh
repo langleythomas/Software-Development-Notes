@@ -38,7 +38,7 @@ function log_output() {
     local -r output_message="${1}"
 
     print_separator
-    echo "${output_message}"
+    printf "${output_message}"
     print_separator
 }
 
@@ -870,7 +870,7 @@ function install_sublime_text() {
             | sudo tee --append "/etc/pacman.conf"
 
         update_upgrade_pacman
-        sudo pacman -Syu sublime-text
+        sudo pacman -Syu sublime-text --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         sudo rpm --verbose --import "https://download.sublimetext.com/sublimehq-rpm-pub.gpg"
 
@@ -885,12 +885,24 @@ function install_sublime_text() {
     fi
 }
 
-function configure_sublime_text() {
-    log_output "Creating Sublime Text configuration file."
+function configure_sublime_text_settings() {
+    log_output "Creating Sublime Text settings configuration file."
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Preferences.sublime-settings" \
         >> ~/".config/sublime-text/Packages/User/Preferences.sublime-settings"
+}
+
+function configure_sublime_text_packages() {
+    log_output "Creating Sublime Text package configuration file."
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Package%20Control.sublime-settings" \
+        >> ~/".config/sublime-text/Packages/User/Package Control.sublime-settings"
+
+    curl \
+        "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Markdown.sublime-settings" \
+        >> ~/".config/sublime-text/Packages/User/Markdown.sublime-settings"
 }
 
 function install_visual_studio_code() {
@@ -959,7 +971,8 @@ function install_configure_text_editors() {
     install_emacs
 
     install_sublime_text
-    configure_sublime_text
+    configure_sublime_text_settings
+    configure_sublime_text_packages
 
     install_visual_studio_code
 }
@@ -1956,10 +1969,8 @@ function autoremove_unused_dependencies() {
     log_output "Automatically removing unused dependencies."
 
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman -Rsn "$(pacman -Qdtq)"
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+    # if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf autoremove --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
