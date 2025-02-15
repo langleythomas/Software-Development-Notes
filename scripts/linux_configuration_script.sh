@@ -671,7 +671,7 @@ function generate_github_ssh_key() {
 
     log_output "Opening the generated ssh key."
 
-    cat ~/.ssh/id_ed25519.pub
+    cat "${HOME}/.ssh/id_ed25519.pub"
 }
 
 function install_configure_version_control_tool() {
@@ -890,7 +890,7 @@ function configure_sublime_text_settings() {
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Preferences.sublime-settings" \
-        >> ~/".config/sublime-text/Packages/User/Preferences.sublime-settings"
+        >> "${HOME}/.config/sublime-text/Packages/User/Preferences.sublime-settings"
 }
 
 function configure_sublime_text_packages() {
@@ -898,11 +898,11 @@ function configure_sublime_text_packages() {
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Package%20Control.sublime-settings" \
-        >> ~/".config/sublime-text/Packages/User/Package Control.sublime-settings"
+        >> "${HOME}/.config/sublime-text/Packages/User/Package Control.sublime-settings"
 
     curl \
         "https://raw.githubusercontent.com/langleythomas/Software-Development-Notes/refs/heads/main/sublime-text-configuration/Markdown.sublime-settings" \
-        >> ~/".config/sublime-text/Packages/User/Markdown.sublime-settings"
+        >> "${HOME}/.config/sublime-text/Packages/User/Markdown.sublime-settings"
 }
 
 function install_visual_studio_code() {
@@ -949,7 +949,7 @@ function install_visual_studio_code() {
 
         # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
         # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
-        # rm --recursive ~/.config/Code/GPUCache
+        # rm --recursive "${HOME}/.config/Code/GPUCache"
     fi
 
     code --version
@@ -1685,9 +1685,9 @@ function install_kdash() {
         sudo dnf install kdash --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         wget "https://github.com/kdash-rs/kdash/releases/download/v0.6.1/kdash-linux.tar.gz" \
-            --output-document ~/"Downloads/kdash-linux.tar.gz"
+            --output-document "${HOME}/Downloads/kdash-linux.tar.gz"
 
-        sudo tar --directory="/usr/local/bin" --extract --gzip --file ~/"Downloads/kdash-linux.tar.gz"
+        sudo tar --directory="/usr/local/bin" --extract --gzip --file "${HOME}/Downloads/kdash-linux.tar.gz"
     fi
 
     kdash --version
@@ -1788,13 +1788,13 @@ function install_rip() {
         update_upgrade_aur
         yay --sync rm-improved --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document ~/"Downloads/rip.tar.gz"
-        tar --extract --verbose --gzip --file ~/"Downloads/rip.tar.gz" --directory ~/"Downloads"
-        sudo mv ~/"Downloads/rip-0.13.1" /usr/local/bin
+        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document "${HOME}/Downloads/rip.tar.gz"
+        tar --extract --verbose --gzip --file "${HOME}/Downloads/rip.tar.gz" --directory "${HOME}/Downloads"
+        sudo mv "${HOME}/Downloads/rip-0.13.1" /usr/local/bin
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document ~/"Downloads/rip.tar.gz"
-        tar --extract --verbose --gzip --file ~/"Downloads/rip.tar.gz" --directory ~/"Downloads"
-        sudo mv ~/"Downloads/rip-0.13.1" /usr/local/bin
+        wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document "${HOME}/Downloads/rip.tar.gz"
+        tar --extract --verbose --gzip --file "${HOME}/Downloads/rip.tar.gz" --directory "${HOME}/Downloads"
+        sudo mv "${HOME}/Downloads/rip-0.13.1" /usr/local/bin
     fi
 
     rip --version
