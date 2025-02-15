@@ -9,3 +9,17 @@ function execute_script() {
 }
 
 alias rm="rm -i --verbose"
+
+function update_all_packages() {
+    if [[ "$(cat "/proc/version")}" == *"arch"* ]]; then
+        sudo pacman --sync --refresh --sysupgrade --noconfirm
+        yay --sync --refresh --sysupgrade --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        sudo apt update
+        sudo apt upgrade --yes
+
+        sudo snap refresh
+
+        flatpak update
+    fi
+}
