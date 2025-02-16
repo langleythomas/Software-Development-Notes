@@ -14,7 +14,10 @@ function execute_script() {
 function update_all_packages() {
     if [[ "$(cat "/proc/version")}" == *"arch"* ]]; then
         sudo pacman --sync --refresh --sysupgrade --noconfirm
+
         yay --sync --refresh --sysupgrade --noconfirm
+
+        flatpak update
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         sudo apt update
         sudo apt upgrade --yes
