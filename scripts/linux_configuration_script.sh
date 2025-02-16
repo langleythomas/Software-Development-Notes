@@ -8,7 +8,7 @@
 # - TBD, most likely Alpine (XFCE Desktop Environment)
 
 # Arch:
-# - EndeavourOS (KDE Plasma Desktop Environment)
+# - EndeavourOS (KDE Plasma Desktop Environment, Cinnamon Desktop Environment)
 
 # Red Hat:
 # - TBD, most likely Fedora Workstation (GNOME Desktop Environment)
@@ -31,55 +31,81 @@ declare -r LINUX_DISTRO_BASE
 #######################################################################################################################
 
 function print_separator() {
-    printf -- "-----------------------------------------------------------------------------------------------------------------------"
+    printf -- "-----------------------------------------------------------------------------------------------------------------------\n"
 }
 
 function log_output() {
     local -r output_message="${1}"
 
     print_separator
-    printf "${output_message}"
+    printf "%s\n" "${output_message}"
     print_separator
 }
 
 
 
 #######################################################################################################################
-##########################################  Packaging Tool Refresh Functions ##########################################
+####################################### Package Manager Package Update Functions ######################################
 #######################################################################################################################
 
-function update_apk() {
+# Alpine Package Manager
+function update_upgrade_apk() {
     su
     apk update
     apk upgrade --yes
 }
 
-function update_dnf() {
-    sudo dnf upgrade --yes
-}
-
-function update_flatpak() {
-    flatpak update
-}
-
-function update_upgrade_apt() {
-    sudo apt update
-    sudo apt upgrade --yes
-}
-
+# Arch Package Manager
 function update_upgrade_pacman() {
     sudo pacman --sync --refresh --sysupgrade --noconfirm
-}
-
-function update_snap() {
-    sudo snap refresh
 }
 
 function update_upgrade_aur() {
     yay --sync --refresh --sysupgrade --noconfirm
 }
 
+# Fedora Package Manager
+function update_dnf() {
+    sudo dnf upgrade --yes
+}
 
+# Generic Package Manager
+function update_flatpak() {
+    flatpak update --assumeyes
+}
+
+# Ubuntu Package Managers
+function update_upgrade_apt() {
+    sudo apt update
+    sudo apt upgrade --yes
+}
+
+function update_snap() {
+    sudo snap refresh
+}
+
+
+
+#######################################################################################################################
+############################################## Package Manager Installation ###########################################
+#######################################################################################################################
+
+function install_flatpak() {
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        log_output "Installing Flatpak."
+        update_upgrade_pacman
+        sudo pacman --sync flatpak --noconfirm
+    # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+    # elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+    fi
+
+    flatpak --version
+}
+
+function install_package_manager() {
+    install_flatpak
+}
 
 #######################################################################################################################
 ############################################# Graphics Driver Configuration ###########################################
@@ -121,10 +147,10 @@ function install_docker() {
     log_output "Installing Docker. Reference installation documentation: https://docs.docker.com/engine/install/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add docker --yes
 
-        update_apk
+        update_upgrade_apk
         apk add docker-cli-compose --yes
 
         # Add user to Docker group
@@ -401,7 +427,7 @@ function install_dot_net_sdk() {
     log_output "Installing the .NET SDK for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add dotnet9-sdk --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -428,7 +454,7 @@ function install_asp_net_runtime() {
     log_output "Installing the ASP .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add aspnetcore9-runtime --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -449,7 +475,7 @@ function install_dot_net_runtime() {
     log_output "Installing the .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add dotnet9-runtime --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -482,7 +508,7 @@ function install_nodejs_runtime() {
     log_output "Installing the Node JS runtime for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add nodejs --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -526,7 +552,7 @@ function install_npm() {
     log_output "Installing the Node Package Manager for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add npm --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -555,7 +581,7 @@ function install_python3() {
     log_output "Installing Python 3. Reference installation documentation: https://www.geeksforgeeks.org/how-to-install-python-on-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add python3 --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -575,7 +601,7 @@ function install_python3_pip() {
     log_output "Installing Python 3 PIP. Reference installation documentation: https://www.tecmint.com/install-pip-in-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add py3-pip --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -606,7 +632,7 @@ function install_ruby() {
     log_output "Installing Ruby. Reference installation documentation: https://www.ruby-lang.org/en/documentation/installation/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add ruby --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -636,7 +662,7 @@ function install_git() {
     log_output "Installing Git. Reference installation documentation: https://git-scm.com/downloads/linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add git --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -714,7 +740,7 @@ function install_vim() {
     log_output "Installing Vim. Reference installation documentation: https://tecadmin.net/install-vim-linux/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add vim --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -783,7 +809,7 @@ function install_neovim() {
     log_output "Installing Neovim. Reference installation documentation: https://github.com/neovim/neovim/blob/master/INSTALL.md"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add neovim --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -834,13 +860,13 @@ function install_emacs() {
     log_output "Installing Emacs. Reference installation documentation: https://www.gnu.org/software/emacs/download.html"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add texinfo --yes
 
-        update_apk
+        update_upgrade_apk
         apk add emacs-docs --yes
 
-        update_apk
+        update_upgrade_apk
         apk add emacs --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1032,8 +1058,8 @@ function install_brave() {
 
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync brave-browser --noconfirm
+        update_upgrade_aur
+        yay --sync brave-browser --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf install dnf-plugins-core --yes
@@ -1064,7 +1090,7 @@ function install_chromium() {
     log_output "Installing Chromium. Reference installation documentation: https://www.fosslinux.com/111944/how-to-install-chromium-web-browser-on-linux.htm"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add chromium --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1080,7 +1106,7 @@ function install_chromium() {
     chromium --version
 }
 
-function install_browser() {
+function install_browsers() {
     install_brave
 
     install_chromium
@@ -1101,10 +1127,10 @@ function install_discord() {
         sudo pacman --sync discord --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub com.discordapp.Discord --yes
+        flatpak install flathub com.discordapp.Discord --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub com.discordapp.Discord --yes
+        flatpak install flathub com.discordapp.Discord --assumeyes
     fi
 }
 
@@ -1144,27 +1170,47 @@ function install_ui_configuration_tools() {
 ############################################ Media Player Installation ################################################
 #######################################################################################################################
 
+function install_spotify() {
+    log_output "Installing Spotify. Reference installation documentation: https://www.spotify.com/de-en/download/linux/, https://itsfoss.com/install-spotify-arch/"
+
+    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync spotify-launcher --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_flatpak
+        flatpak install flathub com.spotify.Client
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_flatpak
+        flatpak install flathub com.spotify.Client
+    fi
+
+    spotify-launcher --version
+}
+
 function install_vlc() {
     log_output "Installing VLC. Reference installation documentation: https://www.videolan.org/vlc/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add vlc --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync vlc --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub org.videolan.VLC --yes
+        flatpak install flathub org.videolan.VLC --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub org.videolan.VLC --yes
+        flatpak install flathub org.videolan.VLC --assumeyes
     fi
 
     vlc --version
 }
 
 function install_media_players() {
+    install_spotify
+
     install_vlc
 }
 
@@ -1178,7 +1224,7 @@ function install_guake() {
     log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key. Reference installation documentation: https://guake.readthedocs.io/en/stable/user/installing.html"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add guake --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1248,14 +1294,14 @@ function install_gaming_software_utilities() {
 ############################################ Gaming Emulator Installation #############################################
 #######################################################################################################################
 
-function install_gameboy_emulator() {
-    log_output "Installing the emulator, for GameBoy, GameBoy Color, and GameBoy Advance emulation. Reference installation documentation: https://mgba.io/downloads.html"
+# function install_gameboy_emulator() {
+#     log_output "Installing the mGBA emulator, for GameBoy, GameBoy Color, and GameBoy Advance emulation. Reference installation documentation: https://mgba.io/downloads.html"
 
-    curl "https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-appimage-x64.appimage" \
-        --output "/home/${USER}/Downloads/mGBA-appimage-x64.appimage"
+#     curl "https://github.com/mgba-emu/mgba/releases/download/0.10.4/mGBA-0.10.4-appimage-x64.appimage" \
+#         --output "/home/${USER}/Downloads/mGBA-appimage-x64.appimage"
 
-    chmod u+x "/home/${USER}/Downloads/mGBA-appimage-x64.appimage"
-}
+#     chmod u+x "/home/${USER}/Downloads/mGBA-appimage-x64.appimage"
+# }
 
 function install_ds_emulator() {
     log_output "Installing the melonDS, for Nintendo DS emulation. Reference installation documentation: https://melonds.kuribo64.net/downloads.php"
@@ -1269,13 +1315,13 @@ function install_ds_emulator() {
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
         update_flatpak
-        flatpak install flathub net.kuribo64.melonDS --yes
+        flatpak install flathub net.kuribo64.melonDS --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
         update_flatpak
-        flatpak install flathub net.kuribo64.melonDS --yes
+        flatpak install flathub net.kuribo64.melonDS --assumeyes
     fi
 }
 
@@ -1288,10 +1334,10 @@ function install_n64_emulator() {
         yay --sync simple64 --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub io.github.simple64.simple64 --yes
+        flatpak install flathub io.github.simple64.simple64 --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub io.github.simple64.simple64 --yes
+        flatpak install flathub io.github.simple64.simple64 --assumeyes
     fi
 }
 
@@ -1299,23 +1345,23 @@ function install_gamecube_wii_emulator() {
     log_output "Installing the Dolphin emulator, for Nintendo GameCube and Wii emulation. Reference installation documentation: https://wiki.dolphin-emu.org/index.php?title=Installing_Dolphin"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add dolphin --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync cemu --noconfirm
+        yay --sync dolphin-emu --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists "flathub" "https://dl.flathub.org/repo/flathub.flatpakrepo"
 
         update_flatpak
-        flatpak install flathub org.DolphinEmu.dolphin-emu --yes
+        flatpak install flathub org.DolphinEmu.dolphin-emu --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists "flathub" "https://dl.flathub.org/repo/flathub.flatpakrepo"
 
         update_flatpak
-        flatpak install flathub org.DolphinEmu.dolphin-emu --yes
+        flatpak install flathub org.DolphinEmu.dolphin-emu --assumeyes
     fi
 }
 
@@ -1328,21 +1374,21 @@ function install_wii_u_emulator() {
         sudo pacman --sync cemu --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub info.cemu.Cemu --yes
+        flatpak install flathub info.cemu.Cemu --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub info.cemu.Cemu --yes
+        flatpak install flathub info.cemu.Cemu --assumeyes
     fi
 }
 
-function install_switch_emulator() {
-    log_output "Installing the Suyu emulator. Reference installation documentation: https://suyu-emu.com/how-to-setup/"
+# function install_switch_emulator() {
+#     log_output "Installing the Suyu emulator. Reference installation documentation: https://suyu-emu.com/how-to-setup/"
 
-    curl "https://git.suyu.dev/suyu/suyu/releases/download/latest/Suyu-Linux_x86_64.AppImage" \
-        --output "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
+#     curl "https://git.suyu.dev/suyu/suyu/releases/download/latest/Suyu-Linux_x86_64.AppImage" \
+#         --output "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
 
-    chmod u+x "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
-}
+#     chmod u+x "/home/${USER}/Downloads/Suyu-Linux_x86_64.AppImage"
+# }
 
 function install_xbox_emulator() {
     log_output "Installing the Xemu emulator, for Xbox emulation. Reference installation documentation: https://xemu.app/docs"
@@ -1353,10 +1399,10 @@ function install_xbox_emulator() {
         yay --sync xemu --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install app.xemu.xemu --yes
+        flatpak install app.xemu.xemu --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install app.xemu.xemu --yes
+        flatpak install app.xemu.xemu --assumeyes
     fi
 }
 
@@ -1378,17 +1424,17 @@ function install_psp_emulator() {
     log_output "Installing the emulator, PlayStation Portable emulation. Reference installation documentation: https://www.ppsspp.org/download/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add ppsspp --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync ppsspp --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub org.ppsspp.PPSSPP --yes
+        flatpak install flathub org.ppsspp.PPSSPP --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub org.ppsspp.PPSSPP --yes
+        flatpak install flathub org.ppsspp.PPSSPP --assumeyes
     fi
 }
 
@@ -1398,58 +1444,57 @@ function install_playstation_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-
-        yarn --sync duckstation --noconfirm
+        yay --sync duckstation --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
 
         update_flatpak
-        flatpak install flathub org.duckstation.DuckStation --yes
+        flatpak install flathub org.duckstation.DuckStation --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
 
         update_flatpak
-        flatpak install flathub org.duckstation.DuckStation --yes
+        flatpak install flathub org.duckstation.DuckStation --assumeyes
     fi
 }
 
-function install_playstation2_emulator() {
-    log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation. Reference installation documentation: https://pcsx2.net/downloads"
+function install_playstation_2_emulator() {
+    log_output "Installing the PCXS2 emulator, for PlayStation 2 emulation. Reference installation documentation: https://pcsx2.net/downloads, https://flathub.org/apps/net.pcsx2.PCSX2"
 
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_aur
-        yarn --sync pcxs2 --noconfirm
+        update_flatpak
+        flatpak install net.pcsx2.PCSX2 --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install net.pcsx2.PCSX2 --yes
+        flatpak install net.pcsx2.PCSX2 --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install net.pcsx2.PCSX2 --yes
+        flatpak install net.pcsx2.PCSX2 --assumeyes
     fi
 }
 
 function install_playstation_3_emulator() {
-    log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation. Reference installation documentation: https://rpcs3.net/download"
+    log_output "Installing the RPCS3 emulator, for PlayStation 3 emulation. Reference installation documentation: https://rpcs3.net/download, https://flathub.org/apps/net.rpcs3.RPCS3"
 
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_aur
-        yay --sync rpcs3 --noconfirm
+        update_flatpak
+        flatpak install flathub net.rpcs3.RPCS3 --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub net.rpcs3.RPCS3 --yes
+        flatpak install flathub net.rpcs3.RPCS3 --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub net.rpcs3.RPCS3 --yes
+        flatpak install flathub net.rpcs3.RPCS3 --assumeyes
     fi
 }
 
 function install_emulators() {
     # GameBoy Emulator
-    install_gameboy_emulator
+    # install_gameboy_emulator
 
     # DS Emulator
     install_ds_emulator
@@ -1464,7 +1509,7 @@ function install_emulators() {
     install_wii_u_emulator
 
     # Switch Emulator
-    install_switch_emulator
+    # install_switch_emulator
 
     # Xbox Emulator
     install_xbox_emulator
@@ -1492,17 +1537,17 @@ function install_okular() {
     log_output "Installing okular, a universal document viewer. Reference installation documentation: https://okular.kde.org/download/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add okular --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync okular --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
-        flatpak install flathub org.kde.okular --yes
+        flatpak install flathub org.kde.okular --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_flatpak
-        flatpak install flathub org.kde.okular --yes
+        flatpak install flathub org.kde.okular --assumeyes
     fi
 
     okular --version
@@ -1522,7 +1567,7 @@ function install_bat() {
     log_output "Installing bat, a cat clone with syntax highlighting and Git integration. Reference installation documentation: https://github.com/sharkdp/bat"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add bat --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1542,7 +1587,7 @@ function install_btop() {
     log_output "Installing btop, a resource monitor that show usage and stats for processor, memory, disks, networks, and processes. Reference installation documentation: https://github.com/aristocratos/btop"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add btop --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1587,7 +1632,7 @@ function install_dust() {
     log_output "Installing dust, providing an instant overview of which directories are using disk space without requiring sort or head. Reference installation documentation: https://github.com/bootandy/dust"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add dust --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1607,7 +1652,7 @@ function install_eza() {
     log_output "Installing eza, a modern alternative to the ls program that ships with Unix and Linux operating systems. Reference installation documentation: https://github.com/eza-community/eza/blob/main/INSTALL.md"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add eza --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1635,7 +1680,7 @@ function install_fastfetch() {
     log_output "Installing fastfetch, a \"Bash Screen Information Tool\" that auto-detects the system's distribution and some valuable information to the right. Reference installation documentation: https://github.com/fastfetch-cli/fastfetch?tab=readme-ov-file#linux"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add upgrade --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1657,7 +1702,7 @@ function install_fzf() {
     log_output "Installing fzf, a general-purpose command-line fuzzy finder. Reference installation documentation: https://github.com/junegunn/fzf?tab=readme-ov-file#installation"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add fzf --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1764,7 +1809,7 @@ function install_procs() {
     log_output "Installing procs, a replacement for ps written in Rust. Reference installation documentation: https://github.com/dalance/procs?tab=readme-ov-file#installation"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add procs --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1804,7 +1849,7 @@ function install_ripgrep() {
     log_output "Installing ripgrep, a line-oriented search tool that recursively searches the current directory for a regex pattern. Reference installation documentation: https://github.com/BurntSushi/ripgrep?tab=readme-ov-file#installation"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add ripgrep --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1824,7 +1869,7 @@ function install_sd() {
     log_output "Installing sd, an intuitive find and replace CLI. Reference installation documentation: https://github.com/chmln/sd?tab=readme-ov-file#installation"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add sd --yes
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -1993,10 +2038,10 @@ function install_openrazer_daemon() {
     log_output "Installing OpenRazer Daemon to work with Polychromatic. Reference installation documentation: https://openrazer.github.io/#download"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_apk
+        update_upgrade_apk
         apk add openrazer
 
-        update_apk
+        update_upgrade_apk
         apk add openrazer-src
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
@@ -2063,6 +2108,8 @@ function install_peripheral_tools() {
 
 # configure_graphics_drivers
 
+# install_package_manager
+
 # install_configure_deployment_tools
 
 # install_dot_net_development_prerequisites
@@ -2077,11 +2124,11 @@ function install_peripheral_tools() {
 
 # configure_linux_system_overrides
 
-# install_configure_text_editors
+# install_configure_text_editors  # TODO: Run this command.
 
 # install_integrated_development_environments
 
-# install_browser
+# install_browsers
 
 # install_social_platforms
 
