@@ -1,3 +1,7 @@
+" -----------------------------------------------------------------------------
+" Plugin Configuration
+" -----------------------------------------------------------------------------
+
 " Only calling the Vundle configuration if the Vundle.vim directory exists
 if !empty(glob("~/.vim/bundle/Vundle.vim"))
     " ---------------------------------------------------------------------------
@@ -41,12 +45,16 @@ if !empty(glob("~/.vim/bundle/Vundle.vim"))
     let g:mkdp_refresh_slow = 1 
 endif
 
+
+
 " -----------------------------------------------------------------------------
 " Text Rendering
 " -----------------------------------------------------------------------------
 
 " Enable syntax highlighting
 filetype plugin on
+
+
 
 " -----------------------------------------------------------------------------
 " Text Navigation
@@ -58,6 +66,8 @@ set backspace=indent,eol,start
 " Enable wrapping to new/previous lines with arrow keys
 set whichwrap+=<,>,[,]
 
+
+
 " -----------------------------------------------------------------------------
 " Spell Checking
 " -----------------------------------------------------------------------------
@@ -68,6 +78,8 @@ set spell
 " Set dictionary
 set spelllang=en_gb
 
+
+
 " -----------------------------------------------------------------------------
 " Spaces & Tabs
 " -----------------------------------------------------------------------------
@@ -75,18 +87,14 @@ set spelllang=en_gb
 " Tabs are spaces
 set expandtab
 
-" New lines inherit the indentation of previous lines
-set autoindent
-
-" Round the indentation to the nearest multiple of shiftwidth
-set shiftround
-
 " Insert 'tabstop' number of spaces when the '<TAB>' key is pressed
 set smarttab
 
 " Set indentation by file type
 " Markdown indentation configuration
 autocmd FileType markdown set tabstop=8|set shiftwidth=2|set expandtab
+
+
 
 " -----------------------------------------------------------------------------
 " UI Configuration
@@ -135,6 +143,8 @@ set hlsearch
 " uppercase letter
 set smartcase
 
+
+
 " -----------------------------------------------------------------------------
 " Clipboard
 " -----------------------------------------------------------------------------
@@ -147,6 +157,8 @@ set smartcase
 " Option 2: Windows/MacOS
 " set clipboard+=unnamed
 
+
+
 " -----------------------------------------------------------------------------
 " File Type
 " -----------------------------------------------------------------------------
@@ -156,6 +168,8 @@ set fileformat=unix
 
 " Set file encoding type
 set encoding=UTF-8
+
+
 
 " -----------------------------------------------------------------------------
 " Vim Exit
@@ -167,12 +181,16 @@ set confirm
 " Enable Vim to resume editing a file from the previous location
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+
+
 " -----------------------------------------------------------------------------
 " Mouse Control
 " -----------------------------------------------------------------------------
 
 " Disable mouse control and navigation in the buffer.
 set mouse=
+
+
 
 " -----------------------------------------------------------------------------
 " Memory Configuration
