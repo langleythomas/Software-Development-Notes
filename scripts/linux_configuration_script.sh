@@ -2124,7 +2124,7 @@ function install_peripheral_tools() {
 
 # configure_linux_system_overrides
 
-# install_configure_text_editors  # TODO: Run this command.
+# install_configure_text_editors
 
 # install_integrated_development_environments
 
