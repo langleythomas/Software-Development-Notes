@@ -39455,11 +39455,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.2. A Mini-Microservices App
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39477,11 +39513,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.4. Orchestrating Collections of Services with Kubernetes
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39499,11 +39571,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.6. Leveraging a Cloud Environment for Development
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39521,11 +39629,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.8. Database Management & Modelling
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39543,11 +39687,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.10. Integrating a Server-SIde-Rendered React App
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39565,11 +39745,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.12. Create-Read-Update-Destroy Server Setup
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39587,11 +39803,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.14. Connecting to NATS in a Node JS World
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39609,11 +39861,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.16. Cross-Service Data Replication in Action
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39631,11 +39919,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.18. Listening for Events & Handling Concurrency Issues
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39653,11 +39977,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.20. Handling Payments
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
@@ -39675,11 +40035,47 @@ class Rectangle:
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react] -->
 
 ### 4.2.22. CI/CD
 
 <!-- -
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
+  [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
+
+-
   [Udemy: Microservices with Node JS & React][udemy-microservices-with-node-js-and-react]
 
 -
