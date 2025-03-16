@@ -1250,9 +1250,40 @@ function configure_guake() {
     guake --restore-preferences="${HOME}/Downloads/guake_configuration.conf"
 }
 
+function install_warp() {
+    log_output "Installing Guake. Note: In order to launch Guake, hit the F12 key. Reference installation documentation: https://guake.readthedocs.io/en/stable/user/installing.html"
+
+#    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
+#        update_upgrade_apk
+#        apk add guake --yes
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+#        update_upgrade_pacman
+#        sudo pacman --sync guake --noconfirm
+        wget --output ~/"Downloads/warp-terminal.pkg.tar.zst" "https://app.warp.dev/download?package=pacman"
+
+	sudo pacman -U ~/"Downloads/waro-terminal.pkg.tar.zst"
+
+	sudo sh -c "echo -e '\n[warpdotdev]\nServer = https://releases.warp.dev/linux/pacman/\$repo/\$arch' >> /etc/pacman.conf"
+	sudo pacman-key -r "linux-maintainers@warp.dev"
+	sudo pacman-key --lsign-key "linux-maintainers@warp.dev"
+
+	sudo pacman -Sy warp-terminal
+    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
+        update_dnf
+        sudo dnf install guake --yes
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install guake --yes
+    fi
+
+    guake --version
+}
+
 function install_configure_terminals() {
     install_guake
     configure_guake
+
+    install_warp
 }
 
 
