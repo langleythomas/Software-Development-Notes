@@ -1123,8 +1123,8 @@ function install_discord() {
 
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync discord --noconfirm
+        update_flatpak
+        flatpak install flathub com.discordapp.Discord --assumeyes
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub com.discordapp.Discord --assumeyes
@@ -1134,7 +1134,7 @@ function install_discord() {
     fi
 }
 
-function install_social_platforms() {
+function install_social_media_platforms() {
     install_discord
 }
 
@@ -2130,7 +2130,7 @@ function install_peripheral_tools() {
 
 # install_browsers
 
-# install_social_platforms
+# install_social_media_platforms
 
 # install_ui_configuration_tools
 
