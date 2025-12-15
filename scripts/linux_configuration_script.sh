@@ -420,87 +420,6 @@ function install_configure_deployment_tools() {
 
 
 #######################################################################################################################
-#################################### .NET Development Prerequisites Installation ######################################
-#######################################################################################################################
-
-function install_dot_net_sdk() {
-    log_output "Installing the .NET SDK for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_upgrade_apk
-        apk add dotnet9-sdk --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync dotnet-sdk --noconfirm
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf install dotnet-sdk-9.0 --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo dpkg --purge packages-microsoft-prod
-
-        update_upgrade_apt
-        sudo dpkg --install packages-microsoft-prod.deb
-
-        update_upgrade_apt
-        sudo apt install dotnet-sdk-9.0 --yes
-    fi
-
-    dotnet --list-sdks
-    dotnet --info
-}
-
-function install_asp_net_runtime() {
-    log_output "Installing the ASP .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_upgrade_apk
-        apk add aspnetcore9-runtime --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync aspnet-runtime --noconfirm
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf install aspnetcore-runtime-9.0 --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install aspnetcore-runtime-9.0 --yes
-    fi
-
-    dotnet --list-runtimes
-    dotnet --info
-}
-
-function install_dot_net_runtime() {
-    log_output "Installing the .NET Runtime for C# development. Reference installation documentation: https://learn.microsoft.com/en-us/dotnet/core/install/linux"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_upgrade_apk
-        apk add dotnet9-runtime --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync dotnet-runtime --noconfirm
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf install dotnet-runtime-9.0 --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install dotnet-runtime-9.0 --yes
-    fi
-
-    dotnet --list-runtimes
-    dotnet --info
-}
-
-function install_dot_net_development_prerequisites() {
-    install_dot_net_sdk
-    install_asp_net_runtime
-    install_dot_net_runtime
-}
-
-
-
-#######################################################################################################################
 ################################# JavaScript Development Prerequisite Installation ####################################
 #######################################################################################################################
 
@@ -2042,8 +1961,6 @@ function install_peripheral_tools() {
 # install_package_manager
 
 # install_configure_deployment_tools
-
-# install_dot_net_development_prerequisites
 
 # install_javascript_development_prerequisites
 
