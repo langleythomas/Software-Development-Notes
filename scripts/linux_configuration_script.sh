@@ -1738,73 +1738,6 @@ function install_kdash() {
     kdash --version
 }
 
-function install_powershell() {
-    log_output "Installing PowerShell. Reference installation documentation: https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-    sudo apk add --no-cache \
-        ca-certificates \
-        less \
-        ncurses-terminfo-base \
-        krb5-libs \
-        libgcc \
-        libintl \
-        libssl3 \
-        libstdc++ \
-        tzdata \
-        userspace-rcu \
-        zlib \
-        icu-libs \
-        curl
-
-        apk --repository "https://dl-cdn.alpinelinux.org/alpine/edge/main" add --no-cache \
-            lttng-ust \
-            openssh-client \
-
-        # Download the powershell '.tar.gz' archive
-        curl --location https://github.com/PowerShell/PowerShell/releases/download/v7.5.0/powershell-7.5.0-linux-musl-x64.tar.gz --output /tmp/powershell.tar.gz
-
-        # Create the target folder where powershell will be placed
-        sudo mkdir --parents "/opt/microsoft/powershell/7"
-
-        # Expand powershell to the target folder
-        sudo tar zxf "/tmp/powershell.tar.gz" -C "/opt/microsoft/powershell/7"
-
-        # Set execute permissions
-        sudo chmod +x "/opt/microsoft/powershell/7/pwsh"
-
-        # Create the symbolic link that points to pwsh
-        sudo ln -s "/opt/microsoft/powershell/7/pwsh" "/usr/bin/pwsh"
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_aur
-        yay --sync powershell --noconfirm
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        sudo rpm --import "https://packages.microsoft.com/keys/microsoft.asc"
-        curl "https://packages.microsoft.com/config/rhel/7/prod.repo" | sudo tee "/etc/yum.repos.d/microsoft.repo"
-        sudo dnf makecache --yes
-        sudo dnf install powershell --yes
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install wget --yes
-        sudo apt install apt-transport-https --yes
-        sudo apt install software-properties-common --yes
-
-        # shellcheck disable=SC1091
-        source "/etc/os-release"
-
-        wget --quiet "https://packages.microsoft.com/config/ubuntu/$VERSION_ID/packages-microsoft-prod.deb"
-
-        sudo dpkg --install "packages-microsoft-prod.deb"
-
-        rm "packages-microsoft-prod.deb"
-
-        update_upgrade_apt
-        sudo apt install powershell --yes
-    fi
-
-    pwsh --version
-}
-
 function install_procs() {
     log_output "Installing procs, a replacement for ps written in Rust. Reference installation documentation: https://github.com/dalance/procs?tab=readme-ov-file#installation"
 
@@ -1920,8 +1853,6 @@ function install_command_line_utilities() {
     install_fzf
 
     install_kdash
-
-    install_powershell
 
     install_procs
 
