@@ -12,7 +12,7 @@ function execute_script() {
 }
 
 function update_all_packages() {
-    if [[ "$(cat "/proc/version")}" == *"arch"* ]]; then
+    if [[ "$(cat /proc/version)" == *"arch"* ]]; then
         sudo pacman --sync --refresh --sysupgrade --noconfirm
 
         yay --sync --refresh --sysupgrade --noconfirm
