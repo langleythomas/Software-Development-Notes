@@ -1,7 +1,19 @@
 export PATH="$PATH:/opt/nvim/"
 
+#######################################################################################################################
+# Aliases
+#######################################################################################################################
+
+# File System
+
 alias ll="ls -l"
 alias rm="rm -i --verbose"
+
+#######################################################################################################################
+# Functions
+#######################################################################################################################
+
+# Script Execution
 
 function execute_script() {
   local -r full_script_file_path="${1}"
@@ -11,19 +23,27 @@ function execute_script() {
   time ./"${full_script_file_path=}" | tee "${script_file_path_without_file_extension}-$(date +%F-%T).txt"
 }
 
+#######################################################################################################################
+# Update Packages
+#######################################################################################################################
+
+# System Upgrade
+
 function update_all_packages() {
-    if [[ "$(cat /proc/version)" == *"arch"* ]]; then
-        sudo pacman --sync --refresh --sysupgrade --noconfirm
+  local linux_distro_base="$(cat /proc/version)"
 
-        yay --sync --refresh --sysupgrade --noconfirm
+  if [[ "${linux_distro_base}" == *"arch"* ]]; then
+    sudo pacman --sync --refresh --sysupgrade --noconfirm
 
-        flatpak update
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        sudo apt update
-        sudo apt upgrade --yes
+    yay --sync --refresh --sysupgrade --noconfirm
 
-        sudo snap refresh
+    flatpak update
+  elif [[ "${linux_distro_base}" == *"ubuntu"* ]]; then
+    sudo apt update
+    sudo apt upgrade --yes
 
-        flatpak update
-    fi
+    sudo snap refresh
+
+    flatpak update
+  fi
 }
