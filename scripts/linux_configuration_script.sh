@@ -420,11 +420,11 @@ function install_configure_deployment_tools() {
 
 
 #######################################################################################################################
-################################# JavaScript Development Prerequisite Installation ####################################
+################################# Java Development Prerequisite Installation ####################################
 #######################################################################################################################
 
 function install_nodejs_runtime() {
-    log_output "Installing the Node JS runtime for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
+    log_output "Installing the Node JS runtime for Java development. Reference installation documentation: https://openjdk.org/"
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
@@ -440,7 +440,7 @@ function install_nodejs_runtime() {
     java --version
 }
 
-function install_javascript_development_prerequisites() {
+function install_java_development_prerequisites() {
     install_java
 }
 
