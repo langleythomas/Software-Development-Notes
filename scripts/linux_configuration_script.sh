@@ -428,8 +428,32 @@ function install_nodejs_runtime() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add nodejs --yes
+
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+        update_upgrade_pacman
+        sudo pacman --sync jdk-openjdk --noconfirm
+    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
+        update_upgrade_apt
+        sudo apt install default-jre --yes
+    fi
+
+    java --version
+}
+
+function install_javascript_development_prerequisites() {
+    install_java
+}
+
+
+
+#######################################################################################################################
+################################# JavaScript Development Prerequisite Installation ####################################
+#######################################################################################################################
+
+function install_nodejs_runtime() {
+    log_output "Installing the Node JS runtime for JavaScript development. Reference installation documentation: https://nodejs.org/en/download/package-manager/all"
+
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync nodejs --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1961,6 +1985,8 @@ function install_peripheral_tools() {
 # install_package_manager
 
 # install_configure_deployment_tools
+
+# install_java_development_prerequisites
 
 # install_javascript_development_prerequisites
 
