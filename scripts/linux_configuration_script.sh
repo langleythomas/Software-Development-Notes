@@ -423,13 +423,10 @@ function install_configure_deployment_tools() {
 ################################# Java Development Prerequisite Installation ####################################
 #######################################################################################################################
 
-function install_nodejs_runtime() {
+function install_java() {
     log_output "Installing the Node JS runtime for Java development. Reference installation documentation: https://openjdk.org/"
 
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_upgrade_apk
-
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
+    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
         sudo pacman --sync jdk-openjdk --noconfirm
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
