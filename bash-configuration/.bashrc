@@ -33,17 +33,21 @@ function update_all_packages() {
   local linux_distro_base="$(cat /proc/version)"
 
   if [[ "${linux_distro_base}" == *"arch"* ]]; then
-    sudo pacman --sync --refresh --sysupgrade --noconfirm
 
-    yay --sync --refresh --sysupgrade --noconfirm
+    if [[ grep -q "endeavouros" "cat /etc/os-release" ]]; then
+      eos-update --aur
+    else
+      sudo pacman --sync --refresh --sysupgrade
 
-    flatpak update
+      yay --sync --refresh --sysupgrade
+    fi
+
   elif [[ "${linux_distro_base}" == *"ubuntu"* ]]; then
     sudo apt update
-    sudo apt upgrade --yes
+    sudo apt upgrade
 
     sudo snap refresh
-
-    flatpak update
   fi
+
+  flatpak update
 }
