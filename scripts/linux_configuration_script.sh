@@ -52,32 +52,32 @@ function log_output() {
 function update_upgrade_apk() {
     su
     apk update
-    apk upgrade --yes
+    apk upgrade
 }
 
 # Arch Package Manager
 function update_upgrade_pacman() {
-    sudo pacman --sync --refresh --sysupgrade --noconfirm
+    sudo pacman --sync --refresh --sysupgrade
 }
 
 function update_upgrade_aur() {
-    yay --sync --refresh --sysupgrade --noconfirm
+    yay --sync --refresh --sysupgrade
 }
 
 # Fedora Package Manager
 function update_dnf() {
-    sudo dnf upgrade --yes
+    sudo dnf upgrade
 }
 
 # Generic Package Manager
 function update_flatpak() {
-    flatpak update --assumeyes
+    flatpak update
 }
 
 # Ubuntu Package Managers
 function update_upgrade_apt() {
     sudo apt update
-    sudo apt upgrade --yes
+    sudo apt upgrade
 }
 
 function update_snap() {
@@ -95,7 +95,7 @@ function install_flatpak() {
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         log_output "Installing Flatpak."
         update_upgrade_pacman
-        sudo pacman --sync flatpak --noconfirm
+        sudo pacman --sync flatpak
     # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
     # elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
     fi
@@ -116,7 +116,7 @@ function configure_nvidia_drivers() {
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         log_output "Installing Nvidia drivers."
         update_upgrade_pacman
-        sudo pacman --sync nvidia --noconfirm
+        sudo pacman --sync nvidia
     # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         # Run this command if there are issues booting into an Ubuntu installation. This failure could be caused by
@@ -126,10 +126,10 @@ function configure_nvidia_drivers() {
         log_output "Removing Nvidia drivers."
 
         update_upgrade_apt
-        sudo apt purge nvidia* --yes
+        sudo apt purge nvidia*
 
         update_upgrade_apt
-        sudo ubuntu-drivers autoinstall --yes
+        sudo ubuntu-drivers autoinstall
     fi
 }
 
@@ -148,39 +148,39 @@ function install_docker() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add docker --yes
+        apk add docker
 
         update_upgrade_apk
-        apk add docker-cli-compose --yes
+        apk add docker-cli-compose
 
         # Add user to Docker group
         su usermod --append --groups "docker" "${USER}"
         newgrp "docker"
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync docker --noconfirm
+        sudo pacman --sync docker
 
         # Add user to Docker group
         sudo usermod --append --groups "docker" "${USER}"
         newgrp "docker"
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install dnf-plugins-core --yes
+        sudo dnf install dnf-plugins-core
 
         update_dnf
         sudo dnf-3 config-manager --from-repofile=https://download.docker.com/linux/fedora/docker-ce.repo
 
         update_dnf
-        sudo dnf install docker-ce --yes
+        sudo dnf install docker-ce
 
         update_dnf
-        sudo dnf install docker-ce-cli --yes
+        sudo dnf install docker-ce-cli
 
         update_dnf
-        sudo dnf install containerd.io --yes
+        sudo dnf install containerd.io
 
         update_dnf
-        sudo dnf install docker-buildx-plugin --yes
+        sudo dnf install docker-buildx-plugin
 
         update_dnf
         sudo dnf install docker-compose-plugin
@@ -193,10 +193,10 @@ function install_docker() {
 
         # Add Docker's official GPG key:
         update_upgrade_apt
-        sudo apt install ca-certificates --yes
+        sudo apt install ca-certificates
 
         update_upgrade_apt
-        sudo apt install curl --yes
+        sudo apt install curl
 
         sudo install \
             --mode=0755 \
@@ -221,19 +221,19 @@ function install_docker() {
 
         # Install Docker Engine.
         update_upgrade_apt
-        sudo apt install docker-ce --yes
+        sudo apt install docker-ce
 
         update_upgrade_apt
-        sudo apt install docker-ce-cli --yes
+        sudo apt install docker-ce-cli
 
         update_upgrade_apt
-        sudo apt install containerd.io --yes
+        sudo apt install containerd.io
 
         update_upgrade_apt
-        sudo apt install docker-buildx-plugin --yes
+        sudo apt install docker-buildx-plugin
 
         update_upgrade_apt
-        sudo apt install docker-compose-plugin --yes
+        sudo apt install docker-compose-plugin
 
         # Add user to Docker group
         sudo usermod --append --groups "docker" "${USER}"
@@ -283,7 +283,7 @@ function install_minikube() {
         su mv --verbose "minikube" "/usr/local/bin/"
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync minikube --noconfirm
+        sudo pacman --sync minikube
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         curl \
             --location \
@@ -335,10 +335,10 @@ function install_kubernetes() {
         su mv --verbose ./"kubectl" "/usr/local/bin/kubectl"
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync kubectl --noconfirm
+        sudo pacman --sync kubectl
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install kubectl --yes
+        sudo dnf install kubectl
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         local -r latest_kubernetes_release="$(curl --silent \"https://storage.googleapis.com/kubernetes-release/release/stable.txt\")"
 
@@ -371,10 +371,10 @@ function install_helm() {
         rm --force --verbose "${install_helm_file_name}"
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync helm --noconfirm
+        sudo pacman --sync helm
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install helm --yes
+        sudo dnf install helm
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         local -r install_helm_file_name="get_helm.sh"
 
@@ -428,10 +428,10 @@ function install_java() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync jdk-openjdk --noconfirm
+        sudo pacman --sync jdk-openjdk
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install default-jre --yes
+        sudo apt install default-jre
     fi
 
     java --version
@@ -452,19 +452,19 @@ function install_nodejs_runtime() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync nodejs --noconfirm
+        sudo pacman --sync nodejs
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install nodejs --yes
+        sudo dnf install nodejs
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install ca-certificates --yes
+        sudo apt install ca-certificates
 
         update_upgrade_apt
-        sudo apt install curl --yes
+        sudo apt install curl
 
         update_upgrade_apt
-        sudo apt install gnupg --yes
+        sudo apt install gnupg
 
         sudo mkdir --parents "/etc/apt/keyrings"
 
@@ -482,7 +482,7 @@ function install_nodejs_runtime() {
             sudo tee /etc/apt/sources.list.d/nodesource.list
 
         update_upgrade_apt
-        sudo apt install nodejs --yes
+        sudo apt install nodejs
     fi
 
     node --version
@@ -493,14 +493,14 @@ function install_npm() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add npm --yes
+        apk add npm
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync npm --noconfirm
+        sudo pacman --sync npm
     # elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then # Fedora doesn't need npm to be installed, as nodejs contains npm.
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install npm --yes
+        sudo apt install npm
     fi
 
     npm --version
@@ -522,16 +522,16 @@ function install_python3() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add python3 --yes
+        apk add python3
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync python --noconfirm
+        sudo pacman --sync python
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install python3 --yes
+        sudo dnf install python3
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install python3 --yes
+        sudo apt install python3
     fi
 
     python --version
@@ -542,16 +542,16 @@ function install_python3_pip() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add py3-pip --yes
+        apk add py3-pip
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync python-pip --noconfirm
+        sudo pacman --sync python-pip
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install python3-pip --yes
+        sudo dnf install python3-pip
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install python3-pip --yes
+        sudo apt install python3-pip
     fi
 
     pip --version
@@ -573,16 +573,16 @@ function install_ruby() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add ruby --yes
+        apk add ruby
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync ruby --noconfirm
+        sudo pacman --sync ruby
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install ruby --yes
+        sudo dnf install ruby
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install ruby-full --yes
+        sudo apt install ruby-full
     fi
 
     ruby --version
@@ -603,17 +603,17 @@ function install_git() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add git --yes
+        apk add git
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync git --noconfirm
+        sudo pacman --sync git
         git --version
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install git --yes
+        sudo dnf install git
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install git --yes
+        sudo apt install git
     fi
 
     git --version
@@ -681,10 +681,10 @@ function install_vim() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add vim --yes
+        apk add vim
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync vim --noconfirm
+        sudo pacman --sync vim
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf install vim
@@ -694,7 +694,7 @@ function install_vim() {
         log_output "\tNote: vim-gtk3 is being installed, as that supports copying and pasting to and from the system clipboard."
         log_output "\tvim-gnome is not being installed, as that is not in the repositories of the latest Ubuntu releases."
 
-        sudo apt install vim-gtk3 --yes
+        sudo apt install vim-gtk3
     fi
 
     vim --version
@@ -750,13 +750,13 @@ function install_neovim() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add neovim --yes
+        apk add neovim
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync neovim --noconfirm
+        sudo pacman --sync neovim
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install neovim python3-neovim --yes
+        sudo dnf install neovim python3-neovim
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         log_output "Downloading Neovim AppImage."
 
@@ -792,7 +792,7 @@ function install_neovim_system_clipboard_dependency() {
         log_output "Installing xclip, in order to enable neovim's use of the system clipboard."
 
         update_upgrade_apt
-        sudo apt install xclip --yes
+        sudo apt install xclip
     fi
 }
 
@@ -801,22 +801,22 @@ function install_emacs() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add texinfo --yes
+        apk add texinfo
 
         update_upgrade_apk
-        apk add emacs-docs --yes
+        apk add emacs-docs
 
         update_upgrade_apk
-        apk add emacs --yes
+        apk add emacs
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync emacs --noconfirm
+        sudo pacman --sync emacs
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install emacs --yes
+        sudo dnf install emacs
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install emacs --yes
+        sudo apt install emacs
     fi
 
     nvim --version
@@ -836,7 +836,7 @@ function install_sublime_text() {
             | sudo tee --append "/etc/pacman.conf"
 
         update_upgrade_pacman
-        sudo pacman -Syu sublime-text --noconfirm
+        sudo pacman -Syu sublime-text
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         sudo rpm --verbose --import "https://download.sublimetext.com/sublimehq-rpm-pub.gpg"
 
@@ -877,16 +877,16 @@ function install_visual_studio_code() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync visual-studio-code-bin --noconfirm
+        yay --sync visual-studio-code-bin
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install code --yes
+        sudo dnf install code
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install wget --yes
+        sudo apt install wget
 
         update_upgrade_apt
-        sudo apt install gpg --yes
+        sudo apt install gpg
 
         wget --quiet -output-document=- "https://packages.microsoft.com/keys/microsoft.asc" \
             | gpg --dearmor > "packages.microsoft.gpg"
@@ -908,10 +908,10 @@ function install_visual_studio_code() {
             "packages.microsoft.gpg"
 
         update_upgrade_apt
-        sudo apt install apt-transport-https --yes
+        sudo apt install apt-transport-https
 
         update_upgrade_apt
-        sudo apt install code --yes
+        sudo apt install code
 
         # Execute the following command there is an issue loading the Visual Studio Code GUI after an update, as described
         # here: https://code.visualstudio.com/Docs/supporting/FAQ#_vs-code-is-blank:
@@ -955,7 +955,7 @@ function install_intellij() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync intellij-idea-community-edition --noconfirm
+        sudo pacman --sync intellij-idea-community-edition
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_snap
         sudo snap install intellij-idea-community --classic
@@ -971,7 +971,7 @@ function install_pycharm() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync pycharm-community-edition --noconfirm
+        sudo pacman --sync pycharm-community-edition
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_snap
         sudo snap install pycharm-community --classic
@@ -999,19 +999,19 @@ function install_brave() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync brave-browser --noconfirm
+        yay --sync brave-browser
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install dnf-plugins-core --yes
+        sudo dnf install dnf-plugins-core
 
         update_dnf
         sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
 
         update_dnf
-        sudo dnf install brave-browser --yes
+        sudo dnf install brave-browser
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install curl --yes
+        sudo apt install curl
 
         sudo curl --fail --silent --show-error --location --output \
             "/usr/share/keyrings/brave-browser-archive-keyring.gpg" \
@@ -1020,7 +1020,7 @@ function install_brave() {
             | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
         update_upgrade_apt
-        sudo apt install brave-browser --yes
+        sudo apt install brave-browser
     fi
 
     brave --version
@@ -1031,16 +1031,16 @@ function install_chromium() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add chromium --yes
+        apk add chromium
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync chromium --noconfirm
+        sudo pacman --sync chromium
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install chromium-browser --yes
+        sudo dnf install chromium-browser
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install chromium-browser --yes
+        sudo apt install chromium-browser
     fi
 
     chromium --version
@@ -1095,7 +1095,7 @@ function install_gnome_tweaks() {
             sudo add-apt-repository universe
 
             update_upgrade_apt
-            sudo apt install gnome-tweaks --yes
+            sudo apt install gnome-tweaks
         fi
     fi
 }
@@ -1116,7 +1116,7 @@ function install_spotify() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync spotify-launcher --noconfirm
+        sudo pacman --sync spotify-launcher
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub com.spotify.Client
@@ -1133,10 +1133,10 @@ function install_vlc() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add vlc --yes
+        apk add vlc
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync vlc --noconfirm
+        sudo pacman --sync vlc
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub org.videolan.VLC --assumeyes
@@ -1165,16 +1165,16 @@ function install_guake() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add guake --yes
+        apk add guake
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync guake --noconfirm
+        sudo pacman --sync guake
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install guake --yes
+        sudo dnf install guake
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install guake --yes
+        sudo apt install guake
     fi
 
     guake --version
@@ -1208,19 +1208,19 @@ function install_steam() {
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
 
-        yay --sync melonds --noconfirm
+        yay --sync melonds
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf config-manager setopt fedora-cisco-openh264.enabled=1
 
         update_dnf
-        sudo dnf install steam --yes
+        sudo dnf install steam
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
         sudo add-apt-repository "multiverse"
 
         update_upgrade_apt
-        sudo apt install steam --yes
+        sudo apt install steam
     fi
 }
 
@@ -1249,7 +1249,7 @@ function install_ds_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync melonds --noconfirm
+        yay --sync melonds
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
@@ -1271,7 +1271,7 @@ function install_n64_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync simple64 --noconfirm
+        yay --sync simple64
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub io.github.simple64.simple64 --assumeyes
@@ -1286,10 +1286,10 @@ function install_gamecube_wii_emulator() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add dolphin --yes
+        apk add dolphin
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync dolphin-emu --noconfirm
+        yay --sync dolphin-emu
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists "flathub" "https://dl.flathub.org/repo/flathub.flatpakrepo"
@@ -1311,7 +1311,7 @@ function install_wii_u_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync cemu --noconfirm
+        sudo pacman --sync cemu
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub info.cemu.Cemu --assumeyes
@@ -1336,7 +1336,7 @@ function install_xbox_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync xemu --noconfirm
+        yay --sync xemu
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install app.xemu.xemu --assumeyes
@@ -1365,10 +1365,10 @@ function install_psp_emulator() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add ppsspp --yes
+        apk add ppsspp
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync ppsspp --noconfirm
+        sudo pacman --sync ppsspp
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub org.ppsspp.PPSSPP --assumeyes
@@ -1384,7 +1384,7 @@ function install_playstation_emulator() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync duckstation --noconfirm
+        yay --sync duckstation
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak remote-add --if-not-exists flathub "https://dl.flathub.org/repo/flathub.flatpakrepo"
@@ -1478,10 +1478,10 @@ function install_okular() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add okular --yes
+        apk add okular
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync okular --noconfirm
+        sudo pacman --sync okular
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_flatpak
         flatpak install flathub org.kde.okular --assumeyes
@@ -1508,16 +1508,16 @@ function install_bat() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add bat --yes
+        apk add bat
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync bat --noconfirm
+        sudo pacman --sync bat
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install bat --yes
+        sudo dnf install bat
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install bat --yes
+        sudo apt install bat
     fi
 
     bat --version
@@ -1528,16 +1528,16 @@ function install_btop() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add btop --yes
+        apk add btop
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync btop --noconfirm
+        sudo pacman --sync btop
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install btop --yes
+        sudo dnf install btop
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install btop --yes
+        sudo apt install btop
     fi
 
     btop --version
@@ -1549,13 +1549,13 @@ function install_diff_so_fancy() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync diff-so-fancy --noconfirm
+        sudo pacman --sync diff-so-fancy
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install diff-so-fancy --yes
+        sudo dnf install diff-so-fancy
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install diff-so-fancy --yes
+        sudo apt install diff-so-fancy
     fi
 
     diff-so-fancy --help
@@ -1573,16 +1573,16 @@ function install_dust() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add dust --yes
+        apk add dust
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync dust --noconfirm
+        sudo pacman --sync dust
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install dust --yes
+        sudo dnf install dust
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install dust --yes
+        sudo apt install dust
     fi
 
     dust --version
@@ -1593,16 +1593,16 @@ function install_eza() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add eza --yes
+        apk add eza
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync eza --noconfirm
+        sudo pacman --sync eza
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install dust --yes
+        sudo dnf install dust
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install eza --yes
+        sudo apt install eza
 
         sudo mkdir --parents "/etc/apt/keyrings"
         wget --quiet --output "https://raw.githubusercontent.com/eza-community/eza/main/deb.asc" | sudo gpg --dearmor --output "/etc/apt/keyrings/gierens.gpg"
@@ -1610,7 +1610,7 @@ function install_eza() {
         sudo chmod 644 "/etc/apt/keyrings/gierens.gpg /etc/apt/sources.list.d/gierens.list"
 
         update_upgrade_apt
-        sudo apt install eza --yes
+        sudo apt install eza
     fi
 
     eza --version
@@ -1621,16 +1621,16 @@ function install_fastfetch() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add upgrade --yes
+        apk add upgrade
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync fastfetch --noconfirm
+        sudo pacman --sync fastfetch
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install fastfetch --yes
+        sudo dnf install fastfetch
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install fastfetch --yes
+        sudo apt install fastfetch
     fi
 
     fastfetch --version
@@ -1643,16 +1643,16 @@ function install_fzf() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add fzf --yes
+        apk add fzf
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync fzf --noconfirm
+        sudo pacman --sync fzf
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install fzf --yes
+        sudo dnf install fzf
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install fzf --yes
+        sudo apt install fzf
     fi
 
     fzf --version
@@ -1664,10 +1664,10 @@ function install_kdash() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync kdash --noconfirm
+        yay --sync kdash
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install kdash --yes
+        sudo dnf install kdash
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         wget "https://github.com/kdash-rs/kdash/releases/download/v0.6.1/kdash-linux.tar.gz" \
             --output-document "${HOME}/Downloads/kdash-linux.tar.gz"
@@ -1683,16 +1683,16 @@ function install_procs() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add procs --yes
+        apk add procs
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync procs --noconfirm
+        sudo pacman --sync procs
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install procs --yes
+        sudo dnf install procs
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install procs --yes
+        sudo apt install procs
     fi
 
     procs --version
@@ -1704,7 +1704,7 @@ function install_rip() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
-        yay --sync rm-improved --yes
+        yay --sync rm-improved
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         wget "https://github.com/nivekuil/rip/archive/refs/tags/0.13.1.tar.gz" --output-document "${HOME}/Downloads/rip.tar.gz"
         tar --extract --verbose --gzip --file "${HOME}/Downloads/rip.tar.gz" --directory "${HOME}/Downloads"
@@ -1723,16 +1723,16 @@ function install_ripgrep() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add ripgrep --yes
+        apk add ripgrep
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync ripgrep --noconfirm
+        sudo pacman --sync ripgrep
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install ripgrep --yes
+        sudo dnf install ripgrep
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install ripgrep --yes
+        sudo apt install ripgrep
     fi
 
     rg --version
@@ -1743,16 +1743,16 @@ function install_sd() {
 
     if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
         update_upgrade_apk
-        apk add sd --yes
+        apk add sd
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync sd --noconfirm
+        sudo pacman --sync sd
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install sd --yes
+        sudo dnf install sd
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install sd --yes
+        sudo apt install sd
     fi
 
     sd --version
@@ -1764,13 +1764,13 @@ function install_tldr() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync tldr --noconfirm
+        sudo pacman --sync tldr
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install tldr --yes
+        sudo dnf install tldr
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install tldr --yes
+        sudo apt install tldr
     fi
 
     tldr --version
@@ -1817,10 +1817,10 @@ function install_bash_language_server() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync bash-language-server --noconfirm
+        sudo pacman --sync bash-language-server
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        dnf install nodejs-bash-language-server --yes
+        dnf install nodejs-bash-language-server
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_snap
         sudo snap install bash-language-server --classic
@@ -1833,13 +1833,13 @@ function install_marksman() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync marksman --noconfirm
+        sudo pacman --sync marksman
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_snap
-        sudo snap install marksman --yes
+        sudo snap install marksman
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_snap
-        sudo snap install marksman --yes
+        sudo snap install marksman
     fi
 }
 
@@ -1861,14 +1861,14 @@ function install_virtualbox() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync virtualbox --noconfirm
+        sudo pacman --sync virtualbox
         sudo modprobe --remove kvm_intel
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf install virtualbox --yes
+        sudo dnf install virtualbox
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt install virtualbox --yes
+        sudo apt install virtualbox
     fi
 }
 
@@ -1888,10 +1888,10 @@ function autoremove_unused_dependencies() {
     # if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
     if [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
-        sudo dnf autoremove --yes
+        sudo dnf autoremove
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
-        sudo apt autoremove --yes
+        sudo apt autoremove
     fi
 }
 
@@ -1916,10 +1916,10 @@ function install_openrazer_daemon() {
         apk add openrazer-src
     elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_pacman
-        sudo pacman --sync openrazer-daemon --noconfirm
+        sudo pacman --sync openrazer-daemon
 
         update_upgrade_pacman
-        sudo pacman --sync linux-headers --noconfirm
+        sudo pacman --sync linux-headers
 
         sudo gpasswd --add "${USER}" plugdev
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
@@ -1927,7 +1927,7 @@ function install_openrazer_daemon() {
         sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
 
         update_dnf
-        sudo dnf install openrazer-meta --yes
+        sudo dnf install openrazer-meta
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
         sudo add-apt-repository ppa:openrazer/stable
@@ -1936,7 +1936,7 @@ function install_openrazer_daemon() {
         sudo add-apt-repository ppa:polychromatic/stable
 
         update_upgrade_apt
-        sudo apt install openrazer-meta --yes
+        sudo apt install openrazer-meta
     fi
 }
 
@@ -1947,13 +1947,13 @@ function install_polychromatic() {
     if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
         update_upgrade_aur
 
-        yay --sync polychromatic --noconfirm
+        yay --sync polychromatic
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
 
         update_dnf
-        sudo dnf install polychromatic --yes
+        sudo dnf install polychromatic
     elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
         update_upgrade_apt
 
@@ -1962,7 +1962,7 @@ function install_polychromatic() {
 
         update_upgrade_apt
 
-        sudo apt install polychromatic --yes
+        sudo apt install polychromatic
     fi
 }
 
