@@ -1840,6 +1840,8 @@ function install_openrazer_daemon() {
 
         sudo groupadd plugdev
         sudo usermod -a -G plugdev "${USER}"
+
+        sudo gpasswd -a $USER openrazer
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
