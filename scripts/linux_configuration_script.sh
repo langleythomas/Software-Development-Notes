@@ -1838,7 +1838,8 @@ function install_openrazer_daemon() {
         update_upgrade_pacman
         sudo pacman --sync linux-headers
 
-        sudo gpasswd --add "${USER}" plugdev
+        sudo groupadd plugdev
+        sudo usermod -a -G plugdev "${USER}"
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf config-manager addrepo --from-repofile=https://openrazer.github.io/hardware:razer.repo
