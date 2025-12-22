@@ -34,7 +34,7 @@ function update_all_packages() {
 
   if [[ "${linux_distro_base}" == *"arch"* ]]; then
 
-    if [[ grep -q "endeavouros" "cat /etc/os-release" ]]; then
+    if grep -q "endeavouros" "cat /etc/os-release"; then
       eos-update --aur
     else
       sudo pacman --sync --refresh --sysupgrade
