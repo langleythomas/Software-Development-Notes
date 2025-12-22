@@ -796,32 +796,6 @@ function install_neovim_system_clipboard_dependency() {
     fi
 }
 
-function install_emacs() {
-    log_output "Installing Emacs. Reference installation documentation: https://www.gnu.org/software/emacs/download.html"
-
-    if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-        update_upgrade_apk
-        apk add texinfo
-
-        update_upgrade_apk
-        apk add emacs-docs
-
-        update_upgrade_apk
-        apk add emacs
-    elif [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync emacs
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf install emacs
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install emacs
-    fi
-
-    nvim --version
-}
-
 function install_sublime_text() {
     log_output "Installing Sublime Text Editor. Reference installation documentation: https://www.sublimetext.com/docs/linux_repositories.html"
 
@@ -934,8 +908,6 @@ function install_configure_text_editors() {
     configure_neovim
     install_neovim_system_clipboard_dependency
 
-    install_emacs
-
     install_sublime_text
     configure_sublime_text_settings
     configure_sublime_text_packages
@@ -993,39 +965,6 @@ function install_integrated_development_environments() {
 ############################################# Browser Installation ####################################################
 #######################################################################################################################
 
-function install_brave() {
-    log_output "Installing Brave. Reference installation documentation: https://brave.com/linux/"
-
-    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_aur
-        yay --sync brave-browser
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_dnf
-        sudo dnf install dnf-plugins-core
-
-        update_dnf
-        sudo dnf config-manager addrepo --from-repofile=https://brave-browser-rpm-release.s3.brave.com/brave-browser.repo
-
-        update_dnf
-        sudo dnf install brave-browser
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_upgrade_apt
-        sudo apt install curl
-
-        sudo curl --fail --silent --show-error --location --output \
-            "/usr/share/keyrings/brave-browser-archive-keyring.gpg" \
-            "https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg"
-        echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main" \
-            | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-
-        update_upgrade_apt
-        sudo apt install brave-browser
-    fi
-
-    brave --version
-}
-
 function install_chromium() {
     log_output "Installing Chromium. Reference installation documentation: https://www.fosslinux.com/111944/how-to-install-chromium-web-browser-on-linux.htm"
 
@@ -1047,8 +986,6 @@ function install_chromium() {
 }
 
 function install_browsers() {
-    install_brave
-
     install_chromium
 }
 
@@ -1110,24 +1047,6 @@ function install_ui_configuration_tools() {
 ############################################ Media Player Installation ################################################
 #######################################################################################################################
 
-function install_spotify() {
-    log_output "Installing Spotify. Reference installation documentation: https://www.spotify.com/de-en/download/linux/, https://itsfoss.com/install-spotify-arch/"
-
-    # if [[ "${LINUX_DISTRO_BASE}" == *"alpine"* ]]; then
-    if [[ "${LINUX_DISTRO_BASE}" == *"arch"* ]]; then
-        update_upgrade_pacman
-        sudo pacman --sync spotify-launcher
-    elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
-        update_flatpak
-        flatpak install flathub com.spotify.Client
-    elif [[ "${LINUX_DISTRO_BASE}" == *"ubuntu"* ]]; then
-        update_flatpak
-        flatpak install flathub com.spotify.Client
-    fi
-
-    spotify-launcher --version
-}
-
 function install_vlc() {
     log_output "Installing VLC. Reference installation documentation: https://www.videolan.org/vlc/"
 
@@ -1149,8 +1068,6 @@ function install_vlc() {
 }
 
 function install_media_players() {
-    install_spotify
-
     install_vlc
 }
 
@@ -1440,31 +1357,31 @@ function install_emulators() {
     install_ds_emulator
 
     # N64 Emulator
-    install_n64_emulator
+    # install_n64_emulator
 
     # GameCube & Wii Emulator
-    install_gamecube_wii_emulator
+    # install_gamecube_wii_emulator
 
     # Wii U Emulator
-    install_wii_u_emulator
+    # install_wii_u_emulator
 
     # Switch Emulator
     # install_switch_emulator
 
     # Xbox Emulator
-    install_xbox_emulator
+    # install_xbox_emulator
 
     # # Xbox 360 Emulator
     # install_xbox_360_emulator
 
     # PlayStation Emulator
-    install_playstation_emulator
+    # install_playstation_emulator
 
     # PlayStation 2 Emulator
-    install_playstation_2_emulator
+    # install_playstation_2_emulator
 
     # PlayStation 3 Emulator
-    install_playstation_3_emulator
+    # install_playstation_3_emulator
 }
 
 
