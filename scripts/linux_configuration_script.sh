@@ -163,6 +163,8 @@ function install_docker() {
         # Add user to Docker group
         sudo usermod --append --groups "docker" "${USER}"
         newgrp "docker"
+
+        sudo systemctl start docker
     elif [[ "${LINUX_DISTRO_BASE}" == *"fedora"* ]]; then
         update_dnf
         sudo dnf install dnf-plugins-core
