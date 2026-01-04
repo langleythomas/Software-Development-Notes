@@ -243,6 +243,8 @@ function install_docker() {
     fi
 
     docker --version
+
+    docker info
 }
 
 function configure_docker_startup() {
