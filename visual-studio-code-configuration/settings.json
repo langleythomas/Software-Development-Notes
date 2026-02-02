@@ -2,22 +2,22 @@
   "[markdown]": {
     "editor.defaultFormatter": "yzhang.markdown-all-in-one",
     "editor.tabSize": 2,
-    "editor.unicodeHighlight.invisibleCharacters": true
+    "editor.unicodeHighlight.invisibleCharacters": true,
   },
 
   "[plaintext]": {
-    "editor.unicodeHighlight.invisibleCharacters": true
+    "editor.unicodeHighlight.invisibleCharacters": true,
   },
 
   "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
 
   "[yaml]": {
     "editor.insertSpaces": true,
     "editor.tabSize": 2,
     "editor.autoIndent": "advanced",
-    "diffEditor.ignoreTrimWhitespace": false
+    "diffEditor.ignoreTrimWhitespace": false,
   },
 
   "accessibility.dimUnfocused.enabled": true,
@@ -1273,7 +1273,7 @@
     "ZQHAI",
     "Zrvw",
     "Zura",
-    "zypper"
+    "zypper",
   ],
 
   "editor.bracketPairColorization.enabled": true,
@@ -1294,7 +1294,7 @@
   "editor.stickyScroll.enabled": true,
 
   "extensions.experimental.affinity": {
-    "yzhang.markdown-all-in-one": 1
+    "yzhang.markdown-all-in-one": 1,
   },
 
   "explorer.compactFolders": false,
@@ -1313,21 +1313,21 @@
   "markdownlint.run": "onSave",
   "markdownlint.config": {
     "MD007": {
-      "indent": 2
+      "indent": 2,
     },
     "MD013": {
       "code_blocks": false,
       "headings": false,
       "line_length": 120,
       "strict": true,
-      "tables": false
+      "tables": false,
     },
     "MD025": false,
     "MD033": false,
     "MD041": false,
     "MD046": {
-      "style": "fenced"
-    }
+      "style": "fenced",
+    },
   },
 
   "shellcheck.run": "onType",
@@ -1349,71 +1349,73 @@
   "terminal.integrated.profiles.linux": {
     "bash": {
       "path": "bash",
-      "icon": "terminal-bash"
+      "icon": "terminal-bash",
     },
     "zsh": {
-      "path": "zsh"
+      "path": "zsh",
     },
     "fish": {
-      "path": "fish"
+      "path": "fish",
     },
     "tmux": {
       "path": "tmux",
-      "icon": "terminal-tmux"
+      "icon": "terminal-tmux",
     },
     "pwsh": {
       "path": "pwsh",
-      "icon": "terminal-powershell"
-    }
+      "icon": "terminal-powershell",
+    },
   },
   "terminal.integrated.profiles.osx": {
     "bash": {
       "path": "bash",
       "args": ["-l"],
-      "icon": "terminal-bash"
+      "icon": "terminal-bash",
     },
     "zsh": {
       "path": "zsh",
-      "args": ["-l"]
+      "args": ["-l"],
     },
     "fish": {
       "path": "fish",
-      "args": ["-l"]
+      "args": ["-l"],
     },
     "tmux": {
       "path": "tmux",
-      "icon": "terminal-tmux"
+      "icon": "terminal-tmux",
     },
     "pwsh": {
       "path": "pwsh",
-      "icon": "terminal-powershell"
-    }
+      "icon": "terminal-powershell",
+    },
   },
   "terminal.integrated.profiles.windows": {
     "PowerShell": {
       "source": "PowerShell",
-      "icon": "terminal-powershell"
+      "icon": "terminal-powershell",
     },
     "Command Prompt": {
       "path": [
         "${env:windir}\\Sysnative\\cmd.exe",
-        "${env:windir}\\System32\\cmd.exe"
+        "${env:windir}\\System32\\cmd.exe",
       ],
       "args": [],
-      "icon": "terminal-cmd"
+      "icon": "terminal-cmd",
     },
     "Git Bash": {
-      "source": "Git Bash"
+      "source": "Git Bash",
     },
     "Ubuntu (WSL)": {
       "path": "C:\\Windows\\System32\\wsl.exe",
-      "args": ["-d", "Ubuntu"]
-    }
+      "args": ["-d", "Ubuntu"],
+    },
   },
   "terminal.integrated.stickyScroll.enabled": true,
   "terminal.integrated.tabs.title": "${process} > ${sequence}",
 
   "window.autoDetectColorScheme": true,
+  "window.customTitleBarVisibility": "never",
+  "window.titleBarStyle": "native",
 
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Dracula Pro Edition",
